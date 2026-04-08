@@ -2,143 +2,474 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About | Mohsin Haematology Academy</title>
-  <meta name="description" content="About Mohsin Haematology Academy and its educational mission." />
+  <meta name="description" content="About Mohsin Haematology Academy — a consultant-led educational platform for haematology trainees and clinicians.">
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     :root {
-      --primary: #7a1f2b;
-      --primary-dark: #5f1721;
-      --bg: #f7f7f7;
-      --text: #2f2f2f;
-      --muted: #666;
-      --card: #ffffff;
-      --border: #e7e7e7;
+      --clr-primary: #7a1f2b;
+      --clr-primary-dark: #5c1720;
+      --clr-primary-mid: #8e2535;
+      --clr-primary-tint: rgba(122, 31, 43, 0.07);
+      --clr-primary-glow: rgba(122, 31, 43, 0.18);
+      --clr-bg: #f7f5f3;
+      --clr-surface: #ffffff;
+      --clr-surface-alt: #faf8f7;
+      --clr-text: #1a1a1e;
+      --clr-text-secondary: #3d3d42;
+      --clr-muted: #6b717a;
+      --clr-border: #e6e1dd;
+      --clr-border-light: #f0ebe7;
+      --shadow-sm: 0 1px 4px rgba(0,0,0,.06), 0 2px 6px rgba(0,0,0,.04);
+      --shadow-md: 0 4px 16px rgba(0,0,0,.08), 0 2px 6px rgba(0,0,0,.04);
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-xl: 24px;
+      --ease: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    * { box-sizing: border-box; }
+
     body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--clr-bg);
+      color: var(--clr-text);
       line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
-    a { color: inherit; text-decoration: none; }
-    .container { width: min(1000px, 92%); margin: 0 auto; }
+
+    h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
+
+    a { text-decoration: none; color: inherit; }
+    img { display: block; max-width: 100%; }
+
+    .container { width: min(1080px, 91%); margin-inline: auto; }
+
     header {
-      background: #fff;
-      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--clr-border);
     }
+
     .nav {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 16px 0;
-      gap: 20px;
+      justify-content: space-between;
+      height: 72px;
+      gap: 24px;
     }
-    .brand-wrap {
+
+    .brand {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
+      flex-shrink: 0;
     }
-    .brand-logo {
-      height: 52px;
+
+    .brand img {
+      height: 46px;
       width: auto;
+      object-fit: contain;
     }
-    .brand-title {
-      font-size: 1.15rem;
+
+    .brand-text { line-height: 1; }
+
+    .brand-name {
+      font-size: 0.95rem;
       font-weight: 700;
-      color: var(--primary);
+      color: var(--clr-primary);
+      letter-spacing: -0.01em;
     }
+
+    .brand-tagline {
+      font-size: 0.66rem;
+      font-weight: 500;
+      color: var(--clr-muted);
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
     .nav-links {
       display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--clr-text-secondary);
+      padding: 8px 13px;
+      border-radius: var(--radius-sm);
+      transition: color var(--ease), background var(--ease);
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--clr-primary);
+      background: var(--clr-primary-tint);
+    }
+
+    .nav-cta {
+      background: var(--clr-primary) !important;
+      color: #fff !important;
+      font-weight: 600 !important;
+      padding: 8px 16px !important;
+      margin-left: 6px;
+      box-shadow: 0 2px 8px var(--clr-primary-glow);
+    }
+
+    .page-header {
+      padding: 64px 0 56px;
+      background:
+        radial-gradient(ellipse 60% 80% at 100% 50%, rgba(122,31,43,0.045) 0%, transparent 65%),
+        linear-gradient(175deg, #fff 0%, #fdf3f5 70%, #f8eced 100%);
+      border-bottom: 1px solid var(--clr-border-light);
+    }
+
+    .page-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--clr-primary-tint);
+      color: var(--clr-primary);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 5px 12px 5px 9px;
+      border-radius: 100px;
+      margin-bottom: 18px;
+      border: 1px solid rgba(122,31,43,0.12);
+    }
+
+    .page-eyebrow-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--clr-primary);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .page-header h1 {
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      font-weight: 700;
+      color: var(--clr-primary-dark);
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .page-lead {
+      font-size: 1rem;
+      color: var(--clr-text-secondary);
+      line-height: 1.75;
+      max-width: 620px;
+    }
+
+    main { padding: 64px 0 80px; }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 20px;
-      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--clr-primary);
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: clamp(1.4rem, 2.6vw, 1.75rem);
+      font-weight: 700;
+      color: var(--clr-primary-dark);
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      margin-bottom: 28px;
+    }
+
+    .card {
+      background: var(--clr-surface);
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius-md);
+      padding: 30px 28px;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow var(--ease), transform var(--ease), border-color var(--ease);
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+      border-color: rgba(122,31,43,0.15);
+    }
+
+    .card-accent { border-top: 3px solid var(--clr-primary); }
+    .card-full { grid-column: 1 / -1; }
+
+    .card-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 11px;
+      background: var(--clr-primary-tint);
+      border: 1px solid rgba(122,31,43,0.10);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      color: var(--clr-primary);
+    }
+
+    .card-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: currentColor;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--clr-primary-dark);
+      letter-spacing: -0.01em;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: var(--clr-muted);
+      line-height: 1.7;
+    }
+
+    .principle-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .principle-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.875rem;
+      color: var(--clr-text-secondary);
+      line-height: 1.55;
+    }
+
+    .principle-list li::before {
+      content: '';
+      flex-shrink: 0;
+      width: 5px;
+      height: 5px;
+      margin-top: 7px;
+      border-radius: 50%;
+      background: var(--clr-primary);
+    }
+
+    hr.divider {
+      border: none;
+      border-top: 1px solid var(--clr-border);
+      margin: 52px 0;
+    }
+
+    .disclaimer {
+      background: var(--clr-surface-alt);
+      border: 1px solid var(--clr-border);
+      border-left: 4px solid var(--clr-primary);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: 22px 24px;
+      margin-top: 20px;
+    }
+
+    .disclaimer p {
+      font-size: 0.875rem;
+      color: var(--clr-muted);
+      line-height: 1.68;
+    }
+
+    .disclaimer strong {
+      color: var(--clr-text-secondary);
       font-weight: 600;
     }
-    main { padding: 60px 0; }
-    .page-title {
-      font-size: 2.4rem;
-      color: var(--primary-dark);
-      margin-bottom: 14px;
-    }
-    .intro {
-      color: var(--muted);
-      max-width: 760px;
-      margin-bottom: 30px;
-    }
-    .card {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 30px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
-      margin-bottom: 24px;
-    }
-    h2 {
-      color: var(--primary);
-      margin-top: 0;
-    }
+
     footer {
-      background: #fff;
-      border-top: 1px solid var(--border);
-      padding: 28px 0 36px;
-      color: var(--muted);
-      font-size: 0.95rem;
+      background: var(--clr-surface);
+      border-top: 1px solid var(--clr-border);
+      padding: 36px 0;
     }
-    @media (max-width: 900px) {
-      .nav {
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .footer-note {
+      font-size: 0.775rem;
+      color: var(--clr-muted);
+      text-align: right;
+      line-height: 1.6;
+    }
+
+    .footer-note strong {
+      color: var(--clr-text-secondary);
+      font-weight: 600;
+    }
+
+    @media (max-width: 760px) {
+      .content-grid { grid-template-columns: 1fr; }
+      .card-full { grid-column: 1; }
+      .principle-list { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links a:not(.nav-cta) { display: none; }
+      .page-header { padding: 48px 0 40px; }
+      .footer-inner {
         flex-direction: column;
         align-items: flex-start;
+        gap: 14px;
       }
-      .brand-logo {
-        height: 44px;
-      }
+      .footer-note { text-align: left; }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="container nav">
-      <div class="brand-wrap">
-        <img src="logo.png" alt="Mohsin Haematology Academy logo" class="brand-logo">
-        <div class="brand-title">Mohsin Haematology Academy</div>
-      </div>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="tools.html">Tools</a>
-        <a href="calculator.html">Calculator</a>
-        <a href="contact.html">Contact</a>
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="brand">
+          <img src="logo.png" alt="Mohsin Haematology Academy logo">
+          <div class="brand-text">
+            <div class="brand-name">Mohsin Haematology Academy</div>
+            <div class="brand-tagline">Clinical Education &amp; Digital Tools</div>
+          </div>
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html" class="active">About</a>
+          <a href="tools.html">Tools</a>
+          <a href="contact.html">Contact</a>
+          <a href="haemcalc/" class="nav-cta">Open HaemCalc</a>
+        </div>
       </nav>
     </div>
   </header>
 
+  <div class="page-header">
+    <div class="container">
+      <div class="page-eyebrow">
+        <span class="page-eyebrow-dot"></span>
+        About the Academy
+      </div>
+      <h1>A platform built on<br>clinical experience</h1>
+      <p class="page-lead">
+        Mohsin Haematology Academy is a clinician-led educational platform created to provide
+        practical haematology learning, structured resources, and carefully developed digital
+        tools for trainees and clinicians working across all levels.
+      </p>
+    </div>
+  </div>
+
   <main>
     <div class="container">
-      <h1 class="page-title">About the Academy</h1>
-      <p class="intro">
-        Mohsin Haematology Academy is a clinician-led educational platform created to provide practical haematology learning, structured resources, and carefully developed digital tools for trainees and clinicians.
-      </p>
+      <div class="section-label">Our Purpose</div>
+      <div class="section-title">What the Academy stands for</div>
 
-      <div class="card">
-        <h2>Mission</h2>
-        <p>
-          The aim of the Academy is to bridge the gap between theoretical knowledge and real-world clinical application by presenting haematology in a structured, clinically relevant, and accessible way.
-        </p>
+      <div class="content-grid">
+        <div class="card card-accent">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.7 5.8 21l1.2-6.8-5-4.9 6.9-1L12 2z"/>
+            </svg>
+          </div>
+          <h3>Mission</h3>
+          <p>
+            To bridge the gap between theoretical knowledge and real-world clinical application,
+            presenting haematology in a structured, clinically relevant, and accessible way that
+            supports confident, safe practice.
+          </p>
+        </div>
+
+        <div class="card card-accent">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="6"/>
+              <path d="M20 20l-3.5-3.5"/>
+              <path d="M11 8v6"/>
+              <path d="M8 11h6"/>
+            </svg>
+          </div>
+          <h3>Focus</h3>
+          <p>
+            The platform supports practical learning, sound interpretation, and professional
+            development through educational resources, concise clinical frameworks, and
+            carefully developed educational and decision-support resources.
+          </p>
+        </div>
+
+        <div class="card card-accent card-full">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 20h16"/>
+              <path d="M6 20V8l6-4 6 4v12"/>
+              <path d="M10 12h4"/>
+            </svg>
+          </div>
+          <h3>Guiding Principles</h3>
+          <p>Every resource produced by the Academy is shaped by the following commitments:</p>
+          <ul class="principle-list">
+            <li>Evidence-based content grounded in current guidelines and literature</li>
+            <li>Clinical relevance that is practical, not purely theoretical</li>
+            <li>Clarity of language and structured presentation</li>
+            <li>Appropriate for trainees and experienced clinicians alike</li>
+            <li>Continuous improvement as practice and evidence evolve</li>
+            <li>Transparency about limitations and uncertainty</li>
+          </ul>
+        </div>
+
+        <div class="card card-accent card-full">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z"/>
+              <path d="M9.5 12h5"/>
+            </svg>
+          </div>
+          <h3>Professional Position</h3>
+          <p>
+            All content is intended for educational use and to support, not replace, clinical
+            judgement, specialist advice, or formal national guidance. The Academy does not
+            provide direct clinical advice or constitute a substitute for individual patient assessment.
+            Where clinical decisions are involved, reference to current guidelines and senior
+            clinical input remains essential.
+          </p>
+        </div>
       </div>
 
-      <div class="card">
-        <h2>Focus</h2>
-        <p>
-          The platform is intended to support practical learning, interpretation, and professional development through educational resources, concise frameworks, and carefully designed tools.
-        </p>
-      </div>
+      <hr class="divider">
 
-      <div class="card">
-        <h2>Professional Position</h2>
+      <div class="disclaimer">
         <p>
-          All content is intended for educational use and to support, not replace, clinical judgement, specialist advice, or formal guidance.
+          <strong>Important notice:</strong> Mohsin Haematology Academy is an independent
+          educational initiative. Content reflects the educational perspective of the author and
+          does not represent the views or policy of any NHS Trust, employer, or professional body.
+          Clinical guidance and protocols vary between institutions. Always refer to your local
+          policies and current national guidelines when making clinical decisions.
         </p>
       </div>
     </div>
@@ -146,8 +477,16 @@
 
   <footer>
     <div class="container">
-      <p><strong>Mohsin Haematology Academy</strong></p>
-      <p>Educational use only. This platform does not replace clinical judgement, specialist advice, or formal clinical guidance.</p>
+      <div class="footer-inner">
+        <div>
+          <div class="brand-name">Mohsin Haematology Academy</div>
+          <div class="brand-tagline">Clinical Education &amp; Digital Tools</div>
+        </div>
+        <div class="footer-note">
+          <strong>Educational use only.</strong><br>
+          Content does not replace clinical judgement or professional guidelines.
+        </div>
+      </div>
     </div>
   </footer>
 </body>
