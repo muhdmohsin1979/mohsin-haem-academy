@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator | Mohsin Haematology Academy</title>
+  <meta name="description" content="Haematology calculator page from Mohsin Haematology Academy." />
+  <style>
+    :root {
+      --primary: #7a1f2b;
+      --primary-dark: #5f1721;
+      --bg: #f7f7f7;
+      --text: #2f2f2f;
+      --muted: #666;
+      --border: #e7e7e7;
+      --card: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1000px, 92%); margin: 0 auto; }
+    header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      gap: 20px;
+    }
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .brand-logo {
+      height: 52px;
+      width: auto;
+    }
+    .brand-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-weight: 600;
+    }
+    main { padding: 60px 0; }
+    .page-title {
+      font-size: 2.4rem;
+      color: var(--primary-dark);
+      margin-bottom: 14px;
+    }
+    .intro {
+      color: var(--muted);
+      max-width: 760px;
+      margin-bottom: 30px;
+    }
+    .calculator-box, .notice-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+      margin-bottom: 22px;
+    }
+    h2 {
+      color: var(--primary);
+      margin-top: 0;
+    }
+    .coming-soon {
+      font-size: 1.05rem;
+      color: var(--muted);
+    }
+    footer {
+      background: #fff;
+      border-top: 1px solid var(--border);
+      padding: 28px 0 36px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    @media (max-width: 900px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .brand-logo {
+        height: 44px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand-wrap">
+        <img src="logo.png" alt="Mohsin Haematology Academy logo" class="brand-logo">
+        <div class="brand-title">Mohsin Haematology Academy</div>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="tools.html">Tools</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1 class="page-title">Haematology Clinical Support Calculator</h1>
+      <p class="intro">
+        This page is reserved for the first structured calculator to be integrated into Mohsin Haematology Academy.
+      </p>
+
+      <div class="calculator-box">
+        <h2>Calculator area</h2>
+        <p class="coming-soon">
+          The calculator interface will be built here next. The current page serves as a structured placeholder so the site architecture is established properly from the outset.
+        </p>
+      </div>
+
+      <div class="notice-box">
+        <h2>Important notice</h2>
+        <p>
+          This tool is intended for educational use only and must not replace clinical judgement, specialist review, or formal clinical guidance.
+        </p>
+        <p>
+          No patient-identifiable information should be entered into this platform.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><strong>Mohsin Haematology Academy</strong></p>
+      <p>Educational use only. This platform does not replace clinical judgement, specialist advice, or formal clinical guidance.</p>
+    </div>
+  </footer>
+</body>
+</html>
