@@ -5,37 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tools | Mohsin Haematology Academy</title>
   <meta name="description" content="Clinical tools and calculators from Mohsin Haematology Academy, designed to support structured interpretation in haematology.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ═══════════════════════════════════════════════
+       RESET & TOKENS
+    ═══════════════════════════════════════════════ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     :root {
-      --clr-primary: #7a1f2b;
-      --clr-primary-dark: #5c1720;
-      --clr-primary-mid: #8e2535;
-      --clr-primary-tint: rgba(122, 31, 43, 0.07);
-      --clr-primary-glow: rgba(122, 31, 43, 0.18);
-      --clr-bg: #f7f5f3;
-      --clr-surface: #ffffff;
-      --clr-surface-alt: #faf8f7;
-      --clr-text: #1a1a1e;
-      --clr-text-secondary: #3d3d42;
-      --clr-muted: #6b717a;
-      --clr-border: #e6e1dd;
-      --clr-border-light: #f0ebe7;
-      --clr-coming-soon-bg: #f9f8f6;
-      --clr-coming-soon-border: #ece7e3;
+      --clr-primary:       #7a1f2b;
+      --clr-primary-dark:  #5c1720;
+      --clr-primary-mid:   #8e2535;
+      --clr-primary-tint:  rgba(122, 31, 43, 0.07);
+      --clr-primary-glow:  rgba(122, 31, 43, 0.18);
+
+      --clr-bg:            #f7f5f3;
+      --clr-bg-warm:       #fdf1f3;
+      --clr-surface:       #ffffff;
+      --clr-surface-alt:   #faf8f7;
+
+      --clr-text:          #1a1a1e;
+      --clr-text-secondary:#3d3d42;
+      --clr-muted:         #6b717a;
+
+      --clr-border:        #e6e1dd;
+      --clr-border-light:  #f0ebe7;
+
+      --clr-coming-soon-bg:    #f9f8f6;
+      --clr-coming-soon-border:#ece7e3;
+
       --shadow-xs: 0 1px 2px rgba(0,0,0,.04);
       --shadow-sm: 0 1px 4px rgba(0,0,0,.06), 0 2px 6px rgba(0,0,0,.04);
       --shadow-md: 0 4px 16px rgba(0,0,0,.08), 0 2px 6px rgba(0,0,0,.04);
       --shadow-lg: 0 12px 36px rgba(0,0,0,.10), 0 4px 12px rgba(0,0,0,.05);
-      --radius-sm: 6px;
-      --radius-md: 12px;
-      --radius-xl: 24px;
+
+      --radius-sm:  6px;
+      --radius-md:  12px;
+      --radius-lg:  18px;
+      --radius-xl:  24px;
+
       --ease: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
+    html { scroll-behavior: smooth; }
+
     body {
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       background: var(--clr-bg);
       color: var(--clr-text);
       line-height: 1.6;
@@ -44,19 +66,25 @@
       -moz-osx-font-smoothing: grayscale;
     }
 
-    h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
-
     a { text-decoration: none; color: inherit; }
     img { display: block; max-width: 100%; }
 
-    .container { width: min(1080px, 91%); margin-inline: auto; }
+    .container {
+      width: min(1080px, 91%);
+      margin-inline: auto;
+    }
 
+
+    /* ═══════════════════════════════════════════════
+       HEADER / NAV
+    ═══════════════════════════════════════════════ */
     header {
       position: sticky;
       top: 0;
       z-index: 200;
       background: rgba(255,255,255,0.96);
       backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--clr-border);
     }
 
@@ -64,7 +92,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 72px;
+      height: 68px;
       gap: 24px;
     }
 
@@ -76,9 +104,8 @@
     }
 
     .brand img {
-      height: 46px;
+      height: 40px;
       width: auto;
-      object-fit: contain;
     }
 
     .brand-text { line-height: 1; }
@@ -109,7 +136,7 @@
       font-size: 0.85rem;
       font-weight: 500;
       color: var(--clr-text-secondary);
-      padding: 8px 13px;
+      padding: 7px 13px;
       border-radius: var(--radius-sm);
       transition: color var(--ease), background var(--ease);
       white-space: nowrap;
@@ -125,11 +152,20 @@
       background: var(--clr-primary) !important;
       color: #fff !important;
       font-weight: 600 !important;
-      padding: 8px 16px !important;
+      padding: 7px 16px !important;
       margin-left: 6px;
       box-shadow: 0 2px 8px var(--clr-primary-glow);
     }
 
+    .nav-cta:hover {
+      background: var(--clr-primary-dark) !important;
+      transform: translateY(-1px);
+    }
+
+
+    /* ═══════════════════════════════════════════════
+       PAGE HEADER
+    ═══════════════════════════════════════════════ */
     .page-header {
       padding: 64px 0 56px;
       background:
@@ -163,6 +199,7 @@
     }
 
     .page-header h1 {
+      font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
       font-size: clamp(1.8rem, 3.5vw, 2.5rem);
       font-weight: 700;
       color: var(--clr-primary-dark);
@@ -178,7 +215,13 @@
       max-width: 600px;
     }
 
-    main { padding: 64px 0 80px; }
+
+    /* ═══════════════════════════════════════════════
+       MAIN
+    ═══════════════════════════════════════════════ */
+    main {
+      padding: 64px 0 80px;
+    }
 
     .section-label {
       font-size: 0.7rem;
@@ -190,6 +233,7 @@
     }
 
     .section-title {
+      font-family: 'Playfair Display', Georgia, serif;
       font-size: clamp(1.4rem, 2.6vw, 1.75rem);
       font-weight: 700;
       color: var(--clr-primary-dark);
@@ -198,6 +242,10 @@
       margin-bottom: 32px;
     }
 
+
+    /* ═══════════════════════════════════════════════
+       HAEMCALC — FEATURED TOOL BLOCK
+    ═══════════════════════════════════════════════ */
     .tool-featured {
       background: linear-gradient(140deg, var(--clr-primary-dark) 0%, var(--clr-primary-mid) 100%);
       border-radius: var(--radius-xl);
@@ -220,20 +268,14 @@
       border-radius: 50%;
       pointer-events: none;
     }
-
     .tool-featured::before {
-      width: 260px;
-      height: 260px;
-      top: -70px;
-      right: 180px;
+      width: 260px; height: 260px;
+      top: -70px; right: 180px;
       background: rgba(255,255,255,0.05);
     }
-
     .tool-featured::after {
-      width: 160px;
-      height: 160px;
-      bottom: -40px;
-      right: -30px;
+      width: 160px; height: 160px;
+      bottom: -40px; right: -30px;
       background: rgba(255,255,255,0.04);
     }
 
@@ -247,6 +289,7 @@
     }
 
     .tool-featured h2 {
+      font-family: 'Playfair Display', Georgia, serif;
       font-size: clamp(1.6rem, 2.8vw, 2.1rem);
       font-weight: 700;
       letter-spacing: -0.025em;
@@ -325,18 +368,17 @@
       font-weight: 500;
     }
 
-    hr.divider {
-      border: none;
-      border-top: 1px solid var(--clr-border);
-      margin: 52px 0 48px;
-    }
 
+    /* ═══════════════════════════════════════════════
+       ADDITIONAL TOOLS GRID
+    ═══════════════════════════════════════════════ */
     .tools-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 18px;
     }
 
+    /* Standard tool card */
     .tool-card {
       background: var(--clr-surface);
       border: 1px solid var(--clr-border);
@@ -363,15 +405,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      font-size: 1.2rem;
       margin-bottom: 16px;
       flex-shrink: 0;
-      color: var(--clr-primary);
-    }
-
-    .tool-card-icon svg {
-      width: 21px;
-      height: 21px;
-      stroke: currentColor;
     }
 
     .tool-card h3 {
@@ -390,6 +426,7 @@
       flex: 1;
     }
 
+    /* "Coming soon" state */
     .tool-card-coming {
       background: var(--clr-coming-soon-bg);
       border-color: var(--clr-coming-soon-border);
@@ -406,11 +443,15 @@
     .tool-card-coming .tool-card-icon {
       background: rgba(107, 113, 122, 0.07);
       border-color: transparent;
+    }
+
+    .tool-card-coming h3 {
       color: var(--clr-muted);
     }
 
-    .tool-card-coming h3 { color: var(--clr-muted); }
-    .tool-card-coming p { color: #adb3bb; }
+    .tool-card-coming p {
+      color: #adb3bb;
+    }
 
     .coming-badge {
       display: inline-flex;
@@ -427,6 +468,7 @@
       width: fit-content;
     }
 
+    /* Active tool card link */
     .tool-card-link .tool-card-action {
       display: inline-flex;
       align-items: center;
@@ -435,11 +477,21 @@
       font-size: 0.82rem;
       font-weight: 600;
       color: var(--clr-primary);
-      transition: gap var(--ease);
+      transition: gap var(--ease), opacity var(--ease);
     }
 
-    .tool-card-link:hover .tool-card-action { gap: 10px; }
+    .tool-card-link:hover .tool-card-action {
+      gap: 10px;
+    }
 
+    /* Divider */
+    hr.divider {
+      border: none;
+      border-top: 1px solid var(--clr-border);
+      margin: 52px 0 48px;
+    }
+
+    /* Note block */
     .tools-note {
       background: var(--clr-surface-alt);
       border: 1px solid var(--clr-border);
@@ -460,6 +512,41 @@
       font-weight: 600;
     }
 
+
+    /* ═══════════════════════════════════════════════
+       BUTTONS
+    ═══════════════════════════════════════════════ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 22px;
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 0.875rem;
+      line-height: 1;
+      cursor: pointer;
+      border: none;
+      transition: all var(--ease);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--clr-primary);
+      color: #fff;
+      box-shadow: 0 2px 10px var(--clr-primary-glow);
+    }
+    .btn-primary:hover {
+      background: var(--clr-primary-dark);
+      box-shadow: 0 4px 16px var(--clr-primary-glow);
+      transform: translateY(-1px);
+    }
+
+
+    /* ═══════════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════════ */
     footer {
       background: var(--clr-surface);
       border-top: 1px solid var(--clr-border);
@@ -485,32 +572,55 @@
       font-weight: 600;
     }
 
+
+    /* ═══════════════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════════════ */
     @media (max-width: 960px) {
       .tool-featured {
         grid-template-columns: 1fr;
         gap: 28px;
         padding: 36px 32px;
       }
-      .tool-featured p { max-width: 100%; }
-      .tool-featured-cta { align-items: flex-start; }
-      .tools-grid { grid-template-columns: 1fr 1fr; }
+      .tool-featured p {
+        max-width: 100%;
+      }
+      .tool-featured-cta {
+        align-items: flex-start;
+      }
+      .tools-grid {
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
     @media (max-width: 640px) {
-      .nav-links a:not(.nav-cta) { display: none; }
-      .page-header { padding: 48px 0 40px; }
-      .tool-featured { padding: 28px 22px; }
-      .tools-grid { grid-template-columns: 1fr; }
+      .nav-links a:not(.nav-cta) {
+        display: none;
+      }
+      .page-header {
+        padding: 48px 0 40px;
+      }
+      .tool-featured {
+        padding: 28px 22px;
+      }
+      .tools-grid {
+        grid-template-columns: 1fr;
+      }
       .footer-inner {
         flex-direction: column;
         align-items: flex-start;
         gap: 14px;
       }
-      .footer-note { text-align: left; }
+      .footer-note {
+        text-align: left;
+      }
     }
+
   </style>
 </head>
 <body>
+
+  <!-- ═══ HEADER ═══════════════════════════════════ -->
   <header>
     <div class="container">
       <nav class="nav">
@@ -526,12 +636,14 @@
           <a href="about.html">About</a>
           <a href="tools.html" class="active">Tools</a>
           <a href="contact.html">Contact</a>
-          <a href="haemcalc/" class="nav-cta">Open HaemCalc</a>
+          <a href="haemcalc" class="nav-cta">Open HaemCalc</a>
         </div>
       </nav>
     </div>
   </header>
 
+
+  <!-- ═══ PAGE HEADER ═══════════════════════════════ -->
   <div class="page-header">
     <div class="container">
       <div class="page-eyebrow">
@@ -547,14 +659,18 @@
     </div>
   </div>
 
+
+  <!-- ═══ MAIN ══════════════════════════════════════ -->
   <main>
     <div class="container">
+
+      <!-- Featured: HaemCalc -->
       <div class="section-label">Flagship Tool</div>
       <div class="section-title">Now available</div>
 
       <div class="tool-featured">
         <div class="tool-featured-content">
-          <div class="tool-featured-badge">Haematology Educational Tool</div>
+          <div class="tool-featured-badge">Haematology Decision Support</div>
           <h2>HaemCalc</h2>
           <p>
             A structured digital tool for the interpretation of haematological parameters
@@ -562,103 +678,78 @@
             emphasis on clarity, usability, and safe clinical reasoning.
           </p>
           <div class="tool-featured-meta">
-            <div class="tool-meta-item"><span class="tool-meta-dot"></span>Point-of-care ready</div>
-            <div class="tool-meta-item"><span class="tool-meta-dot"></span>Educational use</div>
-            <div class="tool-meta-item"><span class="tool-meta-dot"></span>No login required</div>
+            <div class="tool-meta-item">
+              <span class="tool-meta-dot"></span>
+              Point-of-care ready
+            </div>
+            <div class="tool-meta-item">
+              <span class="tool-meta-dot"></span>
+              Educational use
+            </div>
+            <div class="tool-meta-item">
+              <span class="tool-meta-dot"></span>
+              No login required
+            </div>
           </div>
         </div>
         <div class="tool-featured-cta">
-          <a href="haemcalc/" class="btn-white">Launch HaemCalc &rarr;</a>
+          <a href="haemcalc" class="btn-white">Launch HaemCalc &rarr;</a>
           <div class="tool-featured-cta-note">Free &middot; No account needed</div>
         </div>
       </div>
 
-      <hr class="divider">
 
+      <!-- Additional Tools Grid -->
+      <hr class="divider">
       <div class="section-label">In Development</div>
       <div class="section-title">Further tools</div>
 
       <div class="tools-grid">
-        <a href="haemcalc/" class="tool-card tool-card-link">
-          <div class="tool-card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="4" y="3" width="16" height="18" rx="2"/>
-              <path d="M8 7h8"/>
-              <path d="M8 11h3"/>
-              <path d="M13 11h3"/>
-              <path d="M8 15h3"/>
-              <path d="M13 15h3"/>
-            </svg>
-          </div>
+
+        <!-- Active: HaemCalc repeated as card for grid consistency -->
+        <a href="haemcalc" class="tool-card tool-card-link">
+          <div class="tool-card-icon">🧮</div>
           <h3>HaemCalc</h3>
           <p>Structured interpretation of haematological parameters in defined clinical scenarios.</p>
           <div class="tool-card-action">Open tool &rarr;</div>
         </a>
 
+        <!-- Coming soon -->
         <div class="tool-card tool-card-coming">
-          <div class="tool-card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="10" cy="10" r="5"/>
-              <path d="M14.5 14.5L20 20"/>
-              <path d="M10 8v4"/>
-              <path d="M8 10h4"/>
-            </svg>
-          </div>
+          <div class="tool-card-icon">🔬</div>
           <h3>Peripheral Blood Film Interpreter</h3>
           <p>Guided interpretation of blood film findings with structured differentials and clinical correlation.</p>
           <div class="coming-badge">Coming soon</div>
         </div>
 
         <div class="tool-card tool-card-coming">
-          <div class="tool-card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 3v18"/>
-              <path d="M7 8h10"/>
-              <path d="M7 16h10"/>
-            </svg>
-          </div>
+          <div class="tool-card-icon">💊</div>
           <h3>Cytopenia Assessment Framework</h3>
           <p>Step-by-step structured approach to investigating single and multi-lineage cytopenias.</p>
           <div class="coming-badge">Coming soon</div>
         </div>
 
         <div class="tool-card tool-card-coming">
-          <div class="tool-card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 3c4 0 7 3 7 7 0 5-7 11-7 11S5 15 5 10c0-4 3-7 7-7z"/>
-              <path d="M12 7v3"/>
-            </svg>
-          </div>
+          <div class="tool-card-icon">🩸</div>
           <h3>Coagulation Pathway Tool</h3>
           <p>Visual and interpretive support for PT, APTT, and mixing studies in coagulation workup.</p>
           <div class="coming-badge">Coming soon</div>
         </div>
 
         <div class="tool-card tool-card-coming">
-          <div class="tool-card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 19h16"/>
-              <path d="M7 16V9"/>
-              <path d="M12 16V5"/>
-              <path d="M17 16v-3"/>
-            </svg>
-          </div>
+          <div class="tool-card-icon">📊</div>
           <h3>Haematological Malignancy Staging Aid</h3>
           <p>Reference tool covering staging criteria for lymphoma, myeloma, and leukaemia subtypes.</p>
           <div class="coming-badge">Coming soon</div>
         </div>
 
         <div class="tool-card tool-card-coming">
-          <div class="tool-card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M9 3h6"/>
-              <path d="M10 3v6l-4 7a3 3 0 0 0 2.6 5h6.8A3 3 0 0 0 18 16l-4-7V3"/>
-            </svg>
-          </div>
+          <div class="tool-card-icon">⚗️</div>
           <h3>Iron Studies Interpreter</h3>
           <p>Structured interpretation of ferritin, serum iron, TIBC, and transferrin saturation results.</p>
           <div class="coming-badge">Coming soon</div>
         </div>
+
       </div>
 
       <div class="tools-note">
@@ -668,15 +759,18 @@
           or substitute for current national guidelines and local protocols.
         </p>
       </div>
+
     </div>
   </main>
 
+
+  <!-- ═══ FOOTER ════════════════════════════════════ -->
   <footer>
     <div class="container">
       <div class="footer-inner">
         <div>
           <div class="brand-name">Mohsin Haematology Academy</div>
-          <div class="brand-tagline">Clinical Education &amp; Digital Tools</div>
+          <div class="brand-tagline" style="font-size:0.64rem; color:var(--clr-muted); letter-spacing:0.07em; text-transform:uppercase; margin-top:3px; font-weight:500;">Clinical Education &amp; Digital Tools</div>
         </div>
         <div class="footer-note">
           <strong>Educational use only.</strong><br>
@@ -685,5 +779,6 @@
       </div>
     </div>
   </footer>
+
 </body>
 </html>
