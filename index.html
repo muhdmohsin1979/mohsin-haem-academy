@@ -615,6 +615,125 @@
       }
     }
 
+
+    /* ═══════════════════════════════════════════════
+       MAILING LIST SIGNUP
+    ═══════════════════════════════════════════════ */
+    .signup-section {
+      padding: 72px 0;
+      background: linear-gradient(135deg, var(--clr-primary-dark) 0%, var(--clr-primary-mid) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .signup-section::before,
+    .signup-section::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .signup-section::before {
+      width: 360px; height: 360px;
+      top: -120px; right: -60px;
+      background: rgba(255,255,255,0.05);
+    }
+    .signup-section::after {
+      width: 200px; height: 200px;
+      bottom: -80px; left: 5%;
+      background: rgba(255,255,255,0.03);
+    }
+    .signup-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .signup-eyebrow {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 12px;
+    }
+    .signup-text h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+    .signup-text p {
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.68);
+      line-height: 1.72;
+    }
+    .mc-form-row {
+      display: flex;
+      gap: 0;
+      margin-bottom: 11px;
+    }
+    .mc-email-input {
+      flex: 1;
+      padding: 13px 16px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      color: var(--clr-text);
+      background: #fff;
+      border: none;
+      border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+      outline: none;
+      min-width: 0;
+    }
+    .mc-email-input::placeholder { color: var(--clr-muted); }
+    .mc-email-input:focus { box-shadow: 0 0 0 3px rgba(255,255,255,0.25); position: relative; z-index: 1; }
+    .mc-submit-btn {
+      padding: 13px 22px;
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--clr-primary-dark);
+      background: #fff;
+      border: none;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      cursor: pointer;
+      transition: background var(--ease), color var(--ease);
+      white-space: nowrap;
+      letter-spacing: -0.01em;
+    }
+    .mc-submit-btn:hover { background: #f5e8e9; }
+    .mc-privacy {
+      font-size: 0.73rem;
+      color: rgba(255,255,255,0.38);
+      line-height: 1.55;
+    }
+    #mce-responses { margin-top: 10px; }
+    #mce-error-response {
+      display: none;
+      font-size: 0.82rem;
+      color: #ffcdd2;
+      background: rgba(255,255,255,0.08);
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      margin-top: 8px;
+    }
+    #mce-success-response {
+      display: none;
+      font-size: 0.82rem;
+      color: #c8e6c9;
+      background: rgba(255,255,255,0.08);
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      margin-top: 8px;
+    }
+    @media (max-width: 760px) {
+      .signup-inner { grid-template-columns: 1fr; gap: 32px; }
+    }
+
   </style>
 </head>
 <body>
@@ -763,6 +882,55 @@
       </div>
     </div>
   </section>
+
+
+  <!-- ═══ MAILING LIST ════════════════════════════ -->
+  <section class="signup-section">
+    <div class="container">
+      <div class="signup-inner">
+
+        <div class="signup-text">
+          <div class="signup-eyebrow">Stay Updated</div>
+          <h2>Join the Academy mailing list</h2>
+          <p>New guidelines, clinical tools, journal club summaries, and educational content — delivered directly to your inbox as they publish. No spam. Unsubscribe any time.</p>
+        </div>
+
+        <div class="signup-form-wrap">
+          <form action="https://mohsinhaemacademy.us19.list-manage.com/subscribe/post?u=2a3cbe4be596321fa8d8e0193&amp;id=b268a64be0&amp;f_id=006fa9e4f0"
+                method="post"
+                id="mc-embedded-subscribe-form"
+                name="mc-embedded-subscribe-form"
+                class="validate"
+                target="_blank">
+            <div class="mc-form-row">
+              <input type="email"
+                     name="EMAIL"
+                     id="mce-EMAIL"
+                     class="required email mc-email-input"
+                     placeholder="Your email address"
+                     required="">
+              <button type="submit"
+                      name="subscribe"
+                      id="mc-embedded-subscribe"
+                      class="mc-submit-btn">Subscribe &rarr;</button>
+            </div>
+            <!-- Bot protection — do not remove -->
+            <div aria-hidden="true" style="position:absolute;left:-5000px;">
+              <input type="text" name="b_2a3cbe4be596321fa8d8e0193_b268a64be0" tabindex="-1" value="">
+            </div>
+            <div id="mce-responses">
+              <div id="mce-error-response"></div>
+              <div id="mce-success-response"></div>
+            </div>
+            <p class="mc-privacy">We respect your privacy. No patient data is ever collected. Powered by Mailchimp.</p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+  <script>(function($){window.fnames=new Array();window.ftypes=new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj=jQuery.noConflict(true);</script>
 
 
   <!-- ═══ FOOTER ════════════════════════════════════ -->
