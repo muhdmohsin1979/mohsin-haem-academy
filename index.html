@@ -231,6 +231,18 @@
       color: var(--clr-primary-mid);
     }
 
+    .hero-credential {
+      font-size: 0.82rem;
+      color: var(--clr-primary);
+      font-weight: 500;
+      margin-bottom: 14px;
+      opacity: 0.85;
+    }
+
+    .hero-credential strong {
+      font-weight: 700;
+    }
+
     .hero-lead {
       font-size: 1.05rem;
       color: var(--clr-text-secondary);
@@ -619,10 +631,11 @@
           </div>
         </a>
         <div class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
+          <a href="index.html" class="active">Home</a>
           <a href="tools.html">Tools</a>
-          <a href="contact.html">Contact</a>
+          <a href="guidelines.html">Guidelines</a>
+          <a href="education.html">Education</a>
+          <a href="about.html">About</a>
           <a href="haemcalc" class="nav-cta">Open HaemCalc</a>
         </div>
       </nav>
@@ -641,13 +654,17 @@
             Consultant-Led Platform
           </div>
           <h1>Practical haematology<br><em>education</em> and clinical tools</h1>
+          <p class="hero-credential">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:5px;opacity:0.7;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Built by <strong>Dr. Muhammad Mohsin</strong>, Consultant Haematologist &mdash; NHS UK
+          </p>
           <p class="hero-lead">
-            Mohsin Haematology Academy provides structured learning, clinical resources,
-            and digital tools to support trainees and clinicians in real-world decision-making.
+            Structured learning, clinical resources, and digital decision-support tools
+            to support trainees and clinicians in real-world practice.
           </p>
           <div class="hero-actions">
-            <a href="about.html" class="btn btn-primary">About the Academy</a>
-            <a href="haemcalc" class="btn btn-outline">Open HaemCalc &rarr;</a>
+            <a href="haemcalc" class="btn btn-primary">Launch HaemCalc &rarr;</a>
+            <a href="about.html" class="btn btn-outline">About the Academy</a>
           </div>
         </div>
 
@@ -719,10 +736,25 @@
           <div class="feature-eyebrow">Flagship Tool</div>
           <h2>HaemCalc</h2>
           <p>
-            The Academy's digital decision-support tool, designed for structured
-            interpretation of haematological parameters. Built for clinical clarity,
-            speed, and accuracy — accessible from any device.
+            The Academy's clinical decision-support platform — a growing suite of
+            validated haematology calculators covering malignancy scoring, coagulation,
+            critical illness, and more. Built for point-of-care use on any device.
+            No login required.
           </p>
+          <div style="margin-top: 10px; display:flex; flex-wrap:wrap; gap:8px;">
+            <span style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);color:#fff;font-size:0.78rem;font-weight:600;padding:5px 12px;border-radius:100px;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              100+ calculators
+            </span>
+            <span style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);color:#fff;font-size:0.78rem;font-weight:600;padding:5px 12px;border-radius:100px;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              No login required
+            </span>
+            <span style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);color:#fff;font-size:0.78rem;font-weight:600;padding:5px 12px;border-radius:100px;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              Point-of-care ready
+            </span>
+          </div>
           <div style="margin-top: 28px;">
             <a href="haemcalc" class="btn btn-white">Launch HaemCalc &rarr;</a>
           </div>

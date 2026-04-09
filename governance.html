@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clinical Governance | Mohsin Haematology Academy</title>
+  <meta name="description" content="Clinical governance framework for the Mohsin Haematology Academy — scope, limitations, data handling, and regulatory alignment.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --clr-primary:       #7a1f2b;
+      --clr-primary-dark:  #5c1720;
+      --clr-primary-mid:   #8e2535;
+      --clr-primary-tint:  rgba(122, 31, 43, 0.07);
+      --clr-primary-glow:  rgba(122, 31, 43, 0.18);
+      --clr-bg:            #f7f5f3;
+      --clr-bg-warm:       #fdf1f3;
+      --clr-surface:       #ffffff;
+      --clr-surface-alt:   #faf8f7;
+      --clr-text:          #1a1a1e;
+      --clr-text-secondary:#3d3d42;
+      --clr-muted:         #6b717a;
+      --clr-border:        #e6e1dd;
+      --clr-border-light:  #f0ebe7;
+      --shadow-sm: 0 1px 4px rgba(0,0,0,.06), 0 2px 6px rgba(0,0,0,.04);
+      --shadow-md: 0 4px 16px rgba(0,0,0,.08), 0 2px 6px rgba(0,0,0,.04);
+      --radius-sm: 6px; --radius-md: 12px; --radius-lg: 18px;
+      --ease: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--clr-bg); color: var(--clr-text); line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+    img { display: block; max-width: 100%; }
+    .container { width: min(1080px, 91%); margin-inline: auto; }
+
+    /* NAV */
+    header { position: sticky; top: 0; z-index: 200; background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--clr-border); }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .brand img { height: 40px; width: auto; }
+    .brand-text { line-height: 1; }
+    .brand-name { font-size: 0.95rem; font-weight: 700; color: var(--clr-primary); letter-spacing: -0.01em; }
+    .brand-tagline { font-size: 0.66rem; font-weight: 500; color: var(--clr-muted); letter-spacing: 0.07em; text-transform: uppercase; margin-top: 3px; }
+    .nav-links { display: flex; align-items: center; gap: 2px; }
+    .nav-links a { font-size: 0.85rem; font-weight: 500; color: var(--clr-text-secondary); padding: 7px 13px; border-radius: var(--radius-sm); transition: color var(--ease), background var(--ease); white-space: nowrap; }
+    .nav-links a:hover, .nav-links a.active { color: var(--clr-primary); background: var(--clr-primary-tint); }
+    .nav-cta { background: var(--clr-primary) !important; color: #fff !important; font-weight: 600 !important; padding: 7px 16px !important; margin-left: 6px; box-shadow: 0 2px 8px var(--clr-primary-glow); }
+    .nav-cta:hover { background: var(--clr-primary-dark) !important; transform: translateY(-1px); }
+
+    /* PAGE HEADER */
+    .page-header { padding: 64px 0 56px; background: radial-gradient(ellipse 60% 80% at 100% 50%, rgba(122,31,43,0.045) 0%, transparent 65%), linear-gradient(175deg, #fff 0%, #fdf3f5 70%, #f8eced 100%); border-bottom: 1px solid var(--clr-border-light); }
+    .page-eyebrow { display: inline-flex; align-items: center; gap: 7px; background: var(--clr-primary-tint); color: var(--clr-primary); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 5px 12px 5px 9px; border-radius: 100px; margin-bottom: 18px; border: 1px solid rgba(122,31,43,0.12); }
+    .page-eyebrow-dot { width: 6px; height: 6px; background: var(--clr-primary); border-radius: 50%; flex-shrink: 0; }
+    .page-header h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 700; color: var(--clr-primary-dark); letter-spacing: -0.025em; line-height: 1.2; margin-bottom: 16px; }
+    .page-lead { font-size: 1rem; color: var(--clr-text-secondary); line-height: 1.75; max-width: 620px; }
+
+    /* MAIN */
+    main { padding: 64px 0 80px; }
+
+    .section-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--clr-primary); margin-bottom: 8px; }
+    .section-title { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.4rem, 2.6vw, 1.75rem); font-weight: 700; color: var(--clr-primary-dark); letter-spacing: -0.02em; line-height: 1.25; margin-bottom: 28px; }
+
+    .gov-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+
+    .gov-card { background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); padding: 28px; box-shadow: var(--shadow-sm); }
+    .gov-card:hover { box-shadow: var(--shadow-md); border-color: rgba(122,31,43,0.15); }
+    .gov-card-accent { border-top: 3px solid var(--clr-primary); }
+    .gov-card-full { grid-column: 1 / -1; }
+
+    .gov-icon { width: 44px; height: 44px; border-radius: 11px; background: var(--clr-primary-tint); border: 1px solid rgba(122,31,43,0.10); display: flex; align-items: center; justify-content: center; color: var(--clr-primary); margin-bottom: 16px; }
+    .gov-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--clr-primary-dark); margin-bottom: 10px; line-height: 1.3; }
+    .gov-card p { font-size: 0.875rem; color: var(--clr-muted); line-height: 1.7; }
+    .gov-card ul { list-style: none; margin-top: 10px; }
+    .gov-card ul li { display: flex; align-items: flex-start; gap: 9px; font-size: 0.875rem; color: var(--clr-text-secondary); line-height: 1.55; padding: 4px 0; }
+    .gov-card ul li .li-icon { color: var(--clr-primary); flex-shrink: 0; margin-top: 1px; }
+
+    .version-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--clr-primary-tint); border: 1px solid rgba(122,31,43,0.15); color: var(--clr-primary); font-size: 0.78rem; font-weight: 600; padding: 6px 14px; border-radius: 100px; margin-top: 14px; }
+
+    .alert-block { background: #fffbeb; border: 1px solid #fcd34d; border-left: 4px solid #f59e0b; border-radius: 0 var(--radius-md) var(--radius-md) 0; padding: 20px 22px; margin-bottom: 16px; }
+    .alert-block p { font-size: 0.875rem; color: #78350f; line-height: 1.68; }
+    .alert-block strong { color: #92400e; font-weight: 700; }
+
+    .disclaimer { background: var(--clr-surface-alt); border: 1px solid var(--clr-border); border-left: 4px solid var(--clr-primary); border-radius: 0 var(--radius-md) var(--radius-md) 0; padding: 22px 24px; margin-top: 20px; }
+    .disclaimer p { font-size: 0.875rem; color: var(--clr-muted); line-height: 1.68; }
+    .disclaimer strong { color: var(--clr-text-secondary); font-weight: 600; }
+
+    hr.divider { border: none; border-top: 1px solid var(--clr-border); margin: 48px 0; }
+
+    /* FOOTER */
+    footer { background: var(--clr-surface); border-top: 1px solid var(--clr-border); padding: 36px 0; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .footer-note { font-size: 0.775rem; color: var(--clr-muted); text-align: right; line-height: 1.6; }
+    .footer-note strong { color: var(--clr-text-secondary); font-weight: 600; }
+
+    @media (max-width: 760px) {
+      .gov-grid { grid-template-columns: 1fr; }
+      .gov-card-full { grid-column: 1; }
+    }
+    @media (max-width: 640px) {
+      .nav-links a:not(.nav-cta) { display: none; }
+      .footer-inner { flex-direction: column; align-items: flex-start; gap: 14px; }
+      .footer-note { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="brand">
+          <img src="logo.png" alt="Mohsin Haematology Academy logo">
+          <div class="brand-text">
+            <div class="brand-name">Mohsin Haematology Academy</div>
+            <div class="brand-tagline">Clinical Education &amp; Digital Tools</div>
+          </div>
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="tools.html">Tools</a>
+          <a href="guidelines.html">Guidelines</a>
+          <a href="education.html">Education</a>
+          <a href="about.html">About</a>
+          <a href="haemcalc" class="nav-cta">Open HaemCalc</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="container">
+      <div class="page-eyebrow"><span class="page-eyebrow-dot"></span>Clinical Governance</div>
+      <h1>Governance &amp;<br>Platform Standards</h1>
+      <p class="page-lead">
+        The Mohsin Haematology Academy is committed to transparent, responsible, and
+        evidence-aligned clinical education. This page sets out the governance framework
+        that underpins everything published on this platform.
+      </p>
+    </div>
+  </div>
+
+  <main>
+    <div class="container">
+
+      <div class="alert-block">
+        <p><strong>Important:</strong> All content on this platform is intended for educational purposes only.
+        It does not constitute direct clinical advice and must not be used as a substitute for individual
+        patient assessment, specialist consultation, or current national guidelines.</p>
+      </div>
+
+      <div class="section-label">Framework</div>
+      <div class="section-title">How this platform operates</div>
+
+      <div class="gov-grid">
+
+        <div class="gov-card gov-card-accent">
+          <div class="gov-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <h3>Scope</h3>
+          <p>This platform provides educational decision-support content for haematology trainees and clinicians. It is designed to complement — not replace — formal training, local protocols, and national guidance.</p>
+          <ul>
+            <li><span class="li-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Structured educational content and clinical frameworks</li>
+            <li><span class="li-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Digital decision-support tools for point-of-care learning</li>
+            <li><span class="li-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Guideline summaries aligned to NICE, BSH, and ELN standards</li>
+          </ul>
+        </div>
+
+        <div class="gov-card gov-card-accent">
+          <div class="gov-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Limitations</h3>
+          <p>Users must be aware of the following limitations when using this platform:</p>
+          <ul>
+            <li><span class="li-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Content reflects national guidelines and may not align with local trust protocols</li>
+            <li><span class="li-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Clinical guidelines evolve — always verify against the most current published version</li>
+            <li><span class="li-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Individual patient circumstances always require clinical judgement</li>
+          </ul>
+        </div>
+
+        <div class="gov-card gov-card-accent">
+          <div class="gov-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3>Data &amp; Privacy</h3>
+          <p>This platform is designed with privacy as a core principle:</p>
+          <ul>
+            <li><span class="li-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>No patient data is collected, stored, or processed</li>
+            <li><span class="li-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>No user accounts or login credentials are required</li>
+            <li><span class="li-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>All tools operate entirely within the user's browser — no data leaves the device</li>
+            <li><span class="li-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Analytics data (visit counts) is collected in aggregate only via Cloudflare</li>
+          </ul>
+        </div>
+
+        <div class="gov-card gov-card-accent">
+          <div class="gov-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <h3>Evidence Standards</h3>
+          <p>All clinical content is anchored to recognised national and international guidance:</p>
+          <ul>
+            <li><span class="li-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>NICE guidelines (with guideline number and publication date)</li>
+            <li><span class="li-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>British Society for Haematology (BSH) standards</li>
+            <li><span class="li-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>European LeukemiaNet (ELN) recommendations where applicable</li>
+            <li><span class="li-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Peer-reviewed literature for tool development and validation</li>
+          </ul>
+        </div>
+
+        <div class="gov-card gov-card-accent gov-card-full">
+          <div class="gov-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Content Review &amp; Versioning</h3>
+          <p>All tools and resources carry a version number and last-updated date. Content is reviewed when relevant guidelines are updated or when clinical practice evolves significantly. Users are encouraged to check the version date and cross-reference with the source guideline before applying content in practice.</p>
+          <div class="version-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Platform Version 1.0 &nbsp;&middot;&nbsp; Governance reviewed April 2026
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="divider">
+
+      <div class="section-label">Accountability</div>
+      <div class="section-title">Who is responsible for this content</div>
+
+      <div class="gov-grid">
+        <div class="gov-card">
+          <div class="gov-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <h3>Clinical Author</h3>
+          <p>All content is created and reviewed by <strong>Dr. Muhammad Mohsin</strong>, Consultant Haematologist with extensive experience across NHS haematology services in the United Kingdom. Dr. Mohsin takes full clinical responsibility for the accuracy and appropriateness of the educational content published on this platform.</p>
+        </div>
+
+        <div class="gov-card">
+          <div class="gov-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3>Reporting a Concern</h3>
+          <p>If you identify a clinical inaccuracy, an outdated guideline reference, or a potential patient safety concern in any content on this platform, please contact us directly via the <a href="contact.html" style="color:var(--clr-primary); font-weight:600;">Contact page</a>. All reports are reviewed promptly and content is corrected or removed where necessary.</p>
+        </div>
+      </div>
+
+      <hr class="divider">
+
+      <div class="disclaimer">
+        <p>
+          <strong>Independent platform notice:</strong> The Mohsin Haematology Academy is an independent
+          educational initiative. Content reflects the educational perspective of the author and does not
+          represent the views, policies, or clinical protocols of any NHS Trust, employer, Royal College,
+          or professional body. Clinical guidance and local protocols vary between institutions — always
+          refer to your local policies and the most current national guidelines when making clinical decisions.
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="brand-name">Mohsin Haematology Academy</div>
+          <div class="brand-tagline" style="font-size:0.64rem; color:var(--clr-muted); letter-spacing:0.07em; text-transform:uppercase; margin-top:3px; font-weight:500;">Clinical Education &amp; Digital Tools</div>
+        </div>
+        <div class="footer-note">
+          <strong>Educational use only.</strong><br>
+          Content does not replace clinical judgement or professional guidelines.<br>
+          <span style="font-size:0.72rem; color:var(--clr-muted); opacity:0.8;">Created by Dr. Muhammad Mohsin &middot; Contributor: Muhammad Moaaz</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
