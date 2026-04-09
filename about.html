@@ -345,6 +345,92 @@
       font-weight: 600;
     }
 
+    /* ═══════════════════════════════════════════════
+       TEAM SECTION
+    ═══════════════════════════════════════════════ */
+    .team-grid {
+      display: grid;
+      grid-template-columns: 1.45fr 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .team-card {
+      position: relative;
+    }
+
+    .team-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: var(--clr-primary);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      letter-spacing: 0.03em;
+    }
+
+    .team-avatar--secondary {
+      background: var(--clr-primary-tint);
+      color: var(--clr-primary);
+      border: 1.5px solid rgba(122,31,43,0.18);
+      font-size: 0.9rem;
+      width: 44px;
+      height: 44px;
+      border-radius: 11px;
+    }
+
+    .team-role-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--clr-primary);
+      color: #fff;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 4px 11px;
+      border-radius: 100px;
+      margin-bottom: 12px;
+    }
+
+    .team-role-pill--secondary {
+      background: var(--clr-primary-tint);
+      color: var(--clr-primary);
+      border: 1px solid rgba(122,31,43,0.18);
+    }
+
+    .team-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--clr-primary-dark);
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+
+    .team-title {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--clr-primary);
+      margin-bottom: 12px;
+    }
+
+    .team-card .card p {
+      font-size: 0.875rem;
+      color: var(--clr-muted);
+      line-height: 1.7;
+    }
+
+    .team-card--secondary .team-name {
+      font-size: 0.95rem;
+    }
+
     hr.divider {
       border: none;
       border-top: 1px solid var(--clr-border);
@@ -401,6 +487,9 @@
         grid-column: 1;
       }
       .principle-list {
+        grid-template-columns: 1fr;
+      }
+      .team-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -533,6 +622,44 @@
 
       <hr class="divider">
 
+      <!-- ═══ PEOPLE SECTION ═══════════════════════ -->
+      <div class="section-label">The People</div>
+      <div class="section-title">Behind the Academy</div>
+
+      <div class="team-grid">
+
+        <!-- Primary: Dr. Muhammad Mohsin -->
+        <div class="card card-accent team-card">
+          <div class="team-avatar">MM</div>
+          <div class="team-role-pill">Founder &amp; Lead</div>
+          <div class="team-name">Dr. Muhammad Mohsin</div>
+          <div class="team-title">Consultant Haematologist — NHS, United Kingdom</div>
+          <p>
+            Dr. Mohsin is a Consultant Haematologist with extensive experience across UK
+            healthcare systems. The Academy is his initiative — built from a conviction
+            that high-quality haematology education should be accessible, practical, and
+            grounded in real clinical work. He leads all content, clinical tools, and
+            the direction of the platform.
+          </p>
+        </div>
+
+        <!-- Secondary: Muhammad Moaaz -->
+        <div class="card team-card team-card--secondary">
+          <div class="team-avatar team-avatar--secondary">MZ</div>
+          <div class="team-role-pill team-role-pill--secondary">Contributor</div>
+          <div class="team-name">Muhammad Moaaz</div>
+          <div class="team-title">4th Year Medical Student, Pakistan</div>
+          <p>
+            Muhammad Moaaz contributes ideas and collaborative thinking that have helped
+            shape the Academy's development. His perspective as a medical student brings
+            a valuable trainee viewpoint to the platform.
+          </p>
+        </div>
+
+      </div>
+
+      <hr class="divider">
+
       <div class="disclaimer">
         <p>
           <strong>Important notice:</strong> The Mohsin Haematology Academy is an independent
@@ -557,7 +684,8 @@
         </div>
         <div class="footer-note">
           <strong>Educational use only.</strong><br>
-          Content does not replace clinical judgement or professional guidelines.
+          Content does not replace clinical judgement or professional guidelines.<br>
+          <span style="font-size:0.72rem; color:var(--clr-muted); opacity:0.8;">Created by Dr. Muhammad Mohsin &middot; Contributor: Muhammad Moaaz</span>
         </div>
       </div>
     </div>
