@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ITP in Adults — Mohsin Haematology Academy</title>
+  <meta name="description" content="Consultant-grade guideline summary for immune thrombocytopenia in adults: diagnosis of exclusion, when to treat vs observe, first-line and second-line treatment, emergency management. Aligned with ASH 2019, NICE TA221, and NICE TA853.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <style>
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --clr-primary:       #7a1f2b;
+      --clr-primary-dark:  #5c1720;
+      --clr-primary-tint:  rgba(122, 31, 43, 0.07);
+
+      --clr-div:           #1a6b4a;
+      --clr-div-dark:      #145438;
+      --clr-div-tint:      rgba(26, 107, 74, 0.07);
+      --clr-div-tint-md:   rgba(26, 107, 74, 0.12);
+
+      --clr-bg:            #f7f5f3;
+      --clr-surface:       #ffffff;
+      --clr-surface-alt:   #faf8f7;
+
+      --clr-text:          #1a1a1e;
+      --clr-text-secondary:#3d3d42;
+      --clr-muted:         #6b717a;
+
+      --clr-border:        #e6e1dd;
+      --clr-border-light:  #f0ebe7;
+
+      --clr-warn:          #b45309;
+      --clr-warn-tint:     rgba(180, 83, 9, 0.07);
+      --clr-danger:        #991b1b;
+      --clr-danger-tint:   rgba(153, 27, 27, 0.07);
+      --clr-success:       #166534;
+      --clr-success-tint:  rgba(22, 101, 52, 0.07);
+
+      --shadow-sm: 0 1px 4px rgba(0,0,0,.06), 0 2px 6px rgba(0,0,0,.04);
+      --shadow-md: 0 4px 16px rgba(0,0,0,.08), 0 2px 6px rgba(0,0,0,.04);
+
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+
+      --ease: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--clr-bg);
+      color: var(--clr-text);
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { display: block; max-width: 100%; }
+
+    .container {
+      width: min(1080px, 91%);
+      margin-inline: auto;
+    }
+
+    /* ══════════════════════════════════════════
+       HEADER / NAV
+    ════════════════════════════════════════════ */
+    header {
+      position: sticky; top: 0; z-index: 200;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--clr-border);
+    }
+
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .brand img { height: 40px; width: auto; }
+    .brand-text { line-height: 1; }
+    .brand-name { font-size: 0.95rem; font-weight: 700; color: var(--clr-primary); letter-spacing: -0.01em; }
+    .brand-tagline { font-size: 0.66rem; font-weight: 500; color: var(--clr-muted); letter-spacing: 0.07em; text-transform: uppercase; margin-top: 3px; }
+
+    .nav-links { display: flex; align-items: center; gap: 2px; }
+    .nav-links a { font-size: 0.85rem; font-weight: 500; color: var(--clr-text-secondary); padding: 7px 11px; border-radius: var(--radius-sm); transition: color var(--ease), background var(--ease); white-space: nowrap; }
+    .nav-links a:hover { color: var(--clr-primary); background: var(--clr-primary-tint); }
+    .nav-links a.active { color: var(--clr-div); background: var(--clr-div-tint); font-weight: 600; }
+    .nav-cta { background: var(--clr-primary) !important; color: #fff !important; padding: 8px 16px !important; border-radius: var(--radius-sm) !important; font-weight: 600 !important; }
+    .nav-cta:hover { background: var(--clr-primary-dark) !important; }
+
+    /* ══════════════════════════════════════════
+       PAGE HERO
+    ════════════════════════════════════════════ */
+    .gl-hero {
+      background: linear-gradient(135deg, var(--clr-div) 0%, var(--clr-div-dark) 100%);
+      color: #fff;
+      padding: 52px 0 44px;
+    }
+
+    .gl-breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.78rem; color: rgba(255,255,255,0.6); margin-bottom: 20px; }
+    .gl-breadcrumb a { color: rgba(255,255,255,0.7); transition: color var(--ease); }
+    .gl-breadcrumb a:hover { color: #fff; }
+    .gl-breadcrumb span { opacity: 0.4; }
+
+    .gl-division-label { display: inline-flex; align-items: center; gap: 6px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 999px; margin-bottom: 14px; }
+
+    .gl-hero h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.7rem, 3.5vw, 2.4rem); font-weight: 700; line-height: 1.2; margin-bottom: 12px; }
+    .gl-hero-sub { font-size: 0.95rem; color: rgba(255,255,255,0.75); line-height: 1.6; margin-bottom: 24px; max-width: 560px; }
+
+    .gl-meta-row { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+    .gl-meta-item { display: flex; align-items: center; gap: 7px; font-size: 0.78rem; color: rgba(255,255,255,0.65); }
+    .gl-meta-item svg { opacity: 0.6; }
+    .gl-source-chips { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+    .gl-source-chip { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 0.7rem; font-weight: 700; background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.9); border: 1px solid rgba(255,255,255,0.25); }
+
+    /* ══════════════════════════════════════════
+       ANCHOR NAV
+    ════════════════════════════════════════════ */
+    .anchor-nav { background: var(--clr-surface); border-bottom: 1px solid var(--clr-border); position: sticky; top: 68px; z-index: 100; }
+    .anchor-nav-inner { display: flex; gap: 4px; padding: 10px 0; overflow-x: auto; scrollbar-width: none; }
+    .anchor-nav-inner::-webkit-scrollbar { display: none; }
+    .anchor-pill { display: inline-block; padding: 5px 13px; border-radius: 999px; border: 1.5px solid var(--clr-border); font-size: 0.76rem; font-weight: 500; color: var(--clr-muted); white-space: nowrap; transition: all var(--ease); flex-shrink: 0; }
+    .anchor-pill:hover { border-color: var(--clr-div); color: var(--clr-div); background: var(--clr-div-tint); }
+
+    /* ══════════════════════════════════════════
+       MAIN CONTENT LAYOUT
+    ════════════════════════════════════════════ */
+    .gl-body { padding: 52px 0 80px; }
+
+    .gl-layout { display: grid; grid-template-columns: 1fr 280px; gap: 40px; align-items: start; }
+
+    .gl-section { margin-bottom: 52px; scroll-margin-top: 140px; }
+
+    .gl-section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid var(--clr-div-tint-md); }
+
+    .gl-section-num { width: 28px; height: 28px; border-radius: var(--radius-sm); background: var(--clr-div); color: #fff; font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+
+    .gl-section-title { font-family: 'Playfair Display', Georgia, serif; font-size: 1.3rem; font-weight: 700; color: var(--clr-text); }
+
+    .gl-content p { font-size: 0.92rem; color: var(--clr-text-secondary); line-height: 1.75; margin-bottom: 14px; }
+    .gl-content p:last-child { margin-bottom: 0; }
+
+    .gl-subhead { font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--clr-div); margin: 20px 0 10px; }
+    .gl-subhead-plain { font-size: 0.95rem; font-weight: 600; color: var(--clr-text); margin: 16px 0 8px; }
+
+    .gl-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+    .gl-list li { font-size: 0.91rem; color: var(--clr-text-secondary); line-height: 1.6; padding-left: 20px; position: relative; }
+    .gl-list li::before { content: ''; position: absolute; left: 0; top: 9px; width: 7px; height: 7px; border-radius: 50%; background: var(--clr-div); opacity: 0.55; }
+    .gl-list--plain li::before { background: var(--clr-muted); }
+    .gl-list--danger li::before { background: var(--clr-danger); opacity: 0.8; }
+
+    /* ── Callout boxes ── */
+    .gl-box { border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 16px; }
+    .gl-box--info { background: var(--clr-div-tint); border-left: 3px solid var(--clr-div); }
+    .gl-box--warn { background: var(--clr-warn-tint); border-left: 3px solid var(--clr-warn); }
+    .gl-box--danger { background: var(--clr-danger-tint); border-left: 3px solid var(--clr-danger); }
+    .gl-box--success { background: var(--clr-success-tint); border-left: 3px solid var(--clr-success); }
+    .gl-box--neutral { background: var(--clr-surface-alt); border: 1px solid var(--clr-border); }
+
+    .gl-box-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; margin-bottom: 8px; }
+    .gl-box--info .gl-box-label { color: var(--clr-div); }
+    .gl-box--warn .gl-box-label { color: var(--clr-warn); }
+    .gl-box--danger .gl-box-label { color: var(--clr-danger); }
+    .gl-box--success .gl-box-label { color: var(--clr-success); }
+    .gl-box--neutral .gl-box-label { color: var(--clr-muted); }
+
+    .gl-box p, .gl-box li { font-size: 0.88rem !important; color: var(--clr-text-secondary); margin-bottom: 0 !important; }
+
+    /* ── Classification chips ── */
+    .classify-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
+    .classify-chip { flex: 1; min-width: 130px; padding: 12px 14px; border-radius: var(--radius-md); border: 1px solid var(--clr-border); background: var(--clr-surface); }
+    .classify-chip-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--clr-muted); margin-bottom: 4px; }
+    .classify-chip-value { font-size: 0.92rem; font-weight: 600; color: var(--clr-text); }
+    .classify-chip-desc { font-size: 0.76rem; color: var(--clr-muted); margin-top: 2px; }
+
+    /* ── Treat/Observe decision table ── */
+    .decision-grid { display: flex; flex-direction: column; gap: 2px; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--clr-border); margin-bottom: 20px; }
+    .decision-row { display: grid; grid-template-columns: 1fr 1fr; }
+    .decision-row.decision-header { background: var(--clr-div); }
+    .decision-cell { padding: 11px 16px; font-size: 0.85rem; line-height: 1.5; border-right: 1px solid var(--clr-border); }
+    .decision-cell:last-child { border-right: none; }
+    .decision-header .decision-cell { color: #fff; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; border-color: rgba(255,255,255,0.2); }
+    .decision-row:not(.decision-header) { background: var(--clr-surface); }
+    .decision-row:not(.decision-header):nth-child(even) { background: var(--clr-surface-alt); }
+    .decision-row:not(.decision-header):not(:last-child) { border-bottom: 1px solid var(--clr-border-light); }
+    .if-label { font-size: 0.83rem; font-weight: 600; color: var(--clr-text); }
+    .then-action { font-size: 0.84rem; font-weight: 600; color: var(--clr-div); }
+    .then-action.treat { color: var(--clr-danger); }
+    .then-action.observe { color: var(--clr-success); }
+    .then-note { font-size: 0.77rem; color: var(--clr-muted); margin-top: 3px; }
+
+    /* ── Treatment cards ── */
+    .treatment-cards { display: flex; flex-direction: column; gap: 14px; margin-bottom: 20px; }
+    .treatment-card { background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); overflow: hidden; }
+    .treatment-card-header { display: flex; align-items: center; gap: 10px; padding: 12px 16px; background: var(--clr-div-tint-md); }
+    .treatment-card-num { width: 22px; height: 22px; border-radius: var(--radius-sm); background: var(--clr-div); color: #fff; font-size: 0.7rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .treatment-card-title { font-size: 0.9rem; font-weight: 700; color: var(--clr-div); }
+    .treatment-card-subtitle { font-size: 0.76rem; color: var(--clr-muted); margin-left: auto; }
+    .treatment-card-body { padding: 14px 16px; }
+    .treatment-card-body p { font-size: 0.87rem; color: var(--clr-text-secondary); margin-bottom: 8px; }
+    .treatment-card-body p:last-child { margin-bottom: 0; }
+    .treatment-detail { font-size: 0.82rem; color: var(--clr-muted); font-style: italic; }
+
+    /* ── Second-line option cards ── */
+    .secondline-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+    .secondline-card { background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); padding: 14px 16px; }
+    .secondline-card-title { font-size: 0.88rem; font-weight: 700; color: var(--clr-text); margin-bottom: 6px; }
+    .secondline-card-tag { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 0.65rem; font-weight: 700; margin-bottom: 8px; }
+    .tag--nice { background: rgba(26,107,74,0.12); color: var(--clr-div); }
+    .tag--evidence { background: rgba(30,77,140,0.10); color: #1e4d8c; }
+    .tag--surgical { background: rgba(180,83,9,0.08); color: var(--clr-warn); }
+    .secondline-card p { font-size: 0.82rem; color: var(--clr-muted); line-height: 1.5; }
+
+    /* ── Guideline sources ── */
+    .gl-sources { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .gl-source-item { display: flex; gap: 14px; align-items: flex-start; padding: 14px 16px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); }
+    .gl-source-org { flex-shrink: 0; width: 52px; height: 52px; border-radius: var(--radius-sm); background: var(--clr-div); color: #fff; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.04em; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.2; }
+    .gl-source-detail { min-width: 0; }
+    .gl-source-title { font-size: 0.88rem; font-weight: 600; color: var(--clr-text); margin-bottom: 3px; line-height: 1.4; }
+    .gl-source-ref { font-size: 0.78rem; color: var(--clr-muted); }
+
+    /* ── Version block ── */
+    .gl-version-block { background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); padding: 16px 18px; display: flex; align-items: center; gap: 16px; font-size: 0.82rem; color: var(--clr-muted); flex-wrap: wrap; }
+    .gl-version-badge { background: var(--clr-div-tint); border: 1px solid rgba(26,107,74,0.3); color: var(--clr-div); font-size: 0.72rem; font-weight: 700; padding: 4px 10px; border-radius: 999px; white-space: nowrap; }
+
+    /* ── Sidebar ── */
+    .gl-sidebar { position: sticky; top: 140px; display: flex; flex-direction: column; gap: 16px; }
+    .sidebar-card { background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); overflow: hidden; }
+    .sidebar-card-header { background: var(--clr-div-tint-md); padding: 10px 14px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--clr-div); }
+    .sidebar-card-body { padding: 14px; }
+    .sidebar-toc { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+    .sidebar-toc li a { display: block; font-size: 0.8rem; color: var(--clr-muted); padding: 5px 8px; border-radius: var(--radius-sm); transition: all var(--ease); line-height: 1.4; }
+    .sidebar-toc li a:hover { color: var(--clr-div); background: var(--clr-div-tint); }
+    .sidebar-related-link { display: flex; align-items: center; gap: 8px; padding: 9px 12px; border-radius: var(--radius-sm); font-size: 0.82rem; color: var(--clr-text-secondary); border: 1px solid var(--clr-border); transition: all var(--ease); margin-bottom: 8px; }
+    .sidebar-related-link:hover { border-color: var(--clr-div); color: var(--clr-div); background: var(--clr-div-tint); }
+    .sidebar-related-link:last-child { margin-bottom: 0; }
+
+    /* ══════════════════════════════════════════
+       FOOTER
+    ════════════════════════════════════════════ */
+    footer { background: var(--clr-text); color: rgba(255,255,255,0.55); padding: 32px 0; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer-brand .brand-name { color: rgba(255,255,255,0.85); }
+    .footer-brand .brand-tagline { color: rgba(255,255,255,0.4); }
+    .footer-note { font-size: 0.78rem; line-height: 1.6; text-align: right; }
+
+    /* ══════════════════════════════════════════
+       RESPONSIVE
+    ════════════════════════════════════════════ */
+    @media (max-width: 900px) {
+      .gl-layout { grid-template-columns: 1fr; }
+      .gl-sidebar { position: static; }
+      .secondline-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links a:not(.nav-cta):not(.active) { display: none; }
+      .gl-hero { padding: 36px 0 30px; }
+      .decision-row { grid-template-columns: 1fr; }
+      .decision-cell { border-right: none; border-bottom: 1px solid var(--clr-border-light); }
+      .classify-chip { min-width: 100%; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+      .footer-note { text-align: left; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══════════════════════════════════ -->
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="brand">
+          <img src="logo.png" alt="Mohsin Haematology Academy logo">
+          <div class="brand-text">
+            <div class="brand-name">Mohsin Haematology Academy</div>
+            <div class="brand-tagline">Clinical Education &amp; Digital Tools</div>
+          </div>
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="tools.html">Tools</a>
+          <a href="guidelines.html" class="active">Guidelines</a>
+          <a href="education.html">Education</a>
+          <a href="journal-club.html">Journal Club</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="haemcalc" class="nav-cta">Open HaemCalc</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ═══ HERO ══════════════════════════════════════ -->
+  <section class="gl-hero">
+    <div class="container">
+      <div class="gl-breadcrumb">
+        <a href="guidelines.html">Guidelines</a>
+        <span>›</span>
+        <a href="guidelines.html#haemostasis">Haemostasis &amp; Thrombosis</a>
+        <span>›</span>
+        ITP in Adults
+      </div>
+      <div class="gl-division-label">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/></svg>
+        Haemostasis &amp; Thrombosis
+      </div>
+      <h1>Immune Thrombocytopenia (ITP)<br>in Adults — Diagnosis and Management</h1>
+      <p class="gl-hero-sub">
+        A UK-oriented consultant-grade summary covering diagnosis of exclusion, when to treat versus observe, first-line and second-line management, emergency bleeding approach, and platelet transfusion principles.
+      </p>
+      <div class="gl-meta-row">
+        <div class="gl-meta-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Version 1.0 — April 2026
+        </div>
+        <div class="gl-meta-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Dr Muhammad Mohsin, Consultant Haematologist
+        </div>
+        <div class="gl-source-chips">
+          <span class="gl-source-chip">ASH 2019</span>
+          <span class="gl-source-chip">NICE TA221</span>
+          <span class="gl-source-chip">NICE TA853</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ ANCHOR NAV ════════════════════════════════ -->
+  <div class="anchor-nav">
+    <div class="container">
+      <div class="anchor-nav-inner">
+        <a class="anchor-pill" href="#scope">Scope</a>
+        <a class="anchor-pill" href="#overview">What is ITP</a>
+        <a class="anchor-pill" href="#suspect">When to Suspect</a>
+        <a class="anchor-pill" href="#assessment">Assessment</a>
+        <a class="anchor-pill" href="#investigations">Investigations</a>
+        <a class="anchor-pill" href="#differentials">Differentials</a>
+        <a class="anchor-pill" href="#framework">Treat vs Observe</a>
+        <a class="anchor-pill" href="#firstline">First-Line</a>
+        <a class="anchor-pill" href="#secondline">Second-Line</a>
+        <a class="anchor-pill" href="#emergency">Emergency</a>
+        <a class="anchor-pill" href="#transfusion">Platelet Transfusion</a>
+        <a class="anchor-pill" href="#pearls">Pearls &amp; Pitfalls</a>
+        <a class="anchor-pill" href="#sources">Sources</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══ MAIN BODY ═════════════════════════════════ -->
+  <main class="gl-body">
+    <div class="container">
+      <div class="gl-layout">
+
+        <!-- ── CONTENT ── -->
+        <div class="gl-content">
+
+
+          <!-- 1. SCOPE -->
+          <section class="gl-section" id="scope">
+            <div class="gl-section-header">
+              <div class="gl-section-num">1</div>
+              <h2 class="gl-section-title">Scope and Positioning</h2>
+            </div>
+
+            <p><strong>Who this is for:</strong> Haematology trainees, general medicine registrars, and clinicians managing adult patients with suspected or confirmed ITP in secondary care. This summary reflects UK practice and is aligned with ASH and NICE frameworks.</p>
+
+            <p class="gl-subhead">This guideline covers</p>
+            <ul class="gl-list">
+              <li>Diagnosis of primary ITP as a diagnosis of exclusion</li>
+              <li>Clinical and laboratory approach to isolated thrombocytopenia</li>
+              <li>Treatment decisions — including the critical question of when to treat versus observe</li>
+              <li>First-line corticosteroid and IVIG strategies</li>
+              <li>Second-line and subsequent therapy options available within NHS England</li>
+              <li>Emergency management of severe or life-threatening bleeding in ITP</li>
+              <li>Principles of platelet transfusion in ITP</li>
+            </ul>
+
+            <p class="gl-subhead">This guideline does not cover</p>
+            <ul class="gl-list gl-list--plain">
+              <li>Paediatric ITP — management differs significantly; see paediatric haematology guidance</li>
+              <li>Secondary ITP (e.g., SLE-associated, drug-induced) — these are managed by treating the underlying cause</li>
+              <li>ITP in pregnancy — specialist obstetric haematology input required</li>
+              <li>Thrombocytopenia in the context of chemotherapy or bone marrow failure</li>
+            </ul>
+          </section>
+
+
+          <!-- 2. WHAT IS ITP -->
+          <section class="gl-section" id="overview">
+            <div class="gl-section-header">
+              <div class="gl-section-num">2</div>
+              <h2 class="gl-section-title">What is ITP?</h2>
+            </div>
+
+            <p><strong>Immune thrombocytopenia (ITP)</strong> is a primary haematological autoimmune disorder characterised by isolated thrombocytopenia — defined as a platelet count below 100 × 10⁹/L — in the absence of any identifiable underlying cause. It is a diagnosis of exclusion; no single test confirms ITP.</p>
+
+            <p class="gl-subhead">Classification by disease duration</p>
+            <div class="classify-row">
+              <div class="classify-chip">
+                <div class="classify-chip-label">Newly Diagnosed</div>
+                <div class="classify-chip-value">&lt; 3 months</div>
+                <div class="classify-chip-desc">From diagnosis to 3 months</div>
+              </div>
+              <div class="classify-chip">
+                <div class="classify-chip-label">Persistent</div>
+                <div class="classify-chip-value">3 – 12 months</div>
+                <div class="classify-chip-desc">Includes cases not achieving spontaneous remission</div>
+              </div>
+              <div class="classify-chip">
+                <div class="classify-chip-label">Chronic</div>
+                <div class="classify-chip-value">&gt; 12 months</div>
+                <div class="classify-chip-desc">Lasting beyond 12 months from diagnosis</div>
+              </div>
+            </div>
+
+            <p class="gl-subhead">Pathophysiology</p>
+            <p>ITP is driven primarily by autoantibody-mediated platelet destruction — predominantly IgG autoantibodies directed against platelet surface glycoproteins (GPIIb/IIIa, GPIb/IX) — leading to accelerated platelet clearance by the reticuloendothelial system, principally in the spleen. T-cell-mediated direct destruction of megakaryocytes contributes to impaired platelet production in many patients.</p>
+
+            <p class="gl-subhead">Epidemiology</p>
+            <p>Annual incidence in adults is approximately 3–4 per 100,000. In adults, there is a bimodal distribution: young women (20–40 years) and older adults of both sexes. Unlike childhood ITP, spontaneous remission in adults is less common and chronic disease is more frequent.</p>
+          </section>
+
+
+          <!-- 3. WHEN TO SUSPECT ITP -->
+          <section class="gl-section" id="suspect">
+            <div class="gl-section-header">
+              <div class="gl-section-num">3</div>
+              <h2 class="gl-section-title">When to Suspect ITP</h2>
+            </div>
+
+            <p>ITP should be suspected when a patient presents with isolated thrombocytopenia and features of mucocutaneous bleeding, or when thrombocytopenia is found incidentally on a routine blood test.</p>
+
+            <p class="gl-subhead">Typical clinical features</p>
+            <ul class="gl-list">
+              <li>Petechiae and purpura — typically lower limbs; spontaneous or with minor trauma</li>
+              <li>Easy bruising, disproportionate to the degree of trauma</li>
+              <li>Mucosal bleeding — epistaxis, gum bleeding, menorrhagia in women</li>
+              <li>Incidental finding: isolated low platelet count on FBC with no clinical bleeding</li>
+              <li>Absence of splenomegaly — splenomegaly is atypical in primary ITP and should prompt search for secondary cause</li>
+            </ul>
+
+            <div class="gl-box gl-box--danger">
+              <div class="gl-box-label">🚨 Red Flags — Seek Senior Input Urgently</div>
+              <ul class="gl-list gl-list--danger" style="margin-top:6px;">
+                <li>Intracranial haemorrhage — severe headache, focal neurology, reduced GCS in a thrombocytopenic patient</li>
+                <li>Severe mucosal bleeding — haemoptysis, haematemesis, haematuria, retinal haemorrhage</li>
+                <li>Platelet count &lt; 10 × 10⁹/L with any wet purpura (bullous lesions in the mouth)</li>
+                <li>Fever + thrombocytopenia + neurological features — consider TTP; do not start steroids until blood film reviewed</li>
+                <li>Thrombocytopenia + new thrombosis — consider HIT or antiphospholipid syndrome</li>
+              </ul>
+            </div>
+          </section>
+
+
+          <!-- 4. INITIAL ASSESSMENT -->
+          <section class="gl-section" id="assessment">
+            <div class="gl-section-header">
+              <div class="gl-section-num">4</div>
+              <h2 class="gl-section-title">Initial Assessment</h2>
+            </div>
+
+            <p class="gl-subhead">History</p>
+            <ul class="gl-list">
+              <li><strong>Medication review:</strong> quinidine, trimethoprim-sulfamethoxazole, vancomycin, heparin, anti-epileptics, proton pump inhibitors — many drugs can cause thrombocytopenia; a thorough medication history is mandatory</li>
+              <li><strong>Recent infection:</strong> viral illness in preceding 4–6 weeks (including HIV, EBV, CMV, hepatitis C); recent vaccination</li>
+              <li><strong>Systemic symptoms:</strong> joint pain, skin rashes, photosensitivity (SLE); night sweats, weight loss, lymphadenopathy (lymphoproliferative disease)</li>
+              <li><strong>Alcohol intake:</strong> direct myelosuppression and liver disease are common causes of thrombocytopenia</li>
+              <li><strong>Personal and family history:</strong> prior thrombocytopenia, bleeding disorders, autoimmune disease</li>
+              <li><strong>Bleeding history:</strong> onset, sites, severity, and relationship to platelet count trajectory</li>
+            </ul>
+
+            <p class="gl-subhead">Examination</p>
+            <ul class="gl-list">
+              <li>Distribution and type of bleeding lesions — petechiae, purpura, ecchymoses, wet purpura in mucous membranes</li>
+              <li>Lymphadenopathy — if present, raises concern for lymphoproliferative disease or infection</li>
+              <li>Splenomegaly or hepatomegaly — atypical for primary ITP; warrants further investigation</li>
+              <li>Signs of systemic disease — malar rash (SLE), jaundice (liver disease, haemolysis), pallor (Evans syndrome)</li>
+            </ul>
+          </section>
+
+
+          <!-- 5. INVESTIGATIONS -->
+          <section class="gl-section" id="investigations">
+            <div class="gl-section-header">
+              <div class="gl-section-num">5</div>
+              <h2 class="gl-section-title">Investigations and Diagnosis of Exclusion</h2>
+            </div>
+
+            <div class="gl-box gl-box--warn">
+              <div class="gl-box-label">⚠ ITP is a Diagnosis of Exclusion</div>
+              <p>There is no diagnostic test that confirms ITP. The diagnosis is made by excluding other causes of isolated thrombocytopenia. The blood film is the single most important investigation and must not be omitted.</p>
+            </div>
+
+            <p class="gl-subhead">First-Line Investigations</p>
+            <ul class="gl-list">
+              <li><strong>FBC with differential</strong> — confirm isolated thrombocytopenia; normal WBC, Hb, and MCV support primary ITP</li>
+              <li><strong>Blood film (mandatory)</strong> — exclude: pseudothrombocytopenia (EDTA-induced platelet clumping), TTP/HUS (schistocytes), lymphoproliferative disease (atypical lymphocytes/blast cells), MDS (dysplastic changes); confirm platelet morphology</li>
+              <li><strong>Clotting screen (PT, APTT)</strong> — normal in ITP; abnormality suggests DIC or liver disease</li>
+              <li><strong>Renal function, LFTs, and bone profile</strong> — liver disease, renal impairment</li>
+              <li><strong>Immunoglobulins</strong> — hypogammaglobulinaemia may suggest underlying lymphoproliferative disease</li>
+              <li><strong>HIV and hepatitis C serology</strong> — both are treatable causes of thrombocytopenia that may mimic ITP</li>
+              <li><strong>Helicobacter pylori testing</strong> — UREA breath test or stool antigen; eradication may improve platelet count in some patients</li>
+              <li><strong>ANA and anti-dsDNA</strong> — to exclude SLE as a secondary cause</li>
+              <li><strong>Blood group (ABO/RhD)</strong> — required before IVIG or anti-D therapy</li>
+            </ul>
+
+            <p class="gl-subhead">Second-Line / Selective Investigations</p>
+            <ul class="gl-list">
+              <li><strong>Bone marrow biopsy:</strong> not routinely required in typical primary ITP in patients under 60 with no atypical features; indicated before splenectomy, in patients ≥60 years, or where MDS/lymphoma cannot be excluded from peripheral film alone</li>
+              <li><strong>Direct antiglobulin test (DAT):</strong> if haemolysis suspected — to exclude Evans syndrome (autoimmune haemolytic anaemia + ITP)</li>
+              <li><strong>Antiphospholipid antibodies:</strong> if concurrent thrombosis or recurrent pregnancy loss — particularly relevant in women of childbearing age</li>
+              <li><strong>Platelet antibody testing:</strong> not recommended for routine diagnosis due to poor sensitivity and specificity (ASH 2019)</li>
+              <li><strong>EBV, CMV serology:</strong> in younger patients with acute presentation and recent viral illness</li>
+            </ul>
+          </section>
+
+
+          <!-- 6. DIFFERENTIALS -->
+          <section class="gl-section" id="differentials">
+            <div class="gl-section-header">
+              <div class="gl-section-num">6</div>
+              <h2 class="gl-section-title">Important Differentials — Not to Miss</h2>
+            </div>
+
+            <p>The following conditions can present with isolated or predominant thrombocytopenia. Some carry significant management implications and require different treatment pathways.</p>
+
+            <div class="gl-box gl-box--danger">
+              <div class="gl-box-label">Medical Emergencies — Must Exclude First</div>
+              <ul class="gl-list gl-list--danger" style="margin-top:6px;">
+                <li><strong>Thrombotic thrombocytopenic purpura (TTP):</strong> microangiopathic haemolytic anaemia + thrombocytopenia + neurological/renal features. Schistocytes on blood film. Do NOT treat with steroids alone — requires urgent plasma exchange and haematology input</li>
+                <li><strong>Heparin-induced thrombocytopenia (HIT):</strong> thrombocytopenia + new thrombosis in a heparinised patient. Requires immediate heparin cessation and alternative anticoagulation</li>
+              </ul>
+            </div>
+
+            <p class="gl-subhead">Important Non-Emergency Differentials</p>
+            <ul class="gl-list">
+              <li><strong>Pseudothrombocytopenia:</strong> EDTA-induced in vitro platelet clumping — check blood film; repeat FBC in citrate or heparin tube; no treatment required</li>
+              <li><strong>Drug-induced thrombocytopenia (DITP):</strong> many drugs implicated; review medication list thoroughly; usually resolves after drug withdrawal</li>
+              <li><strong>Systemic lupus erythematosus (SLE):</strong> check ANA, anti-dsDNA, complement levels; thrombocytopenia may be the presenting feature</li>
+              <li><strong>Antiphospholipid syndrome (APS):</strong> thrombocytopenia in context of VTE or recurrent pregnancy loss; check anticardiolipin, anti-beta-2-glycoprotein I, lupus anticoagulant</li>
+              <li><strong>Evans syndrome:</strong> autoimmune haemolytic anaemia + ITP; check DAT, reticulocyte count, LDH, and bilirubin</li>
+              <li><strong>Lymphoproliferative disease:</strong> CLL, lymphoma — blood film, lymph node examination, CT staging if clinical suspicion</li>
+              <li><strong>Myelodysplastic syndrome (MDS):</strong> particularly in older patients; bone marrow biopsy required to confirm</li>
+              <li><strong>HIV-associated thrombocytopenia:</strong> can mimic primary ITP; check HIV serology in all patients unless clearly excluded</li>
+              <li><strong>Hepatitis C-associated thrombocytopenia:</strong> treatable cause; direct-acting antivirals may restore platelet count</li>
+              <li><strong>Alcohol-related thrombocytopenia:</strong> direct marrow suppression and hypersplenism; often recovers with abstinence</li>
+            </ul>
+          </section>
+
+
+          <!-- 7. TREAT VS OBSERVE -->
+          <section class="gl-section" id="framework">
+            <div class="gl-section-header">
+              <div class="gl-section-num">7</div>
+              <h2 class="gl-section-title">When to Treat vs When to Observe</h2>
+            </div>
+
+            <p>The decision to treat ITP is based on <strong>bleeding severity and clinical context</strong>, not platelet count alone. A patient with a platelet count of 15 × 10⁹/L who is asymptomatic may not require immediate treatment, while a patient with count 50 × 10⁹/L and significant mucosal bleeding does.</p>
+
+            <div class="gl-box gl-box--info">
+              <div class="gl-box-label" style="color:var(--clr-div);">ASH 2019 Recommendation</div>
+              <p>For adults with newly diagnosed ITP and a platelet count ≥ 30 × 10⁹/L who are not bleeding, the ASH guideline panel suggests <strong>observation over treatment</strong>. Many patients with counts in this range do not progress and do not require pharmacological intervention at diagnosis.</p>
+            </div>
+
+            <div class="decision-grid">
+              <div class="decision-row decision-header">
+                <div class="decision-cell">Clinical Situation</div>
+                <div class="decision-cell">Recommended Approach</div>
+              </div>
+              <div class="decision-row">
+                <div class="decision-cell">
+                  <div class="if-label">Platelets ≥ 30 × 10⁹/L, no bleeding or minimal bruising</div>
+                </div>
+                <div class="decision-cell">
+                  <div class="then-action observe">Observe</div>
+                  <div class="then-note">Close follow-up; repeat FBC in 1–2 weeks; patient education on bleeding precautions</div>
+                </div>
+              </div>
+              <div class="decision-row">
+                <div class="decision-cell">
+                  <div class="if-label">Platelets &lt; 30 × 10⁹/L, asymptomatic or minor bruising only</div>
+                </div>
+                <div class="decision-cell">
+                  <div class="then-action">Treat or observe (individualise)</div>
+                  <div class="then-note">Consider patient lifestyle, age, activity level, and comorbidities; corticosteroids if treatment chosen</div>
+                </div>
+              </div>
+              <div class="decision-row">
+                <div class="decision-cell">
+                  <div class="if-label">Any platelet count + significant mucosal bleeding (epistaxis, gum bleeding, menorrhagia)</div>
+                </div>
+                <div class="decision-cell">
+                  <div class="then-action treat">Treat</div>
+                  <div class="then-note">Prednisolone or dexamethasone ± IVIG depending on urgency; add tranexamic acid for mucosal bleeding</div>
+                </div>
+              </div>
+              <div class="decision-row">
+                <div class="decision-cell">
+                  <div class="if-label">Platelets ≥ 30 × 10⁹/L + upcoming invasive procedure or surgery</div>
+                </div>
+                <div class="decision-cell">
+                  <div class="then-action treat">Treat pre-procedure</div>
+                  <div class="then-note">Aim for platelet count appropriate to procedure (e.g., ≥50 for minor surgery, ≥80–100 for major or neuraxial); use IVIG for rapid elevation</div>
+                </div>
+              </div>
+              <div class="decision-row">
+                <div class="decision-cell">
+                  <div class="if-label">Any platelet count + severe/life-threatening bleeding (intracranial, GI haemorrhage)</div>
+                </div>
+                <div class="decision-cell">
+                  <div class="then-action treat" style="color:var(--clr-danger);">Emergency treatment — see Section 10</div>
+                  <div class="then-note">IV methylprednisolone + IVIG + platelet transfusion; urgent haematology review</div>
+                </div>
+              </div>
+              <div class="decision-row">
+                <div class="decision-cell">
+                  <div class="if-label">Chronic ITP (>12 months), stable, platelets 20–50 × 10⁹/L, no bleeding</div>
+                </div>
+                <div class="decision-cell">
+                  <div class="then-action observe">Individualise — often observe</div>
+                  <div class="then-note">Avoid long-term corticosteroids for count maintenance alone; consider second-line only if quality of life impacted</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+          <!-- 8. FIRST-LINE TREATMENT -->
+          <section class="gl-section" id="firstline">
+            <div class="gl-section-header">
+              <div class="gl-section-num">8</div>
+              <h2 class="gl-section-title">First-Line Treatment</h2>
+            </div>
+
+            <p>First-line treatment aims to raise the platelet count to a safe level and control bleeding symptoms. Corticosteroids are the standard first-line agent. IVIG is added when a rapid response is required.</p>
+
+            <div class="treatment-cards">
+
+              <div class="treatment-card">
+                <div class="treatment-card-header">
+                  <div class="treatment-card-num">A</div>
+                  <div class="treatment-card-title">Prednisolone (oral corticosteroid)</div>
+                  <div class="treatment-card-subtitle">Standard first-line</div>
+                </div>
+                <div class="treatment-card-body">
+                  <p><strong>Dose:</strong> 1 mg/kg/day (maximum 80 mg/day) for 2–4 weeks, then taper over 4–6 weeks based on response.</p>
+                  <p><strong>Response:</strong> Platelet count typically rises within 1–2 weeks in responding patients. Approximately 70–80% achieve an initial response, but durable remission without further treatment occurs in fewer than 30% of adults.</p>
+                  <p><strong>Important — ASH 2019:</strong> Corticosteroid courses should not be prolonged beyond 6 weeks. Avoid maintenance prednisolone at doses that cause systemic toxicity solely to maintain a platelet count.</p>
+                  <p class="treatment-detail">Cautions: hyperglycaemia, hypertension, mood changes, insomnia, osteoporosis with prolonged use; prescribe bone protection and monitor blood glucose in at-risk patients.</p>
+                </div>
+              </div>
+
+              <div class="treatment-card">
+                <div class="treatment-card-header">
+                  <div class="treatment-card-num">B</div>
+                  <div class="treatment-card-title">Dexamethasone (high-dose pulse)</div>
+                  <div class="treatment-card-subtitle">Alternative corticosteroid</div>
+                </div>
+                <div class="treatment-card-body">
+                  <p><strong>Dose:</strong> 40 mg/day for 4 consecutive days. May be repeated as up to 3 cycles at 14–28-day intervals.</p>
+                  <p><strong>Response:</strong> Produces a faster initial platelet rise compared with prednisolone. Long-term remission rates are similar to prednisolone at 6–12 months. May be preferred when a rapid response is needed or to avoid prolonged steroid courses.</p>
+                  <p class="treatment-detail">Cautions: same as prednisolone. Blood glucose monitoring essential, particularly in patients with diabetes. Consider gastroprotection.</p>
+                </div>
+              </div>
+
+              <div class="treatment-card">
+                <div class="treatment-card-header">
+                  <div class="treatment-card-num">C</div>
+                  <div class="treatment-card-title">Intravenous immunoglobulin (IVIG)</div>
+                  <div class="treatment-card-subtitle">When rapid response required</div>
+                </div>
+                <div class="treatment-card-body">
+                  <p><strong>Dose:</strong> 1 g/kg as a single infusion; may be repeated after 24 hours if response is inadequate. Total dose of 2 g/kg is an alternative regimen given over 2 days.</p>
+                  <p><strong>Response:</strong> Rapid — platelet count typically rises within 24–48 hours. Effect is transient (2–4 weeks) but valuable as a bridge to longer-term treatment or in preparation for surgery/procedures.</p>
+                  <p><strong>Indications for IVIG:</strong> active significant bleeding regardless of platelet count; urgent surgery or invasive procedure requiring rapid platelet elevation; failure to respond to initial corticosteroids with ongoing bleeding.</p>
+                  <p class="treatment-detail">Cautions: infusion reactions (headache, fever, chills); renal impairment (sucrose-containing formulations); haemolysis in patients with blood group A or B (rare); check IgA levels before administration if primary immunodeficiency suspected — IgA-deficient patients are at risk of anaphylaxis with IgA-containing IVIG.</p>
+                </div>
+              </div>
+
+              <div class="treatment-card">
+                <div class="treatment-card-header">
+                  <div class="treatment-card-num">D</div>
+                  <div class="treatment-card-title">Helicobacter pylori Eradication</div>
+                  <div class="treatment-card-subtitle">Adjunct in H. pylori-positive patients</div>
+                </div>
+                <div class="treatment-card-body">
+                  <p>All newly diagnosed ITP patients should be tested for H. pylori (urea breath test or stool antigen). In H. pylori-positive patients, eradication therapy (standard triple therapy per local formulary) is recommended.</p>
+                  <p>A proportion of H. pylori-positive ITP patients will experience a sustained platelet count rise following successful eradication. This is a low-risk, low-cost intervention with potential benefit. Platelet response may take several months after eradication to become apparent.</p>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+
+          <!-- 9. SECOND-LINE TREATMENT -->
+          <section class="gl-section" id="secondline">
+            <div class="gl-section-header">
+              <div class="gl-section-num">9</div>
+              <h2 class="gl-section-title">Second-Line and Subsequent Treatment</h2>
+            </div>
+
+            <p>Second-line therapy is considered in patients with persistent or chronic ITP who have relapsed after first-line treatment, remain dependent on corticosteroids at an unacceptable dose, or have chronic disease with insufficient platelet count and/or symptoms.</p>
+
+            <p>The choice of second-line agent should be guided by patient preference, comorbidities, fertility considerations, access (NICE approval), and local haematology expertise.</p>
+
+            <div class="secondline-grid">
+
+              <div class="secondline-card">
+                <div class="secondline-card-title">Romiplostim</div>
+                <div><span class="secondline-card-tag tag--nice">NICE TA221</span></div>
+                <p>TPO receptor agonist (TPO-RA). Weekly subcutaneous injection. Stimulates platelet production by activating the thrombopoietin receptor on megakaryocytes. NICE-approved for adults with chronic ITP refractory to standard active treatments and rescue therapies, or those with severe disease and a high bleeding risk requiring frequent rescue therapy. Response rate approximately 79–88%. Does not induce disease remission — relapse on discontinuation is common.</p>
+              </div>
+
+              <div class="secondline-card">
+                <div class="secondline-card-title">Avatrombopag (Doptelet)</div>
+                <div><span class="secondline-card-tag tag--nice">NICE TA853</span></div>
+                <p>Oral TPO receptor agonist. NICE-approved (December 2022) for adults with primary chronic ITP refractory to other treatments, including corticosteroids and immunoglobulins, subject to the commercial arrangement. Once-daily oral dosing. Clinical trial evidence shows superior platelet response versus placebo. May be as effective as other TPO-RAs; comparative trial data are currently indirect.</p>
+              </div>
+
+              <div class="secondline-card">
+                <div class="secondline-card-title">Rituximab</div>
+                <div><span class="secondline-card-tag tag--evidence">Evidence-based</span></div>
+                <p>Anti-CD20 monoclonal antibody. Used in UK practice for persistent and chronic ITP refractory to first-line therapy. Not specifically NICE-approved for ITP — NICE evidence review notes limitations in the evidence base and recommends measured use. Typical regimen: 375 mg/m² weekly × 4 doses or low-dose 100 mg × 4 weekly doses. Approximately 60% initial response; durable 5-year remission in around 20%. Risk of delayed-onset hypogammaglobulinaemia and infection.</p>
+              </div>
+
+              <div class="secondline-card">
+                <div class="secondline-card-title">Splenectomy</div>
+                <div><span class="secondline-card-tag tag--surgical">Surgical</span></div>
+                <p>Historically the most durable second-line option: 60–70% long-term complete response. Now generally deferred until at least 12 months after diagnosis given availability of TPO-RAs. Requires pre-operative vaccination against encapsulated organisms (pneumococcal, Hib, meningococcal ACWY and B, influenza) ≥ 2 weeks before surgery. Lifelong penicillin prophylaxis and annual influenza vaccination post-splenectomy. Bone marrow biopsy required before proceeding.</p>
+              </div>
+
+            </div>
+
+            <div class="gl-box gl-box--neutral">
+              <div class="gl-box-label">Other Options — Lower Evidence Base</div>
+              <p>Azathioprine, mycophenolate mofetil, ciclosporin, and danazol have been used in refractory ITP. Evidence is limited to small observational series. These agents are generally reserved for cases where other options have failed or are contraindicated, under specialist haematology guidance.</p>
+            </div>
+          </section>
+
+
+          <!-- 10. EMERGENCY -->
+          <section class="gl-section" id="emergency">
+            <div class="gl-section-header">
+              <div class="gl-section-num">10</div>
+              <h2 class="gl-section-title">Emergency Management — Severe Bleeding</h2>
+            </div>
+
+            <div class="gl-box gl-box--danger">
+              <div class="gl-box-label">🚨 Severe or Life-Threatening Bleeding in ITP — Immediate Actions</div>
+              <ul class="gl-list gl-list--danger" style="margin-top:6px;">
+                <li>Contact haematology on-call immediately — do not manage in isolation</li>
+                <li>Initiate IV methylprednisolone 1 g/day for 3 days (or equivalent high-dose IV dexamethasone)</li>
+                <li>Give IVIG 1 g/kg — may repeat after 24 hours if inadequate initial response</li>
+                <li>Platelet transfusion in high doses (see Section 11) — combine with IVIG to prolong platelet survival</li>
+                <li>Tranexamic acid 1 g three times daily — for mucosal, oral, or menstrual bleeding</li>
+                <li>For intracranial haemorrhage: neurosurgery and intensive care involvement; consider emergency splenectomy in refractory cases</li>
+              </ul>
+            </div>
+
+            <p>The goal in severe ITP bleeding is to achieve a rapid, temporary rise in platelet count sufficient to control haemorrhage. The combination of high-dose corticosteroids + IVIG + platelet transfusion provides the fastest achievable response. No single therapy alone is adequate in a life-threatening emergency.</p>
+
+            <p>Recombinant Factor VIIa has been used anecdotally in refractory life-threatening ITP bleeding but is not supported by controlled trial evidence and should be considered only as a last resort with haematology and haemostasis specialist input.</p>
+          </section>
+
+
+          <!-- 11. PLATELET TRANSFUSION -->
+          <section class="gl-section" id="transfusion">
+            <div class="gl-section-header">
+              <div class="gl-section-num">11</div>
+              <h2 class="gl-section-title">Platelet Transfusion Principles in ITP</h2>
+            </div>
+
+            <div class="gl-box gl-box--warn">
+              <div class="gl-box-label">⚠ Platelet Transfusion is NOT Routine in ITP</div>
+              <p>Unlike most other causes of thrombocytopenia, transfused platelets in ITP are subject to the same autoimmune destruction as endogenous platelets. Transfused platelets have a very short half-life (minutes to hours in active ITP) and will not sustainably raise the platelet count. Platelet transfusion is therefore reserved for specific clinical indications — not used prophylactically for a low count alone.</p>
+            </div>
+
+            <p class="gl-subhead">Appropriate Indications for Platelet Transfusion in ITP</p>
+            <ul class="gl-list">
+              <li>Active severe or life-threatening bleeding — irrespective of platelet count</li>
+              <li>Urgent surgical or invasive procedure where haemostasis is critical and platelet count is inadequate</li>
+              <li>As a bridge while waiting for IVIG or corticosteroids to take effect in a bleeding patient</li>
+            </ul>
+
+            <p class="gl-subhead">Practical Guidance</p>
+            <ul class="gl-list">
+              <li>Administer at higher than standard doses — at least 2 adult therapeutic doses (equivalent to at least 2 pools of random donor platelets or 2 apheresis units)</li>
+              <li>Give simultaneously with IVIG if possible — IVIG temporarily reduces the rate of platelet destruction and prolongs the survival of transfused platelets</li>
+              <li>Do not transfuse to a specific platelet count threshold in the absence of bleeding — the indication is clinical haemorrhage, not the count itself</li>
+              <li>Repeat transfusions may be required at short intervals in severe bleeding — reassess frequently</li>
+            </ul>
+          </section>
+
+
+          <!-- 12. PEARLS & PITFALLS -->
+          <section class="gl-section" id="pearls">
+            <div class="gl-section-header">
+              <div class="gl-section-num">12</div>
+              <h2 class="gl-section-title">Clinical Pearls and Pitfalls</h2>
+            </div>
+
+            <div class="gl-box gl-box--danger">
+              <div class="gl-box-label">Common Pitfalls — Avoid These</div>
+              <ul class="gl-list" style="margin-top:6px;">
+                <li><strong>Missing pseudothrombocytopenia</strong> — always review the blood film before initiating any treatment; platelet clumping in EDTA is a benign cause of spurious thrombocytopenia</li>
+                <li><strong>Starting corticosteroids before excluding TTP</strong> — check blood film for schistocytes; TTP is a haematological emergency requiring plasma exchange, not steroids alone</li>
+                <li><strong>Treating newly diagnosed ITP with platelet count ≥30 and no bleeding</strong> — ASH 2019 supports observation; unnecessary treatment exposes patients to steroid toxicity</li>
+                <li><strong>Prolonged corticosteroid use beyond 6 weeks</strong> — ASH 2019 recommends against this; if a patient requires prolonged steroids, second-line therapy should be planned</li>
+                <li><strong>Routine platelet transfusion for isolated thrombocytopenia without bleeding</strong> — transfused platelets will be rapidly destroyed; not indicated without active haemorrhage</li>
+                <li><strong>Not checking HIV and HCV</strong> — both are treatable causes that may masquerade as primary ITP; antiviral therapy can restore the platelet count</li>
+                <li><strong>Not testing for H. pylori</strong> — a low-risk, low-cost test with potential treatment benefit; should be performed in all newly diagnosed patients</li>
+              </ul>
+            </div>
+
+            <div class="gl-box gl-box--info">
+              <div class="gl-box-label" style="color:var(--clr-div);">Clinical Pearls</div>
+              <ul class="gl-list" style="margin-top:6px;">
+                <li>ITP in pregnancy requires specialist obstetric haematology management — avoid prolonged steroids; IVIG is the preferred acute treatment; neonatal thrombocytopenia may occur and requires planning</li>
+                <li>Bone marrow biopsy is not routinely required in typical primary ITP in patients under 60 with a normal blood film; it should be performed before splenectomy or if MDS or lymphoma cannot be excluded</li>
+                <li>TPO receptor agonists do not induce immune remission — relapse after discontinuation is the rule rather than the exception; patients should be counselled about this before starting</li>
+                <li>After splenectomy: lifelong penicillin V 250 mg twice daily prophylaxis; annual influenza vaccination; pneumococcal vaccine every 5 years; patient-held emergency information card</li>
+                <li>Dexamethasone produces a faster initial response than prednisolone but long-term remission rates at 6–12 months are similar; use dexamethasone when a rapid response is desirable or when a short course is preferred</li>
+                <li>The platelet count in ITP does not always correlate with bleeding risk — patients with chronic stable ITP often bleed less than those with acute-onset thrombocytopenia at the same count, due to younger, more haemostatically active platelets in ITP</li>
+              </ul>
+            </div>
+          </section>
+
+
+          <!-- 13. SOURCES -->
+          <section class="gl-section" id="sources">
+            <div class="gl-section-header">
+              <div class="gl-section-num">13</div>
+              <h2 class="gl-section-title">Guideline Basis</h2>
+            </div>
+
+            <p>There is currently no single NICE clinical guideline covering all aspects of adult ITP management. This summary is anchored in the ASH 2019 guideline framework as the most comprehensive adult ITP guideline available, supplemented by NICE technology appraisals for specific NHS-approved agents and BNF treatment summary guidance for UK prescribing context.</p>
+
+            <ul class="gl-sources" style="margin-top:20px;">
+              <li class="gl-source-item">
+                <div class="gl-source-org">ASH</div>
+                <div class="gl-source-detail">
+                  <div class="gl-source-title">American Society of Hematology 2019 guidelines for immune thrombocytopenia</div>
+                  <div class="gl-source-ref">Neunert C, Terrell DR, Arnold DM, et al. Blood Advances 2019;3(23):3829–3866. 2022 review published: Blood Advances 2024;8(13):3578–3594. Available at hematology.org/guidelines</div>
+                </div>
+              </li>
+              <li class="gl-source-item">
+                <div class="gl-source-org">NICE TA221</div>
+                <div class="gl-source-detail">
+                  <div class="gl-source-title">Romiplostim for the treatment of chronic immune thrombocytopenia</div>
+                  <div class="gl-source-ref">NICE Technology Appraisal TA221. Published April 2011, updated October 2018. Available at nice.org.uk/guidance/ta221</div>
+                </div>
+              </li>
+              <li class="gl-source-item">
+                <div class="gl-source-org">NICE TA853</div>
+                <div class="gl-source-detail">
+                  <div class="gl-source-title">Avatrombopag for treating primary chronic immune thrombocytopenia</div>
+                  <div class="gl-source-ref">NICE Technology Appraisal TA853. Published December 2022. Subject to commercial arrangement. Available at nice.org.uk/guidance/ta853</div>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+
+          <!-- 14. VERSION & DISCLAIMER -->
+          <section class="gl-section" id="version" style="margin-bottom:0;">
+            <div class="gl-section-header">
+              <div class="gl-section-num">14</div>
+              <h2 class="gl-section-title">Versioning and Disclaimer</h2>
+            </div>
+
+            <div class="gl-version-block">
+              <span class="gl-version-badge">v1.0 — April 2026</span>
+              <span>Author: Dr Muhammad Mohsin, Consultant Haematologist, NHS UK. Reviewer: Muhammad Moaaz.</span>
+            </div>
+
+            <div class="gl-box gl-box--neutral" style="margin-top:14px;">
+              <div class="gl-box-label">Disclaimer</div>
+              <p>This guideline summary supports clinical decision-making and is intended for educational use by healthcare professionals. It does not replace individual clinical judgement, the full published ASH and NICE guidelines, local institutional protocols, or specialist haematology consultation. No single guideline covers all aspects of adult ITP management; clinicians should refer to the primary guideline sources listed above for complete recommendations. See the <a href="governance.html" style="color:var(--clr-div); text-decoration:underline;">Clinical Governance</a> page for full terms of use.</p>
+            </div>
+          </section>
+
+
+        </div><!-- /gl-content -->
+
+
+        <!-- ── SIDEBAR ── -->
+        <aside class="gl-sidebar">
+
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">On This Page</div>
+            <div class="sidebar-card-body">
+              <ul class="sidebar-toc">
+                <li><a href="#scope">1. Scope</a></li>
+                <li><a href="#overview">2. What is ITP</a></li>
+                <li><a href="#suspect">3. When to Suspect</a></li>
+                <li><a href="#assessment">4. Initial Assessment</a></li>
+                <li><a href="#investigations">5. Investigations</a></li>
+                <li><a href="#differentials">6. Differentials</a></li>
+                <li><a href="#framework">7. Treat vs Observe</a></li>
+                <li><a href="#firstline">8. First-Line Treatment</a></li>
+                <li><a href="#secondline">9. Second-Line Treatment</a></li>
+                <li><a href="#emergency">10. Emergency</a></li>
+                <li><a href="#transfusion">11. Platelet Transfusion</a></li>
+                <li><a href="#pearls">12. Pearls &amp; Pitfalls</a></li>
+                <li><a href="#sources">13. Sources</a></li>
+                <li><a href="#version">14. Versioning</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">Related Content</div>
+            <div class="sidebar-card-body">
+              <a class="sidebar-related-link" href="vte-cancer.html">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Cancer-Associated Thrombosis
+              </a>
+              <a class="sidebar-related-link" href="journal-club.html">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                Journal Club
+              </a>
+              <a class="sidebar-related-link" href="guidelines.html">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                All Guidelines
+              </a>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">Evidence Basis</div>
+            <div class="sidebar-card-body" style="font-size:0.8rem; color:var(--clr-muted); line-height:1.55;">
+              <p style="margin-bottom:8px;">This page reflects <strong style="color:var(--clr-text);">ASH 2019</strong> as the primary adult ITP guideline, reviewed in 2022.</p>
+              <p style="margin-bottom:8px;">UK-specific NICE technology appraisals: <strong style="color:var(--clr-text);">TA221</strong> (romiplostim) and <strong style="color:var(--clr-text);">TA853</strong> (avatrombopag).</p>
+              <p>No single NICE clinical guideline covers all adult ITP management.</p>
+            </div>
+          </div>
+
+        </aside>
+
+      </div><!-- /gl-layout -->
+    </div><!-- /container -->
+  </main>
+
+
+  <!-- ═══ FOOTER ════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand brand">
+          <div class="brand-text">
+            <div class="brand-name">Mohsin Haematology Academy</div>
+            <div class="brand-tagline">Clinical Education &amp; Digital Tools</div>
+          </div>
+        </div>
+        <div class="footer-note">
+          <strong>Educational use only.</strong><br>
+          Content does not replace clinical judgement or professional guidelines.<br>
+          <span style="font-size:0.72rem; color:var(--clr-muted); opacity:0.8;">Created by Dr. Muhammad Mohsin &middot; Contributor: Muhammad Moaaz &middot; <a href="governance.html" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Clinical Governance</a></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
