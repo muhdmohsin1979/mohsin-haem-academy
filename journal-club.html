@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Journal Club — Mohsin Haematology Academy</title>
+  <meta name="description" content="Critical appraisal of landmark haematology trials and high-impact publications. Structured summaries for trainees and clinicians.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <style>
+
+    /* ═══════════════════════════════════════════════
+       RESET & TOKENS
+    ═══════════════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --clr-primary:       #7a1f2b;
+      --clr-primary-dark:  #5c1720;
+      --clr-primary-mid:   #8e2535;
+      --clr-primary-tint:  rgba(122, 31, 43, 0.07);
+      --clr-primary-glow:  rgba(122, 31, 43, 0.18);
+
+      --clr-bg:            #f7f5f3;
+      --clr-bg-warm:       #fdf1f3;
+      --clr-surface:       #ffffff;
+      --clr-surface-alt:   #faf8f7;
+
+      --clr-text:          #1a1a1e;
+      --clr-text-secondary:#3d3d42;
+      --clr-muted:         #6b717a;
+      --clr-subtle:        #9ca3af;
+
+      --clr-border:        #e6e1dd;
+      --clr-border-light:  #f0ebe7;
+
+      --shadow-xs: 0 1px 2px rgba(0,0,0,.04);
+      --shadow-sm: 0 1px 4px rgba(0,0,0,.06), 0 2px 6px rgba(0,0,0,.04);
+      --shadow-md: 0 4px 16px rgba(0,0,0,.08), 0 2px 6px rgba(0,0,0,.04);
+      --shadow-lg: 0 12px 36px rgba(0,0,0,.10), 0 4px 12px rgba(0,0,0,.05);
+
+      --radius-sm:  6px;
+      --radius-md:  12px;
+      --radius-lg:  18px;
+      --radius-xl:  24px;
+
+      --ease: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+
+      /* Division colours */
+      --cat-mal: #7a1f2b;
+      --cat-gen: #1e4d8c;
+      --cat-hae: #1a6b4a;
+      --cat-tra: #7a4f1f;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--clr-bg);
+      color: var(--clr-text);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { display: block; max-width: 100%; }
+
+    .container {
+      width: min(1080px, 91%);
+      margin-inline: auto;
+    }
+
+    /* ═══════════════════════════════════════════════
+       HEADER / NAV
+    ═══════════════════════════════════════════════ */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--clr-border);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .brand img { height: 40px; width: auto; }
+    .brand-text { line-height: 1; }
+
+    .brand-name {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--clr-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .brand-tagline {
+      font-size: 0.66rem;
+      font-weight: 500;
+      color: var(--clr-muted);
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--clr-text-secondary);
+      padding: 7px 11px;
+      border-radius: var(--radius-sm);
+      transition: color var(--ease), background var(--ease);
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover { color: var(--clr-primary); background: var(--clr-primary-tint); }
+    .nav-links a.active { color: var(--clr-primary); background: var(--clr-primary-tint); font-weight: 600; }
+
+    .nav-cta {
+      background: var(--clr-primary) !important;
+      color: #fff !important;
+      padding: 8px 16px !important;
+      border-radius: var(--radius-sm) !important;
+      font-weight: 600 !important;
+    }
+
+    .nav-cta:hover { background: var(--clr-primary-dark) !important; }
+
+    /* ═══════════════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════════════ */
+    .jc-hero {
+      background: linear-gradient(135deg, var(--clr-primary) 0%, #5c1720 100%);
+      color: #fff;
+      padding: 64px 0 52px;
+    }
+
+    .jc-hero-inner {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .jc-hero-content { max-width: 580px; }
+
+    .jc-hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 18px;
+    }
+
+    .jc-hero-label-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.4);
+    }
+
+    .jc-hero h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .jc-hero h1 em {
+      font-style: italic;
+      color: rgba(255,255,255,0.82);
+    }
+
+    .jc-hero-lead {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.65;
+      margin-bottom: 28px;
+    }
+
+    .jc-hero-stats {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .jc-stat {
+      text-align: left;
+    }
+
+    .jc-stat-num {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1;
+    }
+
+    .jc-stat-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 4px;
+    }
+
+    /* ═══════════════════════════════════════════════
+       FILTER BAR
+    ═══════════════════════════════════════════════ */
+    .filter-bar {
+      background: var(--clr-surface);
+      border-bottom: 1px solid var(--clr-border);
+      padding: 0;
+      position: sticky;
+      top: 68px;
+      z-index: 100;
+    }
+
+    .filter-bar-inner {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .filter-bar-inner::-webkit-scrollbar { display: none; }
+
+    .filter-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--clr-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+      margin-right: 4px;
+      flex-shrink: 0;
+    }
+
+    .filter-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid var(--clr-border);
+      background: transparent;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--clr-text-secondary);
+      cursor: pointer;
+      transition: all var(--ease);
+      white-space: nowrap;
+      flex-shrink: 0;
+      font-family: inherit;
+    }
+
+    .filter-pill:hover {
+      border-color: var(--pill-colour, var(--clr-primary));
+      color: var(--pill-colour, var(--clr-primary));
+      background: rgba(var(--pill-colour-rgb, 122,31,43), 0.06);
+    }
+
+    .filter-pill.active {
+      background: var(--pill-colour, var(--clr-primary));
+      border-color: var(--pill-colour, var(--clr-primary));
+      color: #fff;
+    }
+
+    .filter-pill .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: currentColor;
+      opacity: 0.7;
+    }
+
+    /* ═══════════════════════════════════════════════
+       MAIN CONTENT AREA
+    ═══════════════════════════════════════════════ */
+    .jc-section {
+      padding: 56px 0 80px;
+    }
+
+    .jc-count-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 32px;
+    }
+
+    .jc-count-text {
+      font-size: 0.85rem;
+      color: var(--clr-muted);
+    }
+
+    .jc-count-text strong {
+      color: var(--clr-text);
+      font-weight: 600;
+    }
+
+    /* ═══════════════════════════════════════════════
+       JOURNAL CLUB CARDS
+    ═══════════════════════════════════════════════ */
+    .jc-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .jc-card {
+      background: var(--clr-surface);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--clr-border);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--ease), box-shadow var(--ease);
+    }
+
+    .jc-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .jc-card-accent {
+      height: 5px;
+      background: var(--accent-colour, var(--clr-primary));
+    }
+
+    .jc-card-body {
+      padding: 24px 26px 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      flex: 1;
+    }
+
+    /* Meta row */
+    .jc-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .jc-division-badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--accent-colour, var(--clr-primary));
+    }
+
+    .jc-journal-badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--clr-text-secondary);
+      background: var(--clr-surface-alt);
+      border: 1px solid var(--clr-border);
+    }
+
+    .jc-year {
+      font-size: 0.75rem;
+      color: var(--clr-muted);
+      font-weight: 500;
+      margin-left: auto;
+    }
+
+    /* Title & citation */
+    .jc-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--clr-text);
+    }
+
+    .jc-citation {
+      font-size: 0.75rem;
+      color: var(--clr-muted);
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    /* Key findings */
+    .jc-findings-header {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--clr-muted);
+      margin-bottom: 8px;
+    }
+
+    .jc-findings-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .jc-findings-list li {
+      font-size: 0.88rem;
+      color: var(--clr-text-secondary);
+      line-height: 1.5;
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .jc-findings-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent-colour, var(--clr-primary));
+      opacity: 0.65;
+    }
+
+    /* Clinical takeaway */
+    .jc-takeaway {
+      background: var(--clr-primary-tint);
+      border-left: 3px solid var(--accent-colour, var(--clr-primary));
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 12px 14px;
+    }
+
+    .jc-takeaway-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-colour, var(--clr-primary));
+      margin-bottom: 5px;
+    }
+
+    .jc-takeaway p {
+      font-size: 0.86rem;
+      color: var(--clr-text-secondary);
+      line-height: 1.55;
+    }
+
+    /* Critical appraisal note */
+    .jc-appraisal {
+      background: var(--clr-surface-alt);
+      border: 1px solid var(--clr-border-light);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+    }
+
+    .jc-appraisal-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--clr-muted);
+      margin-bottom: 4px;
+    }
+
+    .jc-appraisal p {
+      font-size: 0.82rem;
+      color: var(--clr-muted);
+      line-height: 1.5;
+    }
+
+    /* Card footer */
+    .jc-card-footer {
+      margin-top: auto;
+      padding-top: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .jc-evidence-level {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--clr-muted);
+    }
+
+    .jc-evidence-level .level-badge {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      background: var(--accent-colour, var(--clr-primary));
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ═══════════════════════════════════════════════
+       COMING SOON CARD VARIANT
+    ═══════════════════════════════════════════════ */
+    .jc-card--soon {
+      opacity: 0.72;
+      background: var(--clr-surface-alt);
+    }
+
+    .jc-card--soon:hover { transform: none; box-shadow: var(--shadow-sm); }
+
+    .soon-body {
+      padding: 28px 26px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .soon-pill {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--clr-muted);
+      background: var(--clr-bg);
+      border: 1.5px dashed var(--clr-border);
+    }
+
+    .soon-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--clr-text-secondary);
+      line-height: 1.35;
+    }
+
+    .soon-desc {
+      font-size: 0.83rem;
+      color: var(--clr-muted);
+      line-height: 1.5;
+    }
+
+    /* ═══════════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════════ */
+    footer {
+      background: var(--clr-text);
+      color: rgba(255,255,255,0.55);
+      padding: 32px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand .brand-name { color: rgba(255,255,255,0.85); }
+    .footer-brand .brand-tagline { color: rgba(255,255,255,0.4); }
+
+    .footer-note {
+      font-size: 0.78rem;
+      line-height: 1.6;
+      text-align: right;
+    }
+
+    /* ═══════════════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════════════ */
+    @media (max-width: 860px) {
+      .jc-grid { grid-template-columns: 1fr; }
+      .jc-hero-inner { flex-direction: column; }
+      .jc-hero-stats { gap: 20px; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+      .footer-note { text-align: left; }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links a:not(.nav-cta):not(.active) { display: none; }
+      .jc-hero { padding: 40px 0 36px; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══════════════════════════════════ -->
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="brand">
+          <img src="logo.png" alt="Mohsin Haematology Academy logo">
+          <div class="brand-text">
+            <div class="brand-name">Mohsin Haematology Academy</div>
+            <div class="brand-tagline">Clinical Education &amp; Digital Tools</div>
+          </div>
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="tools.html">Tools</a>
+          <a href="guidelines.html">Guidelines</a>
+          <a href="education.html">Education</a>
+          <a href="journal-club.html" class="active">Journal Club</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="haemcalc" class="nav-cta">Open HaemCalc</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ═══ HERO ══════════════════════════════════════ -->
+  <section class="jc-hero">
+    <div class="container">
+      <div class="jc-hero-inner">
+        <div class="jc-hero-content">
+          <div class="jc-hero-label">
+            <span class="jc-hero-label-dot"></span>
+            Evidence-Based Learning
+          </div>
+          <h1>Journal Club &amp;<br><em>Critical Appraisal</em></h1>
+          <p class="jc-hero-lead">
+            Structured summaries and critical appraisal of landmark haematology trials and high-impact publications — designed for trainees and practising clinicians.
+          </p>
+          <div class="jc-hero-stats">
+            <div class="jc-stat">
+              <div class="jc-stat-num">3</div>
+              <div class="jc-stat-label">Papers reviewed</div>
+            </div>
+            <div class="jc-stat">
+              <div class="jc-stat-num">4</div>
+              <div class="jc-stat-label">BSH divisions covered</div>
+            </div>
+            <div class="jc-stat">
+              <div class="jc-stat-num">RCT</div>
+              <div class="jc-stat-label">Level 1 evidence focus</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ FILTER BAR ════════════════════════════════ -->
+  <div class="filter-bar">
+    <div class="container">
+      <div class="filter-bar-inner">
+        <span class="filter-label">Filter:</span>
+        <button class="filter-pill active" data-filter="all"
+          style="--pill-colour:#7a1f2b;">
+          All papers
+        </button>
+        <button class="filter-pill" data-filter="malignant"
+          style="--pill-colour:#7a1f2b;">
+          <span class="pill-dot" style="background:#7a1f2b;opacity:1;"></span>
+          Malignant Haematology
+        </button>
+        <button class="filter-pill" data-filter="haemostasis"
+          style="--pill-colour:#1a6b4a;">
+          <span class="pill-dot" style="background:#1a6b4a;opacity:1;"></span>
+          Haemostasis &amp; Thrombosis
+        </button>
+        <button class="filter-pill" data-filter="general"
+          style="--pill-colour:#1e4d8c;">
+          <span class="pill-dot" style="background:#1e4d8c;opacity:1;"></span>
+          General Haematology
+        </button>
+        <button class="filter-pill" data-filter="transfusion"
+          style="--pill-colour:#7a4f1f;">
+          <span class="pill-dot" style="background:#7a4f1f;opacity:1;"></span>
+          Transfusion Medicine
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══ MAIN CONTENT ══════════════════════════════ -->
+  <main>
+    <section class="jc-section">
+      <div class="container">
+
+        <div class="jc-count-bar">
+          <p class="jc-count-text">Showing <strong id="visible-count">6</strong> entries</p>
+        </div>
+
+        <div class="jc-grid" id="jc-grid">
+
+
+          <!-- ══════════════════════════════════════
+               CARD 1 — POLARIX (Malignant)
+          ═══════════════════════════════════════ -->
+          <article class="jc-card" data-division="malignant">
+            <div class="jc-card-accent" style="--accent-colour: var(--cat-mal);"></div>
+            <div class="jc-card-body">
+
+              <div class="jc-meta">
+                <span class="jc-division-badge" style="--accent-colour: var(--cat-mal);">Malignant Haematology</span>
+                <span class="jc-journal-badge">NEJM</span>
+                <span class="jc-year">2022</span>
+              </div>
+
+              <div>
+                <h3 class="jc-title">Polatuzumab Vedotin in Previously Untreated Diffuse Large B-Cell Lymphoma</h3>
+                <p class="jc-citation">Tilly H et al. N Engl J Med 2022;386:351–363 — POLARIX Trial (Phase III RCT)</p>
+              </div>
+
+              <div>
+                <p class="jc-findings-header">Key Findings</p>
+                <ul class="jc-findings-list" style="--accent-colour: var(--cat-mal);">
+                  <li>2-year progression-free survival: 76.7% with Pola-R-CHP vs 70.2% with R-CHOP (statistically significant)</li>
+                  <li>No significant overall survival difference at primary analysis — longer follow-up awaited</li>
+                  <li>Peripheral neuropathy rates were comparable between arms (52.9% vs 53.9% any grade), with fewer dose reductions required in the polatuzumab arm (4.4% vs 8.0%)</li>
+                </ul>
+              </div>
+
+              <div class="jc-takeaway" style="--accent-colour: var(--cat-mal); background: rgba(122,31,43,0.06); border-left-color: var(--cat-mal);">
+                <div class="jc-takeaway-label" style="color: var(--cat-mal);">Clinical Takeaway</div>
+                <p>Pola-R-CHP is now an established front-line option for intermediate- and high-risk DLBCL, replacing vincristine with a targeted antibody-drug conjugate. The absence of an OS benefit at primary analysis means R-CHOP remains reasonable, particularly in lower-risk or elderly patients.</p>
+              </div>
+
+              <div class="jc-appraisal">
+                <div class="jc-appraisal-label">Critical Appraisal Note</div>
+                <p>Double-blind RCT with robust design. Key limitation: the OS benefit was not demonstrated at primary analysis. Patient selection (IPI ≥2) limits generalisability to low-risk disease. Five-year follow-up data presented at ASH 2024 showed sustained PFS advantage.</p>
+              </div>
+
+              <div class="jc-card-footer">
+                <div class="jc-evidence-level">
+                  <span class="level-badge" style="background: var(--cat-mal);">1A</span>
+                  Level 1 Evidence — Phase III RCT
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+
+          <!-- ══════════════════════════════════════
+               CARD 2 — CARAVAGGIO (Haemostasis)
+          ═══════════════════════════════════════ -->
+          <article class="jc-card" data-division="haemostasis">
+            <div class="jc-card-accent" style="--accent-colour: var(--cat-hae);"></div>
+            <div class="jc-card-body">
+
+              <div class="jc-meta">
+                <span class="jc-division-badge" style="--accent-colour: var(--cat-hae);">Haemostasis &amp; Thrombosis</span>
+                <span class="jc-journal-badge">NEJM</span>
+                <span class="jc-year">2020</span>
+              </div>
+
+              <div>
+                <h3 class="jc-title">Apixaban for the Treatment of Venous Thromboembolism Associated with Cancer</h3>
+                <p class="jc-citation">Agnelli G et al. N Engl J Med 2020;382:1599–1607 — CARAVAGGIO Trial (Phase III RCT)</p>
+              </div>
+
+              <div>
+                <p class="jc-findings-header">Key Findings</p>
+                <ul class="jc-findings-list" style="--accent-colour: var(--cat-hae);">
+                  <li>Recurrent VTE: 5.6% with apixaban vs 7.9% with dalteparin (HR 0.63; 95% CI 0.37–1.07; P&lt;0.001 for non-inferiority)</li>
+                  <li>Major bleeding: 3.8% vs 4.0% — no significant increase with apixaban (HR 0.82; 95% CI 0.40–1.69; P=0.60)</li>
+                  <li>Oral administration of apixaban was non-inferior to subcutaneous dalteparin across all cancer subtypes analysed</li>
+                </ul>
+              </div>
+
+              <div class="jc-takeaway" style="--accent-colour: var(--cat-hae); background: rgba(26,107,74,0.06); border-left-color: var(--cat-hae);">
+                <div class="jc-takeaway-label" style="color: var(--cat-hae);">Clinical Takeaway</div>
+                <p>Apixaban is non-inferior to dalteparin for cancer-associated VTE without a significantly increased bleeding risk, making it a practical oral alternative to low-molecular-weight heparin in eligible patients. Caution remains warranted in GI and genitourinary malignancies due to historically higher mucosal bleeding rates with DOACs in these tumour types.</p>
+              </div>
+
+              <div class="jc-appraisal">
+                <div class="jc-appraisal-label">Critical Appraisal Note</div>
+                <p>Well-designed investigator-initiated RCT. Non-inferiority design: the CI upper bound (1.07) does not exclude a small increase in recurrent VTE. Patients with GI and GU cancers at higher bleeding risk were not excluded — clinicians should apply individual risk stratification in these groups.</p>
+              </div>
+
+              <div class="jc-card-footer">
+                <div class="jc-evidence-level">
+                  <span class="level-badge" style="background: var(--cat-hae);">1A</span>
+                  Level 1 Evidence — Phase III RCT
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+
+          <!-- ══════════════════════════════════════
+               CARD 3 — MURANO (Malignant)
+          ═══════════════════════════════════════ -->
+          <article class="jc-card" data-division="malignant">
+            <div class="jc-card-accent" style="--accent-colour: var(--cat-mal);"></div>
+            <div class="jc-card-body">
+
+              <div class="jc-meta">
+                <span class="jc-division-badge" style="--accent-colour: var(--cat-mal);">Malignant Haematology</span>
+                <span class="jc-journal-badge">NEJM</span>
+                <span class="jc-year">2018</span>
+              </div>
+
+              <div>
+                <h3 class="jc-title">Venetoclax–Rituximab in Relapsed or Refractory Chronic Lymphocytic Leukaemia</h3>
+                <p class="jc-citation">Seymour JF et al. N Engl J Med 2018;378:1107–1120 — MURANO Trial (Phase III RCT)</p>
+              </div>
+
+              <div>
+                <p class="jc-findings-header">Key Findings</p>
+                <ul class="jc-findings-list" style="--accent-colour: var(--cat-mal);">
+                  <li>At median 36-month follow-up: PFS markedly superior with VenR vs bendamustine-rituximab (HR 0.16; 95% CI 0.12–0.23)</li>
+                  <li>Overall survival also superior (HR 0.50; 95% CI 0.30–0.85) — a rare demonstration of OS benefit in r/r CLL</li>
+                  <li>Undetectable MRD at end of combination therapy: 62% with VenR vs 13% with BR — establishing fixed-duration treatment as a feasible strategy</li>
+                </ul>
+              </div>
+
+              <div class="jc-takeaway" style="--accent-colour: var(--cat-mal); background: rgba(122,31,43,0.06); border-left-color: var(--cat-mal);">
+                <div class="jc-takeaway-label" style="color: var(--cat-mal);">Clinical Takeaway</div>
+                <p>MURANO established fixed-duration venetoclax-rituximab as a preferred option for relapsed/refractory CLL, particularly for patients unsuitable for indefinite BTK inhibitor therapy. The high rate of undetectable MRD supports a time-limited treatment strategy with potential for treatment-free remission.</p>
+              </div>
+
+              <div class="jc-appraisal">
+                <div class="jc-appraisal-label">Critical Appraisal Note</div>
+                <p>Phase III RCT with meaningful OS benefit — a high bar in the CLL field. Comparator arm (BR) may be considered suboptimal by current standards. Tumour lysis syndrome risk requires a structured ramp-up protocol, limiting use to centres with appropriate monitoring infrastructure.</p>
+              </div>
+
+              <div class="jc-card-footer">
+                <div class="jc-evidence-level">
+                  <span class="level-badge" style="background: var(--cat-mal);">1A</span>
+                  Level 1 Evidence — Phase III RCT
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+
+          <!-- ══════════════════════════════════════
+               CARD 4 — COMING SOON (General)
+          ═══════════════════════════════════════ -->
+          <article class="jc-card jc-card--soon" data-division="general">
+            <div class="jc-card-accent" style="--accent-colour: var(--cat-gen);"></div>
+            <div class="soon-body">
+              <span class="jc-division-badge" style="--accent-colour: var(--cat-gen);">General Haematology</span>
+              <span class="soon-pill">Coming Soon</span>
+              <h3 class="soon-title">Iron Deficiency — Intravenous vs Oral Iron in Anaemia Management</h3>
+              <p class="soon-desc">Critical appraisal of RCT evidence comparing IV and oral iron formulations in iron deficiency anaemia — covering efficacy, adverse effects, and practical prescribing guidance.</p>
+            </div>
+          </article>
+
+
+          <!-- ══════════════════════════════════════
+               CARD 5 — COMING SOON (Transfusion)
+          ═══════════════════════════════════════ -->
+          <article class="jc-card jc-card--soon" data-division="transfusion">
+            <div class="jc-card-accent" style="--accent-colour: var(--cat-tra);"></div>
+            <div class="soon-body">
+              <span class="jc-division-badge" style="--accent-colour: var(--cat-tra);">Transfusion Medicine</span>
+              <span class="soon-pill">Coming Soon</span>
+              <h3 class="soon-title">Restrictive vs Liberal Red Cell Transfusion Thresholds — Evidence Review</h3>
+              <p class="soon-desc">Summary and appraisal of landmark trials including TRICC and TRISS examining haemoglobin transfusion triggers across critical care, cardiac, and haematology patient populations.</p>
+            </div>
+          </article>
+
+
+          <!-- ══════════════════════════════════════
+               CARD 6 — COMING SOON (Haemostasis)
+          ═══════════════════════════════════════ -->
+          <article class="jc-card jc-card--soon" data-division="haemostasis">
+            <div class="jc-card-accent" style="--accent-colour: var(--cat-hae);"></div>
+            <div class="soon-body">
+              <span class="jc-division-badge" style="--accent-colour: var(--cat-hae);">Haemostasis &amp; Thrombosis</span>
+              <span class="soon-pill">Coming Soon</span>
+              <h3 class="soon-title">Extended Anticoagulation in Unprovoked VTE — Balancing Recurrence vs Bleeding Risk</h3>
+              <p class="soon-desc">Appraisal of evidence for extended anticoagulation beyond 3–6 months in unprovoked VTE, including AMPLIFY-EXT and EINSTEIN CHOICE, with guidance on risk stratification tools.</p>
+            </div>
+          </article>
+
+
+        </div><!-- /jc-grid -->
+      </div><!-- /container -->
+    </section>
+  </main>
+
+
+  <!-- ═══ FOOTER ════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand brand">
+          <div class="brand-text">
+            <div class="brand-name">Mohsin Haematology Academy</div>
+            <div class="brand-tagline">Clinical Education &amp; Digital Tools</div>
+          </div>
+        </div>
+        <div class="footer-note">
+          <strong>Educational use only.</strong><br>
+          Content does not replace clinical judgement or professional guidelines.<br>
+          <span style="font-size:0.72rem; color:var(--clr-muted); opacity:0.8;">Created by Dr. Muhammad Mohsin &middot; Contributor: Muhammad Moaaz &middot; <a href="governance.html" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Clinical Governance</a></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ═══ FILTER SCRIPT ═════════════════════════════ -->
+  <script>
+    const pills = document.querySelectorAll('.filter-pill');
+    const cards = document.querySelectorAll('.jc-card');
+    const countEl = document.getElementById('visible-count');
+
+    function updateCount() {
+      const visible = [...cards].filter(c => c.style.display !== 'none').length;
+      countEl.textContent = visible;
+    }
+
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        pills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        const filter = pill.dataset.filter;
+        cards.forEach(card => {
+          if (filter === 'all' || card.dataset.division === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        updateCount();
+      });
+    });
+  </script>
+
+</body>
+</html>
