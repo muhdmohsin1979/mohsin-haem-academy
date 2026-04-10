@@ -216,6 +216,9 @@
     .tag--surgical { background: rgba(180,83,9,0.08); color: var(--clr-warn); }
     .secondline-card p { font-size: 0.82rem; color: var(--clr-muted); line-height: 1.5; }
 
+    /* ── Inline reference superscripts ── */
+    sup.ref { font-size: 0.62rem; vertical-align: super; color: var(--clr-div); font-weight: 700; margin-left: 1px; letter-spacing: 0; }
+
     /* ── Guideline sources ── */
     .gl-sources { list-style: none; display: flex; flex-direction: column; gap: 12px; }
     .gl-source-item { display: flex; gap: 14px; align-items: flex-start; padding: 14px 16px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); }
@@ -428,7 +431,7 @@
             <p>ITP is driven primarily by autoantibody-mediated platelet destruction — predominantly IgG autoantibodies directed against platelet surface glycoproteins (GPIIb/IIIa, GPIb/IX) — leading to accelerated platelet clearance by the reticuloendothelial system, principally in the spleen. T-cell-mediated direct destruction of megakaryocytes contributes to impaired platelet production in many patients.</p>
 
             <p class="gl-subhead">Epidemiology</p>
-            <p>Annual incidence in adults is approximately 3–4 per 100,000. In adults, there is a bimodal distribution: young women (20–40 years) and older adults of both sexes. Unlike childhood ITP, spontaneous remission in adults is less common and chronic disease is more frequent.</p>
+            <p>Annual incidence in adults is approximately 3–4 per 100,000.<sup class="ref">[1]</sup> In adults, there is a bimodal distribution: young women (20–40 years) and older adults of both sexes. Unlike childhood ITP, spontaneous remission in adults is less common and chronic disease is more frequent.<sup class="ref">[1]</sup></p>
           </section>
 
 
@@ -520,7 +523,7 @@
               <li><strong>Bone marrow biopsy:</strong> not routinely required in typical primary ITP in patients under 60 with no atypical features; indicated before splenectomy, in patients ≥60 years, or where MDS/lymphoma cannot be excluded from peripheral film alone</li>
               <li><strong>Direct antiglobulin test (DAT):</strong> if haemolysis suspected — to exclude Evans syndrome (autoimmune haemolytic anaemia + ITP)</li>
               <li><strong>Antiphospholipid antibodies:</strong> if concurrent thrombosis or recurrent pregnancy loss — particularly relevant in women of childbearing age</li>
-              <li><strong>Platelet antibody testing:</strong> not recommended for routine diagnosis due to poor sensitivity and specificity (ASH 2019)</li>
+              <li><strong>Platelet antibody testing:</strong> not recommended for routine diagnosis due to poor sensitivity and specificity<sup class="ref">[1]</sup></li>
               <li><strong>EBV, CMV serology:</strong> in younger patients with acute presentation and recent viral illness</li>
             </ul>
           </section>
@@ -569,7 +572,7 @@
             <p>The decision to treat ITP is based on <strong>bleeding severity and clinical context</strong>, not platelet count alone. A patient with a platelet count of 15 × 10⁹/L who is asymptomatic may not require immediate treatment, while a patient with count 50 × 10⁹/L and significant mucosal bleeding does.</p>
 
             <div class="gl-box gl-box--info">
-              <div class="gl-box-label" style="color:var(--clr-div);">ASH 2019 Recommendation</div>
+              <div class="gl-box-label" style="color:var(--clr-div);">ASH 2019 Recommendation<sup class="ref">[1]</sup></div>
               <p>For adults with newly diagnosed ITP and a platelet count ≥ 30 × 10⁹/L who are not bleeding, the ASH guideline panel suggests <strong>observation over treatment</strong>. Many patients with counts in this range do not progress and do not require pharmacological intervention at diagnosis.</p>
             </div>
 
@@ -655,8 +658,8 @@
                 </div>
                 <div class="treatment-card-body">
                   <p><strong>Dose:</strong> 1 mg/kg/day (maximum 80 mg/day) for 2–4 weeks, then taper over 4–6 weeks based on response.</p>
-                  <p><strong>Response:</strong> Platelet count typically rises within 1–2 weeks in responding patients. Approximately 70–80% achieve an initial response, but durable remission without further treatment occurs in fewer than 30% of adults.</p>
-                  <p><strong>Important — ASH 2019:</strong> Corticosteroid courses should not be prolonged beyond 6 weeks. Avoid maintenance prednisolone at doses that cause systemic toxicity solely to maintain a platelet count.</p>
+                  <p><strong>Response:</strong> Platelet count typically rises within 1–2 weeks in responding patients. Approximately 70–80% achieve an initial response, but durable remission without further treatment occurs in fewer than 30% of adults.<sup class="ref">[1]</sup></p>
+                  <p><strong>Important — ASH 2019:</strong> Corticosteroid courses should not be prolonged beyond 6 weeks.<sup class="ref">[1]</sup> Avoid maintenance prednisolone at doses that cause systemic toxicity solely to maintain a platelet count.</p>
                   <p class="treatment-detail">Cautions: hyperglycaemia, hypertension, mood changes, insomnia, osteoporosis with prolonged use; prescribe bone protection and monitor blood glucose in at-risk patients.</p>
                 </div>
               </div>
@@ -720,25 +723,25 @@
               <div class="secondline-card">
                 <div class="secondline-card-title">Romiplostim</div>
                 <div><span class="secondline-card-tag tag--nice">NICE TA221</span></div>
-                <p>TPO receptor agonist (TPO-RA). Weekly subcutaneous injection. Stimulates platelet production by activating the thrombopoietin receptor on megakaryocytes. NICE-approved for adults with chronic ITP refractory to standard active treatments and rescue therapies, or those with severe disease and a high bleeding risk requiring frequent rescue therapy. Response rate approximately 79–88%. Does not induce disease remission — relapse on discontinuation is common.</p>
+                <p>TPO receptor agonist (TPO-RA). Weekly subcutaneous injection. Stimulates platelet production by activating the thrombopoietin receptor on megakaryocytes. NICE-approved for adults with chronic ITP refractory to standard active treatments and rescue therapies, or those with severe disease and a high bleeding risk requiring frequent rescue therapy.<sup class="ref">[3]</sup> Response rate approximately 79–88%.<sup class="ref">[3]</sup> Does not induce disease remission — relapse on discontinuation is common.</p>
               </div>
 
               <div class="secondline-card">
                 <div class="secondline-card-title">Avatrombopag (Doptelet)</div>
                 <div><span class="secondline-card-tag tag--nice">NICE TA853</span></div>
-                <p>Oral TPO receptor agonist. NICE-approved (December 2022) for adults with primary chronic ITP refractory to other treatments, including corticosteroids and immunoglobulins, subject to the commercial arrangement. Once-daily oral dosing. Clinical trial evidence shows superior platelet response versus placebo. May be as effective as other TPO-RAs; comparative trial data are currently indirect.</p>
+                <p>Oral TPO receptor agonist. NICE-approved (December 2022) for adults with primary chronic ITP refractory to other treatments, including corticosteroids and immunoglobulins, subject to the commercial arrangement.<sup class="ref">[4]</sup> Once-daily oral dosing. Clinical trial evidence shows superior platelet response versus placebo.<sup class="ref">[4]</sup> May be as effective as other TPO-RAs; comparative trial data are currently indirect.</p>
               </div>
 
               <div class="secondline-card">
                 <div class="secondline-card-title">Rituximab</div>
                 <div><span class="secondline-card-tag tag--evidence">Evidence-based</span></div>
-                <p>Anti-CD20 monoclonal antibody. Used in UK practice for persistent and chronic ITP refractory to first-line therapy. Not specifically NICE-approved for ITP — NICE evidence review notes limitations in the evidence base and recommends measured use. Typical regimen: 375 mg/m² weekly × 4 doses or low-dose 100 mg × 4 weekly doses. Approximately 60% initial response; durable 5-year remission in around 20%. Risk of delayed-onset hypogammaglobulinaemia and infection.</p>
+                <p>Anti-CD20 monoclonal antibody. Used in UK practice for persistent and chronic ITP refractory to first-line therapy. Not specifically NICE-approved for ITP — NICE evidence review notes limitations in the evidence base and recommends measured use. Typical regimen: 375 mg/m² weekly × 4 doses or low-dose 100 mg × 4 weekly doses. Approximately 60% initial response; durable 5-year remission in around 20%.<sup class="ref">[1,2]</sup> Risk of delayed-onset hypogammaglobulinaemia and infection.</p>
               </div>
 
               <div class="secondline-card">
                 <div class="secondline-card-title">Splenectomy</div>
                 <div><span class="secondline-card-tag tag--surgical">Surgical</span></div>
-                <p>Historically the most durable second-line option: 60–70% long-term complete response. Now generally deferred until at least 12 months after diagnosis given availability of TPO-RAs. Requires pre-operative vaccination against encapsulated organisms (pneumococcal, Hib, meningococcal ACWY and B, influenza) ≥ 2 weeks before surgery. Lifelong penicillin prophylaxis and annual influenza vaccination post-splenectomy. Bone marrow biopsy required before proceeding.</p>
+                <p>Historically the most durable second-line option: 60–70% long-term complete response.<sup class="ref">[1]</sup> Now generally deferred until at least 12 months after diagnosis given availability of TPO-RAs. Requires pre-operative vaccination against encapsulated organisms (pneumococcal, Hib, meningococcal ACWY and B, influenza) ≥ 2 weeks before surgery. Lifelong penicillin prophylaxis and annual influenza vaccination post-splenectomy. Bone marrow biopsy required before proceeding.</p>
               </div>
 
             </div>
@@ -816,8 +819,8 @@
               <ul class="gl-list" style="margin-top:6px;">
                 <li><strong>Missing pseudothrombocytopenia</strong> — always review the blood film before initiating any treatment; platelet clumping in EDTA is a benign cause of spurious thrombocytopenia</li>
                 <li><strong>Starting corticosteroids before excluding TTP</strong> — check blood film for schistocytes; TTP is a haematological emergency requiring plasma exchange, not steroids alone</li>
-                <li><strong>Treating newly diagnosed ITP with platelet count ≥30 and no bleeding</strong> — ASH 2019 supports observation; unnecessary treatment exposes patients to steroid toxicity</li>
-                <li><strong>Prolonged corticosteroid use beyond 6 weeks</strong> — ASH 2019 recommends against this; if a patient requires prolonged steroids, second-line therapy should be planned</li>
+                <li><strong>Treating newly diagnosed ITP with platelet count ≥30 and no bleeding</strong> — ASH 2019 supports observation<sup class="ref">[1]</sup>; unnecessary treatment exposes patients to steroid toxicity</li>
+                <li><strong>Prolonged corticosteroid use beyond 6 weeks</strong> — ASH 2019 recommends against this<sup class="ref">[1]</sup>; if a patient requires prolonged steroids, second-line therapy should be planned</li>
                 <li><strong>Routine platelet transfusion for isolated thrombocytopenia without bleeding</strong> — transfused platelets will be rapidly destroyed; not indicated without active haemorrhage</li>
                 <li><strong>Not checking HIV and HCV</strong> — both are treatable causes that may masquerade as primary ITP; antiviral therapy can restore the platelet count</li>
                 <li><strong>Not testing for H. pylori</strong> — a low-risk, low-cost test with potential treatment benefit; should be performed in all newly diagnosed patients</li>
@@ -849,21 +852,28 @@
 
             <ul class="gl-sources" style="margin-top:20px;">
               <li class="gl-source-item">
-                <div class="gl-source-org">ASH</div>
+                <div class="gl-source-org" style="font-size:1rem; font-weight:800;">[1]</div>
                 <div class="gl-source-detail">
                   <div class="gl-source-title">American Society of Hematology 2019 guidelines for immune thrombocytopenia</div>
-                  <div class="gl-source-ref">Neunert C, Terrell DR, Arnold DM, et al. Blood Advances 2019;3(23):3829–3866. 2022 review published: Blood Advances 2024;8(13):3578–3594. Available at hematology.org/guidelines</div>
+                  <div class="gl-source-ref">Neunert C, Terrell DR, Arnold DM, et al. <em>Blood Advances</em> 2019;3(23):3829–3866. Available at hematology.org/guidelines</div>
                 </div>
               </li>
               <li class="gl-source-item">
-                <div class="gl-source-org">NICE TA221</div>
+                <div class="gl-source-org" style="font-size:1rem; font-weight:800;">[2]</div>
+                <div class="gl-source-detail">
+                  <div class="gl-source-title">American Society of Hematology 2022 updated review — immune thrombocytopenia</div>
+                  <div class="gl-source-ref">Neunert C, et al. <em>Blood Advances</em> 2024;8(13):3578–3594. Available at hematology.org/guidelines</div>
+                </div>
+              </li>
+              <li class="gl-source-item">
+                <div class="gl-source-org" style="font-size:1rem; font-weight:800;">[3]</div>
                 <div class="gl-source-detail">
                   <div class="gl-source-title">Romiplostim for the treatment of chronic immune thrombocytopenia</div>
                   <div class="gl-source-ref">NICE Technology Appraisal TA221. Published April 2011, updated October 2018. Available at nice.org.uk/guidance/ta221</div>
                 </div>
               </li>
               <li class="gl-source-item">
-                <div class="gl-source-org">NICE TA853</div>
+                <div class="gl-source-org" style="font-size:1rem; font-weight:800;">[4]</div>
                 <div class="gl-source-detail">
                   <div class="gl-source-title">Avatrombopag for treating primary chronic immune thrombocytopenia</div>
                   <div class="gl-source-ref">NICE Technology Appraisal TA853. Published December 2022. Subject to commercial arrangement. Available at nice.org.uk/guidance/ta853</div>
