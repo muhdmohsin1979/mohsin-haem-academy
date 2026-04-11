@@ -550,6 +550,95 @@
     /* ── Inline reference superscripts ── */
     sup.ref { font-size: 0.62rem; vertical-align: super; color: var(--clr-div); font-weight: 700; margin-left: 1px; letter-spacing: 0; }
 
+    /* ── GRADE Evidence Quality & Recommendation Strength Badges ── */
+    .grade-badge, .rec-badge {
+      display: inline-flex; align-items: center;
+      padding: 2px 9px; border-radius: 999px;
+      font-size: 0.63rem; font-weight: 700; letter-spacing: 0.05em;
+      text-transform: uppercase; vertical-align: middle;
+    }
+    .grade-high  { background: #dcfce7; color: #166534; border: 1px solid #86efac; }
+    .grade-mod   { background: #fef9c3; color: #854d0e; border: 1px solid #fde047; }
+    .grade-low   { background: #ffedd5; color: #9a3412; border: 1px solid #fdba74; }
+    .grade-vlow  { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+    .rec-strong      { background: rgba(26,107,74,0.08); color: var(--clr-div); border: 1px solid rgba(26,107,74,0.3); }
+    .rec-conditional { background: rgba(180,83,9,0.08);  color: var(--clr-warn); border: 1px solid rgba(180,83,9,0.3); }
+
+    .grade-legend {
+      display: flex; flex-wrap: wrap; gap: 6px; align-items: center;
+      padding: 10px 14px; background: var(--clr-surface); border-radius: var(--radius-sm);
+      border: 1px solid var(--clr-border-light); margin-bottom: 18px;
+      font-size: 0.72rem;
+    }
+    .grade-legend-label { font-weight: 700; color: var(--clr-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-right: 4px; }
+
+    .rec-row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 6px; }
+
+    /* ── Methodology Box ── */
+    .method-box {
+      background: var(--clr-surface-alt); border: 1px solid var(--clr-border);
+      border-left: 4px solid var(--clr-div); border-radius: var(--radius-sm);
+      padding: 16px 20px; margin-top: 22px;
+    }
+    .method-box-title {
+      font-size: 0.7rem; font-weight: 800; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--clr-div); margin-bottom: 8px;
+    }
+    .method-box p { font-size: 0.85rem; color: var(--clr-text-secondary); margin: 0; line-height: 1.65; }
+
+    /* ── PICO Clinical Questions ── */
+    .pico-section-title {
+      font-size: 0.7rem; font-weight: 800; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--clr-muted); margin: 22px 0 12px;
+    }
+    .pico-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .pico-card {
+      background: var(--clr-surface); border: 1px solid var(--clr-border);
+      border-top: 3px solid var(--clr-div); border-radius: var(--radius-sm);
+      padding: 14px 16px;
+    }
+    .pico-card-num {
+      font-size: 0.65rem; font-weight: 800; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--clr-div); margin-bottom: 6px;
+    }
+    .pico-card p { font-size: 0.82rem; color: var(--clr-text-secondary); line-height: 1.5; margin: 0; }
+
+    /* ── GRADE inline recommendation block ── */
+    .grade-rec-block {
+      display: flex; flex-wrap: wrap; gap: 6px; align-items: center;
+      margin: 10px 0 6px; padding: 8px 12px;
+      background: rgba(26,107,74,0.04); border-radius: var(--radius-sm);
+      border: 1px solid rgba(26,107,74,0.15);
+    }
+    .grade-rec-label { font-size: 0.72rem; font-weight: 700; color: var(--clr-muted); margin-right: 4px; }
+
+    /* ── Audit Standards Table ── */
+    .audit-table { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: 0.83rem; }
+    .audit-table th {
+      background: var(--clr-div); color: #fff; padding: 9px 14px;
+      text-align: left; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.03em;
+    }
+    .audit-table td { padding: 8px 14px; border-bottom: 1px solid var(--clr-border-light); vertical-align: top; line-height: 1.55; }
+    .audit-table tr:last-child td { border-bottom: none; }
+    .audit-table tr:nth-child(even) td { background: var(--clr-surface-alt); }
+    .audit-target {
+      display: inline-block; padding: 1px 8px; border-radius: 999px;
+      font-size: 0.67rem; font-weight: 700; background: #dcfce7; color: #166534;
+    }
+
+    /* ── Reference Credibility Grading Tags ── */
+    .ref-grade-tag {
+      display: inline-block; padding: 1px 7px; border-radius: 999px;
+      font-size: 0.63rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin-left: 6px;
+    }
+    .rg-a1 { background: #dcfce7; color: #166534; }
+    .rg-a2 { background: #dbeafe; color: #1e40af; }
+    .rg-b  { background: #fef9c3; color: #854d0e; }
+    .rg-c  { background: #fee2e2; color: #991b1b; }
+
     /* ── Flowchart ── */
     .flowchart-wrap { background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-lg); padding: 20px 16px 24px; overflow-x: auto; }
     .flowchart-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--clr-div); margin-bottom: 14px; display: flex; align-items: center; gap: 6px; }
@@ -880,6 +969,43 @@
               <li>Arterial thromboembolism in cancer</li>
               <li>Paediatric oncology patients</li>
             </ul>
+
+            <div class="method-box">
+              <div class="method-box-title">Methodology and Evidence Framework</div>
+              <p>This is an expert-synthesised guideline summary, not a de novo systematic review. Recommendations are derived from three convergent society guidelines (NICE NG158, BSH 2024, ASCO 2023) and two primary RCTs (Khorana et al 2008; CARAVAGGIO 2020). A formal independent systematic search was not conducted. Evidence quality and recommendation strength are graded using a simplified GRADE approach: <strong>High / Moderate / Low / Very Low</strong> quality of evidence; <strong>Strong / Conditional</strong> recommendation strength. Good practice statements based on clinical consensus are noted explicitly where direct evidence is absent. Guideline sources are credibility-graded (A1–C) in the references section.</p>
+            </div>
+
+            <div class="grade-legend">
+              <span class="grade-legend-label">Evidence Quality:</span>
+              <span class="grade-badge grade-high">High</span>
+              <span class="grade-badge grade-mod">Moderate</span>
+              <span class="grade-badge grade-low">Low</span>
+              <span class="grade-badge grade-vlow">Very Low</span>
+              &nbsp;&nbsp;
+              <span class="grade-legend-label">Recommendation:</span>
+              <span class="rec-badge rec-strong">Strong</span>
+              <span class="rec-badge rec-conditional">Conditional</span>
+            </div>
+
+            <div class="pico-section-title">Key Clinical Questions (PICO)</div>
+            <div class="pico-grid">
+              <div class="pico-card">
+                <div class="pico-card-num">Q1 — Anticoagulant Selection</div>
+                <p>In adults with confirmed cancer-associated VTE, which anticoagulant — LMWH, apixaban, or edoxaban — provides the best balance of efficacy (recurrent VTE prevention) and safety (major bleeding)?</p>
+              </div>
+              <div class="pico-card">
+                <div class="pico-card-num">Q2 — Duration</div>
+                <p>In adults with CAT who have completed 6 months of anticoagulation, should anticoagulation be extended and if so, for how long, when cancer remains active?</p>
+              </div>
+              <div class="pico-card">
+                <div class="pico-card-num">Q3 — Primary Prophylaxis</div>
+                <p>In ambulatory cancer patients receiving systemic chemotherapy, which risk stratification tool and prophylaxis threshold most accurately identifies patients who benefit from pharmacological thromboprophylaxis?</p>
+              </div>
+              <div class="pico-card">
+                <div class="pico-card-num">Q4 — Thrombocytopenia</div>
+                <p>In patients with CAT and cancer-related thrombocytopenia, at what platelet count threshold should anticoagulation be withheld, dose-reduced, or modified?</p>
+              </div>
+            </div>
           </section>
 
 
@@ -1037,6 +1163,13 @@
             <p class="gl-subhead">Anticoagulant Options</p>
             <p>All three options below are acceptable first-line anticoagulants for CAT. The choice depends on cancer type, bleeding risk, drug interactions, platelet count, and patient preference.</p>
 
+            <div class="grade-rec-block">
+              <span class="grade-rec-label">Overall anticoagulation for CAT:</span>
+              <span class="rec-badge rec-strong">Strong</span>
+              <span class="grade-badge grade-high">High evidence</span>
+              <span style="font-size:0.76rem; color:var(--clr-muted); margin-left:4px;">Based on CLOT, CATCH, CARAVAGGIO, Hokusai-VTE Cancer RCTs</span>
+            </div>
+
             <p class="gl-subhead-plain">Direct oral anticoagulants (DOACs)</p>
             <ul class="gl-list">
               <li><strong>Apixaban</strong> — 10 mg twice daily for 7 days, then 5 mg twice daily. No requirement for initial parenteral bridging. Preferred DOAC in cancer-associated VTE based on the CARAVAGGIO trial (NEJM 2020)<sup class="ref">[5]</sup> — a Phase III RCT showing non-inferiority to dalteparin with comparable major bleeding rates.<sup class="ref">[2,3]</sup></li>
@@ -1063,6 +1196,15 @@
             </div>
 
             <p class="gl-subhead">Duration of Anticoagulation</p>
+            <div class="grade-rec-block">
+              <span class="grade-rec-label">Minimum 6 months:</span>
+              <span class="rec-badge rec-strong">Strong</span>
+              <span class="grade-badge grade-mod">Moderate evidence</span>
+              &nbsp;
+              <span class="grade-rec-label">Extending beyond 6 months (active cancer):</span>
+              <span class="rec-badge rec-conditional">Conditional</span>
+              <span class="grade-badge grade-low">Low evidence</span>
+            </div>
             <ul class="gl-list">
               <li>Minimum 6 months of therapeutic anticoagulation for all cancer-associated VTE</li>
               <li>Continue anticoagulation beyond 6 months while cancer remains active or systemic treatment is ongoing — review at 6 months with multidisciplinary input<sup class="ref">[2]</sup></li>
@@ -1085,6 +1227,16 @@
             <div class="gl-section-header">
               <div class="gl-section-num">6</div>
               <h2 class="gl-section-title">Management — Thromboprophylaxis</h2>
+            </div>
+
+            <div class="grade-rec-block" style="margin-bottom:14px;">
+              <span class="grade-rec-label">Ambulatory prophylaxis (Khorana &ge;2):</span>
+              <span class="rec-badge rec-strong">Strong</span>
+              <span class="grade-badge grade-mod">Moderate evidence</span>
+              &nbsp;
+              <span class="grade-rec-label">Extended surgical prophylaxis (28 d):</span>
+              <span class="rec-badge rec-strong">Strong</span>
+              <span class="grade-badge grade-mod">Moderate evidence</span>
             </div>
 
             <p class="gl-subhead">Ambulatory Cancer Patients on Systemic Therapy</p>
@@ -1406,10 +1558,99 @@
           </section>
 
 
-          <!-- 10. SOURCES -->
-          <section class="gl-section" id="sources">
+          <!-- 10. AUDIT STANDARDS -->
+          <section class="gl-section" id="audit">
             <div class="gl-section-header">
               <div class="gl-section-num">10</div>
+              <h2 class="gl-section-title">Audit Standards and Quality Indicators</h2>
+            </div>
+
+            <p>The following measurable standards support clinical audit, local governance review, and quality improvement. They are aligned with recommendations in NICE NG158, BSH 2024, and ASCO 2023.</p>
+
+            <table class="audit-table">
+              <thead>
+                <tr>
+                  <th style="width:5%">#</th>
+                  <th style="width:50%">Audit Standard / Quality Indicator</th>
+                  <th style="width:25%">Data Source</th>
+                  <th style="width:20%">Target</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Hospitalised cancer patients receiving pharmacological thromboprophylaxis within 24 hours of admission (no contraindication)</td>
+                  <td>Prescribing / ward records</td>
+                  <td><span class="audit-target">&ge; 90%</span></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Confirmed CAT patients receiving therapeutic anticoagulation within 24 hours of diagnosis</td>
+                  <td>Clinical record / pharmacy</td>
+                  <td><span class="audit-target">&ge; 90%</span></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Anticoagulant choice documented with rationale (DOAC vs LMWH vs contraindication) in clinic letter or discharge summary</td>
+                  <td>Correspondence audit</td>
+                  <td><span class="audit-target">&ge; 95%</span></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Khorana score calculated and documented before initiating systemic chemotherapy in ambulatory patients</td>
+                  <td>Oncology / haematology record</td>
+                  <td><span class="audit-target">&ge; 80%</span></td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>CAT patients with active cancer reviewed at 6 months for continuation or cessation of anticoagulation</td>
+                  <td>Outpatient review records</td>
+                  <td><span class="audit-target">&ge; 90%</span></td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Extended (28-day) LMWH prophylaxis prescribed following major open abdominal or pelvic cancer surgery</td>
+                  <td>Surgical discharge prescriptions</td>
+                  <td><span class="audit-target">&ge; 85%</span></td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>GI and GU malignancy patients with CAT receiving LMWH as preferred agent (not DOAC) unless documented reason</td>
+                  <td>Prescribing audit</td>
+                  <td><span class="audit-target">&ge; 85%</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+
+          <!-- 11. LIMITATIONS AND UPDATE PLAN -->
+          <section class="gl-section" id="limitations">
+            <div class="gl-section-header">
+              <div class="gl-section-num">11</div>
+              <h2 class="gl-section-title">Limitations and Guideline Update Plan</h2>
+            </div>
+
+            <div class="gl-box gl-box--warn">
+              <div class="gl-box-label">Limitations of This Guideline Summary</div>
+              <ul class="gl-list" style="margin-top:6px;">
+                <li><strong>Not a systematic review:</strong> This is a synthesised summary of published society guidelines, not a de novo systematic review. Independent literature searches were not conducted.</li>
+                <li><strong>Rapidly evolving field:</strong> Evidence in CAT is evolving fast — particularly for newer DOACs (apixaban, rivaroxaban) in specific cancer subtypes. Recommendations may need updating as new RCT data emerge.</li>
+                <li><strong>Thrombocytopenia thresholds:</strong> The platelet count thresholds used for anticoagulant dose modification are based on expert consensus, not RCT data (Very Low evidence). Individual clinical judgement is essential.</li>
+                <li><strong>Cancer heterogeneity:</strong> VTE risk and bleeding risk vary substantially by cancer type and treatment. Recommendations represent population-level guidance; individual patient variation requires clinical discretion.</li>
+                <li><strong>Formulary variation:</strong> UK NHS formulary access for apixaban and rivaroxaban in cancer VTE may vary by health system or region. NICE NG158 and BSH 2024 should be consulted for latest approval status.</li>
+              </ul>
+            </div>
+
+            <p class="gl-subhead" style="margin-top:20px;">Update Plan</p>
+            <p>This guideline summary will be reviewed when any of the following occur: (1) publication of an updated BSH Cancer-Associated Thrombosis guideline; (2) major NICE update to NG158 relevant to CAT; (3) publication of a landmark RCT altering current anticoagulant recommendations in CAT. In the absence of these triggers, a scheduled review will be undertaken no later than <strong>April 2028</strong>.</p>
+          </section>
+
+
+          <!-- 12. SOURCES -->
+          <section class="gl-section" id="sources">
+            <div class="gl-section-header">
+              <div class="gl-section-num">12</div>
               <h2 class="gl-section-title">Guideline Basis</h2>
             </div>
 
@@ -1419,35 +1660,35 @@
               <li class="gl-source-item">
                 <div class="gl-source-org" style="font-size:1rem; font-weight:800;">[1]</div>
                 <div class="gl-source-detail">
-                  <div class="gl-source-title">Venous thromboembolic diseases: diagnosis, management and thrombophilia testing</div>
+                  <div class="gl-source-title">Venous thromboembolic diseases: diagnosis, management and thrombophilia testing <span class="ref-grade-tag rg-a1">A1 — NICE Clinical Guideline</span></div>
                   <div class="gl-source-ref">NICE Guideline NG158. Published March 2020, updated August 2023. Available at nice.org.uk/guidance/ng158</div>
                 </div>
               </li>
               <li class="gl-source-item">
                 <div class="gl-source-org" style="font-size:1rem; font-weight:800;">[2]</div>
                 <div class="gl-source-detail">
-                  <div class="gl-source-title">Cancer-associated venous thrombosis in adults (second edition): A British Society for Haematology Guideline</div>
-                  <div class="gl-source-ref">British Journal of Haematology, 2024. DOI: 10.1111/bjh.19414. Available at b-s-h.org.uk/guidelines</div>
+                  <div class="gl-source-title">Cancer-associated venous thrombosis in adults (second edition): A British Society for Haematology Guideline <span class="ref-grade-tag rg-a1">A1 — Society Guideline</span></div>
+                  <div class="gl-source-ref">British Journal of Haematology, 2024. DOI: 10.1111/bjh.19414. Systematic evidence review and GRADE-based recommendations. Available at b-s-h.org.uk/guidelines</div>
                 </div>
               </li>
               <li class="gl-source-item">
                 <div class="gl-source-org" style="font-size:1rem; font-weight:800;">[3]</div>
                 <div class="gl-source-detail">
-                  <div class="gl-source-title">Venous Thromboembolism Prophylaxis and Treatment in Patients With Cancer: ASCO Guideline Update</div>
+                  <div class="gl-source-title">Venous Thromboembolism Prophylaxis and Treatment in Patients With Cancer: ASCO Guideline Update <span class="ref-grade-tag rg-a1">A1 — Society Guideline</span></div>
                   <div class="gl-source-ref">Key NS, Khorana AA, Kuderer NM, et al. <em>Journal of Clinical Oncology</em>, 2023. Available at asco.org/guidelines</div>
                 </div>
               </li>
               <li class="gl-source-item">
                 <div class="gl-source-org" style="font-size:1rem; font-weight:800;">[4]</div>
                 <div class="gl-source-detail">
-                  <div class="gl-source-title">Development and validation of a predictive model for chemotherapy-associated thrombosis</div>
+                  <div class="gl-source-title">Development and validation of a predictive model for chemotherapy-associated thrombosis <span class="ref-grade-tag rg-a2">A2 — Primary derivation/validation cohort study</span></div>
                   <div class="gl-source-ref">Khorana AA, Kuderer NM, Culakova E, Lyman GH, Francis CW. <em>Blood</em> 2008;111(10):4902–4907. Original derivation and validation cohort study for the Khorana risk score (n=2,701).</div>
                 </div>
               </li>
               <li class="gl-source-item">
                 <div class="gl-source-org" style="font-size:1rem; font-weight:800;">[5]</div>
                 <div class="gl-source-detail">
-                  <div class="gl-source-title">Apixaban for the Treatment of Venous Thromboembolism Associated with Cancer (CARAVAGGIO)</div>
+                  <div class="gl-source-title">Apixaban for the Treatment of Venous Thromboembolism Associated with Cancer (CARAVAGGIO) <span class="ref-grade-tag rg-a2">A2 — Phase III RCT</span></div>
                   <div class="gl-source-ref">Agnelli G, Becattini C, Meyer G, et al. <em>New England Journal of Medicine</em> 2020;382(17):1599–1607. Phase III RCT; apixaban non-inferior to dalteparin for recurrent VTE; major bleeding rates comparable.</div>
                 </div>
               </li>
@@ -1455,10 +1696,10 @@
           </section>
 
 
-          <!-- 11. VERSION -->
+          <!-- 13. VERSION -->
           <section class="gl-section" id="version" style="margin-bottom:0;">
             <div class="gl-section-header">
-              <div class="gl-section-num">11</div>
+              <div class="gl-section-num">13</div>
               <h2 class="gl-section-title">Versioning and Disclaimer</h2>
             </div>
 
@@ -1493,9 +1734,22 @@
                 <li><a href="#framework">7. Decision Framework</a></li>
                 <li><a href="#special">8. Special Situations</a></li>
                 <li><a href="#pearls">9. Pearls &amp; Pitfalls</a></li>
-                <li><a href="#sources">10. Sources</a></li>
-                <li><a href="#version">11. Versioning</a></li>
+                <li><a href="#audit">10. Audit Standards</a></li>
+                <li><a href="#limitations">11. Limitations</a></li>
+                <li><a href="#sources">12. Sources</a></li>
+                <li><a href="#version">13. Versioning</a></li>
               </ul>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">Quick Reference PDF</div>
+            <div class="sidebar-card-body">
+              <p style="font-size:0.78rem; color:var(--clr-muted); margin-bottom:12px; line-height:1.5;">Compact A4 quick-reference card — Khorana score, anticoagulant selection, duration thresholds, and thrombocytopenia guidance.</p>
+              <a href="cat-quickref.pdf" download="CAT-QuickRef.pdf" style="display:block; background:var(--clr-div); color:#fff; text-align:center; padding:9px 14px; border-radius:var(--radius-sm); font-size:0.82rem; font-weight:700; text-decoration:none; transition:background 0.2s;" onmouseover="this.style.background='var(--clr-div-dark)'" onmouseout="this.style.background='var(--clr-div)'">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:-2px; margin-right:6px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download CAT Quick-Ref
+              </a>
             </div>
           </div>
 

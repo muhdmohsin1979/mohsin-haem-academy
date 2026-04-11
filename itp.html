@@ -219,6 +219,86 @@
     /* ── Inline reference superscripts ── */
     sup.ref { font-size: 0.62rem; vertical-align: super; color: var(--clr-div); font-weight: 700; margin-left: 1px; letter-spacing: 0; }
 
+    /* ── GRADE Evidence Quality & Recommendation Strength Badges ── */
+    .grade-badge, .rec-badge {
+      display: inline-flex; align-items: center;
+      padding: 2px 9px; border-radius: 999px;
+      font-size: 0.63rem; font-weight: 700; letter-spacing: 0.05em;
+      text-transform: uppercase; vertical-align: middle;
+    }
+    .grade-high  { background: #dcfce7; color: #166534; border: 1px solid #86efac; }
+    .grade-mod   { background: #fef9c3; color: #854d0e; border: 1px solid #fde047; }
+    .grade-low   { background: #ffedd5; color: #9a3412; border: 1px solid #fdba74; }
+    .grade-vlow  { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+    .rec-strong      { background: rgba(26,107,74,0.08); color: var(--clr-div); border: 1px solid rgba(26,107,74,0.3); }
+    .rec-conditional { background: rgba(180,83,9,0.08);  color: var(--clr-warn); border: 1px solid rgba(180,83,9,0.3); }
+
+    .grade-legend {
+      display: flex; flex-wrap: wrap; gap: 6px; align-items: center;
+      padding: 10px 14px; background: var(--clr-surface); border-radius: var(--radius-sm);
+      border: 1px solid var(--clr-border-light); margin-bottom: 18px;
+      font-size: 0.72rem;
+    }
+    .grade-legend-label { font-weight: 700; color: var(--clr-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-right: 4px; }
+
+    .rec-row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 6px; }
+
+    /* ── Methodology Box ── */
+    .method-box {
+      background: var(--clr-surface-alt); border: 1px solid var(--clr-border);
+      border-left: 4px solid var(--clr-div); border-radius: var(--radius-sm);
+      padding: 16px 20px; margin-top: 22px;
+    }
+    .method-box-title {
+      font-size: 0.7rem; font-weight: 800; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--clr-div); margin-bottom: 8px;
+    }
+    .method-box p { font-size: 0.85rem; color: var(--clr-text-secondary); margin: 0; line-height: 1.65; }
+
+    /* ── PICO Clinical Questions ── */
+    .pico-section-title {
+      font-size: 0.7rem; font-weight: 800; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--clr-muted); margin: 22px 0 12px;
+    }
+    .pico-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .pico-card {
+      background: var(--clr-surface); border: 1px solid var(--clr-border);
+      border-top: 3px solid var(--clr-div); border-radius: var(--radius-sm);
+      padding: 14px 16px;
+    }
+    .pico-card-num {
+      font-size: 0.65rem; font-weight: 800; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--clr-div); margin-bottom: 6px;
+    }
+    .pico-card p { font-size: 0.82rem; color: var(--clr-text-secondary); line-height: 1.5; margin: 0; }
+
+    /* ── Audit Standards Table ── */
+    .audit-table { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: 0.83rem; }
+    .audit-table th {
+      background: var(--clr-div); color: #fff; padding: 9px 14px;
+      text-align: left; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.03em;
+    }
+    .audit-table td { padding: 8px 14px; border-bottom: 1px solid var(--clr-border-light); vertical-align: top; line-height: 1.55; }
+    .audit-table tr:last-child td { border-bottom: none; }
+    .audit-table tr:nth-child(even) td { background: var(--clr-surface-alt); }
+    .audit-target {
+      display: inline-block; padding: 1px 8px; border-radius: 999px;
+      font-size: 0.67rem; font-weight: 700; background: #dcfce7; color: #166534;
+    }
+
+    /* ── Reference Credibility Grading Tags ── */
+    .ref-grade-tag {
+      display: inline-block; padding: 1px 7px; border-radius: 999px;
+      font-size: 0.63rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin-left: 6px;
+    }
+    .rg-a1 { background: #dcfce7; color: #166534; }
+    .rg-a2 { background: #dbeafe; color: #1e40af; }
+    .rg-b  { background: #fef9c3; color: #854d0e; }
+    .rg-c  { background: #fee2e2; color: #991b1b; }
+
     /* ── Flowchart ── */
     .flowchart-wrap { background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-lg); padding: 20px 16px 24px; overflow-x: auto; }
     .flowchart-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--clr-div); margin-bottom: 14px; display: flex; align-items: center; gap: 6px; }
@@ -421,6 +501,43 @@
               <li>ITP in pregnancy — specialist obstetric haematology input required</li>
               <li>Thrombocytopenia in the context of chemotherapy or bone marrow failure</li>
             </ul>
+
+            <div class="method-box">
+              <div class="method-box-title">Methodology and Evidence Framework</div>
+              <p>This is an expert-synthesised guideline summary, not a de novo systematic review. Recommendations are derived from published international society guidelines (ASH, NICE) and supplemented by primary trial evidence identified through those source documents. A formal independent systematic search was not conducted. Evidence quality and recommendation strength are graded using a simplified GRADE approach: <strong>High / Moderate / Low / Very Low</strong> for quality of evidence; <strong>Strong / Conditional</strong> for recommendation strength. Good practice statements based on clinical consensus are noted explicitly where direct evidence is absent. Guideline sources are credibility-graded (A1–C) in the references section.</p>
+            </div>
+
+            <div class="grade-legend">
+              <span class="grade-legend-label">Evidence Quality:</span>
+              <span class="grade-badge grade-high">High</span>
+              <span class="grade-badge grade-mod">Moderate</span>
+              <span class="grade-badge grade-low">Low</span>
+              <span class="grade-badge grade-vlow">Very Low</span>
+              &nbsp;&nbsp;
+              <span class="grade-legend-label">Recommendation:</span>
+              <span class="rec-badge rec-strong">Strong</span>
+              <span class="rec-badge rec-conditional">Conditional</span>
+            </div>
+
+            <div class="pico-section-title">Key Clinical Questions (PICO)</div>
+            <div class="pico-grid">
+              <div class="pico-card">
+                <div class="pico-card-num">Q1 — Diagnosis</div>
+                <p>In adults with isolated thrombocytopenia, which investigations are required to diagnose primary ITP and exclude secondary causes?</p>
+              </div>
+              <div class="pico-card">
+                <div class="pico-card-num">Q2 — Treat vs Observe</div>
+                <p>In adults with newly diagnosed ITP, what platelet count and clinical thresholds should guide the decision to initiate treatment versus observe?</p>
+              </div>
+              <div class="pico-card">
+                <div class="pico-card-num">Q3 — First-Line Treatment</div>
+                <p>In adults with ITP requiring treatment, what is the optimal first-line agent — prednisolone, high-dose dexamethasone, or IVIG — and for how long?</p>
+              </div>
+              <div class="pico-card">
+                <div class="pico-card-num">Q4 — Second-Line Treatment</div>
+                <p>In adults with relapsed, refractory, or steroid-dependent ITP, which second-line therapies (TPO-RAs, rituximab, splenectomy) produce the most durable response?</p>
+              </div>
+            </div>
           </section>
 
 
@@ -817,6 +934,7 @@
                   <div class="treatment-card-num">A</div>
                   <div class="treatment-card-title">Prednisolone (oral corticosteroid)</div>
                   <div class="treatment-card-subtitle">Standard first-line</div>
+                  <div class="rec-row"><span class="rec-badge rec-strong">Strong</span> <span class="grade-badge grade-mod">Moderate evidence</span></div>
                 </div>
                 <div class="treatment-card-body">
                   <p><strong>Dose:</strong> 1 mg/kg/day (maximum 80 mg/day) for 2–4 weeks, then taper over 4–6 weeks based on response.</p>
@@ -831,6 +949,7 @@
                   <div class="treatment-card-num">B</div>
                   <div class="treatment-card-title">Dexamethasone (high-dose pulse)</div>
                   <div class="treatment-card-subtitle">Alternative corticosteroid</div>
+                  <div class="rec-row"><span class="rec-badge rec-strong">Strong</span> <span class="grade-badge grade-mod">Moderate evidence</span></div>
                 </div>
                 <div class="treatment-card-body">
                   <p><strong>Dose:</strong> 40 mg/day for 4 consecutive days. May be repeated as up to 3 cycles at 14–28-day intervals.</p>
@@ -844,6 +963,7 @@
                   <div class="treatment-card-num">C</div>
                   <div class="treatment-card-title">Intravenous immunoglobulin (IVIG)</div>
                   <div class="treatment-card-subtitle">When rapid response required</div>
+                  <div class="rec-row"><span class="rec-badge rec-strong">Strong</span> <span class="grade-badge grade-high">High evidence</span></div>
                 </div>
                 <div class="treatment-card-body">
                   <p><strong>Dose:</strong> 1 g/kg as a single infusion; may be repeated after 24 hours if response is inadequate. Total dose of 2 g/kg is an alternative regimen given over 2 days.</p>
@@ -858,6 +978,7 @@
                   <div class="treatment-card-num">D</div>
                   <div class="treatment-card-title">Helicobacter pylori Eradication</div>
                   <div class="treatment-card-subtitle">Adjunct in H. pylori-positive patients</div>
+                  <div class="rec-row"><span class="rec-badge rec-strong">Strong</span> <span class="grade-badge grade-mod">Moderate evidence</span></div>
                 </div>
                 <div class="treatment-card-body">
                   <p>All newly diagnosed ITP patients should be tested for H. pylori (urea breath test or stool antigen). In H. pylori-positive patients, eradication therapy (standard triple therapy per local formulary) is recommended.</p>
@@ -884,25 +1005,25 @@
 
               <div class="secondline-card">
                 <div class="secondline-card-title">Romiplostim</div>
-                <div><span class="secondline-card-tag tag--nice">NICE TA221</span></div>
+                <div style="display:flex;flex-wrap:wrap;gap:5px;align-items:center;"><span class="secondline-card-tag tag--nice">NICE TA221</span> <span class="rec-badge rec-strong">Strong</span> <span class="grade-badge grade-high">High evidence</span></div>
                 <p>TPO receptor agonist (TPO-RA). Weekly subcutaneous injection. Stimulates platelet production by activating the thrombopoietin receptor on megakaryocytes. NICE-approved for adults with chronic ITP refractory to standard active treatments and rescue therapies, or those with severe disease and a high bleeding risk requiring frequent rescue therapy.<sup class="ref">[3]</sup> Response rate approximately 79–88%.<sup class="ref">[3]</sup> Does not induce disease remission — relapse on discontinuation is common.</p>
               </div>
 
               <div class="secondline-card">
                 <div class="secondline-card-title">Avatrombopag (Doptelet)</div>
-                <div><span class="secondline-card-tag tag--nice">NICE TA853</span></div>
+                <div style="display:flex;flex-wrap:wrap;gap:5px;align-items:center;"><span class="secondline-card-tag tag--nice">NICE TA853</span> <span class="rec-badge rec-strong">Strong</span> <span class="grade-badge grade-mod">Moderate evidence</span></div>
                 <p>Oral TPO receptor agonist. NICE-approved (December 2022) for adults with primary chronic ITP refractory to other treatments, including corticosteroids and immunoglobulins, subject to the commercial arrangement.<sup class="ref">[4]</sup> Once-daily oral dosing. Clinical trial evidence shows superior platelet response versus placebo.<sup class="ref">[4]</sup> May be as effective as other TPO-RAs; comparative trial data are currently indirect.</p>
               </div>
 
               <div class="secondline-card">
                 <div class="secondline-card-title">Rituximab</div>
-                <div><span class="secondline-card-tag tag--evidence">Evidence-based</span></div>
+                <div style="display:flex;flex-wrap:wrap;gap:5px;align-items:center;"><span class="secondline-card-tag tag--evidence">Evidence-based</span> <span class="rec-badge rec-conditional">Conditional</span> <span class="grade-badge grade-low">Low evidence</span></div>
                 <p>Anti-CD20 monoclonal antibody. Used in UK practice for persistent and chronic ITP refractory to first-line therapy. Not specifically NICE-approved for ITP — NICE evidence review notes limitations in the evidence base and recommends measured use. Typical regimen: 375 mg/m² weekly × 4 doses or low-dose 100 mg × 4 weekly doses. Approximately 60% initial response; durable 5-year remission in around 20%.<sup class="ref">[1,2]</sup> Risk of delayed-onset hypogammaglobulinaemia and infection.</p>
               </div>
 
               <div class="secondline-card">
                 <div class="secondline-card-title">Splenectomy</div>
-                <div><span class="secondline-card-tag tag--surgical">Surgical</span></div>
+                <div style="display:flex;flex-wrap:wrap;gap:5px;align-items:center;"><span class="secondline-card-tag tag--surgical">Surgical</span> <span class="rec-badge rec-conditional">Conditional</span> <span class="grade-badge grade-mod">Moderate evidence</span></div>
                 <p>Historically the most durable second-line option: 60–70% long-term complete response.<sup class="ref">[1]</sup> Now generally deferred until at least 12 months after diagnosis given availability of TPO-RAs. Requires pre-operative vaccination against encapsulated organisms (pneumococcal, Hib, meningococcal ACWY and B, influenza) ≥ 2 weeks before surgery. Lifelong penicillin prophylaxis and annual influenza vaccination post-splenectomy. Bone marrow biopsy required before proceeding.</p>
               </div>
 
@@ -1003,10 +1124,99 @@
           </section>
 
 
-          <!-- 13. SOURCES -->
-          <section class="gl-section" id="sources">
+          <!-- 13. AUDIT STANDARDS -->
+          <section class="gl-section" id="audit">
             <div class="gl-section-header">
               <div class="gl-section-num">13</div>
+              <h2 class="gl-section-title">Audit Standards and Quality Indicators</h2>
+            </div>
+
+            <p>The following measurable standards support clinical audit, quality improvement, and local governance review. They are aligned with recommendations made in the ASH 2019 guideline and NICE technology appraisals for ITP.</p>
+
+            <table class="audit-table">
+              <thead>
+                <tr>
+                  <th style="width:5%">#</th>
+                  <th style="width:50%">Audit Standard / Quality Indicator</th>
+                  <th style="width:25%">Data Source</th>
+                  <th style="width:20%">Target</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>New thrombocytopenia: blood film reviewed at diagnosis</td>
+                  <td>Haematology lab / clinical record</td>
+                  <td><span class="audit-target">100%</span></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>ITP diagnosis documented as diagnosis of exclusion, with secondary causes excluded</td>
+                  <td>Clinic letter / discharge summary</td>
+                  <td><span class="audit-target">100%</span></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>H. pylori testing performed in all newly diagnosed ITP patients</td>
+                  <td>Microbiology / endoscopy records</td>
+                  <td><span class="audit-target">&ge; 90%</span></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Corticosteroid courses not extended beyond 6 weeks without documented clinical justification</td>
+                  <td>Prescribing records / clinic letters</td>
+                  <td><span class="audit-target">&ge; 95%</span></td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Platelet count response documented at 4 weeks following initiation of first-line treatment</td>
+                  <td>Blood count results / clinic correspondence</td>
+                  <td><span class="audit-target">&ge; 90%</span></td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Pre-splenectomy vaccination administered &ge; 2 weeks prior to surgery</td>
+                  <td>Immunisation records / surgical notes</td>
+                  <td><span class="audit-target">100%</span></td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Patients referred to specialist haematology centre for refractory or complex ITP</td>
+                  <td>Referral records</td>
+                  <td><span class="audit-target">&ge; 90%</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+
+          <!-- 14. LIMITATIONS AND UPDATE PLAN -->
+          <section class="gl-section" id="limitations">
+            <div class="gl-section-header">
+              <div class="gl-section-num">14</div>
+              <h2 class="gl-section-title">Limitations and Guideline Update Plan</h2>
+            </div>
+
+            <div class="gl-box gl-box--warn">
+              <div class="gl-box-label">Limitations of This Guideline Summary</div>
+              <ul class="gl-list" style="margin-top:6px;">
+                <li><strong>Not a systematic review:</strong> This is a synthesised summary of published society guidelines, not a de novo systematic review. Independent literature searches were not conducted for individual clinical questions.</li>
+                <li><strong>Evidence gaps:</strong> Several ITP recommendations (particularly around long-term sequencing of second-line agents) are based on limited RCT evidence; indirect comparisons and observational data inform these areas.</li>
+                <li><strong>Generalisability:</strong> This summary reflects NHS England practice aligned with NICE approvals. Formulary access, availability, and local protocols differ internationally.</li>
+                <li><strong>Population exclusions:</strong> Paediatric ITP, secondary ITP, ITP in pregnancy, and ITP in bone marrow failure states are outside scope and require specialist input.</li>
+                <li><strong>Approved indications may change:</strong> NICE technology appraisals are subject to update; always verify current approval status and commercial arrangements for TPO-RAs.</li>
+              </ul>
+            </div>
+
+            <p class="gl-subhead" style="margin-top:20px;">Update Plan</p>
+            <p>This guideline summary will be reviewed when any of the following occur: (1) publication of a major updated ASH or BSH ITP guideline; (2) new NICE technology appraisal or guideline relevant to adult ITP; (3) publication of a landmark RCT altering current recommendations. In the absence of these triggers, a scheduled review will be undertaken no later than <strong>April 2028</strong>.</p>
+          </section>
+
+
+          <!-- 15. SOURCES -->
+          <section class="gl-section" id="sources">
+            <div class="gl-section-header">
+              <div class="gl-section-num">15</div>
               <h2 class="gl-section-title">Guideline Basis</h2>
             </div>
 
@@ -1016,35 +1226,35 @@
               <li class="gl-source-item">
                 <div class="gl-source-org" style="font-size:1rem; font-weight:800;">[1]</div>
                 <div class="gl-source-detail">
-                  <div class="gl-source-title">American Society of Hematology 2019 guidelines for immune thrombocytopenia</div>
-                  <div class="gl-source-ref">Neunert C, Terrell DR, Arnold DM, et al. <em>Blood Advances</em> 2019;3(23):3829–3866. Available at hematology.org/guidelines</div>
+                  <div class="gl-source-title">American Society of Hematology 2019 guidelines for immune thrombocytopenia <span class="ref-grade-tag rg-a1">A1 — Society Guideline</span></div>
+                  <div class="gl-source-ref">Neunert C, Terrell DR, Arnold DM, et al. <em>Blood Advances</em> 2019;3(23):3829–3866. GRADE-based systematic review and evidence-to-decision framework. Available at hematology.org/guidelines</div>
                 </div>
               </li>
               <li class="gl-source-item">
                 <div class="gl-source-org" style="font-size:1rem; font-weight:800;">[2]</div>
                 <div class="gl-source-detail">
-                  <div class="gl-source-title">American Society of Hematology 2022 updated review — immune thrombocytopenia</div>
+                  <div class="gl-source-title">American Society of Hematology 2022 updated review — immune thrombocytopenia <span class="ref-grade-tag rg-a1">A1 — Society Guideline Update</span></div>
                   <div class="gl-source-ref">Neunert C, et al. <em>Blood Advances</em> 2024;8(13):3578–3594. Available at hematology.org/guidelines</div>
                 </div>
               </li>
               <li class="gl-source-item">
                 <div class="gl-source-org" style="font-size:1rem; font-weight:800;">[3]</div>
                 <div class="gl-source-detail">
-                  <div class="gl-source-title">Romiplostim for the treatment of chronic immune thrombocytopenia</div>
+                  <div class="gl-source-title">Romiplostim for the treatment of chronic immune thrombocytopenia <span class="ref-grade-tag rg-a1">A1 — NICE Technology Appraisal</span></div>
                   <div class="gl-source-ref">NICE Technology Appraisal TA221. Published April 2011, updated October 2018. Available at nice.org.uk/guidance/ta221</div>
                 </div>
               </li>
               <li class="gl-source-item">
                 <div class="gl-source-org" style="font-size:1rem; font-weight:800;">[4]</div>
                 <div class="gl-source-detail">
-                  <div class="gl-source-title">Avatrombopag for treating primary chronic immune thrombocytopenia</div>
+                  <div class="gl-source-title">Avatrombopag for treating primary chronic immune thrombocytopenia <span class="ref-grade-tag rg-a1">A1 — NICE Technology Appraisal</span></div>
                   <div class="gl-source-ref">NICE Technology Appraisal TA853. Published December 2022. Subject to commercial arrangement. Available at nice.org.uk/guidance/ta853</div>
                 </div>
               </li>
               <li class="gl-source-item">
                 <div class="gl-source-org" style="font-size:1rem; font-weight:800;">[5]</div>
                 <div class="gl-source-detail">
-                  <div class="gl-source-title">Standardization of terminology, definitions and outcome criteria in immune thrombocytopenic purpura of adults and children: report from an international working group</div>
+                  <div class="gl-source-title">Standardization of terminology, definitions and outcome criteria in immune thrombocytopenic purpura of adults and children: report from an international working group <span class="ref-grade-tag rg-a2">A2 — Peer-reviewed consensus</span></div>
                   <div class="gl-source-ref">Rodeghiero F, Stasi R, Gernsheimer T, et al. <em>Blood</em> 2009;113(11):2386–2393. Primary source for the &lt;100 × 10⁹/L diagnostic threshold and the three-phase duration classification (newly diagnosed / persistent / chronic).</div>
                 </div>
               </li>
@@ -1052,10 +1262,10 @@
           </section>
 
 
-          <!-- 14. VERSION & DISCLAIMER -->
+          <!-- 16. VERSION & DISCLAIMER -->
           <section class="gl-section" id="version" style="margin-bottom:0;">
             <div class="gl-section-header">
-              <div class="gl-section-num">14</div>
+              <div class="gl-section-num">16</div>
               <h2 class="gl-section-title">Versioning and Disclaimer</h2>
             </div>
 
@@ -1094,9 +1304,22 @@
                 <li><a href="#emergency">10. Emergency</a></li>
                 <li><a href="#transfusion">11. Platelet Transfusion</a></li>
                 <li><a href="#pearls">12. Pearls &amp; Pitfalls</a></li>
-                <li><a href="#sources">13. Sources</a></li>
-                <li><a href="#version">14. Versioning</a></li>
+                <li><a href="#audit">13. Audit Standards</a></li>
+                <li><a href="#limitations">14. Limitations</a></li>
+                <li><a href="#sources">15. Sources</a></li>
+                <li><a href="#version">16. Versioning</a></li>
               </ul>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">Quick Reference PDF</div>
+            <div class="sidebar-card-body">
+              <p style="font-size:0.78rem; color:var(--clr-muted); margin-bottom:12px; line-height:1.5;">Compact A4 quick-reference card — ITP diagnosis, treat/observe thresholds, drug doses, and management algorithm.</p>
+              <a href="itp-quickref.pdf" download="ITP-QuickRef.pdf" style="display:block; background:var(--clr-div); color:#fff; text-align:center; padding:9px 14px; border-radius:var(--radius-sm); font-size:0.82rem; font-weight:700; text-decoration:none; transition:background 0.2s;" onmouseover="this.style.background='var(--clr-div-dark)'" onmouseout="this.style.background='var(--clr-div)'">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:-2px; margin-right:6px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download ITP Quick-Ref
+              </a>
             </div>
           </div>
 
