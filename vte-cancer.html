@@ -550,6 +550,28 @@
     /* ── Inline reference superscripts ── */
     sup.ref { font-size: 0.62rem; vertical-align: super; color: var(--clr-div); font-weight: 700; margin-left: 1px; letter-spacing: 0; }
 
+    /* ── Flowchart ── */
+    .flowchart-wrap { background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-lg); padding: 20px 16px 24px; overflow-x: auto; }
+    .flowchart-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--clr-div); margin-bottom: 14px; display: flex; align-items: center; gap: 6px; }
+    .fc { display: flex; flex-direction: column; align-items: center; gap: 0; min-width: 580px; }
+    .fc-node { border-radius: 10px; padding: 8px 14px; font-size: 0.8rem; font-weight: 600; line-height: 1.35; text-align: center; }
+    .fc-node--start  { background: var(--clr-div); color: #fff; border-radius: 999px; padding: 7px 22px; font-size: 0.78rem; }
+    .fc-node--decision { background: #fff8f0; border: 2px solid var(--clr-warn); color: var(--clr-warn); border-radius: 10px; font-size: 0.78rem; max-width: 380px; }
+    .fc-node--lmwh  { background: var(--clr-div-tint); border: 2px solid var(--clr-div); color: var(--clr-div); border-radius: 10px; font-size: 0.76rem; }
+    .fc-node--doac  { background: #eff6ff; border: 2px solid #1e4d8c; color: #1e4d8c; border-radius: 10px; font-size: 0.76rem; }
+    .fc-node--caution { background: var(--clr-warn-tint); border: 2px solid var(--clr-warn); color: var(--clr-warn); border-radius: 10px; font-size: 0.76rem; }
+    .fc-node--avoid { background: var(--clr-danger-tint); border: 2px solid var(--clr-danger); color: var(--clr-danger); border-radius: 10px; font-size: 0.76rem; }
+    .fc-arrow { width: 2px; height: 14px; background: var(--clr-border); position: relative; flex-shrink: 0; }
+    .fc-arrow::after { content: ''; position: absolute; bottom: -5px; left: -4px; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid var(--clr-border); }
+    .fc-rx-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; width: 100%; margin-top: 10px; }
+    .fc-rx-card { background: var(--clr-div-tint); border: 1.5px solid var(--clr-div); border-radius: 8px; padding: 9px 11px; }
+    .fc-rx-card--blue { background: #eff6ff; border-color: #1e4d8c; }
+    .fc-rx-card--warn { background: var(--clr-warn-tint); border-color: var(--clr-warn); }
+    .fc-rx-card-title { font-size: 0.72rem; font-weight: 700; color: var(--clr-div); margin-bottom: 4px; }
+    .fc-rx-card--blue .fc-rx-card-title { color: #1e4d8c; }
+    .fc-rx-card--warn .fc-rx-card-title { color: var(--clr-warn); }
+    .fc-rx-card-body  { font-size: 0.68rem; color: var(--clr-text-secondary); line-height: 1.45; }
+
     /* ── Guideline sources ── */
     .gl-sources {
       list-style: none;
@@ -1095,6 +1117,121 @@
           </section>
 
 
+          <!-- FLOWCHART: CAT Anticoagulant Selection Algorithm -->
+          <section class="gl-section" id="algorithm">
+            <div class="gl-section-header">
+              <div class="gl-section-num" style="background:var(--clr-primary);">⟳</div>
+              <h2 class="gl-section-title">Anticoagulant Selection Algorithm</h2>
+            </div>
+            <p style="margin-bottom:14px; font-size:0.88rem; color:var(--clr-text-secondary);">Visual pathway for anticoagulant selection in confirmed cancer-associated VTE. Based on BSH 2024 and ASCO 2023.<sup class="ref">[2,3]</sup> Scroll horizontally on smaller screens.</p>
+
+            <div class="flowchart-wrap">
+              <div class="flowchart-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                CAT Anticoagulant Selection — BSH 2024 · ASCO 2023
+              </div>
+
+              <div class="fc">
+                <div class="fc-node fc-node--start">Confirmed cancer-associated VTE (DVT or PE)</div>
+                <div class="fc-arrow"></div>
+
+                <!-- Step 1: Check for active severe bleeding / platelet contraindication -->
+                <div class="fc-node fc-node--decision" style="max-width:420px;">
+                  <strong>Active severe bleeding or platelets &lt; 50 × 10⁹/L?</strong>
+                </div>
+                <div style="display:flex; width:100%; align-items:flex-start; margin:0;">
+                  <div style="flex:1; display:flex; flex-direction:column; align-items:center;">
+                    <div style="width:2px; height:12px; background:var(--clr-border);"></div>
+                    <div style="font-size:0.63rem; color:var(--clr-danger); font-weight:700; background:var(--clr-danger-tint); border:1px solid var(--clr-danger); border-radius:4px; padding:1px 7px; margin-bottom:4px;">YES</div>
+                    <div class="fc-node fc-node--avoid" style="text-align:center; max-width:200px;">
+                      <strong>Avoid anticoagulation</strong><br>
+                      <span style="font-size:0.67rem; font-weight:400;">Plt &lt;25: do not anticoagulate [2]<br>Plt 25–50: haematology input<br>Consider IVC filter for PE</span>
+                    </div>
+                  </div>
+                  <div style="flex:1; display:flex; flex-direction:column; align-items:center;">
+                    <div style="width:2px; height:12px; background:var(--clr-border);"></div>
+                    <div style="font-size:0.63rem; color:var(--clr-success); font-weight:700; background:var(--clr-success-tint); border:1px solid var(--clr-success); border-radius:4px; padding:1px 7px; margin-bottom:4px;">NO — proceed</div>
+
+                    <!-- Step 2: Cancer site / bleeding risk -->
+                    <div class="fc-node fc-node--decision" style="text-align:center; max-width:280px;">
+                      <strong>GI, GU, or brain tumour?</strong><br>
+                      <span style="font-size:0.68rem; font-weight:400;">Colorectal · gastric · bladder · renal pelvis · primary/metastatic brain</span>
+                    </div>
+
+                    <div style="display:flex; width:100%; gap:8px; justify-content:center; margin:0;">
+                      <!-- YES: high mucosal bleeding risk → LMWH -->
+                      <div style="flex:1; display:flex; flex-direction:column; align-items:center;">
+                        <div style="width:2px; height:12px; background:var(--clr-border);"></div>
+                        <div style="font-size:0.62rem; color:var(--clr-danger); font-weight:700; background:var(--clr-danger-tint); border:1px solid var(--clr-danger); border-radius:4px; padding:1px 5px; margin-bottom:3px;">YES</div>
+                        <div class="fc-node fc-node--lmwh" style="text-align:center; max-width:180px;">
+                          <strong>LMWH</strong><br>
+                          <span style="font-size:0.67rem; font-weight:400;">Therapeutic weight-based dosing<br>Higher mucosal bleeding risk with DOACs [2]</span>
+                        </div>
+                      </div>
+                      <!-- NO: standard cancer → assess renal + drug interactions -->
+                      <div style="flex:1; display:flex; flex-direction:column; align-items:center;">
+                        <div style="width:2px; height:12px; background:var(--clr-border);"></div>
+                        <div style="font-size:0.62rem; color:var(--clr-success); font-weight:700; background:var(--clr-success-tint); border:1px solid var(--clr-success); border-radius:4px; padding:1px 5px; margin-bottom:3px;">NO</div>
+
+                        <div class="fc-node fc-node--decision" style="text-align:center; max-width:200px; font-size:0.72rem;">
+                          <strong>Adequate renal function &amp; no significant drug interactions?</strong>
+                        </div>
+                        <div style="display:flex; width:100%; gap:6px; justify-content:center;">
+                          <div style="flex:1; display:flex; flex-direction:column; align-items:center;">
+                            <div style="width:2px; height:10px; background:var(--clr-border);"></div>
+                            <div style="font-size:0.6rem; color:var(--clr-success); font-weight:700; background:var(--clr-success-tint); border:1px solid var(--clr-success); border-radius:4px; padding:1px 4px; margin-bottom:3px;">YES</div>
+                            <div class="fc-node fc-node--doac" style="text-align:center; max-width:150px;">
+                              <strong>Apixaban</strong><br>
+                              <span style="font-size:0.65rem; font-weight:400;">10 mg BD × 7d<br>then 5 mg BD [5]</span>
+                            </div>
+                          </div>
+                          <div style="flex:1; display:flex; flex-direction:column; align-items:center;">
+                            <div style="width:2px; height:10px; background:var(--clr-border);"></div>
+                            <div style="font-size:0.6rem; color:var(--clr-danger); font-weight:700; background:var(--clr-danger-tint); border:1px solid var(--clr-danger); border-radius:4px; padding:1px 4px; margin-bottom:3px;">NO</div>
+                            <div class="fc-node fc-node--lmwh" style="text-align:center; max-width:150px;">
+                              <strong>LMWH</strong><br>
+                              <span style="font-size:0.65rem; font-weight:400;">Therapeutic dosing per formulary</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div style="width:100%; height:2px; background:var(--clr-border-light); margin:14px 0 10px;"></div>
+
+                <!-- DURATION + RECURRENCE ROW -->
+                <div style="font-size:0.72rem; font-weight:700; color:var(--clr-div); margin-bottom:8px; text-transform:uppercase; letter-spacing:0.06em;">Duration &amp; recurrence</div>
+                <div class="fc-rx-grid">
+                  <div class="fc-rx-card">
+                    <div class="fc-rx-card-title">⏱ Duration — all CAT</div>
+                    <div class="fc-rx-card-body">
+                      Minimum <strong>6 months</strong> for all cancer-associated VTE.<br>
+                      Continue beyond 6 months while cancer active or on systemic therapy — MDT review at 6 months [2]
+                    </div>
+                  </div>
+                  <div class="fc-rx-card fc-rx-card--warn">
+                    <div class="fc-rx-card-title">⚠ Recurrent VTE on DOAC</div>
+                    <div class="fc-rx-card-body">
+                      Verify adherence first, then <strong>switch to therapeutic LMWH</strong>.<br>
+                      Seek haematology review. Do not escalate DOAC dose [2].
+                    </div>
+                  </div>
+                  <div class="fc-rx-card fc-rx-card--warn">
+                    <div class="fc-rx-card-title">⚠ Recurrent VTE on LMWH</div>
+                    <div class="fc-rx-card-body">
+                      <strong>Escalate LMWH by 20–25%</strong> (supertherapeutic dosing).<br>
+                      Monitor response; haematology input required [2].
+                    </div>
+                  </div>
+                </div>
+
+              </div><!-- /fc -->
+            </div><!-- /flowchart-wrap -->
+          </section>
+
+
           <!-- 7. DECISION FRAMEWORK -->
           <section class="gl-section" id="framework">
             <div class="gl-section-header">
@@ -1327,7 +1464,7 @@
 
             <div class="gl-version-block">
               <span class="gl-version-badge">v1.0 — April 2026</span>
-              <span>Author: Dr Muhammad Mohsin, Consultant Haematologist, NHS UK. Reviewer: Muhammad Moaaz.</span>
+              <span>Author: Dr Muhammad Mohsin, Consultant Haematologist, NHS UK. Contributor: Muhammad Moaaz.</span>
             </div>
 
             <div class="gl-box gl-box--neutral" style="margin-top:14px;">

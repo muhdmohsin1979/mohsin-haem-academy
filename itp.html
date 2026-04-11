@@ -219,6 +219,31 @@
     /* ── Inline reference superscripts ── */
     sup.ref { font-size: 0.62rem; vertical-align: super; color: var(--clr-div); font-weight: 700; margin-left: 1px; letter-spacing: 0; }
 
+    /* ── Flowchart ── */
+    .flowchart-wrap { background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-lg); padding: 20px 16px 24px; overflow-x: auto; }
+    .flowchart-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--clr-div); margin-bottom: 14px; display: flex; align-items: center; gap: 6px; }
+    .fc { display: flex; flex-direction: column; align-items: center; gap: 0; min-width: 560px; }
+    .fc-node { border-radius: 10px; padding: 8px 14px; font-size: 0.8rem; font-weight: 600; line-height: 1.35; text-align: center; position: relative; }
+    .fc-node--start  { background: var(--clr-div); color: #fff; border-radius: 999px; padding: 7px 22px; font-size: 0.78rem; }
+    .fc-node--diamond { background: var(--clr-primary-tint); border: 2px solid var(--clr-primary); color: var(--clr-primary); clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); padding: 18px 32px; font-size: 0.75rem; min-width: 220px; min-height: 72px; display: flex; align-items: center; justify-content: center; }
+    .fc-node--decision { background: #fff8f0; border: 2px solid var(--clr-warn); color: var(--clr-warn); border-radius: 10px; font-size: 0.78rem; max-width: 320px; }
+    .fc-node--observe  { background: var(--clr-success-tint); border: 2px solid var(--clr-success); color: var(--clr-success); border-radius: 10px; font-size: 0.78rem; min-width: 170px; }
+    .fc-node--treat    { background: var(--clr-warn-tint); border: 2px solid var(--clr-warn); color: var(--clr-warn); border-radius: 10px; font-size: 0.78rem; min-width: 170px; }
+    .fc-node--emergency{ background: var(--clr-danger-tint); border: 2px solid var(--clr-danger); color: var(--clr-danger); border-radius: 10px; font-size: 0.78rem; min-width: 170px; }
+    .fc-node--rx       { background: var(--clr-div-tint); border: 2px solid var(--clr-div); color: var(--clr-div); border-radius: 10px; font-size: 0.75rem; text-align: left; padding: 10px 13px; max-width: 100%; }
+    .fc-arrow { width: 2px; height: 14px; background: var(--clr-border); position: relative; }
+    .fc-arrow::after { content: ''; position: absolute; bottom: -5px; left: -4px; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid var(--clr-border); }
+    .fc-label { font-size: 0.65rem; color: var(--clr-muted); font-weight: 600; margin: 0 4px; }
+    .fc-branch { display: flex; align-items: flex-start; justify-content: center; gap: 12px; width: 100%; }
+    .fc-branch-col { display: flex; flex-direction: column; align-items: center; gap: 0; flex: 1; }
+    .fc-hline { width: 100%; height: 2px; background: var(--clr-border); margin: 0; }
+    .fc-branch-top { display: flex; width: 100%; justify-content: space-around; }
+    .fc-note { font-size: 0.7rem; color: var(--clr-muted); line-height: 1.4; margin-top: 4px; text-align: center; max-width: 160px; }
+    .fc-rx-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; width: 100%; margin-top: 10px; }
+    .fc-rx-card { background: var(--clr-div-tint); border: 1.5px solid var(--clr-div); border-radius: 8px; padding: 8px 10px; }
+    .fc-rx-card-title { font-size: 0.72rem; font-weight: 700; color: var(--clr-div); margin-bottom: 3px; }
+    .fc-rx-card-body  { font-size: 0.68rem; color: var(--clr-text-secondary); line-height: 1.45; }
+
     /* ── Guideline sources ── */
     .gl-sources { list-style: none; display: flex; flex-direction: column; gap: 12px; }
     .gl-source-item { display: flex; gap: 14px; align-items: flex-start; padding: 14px 16px; background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); }
@@ -639,6 +664,143 @@
           </section>
 
 
+          <!-- FLOWCHART: ITP Management Algorithm -->
+          <section class="gl-section" id="algorithm">
+            <div class="gl-section-header">
+              <div class="gl-section-num" style="background:var(--clr-primary);">⟳</div>
+              <h2 class="gl-section-title">ITP Management Algorithm</h2>
+            </div>
+            <p style="margin-bottom:14px; font-size:0.88rem; color:var(--clr-text-secondary);">Visual decision pathway from presentation through first-line and second-line treatment. Based on ASH 2019 framework.<sup class="ref">[1]</sup> Scroll horizontally on smaller screens.</p>
+
+            <div class="flowchart-wrap">
+              <div class="flowchart-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                ITP Management Pathway — ASH 2019
+              </div>
+
+              <div class="fc">
+
+                <!-- START -->
+                <div class="fc-node fc-node--start">Isolated thrombocytopenia detected</div>
+                <div class="fc-arrow"></div>
+
+                <!-- STEP 1: Blood film -->
+                <div class="fc-node fc-node--decision" style="max-width:360px;">
+                  <strong>Step 1 — Blood film (mandatory)</strong><br>
+                  <span style="font-weight:400; font-size:0.72rem;">Exclude: pseudothrombocytopenia · TTP (schistocytes) · MDS · lymphoproliferative disease</span>
+                </div>
+                <div class="fc-arrow"></div>
+
+                <!-- STEP 2: Investigations -->
+                <div class="fc-node fc-node--decision" style="max-width:400px;">
+                  <strong>Step 2 — Diagnosis of exclusion</strong><br>
+                  <span style="font-weight:400; font-size:0.72rem;">FBC · film · HIV · HCV · H.pylori · ANA · clotting · LFTs · renal · immunoglobulins</span>
+                </div>
+                <div class="fc-arrow"></div>
+
+                <!-- BLEEDING ASSESSMENT -->
+                <div class="fc-node fc-node--decision" style="max-width:340px;">
+                  <strong>Is there significant bleeding?</strong><br>
+                  <span style="font-weight:400; font-size:0.72rem;">Mucosal · wet purpura · menorrhagia · GI · intracranial</span>
+                </div>
+
+                <!-- Branch: Yes bleeding / No bleeding -->
+                <div style="display:flex; width:100%; align-items:flex-start; margin-top:0;">
+                  <div style="flex:1; display:flex; flex-direction:column; align-items:center;">
+                    <div style="width:2px; height:14px; background:var(--clr-border);"></div>
+                    <div style="font-size:0.65rem; color:var(--clr-danger); font-weight:700; background:var(--clr-danger-tint); border:1px solid var(--clr-danger); border-radius:4px; padding:1px 7px; margin-bottom:4px;">YES — bleeding</div>
+                    <div class="fc-node fc-node--emergency" style="max-width:200px; text-align:center;">
+                      <strong>TREAT</strong><br>
+                      <span style="font-size:0.7rem; font-weight:400;">Prednisolone ± IVIG<br>Tranexamic acid for mucosal</span>
+                    </div>
+                  </div>
+
+                  <div style="flex:1; display:flex; flex-direction:column; align-items:center;">
+                    <div style="width:2px; height:14px; background:var(--clr-border);"></div>
+                    <div style="font-size:0.65rem; color:var(--clr-success); font-weight:700; background:var(--clr-success-tint); border:1px solid var(--clr-success); border-radius:4px; padding:1px 7px; margin-bottom:4px;">NO — no significant bleeding</div>
+                    <div class="fc-node fc-node--decision" style="max-width:200px; text-align:center; font-size:0.75rem;">
+                      <strong>Platelet count?</strong>
+                    </div>
+
+                    <!-- Platelet sub-branch -->
+                    <div style="display:flex; width:100%; gap:8px; margin-top:0; justify-content:center;">
+                      <div style="display:flex; flex-direction:column; align-items:center; flex:1;">
+                        <div style="width:2px; height:12px; background:var(--clr-border);"></div>
+                        <div style="font-size:0.62rem; color:var(--clr-success); font-weight:700; background:var(--clr-success-tint); border:1px solid var(--clr-success); border-radius:4px; padding:1px 5px; margin-bottom:3px;">≥ 30 × 10⁹/L</div>
+                        <div class="fc-node fc-node--observe" style="font-size:0.72rem; text-align:center;">
+                          <strong>OBSERVE</strong><br>
+                          <span style="font-size:0.65rem; font-weight:400;">FBC 1–2 weeks<br>Bleeding education</span>
+                        </div>
+                      </div>
+                      <div style="display:flex; flex-direction:column; align-items:center; flex:1;">
+                        <div style="width:2px; height:12px; background:var(--clr-border);"></div>
+                        <div style="font-size:0.62rem; color:var(--clr-warn); font-weight:700; background:var(--clr-warn-tint); border:1px solid var(--clr-warn); border-radius:4px; padding:1px 5px; margin-bottom:3px;">&lt; 30 × 10⁹/L</div>
+                        <div class="fc-node fc-node--treat" style="font-size:0.72rem; text-align:center;">
+                          <strong>Individualise</strong><br>
+                          <span style="font-size:0.65rem; font-weight:400;">Age · lifestyle · comorbidities<br>Treat if high-risk lifestyle</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div style="width:100%; height:2px; background:var(--clr-border-light); margin:14px 0 8px;"></div>
+
+                <!-- LIFE-THREATENING -->
+                <div style="display:flex; width:100%; align-items:center; gap:10px; margin-bottom:10px;">
+                  <div class="fc-node fc-node--emergency" style="flex:0 0 auto; font-size:0.75rem; text-align:left; padding:10px 12px;">
+                    🚨 <strong>Life-threatening bleeding?</strong><br>
+                    <span style="font-size:0.68rem; font-weight:400;">ICH · severe GI · haemoptysis</span>
+                  </div>
+                  <div style="font-size:0.68rem; color:var(--clr-danger); font-weight:700;">→</div>
+                  <div class="fc-node fc-node--emergency" style="flex:1; text-align:left; font-size:0.73rem; padding:10px 12px;">
+                    <strong>Emergency: IV methylprednisolone 1 g/day × 3d  +  IVIG 1 g/kg  +  Platelet transfusion ≥2 doses</strong><br>
+                    <span style="font-size:0.66rem; font-weight:400;">Haematology on-call immediately · Tranexamic acid 1 g TDS · ICH: neurosurgery + ICU</span>
+                  </div>
+                </div>
+
+                <div style="width:100%; height:2px; background:var(--clr-border-light); margin:4px 0 10px;"></div>
+
+                <!-- FIRST-LINE / SECOND-LINE SUMMARY -->
+                <div style="font-size:0.72rem; font-weight:700; color:var(--clr-div); margin-bottom:8px; text-transform:uppercase; letter-spacing:0.06em;">Treatment sequence</div>
+                <div class="fc-rx-grid">
+                  <div class="fc-rx-card">
+                    <div class="fc-rx-card-title">① First-line — Corticosteroids</div>
+                    <div class="fc-rx-card-body">
+                      <strong>Prednisolone:</strong> 1 mg/kg/day (max 80 mg) × 2–4 wks, then taper. Not beyond 6 weeks (ASH 2019)<br>
+                      <strong>Dexamethasone:</strong> 40 mg/day × 4 days. Up to 3 cycles.
+                    </div>
+                  </div>
+                  <div class="fc-rx-card">
+                    <div class="fc-rx-card-title">② Add IVIG when rapid response needed</div>
+                    <div class="fc-rx-card-body">
+                      1 g/kg IV single dose (repeat if needed)<br>
+                      Plt rises within 24–48 h; transient (2–4 wks)<br>
+                      Use: bleeding + upcoming surgery + steroid failure
+                    </div>
+                  </div>
+                  <div class="fc-rx-card">
+                    <div class="fc-rx-card-title">③ Second-line — TPO receptor agonists</div>
+                    <div class="fc-rx-card-body">
+                      <strong>Romiplostim</strong> (SC weekly) — NICE TA221<br>
+                      <strong>Avatrombopag</strong> (oral OD) — NICE TA853 (Dec 2022)<br>
+                      First-choice second-line agents in UK practice
+                    </div>
+                  </div>
+                  <div class="fc-rx-card">
+                    <div class="fc-rx-card-title">④ Second-line alternatives</div>
+                    <div class="fc-rx-card-body">
+                      <strong>Rituximab:</strong> ~60% response; ~20% 5-yr remission<br>
+                      <strong>Splenectomy:</strong> 60–70% long-term response; defer ≥12 months; pre-op vaccines essential
+                    </div>
+                  </div>
+                </div>
+
+              </div><!-- /fc -->
+            </div><!-- /flowchart-wrap -->
+          </section>
+
+
           <!-- 8. FIRST-LINE TREATMENT -->
           <section class="gl-section" id="firstline">
             <div class="gl-section-header">
@@ -899,7 +1061,7 @@
 
             <div class="gl-version-block">
               <span class="gl-version-badge">v1.0 — April 2026</span>
-              <span>Author: Dr Muhammad Mohsin, Consultant Haematologist, NHS UK. Reviewer: Muhammad Moaaz.</span>
+              <span>Author: Dr Muhammad Mohsin, Consultant Haematologist, NHS UK. Contributor: Muhammad Moaaz.</span>
             </div>
 
             <div class="gl-box gl-box--neutral" style="margin-top:14px;">
@@ -926,6 +1088,7 @@
                 <li><a href="#investigations">5. Investigations</a></li>
                 <li><a href="#differentials">6. Differentials</a></li>
                 <li><a href="#framework">7. Treat vs Observe</a></li>
+                <li><a href="#algorithm">↳ Management Algorithm</a></li>
                 <li><a href="#firstline">8. First-Line Treatment</a></li>
                 <li><a href="#secondline">9. Second-Line Treatment</a></li>
                 <li><a href="#emergency">10. Emergency</a></li>
