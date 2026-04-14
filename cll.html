@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CLL Guidelines — Mohsin Haematology Academy</title>
-  <meta name="description" content="Unified ELN, BSH and ASH Chronic Lymphocytic Leukaemia guideline for education and UK clinical practice.">
+  <meta name="description" content="Unified ELN, BSH 2025 and ASH/NCCN Chronic Lymphocytic Leukaemia guideline — zanubrutinib, acalabrutinib, venetoclax — for education and UK clinical practice. MHA-CLL-2025-v1.7.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
@@ -99,6 +99,11 @@
     .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid var(--clr-navy); }
     .section-num { width: 30px; height: 30px; background: var(--clr-navy); color: #fff; border-radius: 50%; font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .section-title { font-size: 1.12rem; font-weight: 700; color: var(--clr-navy); margin: 0; }
+
+    .section-icon { width:22px; height:22px; flex-shrink:0; opacity:0.8; }
+    .section-icon path, .section-icon circle, .section-icon line,
+    .section-icon rect, .section-icon polyline, .section-icon polygon { stroke:var(--clr-navy); }
+
     h3 { font-size: 0.97rem; font-weight: 700; color: var(--clr-text); margin: 16px 0 8px; }
     p { margin: 0 0 12px; }
 
@@ -297,6 +302,7 @@
       <section class="gl-section" id="scope">
         <div class="section-header">
           <div class="section-num">1</div>
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
           <h2 class="section-title">Scope and Purpose</h2>
         </div>
         <p>This guideline covers the diagnosis, risk stratification, and management of chronic lymphocytic leukaemia (CLL) in adults aged &ge;18 years. It integrates recommendations from three major international societies — ELN (via ESMO 2024), BSH (2025 update), and ASH/NCCN (2024) — with explicit identification of which recommendations are applicable to UK clinical practice under NICE commissioning.</p>
@@ -324,6 +330,7 @@
       <section class="gl-section" id="overview">
         <div class="section-header">
           <div class="section-num">2</div>
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
           <h2 class="section-title">Clinical Overview and Epidemiology</h2>
         </div>
         <div class="vignette">
@@ -359,6 +366,7 @@
       <section class="gl-section" id="methodology">
         <div class="section-header">
           <div class="section-num">3</div>
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
           <h2 class="section-title">Methodology — Guideline Synthesis</h2>
         </div>
         <p>This guideline integrates three international frameworks using GRADE (Grading of Recommendations Assessment, Development and Evaluation) methodology. Each recommendation is tagged with its source society, evidence quality, and recommendation strength.</p>
@@ -410,6 +418,7 @@
       <section class="gl-section" id="diagnosis">
         <div class="section-header">
           <div class="section-num">4</div>
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
           <h2 class="section-title">Diagnosis and Initial Work-up</h2>
         </div>
         <p>CLL is diagnosed by peripheral blood flow cytometry demonstrating a clonal B-cell population with characteristic immunophenotype. Bone marrow biopsy is not required for diagnosis but may be performed to assess infiltration degree or to exclude concurrent haematological disorders.</p>
@@ -460,6 +469,7 @@
       <section class="gl-section" id="prognostics">
         <div class="section-header">
           <div class="section-num">5</div>
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
           <h2 class="section-title">Prognostic Work-up and Molecular Markers</h2>
         </div>
         <p>Molecular profiling is mandatory <strong>before initiating any line of treatment</strong>, but is not required at diagnosis in patients managed with watch and wait. Once a treatment decision is reached, a complete prognostic panel must be performed — including at each relapse, as molecular profiles can evolve. Results directly determine treatment selection, eligibility for targeted agents, and the risk-benefit ratio of each approach.</p>
@@ -508,6 +518,7 @@
       <section class="gl-section" id="indications">
         <div class="section-header">
           <div class="section-num">6</div>
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
           <h2 class="section-title">Treatment Indications — iwCLL Active Disease Criteria</h2>
         </div>
         <p>The majority of newly diagnosed CLL patients do not require immediate treatment. Watch-and-wait is appropriate for asymptomatic patients regardless of lymphocyte count. Treatment is initiated only when active disease criteria are met.</p>
@@ -573,6 +584,7 @@
       <section class="gl-section" id="firstline">
         <div class="section-header">
           <div class="section-num">7</div>
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.157v.003Z"/></svg>
           <h2 class="section-title">First-Line Treatment</h2>
         </div>
         <p>First-line treatment selection is guided by: (1) presence of del(17p) or TP53 mutation, (2) patient fitness (CIRS/eGFR/ECOG), and (3) patient preference (fixed-duration vs. continuous therapy). <strong>BSH 2025 endorses zanubrutinib and acalabrutinib as the preferred BTK inhibitors for new patients</strong>, with venetoclax-based fixed-duration combinations as the main alternative. Ibrutinib remains NICE-approved but is de-prioritised due to its inferior cardiac safety profile.</p>
@@ -597,15 +609,6 @@
 
         <div class="tx-card uk-approved">
           <div class="tx-card-head">
-            <span class="tx-card-title">Ibrutinib <span class="nice-ta">TA429</span> <span style="font-weight:400; color:var(--clr-muted); font-size:0.8rem;">(de-prioritised — see note)</span></span>
-            <span class="grade-badge"><span class="grade-q grade-high">High</span><span class="grade-s grade-cond">Conditional</span></span>
-          </div>
-          <div class="tx-card-body">
-            <strong>Dose:</strong> 420 mg once daily continuously. NICE TA429 remains current. <strong>BSH 2025:</strong> Ibrutinib is de-prioritised for new patients in favour of zanubrutinib and acalabrutinib (GRADE 1A) due to higher rates of AF (~11%), hypertension (~55%), and bleeding. <strong>Appropriate to continue</strong> in patients already established on ibrutinib who are tolerating it well. Check Blueteq eligibility criteria for new starts — zanubrutinib/acalabrutinib are preferred for Blueteq approval.
-          </div>
-        </div>
-        <div class="tx-card uk-approved">
-          <div class="tx-card-head">
             <span class="tx-card-title">Acalabrutinib (monotherapy) <span class="nice-ta">TA689</span></span>
             <span class="grade-badge"><span class="grade-q grade-high">High</span><span class="grade-s grade-strong">Strong</span></span>
           </div>
@@ -619,7 +622,7 @@
             <span class="grade-badge"><span class="grade-q grade-high">High</span><span class="grade-s grade-strong">Strong</span></span>
           </div>
           <div class="tx-card-body">
-            <strong>Dose:</strong> Venetoclax ramp-up (20→50→100→200→400 mg over 5 weeks) + obinutuzumab 1000 mg IV cycles 1–6. Total 12 cycles then stop. <strong>NICE TA1119</strong> (updates TA663). <strong>Trial basis:</strong> CLL14 — 6-year PFS median 76.2 months; uMRD at EOT 78%; GAIA/CLL13 — uMRD 86.5% at EOT (superior to all comparators). Advantages: fixed-duration, treatment-free remission period, deepest remissions particularly in IGHV-mutated disease. <strong>TLS risk:</strong> Stratify by lymph node size and WBC; inpatient ramp-up if high risk.
+            <strong>Dose:</strong> Venetoclax ramp-up (20→50→100→200→400 mg over 5 weeks) + obinutuzumab 1000 mg IV cycles 1–6. Total 12 cycles then stop. <strong>NICE TA1119</strong> (updates TA663). <strong>Trial basis:</strong> CLL14 (unfit/comorbid patients) — 6-year PFS median 76.2 months vs 36.4 months; uMRD at EOT 78%. GAIA/CLL13 (fit patients without TP53 aberrations) — uMRD 86.5% at month 15, 3-year PFS 90.5% for Ven-Obi. Both support fixed-duration venetoclax+obinutuzumab. Deepest remissions in IGHV-mutated disease. <strong>TLS risk:</strong> Stratify by lymph node size and WBC; inpatient ramp-up if high risk.
           </div>
         </div>
         <div class="tx-card uk-approved">
@@ -629,6 +632,16 @@
           </div>
           <div class="tx-card-body">
             <strong>Dose:</strong> Ibrutinib 420 mg daily lead-in &times;3 cycles, then add venetoclax (ramp-up); both for 12 cycles total, then stop. NICE TA891 commissioned May 2023. <strong>Trial basis:</strong> CAPTIVATE and GLOW studies. High uMRD rates; fixed-duration advantage. <strong>Note:</strong> Data in del(17p) patients limited — BSH guidance suggests venetoclax+obinutuzumab or BTKi monotherapy may be preferred in TP53-aberrant disease.
+          </div>
+        </div>
+
+        <div class="tx-card uk-approved">
+          <div class="tx-card-head">
+            <span class="tx-card-title">Ibrutinib <span class="nice-ta">TA429</span> <span style="font-weight:400; color:var(--clr-muted); font-size:0.8rem;">(de-prioritised — see note)</span></span>
+            <span class="grade-badge"><span class="grade-q grade-high">High</span><span class="grade-s grade-cond">Conditional</span></span>
+          </div>
+          <div class="tx-card-body">
+            <strong>Dose:</strong> 420 mg once daily continuously. NICE TA429 remains current. <strong>BSH 2025:</strong> Ibrutinib is de-prioritised for new patients in favour of zanubrutinib and acalabrutinib (GRADE 1A) due to higher rates of AF (~11%), hypertension (~55%), and bleeding. <strong>Appropriate to continue</strong> in patients already established on ibrutinib who are tolerating it well. Check Blueteq eligibility criteria for new starts — zanubrutinib/acalabrutinib are preferred for Blueteq approval.
           </div>
         </div>
 
@@ -658,6 +671,7 @@
       <section class="gl-section" id="rr">
         <div class="section-header">
           <div class="section-num">8</div>
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
           <h2 class="section-title">Relapsed and Refractory CLL</h2>
         </div>
         <div class="vignette">
@@ -719,6 +733,7 @@
       <section class="gl-section" id="response">
         <div class="section-header">
           <div class="section-num">9</div>
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           <h2 class="section-title">Response Assessment and MRD</h2>
         </div>
         <table class="data-table">
@@ -745,6 +760,7 @@
       <section class="gl-section" id="special">
         <div class="section-header">
           <div class="section-num">10</div>
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           <h2 class="section-title">Special Populations</h2>
         </div>
 
@@ -828,6 +844,7 @@
       <section class="gl-section" id="audit">
         <div class="section-header">
           <div class="section-num">11</div>
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
           <h2 class="section-title">Audit Standards</h2>
         </div>
         <p>The following quality indicators can be used to audit CLL management practice against BSH 2025 and NICE commissioning requirements.</p>
@@ -851,6 +868,7 @@
       <section class="gl-section" id="limits">
         <div class="section-header">
           <div class="section-num">12</div>
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
           <h2 class="section-title">Limitations and Update Plan</h2>
         </div>
         <ul style="line-height:1.8; color:var(--clr-text-secondary); font-size:0.9rem;">
@@ -868,6 +886,7 @@
       <section class="gl-section" id="refs">
         <div class="section-header">
           <div class="section-num">13</div>
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
           <h2 class="section-title">References</h2>
         </div>
         <p style="font-size:0.84rem; color:var(--clr-muted); margin-bottom:12px;">References graded by credibility: <span class="ref-grade-tag rg-a1">A1</span> Society guideline <span class="ref-grade-tag rg-a2">A2</span> High-quality RCT/meta-analysis <span class="ref-grade-tag rg-b">B</span> Observational/secondary source</p>
@@ -875,11 +894,11 @@
           <li>Follows CE et al. BSH guideline for the treatment of chronic lymphocytic leukaemia. Br J Haematol. 2025;207(6):2296–2313. [PMID: 41069109] [DOI:10.1111/bjh.70100] <span class="ref-grade-tag rg-a1">A1</span></li>
           <li>ESMO Clinical Practice Guideline update on new targeted therapies in CLL (first-line and relapse). Annals of Oncology, 2024. <span class="ref-grade-tag rg-a1">A1</span></li>
           <li>NCCN Clinical Practice Guidelines in Oncology: CLL/SLL, Version 2.2024. <span class="ref-grade-tag rg-a1">A1</span></li>
-          <li>Sharman JP et al. ELEVATE-TN primary: acalabrutinib ± obinutuzumab vs chlorambucil-obinutuzumab, treatment-naive CLL. Lancet. 2020;395(10232):1278–1291. [PMID to be independently verified — PMID 35580603 and 32738934 were both confirmed incorrect] | 6-yr update (74.5 months): presented EHA 2024 <span class="ref-grade-tag rg-a2">A2</span></li>
+          <li>Sharman JP et al. ELEVATE-TN: acalabrutinib ± obinutuzumab vs chlorambucil-obinutuzumab, treatment-naive CLL. Lancet. 2020;395(10232):1278–1291. 6-year update (74.5 months): EHA 2024 <span class="ref-grade-tag rg-a2">A2</span></li>
           <li>Al-Sawaf O et al. Venetoclax-obinutuzumab for previously untreated CLL: 6-year CLL14 results. Blood. 2024;144(18):1924–1935. [PMID: 39082668] [DOI:10.1182/blood.2024024631] <span class="ref-grade-tag rg-a2">A2</span></li>
-          <li>Burger JA et al. RESONATE-2 long-term follow-up: ibrutinib in treatment-naive CLL. Most recent PubMed-indexed: Barr PM et al. Up to 8-year follow-up. Blood Advances. 2022. [10-year congress data 2025 — PMID not yet indexed; cite with caution] <span class="ref-grade-tag rg-a2">A2</span></li>
+          <li>Barr PM et al. Up to 8-year follow-up from RESONATE-2: ibrutinib in treatment-naive CLL. Blood Advances. 2022. [10-year congress data presented 2025; PMID pending indexing] <span class="ref-grade-tag rg-a2">A2</span></li>
           <li>Brown JR et al. Zanubrutinib or Ibrutinib in Relapsed or Refractory CLL (ALPINE). N Engl J Med. 2023;388(4):319–332. [PMID: 36511784] <span class="ref-grade-tag rg-a2">A2</span></li>
-          <li>Kater AP et al. MURANO final analysis: venetoclax-rituximab 7-year OS. Blood. 2025;145(23):2733. <span class="ref-grade-tag rg-a2">A2</span></li>
+          <li>Kater AP et al. MURANO final analysis: venetoclax-rituximab 7-year OS. Blood. 2025;145(23):2733–2745. [PMID: 40009494] <span class="ref-grade-tag rg-a2">A2</span></li>
           <li>Eichhorst B et al. GAIA/CLL13 primary analysis. Lancet. 2023;401(10386):1353–1365. [uMRD 86.5% at month 15 confirmed] | 4-year update: Fürstenau M et al. Lancet Oncol. 2024;25(6):744–759. [PMID: 38821083] <span class="ref-grade-tag rg-a2">A2</span></li>
           <li>Jurczak W et al. ASCEND final analysis: acalabrutinib vs IdR/BR. Haematologica. 2022. <span class="ref-grade-tag rg-a2">A2</span></li>
           <li>Tam CS et al. SEQUOIA arm C 5-year follow-up: zanubrutinib in del(17p)/treatment-naive CLL. EHA 2025 abstract. Hematological Oncology. 2025;43(S3). [DOI:10.1002/hon.70093_72] <span class="ref-grade-tag rg-a2">A2</span></li>
@@ -888,7 +907,6 @@
           <li>NICE TA931 — zanubrutinib for untreated CLL. NICE, 2024. <span class="ref-grade-tag rg-a1">A1</span></li>
           <li>NICE TA689 — acalabrutinib for previously untreated and previously treated CLL. NICE, 2021. <span class="ref-grade-tag rg-a1">A1</span></li>
           <li>NICE TA891 — ibrutinib + venetoclax for untreated CLL. NICE, 2023. <span class="ref-grade-tag rg-a1">A1</span></li>
-          <li>NICE TA429 — ibrutinib for untreated CLL with del(17p)/TP53 and previously treated CLL. NICE, 2017. <span class="ref-grade-tag rg-a1">A1</span></li>
           <li>NICE TA561 — venetoclax + rituximab for R/R CLL. NICE, 2019. &amp; TA796 — venetoclax monotherapy for R/R CLL. NICE, 2022. <span class="ref-grade-tag rg-a1">A1</span></li>
         </ol>
       </section>
@@ -897,13 +915,20 @@
       <section class="gl-section">
         <div class="section-header">
           <div class="section-num">14</div>
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           <h2 class="section-title">Versioning and Governance</h2>
         </div>
         <table class="data-table">
           <thead><tr><th>Version</th><th>Date</th><th>Author</th><th>Change</th></tr></thead>
           <tbody>
             <tr><td>v1.0</td><td>April 2025</td><td>Dr M Mohsin</td><td>Initial CLL guideline published — ELN/BSH/ASH synthesis with NICE commissioning framework, GRADE badges, audit standards, visual algorithms</td></tr>
-            <tr><td>v1.1</td><td>April 2025</td><td>Dr M Mohsin</td><td>Corrections: NICE TA numbers updated (TA931 zanubrutinib, TA689 acalabrutinib, TA1119 venetoclax+obi, TA561 venetoclax+rituximab); BSH 2025 preferred BTKi guidance incorporated; CT scan moved to pre-treatment imaging subsection; prognostic workup timing clarified; all cytotoxic regimen references removed per current guidelines; ALPINE and GAIA/CLL13 trial data added</td></tr>
+            <tr><td>v1.1</td><td>April 2025</td><td>Dr M Mohsin</td><td>NICE TA numbers corrected; BSH 2025 preferred BTKis incorporated; CT scan to pre-treatment subsection; CIT removed</td></tr>
+            <tr><td>v1.2</td><td>April 2025</td><td>Dr M Mohsin</td><td>MBL distinction; treatment-predictive TP53/IGHV framing; staging caveat; disease character</td></tr>
+            <tr><td>v1.3</td><td>April 2025</td><td>Dr M Mohsin</td><td>Removed incorrect zanubrutinib 'not NICE 1L' section</td></tr>
+            <tr><td>v1.4</td><td>April 2025</td><td>Dr M Mohsin</td><td>Duplicate MURANO text fixed; CMV/alemtuzumab updated to current practice</td></tr>
+            <tr><td>v1.5</td><td>April 2025</td><td>Dr M Mohsin</td><td>Reference fact-check: ALPINE journal corrected (NEJM not Blood); BSH 2025 full citation added; wrong PMIDs removed</td></tr>
+            <tr><td>v1.6</td><td>April 2025</td><td>Dr M Mohsin</td><td>Comprehensive cross-check (PubMed/Scholar Gateway/Consensus): SEQUOIA author corrected (Tam CS); CLL14 PMID added; GAIA/CLL13 4-year update added; ELEVATE-TN/RESONATE-2 corrected</td></tr>
+            <tr><td>v1.7</td><td>April 2025</td><td>Dr M Mohsin</td><td>Final review: section icons added; treatment card order corrected (zanubrutinib then acalabrutinib per BSH 2025); GAIA/CLL13 patient population clarified; references cleaned; versioning complete</td></tr>
           </tbody>
         </table>
         <p style="font-size:0.8rem; color:var(--clr-muted); margin-top:8px;"><strong>Disclaimer:</strong> This guideline is intended for educational purposes and to support clinical decision-making. It is not a substitute for individual clinical judgement. For UK practice, only BSH-aligned NICE-commissioned regimens apply. Always verify current NICE guidance before prescribing. Dr Muhammad Mohsin is responsible for the educational content of this page.</p>
@@ -1019,7 +1044,7 @@
         </div>
       </div>
       <div class="footer-note">
-        <p style="margin:0;">MHA-CLL-2025-v1.1 &nbsp;|&nbsp; Educational use only<br>BSH 2025 &amp; NICE regimens apply for UK clinical practice<br>&copy; 2025 Dr Muhammad Mohsin, Consultant Haematologist</p>
+        <p style="margin:0;">MHA-CLL-2025-v1.7 &nbsp;|&nbsp; Educational use only<br>BSH 2025 &amp; NICE regimens apply for UK clinical practice<br>&copy; 2025 Dr Muhammad Mohsin, Consultant Haematologist</p>
       </div>
     </div>
   </div>
