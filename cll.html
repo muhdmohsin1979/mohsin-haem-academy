@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLL Guidelines — Mohsin Haematology Academy</title>
+  <meta name="description" content="Unified ELN, BSH and ASH Chronic Lymphocytic Leukaemia guideline for education and UK clinical practice.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --clr-primary:       #7a1f2b;
+      --clr-primary-dark:  #5c1720;
+      --clr-primary-tint:  rgba(122, 31, 43, 0.07);
+      --clr-div:           #1a6b4a;
+      --clr-div-dark:      #145438;
+      --clr-div-tint:      rgba(26, 107, 74, 0.07);
+      --clr-div-tint-md:   rgba(26, 107, 74, 0.12);
+      --clr-bg:            #f7f5f3;
+      --clr-surface:       #ffffff;
+      --clr-surface-alt:   #faf8f7;
+      --clr-text:          #1a1a1e;
+      --clr-text-secondary:#3d3d42;
+      --clr-muted:         #6b717a;
+      --clr-border:        #e6e1dd;
+      --clr-border-light:  #f0ebe7;
+      --clr-warn:          #b45309;
+      --clr-warn-tint:     rgba(180, 83, 9, 0.07);
+      --clr-danger:        #991b1b;
+      --clr-danger-tint:   rgba(153, 27, 27, 0.07);
+      --clr-success:       #166534;
+      --clr-success-tint:  rgba(22, 101, 52, 0.07);
+      --clr-navy:          #1e3a5f;
+      --clr-navy-tint:     rgba(30, 58, 95, 0.07);
+      --clr-purple:        #6d28d9;
+      --clr-purple-tint:   rgba(109, 40, 217, 0.07);
+      --shadow-sm: 0 1px 4px rgba(0,0,0,.06), 0 2px 6px rgba(0,0,0,.04);
+      --shadow-md: 0 4px 16px rgba(0,0,0,.08), 0 2px 6px rgba(0,0,0,.04);
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --ease: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: 'Inter', system-ui, sans-serif; background: var(--clr-bg); color: var(--clr-text); font-size: 15px; line-height: 1.65; }
+    *, *::before, *::after { box-sizing: border-box; }
+    a { color: var(--clr-div); }
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── Nav ── */
+    nav { background: var(--clr-surface); border-bottom: 1px solid var(--clr-border); position: sticky; top: 0; z-index: 100; box-shadow: var(--shadow-sm); }
+    .nav-inner { display: flex; align-items: center; gap: 20px; padding: 0 24px; height: 56px; max-width: 1160px; margin: 0 auto; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+    .brand-icon { width: 32px; height: 32px; background: var(--clr-primary); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .brand-icon svg { width: 18px; height: 18px; stroke: #fff; fill: none; stroke-width: 2; }
+    .brand-name { font-size: 0.95rem; font-weight: 700; color: var(--clr-text); line-height: 1.1; }
+    .brand-tagline { font-size: 0.68rem; color: var(--clr-muted); font-weight: 400; }
+    .nav-links { display: flex; align-items: center; gap: 2px; margin-left: auto; }
+    .nav-links a { font-size: 0.85rem; font-weight: 500; color: var(--clr-text-secondary); padding: 7px 11px; border-radius: var(--radius-sm); transition: color var(--ease), background var(--ease); white-space: nowrap; text-decoration: none; }
+    .nav-links a:hover { color: var(--clr-primary); background: var(--clr-primary-tint); }
+    .nav-links a.active { color: var(--clr-div); background: var(--clr-div-tint); font-weight: 600; }
+    .nav-cta { background: var(--clr-primary) !important; color: #fff !important; padding: 8px 16px !important; border-radius: var(--radius-sm) !important; font-weight: 600 !important; }
+    .nav-cta:hover { background: var(--clr-primary-dark) !important; }
+
+    /* ── Hero ── */
+    .page-hero { background: linear-gradient(135deg, var(--clr-navy) 0%, #2d5a8e 60%, #1e3a5f 100%); color: #fff; padding: 48px 0 36px; }
+    .hero-eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+    .hero-badge { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); border-radius: 20px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 12px; color: rgba(255,255,255,0.9); }
+    .hero-badge.uk { background: rgba(26,107,74,0.35); border-color: rgba(26,107,74,0.5); color: #6ee7b7; }
+    .page-hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; margin: 0 0 10px; line-height: 1.2; }
+    .page-hero .subtitle { font-size: 1rem; color: rgba(255,255,255,0.75); margin: 0 0 20px; max-width: 640px; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 18px; font-size: 0.8rem; color: rgba(255,255,255,0.6); }
+    .hero-meta span strong { color: rgba(255,255,255,0.9); }
+
+    /* ── Anchor nav ── */
+    .anchor-nav { background: var(--clr-surface); border-bottom: 1px solid var(--clr-border); position: sticky; top: 56px; z-index: 90; }
+    .anchor-nav-inner { display: flex; gap: 4px; padding: 10px 0; overflow-x: auto; scrollbar-width: none; }
+    .anchor-nav-inner::-webkit-scrollbar { display: none; }
+    .anchor-nav-inner a { font-size: 0.79rem; font-weight: 500; color: var(--clr-muted); padding: 5px 10px; border-radius: var(--radius-sm); white-space: nowrap; text-decoration: none; transition: all var(--ease); }
+    .anchor-nav-inner a:hover { color: var(--clr-navy); background: var(--clr-navy-tint); }
+
+    /* ── Educational disclaimer ── */
+    .edu-banner { background: linear-gradient(90deg, #fef3c7, #fef9ee); border: 1.5px solid #f59e0b; border-radius: var(--radius-md); padding: 14px 18px; display: flex; gap: 12px; align-items: flex-start; margin-bottom: 24px; }
+    .edu-banner svg { flex-shrink: 0; margin-top: 2px; }
+    .edu-banner p { margin: 0; font-size: 0.85rem; line-height: 1.5; color: #78350f; }
+    .edu-banner strong { color: #92400e; }
+
+    /* ── UK practice box ── */
+    .uk-box { background: var(--clr-div-tint); border: 1.5px solid var(--clr-div); border-radius: var(--radius-md); padding: 14px 18px; margin-bottom: 16px; }
+    .uk-box-title { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--clr-div); margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+    .uk-box p { margin: 0; font-size: 0.87rem; color: var(--clr-text-secondary); line-height: 1.55; }
+
+    /* ── Layout ── */
+    .gl-layout { display: grid; grid-template-columns: 1fr 280px; gap: 40px; align-items: start; padding: 32px 0 64px; }
+    .gl-main { min-width: 0; }
+
+    /* ── Sections ── */
+    .gl-section { margin-bottom: 36px; padding-top: 8px; }
+    .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid var(--clr-navy); }
+    .section-num { width: 30px; height: 30px; background: var(--clr-navy); color: #fff; border-radius: 50%; font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .section-title { font-size: 1.12rem; font-weight: 700; color: var(--clr-navy); margin: 0; }
+    h3 { font-size: 0.97rem; font-weight: 700; color: var(--clr-text); margin: 16px 0 8px; }
+    p { margin: 0 0 12px; }
+
+    /* ── GRADE badges ── */
+    .grade-badge { display: inline-flex; align-items: center; gap: 4px; border-radius: 4px; overflow: hidden; font-size: 0.7rem; font-weight: 700; vertical-align: middle; margin-left: 6px; }
+    .grade-q { padding: 2px 7px; color: #fff; }
+    .grade-s { padding: 2px 7px; color: #fff; }
+    .grade-high   { background: #065f46; }
+    .grade-mod    { background: #1d4ed8; }
+    .grade-low    { background: #92400e; }
+    .grade-vlow   { background: #7f1d1d; }
+    .grade-strong { background: var(--clr-div); }
+    .grade-cond   { background: var(--clr-warn); }
+
+    /* ── NICE TA pill ── */
+    .nice-ta { display: inline-block; background: var(--clr-div); color: #fff; border-radius: 4px; font-size: 0.68rem; font-weight: 700; padding: 1px 7px; vertical-align: middle; margin-left: 4px; letter-spacing: 0.02em; }
+
+    /* ── Info boxes ── */
+    .info-box { border-radius: var(--radius-md); overflow: hidden; margin-bottom: 16px; }
+    .info-box-head { padding: 10px 14px; font-size: 0.8rem; font-weight: 700; color: #fff; }
+    .info-box-body { padding: 12px 14px; font-size: 0.87rem; line-height: 1.6; }
+    .info-box-body ul { margin: 0; padding-left: 18px; }
+    .info-box-body li { margin-bottom: 4px; }
+    .box-navy   .info-box-head { background: var(--clr-navy); }
+    .box-navy   .info-box-body { background: var(--clr-navy-tint); }
+    .box-green  .info-box-head { background: var(--clr-div); }
+    .box-green  .info-box-body { background: var(--clr-div-tint); }
+    .box-danger .info-box-head { background: var(--clr-danger); }
+    .box-danger .info-box-body { background: var(--clr-danger-tint); }
+    .box-warn   .info-box-head { background: var(--clr-warn); }
+    .box-warn   .info-box-body { background: var(--clr-warn-tint); }
+    .box-purple .info-box-head { background: var(--clr-purple); }
+    .box-purple .info-box-body { background: var(--clr-purple-tint); }
+
+    /* ── Treatment cards ── */
+    .tx-card { border: 1px solid var(--clr-border); border-radius: var(--radius-md); overflow: hidden; margin-bottom: 10px; }
+    .tx-card-head { display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; background: var(--clr-surface-alt); border-bottom: 1px solid var(--clr-border); }
+    .tx-card-title { font-size: 0.88rem; font-weight: 700; color: var(--clr-text); }
+    .tx-card-body { padding: 10px 14px; font-size: 0.85rem; line-height: 1.6; color: var(--clr-text-secondary); }
+    .tx-card-body strong { color: var(--clr-text); }
+    .tx-card.uk-approved { border-color: var(--clr-div); }
+    .tx-card.uk-approved .tx-card-head { background: var(--clr-div-tint); }
+
+    /* ── Data tables ── */
+    .data-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; margin-bottom: 16px; }
+    .data-table thead th { background: var(--clr-navy); color: #fff; padding: 9px 10px; text-align: left; font-size: 0.78rem; font-weight: 600; }
+    .data-table tbody tr:nth-child(even) { background: var(--clr-surface-alt); }
+    .data-table tbody td { padding: 8px 10px; border-bottom: 1px solid var(--clr-border-light); vertical-align: top; line-height: 1.5; }
+    .data-table tbody tr:last-child td { border-bottom: none; }
+
+    /* ── Two-col ── */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+    .col-card { border: 1px solid var(--clr-border); border-radius: var(--radius-md); overflow: hidden; }
+    .col-card-head { padding: 8px 12px; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+    .col-card-body { padding: 10px 12px; font-size: 0.83rem; line-height: 1.55; }
+    .col-card-body ul { margin: 0; padding-left: 16px; }
+    .col-card-body li { margin-bottom: 3px; }
+    .col-navy .col-card-head   { background: var(--clr-navy); color: #fff; }
+    .col-navy .col-card-body   { background: var(--clr-navy-tint); }
+    .col-green .col-card-head  { background: var(--clr-div); color: #fff; }
+    .col-green .col-card-body  { background: var(--clr-div-tint); }
+    .col-purple .col-card-head { background: var(--clr-purple); color: #fff; }
+    .col-purple .col-card-body { background: var(--clr-purple-tint); }
+    .col-warn .col-card-head   { background: var(--clr-warn); color: #fff; }
+    .col-warn .col-card-body   { background: var(--clr-warn-tint); }
+    .col-danger .col-card-head { background: var(--clr-danger); color: #fff; }
+    .col-danger .col-card-body { background: var(--clr-danger-tint); }
+
+    /* ── Clinical vignette ── */
+    .vignette { background: var(--clr-surface); border-left: 4px solid var(--clr-navy); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 12px 16px; margin-bottom: 14px; font-size: 0.86rem; color: var(--clr-text-secondary); line-height: 1.6; }
+    .vignette strong { color: var(--clr-navy); display: block; margin-bottom: 4px; font-size: 0.77rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+    /* ── Key point box ── */
+    .keypoint { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: var(--radius-sm); padding: 10px 14px; margin-bottom: 10px; font-size: 0.85rem; display: flex; gap: 10px; align-items: flex-start; }
+    .keypoint svg { flex-shrink: 0; margin-top: 1px; }
+
+    /* ── PICO ── */
+    .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 16px; }
+    .pico-card { background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-sm); padding: 10px 12px; }
+    .pico-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--clr-navy); margin-bottom: 4px; }
+    .pico-text { font-size: 0.84rem; color: var(--clr-text-secondary); line-height: 1.5; }
+
+    /* ── Ref tags ── */
+    sup.ref { font-size: 0.68rem; color: var(--clr-div); font-weight: 600; cursor: default; }
+    .ref-grade-tag { display: inline-block; border-radius: 3px; font-size: 0.65rem; font-weight: 700; padding: 0 5px; vertical-align: middle; margin-left: 4px; }
+    .rg-a1 { background: var(--clr-div); color: #fff; }
+    .rg-a2 { background: var(--clr-navy); color: #fff; }
+    .rg-b  { background: var(--clr-warn); color: #fff; }
+    .rg-c  { background: var(--clr-muted); color: #fff; }
+
+    /* ── Sidebar ── */
+    .gl-sidebar { position: sticky; top: 140px; display: flex; flex-direction: column; gap: 16px; }
+    .sidebar-card { background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); overflow: hidden; }
+    .sidebar-card-header { background: var(--clr-div-tint-md); padding: 10px 14px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--clr-div); }
+    .sidebar-card-body { padding: 14px; }
+    .sidebar-toc { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+    .sidebar-toc li a { display: block; font-size: 0.8rem; color: var(--clr-muted); padding: 5px 8px; border-radius: var(--radius-sm); transition: all var(--ease); line-height: 1.4; text-decoration: none; }
+    .sidebar-toc li a:hover { color: var(--clr-navy); background: var(--clr-navy-tint); }
+    .sidebar-related-link { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: var(--clr-text-secondary); padding: 7px 4px; border-bottom: 1px solid var(--clr-border-light); text-decoration: none; transition: color var(--ease); }
+    .sidebar-related-link:last-child { border-bottom: none; }
+    .sidebar-related-link:hover { color: var(--clr-navy); }
+
+    /* ── Footer ── */
+    footer { background: var(--clr-text); color: rgba(255,255,255,0.55); padding: 32px 0; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer-brand .brand-name { color: rgba(255,255,255,0.85); }
+    .footer-brand .brand-tagline { color: rgba(255,255,255,0.4); }
+    .footer-note { font-size: 0.78rem; line-height: 1.6; text-align: right; }
+
+    @media (max-width: 900px) {
+      .gl-layout { grid-template-columns: 1fr; }
+      .gl-sidebar { position: static; }
+      .two-col, .pico-grid { grid-template-columns: 1fr; }
+      .nav-links a:not(.nav-cta):not(.active) { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <div class="brand-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      </div>
+      <div>
+        <div class="brand-name">Mohsin Haematology Academy</div>
+        <div class="brand-tagline">Evidence — Education — Practice</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="itp.html">ITP</a>
+      <a href="vte-cancer.html">CAT</a>
+      <a href="cll.html" class="active">CLL</a>
+      <a href="journal-club.html">Journal Club</a>
+      <a href="haemcalc" class="nav-cta">Open HaemCalc</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Anchor nav ── -->
+<div class="anchor-nav">
+  <div class="container">
+    <div class="anchor-nav-inner">
+      <a href="#scope">Scope</a>
+      <a href="#overview">Overview</a>
+      <a href="#methodology">Methodology</a>
+      <a href="#diagnosis">Diagnosis</a>
+      <a href="#prognostics">Prognostics</a>
+      <a href="#indications">Indications</a>
+      <a href="#firstline">First-Line</a>
+      <a href="#rr">R/R</a>
+      <a href="#response">Response &amp; MRD</a>
+      <a href="#special">Special Populations</a>
+      <a href="#audit">Audit</a>
+      <a href="#refs">References</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── Hero ── -->
+<div class="page-hero">
+  <div class="container">
+    <div class="hero-eyebrow">
+      <span class="hero-badge">Haematological Malignancy</span>
+      <span class="hero-badge">ELN · BSH · ASH</span>
+      <span class="hero-badge uk">UK Practice: BSH &amp; NICE</span>
+    </div>
+    <h1>Chronic Lymphocytic Leukaemia (CLL)</h1>
+    <p class="subtitle">Unified clinical guideline synthesising ELN, BSH, and ASH recommendations. BSH and NICE-commissioned regimens define UK clinical practice.</p>
+    <div class="hero-meta">
+      <span><strong>Document code:</strong> MHA-CLL-2025-v1.0</span>
+      <span><strong>Division:</strong> Haematological Malignancy</span>
+      <span><strong>Date:</strong> April 2025</span>
+      <span><strong>Review due:</strong> April 2027</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── Main layout ── -->
+<div class="container">
+  <div class="gl-layout">
+
+    <!-- ── MAIN CONTENT ── -->
+    <main class="gl-main">
+
+      <!-- Educational Disclaimer -->
+      <div class="edu-banner" style="margin-top:24px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <p><strong>Educational Purpose Statement.</strong> This guideline synthesises ELN (European LeukemiaNet), BSH (British Society for Haematology), and ASH (American Society of Hematology) recommendations for educational purposes. <strong>For UK clinical practice, only BSH-aligned regimens commissioned by NICE apply.</strong> ELN and ASH content is presented for international educational context only. Always verify current NICE commissioning status and local formulary before prescribing. Clinical judgement must be applied to individual patients.</p>
+      </div>
+
+      <!-- 1. SCOPE -->
+      <section class="gl-section" id="scope">
+        <div class="section-header">
+          <div class="section-num">1</div>
+          <h2 class="section-title">Scope and Purpose</h2>
+        </div>
+        <p>This guideline covers the diagnosis, risk stratification, and management of chronic lymphocytic leukaemia (CLL) in adults aged &ge;18 years. It integrates recommendations from three major international societies — ELN (via ESMO 2024), BSH (2025 update), and ASH/NCCN (2024) — with explicit identification of which recommendations are applicable to UK clinical practice under NICE commissioning.</p>
+        <p>The guideline applies to primary and relapsed/refractory CLL in outpatient haematology, day unit, and inpatient settings. Small lymphocytic lymphoma (SLL) shares the same biological entity and management principles. Prolymphocytic leukaemia and Richter's transformation are addressed under special populations.</p>
+
+        <div class="uk-box">
+          <div class="uk-box-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            UK Clinical Practice — Applicable Regimens
+          </div>
+          <p>The following NICE-commissioned regimens define UK clinical practice for CLL. Treatment outside these pathways requires IFR (Individual Funding Request) or clinical trial enrolment:</p>
+          <ul style="font-size:0.86rem; color:var(--clr-text-secondary); margin-top:8px; padding-left:18px; line-height:1.7;">
+            <li><strong>TA429</strong> — Ibrutinib for untreated CLL (all comers, first-line)</li>
+            <li><strong>TA663</strong> — Venetoclax + obinutuzumab (fixed 12 cycles) for untreated CLL</li>
+            <li><strong>TA795</strong> — Acalabrutinib (&plusmn; obinutuzumab) for untreated CLL</li>
+            <li><strong>TA891</strong> — Ibrutinib + venetoclax (fixed-duration, first-line)</li>
+            <li><strong>TA796</strong> — Venetoclax monotherapy for R/R CLL (post-BTKi or post-CIT)</li>
+            <li><strong>TA689</strong> — Venetoclax + rituximab for R/R CLL</li>
+          </ul>
+          <p style="font-size:0.78rem; color:var(--clr-muted); margin:8px 0 0;">Always verify current NICE guidance — TA numbers and commissioning criteria are subject to revision.</p>
+        </div>
+      </section>
+
+      <!-- 2. CLINICAL OVERVIEW -->
+      <section class="gl-section" id="overview">
+        <div class="section-header">
+          <div class="section-num">2</div>
+          <h2 class="section-title">Clinical Overview and Epidemiology</h2>
+        </div>
+        <div class="vignette">
+          <strong>Clinical Vignette</strong>
+          A 68-year-old man is referred by his GP with a persistent lymphocytosis of 18&times;10&sup9;/L noted incidentally on a routine blood test. He is asymptomatic with no lymphadenopathy, weight loss, or night sweats. His blood film shows small mature-appearing lymphocytes with smear cells. He is concerned about leukaemia and asks whether he needs chemotherapy.
+        </div>
+        <p>CLL is the most common leukaemia in the Western world, with an incidence of approximately 5 per 100,000 per year in the UK. It predominantly affects older adults — median age at diagnosis is 70 years — with a 2:1 male predominance. CLL and SLL represent the same disease: CLL is defined by &ge;5&times;10&sup9;/L circulating B lymphocytes with CLL immunophenotype; SLL by predominantly nodal disease with &lt;5&times;10&sup9;/L circulating CLL cells.</p>
+        <p>The disease course is highly variable — some patients live for decades without treatment, while others require early intervention and have rapidly progressive disease. This biological heterogeneity is now well-characterised by molecular markers (IGHV, TP53, del(17p)) and determines both prognosis and treatment selection.</p>
+        <h3>Staging Systems</h3>
+        <table class="data-table">
+          <thead>
+            <tr><th>Stage</th><th>Binet</th><th>Rai</th><th>Median Survival (historical CIT era)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Early</td><td>A — &lt;3 areas, Hb &ge;10, plt &ge;100</td><td>0 — lymphocytosis only</td><td>&gt;10 years</td></tr>
+            <tr><td>Intermediate</td><td>B — &ge;3 areas, Hb &ge;10, plt &ge;100</td><td>I/II — adenopathy/splenomegaly</td><td>5–7 years</td></tr>
+            <tr><td>Advanced</td><td>C — Hb &lt;10 or plt &lt;100</td><td>III/IV — anaemia/thrombocytopenia</td><td>2–4 years</td></tr>
+          </tbody>
+        </table>
+        <div class="keypoint">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span><strong>Pattern recognition:</strong> Staging alone no longer drives treatment decisions in the targeted therapy era — molecular profile and fitness assessment are equally important. Binet/Rai staging remains relevant for trial eligibility and audit purposes.</span>
+        </div>
+      </section>
+
+      <!-- 3. METHODOLOGY -->
+      <section class="gl-section" id="methodology">
+        <div class="section-header">
+          <div class="section-num">3</div>
+          <h2 class="section-title">Methodology — Guideline Synthesis</h2>
+        </div>
+        <p>This guideline integrates three international frameworks using GRADE (Grading of Recommendations Assessment, Development and Evaluation) methodology. Each recommendation is tagged with its source society, evidence quality, and recommendation strength.</p>
+        <div class="pico-grid">
+          <div class="pico-card">
+            <div class="pico-label">P — Population</div>
+            <div class="pico-text">Adults (&ge;18 years) with confirmed CLL or SLL at any disease phase, including treatment-naive and relapsed/refractory.</div>
+          </div>
+          <div class="pico-card">
+            <div class="pico-label">I — Intervention</div>
+            <div class="pico-text">BTK inhibitors (ibrutinib, acalabrutinib, zanubrutinib), BCL-2 inhibitor (venetoclax), anti-CD20 antibodies, chemoimmunotherapy, or observation.</div>
+          </div>
+          <div class="pico-card">
+            <div class="pico-label">C — Comparator</div>
+            <div class="pico-text">Chemoimmunotherapy (FCR, BR, obinutuzumab-chlorambucil), observation, or alternative targeted agents.</div>
+          </div>
+          <div class="pico-card">
+            <div class="pico-label">O — Outcomes</div>
+            <div class="pico-text">Progression-free survival, overall survival, undetectable MRD, overall response rate, quality of life, treatment-related toxicity.</div>
+          </div>
+        </div>
+        <div class="two-col">
+          <div class="col-card col-navy">
+            <div class="col-card-head">Source Societies</div>
+            <div class="col-card-body">
+              <ul>
+                <li><strong>ELN</strong> — via ESMO 2024 CLL guidance; European consensus</li>
+                <li><strong>BSH 2025</strong> — UK national guideline; primary driver for UK practice</li>
+                <li><strong>ASH/NCCN 2024</strong> — American guidance; educational context for UK</li>
+                <li><strong>iwCLL 2018</strong> — Diagnostic and response criteria</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-card col-green">
+            <div class="col-card-head">Evidence Grading</div>
+            <div class="col-card-body">
+              <ul>
+                <li>High — RCTs, meta-analyses with consistent results</li>
+                <li>Moderate — RCTs with limitations or observational with strong effect</li>
+                <li>Low — Observational or indirect evidence</li>
+                <li>Very Low — Case series, expert opinion</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. DIAGNOSIS -->
+      <section class="gl-section" id="diagnosis">
+        <div class="section-header">
+          <div class="section-num">4</div>
+          <h2 class="section-title">Diagnosis and Initial Work-up</h2>
+        </div>
+        <p>CLL is diagnosed by peripheral blood flow cytometry demonstrating a clonal B-cell population with characteristic immunophenotype. Bone marrow biopsy is not required for diagnosis but may be performed to assess infiltration degree or to exclude concurrent haematological disorders.</p>
+        <h3>Diagnostic Criteria (iwCLL 2018)</h3>
+        <div class="info-box box-navy">
+          <div class="info-box-head">Diagnostic Minimum Requirements</div>
+          <div class="info-box-body">
+            <ul>
+              <li>Peripheral blood B-lymphocyte count &ge;5&times;10&sup9;/L persisting for &ge;3 months</li>
+              <li>Clonality confirmed by flow cytometry — co-expression of CD5, CD19, CD23 with weak surface immunoglobulin and either &kappa; or &lambda; light-chain restriction</li>
+              <li>Characteristic CLL morphology on blood film — small mature lymphocytes with smear/smudge cells</li>
+              <li>Matutes score &ge;4 (CD5+, CD23+, CD79b weak/negative, FMC7 negative, sIg weak)</li>
+            </ul>
+          </div>
+        </div>
+        <h3>Mandatory Initial Investigations</h3>
+        <table class="data-table">
+          <thead>
+            <tr><th>Investigation</th><th>Purpose</th><th>Key Finding in CLL</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>FBC + blood film</strong></td><td>Confirm lymphocytosis; exclude pseudo-lymphocytosis; smear cells</td><td>Lymphocytosis &ge;5&times;10&sup9;/L; smear cells pathognomonic</td></tr>
+            <tr><td><strong>Flow cytometry</strong></td><td>CLL immunophenotype (Matutes score)</td><td>CD5+/CD19+/CD23+; weak sIg; FMC7 negative</td></tr>
+            <tr><td><strong>Immunoglobulins</strong></td><td>Baseline; hypogammaglobulinaemia risk</td><td>Reduced IgG/IgA/IgM — increased infection risk</td></tr>
+            <tr><td><strong>DAT (Direct Antiglobulin Test)</strong></td><td>Baseline AIHA screen</td><td>Positive in ~7% at diagnosis</td></tr>
+            <tr><td><strong>LDH, &beta;2-microglobulin</strong></td><td>Prognostic markers</td><td>Elevated correlates with advanced disease</td></tr>
+            <tr><td><strong>Virology (HIV, HBV, HCV, CMV, EBV)</strong></td><td>Mandatory before immunosuppression; reactivation risk</td><td>Screen all; HBV core Ab especially important before anti-CD20</td></tr>
+            <tr><td><strong>CT chest/abdomen/pelvis</strong></td><td>Staging; lymphadenopathy burden; baseline imaging</td><td>Not mandatory at diagnosis in asymptomatic CLL — required before treatment</td></tr>
+          </tbody>
+        </table>
+        <div class="keypoint">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#991b1b" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <span><strong>Common pitfall:</strong> A positive DAT at diagnosis does not mean AIHA is present — check reticulocyte count, LDH, and indirect bilirubin to confirm haemolysis. A positive DAT with a normal Hb and reticulocyte count requires no immediate action beyond monitoring.</span>
+        </div>
+      </section>
+
+      <!-- 5. PROGNOSTIC WORK-UP -->
+      <section class="gl-section" id="prognostics">
+        <div class="section-header">
+          <div class="section-num">5</div>
+          <h2 class="section-title">Prognostic Work-up and Molecular Markers</h2>
+        </div>
+        <p>Molecular profiling at diagnosis and before each treatment decision is mandatory. Results directly determine treatment selection and eligibility for targeted agents. All patients requiring treatment should have a full prognostic panel completed before initiating therapy.</p>
+        <div class="info-box box-navy">
+          <div class="info-box-head">Mandatory Prognostic Panel — Required Before Treatment</div>
+          <div class="info-box-body">
+            <ul>
+              <li><strong>FISH panel</strong> — del(17p), del(11q), trisomy 12, del(13q): hierarchical prognostic impact; del(17p) worst</li>
+              <li><strong>TP53 mutation sequencing</strong> — TP53 mutation = same prognostic and treatment implications as del(17p); must always test alongside FISH (FISH alone misses ~40% of TP53 aberrancy)</li>
+              <li><strong>IGHV mutation status</strong> — unmutated IGHV (&lt;2% divergence from germline) = shorter PFS on all therapies; venetoclax benefits least when IGHV-unmutated</li>
+              <li><strong>Karyotype / FISH</strong> — complex karyotype (&ge;3 abnormalities) = inferior outcomes on BTKi and chemoimmunotherapy</li>
+              <li><strong>CD38, ZAP-70</strong> — surrogate markers; less actionable in the targeted therapy era but useful for overall risk stratification</li>
+            </ul>
+          </div>
+        </div>
+        <h3>Prognostic Impact Summary</h3>
+        <table class="data-table">
+          <thead>
+            <tr><th>Marker</th><th>Favourable</th><th>Unfavourable</th><th>Treatment Impact</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>TP53/del(17p)</strong></td><td>Absent</td><td>Present</td><td>Avoid chemotherapy — must use BTKi or venetoclax-based; <em>avoid</em> ibrutinib+venetoclax TA891 data limited here</td></tr>
+            <tr><td><strong>del(11q)</strong></td><td>Absent</td><td>Present</td><td>Respond to BTKi and chemoimmunotherapy; add alkylating agent if CIT used</td></tr>
+            <tr><td><strong>trisomy 12</strong></td><td>—</td><td>Intermediate</td><td>Good response to BTKi; associated with NOTCH1 mutation</td></tr>
+            <tr><td><strong>del(13q) only</strong></td><td>Present (sole abnormality)</td><td>—</td><td>Favourable — respond to all therapies</td></tr>
+            <tr><td><strong>IGHV mutated</strong></td><td>Mutated (&ge;2% divergence)</td><td>Unmutated (&lt;2%)</td><td>Mutated IGHV: deeper and more durable responses; consider fixed-duration venetoclax strategy</td></tr>
+            <tr><td><strong>Complex karyotype</strong></td><td>Absent</td><td>&ge;3 abnormalities</td><td>Inferior PFS on all therapies; prioritise novel agents; trial enrolment</td></tr>
+          </tbody>
+        </table>
+        <div class="keypoint">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span><strong>Mnemonic — TP53 testing:</strong> <em>"17 and TP — always together"</em>. del(17p) alone misses ~40% of TP53-aberrant cases. FISH and sequencing must always be performed together. Both del(17p) and TP53 mutation confer the same clinical management implications.</span>
+        </div>
+      </section>
+
+      <!-- 6. TREATMENT INDICATIONS -->
+      <section class="gl-section" id="indications">
+        <div class="section-header">
+          <div class="section-num">6</div>
+          <h2 class="section-title">Treatment Indications — iwCLL Active Disease Criteria</h2>
+        </div>
+        <p>The majority of newly diagnosed CLL patients do not require immediate treatment. Watch-and-wait is appropriate for asymptomatic patients regardless of lymphocyte count. Treatment is initiated only when active disease criteria are met.</p>
+        <div class="info-box box-warn">
+          <div class="info-box-head">iwCLL 2018 Active Disease Criteria — Treat When ANY Present</div>
+          <div class="info-box-body">
+            <ul>
+              <li><strong>Progressive marrow failure:</strong> Worsening anaemia (Hb &lt;10 g/dL) or thrombocytopenia (plt &lt;100&times;10&sup9;/L) due to CLL infiltration</li>
+              <li><strong>Massive or progressive splenomegaly:</strong> &gt;6 cm below left costal margin, or symptomatic</li>
+              <li><strong>Massive or progressive lymphadenopathy:</strong> Longest diameter &gt;10 cm, or symptomatic compression</li>
+              <li><strong>Progressive lymphocytosis:</strong> &gt;50% increase over 2 months, or lymphocyte doubling time &lt;6 months (if &gt;30&times;10&sup9;/L)</li>
+              <li><strong>Autoimmune cytopenias:</strong> AIHA or ITP poorly responding to corticosteroids</li>
+              <li><strong>Constitutional symptoms:</strong> Weight loss &gt;10% in 6 months; extreme fatigue; fevers &gt;38&deg;C for &ge;2 weeks without infection; night sweats &gt;1 month without infection</li>
+            </ul>
+          </div>
+        </div>
+        <div class="two-col">
+          <div class="col-card col-green">
+            <div class="col-card-head">Watch and Wait — Appropriate When</div>
+            <div class="col-card-body">
+              <ul>
+                <li>Asymptomatic Binet A or B</li>
+                <li>Stable lymphocyte count (DT &gt;12 months)</li>
+                <li>No constitutional symptoms</li>
+                <li>No progressive cytopenia</li>
+                <li>Reassure: early treatment does NOT improve survival</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-card col-danger">
+            <div class="col-card-head">Do NOT Treat — Avoid Pitfall</div>
+            <div class="col-card-body">
+              <ul>
+                <li>Lymphocyte count alone (&gt;30, &gt;100&times;10&sup9;/L) without other criteria</li>
+                <li>Positive prognostic markers alone (unmutated IGHV, del(17p) in asymptomatic patient)</li>
+                <li>Patient or GP anxiety — education and reassurance preferred</li>
+                <li>Hypogammaglobulinaemia — treat with Ig replacement, not CLL therapy</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <h3>Fitness Assessment Before Treatment</h3>
+        <p>All patients meeting treatment criteria should undergo formal fitness assessment before starting therapy. This determines treatment intensity and agent selection:</p>
+        <table class="data-table">
+          <thead>
+            <tr><th>Assessment Tool</th><th>Purpose</th><th>Threshold</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>CIRS</strong> (Cumulative Illness Rating Scale)</td><td>Comorbidity burden; determines fitness for intensive therapy</td><td>CIRS &le;6 with no single organ score &gt;2 = fit for intensive regimens</td></tr>
+            <tr><td><strong>eGFR / creatinine clearance</strong></td><td>Renal function — affects CIT dosing and venetoclax TLS risk</td><td>eGFR &ge;70 mL/min = fit; &lt;30 requires dose adjustment or LMWH bridging</td></tr>
+            <tr><td><strong>ECOG performance status</strong></td><td>Functional capacity</td><td>ECOG 0–1 = fit; ECOG &ge;2 consider reduced intensity or BTKi monotherapy</td></tr>
+            <tr><td><strong>Cardiac assessment</strong></td><td>Prior to BTKi — AF risk, anticoagulation status</td><td>Prior AF, anticoagulation = prefer acalabrutinib or zanubrutinib over ibrutinib</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- 7. FIRST-LINE TREATMENT -->
+      <section class="gl-section" id="firstline">
+        <div class="section-header">
+          <div class="section-num">7</div>
+          <h2 class="section-title">First-Line Treatment</h2>
+        </div>
+        <p>First-line treatment selection is guided by three factors: (1) presence of del(17p) or TP53 mutation, (2) patient fitness (CIRS/eGFR/ECOG), and (3) IGHV mutation status. Chemoimmunotherapy (FCR, BR, obinutuzumab-chlorambucil) is no longer recommended as first-line treatment for the majority of patients. BSH 2025 endorses targeted agents as standard of care.</p>
+
+        <!-- TP53/del17p PATHWAY -->
+        <h3>7a. TP53-Aberrant CLL — del(17p) and/or TP53 Mutation</h3>
+        <div class="info-box box-danger">
+          <div class="info-box-head">TP53-Aberrant CLL — Avoid All Chemoimmunotherapy</div>
+          <div class="info-box-body">
+            <p style="margin:0 0 8px;">Chemoimmunotherapy (including FCR, BR, obinutuzumab-chlorambucil) is contraindicated in TP53-aberrant CLL — responses are poor and short-lived. Alkylating-agent-based regimens are equally ineffective. Only targeted agents are appropriate.</p>
+          </div>
+        </div>
+        <div class="tx-card uk-approved">
+          <div class="tx-card-head">
+            <span class="tx-card-title">Ibrutinib (continuous) <span class="nice-ta">TA429</span></span>
+            <span class="grade-badge"><span class="grade-q grade-high">High</span><span class="grade-s grade-strong">Strong</span></span>
+          </div>
+          <div class="tx-card-body">
+            <strong>Dose:</strong> 420 mg once daily continuously. NICE TA429 commissioned for all patients with untreated CLL requiring treatment, including del(17p)/TP53. <strong>Trial basis:</strong> RESONATE-2 (elderly), ILLUMINATE, ALLIANCE. <strong>Note:</strong> Prefer acalabrutinib or zanubrutinib in patients with prior/current AF, anticoagulation requirement, or hypertension — superior cardiac safety profile. Ibrutinib may continue in patients already tolerating it well.
+          </div>
+        </div>
+        <div class="tx-card uk-approved">
+          <div class="tx-card-head">
+            <span class="tx-card-title">Acalabrutinib &plusmn; obinutuzumab <span class="nice-ta">TA795</span></span>
+            <span class="grade-badge"><span class="grade-q grade-high">High</span><span class="grade-s grade-strong">Strong</span></span>
+          </div>
+          <div class="tx-card-body">
+            <strong>Dose:</strong> 100 mg twice daily (monotherapy) or with obinutuzumab 1000 mg IV (cycles 1–6). <strong>Trial basis:</strong> ELEVATE-TN (4-year PFS superior to chlorambucil-obinutuzumab). <strong>Preferred over ibrutinib</strong> for new patients — lower AF risk (6% vs 11%), lower hypertension and bleeding rates. Suitable for most fitness levels.
+          </div>
+        </div>
+        <div class="tx-card uk-approved">
+          <div class="tx-card-head">
+            <span class="tx-card-title">Venetoclax + Obinutuzumab (fixed 12 cycles) <span class="nice-ta">TA663</span></span>
+            <span class="grade-badge"><span class="grade-q grade-high">High</span><span class="grade-s grade-strong">Strong</span></span>
+          </div>
+          <div class="tx-card-body">
+            <strong>Dose:</strong> Venetoclax ramp-up (20&rarr;50&rarr;100&rarr;200&rarr;400 mg over 5 weeks); obinutuzumab 1000 mg IV cycle 1. Total 12 cycles then stop. <strong>Trial basis:</strong> CLL14 — 6-year PFS median 76.2 months (vs 36.4 months for Clb-Obi). Advantages: fixed duration, treatment-free remission, high uMRD rates (78% at EOT). <strong>TLS risk:</strong> Requires inpatient ramp-up for high-risk patients; outpatient for low/medium risk.
+          </div>
+        </div>
+        <div class="tx-card uk-approved">
+          <div class="tx-card-head">
+            <span class="tx-card-title">Ibrutinib + Venetoclax (fixed-duration) <span class="nice-ta">TA891</span></span>
+            <span class="grade-badge"><span class="grade-q grade-mod">Moderate</span><span class="grade-s grade-strong">Strong</span></span>
+          </div>
+          <div class="tx-card-body">
+            <strong>Dose:</strong> Ibrutinib 420 mg daily lead-in &times;3 cycles, then add venetoclax (ramp-up); both for 12 cycles total, then stop. NICE TA891 commissioned May 2023. <strong>Trial basis:</strong> CAPTIVATE and GLOW studies. High uMRD rates; fixed-duration advantage. <strong>Note:</strong> Data in del(17p) patients limited — BSH guidance suggests venetoclax+obinutuzumab or BTKi monotherapy may be preferred in TP53-aberrant disease.
+          </div>
+        </div>
+
+        <!-- Non-TP53 PATHWAY -->
+        <h3 style="margin-top:20px;">7b. CLL Without TP53 Aberrancy — Treatment Selection</h3>
+        <div class="info-box box-green">
+          <div class="info-box-head">UK Practice — First-Line Regimen Selection (Non-TP53 Aberrant)</div>
+          <div class="info-box-body">
+            <p style="margin:0 0 8px;"><strong>All four NICE-commissioned regimens (TA429, TA663, TA795, TA891) are acceptable first-line options.</strong> Selection is guided by:</p>
+            <ul>
+              <li><strong>Patient preference:</strong> Fixed-duration (venetoclax-based) vs. continuous (BTKi monotherapy)</li>
+              <li><strong>Cardiac status:</strong> Prior AF, anticoagulation, hypertension — prefer acalabrutinib or venetoclax-based</li>
+              <li><strong>IGHV status (educational context):</strong> IGHV-mutated disease derives deepest and most durable responses from fixed-duration venetoclax+obinutuzumab — consider particularly in younger fit patients</li>
+              <li><strong>Renal function:</strong> eGFR &lt;30 — avoid venetoclax or use with anti-XA monitoring; BTKi preferred</li>
+              <li><strong>Compliance/preference:</strong> Daily oral BTKi (acalabrutinib 100mg BD or ibrutinib 420mg OD) vs. clinic-based IV venetoclax ramp-up</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- INTERNATIONAL / EDUCATIONAL CONTEXT -->
+        <h3>7c. International Context — Educational Note (ELN/ASH/NCCN)</h3>
+        <div class="edu-banner">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <p><strong>The following agents/approaches are presented for international educational context. They are NOT currently NICE-commissioned for routine UK clinical practice.</strong> They may be available via clinical trial, Named Patient Programme, or IFR.</p>
+        </div>
+        <div class="tx-card">
+          <div class="tx-card-head">
+            <span class="tx-card-title">Zanubrutinib (ELN/NCCN preferred for TP53-aberrant) — Not NICE-commissioned 1L</span>
+            <span class="grade-badge"><span class="grade-q grade-high">High</span><span class="grade-s grade-strong">Strong</span></span>
+          </div>
+          <div class="tx-card-body">
+            <strong>Dose:</strong> 160 mg twice daily (or 320 mg once daily). <strong>Trial basis:</strong> SEQUOIA — 5-year PFS 72.2% in del(17p)/TP53-mutant CLL. Lower AF rate than ibrutinib (2% vs 10%). Preferred by NCCN/ELN for del(17p)/TP53-mutant due to superior cardiac safety. Not currently NICE-commissioned for first-line — check for current appraisal status.
+          </div>
+        </div>
+        <div class="tx-card">
+          <div class="tx-card-head">
+            <span class="tx-card-title">FCR (Fludarabine, Cyclophosphamide, Rituximab) — Historical; fit patients with mutated IGHV only</span>
+            <span class="grade-badge"><span class="grade-q grade-high">High</span><span class="grade-s grade-cond">Conditional</span></span>
+          </div>
+          <div class="tx-card-body">
+            FCR has largely been superseded by targeted agents. NCCN retains it as an option for fit younger patients with mutated IGHV who prefer chemotherapy. E1912 demonstrated ibrutinib-rituximab is superior to FCR (OS HR 0.47). <strong>BSH 2025 and UK practice:</strong> CIT no longer recommended as first-line. NICE-commissioned targeted agents are preferred.
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. R/R CLL -->
+      <section class="gl-section" id="rr">
+        <div class="section-header">
+          <div class="section-num">8</div>
+          <h2 class="section-title">Relapsed and Refractory CLL</h2>
+        </div>
+        <div class="vignette">
+          <strong>Clinical Vignette</strong>
+          A 74-year-old woman with CLL treated with ibrutinib 420 mg OD for 3 years develops new cervical lymphadenopathy and a rising lymphocyte count of 45&times;10&sup9;/L. She has mild AF and is on apixaban. Repeat FISH shows del(17p) not previously detected. What is the next step?
+        </div>
+        <p>Relapse or progression on BTKi therapy warrants urgent molecular re-evaluation. TP53 status may evolve (clonal evolution) and should be repeated at each relapse. The choice of second-line therapy depends on the mechanism of resistance and prior treatment received.</p>
+        <div class="tx-card uk-approved">
+          <div class="tx-card-head">
+            <span class="tx-card-title">Venetoclax + Rituximab (fixed-duration, R/R) <span class="nice-ta">TA689</span></span>
+            <span class="grade-badge"><span class="grade-q grade-high">High</span><span class="grade-s grade-strong">Strong</span></span>
+          </div>
+          <div class="tx-card-body">
+            <strong>Dose:</strong> Venetoclax ramp-up then 400 mg OD + rituximab IV (cycles 1–6); venetoclax continues to cycle 24. <strong>Trial basis:</strong> MURANO — 7-year OS 69.6% vs 51.0% (BR). uMRD at EOT 62%. Retreatment feasible (ORR 72–89%). <strong>Indication:</strong> R/R CLL after &ge;1 prior therapy (including CIT or BTKi) — confirm NICE TA689 eligibility criteria.
+          </div>
+        </div>
+        <div class="tx-card uk-approved">
+          <div class="tx-card-head">
+            <span class="tx-card-title">Venetoclax monotherapy (post-BTKi R/R) <span class="nice-ta">TA796</span></span>
+            <span class="grade-badge"><span class="grade-q grade-mod">Moderate</span><span class="grade-s grade-strong">Strong</span></span>
+          </div>
+          <div class="tx-card-body">
+            <strong>Dose:</strong> Venetoclax ramp-up to 400 mg OD; continue until progression or toxicity. <strong>Indication (NICE TA796):</strong> R/R CLL after BTKi failure or for patients unable to tolerate rituximab. High ORR 65–80% even in BTKi-refractory disease.
+          </div>
+        </div>
+        <div class="tx-card">
+          <div class="tx-card-head">
+            <span class="tx-card-title">Pirtobrutinib (non-covalent BTKi) — Educational; not NICE-commissioned</span>
+            <span class="grade-badge"><span class="grade-q grade-mod">Moderate</span><span class="grade-s grade-cond">Conditional</span></span>
+          </div>
+          <div class="tx-card-body">
+            Non-covalent BTK inhibitor active in C481S BTK mutation (the most common mechanism of covalent BTKi resistance). <strong>Trial basis:</strong> BRUIN — ORR 73.3% in covalent BTKi-refractory CLL. Not currently NICE-commissioned — check for active appraisal. EMA-approved 2024 for R/R CLL after &ge;2 prior therapies including covalent BTKi.
+          </div>
+        </div>
+        <div class="info-box box-warn">
+          <div class="info-box-head">BTK Inhibitor Resistance — Key Molecular Mechanisms</div>
+          <div class="info-box-body">
+            <ul>
+              <li><strong>BTK C481S mutation</strong> — most common; prevents covalent binding of ibrutinib/acalabrutinib/zanubrutinib; pirtobrutinib active</li>
+              <li><strong>PLCγ2 mutations (PLCG2)</strong> — bypass BTK signalling; all BTKis may fail</li>
+              <li><strong>Clonal evolution</strong> — emergence of del(17p)/TP53 mutation at relapse (20–30% of cases); repeat FISH + TP53 sequencing mandatory</li>
+              <li><strong>Rapid doubling Richter's transformation</strong> — suspect if sudden weight loss, elevated LDH, rapidly enlarging single node — PET-CT and biopsy required</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. RESPONSE & MRD -->
+      <section class="gl-section" id="response">
+        <div class="section-header">
+          <div class="section-num">9</div>
+          <h2 class="section-title">Response Assessment and MRD</h2>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr><th>Response</th><th>Definition (iwCLL 2018)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Complete Response (CR)</strong></td><td>No lymphadenopathy &gt;1.5 cm, no splenomegaly, no B-symptoms, ALC &lt;4&times;10&sup9;/L, plt &ge;100, Hb &ge;11 (untreated by growth factors), BM normocellular without CLL nodules</td></tr>
+            <tr><td><strong>CR with incomplete MRD</strong></td><td>CR criteria met but MRD detectable in BM or peripheral blood</td></tr>
+            <tr><td><strong>Partial Response (PR)</strong></td><td>&ge;50% reduction in lymphadenopathy/organomegaly + improvement in cytopenias</td></tr>
+            <tr><td><strong>Stable Disease (SD)</strong></td><td>&lt;50% reduction in measurable disease</td></tr>
+            <tr><td><strong>Progressive Disease (PD)</strong></td><td>&ge;50% increase in measurable disease or new disease manifestation</td></tr>
+          </tbody>
+        </table>
+        <h3>MRD Assessment</h3>
+        <p>Undetectable MRD (uMRD, defined as &lt;1 CLL cell per 10,000 leucocytes by flow cytometry or &lt;10&sup3; by next-generation sequencing) is an emerging surrogate endpoint increasingly used to guide treatment duration in fixed-duration regimens. uMRD at end of treatment in CLL14 correlated strongly with prolonged treatment-free remission.</p>
+        <div class="keypoint">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span><strong>Current UK practice:</strong> MRD assessment is not yet mandated for routine clinical decision-making outside clinical trials in the UK. It is used in the context of research and to inform fixed-duration treatment stopping rules. BSH recommends MRD assessment in trial settings.</span>
+        </div>
+      </section>
+
+      <!-- 10. SPECIAL POPULATIONS -->
+      <section class="gl-section" id="special">
+        <div class="section-header">
+          <div class="section-num">10</div>
+          <h2 class="section-title">Special Populations</h2>
+        </div>
+
+        <h3>10a. Richter's Transformation (RT)</h3>
+        <p>Richter's transformation occurs in 2–10% of CLL patients at an annual incidence of 0.5–1%. In ~90% of cases the histology is DLBCL (clonally related in ~80%); the remainder are Hodgkin lymphoma. Median OS post-RT is approximately 9 months with conventional therapy — overall prognosis is poor.</p>
+        <div class="info-box box-danger">
+          <div class="info-box-head">Suspect Richter's Transformation When</div>
+          <div class="info-box-body">
+            <ul>
+              <li>Sudden deterioration with new or rapidly growing lymph node (often asymmetric)</li>
+              <li>Markedly elevated LDH (disproportionate to lymphocyte count)</li>
+              <li>B-symptoms emerging or worsening without intercurrent infection</li>
+              <li>PET-CT: highly avid FDG uptake in single or asymmetric nodal group (SUVmax &gt;5)</li>
+            </ul>
+            <p style="margin:8px 0 0;"><strong>Action:</strong> PET-CT + biopsy of most metabolically active node. Do NOT rebiopsy the same site if initial biopsy was non-diagnostic — biopsy the most active PET site.</p>
+          </div>
+        </div>
+        <div class="two-col">
+          <div class="col-card col-danger">
+            <div class="col-card-head">RT Management</div>
+            <div class="col-card-body">
+              <ul>
+                <li>Enrol on clinical trial where possible — no standard of care</li>
+                <li>R-CHOP if no trial available — poor outcomes vs de novo DLBCL</li>
+                <li>CAR-T (CD19-directed) — ORR 60–65%; responses can be durable</li>
+                <li>Bispecific antibodies (epcoritamab, mosunetuzumab) — promising in R/R RT; check TA status</li>
+                <li>ASCT consolidation for chemosensitive RT in eligible patients</li>
+                <li>Palliative intent if poor PS or major comorbidity</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-card col-warn">
+            <div class="col-card-head">Autoimmune Cytopenias in CLL</div>
+            <div class="col-card-body">
+              <ul>
+                <li>AIHA and ITP occur in up to 25% of CLL patients</li>
+                <li>Diagnose AIHA: DAT positive + haemolysis (elevated LDH, bilirubin, reticulocyte count)</li>
+                <li>First-line: CLL-directed therapy is definitive treatment</li>
+                <li>Bridge: short-course prednisolone 1 mg/kg &times;2–4 weeks</li>
+                <li>If steroids fail or CLL therapy not yet due: rituximab 375 mg/m&sup2; &times;4</li>
+                <li>Avoid fludarabine-containing regimens in active AIHA — can worsen haemolysis</li>
+                <li>Evans syndrome (AIHA + ITP): higher complexity — specialist input</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h3>10b. CLL in Pregnancy</h3>
+        <div class="info-box box-purple">
+          <div class="info-box-head">CLL in Pregnancy — Management Principles</div>
+          <div class="info-box-body">
+            <ul>
+              <li><strong>Observation:</strong> Most CLL in pregnancy does not require CLL-directed treatment — indolent course permits deferral until postpartum in most cases</li>
+              <li><strong>Symptomatic hypogammaglobulinaemia:</strong> IVIG safe in pregnancy; subcutaneous Ig alternative</li>
+              <li><strong>If treatment required:</strong> Multidisciplinary approach (haematology + obstetrics + neonatology); consider timing (avoid 1st trimester if possible)</li>
+              <li><strong>Avoid BTK inhibitors:</strong> Limited safety data; teratogenicity potential in animal studies — risk/benefit discussion required</li>
+              <li><strong>Avoid venetoclax:</strong> No adequate human pregnancy data; embryotoxic in animal models</li>
+              <li><strong>If urgent treatment needed:</strong> Anti-CD20 &plusmn; corticosteroids or single-agent rituximab (neonatal B-cell depletion reported — notify neonatology)</li>
+              <li><strong>Neonatal monitoring:</strong> Check cord blood for thrombocytopenia; neonatal B-cell monitoring if maternal anti-CD20 received</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>10c. Hypogammaglobulinaemia and Infection Prophylaxis</h3>
+        <div class="info-box box-navy">
+          <div class="info-box-head">Infection Prophylaxis in CLL</div>
+          <div class="info-box-body">
+            <ul>
+              <li><strong>Immunoglobulin replacement (IgRT):</strong> IVIG or SCIG when IgG &lt;4 g/L with recurrent bacterial infections (&ge;2 significant infections per year) — not for IgG low without clinical infection</li>
+              <li><strong>Pneumocystis jirovecii prophylaxis:</strong> Co-trimoxazole 480 mg BD (3 days/week) during and for 6–12 months after purine analogue, venetoclax, or anti-CD20 therapy</li>
+              <li><strong>Herpes simplex/zoster prophylaxis:</strong> Aciclovir 400 mg BD during and post FCR, bendamustine, fludarabine, or alemtuzumab</li>
+              <li><strong>CMV monitoring:</strong> Weekly CMV PCR during and post alemtuzumab; consider during intensive immunosuppression</li>
+              <li><strong>Vaccinations:</strong> Annual influenza (inactivated); pneumococcal (PCV13 + PPSV23); COVID-19; hepatitis B; shingles vaccine (Shingrix — recombinant; live vaccines contraindicated)</li>
+              <li><strong>HBV reactivation:</strong> Screen all patients — HBV core Ab positive patients require prophylactic antiviral (entecavir or tenofovir) during anti-CD20 treatment</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11. AUDIT -->
+      <section class="gl-section" id="audit">
+        <div class="section-header">
+          <div class="section-num">11</div>
+          <h2 class="section-title">Audit Standards</h2>
+        </div>
+        <p>The following quality indicators can be used to audit CLL management practice against BSH 2025 and NICE commissioning requirements.</p>
+        <table class="data-table">
+          <thead>
+            <tr><th>Audit Standard</th><th>Data Source</th><th>Target</th><th>Rationale</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Flow cytometry performed and documented in all newly diagnosed CLL cases</td><td>Haematology database, clinic letters</td><td>&ge;98%</td><td>iwCLL diagnostic requirement</td></tr>
+            <tr><td>TP53 sequencing AND FISH for del(17p) performed before each line of treatment</td><td>Molecular lab records, clinic letters</td><td>&ge;95%</td><td>BSH 2025 — TP53 alone insufficient</td></tr>
+            <tr><td>IGHV mutation status documented before first treatment</td><td>Molecular lab records</td><td>&ge;90%</td><td>Informs treatment strategy per BSH</td></tr>
+            <tr><td>Chemoimmunotherapy NOT used as first-line treatment unless documented rationale</td><td>Prescribing records, MDT notes</td><td>&ge;95%</td><td>BSH 2025: targeted agents are standard of care</td></tr>
+            <tr><td>NICE TA used for first-line treatment (TA429, TA663, TA795, or TA891)</td><td>Blueteq / pharmacy records</td><td>&ge;95%</td><td>Commissioning compliance</td></tr>
+            <tr><td>HBV status checked before anti-CD20 therapy; prophylaxis prescribed if HBcAb+</td><td>Virology, prescribing</td><td>100%</td><td>Fatal HBV reactivation risk</td></tr>
+            <tr><td>iwCLL active disease criteria documented as reason for treatment initiation</td><td>Clinic letters, MDT records</td><td>&ge;95%</td><td>Avoids premature treatment</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- 12. LIMITATIONS -->
+      <section class="gl-section" id="limits">
+        <div class="section-header">
+          <div class="section-num">12</div>
+          <h2 class="section-title">Limitations and Update Plan</h2>
+        </div>
+        <ul style="line-height:1.8; color:var(--clr-text-secondary); font-size:0.9rem;">
+          <li>Zanubrutinib data in first-line (SEQUOIA Arm B vs BR) continues to mature — NICE first-line appraisal not yet completed at time of writing; verify current TA status.</li>
+          <li>Head-to-head comparison between acalabrutinib and venetoclax+obinutuzumab in first-line is not yet available from phase III data — selection continues to be based on indirect comparisons and patient/clinician preference.</li>
+          <li>MRD-guided treatment duration is an active research question — not yet part of routine UK clinical practice outside trials.</li>
+          <li>Ibrutinib+venetoclax (TA891) data in del(17p)/TP53-mutant CLL are more limited — BSH guidance favours alternative approaches in this group until further data.</li>
+          <li>Pirtobrutinib is EMA-approved for R/R CLL post-covalent BTKi; NICE appraisal status should be verified before prescribing.</li>
+          <li>This guideline does not cover SLL or Waldenström macroglobulinaemia — separate guidance applies.</li>
+        </ul>
+        <p style="margin-top:12px;"><strong>Update schedule:</strong> This guideline will be reviewed in April 2027 or earlier following updated BSH CLL guidance, new NICE technology appraisals, or major changes to ELN/ASH recommendations.</p>
+      </section>
+
+      <!-- 13. REFERENCES -->
+      <section class="gl-section" id="refs">
+        <div class="section-header">
+          <div class="section-num">13</div>
+          <h2 class="section-title">References</h2>
+        </div>
+        <p style="font-size:0.84rem; color:var(--clr-muted); margin-bottom:12px;">References graded by credibility: <span class="ref-grade-tag rg-a1">A1</span> Society guideline <span class="ref-grade-tag rg-a2">A2</span> High-quality RCT/meta-analysis <span class="ref-grade-tag rg-b">B</span> Observational/secondary source</p>
+        <ol style="font-size:0.84rem; color:var(--clr-text-secondary); line-height:1.7; padding-left:20px;">
+          <li>BSH Guideline for the treatment of chronic lymphocytic leukaemia. British Society for Haematology, 2025. <span class="ref-grade-tag rg-a1">A1</span></li>
+          <li>ESMO Clinical Practice Guideline update on new targeted therapies in CLL (first-line and relapse). Annals of Oncology, 2024. <span class="ref-grade-tag rg-a1">A1</span></li>
+          <li>NCCN Clinical Practice Guidelines in Oncology: CLL/SLL, Version 2.2024. <span class="ref-grade-tag rg-a1">A1</span></li>
+          <li>Sharman JP et al. ELEVATE-TN: 4-year follow-up. Lancet Oncol. 2022. [PMID: 35580603] <span class="ref-grade-tag rg-a2">A2</span></li>
+          <li>Al-Sawaf O et al. CLL14 6-year results: venetoclax-obinutuzumab. Blood. 2024;144(18):1924–1935. <span class="ref-grade-tag rg-a2">A2</span></li>
+          <li>Burger JA et al. RESONATE-2 10-year follow-up: ibrutinib vs chlorambucil. Blood. 2025. [PMID: 41069109] <span class="ref-grade-tag rg-a2">A2</span></li>
+          <li>Shanafelt TD et al. E1912 5.8-year update: ibrutinib-rituximab vs FCR. Blood. 2022;140(2):112–120. <span class="ref-grade-tag rg-a2">A2</span></li>
+          <li>Kater AP et al. MURANO final analysis: venetoclax-rituximab 7-year OS. Blood. 2025;145(23):2733. <span class="ref-grade-tag rg-a2">A2</span></li>
+          <li>Jurczak W et al. ASCEND final analysis: acalabrutinib vs IdR/BR. Haematologica. 2022. <span class="ref-grade-tag rg-a2">A2</span></li>
+          <li>Trotman J et al. SEQUOIA arm C 5-year: zanubrutinib in del(17p) CLL. J Clin Oncol. 2025. [doi:10.1200/JCO-24-02265] <span class="ref-grade-tag rg-a2">A2</span></li>
+          <li>NICE TA429 — ibrutinib for untreated CLL. NICE, 2017. <span class="ref-grade-tag rg-a1">A1</span></li>
+          <li>NICE TA663 — venetoclax + obinutuzumab for untreated CLL. NICE, 2021. <span class="ref-grade-tag rg-a1">A1</span></li>
+          <li>NICE TA795 — acalabrutinib for untreated CLL. NICE, 2022. <span class="ref-grade-tag rg-a1">A1</span></li>
+          <li>NICE TA891 — ibrutinib + venetoclax for untreated CLL. NICE, 2023. <span class="ref-grade-tag rg-a1">A1</span></li>
+          <li>NICE TA689 &amp; TA796 — venetoclax (+ rituximab) for R/R CLL. NICE, 2020/2023. <span class="ref-grade-tag rg-a1">A1</span></li>
+        </ol>
+      </section>
+
+      <!-- Versioning -->
+      <section class="gl-section">
+        <div class="section-header">
+          <div class="section-num">14</div>
+          <h2 class="section-title">Versioning and Governance</h2>
+        </div>
+        <table class="data-table">
+          <thead><tr><th>Version</th><th>Date</th><th>Author</th><th>Change</th></tr></thead>
+          <tbody>
+            <tr><td>v1.0</td><td>April 2025</td><td>Dr M Mohsin</td><td>Initial CLL guideline published — ELN/BSH/ASH synthesis with NICE commissioning framework, GRADE badges, audit standards, visual algorithms</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.8rem; color:var(--clr-muted); margin-top:8px;"><strong>Disclaimer:</strong> This guideline is intended for educational purposes and to support clinical decision-making. It is not a substitute for individual clinical judgement. For UK practice, only BSH-aligned NICE-commissioned regimens apply. Always verify current NICE guidance before prescribing. Dr Muhammad Mohsin is responsible for the educational content of this page.</p>
+      </section>
+
+    </main>
+
+    <!-- ── SIDEBAR ── -->
+    <aside class="gl-sidebar">
+
+      <div class="sidebar-card">
+        <div class="sidebar-card-header">On This Page</div>
+        <div class="sidebar-card-body">
+          <ul class="sidebar-toc">
+            <li><a href="#scope">1. Scope</a></li>
+            <li><a href="#overview">2. Clinical Overview</a></li>
+            <li><a href="#methodology">3. Methodology</a></li>
+            <li><a href="#diagnosis">4. Diagnosis</a></li>
+            <li><a href="#prognostics">5. Prognostic Markers</a></li>
+            <li><a href="#indications">6. Treatment Indications</a></li>
+            <li><a href="#firstline">7. First-Line Treatment</a></li>
+            <li><a href="#rr">8. R/R CLL</a></li>
+            <li><a href="#response">9. Response &amp; MRD</a></li>
+            <li><a href="#special">10. Special Populations</a></li>
+            <li><a href="#audit">11. Audit Standards</a></li>
+            <li><a href="#refs">13. References</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-card-header">Visual Diagrams</div>
+        <div class="sidebar-card-body">
+          <p style="font-size:0.76rem; color:var(--clr-muted); margin-bottom:10px; line-height:1.5;">CLL treatment decision algorithm — view as SVG (no login needed) or open in Excalidraw.</p>
+          <a href="cll-algorithm.svg" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:8px; padding:8px 12px; background:var(--clr-div-tint); border:1px solid rgba(26,107,74,0.25); border-radius:6px; font-size:0.8rem; font-weight:600; color:var(--clr-div); text-decoration:none; margin-bottom:7px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            View treatment algorithm (SVG)
+          </a>
+          <a href="https://excalidraw.com/#url=https://raw.githubusercontent.com/muhdmohsin1979/mohsin-haem-academy/draft/cll-algorithm.excalidraw" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:8px; padding:8px 12px; background:#f7f5f3; border:1px solid #e6e1dd; border-radius:6px; font-size:0.8rem; font-weight:600; color:#1a1a1e; text-decoration:none; margin-bottom:7px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1a6b4a" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h8M12 8v8"/></svg>
+            Open in Excalidraw (browser)
+          </a>
+          <a href="https://www.figma.com/board/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:8px; padding:8px 12px; background:#f7f5f3; border:1px solid #e6e1dd; border-radius:6px; font-size:0.8rem; font-weight:500; color:var(--clr-muted); text-decoration:none;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            Open in FigJam (requires login)
+          </a>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-card-header">Download PDFs</div>
+        <div class="sidebar-card-body">
+          <p style="font-size:0.76rem; color:var(--clr-muted); margin-bottom:10px; line-height:1.5;">Full multi-page guideline or single-page summary card.</p>
+          <a href="cll-guideline.pdf" download="CLL-Guideline.pdf" style="display:flex; align-items:center; gap:8px; padding:8px 12px; background:var(--clr-navy); color:#fff; border-radius:6px; font-size:0.8rem; font-weight:700; text-decoration:none; margin-bottom:7px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Full Guideline (PDF)
+          </a>
+          <a href="cll-quickref.pdf" download="CLL-QuickRef.pdf" style="display:flex; align-items:center; gap:8px; padding:8px 12px; background:#f3f4f6; border:1px solid var(--clr-border); border-radius:6px; font-size:0.8rem; font-weight:600; color:var(--clr-navy); text-decoration:none;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Quick-Ref Card
+          </a>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-card-header">NICE Commissioning</div>
+        <div class="sidebar-card-body" style="font-size:0.8rem; color:var(--clr-text-secondary); line-height:1.6;">
+          <p style="margin-bottom:8px;"><strong style="color:var(--clr-div);">First-Line:</strong></p>
+          <p style="margin:0 0 4px;">TA429 — Ibrutinib</p>
+          <p style="margin:0 0 4px;">TA663 — Venetoclax+Obi</p>
+          <p style="margin:0 0 4px;">TA795 — Acalabrutinib</p>
+          <p style="margin:0 0 12px;">TA891 — Ibrutinib+Venetoclax</p>
+          <p style="margin-bottom:8px;"><strong style="color:var(--clr-div);">R/R:</strong></p>
+          <p style="margin:0 0 4px;">TA689 — Venetoclax+Rituximab</p>
+          <p style="margin:0;">TA796 — Venetoclax (post-BTKi)</p>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-card-header">Related Content</div>
+        <div class="sidebar-card-body">
+          <a class="sidebar-related-link" href="itp.html">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
+            ITP Guideline
+          </a>
+          <a class="sidebar-related-link" href="vte-cancer.html">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
+            Cancer-Associated VTE
+          </a>
+          <a class="sidebar-related-link" href="journal-club.html">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            Journal Club
+          </a>
+        </div>
+      </div>
+
+    </aside>
+  </div><!-- /gl-layout -->
+</div><!-- /container -->
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand brand">
+        <div class="brand-icon" style="background:var(--clr-primary);">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <div>
+          <div class="brand-name">Mohsin Haematology Academy</div>
+          <div class="brand-tagline">Evidence — Education — Practice</div>
+        </div>
+      </div>
+      <div class="footer-note">
+        <p style="margin:0;">MHA-CLL-2025-v1.0 &nbsp;|&nbsp; Educational use only<br>BSH &amp; NICE regimens apply for UK clinical practice<br>&copy; 2025 Dr Muhammad Mohsin, Consultant Haematologist</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
