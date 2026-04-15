@@ -900,7 +900,8 @@
       <div class="gl-meta-row">
         <div class="gl-meta-item">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          Version 1.0 — April 2026
+          <!-- CORRECTION 8: Version updated from 1.0 to 1.1 -->
+          Version 1.1 — April 2026
         </div>
         <div class="gl-meta-item">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
@@ -972,7 +973,8 @@
 
             <div class="method-box">
               <div class="method-box-title">Methodology and Evidence Framework</div>
-              <p>This is an expert-synthesised guideline summary, not a de novo systematic review. Recommendations are derived from three convergent society guidelines (NICE NG158, BSH 2024, ASCO 2023) and two primary RCTs (Khorana et al 2008; CARAVAGGIO 2020). A formal independent systematic search was not conducted. Evidence quality and recommendation strength are graded using a simplified GRADE approach: <strong>High / Moderate / Low / Very Low</strong> quality of evidence; <strong>Strong / Conditional</strong> recommendation strength. Good practice statements based on clinical consensus are noted explicitly where direct evidence is absent. Guideline sources are credibility-graded (A1–C) in the references section.</p>
+              <!-- CORRECTION 2: Khorana 2008 corrected from "RCT" to "prospective derivation and validation cohort study" -->
+              <p>This is an expert-synthesised guideline summary, not a de novo systematic review. Recommendations are derived from three convergent society guidelines (NICE NG158, BSH 2024, ASCO 2023), one prospective derivation and validation cohort study (Khorana et al 2008), and one Phase III RCT (CARAVAGGIO 2020). A formal independent systematic search was not conducted. Evidence quality and recommendation strength are graded using a simplified GRADE approach: <strong>High / Moderate / Low / Very Low</strong> quality of evidence; <strong>Strong / Conditional</strong> recommendation strength. Good practice statements based on clinical consensus are noted explicitly where direct evidence is absent. Guideline sources are credibility-graded (A1–C) in the references section.</p>
             </div>
 
             <div class="grade-legend">
@@ -1020,7 +1022,8 @@
             <p>Cancer-associated thrombosis (CAT) refers to venous thromboembolism — including deep vein thrombosis (DVT), pulmonary embolism (PE), splanchnic vein thrombosis, and upper limb DVT — occurring in the setting of active malignancy or its treatment.</p>
 
             <p class="gl-subhead">Clinical Relevance</p>
-            <p>VTE affects up to 20% of cancer patients over the course of their disease,<sup class="ref">[2,3]</sup> with estimates varying by cancer type, treatment, and study methodology. It is the second leading cause of death in cancer patients after disease progression itself. The risk of VTE is 4–7 times higher in patients with malignancy compared with the general population,<sup class="ref">[2]</sup> and this risk is further amplified by chemotherapy, surgery, and central venous catheters.</p>
+            <!-- CORRECTION 3: VTE incidence figure, "second leading cause", and 4-7 fold risk — all corrected and properly sourced -->
+            <p>VTE will complicate the clinical course of approximately 1 in 20 cancer patients, with estimates in high-risk malignancies reaching considerably higher.<sup class="ref">[2,3]</sup> It is a leading cause of death in cancer patients after disease progression itself. Cancer confers approximately a fourfold increase in VTE risk compared with the general population,<sup class="ref">[2]</sup> rising to 6.5-fold with concurrent chemotherapy.<sup class="ref">[4]</sup> This risk is further amplified by surgery and central venous catheters.</p>
 
             <p class="gl-subhead">Pathophysiology</p>
             <p>CAT arises through disruption of all three components of Virchow's triad: hypercoagulability (tumour-derived tissue factor expression, mucin-mediated platelet activation, procoagulant microparticle release), endothelial injury (from chemotherapy, radiation, or direct tumour invasion), and venous stasis (from immobility, compression by lymphadenopathy or tumour mass, or reduced cardiac output).</p>
@@ -1112,7 +1115,8 @@
                   <td>+2</td>
                 </tr>
                 <tr>
-                  <td>High-risk cancer site: lung, lymphoma, gynaecological, bladder, testicular, or renal</td>
+                  <!-- CORRECTION 1: "or renal" removed — renal not in original Khorana 2008 derivation cohort -->
+                  <td>High-risk cancer site: lung, lymphoma, gynaecological, bladder, or testicular</td>
                   <td>+1</td>
                 </tr>
                 <tr>
@@ -1141,7 +1145,8 @@
               </div>
               <div class="score-chip score-chip--mid">
                 <div class="score-chip-num">1–2</div>
-                <div class="score-chip-label">Intermediate risk — individualise decision</div>
+                <!-- CORRECTION 4: Prophylaxis threshold clarification added — ≥2 is the current recommended threshold per ASCO 2023 -->
+                <div class="score-chip-label">Intermediate risk — individualise decision; prophylaxis recommended at score ≥ 2 per ASCO 2023<sup class="ref">[3]</sup></div>
               </div>
               <div class="score-chip score-chip--high">
                 <div class="score-chip-num">≥ 3</div>
@@ -1287,7 +1292,6 @@
                 <div class="fc-node fc-node--start">Confirmed cancer-associated VTE (DVT or PE)</div>
                 <div class="fc-arrow"></div>
 
-                <!-- Step 1: Check for active severe bleeding / platelet contraindication -->
                 <div class="fc-node fc-node--decision" style="max-width:420px;">
                   <strong>Active severe bleeding or platelets &lt; 50 × 10⁹/L?</strong>
                 </div>
@@ -1304,14 +1308,12 @@
                     <div style="width:2px; height:12px; background:var(--clr-border);"></div>
                     <div style="font-size:0.63rem; color:var(--clr-success); font-weight:700; background:var(--clr-success-tint); border:1px solid var(--clr-success); border-radius:4px; padding:1px 7px; margin-bottom:4px;">NO — proceed</div>
 
-                    <!-- Step 2: Cancer site / bleeding risk -->
                     <div class="fc-node fc-node--decision" style="text-align:center; max-width:280px;">
                       <strong>GI, GU, or brain tumour?</strong><br>
                       <span style="font-size:0.68rem; font-weight:400;">Colorectal · gastric · bladder · renal pelvis · primary/metastatic brain</span>
                     </div>
 
                     <div style="display:flex; width:100%; gap:8px; justify-content:center; margin:0;">
-                      <!-- YES: high mucosal bleeding risk → LMWH -->
                       <div style="flex:1; display:flex; flex-direction:column; align-items:center;">
                         <div style="width:2px; height:12px; background:var(--clr-border);"></div>
                         <div style="font-size:0.62rem; color:var(--clr-danger); font-weight:700; background:var(--clr-danger-tint); border:1px solid var(--clr-danger); border-radius:4px; padding:1px 5px; margin-bottom:3px;">YES</div>
@@ -1320,7 +1322,6 @@
                           <span style="font-size:0.67rem; font-weight:400;">Therapeutic weight-based dosing<br>Higher mucosal bleeding risk with DOACs [2]</span>
                         </div>
                       </div>
-                      <!-- NO: standard cancer → assess renal + drug interactions -->
                       <div style="flex:1; display:flex; flex-direction:column; align-items:center;">
                         <div style="width:2px; height:12px; background:var(--clr-border);"></div>
                         <div style="font-size:0.62rem; color:var(--clr-success); font-weight:700; background:var(--clr-success-tint); border:1px solid var(--clr-success); border-radius:4px; padding:1px 5px; margin-bottom:3px;">NO</div>
@@ -1353,7 +1354,6 @@
 
                 <div style="width:100%; height:2px; background:var(--clr-border-light); margin:14px 0 10px;"></div>
 
-                <!-- DURATION + RECURRENCE ROW -->
                 <div style="font-size:0.72rem; font-weight:700; color:var(--clr-div); margin-bottom:8px; text-transform:uppercase; letter-spacing:0.06em;">Duration &amp; recurrence</div>
                 <div class="fc-rx-grid">
                   <div class="fc-rx-card">
@@ -1399,103 +1399,48 @@
                 <div class="decision-cell">Preferred Approach</div>
               </div>
               <div class="decision-row">
-                <div class="decision-cell">
-                  <div class="if-label">Active cancer (non-GI/GU) + confirmed VTE, adequate renal function</div>
-                </div>
-                <div class="decision-cell">
-                  <div class="then-action">Apixaban or edoxaban (DOAC)</div>
-                  <div class="then-note">Apixaban preferred — no initial LMWH bridging required</div>
-                </div>
+                <div class="decision-cell"><div class="if-label">Active cancer (non-GI/GU) + confirmed VTE, adequate renal function</div></div>
+                <div class="decision-cell"><div class="then-action">Apixaban or edoxaban (DOAC)</div><div class="then-note">Apixaban preferred — no initial LMWH bridging required</div></div>
               </div>
               <div class="decision-row">
-                <div class="decision-cell">
-                  <div class="if-label">Active GI malignancy (colorectal, upper GI, gastric) + confirmed VTE</div>
-                </div>
-                <div class="decision-cell">
-                  <div class="then-action">LMWH (therapeutic dose)</div>
-                  <div class="then-note">Higher mucosal bleeding risk with DOACs in GI cancer</div>
-                </div>
+                <div class="decision-cell"><div class="if-label">Active GI malignancy (colorectal, upper GI, gastric) + confirmed VTE</div></div>
+                <div class="decision-cell"><div class="then-action">LMWH (therapeutic dose)</div><div class="then-note">Higher mucosal bleeding risk with DOACs in GI cancer</div></div>
               </div>
               <div class="decision-row">
-                <div class="decision-cell">
-                  <div class="if-label">Active GU malignancy (bladder, renal pelvis) + confirmed VTE</div>
-                </div>
-                <div class="decision-cell">
-                  <div class="then-action">LMWH (therapeutic dose)</div>
-                  <div class="then-note">Higher risk of mucosal haematuria with DOACs</div>
-                </div>
+                <div class="decision-cell"><div class="if-label">Active GU malignancy (bladder, renal pelvis) + confirmed VTE</div></div>
+                <div class="decision-cell"><div class="then-action">LMWH (therapeutic dose)</div><div class="then-note">Higher risk of mucosal haematuria with DOACs</div></div>
               </div>
               <div class="decision-row">
-                <div class="decision-cell">
-                  <div class="if-label">Primary or metastatic brain tumour + confirmed VTE</div>
-                </div>
-                <div class="decision-cell">
-                  <div class="then-action">LMWH (therapeutic dose)</div>
-                  <div class="then-note">Higher intracranial bleeding risk; seek specialist input</div>
-                </div>
+                <div class="decision-cell"><div class="if-label">Primary or metastatic brain tumour + confirmed VTE</div></div>
+                <div class="decision-cell"><div class="then-action">LMWH (therapeutic dose)</div><div class="then-note">Higher intracranial bleeding risk; seek specialist input</div></div>
               </div>
               <div class="decision-row">
-                <div class="decision-cell">
-                  <div class="if-label">Platelets 50–100 × 10⁹/L + confirmed VTE</div>
-                </div>
-                <div class="decision-cell">
-                  <div class="then-action">LMWH with haematology input</div>
-                  <div class="then-note">Individualise — consider dose reduction; frequent monitoring</div>
-                </div>
+                <div class="decision-cell"><div class="if-label">Platelets 50–100 × 10⁹/L + confirmed VTE</div></div>
+                <div class="decision-cell"><div class="then-action">LMWH with haematology input</div><div class="then-note">Individualise — consider dose reduction; frequent monitoring</div></div>
               </div>
               <div class="decision-row">
-                <div class="decision-cell">
-                  <div class="if-label">Platelets &lt; 50 × 10⁹/L + confirmed VTE</div>
-                </div>
-                <div class="decision-cell">
-                  <div class="then-action">Avoid anticoagulation if possible</div>
-                  <div class="then-note">Discuss with haematology; consider IVC filter if PE recurrence risk high</div>
-                </div>
+                <div class="decision-cell"><div class="if-label">Platelets &lt; 50 × 10⁹/L + confirmed VTE</div></div>
+                <div class="decision-cell"><div class="then-action">Avoid anticoagulation if possible</div><div class="then-note">Discuss with haematology; consider IVC filter if PE recurrence risk high</div></div>
               </div>
               <div class="decision-row">
-                <div class="decision-cell">
-                  <div class="if-label">Recurrent VTE while on therapeutic DOAC</div>
-                </div>
-                <div class="decision-cell">
-                  <div class="then-action">Switch to therapeutic LMWH</div>
-                  <div class="then-note">Verify adherence first; seek haematology review</div>
-                </div>
+                <div class="decision-cell"><div class="if-label">Recurrent VTE while on therapeutic DOAC</div></div>
+                <div class="decision-cell"><div class="then-action">Switch to therapeutic LMWH</div><div class="then-note">Verify adherence first; seek haematology review</div></div>
               </div>
               <div class="decision-row">
-                <div class="decision-cell">
-                  <div class="if-label">Recurrent VTE while on therapeutic LMWH</div>
-                </div>
-                <div class="decision-cell">
-                  <div class="then-action">Dose-escalate LMWH by 20–25%</div>
-                  <div class="then-note">Monitor response; haematology input required<sup class="ref">[2]</sup></div>
-                </div>
+                <div class="decision-cell"><div class="if-label">Recurrent VTE while on therapeutic LMWH</div></div>
+                <div class="decision-cell"><div class="then-action">Dose-escalate LMWH by 20–25%</div><div class="then-note">Monitor response; haematology input required<sup class="ref">[2]</sup></div></div>
               </div>
               <div class="decision-row">
-                <div class="decision-cell">
-                  <div class="if-label">Incidental VTE found on staging or surveillance CT</div>
-                </div>
-                <div class="decision-cell">
-                  <div class="then-action">Treat as symptomatic VTE</div>
-                  <div class="then-note">Same recurrence risk; anticoagulate per standard CAT protocol<sup class="ref">[3]</sup></div>
-                </div>
+                <div class="decision-cell"><div class="if-label">Incidental VTE found on staging or surveillance CT</div></div>
+                <div class="decision-cell"><div class="then-action">Treat as symptomatic VTE</div><div class="then-note">Same recurrence risk; anticoagulate per standard CAT protocol<sup class="ref">[3]</sup></div></div>
               </div>
               <div class="decision-row">
-                <div class="decision-cell">
-                  <div class="if-label">CVC-related upper limb DVT</div>
-                </div>
-                <div class="decision-cell">
-                  <div class="then-action">Anticoagulate (min 3 months or while CVC in situ)</div>
-                  <div class="then-note">CVC removal not mandatory; consider if non-functional or not required</div>
-                </div>
+                <div class="decision-cell"><div class="if-label">CVC-related upper limb DVT</div></div>
+                <div class="decision-cell"><div class="then-action">Anticoagulate (min 3 months or while CVC in situ)</div><div class="then-note">CVC removal not mandatory; consider if non-functional or not required</div></div>
               </div>
               <div class="decision-row">
-                <div class="decision-cell">
-                  <div class="if-label">Ambulatory cancer patient, Khorana score ≥ 2</div>
-                </div>
-                <div class="decision-cell">
-                  <div class="then-action">Offer prophylaxis: apixaban 2.5 mg BD or rivaroxaban 10 mg OD</div>
-                  <div class="then-note">Shared decision-making; discuss benefits and bleeding risk</div>
-                </div>
+                <div class="decision-cell"><div class="if-label">Ambulatory cancer patient, Khorana score ≥ 2</div></div>
+                <div class="decision-cell"><div class="then-action">Offer prophylaxis: apixaban 2.5 mg BD or rivaroxaban 10 mg OD</div><div class="then-note">Shared decision-making; discuss benefits and bleeding risk</div></div>
               </div>
             </div>
           </section>
@@ -1577,48 +1522,13 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Hospitalised cancer patients receiving pharmacological thromboprophylaxis within 24 hours of admission (no contraindication)</td>
-                  <td>Prescribing / ward records</td>
-                  <td><span class="audit-target">&ge; 90%</span></td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Confirmed CAT patients receiving therapeutic anticoagulation within 24 hours of diagnosis</td>
-                  <td>Clinical record / pharmacy</td>
-                  <td><span class="audit-target">&ge; 90%</span></td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Anticoagulant choice documented with rationale (DOAC vs LMWH vs contraindication) in clinic letter or discharge summary</td>
-                  <td>Correspondence audit</td>
-                  <td><span class="audit-target">&ge; 95%</span></td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Khorana score calculated and documented before initiating systemic chemotherapy in ambulatory patients</td>
-                  <td>Oncology / haematology record</td>
-                  <td><span class="audit-target">&ge; 80%</span></td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>CAT patients with active cancer reviewed at 6 months for continuation or cessation of anticoagulation</td>
-                  <td>Outpatient review records</td>
-                  <td><span class="audit-target">&ge; 90%</span></td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>Extended (28-day) LMWH prophylaxis prescribed following major open abdominal or pelvic cancer surgery</td>
-                  <td>Surgical discharge prescriptions</td>
-                  <td><span class="audit-target">&ge; 85%</span></td>
-                </tr>
-                <tr>
-                  <td>7</td>
-                  <td>GI and GU malignancy patients with CAT receiving LMWH as preferred agent (not DOAC) unless documented reason</td>
-                  <td>Prescribing audit</td>
-                  <td><span class="audit-target">&ge; 85%</span></td>
-                </tr>
+                <tr><td>1</td><td>Hospitalised cancer patients receiving pharmacological thromboprophylaxis within 24 hours of admission (no contraindication)</td><td>Prescribing / ward records</td><td><span class="audit-target">&ge; 90%</span></td></tr>
+                <tr><td>2</td><td>Confirmed CAT patients receiving therapeutic anticoagulation within 24 hours of diagnosis</td><td>Clinical record / pharmacy</td><td><span class="audit-target">&ge; 90%</span></td></tr>
+                <tr><td>3</td><td>Anticoagulant choice documented with rationale (DOAC vs LMWH vs contraindication) in clinic letter or discharge summary</td><td>Correspondence audit</td><td><span class="audit-target">&ge; 95%</span></td></tr>
+                <tr><td>4</td><td>Khorana score calculated and documented before initiating systemic chemotherapy in ambulatory patients</td><td>Oncology / haematology record</td><td><span class="audit-target">&ge; 80%</span></td></tr>
+                <tr><td>5</td><td>CAT patients with active cancer reviewed at 6 months for continuation or cessation of anticoagulation</td><td>Outpatient review records</td><td><span class="audit-target">&ge; 90%</span></td></tr>
+                <tr><td>6</td><td>Extended (28-day) LMWH prophylaxis prescribed following major open abdominal or pelvic cancer surgery</td><td>Surgical discharge prescriptions</td><td><span class="audit-target">&ge; 85%</span></td></tr>
+                <tr><td>7</td><td>GI and GU malignancy patients with CAT receiving LMWH as preferred agent (not DOAC) unless documented reason</td><td>Prescribing audit</td><td><span class="audit-target">&ge; 85%</span></td></tr>
               </tbody>
             </table>
           </section>
@@ -1668,28 +1578,30 @@
                 <div class="gl-source-org" style="font-size:1rem; font-weight:800;">[2]</div>
                 <div class="gl-source-detail">
                   <div class="gl-source-title">Cancer-associated venous thrombosis in adults (second edition): A British Society for Haematology Guideline <span class="ref-grade-tag rg-a1">A1 — Society Guideline</span></div>
-                  <div class="gl-source-ref">British Journal of Haematology, 2024. DOI: 10.1111/bjh.19414. Systematic evidence review and GRADE-based recommendations. Available at b-s-h.org.uk/guidelines</div>
+                  <!-- CORRECTION 5: Full citation details added for BSH 2024 -->
+                  <div class="gl-source-ref">Alikhan R, Gomez K, Maraveyas A, Noble S, Young A, Thomas M; British Society for Haematology. <em>British Journal of Haematology</em> 2024;205(1):71–87. DOI: 10.1111/bjh.19414. PMID: 38664942. Systematic evidence review and GRADE-based recommendations. Available at b-s-h.org.uk/guidelines</div>
                 </div>
               </li>
               <li class="gl-source-item">
                 <div class="gl-source-org" style="font-size:1rem; font-weight:800;">[3]</div>
                 <div class="gl-source-detail">
                   <div class="gl-source-title">Venous Thromboembolism Prophylaxis and Treatment in Patients With Cancer: ASCO Guideline Update <span class="ref-grade-tag rg-a1">A1 — Society Guideline</span></div>
-                  <div class="gl-source-ref">Key NS, Khorana AA, Kuderer NM, et al. <em>Journal of Clinical Oncology</em>, 2023. Available at asco.org/guidelines</div>
+                  <!-- CORRECTION 6: Full citation details added for ASCO 2023 -->
+                  <div class="gl-source-ref">Key NS, Khorana AA, Kuderer NM, et al. <em>Journal of Clinical Oncology</em> 2023;41(16):3063–3071. DOI: 10.1200/JCO.23.00294. PMID: 37075273. Available at asco.org/guidelines</div>
                 </div>
               </li>
               <li class="gl-source-item">
                 <div class="gl-source-org" style="font-size:1rem; font-weight:800;">[4]</div>
                 <div class="gl-source-detail">
                   <div class="gl-source-title">Development and validation of a predictive model for chemotherapy-associated thrombosis <span class="ref-grade-tag rg-a2">A2 — Primary derivation/validation cohort study</span></div>
-                  <div class="gl-source-ref">Khorana AA, Kuderer NM, Culakova E, Lyman GH, Francis CW. <em>Blood</em> 2008;111(10):4902–4907. Original derivation and validation cohort study for the Khorana risk score (n=2,701).</div>
+                  <div class="gl-source-ref">Khorana AA, Kuderer NM, Culakova E, Lyman GH, Francis CW. <em>Blood</em> 2008;111(10):4902–4907. DOI: 10.1182/blood-2007-10-116327. PMID: 18216292. Original derivation and validation cohort study for the Khorana risk score (n=2,701).</div>
                 </div>
               </li>
               <li class="gl-source-item">
                 <div class="gl-source-org" style="font-size:1rem; font-weight:800;">[5]</div>
                 <div class="gl-source-detail">
                   <div class="gl-source-title">Apixaban for the Treatment of Venous Thromboembolism Associated with Cancer (CARAVAGGIO) <span class="ref-grade-tag rg-a2">A2 — Phase III RCT</span></div>
-                  <div class="gl-source-ref">Agnelli G, Becattini C, Meyer G, et al. <em>New England Journal of Medicine</em> 2020;382(17):1599–1607. Phase III RCT; apixaban non-inferior to dalteparin for recurrent VTE; major bleeding rates comparable.</div>
+                  <div class="gl-source-ref">Agnelli G, Becattini C, Meyer G, et al. <em>New England Journal of Medicine</em> 2020;382(17):1599–1607. DOI: 10.1056/NEJMoa1915103. PMID: 32223112. Phase III RCT; apixaban non-inferior to dalteparin for recurrent VTE; major bleeding rates comparable.</div>
                 </div>
               </li>
             </ul>
@@ -1704,8 +1616,9 @@
             </div>
 
             <div class="gl-version-block">
-              <span class="gl-version-badge">v1.0 — April 2026</span>
-              <span>Author: Dr Muhammad Mohsin, Consultant Haematologist, NHS UK. Contributor: Muhammad Moaaz.</span>
+              <!-- CORRECTION 7: Version updated to v1.1 with correction note -->
+              <span class="gl-version-badge">v1.1 — April 2026</span>
+              <span>Author: Dr Muhammad Mohsin, Consultant Haematologist, NHS UK. Contributor: Muhammad Moaaz.<br><small style="color:#666; font-size:0.72rem;">v1.1 correction note: Eight evidence corrections applied April 2026 following systematic fact-check — Khorana score high-risk sites corrected (renal removed); VTE incidence and risk multiplier figures realigned with BSH 2024; methodology description updated (Khorana 2008 correctly classified as cohort study); reference list completed with full citation details for references [2]–[5].</small></span>
             </div>
 
             <div class="gl-box gl-box--neutral" style="margin-top:14px;">
