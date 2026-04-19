@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Anaemia in Pregnancy · Figure 4 of 4 · v1.0 · 19 Apr 2026 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Helvetica, Arial, sans-serif" role="img" aria-labelledby="t4 d4">
+  <title id="t4">Postpartum anaemia pathway</title>
+  <desc id="d4">Short trigger box then three Hb bands with clear actions; transfusion (red) reserved for Hb &lt;70.</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#0b4f6c"/>
+    </marker>
+    <style>
+      .title { font-size:22px; fill:#0b4f6c; font-weight:700; }
+      .subtitle { font-size:12px; fill:#5a6270; }
+      .step-num { font-size:11px; font-weight:700; fill:#ffffff; text-anchor:middle; }
+      .box-label { font-size:15px; fill:#ffffff; font-weight:600; }
+      .box-sub { font-size:12px; fill:#ffffff; }
+      .band-head { font-size:15px; font-weight:700; text-anchor:middle; }
+      .band-text { font-size:12px; }
+      .decision { font-size:15px; fill:#6a4c00; font-weight:700; text-anchor:middle; }
+      .notes-head { font-size:12.5px; fill:#3b4150; font-weight:700; }
+      .notes-text { font-size:11px; fill:#3b4150; }
+      .foot { font-size:9px; fill:#5a6270; }
+      .edge { fill:none; stroke:#0b4f6c; stroke-width:1.6; }
+    </style>
+  </defs>
+
+  <text x="32" y="36" class="title">Postpartum anaemia pathway</text>
+  <text x="32" y="54" class="subtitle">BSH 2020 · UK PBM principles · legend on Fig 1</text>
+
+  <!-- 1. Short trigger box -->
+  <rect x="160" y="82" width="530" height="64" rx="8" fill="#0b4f6c"/>
+  <circle cx="182" cy="114" r="12" fill="#08374c"/>
+  <text x="182" y="118" class="step-num">1</text>
+  <text x="202" y="108" class="box-label">Check Hb within 48 h if any trigger</text>
+  <text x="202" y="127" class="box-sub">EBL &gt;500 mL · uncorrected antenatal anaemia</text>
+  <text x="202" y="142" class="box-sub">· symptoms (tachycardia, breathlessness, dizziness)</text>
+
+  <!-- 2. Decision: Hb band -->
+  <polygon points="425,170 580,228 425,286 270,228" fill="#fff5e1" stroke="#92400e" stroke-width="1.8"/>
+  <text x="425" y="222" class="decision">Which Hb band?</text>
+  <text x="425" y="242" class="decision" style="font-size:11.5px; font-weight:400;">Select one of three</text>
+
+  <!-- Three bands -->
+  <!-- A: ≥ 100 -->
+  <rect x="60" y="320" width="260" height="150" rx="8" fill="#0b4f6c"/>
+  <text x="190" y="346" class="band-head" fill="#ffffff">Hb ≥ 100 g/L</text>
+  <text x="80" y="374" class="band-text" fill="#ffffff">• Oral iron</text>
+  <text x="80" y="394" class="band-text" fill="#ffffff">• Reassurance</text>
+  <text x="80" y="414" class="band-text" fill="#ffffff">• Review at 6-week check</text>
+  <text x="80" y="434" class="band-text" fill="#ffffff">• Continue iron 3 months</text>
+  <text x="80" y="452" class="band-text" fill="#ffffff" style="font-size:11px;">  after Hb normalises</text>
+
+  <!-- B: 70–99 (AMBER — now amber, was amber already; keep) -->
+  <rect x="340" y="320" width="260" height="150" rx="8" fill="#fff3c2" stroke="#92400e" stroke-width="1.6"/>
+  <text x="470" y="346" class="band-head" fill="#92400e">Hb 70–99 g/L</text>
+  <text x="360" y="374" class="band-text" fill="#92400e">• Oral iron — first-line</text>
+  <text x="360" y="394" class="band-text" fill="#92400e">• Consider IV iron if:</text>
+  <text x="360" y="410" class="band-text" fill="#92400e" style="font-size:11px;">  severe fatigue · breastfeeding</text>
+  <text x="360" y="424" class="band-text" fill="#92400e" style="font-size:11px;">  difficulty · morbidity · adherence</text>
+  <text x="360" y="446" class="band-text" fill="#92400e">• Do NOT transfuse to target</text>
+
+  <!-- C: < 70 (RED — transfusion indicated) -->
+  <rect x="620" y="320" width="260" height="150" rx="8" fill="#fbe9ea" stroke="#8f1d25" stroke-width="1.6"/>
+  <text x="750" y="346" class="band-head" fill="#8f1d25">Hb &lt; 70 g/L</text>
+  <text x="750" y="362" fill="#8f1d25" style="font-size:11px; text-anchor:middle;">or symptomatic with bleeding</text>
+  <text x="640" y="386" class="band-text" fill="#8f1d25">• Transfuse — single-unit</text>
+  <text x="640" y="400" class="band-text" fill="#8f1d25" style="font-size:11px;">  reassess (non-bleeding)</text>
+  <text x="640" y="420" class="band-text" fill="#8f1d25">• IV iron to replete stores</text>
+  <text x="640" y="440" class="band-text" fill="#8f1d25">• K-negative red cells</text>
+  <text x="640" y="458" class="band-text" fill="#8f1d25">• Document consent</text>
+
+  <!-- Compact notes (significantly smaller) -->
+  <g transform="translate(60,500)">
+    <rect x="0" y="0" width="820" height="150" fill="#eef0f3" stroke="#c7cbd1" rx="6"/>
+    <text x="12" y="18" class="notes-head">Notes</text>
+
+    <text x="12" y="38" class="notes-text" style="font-weight:700;">Trigger</text>
+    <text x="60" y="38" class="notes-text">Caesarean alone is NOT an automatic BSH trigger; record locally if Trust routinely checks.</text>
+
+    <text x="12" y="58" class="notes-text" style="font-weight:700;">Transfusion</text>
+    <text x="80" y="58" class="notes-text">Restrictive (Hb &lt;70 or symptomatic/bleeding) · single-unit reassess · avoid target-Hb strategy.</text>
+
+    <text x="12" y="78" class="notes-text" style="font-weight:700; fill:#8f1d25;">Escalate urgently</text>
+    <text x="110" y="78" class="notes-text" style="fill:#8f1d25;">Platelets &lt;50 + haemolysis · Hb fall &gt;20 g/L/24h · suspected TTP (ADAMTS13/PEX) · DIC.</text>
+
+    <text x="12" y="98" class="notes-text" style="font-weight:700;">Follow-up</text>
+    <text x="75" y="98" class="notes-text">Continue iron 3 months after Hb normalises. 6-week postnatal review.</text>
+
+    <text x="12" y="118" class="notes-text" style="font-weight:700;">Caution</text>
+    <text x="65" y="118" class="notes-text">IV iron does NOT prevent postpartum depression — do not offer for that purpose.</text>
+
+    <text x="12" y="138" class="notes-text" style="font-weight:700;">Product</text>
+    <text x="65" y="138" class="notes-text">K-negative for women of childbearing age; CMV-negative must not delay urgent transfusion.</text>
+  </g>
+
+  <!-- Edges -->
+  <path class="edge" d="M425,146 L425,170" marker-end="url(#arr)"/>
+  <path class="edge" d="M310,264 L220,320" marker-end="url(#arr)"/>
+  <path class="edge" d="M425,286 L450,320" marker-end="url(#arr)"/>
+  <path class="edge" d="M540,264 L700,320" marker-end="url(#arr)"/>
+
+  <!-- Footer -->
+  <text x="32" y="688" class="foot">Anaemia in Pregnancy · Figure 4 of 4 · v1.0 · 19 Apr 2026</text>
+</svg>

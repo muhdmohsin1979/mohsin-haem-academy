@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Anaemia in Pregnancy · Figure 1 of 4 · v1.0 · 19 Apr 2026 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" font-family="Helvetica, Arial, sans-serif" role="img" aria-labelledby="t1 d1">
+  <title id="t1">Diagnostic pathway — anaemia in pregnancy</title>
+  <desc id="d1">Six-step pathway from FBC to iron deficiency diagnosis with a compact notes panel and a global legend.</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#0b4f6c"/>
+    </marker>
+    <style>
+      .title { font-size:22px; fill:#0b4f6c; font-weight:700; }
+      .subtitle { font-size:12px; fill:#5a6270; }
+      .step-num { font-size:11px; font-weight:700; fill:#ffffff; text-anchor:middle; }
+      .box-label { font-size:15px; fill:#ffffff; font-weight:600; }
+      .box-sub { font-size:12px; fill:#ffffff; }
+      .decision { font-size:15px; fill:#6a4c00; font-weight:700; text-anchor:middle; }
+      .decision-sub { font-size:11.5px; fill:#6a4c00; text-anchor:middle; }
+      .amber-label { font-size:13px; fill:#92400e; font-weight:700; }
+      .notes-head { font-size:12.5px; fill:#3b4150; font-weight:700; }
+      .notes-text { font-size:11px; fill:#3b4150; }
+      .yn { font-size:11.5px; font-weight:700; fill:#0b4f6c; }
+      .foot { font-size:9px; fill:#5a6270; }
+      .legend-text { font-size:10.5px; fill:#3b4150; }
+      .legend-head { font-size:11px; fill:#3b4150; font-weight:700; }
+      .edge { fill:none; stroke:#0b4f6c; stroke-width:1.6; }
+      .header-strip-text { font-size:12.5px; fill:#0b4f6c; font-weight:600; }
+      .header-strip-kv { font-size:12.5px; fill:#0b4f6c; font-weight:700; }
+    </style>
+  </defs>
+
+  <!-- Title -->
+  <text x="32" y="36" class="title">Diagnostic pathway — anaemia in pregnancy</text>
+  <text x="32" y="54" class="subtitle">BSH 2020 · NICE NG201 · established UK standard</text>
+
+  <!-- Global legend (top-right, compact; this is the single global legend across all four figures) -->
+  <g transform="translate(700,22)">
+    <rect x="0" y="0" width="272" height="48" fill="#ffffff" stroke="#cfd4dc" stroke-width="1" rx="5"/>
+    <text x="10" y="14" class="legend-head">Legend (applies to all figures)</text>
+    <rect x="10" y="22" width="11" height="11" fill="#0b4f6c"/><text x="25" y="32" class="legend-text">Action</text>
+    <rect x="70" y="22" width="11" height="11" fill="#fff5e1" stroke="#92400e"/><text x="85" y="32" class="legend-text">Decision</text>
+    <rect x="140" y="22" width="11" height="11" fill="#fff3c2" stroke="#92400e"/><text x="155" y="32" class="legend-text">Caution/Amber</text>
+    <rect x="10" y="37" width="11" height="11" fill="#fbe9ea" stroke="#8f1d25"/><text x="25" y="47" class="legend-text">Red — transfusion / TTP / DIC</text>
+  </g>
+
+  <!-- Hb threshold header strip (moved out of decision diamond) -->
+  <g>
+    <rect x="32" y="74" width="660" height="40" rx="6" fill="#f4f7fb" stroke="#cfd4dc"/>
+    <text x="44" y="98" class="header-strip-text">Hb anaemia thresholds (BSH 2020):</text>
+    <text x="300" y="98" class="header-strip-kv">T1 &lt;110</text>
+    <text x="390" y="98" class="header-strip-kv">· T2/T3 &lt;105</text>
+    <text x="510" y="98" class="header-strip-kv">· PP 48h &lt;100 g/L</text>
+  </g>
+
+  <!-- 1. FBC -->
+  <rect x="160" y="130" width="400" height="54" rx="8" fill="#0b4f6c"/>
+  <circle cx="182" cy="157" r="12" fill="#08374c"/>
+  <text x="182" y="161" class="step-num">1</text>
+  <text x="202" y="153" class="box-label">Offer FBC at booking and 28 weeks</text>
+  <text x="202" y="172" class="box-sub">Earlier if symptoms or risk factors</text>
+
+  <!-- 2. Decision: Hb below threshold? -->
+  <polygon points="360,214 500,272 360,330 220,272" fill="#fff5e1" stroke="#92400e" stroke-width="1.8"/>
+  <text x="360" y="268" class="decision">Hb below threshold?</text>
+  <text x="360" y="288" class="decision-sub">(use header strip above)</text>
+
+  <!-- No branch (side grey) -->
+  <rect x="530" y="244" width="160" height="54" rx="8" fill="#eef0f3" stroke="#c7cbd1"/>
+  <text x="610" y="267" class="notes-text" style="font-weight:700; text-anchor:middle;">Routine care</text>
+  <text x="610" y="284" class="notes-text" style="text-anchor:middle;">Ferritin only if risk factor</text>
+
+  <!-- 3. Send ferritin -->
+  <rect x="160" y="360" width="400" height="54" rx="8" fill="#0b4f6c"/>
+  <circle cx="182" cy="387" r="12" fill="#08374c"/>
+  <text x="182" y="391" class="step-num">3</text>
+  <text x="202" y="383" class="box-label">Send serum ferritin</text>
+  <text x="202" y="402" class="box-sub">Add TSAT + CRP if equivocal</text>
+
+  <!-- 4. Decision: ferritin <30 -->
+  <polygon points="360,444 500,502 360,560 220,502" fill="#fff5e1" stroke="#92400e" stroke-width="1.8"/>
+  <text x="360" y="498" class="decision">Ferritin &lt;30 µg/L?</text>
+  <text x="360" y="516" class="decision-sub">(BSH 2020)</text>
+
+  <!-- No branch: equivocal (AMBER) -->
+  <rect x="530" y="474" width="160" height="54" rx="8" fill="#fff3c2" stroke="#92400e"/>
+  <text x="610" y="497" class="amber-label" text-anchor="middle">Equivocal</text>
+  <text x="610" y="514" class="notes-text" style="fill:#92400e; text-anchor:middle;">TSAT &lt;20% · CRP</text>
+
+  <!-- 5. Diagnose IDA -->
+  <rect x="160" y="590" width="400" height="54" rx="8" fill="#0b4f6c"/>
+  <circle cx="182" cy="617" r="12" fill="#08374c"/>
+  <text x="182" y="621" class="step-num">5</text>
+  <text x="202" y="613" class="box-label">Iron deficiency anaemia confirmed</text>
+  <text x="202" y="632" class="box-sub">Enter treatment pathway (Fig 2)</text>
+
+  <!-- 6. If IDA excluded (grey-action hybrid -> blue action) -->
+  <rect x="160" y="660" width="530" height="54" rx="8" fill="#0b4f6c"/>
+  <circle cx="182" cy="687" r="12" fill="#08374c"/>
+  <text x="182" y="691" class="step-num">6</text>
+  <text x="202" y="683" class="box-label">If IDA excluded: consider other causes</text>
+  <text x="202" y="702" class="box-sub">B12/folate · haemoglobinopathy · AIHA · microangiopathy</text>
+
+  <!-- Compact NOTES (halved) -->
+  <g transform="translate(710,130)">
+    <rect x="0" y="0" width="260" height="300" fill="#eef0f3" stroke="#c7cbd1" rx="6"/>
+    <text x="12" y="18" class="notes-head">Notes</text>
+
+    <text x="12" y="40" class="notes-text" style="font-weight:700;">Ferritin is acute-phase</text>
+    <text x="12" y="55" class="notes-text">Normal ferritin with TSAT &lt;20% or</text>
+    <text x="12" y="70" class="notes-text">raised CRP → deficiency still possible.</text>
+
+    <text x="12" y="95" class="notes-text" style="font-weight:700;">Trial of oral iron (diagnostic)</text>
+    <text x="12" y="110" class="notes-text">Acceptable if mild IDA suspected.</text>
+    <text x="12" y="125" class="notes-text">Hb rise ≈10 g/L at 2 wk supports it.</text>
+
+    <text x="12" y="150" class="notes-text" style="font-weight:700;">Haemoglobinopathy caution</text>
+    <text x="12" y="165" class="notes-text">No empirical iron until status known.</text>
+
+    <text x="12" y="190" class="notes-text" style="font-weight:700; fill:#92400e;">Emerging — not UK standard</text>
+    <text x="12" y="205" class="notes-text" style="fill:#92400e;">HOW Collaborative 2025: routine</text>
+    <text x="12" y="220" class="notes-text" style="fill:#92400e;">ferritin at booking + 24–28 weeks.</text>
+    <text x="12" y="235" class="notes-text" style="fill:#92400e;">Adopt only as local audited policy.</text>
+
+    <text x="12" y="260" class="notes-text" style="font-weight:700;">Do NOT use routinely</text>
+    <text x="12" y="275" class="notes-text">Hepcidin · soluble transferrin receptor.</text>
+  </g>
+
+  <!-- Edges -->
+  <path class="edge" d="M360,184 L360,214" marker-end="url(#arr)"/>
+  <path class="edge" d="M500,272 L530,272" marker-end="url(#arr)"/>
+  <text x="506" y="266" class="yn">No</text>
+  <path class="edge" d="M360,330 L360,360" marker-end="url(#arr)"/>
+  <text x="368" y="350" class="yn">Yes</text>
+  <path class="edge" d="M360,414 L360,444" marker-end="url(#arr)"/>
+  <path class="edge" d="M360,560 L360,590" marker-end="url(#arr)"/>
+  <text x="368" y="580" class="yn">Yes</text>
+  <path class="edge" d="M500,502 L530,502" marker-end="url(#arr)"/>
+  <text x="506" y="496" class="yn">No</text>
+  <path class="edge" d="M610,528 L610,560 L460,560 L460,660" marker-end="url(#arr)"/>
+  <path class="edge" d="M360,644 L360,660" marker-end="url(#arr)"/>
+
+  <!-- Footer -->
+  <text x="32" y="748" class="foot">Anaemia in Pregnancy · Figure 1 of 4 · v1.0 · 19 Apr 2026</text>
+</svg>
