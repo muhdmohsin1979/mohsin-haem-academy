@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Anaemia in Pregnancy · Figure 3 of 4 · v1.0 · 19 Apr 2026 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 820" font-family="Helvetica, Arial, sans-serif" role="img" aria-labelledby="t3 d3">
+  <title id="t3">IV iron pathway — operational flow</title>
+  <desc id="d3">Seven-step operational flow from indication confirmation to MHRA Yellow Card reporting.</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#0b4f6c"/>
+    </marker>
+    <style>
+      .title { font-size:22px; fill:#0b4f6c; font-weight:700; }
+      .subtitle { font-size:12px; fill:#5a6270; }
+      .step-num { font-size:11px; font-weight:700; fill:#ffffff; text-anchor:middle; }
+      .box-label { font-size:15px; fill:#ffffff; font-weight:600; }
+      .box-sub { font-size:12px; fill:#ffffff; }
+      .amber-label { font-size:15px; fill:#92400e; font-weight:700; }
+      .amber-sub { font-size:12px; fill:#92400e; }
+      .red-label { font-size:15px; fill:#8f1d25; font-weight:700; }
+      .red-sub { font-size:12px; fill:#8f1d25; }
+      .notes-head { font-size:12.5px; fill:#3b4150; font-weight:700; }
+      .notes-text { font-size:11px; fill:#3b4150; }
+      .foot { font-size:9px; fill:#5a6270; }
+      .edge { fill:none; stroke:#0b4f6c; stroke-width:1.6; }
+    </style>
+  </defs>
+
+  <text x="32" y="36" class="title">IV iron pathway — operational flow</text>
+  <text x="32" y="54" class="subtitle">BSH 2020 · current SPCs (FCM, FDI) · MHRA Drug Safety Updates · legend on Fig 1</text>
+
+  <!-- 1. Confirm indication -->
+  <rect x="160" y="82" width="530" height="52" rx="8" fill="#0b4f6c"/>
+  <circle cx="182" cy="108" r="12" fill="#08374c"/>
+  <text x="182" y="112" class="step-num">1</text>
+  <text x="202" y="104" class="box-label">Confirm an indication for IV iron</text>
+  <text x="202" y="122" class="box-sub">See indication list in Notes</text>
+
+  <!-- 2. Confirm T2/T3 suitability -->
+  <rect x="160" y="150" width="530" height="52" rx="8" fill="#0b4f6c"/>
+  <circle cx="182" cy="176" r="12" fill="#08374c"/>
+  <text x="182" y="180" class="step-num">2</text>
+  <text x="202" y="172" class="box-label">Confirm T2 / T3 — or clear necessity in T1</text>
+  <text x="202" y="190" class="box-sub">Exclude hypersensitivity; defer in active infection</text>
+
+  <!-- 3. Calculate dose per SPC -->
+  <rect x="160" y="218" width="530" height="52" rx="8" fill="#0b4f6c"/>
+  <circle cx="182" cy="244" r="12" fill="#08374c"/>
+  <text x="182" y="248" class="step-num">3</text>
+  <text x="202" y="240" class="box-label">Calculate dose per current SPC</text>
+  <text x="202" y="258" class="box-sub">Body-weight + Hb method (medicines.org.uk)</text>
+
+  <!-- 4. Administer + observe -->
+  <rect x="160" y="286" width="530" height="52" rx="8" fill="#0b4f6c"/>
+  <circle cx="182" cy="312" r="12" fill="#08374c"/>
+  <text x="182" y="316" class="step-num">4</text>
+  <text x="202" y="308" class="box-label">Administer; observe ≥30 min after every dose</text>
+  <text x="202" y="326" class="box-sub">Resuscitation facilities; trained staff</text>
+
+  <!-- 5. Reassess Hb ≥ 4 weeks -->
+  <rect x="160" y="354" width="530" height="52" rx="8" fill="#0b4f6c"/>
+  <circle cx="182" cy="380" r="12" fill="#08374c"/>
+  <text x="182" y="384" class="step-num">5</text>
+  <text x="202" y="376" class="box-label">Reassess Hb no earlier than 4 weeks</text>
+  <text x="202" y="394" class="box-sub">Align wording with current SPC</text>
+
+  <!-- 6. Phosphate check (AMBER — FCM risk only) -->
+  <rect x="160" y="422" width="530" height="52" rx="8" fill="#fff3c2" stroke="#92400e" stroke-width="1.6"/>
+  <circle cx="182" cy="448" r="12" fill="#92400e"/>
+  <text x="182" y="452" class="step-num">6</text>
+  <text x="202" y="444" class="amber-label">Check phosphate after FCM if risk factors</text>
+  <text x="202" y="462" class="amber-sub">See FCM risk list in Notes</text>
+
+  <!-- 7. Report SAE (RED — appropriate urgent escalation) -->
+  <rect x="160" y="490" width="530" height="52" rx="8" fill="#fbe9ea" stroke="#8f1d25" stroke-width="1.6"/>
+  <circle cx="182" cy="516" r="12" fill="#8f1d25"/>
+  <text x="182" y="520" class="step-num">7</text>
+  <text x="202" y="512" class="red-label">Report SAE via MHRA Yellow Card</text>
+  <text x="202" y="530" class="red-sub">Anaphylaxis · severe hypophosphataemia · extravasation</text>
+
+  <!-- Small note box (3–4 bullets) -->
+  <g transform="translate(710,82)">
+    <rect x="0" y="0" width="260" height="460" fill="#eef0f3" stroke="#c7cbd1" rx="6"/>
+    <text x="12" y="18" class="notes-head">Notes</text>
+
+    <text x="12" y="40" class="notes-text" style="font-weight:700;">Indications (BSH 2020)</text>
+    <text x="12" y="55" class="notes-text">• Oral intolerance despite change</text>
+    <text x="12" y="70" class="notes-text">• Malabsorption (coeliac, IBD, bariatric)</text>
+    <text x="12" y="85" class="notes-text">• True non-response at 2 weeks</text>
+    <text x="12" y="100" class="notes-text">• Severe anaemia (Hb &lt;90) from T2</text>
+    <text x="12" y="115" class="notes-text">• Late presentation ≥34 weeks</text>
+
+    <text x="12" y="140" class="notes-text" style="font-weight:700;">Products</text>
+    <text x="12" y="155" class="notes-text">FCM · FDI — per local formulary</text>
+
+    <text x="12" y="180" class="notes-text" style="font-weight:700;">Consent must cover</text>
+    <text x="12" y="195" class="notes-text">Hypersensitivity at any exposure;</text>
+    <text x="12" y="210" class="notes-text">FCM → symptomatic hypophosphataemia.</text>
+
+    <text x="12" y="235" class="notes-text" style="font-weight:700; fill:#92400e;">FCM phosphate risk factors</text>
+    <text x="12" y="250" class="notes-text" style="fill:#92400e;">• Repeated / high cumulative dose</text>
+    <text x="12" y="265" class="notes-text" style="fill:#92400e;">• Prior bariatric surgery</text>
+    <text x="12" y="280" class="notes-text" style="fill:#92400e;">• Vitamin D deficiency</text>
+    <text x="12" y="295" class="notes-text" style="fill:#92400e;">• Phosphate-wasting disorder</text>
+
+    <text x="12" y="320" class="notes-text" style="font-weight:700;">Test dose</text>
+    <text x="12" y="335" class="notes-text">Routine universal test dose NOT</text>
+    <text x="12" y="350" class="notes-text">required (per SPC).</text>
+
+    <text x="12" y="375" class="notes-text" style="font-weight:700;">Evidence</text>
+    <text x="12" y="390" class="notes-text">Cochrane 2024 (13 RCTs, n=3939):</text>
+    <text x="12" y="405" class="notes-text">raises antenatal Hb; reduces</text>
+    <text x="12" y="420" class="notes-text">anaemia at delivery (moderate).</text>
+    <text x="12" y="440" class="notes-text">RAPIDIRON 2025 — supportive.</text>
+  </g>
+
+  <!-- Edges -->
+  <path class="edge" d="M425,134 L425,150" marker-end="url(#arr)"/>
+  <path class="edge" d="M425,202 L425,218" marker-end="url(#arr)"/>
+  <path class="edge" d="M425,270 L425,286" marker-end="url(#arr)"/>
+  <path class="edge" d="M425,338 L425,354" marker-end="url(#arr)"/>
+  <path class="edge" d="M425,406 L425,422" marker-end="url(#arr)"/>
+  <path class="edge" d="M425,474 L425,490" marker-end="url(#arr)"/>
+
+  <!-- Footer -->
+  <text x="32" y="808" class="foot">Anaemia in Pregnancy · Figure 3 of 4 · v1.0 · 19 Apr 2026</text>
+</svg>

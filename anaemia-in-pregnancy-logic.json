@@ -1,0 +1,319 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "document": {
+    "title": "Anaemia in Pregnancy — UK Clinical Guideline: clinical logic",
+    "version": "v1.0 DRAFT",
+    "date": "2026-04-19",
+    "jurisdiction": "United Kingdom",
+    "lead_author": "Dr Muhammad Mohsin, Consultant Haematologist",
+    "status": "DRAFT — not for clinical use until sign-off",
+    "source": "anaemia-pregnancy-guideline-STAGE2-REVISED.html"
+  },
+  "evidence_tiers": {
+    "established_uk_standard": "Written into a current UK national guideline (BSH, NICE, RCOG) or statutory (MHRA, SPC, NHS SCT).",
+    "specialist_consensus": "Opinion or pragmatic practice in a UK guideline without an RCT.",
+    "emerging_optimisation": "New evidence that may revise practice; not yet UK standard.",
+    "good_practice_statement": "Consensus-based; no direct trial evidence."
+  },
+  "hb_thresholds_g_per_L": {
+    "first_trimester": {"anaemia_if_less_than": 110, "source": "BSH 2020"},
+    "second_or_third_trimester": {"anaemia_if_less_than": 105, "source": "BSH 2020"},
+    "postpartum_first_48h": {"anaemia_if_less_than": 100, "source": "BSH 2020"}
+  },
+  "iron_status_rules": {
+    "ferritin_threshold_ug_per_L": 30,
+    "ferritin_interpretation": "Serum ferritin <30 µg/L confirms iron deficiency in pregnancy.",
+    "ferritin_masked_by_inflammation": {
+      "trigger": "Normal/raised ferritin with microcytic indices, TSAT <20%, or raised CRP",
+      "action": "Do not use ferritin alone to rule out iron deficiency; review in context.",
+      "second_line_tests": ["transferrin saturation", "CRP"]
+    },
+    "not_recommended_for_routine_use": ["hepcidin", "soluble transferrin receptor"]
+  },
+  "screening": {
+    "routine_fbc": {
+      "timing": ["booking", "28 weeks"],
+      "tier": "established_uk_standard",
+      "source": ["NICE NG201", "BSH 2020"]
+    },
+    "ferritin_routine_unselected": {
+      "recommended": false,
+      "tier": "established_uk_standard",
+      "source": "BSH 2020"
+    },
+    "ferritin_indicated_if": [
+      "Anaemia (Hb below trimester threshold)",
+      "Prior iron deficiency",
+      "Heavy menstrual bleeding before pregnancy",
+      "Known malabsorption",
+      "Vegan or strict vegetarian diet",
+      "Short inter-pregnancy interval",
+      "Multiple pregnancy",
+      "Bariatric surgery"
+    ],
+    "emerging_practice": {
+      "label": "HOW Collaborative 2025 consensus",
+      "proposal": "Routine ferritin at booking and 24–28 weeks.",
+      "tier": "emerging_optimisation",
+      "uk_baseline": "Not current BSH or NICE policy."
+    }
+  },
+  "diagnostic_pathway": [
+    {"step": 1, "action": "Offer FBC at booking and 28 weeks."},
+    {"step": 2, "decision": "Hb below trimester threshold?", "branches": {
+      "yes": {"next_step": 3},
+      "no": {"action": "Routine care; ferritin only if risk factors."}
+    }},
+    {"step": 3, "action": "Send serum ferritin ± transferrin saturation, CRP."},
+    {"step": 4, "decision": "Ferritin <30 µg/L?", "branches": {
+      "yes": {"action": "Diagnose iron deficiency anaemia; enter treatment pathway."},
+      "no": {"action": "Ferritin equivocal — check TSAT and CRP.",
+        "interpretation": {
+          "tsat_less_than_20": "Supports iron deficiency",
+          "raised_crp": "May be masking deficiency"
+        }
+      }
+    }},
+    {"step": 5, "action": "If iron deficiency excluded, consider B12/folate deficiency, haemoglobinopathy (do not start empirical iron), AIHA, microangiopathy, anaemia of chronic disease."},
+    {"step": 6, "action": "Trial of oral iron as a diagnostic test acceptable when anaemia mild and indices suggestive; Hb rise ~10 g/L in 2 weeks supports iron deficiency."}
+  ],
+  "pre_pregnancy_optimisation": {
+    "iron_deficiency_correction": {
+      "target_population": ["Heavy menstrual bleeding", "Prior iron deficiency", "Vegetarian or vegan diet", "Prior bariatric surgery", "Malabsorption"],
+      "action": "FBC + ferritin; correct deficiency before conception where feasible",
+      "tier": "specialist_consensus",
+      "strength": "Conditional",
+      "certainty": "Low"
+    },
+    "folic_acid": {
+      "standard_dose_ug_daily": 400,
+      "high_risk_dose_mg_daily": 5,
+      "high_risk_groups": ["Sickle cell disease", "Thalassaemia", "Diabetes mellitus", "Prior NTD pregnancy", "BMI >=30 kg/m2", "Anti-epileptic medication"],
+      "tier": "established_uk_standard",
+      "strength": "Strong",
+      "certainty": "High for NTD prevention"
+    },
+    "haemoglobinopathy_screening": {
+      "action": "Offer per NHS Sickle Cell and Thalassaemia Screening Programme where status unknown",
+      "tier": "established_uk_standard"
+    }
+  },
+  "oral_iron_first_line": {
+    "elemental_iron_mg_daily_range": [100, 200],
+    "regimens": [
+      {"product": "Ferrous sulfate 200 mg 2–3× daily", "approx_elemental_mg_daily_range": [130, 195]},
+      {"product": "Ferrous fumarate 210 mg 2–3× daily", "approx_elemental_mg_daily_range": [138, 207]},
+      {"product": "Ferrous gluconate 300 mg 2–3× daily", "approx_elemental_mg_daily_range": [105, 140]}
+    ],
+    "review_interval_weeks": 2,
+    "expected_hb_rise_at_2_weeks_g_per_L": 10,
+    "continue_after_normalisation_months": 3,
+    "counselling": [
+      "Take on an empty stomach 30–60 minutes before a meal",
+      "Avoid simultaneous tea, coffee, calcium, antacids",
+      "Vitamin C (orange juice or 250 mg ascorbic acid) improves absorption",
+      "Warn about nausea, constipation, black stools",
+      "Offer stool softener or laxative if constipated"
+    ],
+    "intolerance_strategy": {
+      "options": ["Dose reduction", "Change formulation (fumarate or gluconate)", "Alternate-day dosing"],
+      "continue_review_vs_2_week_target": true
+    },
+    "emerging_optimisation": {
+      "label": "Low-dose / alternate-day oral iron",
+      "basis": "Moretti physiological studies; Churchill 2025 UK cohort reports 36.5% achieved 10 g/L rise on ferrous sulfate 200 mg TDS",
+      "status": "Not the UK baseline for established IDA until national guidance changes"
+    },
+    "tier": "established_uk_standard",
+    "strength": "Strong",
+    "certainty": "Moderate",
+    "source": "BSH 2020 (Pavord et al.)"
+  },
+  "iv_iron": {
+    "products": ["Ferric carboxymaltose", "Ferric derisomaltose"],
+    "trimester_window": "Generally confine to 2nd and 3rd trimesters unless clearly necessary",
+    "indications": [
+      {"criterion": "Oral iron intolerance despite different formulation and dose", "strength": "Conditional", "certainty": "Moderate", "tier": "established_uk_standard"},
+      {"criterion": "Malabsorption (coeliac, post-bariatric, IBD)", "strength": "Conditional", "certainty": "Low", "tier": "specialist_consensus"},
+      {"criterion": "True non-response to adequate oral iron after 2 weeks with confirmed adherence", "strength": "Conditional", "certainty": "Moderate", "tier": "established_uk_standard"},
+      {"criterion": "Severe anaemia (Hb <90 g/L) from second trimester", "strength": "Conditional", "certainty": "Low to Moderate", "tier": "specialist_consensus"},
+      {"criterion": "Late presentation >=34 weeks with iron deficiency anaemia and insufficient time for oral response", "strength": "Conditional", "certainty": "Low", "tier": "specialist_consensus"},
+      {"criterion": "Preference for fewer doses in selected women", "strength": "Conditional", "certainty": "Very Low", "tier": "consensus_based"}
+    ],
+    "dose_calculation": "Body-weight and Hb-based method per current SPC; observe per-session and per-week maxima; check medicines.org.uk before prescribing.",
+    "administration": {
+      "setting": "Resuscitation facilities, trained staff",
+      "observation_minutes_after_every_dose": 30,
+      "observation_source": "MHRA Drug Safety Update",
+      "test_dose_routine_required": false,
+      "contraindications": ["Known iron hypersensitivity"],
+      "cautions": ["Active infection (delay where feasible)"],
+      "consent_requirements": [
+        "Hypersensitivity risk at any exposure",
+        "Ferric carboxymaltose: risk of symptomatic hypophosphataemia"
+      ]
+    },
+    "followup": {
+      "hb_reassessment_not_before_weeks": 4,
+      "align_wording_with": "current SPC",
+      "phosphate_monitoring_after_fcm_if_any": [
+        "Repeated dosing or high cumulative dose",
+        "Prior bariatric surgery",
+        "Vitamin D deficiency",
+        "Symptomatic phosphate-wasting disorder"
+      ]
+    },
+    "third_trimester_timing": {
+      "label": "Pragmatic expert practice",
+      "tier": "specialist_consensus",
+      "note": "Not a sourced national recommendation; attending teams decide based on gestation, severity, and logistics."
+    },
+    "evidence": {
+      "cochrane_2024_nicholson": {
+        "n_rcts": 13,
+        "n_participants": 3939,
+        "antenatal_hb_mean_difference_g_per_dL": 0.49,
+        "anaemia_at_delivery_rr": 0.81,
+        "pph_or_transfusion_difference": "Likely no meaningful difference",
+        "certainty": "Moderate"
+      },
+      "rapidiron_2025_derman": {
+        "n": 4368,
+        "country": "India",
+        "baseline_hb_g_per_dL": [7.0, 9.9],
+        "low_birth_weight_rr": 0.87,
+        "applicability": "Baseline Hb more severe than typical UK IDA; supportive not decisive."
+      }
+    }
+  },
+  "b12_and_folate": {
+    "when_to_test": [
+      "Macrocytic anaemia (MCV above pregnancy reference)",
+      "Unresponsive anaemia despite adequate iron",
+      "Vegan/strict vegetarian diet",
+      "Prior bariatric surgery",
+      "Inflammatory bowel disease",
+      "Pernicious anaemia",
+      "Chronic metformin or PPI use",
+      "Clinical features of B12 deficiency (neurological, glossitis)"
+    ],
+    "b12_no_neurology": {
+      "options": [
+        "Oral cyanocobalamin at least 1 mg daily (if dietary cause likely and absorption intact)",
+        "IM hydroxocobalamin 1 mg three times weekly for 2 weeks, then 1 mg every 2–3 months"
+      ],
+      "tier": "established_uk_standard",
+      "source": "SPS / NICE-linked"
+    },
+    "b12_with_neurology": {
+      "action": "Seek urgent specialist advice",
+      "if_advice_unavailable": "IM hydroxocobalamin 1 mg alternate days until no further improvement, then 1 mg every 2 months",
+      "tier": "established_uk_standard"
+    },
+    "folate_replacement": {
+      "dose": "Folic acid 5 mg orally once daily until deficiency resolves",
+      "then_continue": "400 µg daily (or 5 mg daily in higher-risk groups) for remainder of pregnancy",
+      "tier": "established_uk_standard"
+    },
+    "do_not_give_folate_alone": {
+      "reason": "Risk of subacute combined degeneration of the spinal cord if B12 also deficient",
+      "tier": "established_uk_standard"
+    }
+  },
+  "haemoglobinopathy_cross_reference": {
+    "sickle_cell_disease": "BSH 2021 (Oteng-Ntim et al.); supersedes RCOG GTG 61",
+    "thalassaemia": "BSH 2024 (Shah et al.); supersedes RCOG GTG 66",
+    "screening_lab_diagnosis": "BSH 2023 (Bain et al.); NHS SCT Programme",
+    "iron_rules": {
+      "no_iron_without_confirmed_deficiency": true,
+      "transfusion_dependent_thalassaemia_preconception": "Switch deferasirox/deferiprone to desferrioxamine 6–12 weeks before planned conception",
+      "sickle_cell_folic_acid_mg_daily": 5
+    }
+  },
+  "acute_haemolytic_and_microangiopathy": {
+    "differential": ["HELLP", "TTP", "aHUS", "DIC", "AIHA", "Acute fatty liver of pregnancy"],
+    "escalation_triggers": [
+      "Platelet count <50 ×10^9/L with haemolytic indices",
+      "Hb fall >20 g/L in 24 h without overt bleeding",
+      "Suspected TTP (send ADAMTS13, prepare plasma exchange)",
+      "Deranged DIC screen"
+    ],
+    "tier": "good_practice_statement"
+  },
+  "postpartum": {
+    "check_hb_within_48h_if": [
+      "Estimated blood loss >500 mL",
+      "Uncorrected antenatal anaemia",
+      "Symptoms: tachycardia, breathlessness, dizziness, severe fatigue"
+    ],
+    "caesarean_section_alone": {
+      "automatic_trigger": false,
+      "note": "Record as local policy if Trust routinely checks Hb after caesarean section"
+    },
+    "stratified_treatment": [
+      {"hb_g_per_L_at_least": 100, "action": "Oral iron; reassurance; review at 6-week postnatal check"},
+      {"hb_g_per_L_range": [70, 99], "stable_minimal_symptoms": true, "first_line": "Oral iron",
+        "consider_iv_iron_if_any": ["Severe fatigue", "Established breastfeeding difficulty", "Marked morbidity", "Poor anticipated oral adherence"]
+      },
+      {"hb_g_per_L_less_than": 70, "or_symptomatic_with_bleeding_or_instability": true, "action": "Red cell transfusion (typically single unit with reassessment) + IV iron to replete stores"}
+    ],
+    "replete_stores_months": 3,
+    "iv_iron_does_not_prevent_ppd": true,
+    "sources": ["BSH 2020", "Bombač Tavčar 2023 RCT", "Bombač Tavčar 2024 fatigue", "Bombač Tavčar 2025 hypophosphataemia"]
+  },
+  "transfusion": {
+    "restrictive_threshold_g_per_L": 70,
+    "single_unit_reassess": true,
+    "do_not_transfuse_to_target_if_alternatives": true,
+    "product_selection": {
+      "compatibility": "ABO and RhD compatible",
+      "K_negative_for_women_of_childbearing_age": true,
+      "cmv_seronegative": {
+        "elective_pregnancy_transfusion": "Where indicated and feasible without delay",
+        "urgent_delivery_or_postpartum": "Do NOT delay for CMV-negative",
+        "intrauterine_transfusion": "Required",
+        "neonatal_transfusion": "Required"
+      },
+      "emergency_group": "Group O RhD-negative, K-negative (only if emergency release required)",
+      "irradiation_indications": [
+        "Congenital immunodeficiency",
+        "Recent intrauterine-transfusion recipient",
+        "HLA-matched products",
+        "Post purine-analogue therapy"
+      ]
+    },
+    "consent_documented": true,
+    "sources": ["NICE NG24", "RCOG GTG47"]
+  },
+  "audit_indicators": [
+    {"indicator": "Women with FBC at booking and 28 weeks", "numerator": "Women with both checks recorded", "denominator": "All pregnancies reaching 28 weeks", "target": ">=99%"},
+    {"indicator": "Ferritin sent where indicated", "denominator": "Anaemic women + higher-risk women", "target": ">=95%"},
+    {"indicator": "Hb >=100 g/L at delivery", "target": "Benchmark locally; improve year on year"},
+    {"indicator": "Postpartum red cell transfusion rate", "unit": "per 1000 deliveries"},
+    {"indicator": "IV iron rate", "unit": "per 1000 deliveries", "role": "Balancing measure"},
+    {"indicator": "Serious adverse events following IV iron", "reporting": "MHRA Yellow Card"}
+  ],
+  "references": [
+    "Pavord S et al. UK guidelines on the management of iron deficiency in pregnancy. Br J Haematol 2020;188(6):819–830. doi:10.1111/bjh.16221",
+    "Oteng-Ntim E et al. Management of sickle cell disease in pregnancy. Br J Haematol 2021;194(6):980–995. doi:10.1111/bjh.17671",
+    "Shah FT et al. Conception and pregnancy in thalassaemia syndromes. Br J Haematol 2024;204(6):2194–2209. doi:10.1111/bjh.19362",
+    "Bain BJ et al. Significant haemoglobinopathies: screening and diagnosis. Br J Haematol 2023;201(6):1047–1065. doi:10.1111/bjh.18794",
+    "Fletcher A et al. Laboratory diagnosis of iron deficiency (excluding pregnancy). Br J Haematol 2022;196(3):523–529. doi:10.1111/bjh.17900",
+    "NICE NG201 Antenatal care; NICE NG24 Blood transfusion",
+    "RCOG Green-top 47 Blood transfusion in obstetrics; RCOG Green-top 52 PPH",
+    "MBRRACE-UK Saving Lives, Improving Mothers' Care 2024, 2025",
+    "MHRA Drug Safety Updates on IV iron and ferric carboxymaltose",
+    "SPS medicines advice for B12 replacement in pregnancy",
+    "NHS Sickle Cell and Thalassaemia Screening Programme",
+    "Nicholson L et al. Cochrane 2024 CD016136. doi:10.1002/14651858.CD016136",
+    "Derman RJ et al. RAPIDIRON. Am J Obstet Gynecol 2025;233(2):120.e1–120.e18. doi:10.1016/j.ajog.2025.01.037",
+    "Finkelstein JL et al. B12 supplementation in pregnancy. Cochrane 2024 CD013823. doi:10.1002/14651858.CD013823.pub2",
+    "Churchill D et al. Oral iron treatment for anaemia in pregnancy. BMC Pregnancy Childbirth 2025;25(1):863. doi:10.1186/s12884-025-07938-w",
+    "Bombač Tavčar L et al. Eur J Obstet Gynecol Reprod Biol X 2023;20:100247. doi:10.1016/j.eurox.2023.100247",
+    "Bombač Tavčar L et al. J Clin Med 2024;13(3):758. doi:10.3390/jcm13030758",
+    "Bombač Tavčar L et al. J Clin Med 2025;14(23):8393. doi:10.3390/jcm14238393",
+    "Muñoz M et al. NATA PBM in obstetrics. Transfus Med 2018;28(1):22–39. doi:10.1111/tme.12443",
+    "Cappellini MD et al. Fertil Steril 2022;118(4):607–614. doi:10.1016/j.fertnstert.2022.08.014",
+    "HOW Collaborative 2025 consensus on routine ferritin screening (emerging)"
+  ]
+}

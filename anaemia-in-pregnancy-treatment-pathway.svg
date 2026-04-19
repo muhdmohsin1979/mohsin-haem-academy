@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Anaemia in Pregnancy · Figure 2 of 4 · v1.0 · 19 Apr 2026 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Helvetica, Arial, sans-serif" role="img" aria-labelledby="t2 d2">
+  <title id="t2">Treatment pathway — iron deficiency in pregnancy</title>
+  <desc id="d2">Five-step spine from confirmed IDA to continuation or amber escalation to IV iron.</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#0b4f6c"/>
+    </marker>
+    <style>
+      .title { font-size:22px; fill:#0b4f6c; font-weight:700; }
+      .subtitle { font-size:12px; fill:#5a6270; }
+      .step-num { font-size:11px; font-weight:700; fill:#ffffff; text-anchor:middle; }
+      .box-label { font-size:15px; fill:#ffffff; font-weight:600; }
+      .box-sub { font-size:12px; fill:#ffffff; }
+      .decision { font-size:15px; fill:#6a4c00; font-weight:700; text-anchor:middle; }
+      .decision-sub { font-size:11.5px; fill:#6a4c00; text-anchor:middle; }
+      .amber-label { font-size:14px; fill:#92400e; font-weight:700; }
+      .amber-sub { font-size:11.5px; fill:#92400e; }
+      .notes-head { font-size:12.5px; fill:#3b4150; font-weight:700; }
+      .notes-text { font-size:11px; fill:#3b4150; }
+      .yn { font-size:11.5px; font-weight:700; fill:#0b4f6c; }
+      .foot { font-size:9px; fill:#5a6270; }
+      .edge { fill:none; stroke:#0b4f6c; stroke-width:1.6; }
+    </style>
+  </defs>
+
+  <text x="32" y="36" class="title">Treatment pathway — iron deficiency in pregnancy</text>
+  <text x="32" y="54" class="subtitle">BSH 2020 (Pavord et al.) · established UK standard · legend on Fig 1</text>
+
+  <!-- 1. Confirmed IDA -->
+  <rect x="160" y="82" width="530" height="54" rx="8" fill="#0b4f6c"/>
+  <circle cx="182" cy="109" r="12" fill="#08374c"/>
+  <text x="182" y="113" class="step-num">1</text>
+  <text x="202" y="105" class="box-label">Confirmed iron deficiency anaemia</text>
+  <text x="202" y="124" class="box-sub">Hb below threshold · ferritin &lt;30 µg/L</text>
+
+  <!-- 2. Start oral iron -->
+  <rect x="160" y="156" width="530" height="54" rx="8" fill="#0b4f6c"/>
+  <circle cx="182" cy="183" r="12" fill="#08374c"/>
+  <text x="182" y="187" class="step-num">2</text>
+  <text x="202" y="179" class="box-label">Start oral iron — elemental 100–200 mg daily</text>
+  <text x="202" y="198" class="box-sub">Counsel on timing and side effects (see guideline)</text>
+
+  <!-- 3. Review Hb 2 weeks -->
+  <rect x="160" y="230" width="530" height="54" rx="8" fill="#0b4f6c"/>
+  <circle cx="182" cy="257" r="12" fill="#08374c"/>
+  <text x="182" y="261" class="step-num">3</text>
+  <text x="202" y="253" class="box-label">Review Hb at 2 weeks</text>
+  <text x="202" y="272" class="box-sub">Expect rise ≈10 g/L</text>
+
+  <!-- 4. Decision: adequate response? -->
+  <polygon points="425,316 600,376 425,436 250,376" fill="#fff5e1" stroke="#92400e" stroke-width="1.8"/>
+  <text x="425" y="370" class="decision">Adequate response</text>
+  <text x="425" y="390" class="decision">at 2 weeks?</text>
+
+  <!-- 5a. Continue (blue) -->
+  <rect x="80" y="466" width="300" height="90" rx="8" fill="#0b4f6c"/>
+  <circle cx="102" cy="494" r="12" fill="#08374c"/>
+  <text x="102" y="498" class="step-num">5</text>
+  <text x="122" y="490" class="box-label">Continue until Hb normalises</text>
+  <text x="122" y="510" class="box-sub">Then 3 months to replete stores</text>
+  <text x="122" y="528" class="box-sub">Re-check Hb 2–4 weekly as planned</text>
+
+  <!-- 5b. Non-response (AMBER — changed from red) -->
+  <rect x="470" y="466" width="300" height="90" rx="8" fill="#fff3c2" stroke="#92400e" stroke-width="1.8"/>
+  <circle cx="492" cy="494" r="12" fill="#92400e"/>
+  <text x="492" y="498" class="step-num">5</text>
+  <text x="512" y="490" class="amber-label">Non-response</text>
+  <text x="512" y="509" class="amber-sub">Review adherence / intolerance</text>
+  <text x="512" y="525" class="amber-sub">Consider IV iron (see Fig 3)</text>
+  <text x="512" y="542" class="amber-sub">Check B12/folate if macrocytic</text>
+
+  <!-- Branch labels -->
+  <text x="330" y="458" class="yn">Yes</text>
+  <text x="520" y="458" class="yn" style="fill:#92400e;">No</text>
+
+  <!-- Compact NOTES -->
+  <g transform="translate(710,82)">
+    <rect x="0" y="0" width="260" height="380" fill="#eef0f3" stroke="#c7cbd1" rx="6"/>
+    <text x="12" y="18" class="notes-head">Notes</text>
+
+    <text x="12" y="40" class="notes-text" style="font-weight:700;">Expected response</text>
+    <text x="12" y="55" class="notes-text">≈10 g/L rise at 2 weeks.</text>
+
+    <text x="12" y="80" class="notes-text" style="font-weight:700;">Duration</text>
+    <text x="12" y="95" class="notes-text">Continue 3 months after</text>
+    <text x="12" y="110" class="notes-text">Hb normalises (repletion).</text>
+
+    <text x="12" y="135" class="notes-text" style="font-weight:700;">Intolerance — try first</text>
+    <text x="12" y="150" class="notes-text">Change formulation; dose</text>
+    <text x="12" y="165" class="notes-text">reduce; alternate-day dosing.</text>
+
+    <text x="12" y="190" class="notes-text" style="font-weight:700;">Do NOT</text>
+    <text x="12" y="205" class="notes-text">Start empirical iron if</text>
+    <text x="12" y="220" class="notes-text">haemoglobinopathy unconfirmed.</text>
+
+    <text x="12" y="245" class="notes-text" style="font-weight:700; fill:#92400e;">Emerging — not UK standard</text>
+    <text x="12" y="260" class="notes-text" style="fill:#92400e;">Low-dose / alternate-day oral</text>
+    <text x="12" y="275" class="notes-text" style="fill:#92400e;">iron may aid tolerability.</text>
+    <text x="12" y="290" class="notes-text" style="fill:#92400e;">BSH 100–200 mg/day remains</text>
+    <text x="12" y="305" class="notes-text" style="fill:#92400e;">first-line.</text>
+
+    <text x="12" y="330" class="notes-text" style="font-weight:700;">Regimens — see guideline</text>
+    <text x="12" y="345" class="notes-text">Dosing tables held in the</text>
+    <text x="12" y="360" class="notes-text">full guideline (Section 6).</text>
+  </g>
+
+  <!-- Edges -->
+  <path class="edge" d="M425,136 L425,156" marker-end="url(#arr)"/>
+  <path class="edge" d="M425,210 L425,230" marker-end="url(#arr)"/>
+  <path class="edge" d="M425,284 L425,316" marker-end="url(#arr)"/>
+  <path class="edge" d="M340,410 L260,466" marker-end="url(#arr)"/>
+  <path class="edge" d="M510,410 L580,466" marker-end="url(#arr)"/>
+
+  <!-- Footer -->
+  <text x="32" y="688" class="foot">Anaemia in Pregnancy · Figure 2 of 4 · v1.0 · 19 Apr 2026</text>
+</svg>
