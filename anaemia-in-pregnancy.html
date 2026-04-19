@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anaemia in Pregnancy — Mohsin Haematology Academy</title>
+  <meta name="description" content="UK consultant-grade clinical guideline for anaemia in pregnancy: trimester thresholds, ferritin interpretation, oral iron, IV iron, postpartum bands, and transfusion. Aligned with BSH 2020, NICE NG201/NG24, RCOG GTG47/52, MHRA and NHS SCT.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    :root{
+      --clr-primary:#7a1f2b; --clr-primary-dark:#5c1720; --clr-primary-tint:rgba(122,31,43,0.07);
+      --clr-div:#1e4d8c; --clr-div-dark:#163a6b; --clr-div-tint:rgba(30,77,140,0.07); --clr-div-tint-md:rgba(30,77,140,0.12);
+      --clr-bg:#f7f5f3; --clr-surface:#ffffff; --clr-surface-alt:#faf8f7;
+      --clr-text:#1a1a1e; --clr-text-secondary:#3d3d42; --clr-muted:#6b717a;
+      --clr-border:#e6e1dd; --clr-border-light:#f0ebe7;
+      --clr-warn:#b45309; --clr-warn-tint:rgba(180,83,9,0.07);
+      --clr-danger:#991b1b; --clr-danger-tint:rgba(153,27,27,0.07);
+      --clr-success:#166534; --clr-success-tint:rgba(22,101,52,0.07);
+      --shadow-sm:0 1px 4px rgba(0,0,0,.06),0 2px 6px rgba(0,0,0,.04);
+      --shadow-md:0 4px 16px rgba(0,0,0,.08),0 2px 6px rgba(0,0,0,.04);
+      --radius-sm:6px; --radius-md:12px; --radius-lg:18px;
+      --ease:0.22s cubic-bezier(0.4,0,0.2,1);
+    }
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--clr-bg);color:var(--clr-text);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased;}
+    a{text-decoration:none;color:inherit;}
+    img{display:block;max-width:100%;}
+    .container{width:min(1080px,91%);margin-inline:auto;}
+
+    /* HEADER / NAV */
+    header{position:sticky;top:0;z-index:200;background:rgba(255,255,255,0.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--clr-border);}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:24px;}
+    .brand{display:flex;align-items:center;gap:12px;flex-shrink:0;}
+    .brand img{height:40px;width:auto;}
+    .brand-text{line-height:1;}
+    .brand-name{font-size:0.95rem;font-weight:700;color:var(--clr-primary);letter-spacing:-0.01em;}
+    .brand-tagline{font-size:0.66rem;font-weight:500;color:var(--clr-muted);letter-spacing:0.07em;text-transform:uppercase;margin-top:3px;}
+    .nav-links{display:flex;align-items:center;gap:2px;}
+    .nav-links a{font-size:0.85rem;font-weight:500;color:var(--clr-text-secondary);padding:7px 11px;border-radius:var(--radius-sm);transition:color var(--ease),background var(--ease);white-space:nowrap;}
+    .nav-links a:hover{color:var(--clr-primary);background:var(--clr-primary-tint);}
+    .nav-links a.active{color:var(--clr-div);background:var(--clr-div-tint);font-weight:600;}
+    .nav-cta{background:var(--clr-primary)!important;color:#fff!important;padding:8px 16px!important;border-radius:var(--radius-sm)!important;font-weight:600!important;}
+    .nav-cta:hover{background:var(--clr-primary-dark)!important;}
+
+    /* HERO */
+    .gl-hero{background:linear-gradient(180deg,#fff 0%,var(--clr-surface-alt) 100%);border-bottom:1px solid var(--clr-border);padding:48px 0 40px;}
+    .gl-breadcrumb{font-size:0.82rem;color:var(--clr-muted);margin-bottom:18px;display:flex;gap:6px;align-items:center;flex-wrap:wrap;}
+    .gl-breadcrumb a{color:var(--clr-muted);}
+    .gl-breadcrumb a:hover{color:var(--clr-div);}
+    .gl-breadcrumb span{color:var(--clr-muted);opacity:0.55;}
+    .gl-division-label{display:inline-flex;align-items:center;gap:7px;background:var(--clr-div-tint);color:var(--clr-div);font-size:0.72rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:20px;border:1px solid rgba(30,77,140,0.18);}
+    .gl-hero h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.8rem,3.8vw,2.5rem);font-weight:700;color:var(--clr-text);letter-spacing:-0.02em;line-height:1.2;margin-bottom:14px;}
+    .gl-hero-sub{font-size:1rem;color:var(--clr-text-secondary);line-height:1.7;max-width:760px;margin-bottom:28px;}
+    .gl-meta-row{display:flex;flex-wrap:wrap;gap:18px;align-items:center;font-size:0.84rem;color:var(--clr-text-secondary);}
+    .gl-meta-item{display:flex;align-items:center;gap:7px;}
+    .gl-source-chips{display:flex;flex-wrap:wrap;gap:5px;margin-left:auto;}
+    .gl-source-chip{font-size:0.72rem;font-weight:600;color:var(--clr-div);background:var(--clr-div-tint);border:1px solid rgba(30,77,140,0.18);padding:3px 9px;border-radius:100px;}
+
+    /* ANCHOR NAV */
+    .anchor-nav{background:var(--clr-surface);border-bottom:1px solid var(--clr-border);position:sticky;top:68px;z-index:150;}
+    .anchor-nav-inner{display:flex;gap:4px;padding:10px 0;overflow-x:auto;scrollbar-width:thin;}
+    .anchor-pill{font-size:0.78rem;font-weight:500;padding:6px 12px;border-radius:var(--radius-sm);color:var(--clr-text-secondary);white-space:nowrap;transition:background var(--ease),color var(--ease);}
+    .anchor-pill:hover{background:var(--clr-div-tint);color:var(--clr-div);}
+
+    /* BODY */
+    .gl-body{padding:48px 0 80px;}
+    .gl-layout{display:grid;grid-template-columns:1fr 300px;gap:40px;align-items:flex-start;}
+    @media (max-width:900px){.gl-layout{grid-template-columns:1fr;}}
+
+    .gl-section{background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-md);padding:28px 32px;margin-bottom:22px;scroll-margin-top:130px;}
+    .gl-section-header{display:flex;align-items:center;gap:12px;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--clr-border-light);}
+    .gl-section-num{width:28px;height:28px;border-radius:6px;background:var(--clr-div);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.78rem;}
+    .gl-section-title{font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;font-weight:700;color:var(--clr-text);letter-spacing:-0.01em;}
+
+    .gl-section p{font-size:0.92rem;color:var(--clr-text-secondary);margin-bottom:10px;}
+    .gl-section ul,.gl-section ol{padding-left:20px;margin-bottom:12px;}
+    .gl-section li{font-size:0.92rem;color:var(--clr-text-secondary);margin-bottom:6px;}
+    .gl-section strong{color:var(--clr-text);}
+
+    .kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0;}
+    @media (max-width:700px){.kpi-row{grid-template-columns:repeat(2,1fr);}}
+    .kpi{background:var(--clr-div);color:#fff;border-radius:var(--radius-sm);padding:14px 12px;text-align:center;}
+    .kpi .kpi-big{font-size:1.2rem;font-weight:700;display:block;line-height:1.2;}
+    .kpi .kpi-label{font-size:0.72rem;font-weight:500;opacity:0.92;display:block;margin-top:5px;}
+
+    .callout{border-radius:var(--radius-sm);padding:14px 16px;margin:12px 0;border-left:4px solid;}
+    .callout.warn{background:var(--clr-warn-tint);border-color:var(--clr-warn);color:var(--clr-warn);}
+    .callout.danger{background:var(--clr-danger-tint);border-color:var(--clr-danger);color:var(--clr-danger);}
+    .callout.success{background:var(--clr-success-tint);border-color:var(--clr-success);color:var(--clr-success);}
+    .callout strong{color:inherit;}
+    .callout p,.callout li{color:inherit;}
+    .callout ul{margin:6px 0 0 18px;}
+
+    .fig{margin:18px 0;text-align:center;}
+    .fig img{border:1px solid var(--clr-border);border-radius:var(--radius-sm);background:#fff;}
+    .fig-caption{font-size:0.78rem;color:var(--clr-muted);margin-top:8px;font-style:italic;}
+
+    table.gl-table{width:100%;border-collapse:collapse;font-size:0.86rem;margin:12px 0;}
+    table.gl-table th,table.gl-table td{text-align:left;padding:8px 10px;border:1px solid var(--clr-border-light);vertical-align:top;}
+    table.gl-table th{background:var(--clr-div-tint);color:var(--clr-div);font-weight:600;}
+
+    sup.ref{color:var(--clr-div);font-weight:600;font-size:0.72rem;margin-left:2px;}
+
+    /* SIDEBAR */
+    aside{position:sticky;top:130px;display:flex;flex-direction:column;gap:14px;align-self:start;}
+    .sidebar-card{background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-md);overflow:hidden;}
+    .sidebar-card-header{padding:11px 16px;background:var(--clr-div-tint);color:var(--clr-div);font-size:0.8rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;border-bottom:1px solid var(--clr-border-light);}
+    .sidebar-card-body{padding:14px 16px;}
+    .sidebar-card-body ul{list-style:none;padding:0;margin:0;}
+    .sidebar-card-body li a{display:block;font-size:0.82rem;padding:5px 0;color:var(--clr-text-secondary);border-bottom:1px dashed var(--clr-border-light);}
+    .sidebar-card-body li:last-child a{border-bottom:none;}
+    .sidebar-card-body li a:hover{color:var(--clr-div);}
+    .sidebar-related-link{display:flex;align-items:center;gap:8px;padding:7px 0;font-size:0.82rem;color:var(--clr-text-secondary);border-bottom:1px dashed var(--clr-border-light);}
+    .sidebar-related-link:last-child{border-bottom:none;}
+
+    /* FOOTER */
+    footer{background:var(--clr-text);color:#e6e1dd;padding:36px 0 28px;margin-top:40px;}
+    .footer-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap;}
+    .footer-note{font-size:0.8rem;color:#a7a4a0;max-width:520px;line-height:1.6;}
+    footer .brand-name{color:#fff;}
+    footer a{color:#a7a4a0;}
+    footer a:hover{color:#fff;}
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="brand">
+          <img src="logo.png" alt="Mohsin Haematology Academy logo">
+          <div class="brand-text">
+            <div class="brand-name">Mohsin Haematology Academy</div>
+            <div class="brand-tagline">Clinical Education &amp; Digital Tools</div>
+          </div>
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="tools.html">Tools</a>
+          <a href="guidelines.html" class="active">Guidelines</a>
+          <a href="education.html">Education</a>
+          <a href="journal-club.html">Journal Club</a>
+          <a href="about.html">About</a>
+          <a href="contact.html" class="nav-cta">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="gl-hero">
+    <div class="container">
+      <div class="gl-breadcrumb">
+        <a href="guidelines.html">Guidelines</a>
+        <span>›</span>
+        <a href="guidelines.html#general">General Haematology</a>
+        <span>›</span>
+        Anaemia in Pregnancy
+      </div>
+      <div class="gl-division-label">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        General Haematology
+      </div>
+      <h1>Anaemia in Pregnancy — UK Clinical Guideline</h1>
+      <p class="gl-hero-sub">
+        A consultant-grade summary for obstetric, midwifery and haematology teams. Separates established UK standard from specialist consensus and emerging optimisation practice across diagnosis, oral iron, IV iron, postpartum care, and transfusion. Aligned with BSH, NICE, RCOG, MHRA, NHS SCT Programme, and SPS.
+      </p>
+      <div class="gl-meta-row">
+        <div class="gl-meta-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Version 1.0 — April 2026
+        </div>
+        <div class="gl-meta-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Dr Muhammad Mohsin, Consultant Haematologist
+        </div>
+        <div class="gl-source-chips">
+          <span class="gl-source-chip">BSH 2020</span>
+          <span class="gl-source-chip">NICE NG201 / NG24</span>
+          <span class="gl-source-chip">RCOG GTG47/52</span>
+          <span class="gl-source-chip">MHRA</span>
+          <span class="gl-source-chip">NHS SCT</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANCHOR NAV -->
+  <div class="anchor-nav">
+    <div class="container">
+      <div class="anchor-nav-inner">
+        <a class="anchor-pill" href="#scope">Scope</a>
+        <a class="anchor-pill" href="#thresholds">Thresholds</a>
+        <a class="anchor-pill" href="#screening">Screening</a>
+        <a class="anchor-pill" href="#diagnosis">Diagnosis</a>
+        <a class="anchor-pill" href="#oral-iron">Oral iron</a>
+        <a class="anchor-pill" href="#treatment">Treatment flow</a>
+        <a class="anchor-pill" href="#iv-iron">IV iron</a>
+        <a class="anchor-pill" href="#postpartum">Postpartum</a>
+        <a class="anchor-pill" href="#transfusion">Transfusion</a>
+        <a class="anchor-pill" href="#urgent">Urgent escalation</a>
+        <a class="anchor-pill" href="#mistakes">Common mistakes</a>
+        <a class="anchor-pill" href="#audit">Audit</a>
+        <a class="anchor-pill" href="#sources">Sources</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <main class="gl-body">
+    <div class="container">
+      <div class="gl-layout">
+
+        <article>
+
+          <!-- 1. SCOPE -->
+          <section class="gl-section" id="scope">
+            <div class="gl-section-header">
+              <div class="gl-section-num">1</div>
+              <h2 class="gl-section-title">Scope and positioning</h2>
+            </div>
+            <p>This guideline applies to pregnant and postpartum women cared for in UK NHS maternity services. It covers diagnosis of iron deficiency anaemia, oral iron, IV iron, postpartum anaemia, and transfusion decisions. It does not cover sickle cell disease, transfusion-dependent thalassaemia, or acquired thrombotic microangiopathy except where these intersect the anaemia pathway.</p>
+            <p>Every recommendation is tagged with an evidence tier:</p>
+            <ul>
+              <li><strong>Established UK standard</strong> — written into a current UK national guideline (BSH, NICE, RCOG) or statutory (MHRA, SPC, NHS SCT).</li>
+              <li><strong>Specialist consensus</strong> — pragmatic UK practice without a direct RCT.</li>
+              <li><strong>Good-practice statement</strong> — consensus-based; no direct trial evidence.</li>
+              <li><strong>Emerging optimisation</strong> — new evidence that may revise practice; not yet UK standard.</li>
+            </ul>
+          </section>
+
+          <!-- 2. THRESHOLDS -->
+          <section class="gl-section" id="thresholds">
+            <div class="gl-section-header">
+              <div class="gl-section-num">2</div>
+              <h2 class="gl-section-title">Key thresholds</h2>
+            </div>
+            <div class="kpi-row">
+              <div class="kpi"><span class="kpi-big">&lt; 110 g/L</span><span class="kpi-label">First trimester</span></div>
+              <div class="kpi"><span class="kpi-big">&lt; 105 g/L</span><span class="kpi-label">Second / third trimester</span></div>
+              <div class="kpi"><span class="kpi-big">&lt; 100 g/L</span><span class="kpi-label">Postpartum (first 48 h)</span></div>
+              <div class="kpi"><span class="kpi-big">&lt; 30 µg/L</span><span class="kpi-label">Ferritin — confirms deficiency</span></div>
+            </div>
+            <div class="callout warn">
+              <strong>Interpretation cautions.</strong>
+              <ul>
+                <li>Mid-T2 dilutional trough is physiological — do not over-treat.</li>
+                <li>Ferritin is an acute-phase reactant. Where CRP is raised, or microcytic indices are present with normal ferritin, add TSAT. TSAT &lt;20% supports deficiency.</li>
+                <li>MCV rises ≈6 fL physiologically. True macrocytosis warrants B12 and folate testing.</li>
+                <li>Hepcidin and soluble transferrin receptor are not routine in UK practice.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- 3. SCREENING -->
+          <section class="gl-section" id="screening">
+            <div class="gl-section-header">
+              <div class="gl-section-num">3</div>
+              <h2 class="gl-section-title">Screening</h2>
+            </div>
+            <p><strong>Routine FBC</strong> at booking and at 28 weeks is established UK standard (NICE NG201; BSH 2020). Repeat earlier where symptoms or risk factors are present.</p>
+            <p><strong>Ferritin</strong> is not recommended as unselected routine screening (BSH 2020). Send ferritin when any of the following applies:</p>
+            <ul>
+              <li>Anaemia (Hb below the trimester threshold).</li>
+              <li>Prior iron deficiency.</li>
+              <li>Heavy menstrual bleeding before pregnancy.</li>
+              <li>Known malabsorption (coeliac, IBD) or prior bariatric surgery.</li>
+              <li>Vegan or strict vegetarian diet.</li>
+              <li>Short inter-pregnancy interval or multiple pregnancy.</li>
+            </ul>
+            <div class="callout warn">
+              <strong>Emerging — not UK standard.</strong> The HOW Collaborative 2025 consensus proposes routine ferritin at booking and at 24–28 weeks. Adopt only as declared local policy with audit; this is not current BSH or NICE policy.
+            </div>
+          </section>
+
+          <!-- 4. DIAGNOSTIC PATHWAY -->
+          <section class="gl-section" id="diagnosis">
+            <div class="gl-section-header">
+              <div class="gl-section-num">4</div>
+              <h2 class="gl-section-title">Diagnostic pathway</h2>
+            </div>
+            <p>Step 1: FBC at booking and 28 weeks. Step 2: if Hb is below the trimester threshold, send ferritin (with TSAT and CRP where equivocal). Step 3: ferritin &lt;30 µg/L confirms iron deficiency — enter the treatment pathway. Step 4: if equivocal, interpret TSAT and CRP together. Step 5: if iron deficiency is excluded, consider B12 / folate deficiency, haemoglobinopathy (do not start empirical iron), AIHA, microangiopathy, or anaemia of chronic disease.</p>
+            <div class="fig">
+              <img src="anaemia-in-pregnancy-diagnostic-pathway.svg" alt="Diagnostic pathway for anaemia in pregnancy: FBC → trimester threshold → ferritin → equivocal work-up → alternative aetiologies.">
+              <div class="fig-caption">Figure 1 · Diagnostic pathway (view as <a href="anaemia-in-pregnancy-diagnostic-pathway.svg" target="_blank" rel="noopener">standalone SVG</a>).</div>
+            </div>
+            <p>A trial of oral iron is acceptable as a diagnostic test when anaemia is mild and indices are suggestive. A Hb rise of approximately 10 g/L at 2 weeks supports iron deficiency.</p>
+          </section>
+
+          <!-- 5. ORAL IRON -->
+          <section class="gl-section" id="oral-iron">
+            <div class="gl-section-header">
+              <div class="gl-section-num">5</div>
+              <h2 class="gl-section-title">Oral iron — first-line treatment</h2>
+            </div>
+            <p><strong>Elemental iron 100–200 mg daily</strong> (BSH 2020). Any one of the following regimens, taken 2–3 times daily:</p>
+            <table class="gl-table">
+              <thead><tr><th>Product</th><th>Dose</th><th>Approx. elemental iron / day</th></tr></thead>
+              <tbody>
+                <tr><td>Ferrous sulfate</td><td>200 mg × 2–3 daily</td><td>130–195 mg</td></tr>
+                <tr><td>Ferrous fumarate</td><td>210 mg × 2–3 daily</td><td>138–207 mg</td></tr>
+                <tr><td>Ferrous gluconate</td><td>300 mg × 2–3 daily</td><td>105–140 mg</td></tr>
+              </tbody>
+            </table>
+            <p><strong>Counselling.</strong> Take on an empty stomach 30–60 minutes before a meal. Vitamin C (orange juice or 250 mg ascorbic acid) aids absorption. Avoid tea, coffee, calcium, and antacids at the same time. Warn about nausea, constipation, and black stools. Offer a stool softener for constipation.</p>
+            <p><strong>Review.</strong> Recheck Hb at 2 weeks — expect a rise of approximately 10 g/L. After Hb normalises, continue for 3 months to replete stores.</p>
+            <p><strong>Intolerance.</strong> Dose reduce, change formulation, or move to alternate-day dosing. Continue to review against the 2-week Hb target.</p>
+            <div class="callout warn">
+              <strong>Emerging — not UK standard.</strong> Low-dose / alternate-day oral iron regimens may improve tolerability (Moretti physiological studies; Churchill 2025 UK cohort). BSH 2020 100–200 mg daily remains first-line for established IDA until national guidance changes.
+            </div>
+          </section>
+
+          <!-- 6. TREATMENT FLOW -->
+          <section class="gl-section" id="treatment">
+            <div class="gl-section-header">
+              <div class="gl-section-num">6</div>
+              <h2 class="gl-section-title">Treatment pathway</h2>
+            </div>
+            <p>Confirmed IDA → start oral iron → review Hb at 2 weeks → response? Yes → continue until Hb normalises, then 3 months to replete. No → review adherence and intolerance; consider IV iron (see Section 7).</p>
+            <div class="fig">
+              <img src="anaemia-in-pregnancy-treatment-pathway.svg" alt="Treatment pathway for iron deficiency anaemia in pregnancy: oral iron first-line, 2-week Hb review, amber non-response triggers IV iron consideration.">
+              <div class="fig-caption">Figure 2 · Treatment pathway (view as <a href="anaemia-in-pregnancy-treatment-pathway.svg" target="_blank" rel="noopener">standalone SVG</a>).</div>
+            </div>
+          </section>
+
+          <!-- 7. IV IRON -->
+          <section class="gl-section" id="iv-iron">
+            <div class="gl-section-header">
+              <div class="gl-section-num">7</div>
+              <h2 class="gl-section-title">IV iron</h2>
+            </div>
+            <p><strong>Products:</strong> ferric carboxymaltose (FCM) or ferric derisomaltose (FDI) per local formulary. Confine to second and third trimesters unless clearly necessary.</p>
+            <p><strong>Indications (BSH 2020):</strong></p>
+            <ul>
+              <li>Oral iron intolerance despite a different formulation and dose.</li>
+              <li>Malabsorption — coeliac disease, post-bariatric surgery, IBD.</li>
+              <li>True non-response to adequate oral iron after 2 weeks with confirmed adherence.</li>
+              <li>Severe anaemia (Hb &lt;90 g/L) from second trimester.</li>
+              <li>Late presentation at ≥34 weeks with insufficient time for oral response.</li>
+              <li>Preference for fewer total doses in selected women.</li>
+            </ul>
+            <p><strong>Dose:</strong> body-weight and Hb-based method per the current SPC. Observe per-session and per-week maxima. Always check medicines.org.uk before prescribing.</p>
+            <div class="callout danger">
+              <strong>Administration and monitoring.</strong>
+              <ul>
+                <li>Resuscitation facilities and trained staff at all times.</li>
+                <li><strong>Observe for at least 30 minutes after every dose</strong> (MHRA Drug Safety Update). Routine universal test dose is not required.</li>
+                <li>Avoid where there is a known iron hypersensitivity. Delay where feasible in active infection.</li>
+                <li>Consent covers hypersensitivity risk at any exposure and, for FCM, symptomatic hypophosphataemia.</li>
+                <li>Reassess Hb no earlier than 4 weeks after the final dose — align wording with the current SPC.</li>
+              </ul>
+            </div>
+            <p><strong>Phosphate monitoring after FCM</strong> if any of the following apply: repeated dosing or high cumulative dose, prior bariatric surgery, vitamin D deficiency, or a symptomatic phosphate-wasting disorder.</p>
+            <p><strong>Report</strong> serious adverse events (anaphylaxis, severe hypophosphataemia, extravasation) through the MHRA Yellow Card scheme.</p>
+            <div class="fig">
+              <img src="anaemia-in-pregnancy-iv-iron-pathway.svg" alt="IV iron pathway: confirm indication, confirm T2/T3 suitability, calculate dose per SPC, administer and observe ≥30 min, reassess Hb ≥4 weeks, phosphate check after FCM if at risk, Yellow Card reporting.">
+              <div class="fig-caption">Figure 3 · IV iron operational flow (view as <a href="anaemia-in-pregnancy-iv-iron-pathway.svg" target="_blank" rel="noopener">standalone SVG</a>).</div>
+            </div>
+          </section>
+
+          <!-- 8. POSTPARTUM -->
+          <section class="gl-section" id="postpartum">
+            <div class="gl-section-header">
+              <div class="gl-section-num">8</div>
+              <h2 class="gl-section-title">Postpartum anaemia</h2>
+            </div>
+            <p><strong>Check Hb within 48 hours</strong> if any of: estimated blood loss &gt;500 mL · uncorrected antenatal anaemia · symptoms (tachycardia, breathlessness, dizziness, severe fatigue). Caesarean section alone is not an automatic BSH trigger — record as local policy if your Trust routinely checks.</p>
+            <table class="gl-table">
+              <thead><tr><th>Hb band</th><th>Action</th></tr></thead>
+              <tbody>
+                <tr><td><strong>≥ 100 g/L</strong></td><td>Oral iron; reassurance; review at 6-week postnatal check. Continue iron 3 months after Hb normalises.</td></tr>
+                <tr><td><strong>70–99 g/L</strong></td><td>Oral iron first-line. Consider IV iron where severe fatigue, established breastfeeding difficulty, marked morbidity, or poor anticipated oral adherence. Do not transfuse to a target.</td></tr>
+                <tr><td><strong>&lt; 70 g/L</strong> <em>or</em> symptomatic with bleeding/instability</td><td>Red cell transfusion (typically single-unit with reassessment) plus IV iron to replete stores. K-negative red cells; document consent.</td></tr>
+              </tbody>
+            </table>
+            <div class="fig">
+              <img src="anaemia-in-pregnancy-postpartum-pathway.svg" alt="Postpartum pathway: trigger-based Hb check, three Hb bands, transfusion reserved for Hb below 70 or symptomatic with bleeding.">
+              <div class="fig-caption">Figure 4 · Postpartum pathway (view as <a href="anaemia-in-pregnancy-postpartum-pathway.svg" target="_blank" rel="noopener">standalone SVG</a>).</div>
+            </div>
+            <div class="callout warn">
+              <strong>Caution.</strong> IV iron does not prevent postpartum depression — do not offer it for that indication.
+            </div>
+          </section>
+
+          <!-- 9. TRANSFUSION -->
+          <section class="gl-section" id="transfusion">
+            <div class="gl-section-header">
+              <div class="gl-section-num">9</div>
+              <h2 class="gl-section-title">Transfusion — principles</h2>
+            </div>
+            <ul>
+              <li><strong>Restrictive threshold</strong> Hb &lt;70 g/L, or symptomatic with bleeding / haemodynamic instability (NICE NG24; RCOG GTG47).</li>
+              <li><strong>Single-unit reassess</strong> in non-bleeding women; avoid target-Hb strategies when IV iron is feasible.</li>
+              <li><strong>ABO and RhD compatible</strong>; K-negative red cells for women of childbearing age (reduces anti-K alloimmunisation).</li>
+              <li><strong>CMV-negative</strong> for elective pregnancy transfusion where indicated and feasible without delay. CMV-negative must <strong>not</strong> delay urgent intrapartum or postpartum transfusion. Required for intrauterine and neonatal transfusion.</li>
+              <li>Irradiated components per standard UK indications (congenital immunodeficiency, recent intrauterine transfusion recipient, HLA-matched products, post purine-analogue therapy).</li>
+              <li>Document consent.</li>
+            </ul>
+          </section>
+
+          <!-- 10. URGENT -->
+          <section class="gl-section" id="urgent">
+            <div class="gl-section-header">
+              <div class="gl-section-num">10</div>
+              <h2 class="gl-section-title">Urgent escalation — do not miss</h2>
+            </div>
+            <div class="callout danger">
+              <strong>Escalate urgently if:</strong>
+              <ul>
+                <li>Platelet count &lt;50 × 10⁹/L with haemolytic indices.</li>
+                <li>Hb fall &gt;20 g/L in 24 h without overt bleeding.</li>
+                <li>Suspected TTP — send ADAMTS13 and prepare plasma exchange.</li>
+                <li>Deranged DIC screen — activate the major haemorrhage pathway.</li>
+                <li>Consider HELLP, aHUS, AIHA, acute fatty liver of pregnancy.</li>
+                <li>Anaphylaxis after IV iron — resuscitate and report via Yellow Card.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- 11. COMMON MISTAKES -->
+          <section class="gl-section" id="mistakes">
+            <div class="gl-section-header">
+              <div class="gl-section-num">11</div>
+              <h2 class="gl-section-title">Common mistakes in practice</h2>
+            </div>
+            <ul>
+              <li>Starting empirical iron before excluding haemoglobinopathy.</li>
+              <li>Interpreting ferritin alone during inflammation (CRP raised).</li>
+              <li>Reassessing Hb before 4 weeks after IV iron.</li>
+              <li>Skipping the 30-minute post-IV-iron observation.</li>
+              <li>Transfusing to a target Hb when IV iron is feasible.</li>
+              <li>Giving folate alone when B12 may also be deficient.</li>
+            </ul>
+          </section>
+
+          <!-- 12. AUDIT -->
+          <section class="gl-section" id="audit">
+            <div class="gl-section-header">
+              <div class="gl-section-num">12</div>
+              <h2 class="gl-section-title">Audit indicators</h2>
+            </div>
+            <table class="gl-table">
+              <thead><tr><th>Indicator</th><th>Target</th></tr></thead>
+              <tbody>
+                <tr><td>FBC at booking and at 28 weeks</td><td>≥99%</td></tr>
+                <tr><td>Ferritin sent where indicated</td><td>≥95%</td></tr>
+                <tr><td>Hb ≥100 g/L at delivery</td><td>Benchmark locally; improve year on year</td></tr>
+                <tr><td>Postpartum red cell transfusion rate (per 1000 deliveries)</td><td>Track</td></tr>
+                <tr><td>IV iron rate (per 1000 deliveries)</td><td>Balancing measure</td></tr>
+                <tr><td>Serious adverse events following IV iron</td><td>Report via MHRA Yellow Card</td></tr>
+              </tbody>
+            </table>
+            <p>A named pathway lead is recommended. The downloadable audit workbook contains an indicator sheet, data dictionary, thresholds quick-reference, and sample dashboard.</p>
+          </section>
+
+          <!-- 13. SOURCES -->
+          <section class="gl-section" id="sources">
+            <div class="gl-section-header">
+              <div class="gl-section-num">13</div>
+              <h2 class="gl-section-title">Sources</h2>
+            </div>
+            <ul>
+              <li>Pavord S et al. UK guidelines on the management of iron deficiency in pregnancy. <em>Br J Haematol</em> 2020;188(6):819–830. doi:10.1111/bjh.16221</li>
+              <li>Oteng-Ntim E et al. Management of sickle cell disease in pregnancy. <em>Br J Haematol</em> 2021;194(6):980–995. doi:10.1111/bjh.17671</li>
+              <li>Shah FT et al. Conception and pregnancy in thalassaemia syndromes. <em>Br J Haematol</em> 2024;204(6):2194–2209. doi:10.1111/bjh.19362</li>
+              <li>Bain BJ et al. Significant haemoglobinopathies: screening and diagnosis. <em>Br J Haematol</em> 2023;201(6):1047–1065. doi:10.1111/bjh.18794</li>
+              <li>Fletcher A et al. Laboratory diagnosis of iron deficiency (excluding pregnancy). <em>Br J Haematol</em> 2022;196(3):523–529. doi:10.1111/bjh.17900</li>
+              <li>NICE NG201 Antenatal care; NICE NG24 Blood transfusion.</li>
+              <li>RCOG Green-top 47 Blood transfusion in obstetrics; RCOG Green-top 52 PPH.</li>
+              <li>MBRRACE-UK Saving Lives, Improving Mothers' Care (2024, 2025).</li>
+              <li>MHRA Drug Safety Updates (IV iron; ferric carboxymaltose hypophosphataemia).</li>
+              <li>Specialist Pharmacy Service advice on B12 replacement in pregnancy.</li>
+              <li>NHS Sickle Cell and Thalassaemia Screening Programme.</li>
+              <li>Nicholson L et al. <em>Cochrane</em> 2024; CD016136. doi:10.1002/14651858.CD016136</li>
+              <li>Derman RJ et al. RAPIDIRON. <em>Am J Obstet Gynecol</em> 2025;233(2):120.e1–120.e18.</li>
+              <li>Churchill D et al. Oral iron treatment for anaemia in pregnancy. <em>BMC Pregnancy Childbirth</em> 2025;25(1):863.</li>
+              <li>Bombač Tavčar L et al. 2023–2025 postpartum RCT and sub-studies (fatigue, hypophosphataemia).</li>
+              <li>HOW Collaborative 2025 — emerging consensus on routine ferritin screening.</li>
+            </ul>
+          </section>
+
+          <!-- 14. VERSION -->
+          <section class="gl-section" id="version" style="margin-bottom:0;">
+            <div class="gl-section-header">
+              <div class="gl-section-num">14</div>
+              <h2 class="gl-section-title">Versioning and disclaimer</h2>
+            </div>
+            <p><strong>Version 1.0</strong> · First publication 19 April 2026. Planned annual review or sooner if BSH, NICE, RCOG, MHRA, or SPC wording changes.</p>
+            <p>This guideline supports clinical judgement; it does not replace it. It is intended for use within UK NHS maternity and haematology services. Check the SPC for each IV iron product before prescribing. For educational use. Not for clinical use until local Trust sign-off.</p>
+          </section>
+
+        </article>
+
+        <!-- SIDEBAR -->
+        <aside>
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">On this page</div>
+            <div class="sidebar-card-body">
+              <ul>
+                <li><a href="#scope">1. Scope</a></li>
+                <li><a href="#thresholds">2. Thresholds</a></li>
+                <li><a href="#screening">3. Screening</a></li>
+                <li><a href="#diagnosis">4. Diagnostic pathway</a></li>
+                <li><a href="#oral-iron">5. Oral iron</a></li>
+                <li><a href="#treatment">6. Treatment flow</a></li>
+                <li><a href="#iv-iron">7. IV iron</a></li>
+                <li><a href="#postpartum">8. Postpartum</a></li>
+                <li><a href="#transfusion">9. Transfusion</a></li>
+                <li><a href="#urgent">10. Urgent escalation</a></li>
+                <li><a href="#mistakes">11. Common mistakes</a></li>
+                <li><a href="#audit">12. Audit</a></li>
+                <li><a href="#sources">13. Sources</a></li>
+                <li><a href="#version">14. Versioning</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">Visual pathways</div>
+            <div class="sidebar-card-body">
+              <p style="font-size:0.76rem;color:var(--clr-muted);margin-bottom:10px;line-height:1.5;">Four pathway diagrams (SVG). Open in a new tab.</p>
+              <a href="anaemia-in-pregnancy-diagnostic-pathway.svg" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;padding:8px 12px;background:var(--clr-div-tint);border:1px solid rgba(30,77,140,0.25);border-radius:6px;font-size:0.8rem;font-weight:600;color:var(--clr-div);margin-bottom:6px;">Fig 1 · Diagnostic</a>
+              <a href="anaemia-in-pregnancy-treatment-pathway.svg" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;padding:8px 12px;background:var(--clr-div-tint);border:1px solid rgba(30,77,140,0.25);border-radius:6px;font-size:0.8rem;font-weight:600;color:var(--clr-div);margin-bottom:6px;">Fig 2 · Treatment</a>
+              <a href="anaemia-in-pregnancy-iv-iron-pathway.svg" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;padding:8px 12px;background:var(--clr-div-tint);border:1px solid rgba(30,77,140,0.25);border-radius:6px;font-size:0.8rem;font-weight:600;color:var(--clr-div);margin-bottom:6px;">Fig 3 · IV iron</a>
+              <a href="anaemia-in-pregnancy-postpartum-pathway.svg" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;padding:8px 12px;background:var(--clr-div-tint);border:1px solid rgba(30,77,140,0.25);border-radius:6px;font-size:0.8rem;font-weight:600;color:var(--clr-div);">Fig 4 · Postpartum</a>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">Downloads</div>
+            <div class="sidebar-card-body">
+              <p style="font-size:0.76rem;color:var(--clr-muted);margin-bottom:10px;line-height:1.5;">Full guideline, bedside one-pager, teaching deck, patient leaflet and audit workbook.</p>
+              <a href="anaemia-in-pregnancy-guideline.pdf" download style="display:flex;align-items:center;gap:8px;padding:8px 12px;background:var(--clr-div);color:#fff;border-radius:6px;font-size:0.8rem;font-weight:700;margin-bottom:6px;">Full Guideline (PDF)</a>
+              <a href="anaemia-in-pregnancy-quickref.pdf" download style="display:flex;align-items:center;gap:8px;padding:8px 12px;background:#f3f4f6;border:1px solid var(--clr-border);border-radius:6px;font-size:0.8rem;font-weight:600;color:var(--clr-div);margin-bottom:6px;">One-page Summary (PDF)</a>
+              <a href="anaemia-in-pregnancy-teaching-deck.pdf" download style="display:flex;align-items:center;gap:8px;padding:8px 12px;background:#f3f4f6;border:1px solid var(--clr-border);border-radius:6px;font-size:0.8rem;font-weight:600;color:var(--clr-div);margin-bottom:6px;">Teaching Deck (PDF)</a>
+              <a href="anaemia-in-pregnancy-teaching-deck.pptx" download style="display:flex;align-items:center;gap:8px;padding:8px 12px;background:#f3f4f6;border:1px solid var(--clr-border);border-radius:6px;font-size:0.8rem;font-weight:600;color:var(--clr-div);margin-bottom:6px;">Teaching Deck (PPTX)</a>
+              <a href="anaemia-in-pregnancy-patient-leaflet.docx" download style="display:flex;align-items:center;gap:8px;padding:8px 12px;background:#f3f4f6;border:1px solid var(--clr-border);border-radius:6px;font-size:0.8rem;font-weight:600;color:var(--clr-div);margin-bottom:6px;">Patient Leaflet (DOCX)</a>
+              <a href="anaemia-in-pregnancy-audit.xlsx" download style="display:flex;align-items:center;gap:8px;padding:8px 12px;background:#f3f4f6;border:1px solid var(--clr-border);border-radius:6px;font-size:0.8rem;font-weight:600;color:var(--clr-div);margin-bottom:6px;">Audit Workbook (XLSX)</a>
+              <a href="anaemia-in-pregnancy-logic.json" download style="display:flex;align-items:center;gap:8px;padding:8px 12px;background:#f3f4f6;border:1px solid var(--clr-border);border-radius:6px;font-size:0.8rem;font-weight:600;color:var(--clr-div);">Clinical Logic (JSON)</a>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">Related</div>
+            <div class="sidebar-card-body">
+              <a class="sidebar-related-link" href="guidelines.html#general">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                All General Haematology
+              </a>
+              <a class="sidebar-related-link" href="itp.html">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                ITP in Adults
+              </a>
+              <a class="sidebar-related-link" href="journal-club.html">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                Journal Club
+              </a>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">Evidence basis</div>
+            <div class="sidebar-card-body" style="font-size:0.8rem;color:var(--clr-muted);line-height:1.55;">
+              <p style="margin-bottom:8px;">Primary UK guideline: <strong style="color:var(--clr-text);">BSH 2020</strong> (Pavord et al.) on management of iron deficiency in pregnancy.</p>
+              <p style="margin-bottom:8px;">Companion UK frameworks: <strong style="color:var(--clr-text);">NICE NG201</strong> (antenatal care), <strong style="color:var(--clr-text);">NICE NG24</strong> (transfusion), <strong style="color:var(--clr-text);">RCOG GTG47/52</strong>.</p>
+              <p>Safety wording aligned to <strong style="color:var(--clr-text);">MHRA Drug Safety Updates</strong> and current IV iron SPCs.</p>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="brand-name">Mohsin Haematology Academy</div>
+          <div class="brand-tagline" style="font-size:0.64rem;color:#a7a4a0;letter-spacing:0.07em;text-transform:uppercase;margin-top:3px;font-weight:500;">Clinical Education &amp; Digital Tools</div>
+        </div>
+        <div class="footer-note">
+          <strong>Educational use only.</strong><br>
+          Content does not replace clinical judgement or professional guidelines.<br>
+          <span style="font-size:0.72rem;color:#a7a4a0;opacity:0.8;">Created by Dr. Muhammad Mohsin · Contributor: Muhammad Moaaz · <a href="governance.html">Clinical Governance</a></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
