@@ -2,7 +2,17 @@
 
 Two Python scripts run on every pull request before anything is allowed to
 merge into `main`. Together they form the preflight check referenced in
-`.github/workflows/preflight.yml`.
+`.github/workflows/preflight.yml`. A matching pre-commit hook runs the same
+checks locally so issues are caught before you push.
+
+## First-time setup after cloning
+
+```bash
+bash scripts/install-hooks.sh
+```
+
+Idempotent — safe to re-run. Sets `git config core.hooksPath scripts/hooks`
+so the tracked `pre-commit` hook is the one git uses.
 
 ## `tone_guard.py`
 Blocks banned words in new or changed markdown and HTML files. The word list
@@ -34,12 +44,22 @@ python scripts/preflight.py --skip-links path/to/file.html   # PII only, no netw
 ```
 
 ## Local use before pushing
+
+With the pre-commit hook installed, the checks run automatically every
+commit. To run them manually over the working tree:
+
 ```bash
 # from the repo root
 git diff --name-only --diff-filter=AM origin/main | grep -Ei '\.(md|html)$' > changed.txt
 python scripts/tone_guard.py --files-from changed.txt
 python scripts/preflight.py --files-from changed.txt
 ```
+
+## `hooks/pre-commit`
+Runs `tone_guard.py` and `preflight.py --skip-links` (PII only — keeps the
+commit fast) on staged `.md` and `.html` files. Fails the commit if either
+check fails. Emergency bypass: `git commit --no-verify` (external link
+check in CI will still enforce the rule).
 
 ## Updating the banned-words list
 Edit `BANNED_WORDS` at the top of `tone_guard.py`. Keep entries
