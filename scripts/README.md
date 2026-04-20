@@ -32,7 +32,9 @@ python scripts/tone_guard.py content/guidelines/vte/index.html
 Runs two checks on new or changed markdown and HTML files:
 
 1. PII sweep — NHS numbers, hospital numbers, dates of birth, and common
-   patient-name markers. Any hit fails CI.
+   patient-name markers. DOI / PMID / PMCID identifiers are automatically
+   excluded from the NHS-number check so reference fragments like
+   `DOI:10.1182/blood.2024024631` do not produce false positives.
 2. External link check — HEAD request (fallback to GET) on every http/https
    URL. Allows 200, 301, 302, 303, 307, 308. Fails on 4xx, 5xx, timeouts.
 
@@ -41,6 +43,7 @@ Exit 0 on pass, exit 1 on any PII hit or broken link.
 ```bash
 python scripts/preflight.py --files-from changed.txt
 python scripts/preflight.py --skip-links path/to/file.html   # PII only, no network
+python scripts/preflight.py --self-test                      # regression tests
 ```
 
 ## Local use before pushing

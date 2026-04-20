@@ -68,6 +68,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests beautifulsoup4
 
+      - name: Run preflight self-test (PII regex regressions)
+        run: |
+          python scripts/preflight.py --self-test
+
       - name: Determine changed files
         id: changed
         run: |
