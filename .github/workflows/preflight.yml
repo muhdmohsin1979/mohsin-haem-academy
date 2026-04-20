@@ -25,8 +25,8 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Determine changed files
-        id: changed
+      - name: Compute BASE / HEAD SHAs
+        id: sha
         run: |
           if [ "${{ github.event_name }}" = "pull_request" ]; then
             BASE="${{ github.event.pull_request.base.sha }}"
@@ -35,19 +35,22 @@ jobs:
             BASE="${{ github.event.before }}"
             HEAD="${{ github.sha }}"
           fi
-          # guard against first push with no parent
           if [ -z "$BASE" ] || [ "$BASE" = "0000000000000000000000000000000000000000" ]; then
             BASE=$(git rev-list --max-parents=0 HEAD | tail -1)
           fi
-          git diff --name-only --diff-filter=AM "$BASE" "$HEAD" \
-            | grep -Ei '\.(md|html)$' > changed.txt || true
-          echo "count=$(wc -l < changed.txt | tr -d ' ')" >> "$GITHUB_OUTPUT"
-          cat changed.txt
+          echo "base=$BASE" >> "$GITHUB_OUTPUT"
+          echo "head=$HEAD" >> "$GITHUB_OUTPUT"
 
-      - name: Run tone guard
-        if: steps.changed.outputs.count != '0'
+      - name: Generate unified diff (added lines only)
         run: |
-          python scripts/tone_guard.py --files-from changed.txt
+          git diff --unified=0 -M \
+            "${{ steps.sha.outputs.base }}" "${{ steps.sha.outputs.head }}" \
+            > pr.diff
+          echo "diff size: $(wc -l < pr.diff) lines"
+
+      - name: Run tone guard (diff mode — added lines only)
+        run: |
+          python scripts/tone_guard.py --diff-from pr.diff
 
   preflight:
     name: preflight (PII + link check)

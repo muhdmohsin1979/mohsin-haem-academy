@@ -91,6 +91,18 @@ def _is_reference_identifier(text: str, match_start: int) -> bool:
 URL_RE = re.compile(r"https?://[^\s'\"<>\)\]]+", re.IGNORECASE)
 HTML_HREF_RE = re.compile(r'(?:href|src)\s*=\s*["\'](https?://[^"\']+)["\']', re.IGNORECASE)
 
+# Internal (same-origin) link: any href or src that is not http(s)/mailto/tel/
+# /#-only/protocol-relative.
+HTML_INTERNAL_RE = re.compile(
+    r'(?:href|src)\s*=\s*["\']([^"\']+)["\']',
+    re.IGNORECASE,
+)
+# Anchor / query / external / non-file schemes we skip in the internal check.
+_INTERNAL_SKIP_PREFIXES = (
+    "http://", "https://", "mailto:", "tel:", "javascript:",
+    "data:", "#", "//",
+)
+
 # Domains to skip (rate-limit themselves or block HEAD)
 SKIP_DOMAINS = {
     "doi.org",           # always 301s reliably; no need to hammer
@@ -117,6 +129,47 @@ def extract_links(raw: str, suffix: str) -> list[str]:
     for m in URL_RE.finditer(visible):
         links.add(m.group(0).rstrip(".,;)"))
     return sorted(links)
+
+
+def extract_internal_links(raw: str, suffix: str) -> list[str]:
+    """Return href/src values that point at another file in the repo."""
+    if suffix not in {".html", ".htm"}:
+        return []
+    links: set[str] = set()
+    for m in HTML_INTERNAL_RE.finditer(raw):
+        url = m.group(1).strip()
+        if any(url.startswith(p) for p in _INTERNAL_SKIP_PREFIXES):
+            continue
+        # Drop anchor/query fragments; we only check whether the file exists.
+        url = url.split("#", 1)[0].split("?", 1)[0]
+        if url:
+            links.add(url)
+    return sorted(links)
+
+
+def check_internal_link(src_file: Path, url: str, repo_root: Path) -> tuple[bool, str]:
+    """Resolve `url` relative to `src_file` (or repo_root if absolute) and
+    check whether a file (or a folder's index.html) exists on disk.
+    """
+    if url.startswith("/"):
+        target = (repo_root / url.lstrip("/")).resolve()
+    else:
+        target = (src_file.parent / url).resolve()
+
+    # If the link points to a folder (trailing slash or bare folder), look for
+    # index.html inside. This matches Cloudflare Pages' serving behaviour.
+    if target.is_dir() or url.endswith("/"):
+        index = target / "index.html"
+        if index.is_file():
+            return True, "dir+index.html"
+        return False, f"missing {index}"
+
+    if target.is_file():
+        return True, "file"
+    # Also tolerate .html-less URLs pointing at a file that does exist with .html
+    if target.suffix == "" and target.with_suffix(".html").is_file():
+        return True, "file (.html implied)"
+    return False, f"missing {target}"
 
 
 def scan_pii(path: Path, raw: str, suffix: str) -> list[str]:
@@ -237,17 +290,28 @@ def main() -> int:
         print("preflight: no markdown or HTML files to scan — pass.")
         return 0
 
+    # Repo root = first parent of this script's containing /scripts folder.
+    repo_root = Path(__file__).resolve().parent.parent
+
     pii_hits: list[str] = []
     link_failures: list[str] = []
+    internal_failures: list[str] = []
 
     for f in files:
         raw = f.read_text(encoding="utf-8", errors="replace")
         suffix = f.suffix.lower()
         pii_hits.extend(scan_pii(f, raw, suffix))
 
+        # Internal link check — always run; no network.
+        for url in extract_internal_links(raw, suffix):
+            ok, detail = check_internal_link(f.resolve(), url, repo_root)
+            if not ok:
+                internal_failures.append(f"{f}: internal link '{url}' -> {detail}")
+
         if args.skip_links:
             continue
 
+        # External link check — HEAD/GET over the network.
         for url in extract_links(raw, suffix):
             ok, detail = check_link(url)
             if not ok:
@@ -260,14 +324,20 @@ def main() -> int:
         for h in pii_hits:
             print(f"  {h}")
 
-    if link_failures:
-        print("\nLink failures:")
-        for f in link_failures:
-            print(f"  {f}")
+    if internal_failures:
+        print("\nInternal link failures:")
+        for h in internal_failures:
+            print(f"  {h}")
 
-    if pii_hits or link_failures:
+    if link_failures:
+        print("\nExternal link failures:")
+        for h in link_failures:
+            print(f"  {h}")
+
+    if pii_hits or link_failures or internal_failures:
         print(f"\npreflight: FAIL — {len(pii_hits)} PII hit(s), "
-              f"{len(link_failures)} broken link(s).")
+              f"{len(internal_failures)} internal link failure(s), "
+              f"{len(link_failures)} external link failure(s).")
         return 1
 
     print("preflight: PASS.")

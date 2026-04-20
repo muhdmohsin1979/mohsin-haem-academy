@@ -1,0 +1,72 @@
+name: tag-production
+
+# Stamps every merge to main with a dated, deterministic production tag so
+# rollback becomes a single git command. Tag format:
+#   v<YYYY.MM.DD>-<short-sha>
+# e.g.  v2026.04.21-53362b1
+#
+# Rollback from any past tag:
+#   git reset --hard v2026.04.19-873af6a
+#   git push origin main --force-with-lease   (only if you really intend to)
+# Safer rollback (keeps history):
+#   git revert <merge-commit>
+#   git push origin main
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write  # needed to push tags back to the repo
+
+jobs:
+  tag:
+    name: tag every push to main
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          # Use the provided GITHUB_TOKEN for tag push — a workflow token
+          # with contents: write is sufficient for tag creation.
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure git identity
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Compute tag name
+        id: tag
+        run: |
+          DATE=$(date -u +%Y.%m.%d)
+          SHORT=$(git rev-parse --short=7 HEAD)
+          BASE="v${DATE}-${SHORT}"
+          # If the tag already exists, append -r<run> to avoid collision.
+          if git rev-parse -q --verify "refs/tags/${BASE}" >/dev/null; then
+            BASE="${BASE}-r${{ github.run_number }}"
+          fi
+          echo "name=${BASE}" >> "$GITHUB_OUTPUT"
+
+      - name: Create and push tag
+        run: |
+          TAG="${{ steps.tag.outputs.name }}"
+          MSG="Production deploy $(date -u +'%Y-%m-%d %H:%M UTC') — $(git log -1 --pretty=format:'%s')"
+          git tag -a "$TAG" -m "$MSG"
+          git push origin "$TAG"
+          echo "tagged $TAG"
+
+      - name: Write job summary
+        run: |
+          TAG="${{ steps.tag.outputs.name }}"
+          echo "## Tagged production deploy" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Tag | Commit | Message |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|---|---|---|" >> "$GITHUB_STEP_SUMMARY"
+          echo "| \`$TAG\` | \`$(git rev-parse --short=7 HEAD)\` | $(git log -1 --pretty=format:'%s') |" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "Rollback options:" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Safe: revert the merge commit and push to main." >> "$GITHUB_STEP_SUMMARY"
+          echo "- Destructive: \`git reset --hard <previous-tag> && git push --force-with-lease\` (only if truly needed)." >> "$GITHUB_STEP_SUMMARY"
