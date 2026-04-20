@@ -93,7 +93,31 @@ jobs:
           echo "count=$(wc -l < changed.txt | tr -d ' ')" >> "$GITHUB_OUTPUT"
           cat changed.txt
 
-      - name: Run preflight
+      - name: Compute BASE / HEAD SHAs
+        id: sha
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            BASE="${{ github.event.pull_request.base.sha }}"
+            HEAD="${{ github.event.pull_request.head.sha }}"
+          else
+            BASE="${{ github.event.before }}"
+            HEAD="${{ github.sha }}"
+          fi
+          if [ -z "$BASE" ] || [ "$BASE" = "0000000000000000000000000000000000000000" ]; then
+            BASE=$(git rev-list --max-parents=0 HEAD | tail -1)
+          fi
+          echo "base=$BASE" >> "$GITHUB_OUTPUT"
+          echo "head=$HEAD" >> "$GITHUB_OUTPUT"
+
+      - name: Generate unified diff for external link check
+        run: |
+          git diff --unified=0 -M \
+            "${{ steps.sha.outputs.base }}" "${{ steps.sha.outputs.head }}" \
+            > pr.diff
+
+      - name: Run preflight (diff mode for external link check)
         if: steps.changed.outputs.count != '0'
         run: |
-          python scripts/preflight.py --files-from changed.txt
+          python scripts/preflight.py \
+            --files-from changed.txt \
+            --diff-from pr.diff

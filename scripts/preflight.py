@@ -215,6 +215,55 @@ def read_file_list(path: Path) -> list[Path]:
     return out
 
 
+def extract_added_urls(diff_path: Path) -> list[tuple[str, str]]:
+    """Parse a unified diff and return [(file, url)] for every http/https URL
+    that appears on an ADDED line (prefix '+', excluding '+++' headers).
+    Used by --diff-from mode so external link-checking only touches URLs in
+    NEW content, never in pre-existing legacy content that was renamed.
+    """
+    urls: list[tuple[str, str]] = []
+    try:
+        diff = diff_path.read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return urls
+
+    current_file: str | None = None
+    current_is_text = False
+    for raw_line in diff.splitlines():
+        if raw_line.startswith("+++ "):
+            p = raw_line[4:].strip()
+            if p.startswith(("a/", "b/")):
+                p = p[2:]
+            if p == "/dev/null":
+                current_file = None
+                current_is_text = False
+            else:
+                current_file = p
+                current_is_text = p.lower().endswith(
+                    (".md", ".markdown", ".html", ".htm")
+                )
+            continue
+        if raw_line.startswith("--- ") or raw_line.startswith("@@"):
+            continue
+        if not current_is_text or current_file is None:
+            continue
+        if raw_line.startswith("+") and not raw_line.startswith("+++"):
+            added = raw_line[1:]
+            for m in URL_RE.finditer(added):
+                urls.append((current_file, m.group(0).rstrip(".,;)")))
+            for m in HTML_HREF_RE.finditer(added):
+                urls.append((current_file, m.group(1)))
+    # dedupe while preserving order
+    seen: set[tuple[str, str]] = set()
+    out: list[tuple[str, str]] = []
+    for item in urls:
+        if item in seen:
+            continue
+        seen.add(item)
+        out.append(item)
+    return out
+
+
 def _self_test() -> int:
     """Run the internal regression tests for PII detection.
 
@@ -271,9 +320,15 @@ def main() -> int:
     parser.add_argument("--files-from", type=Path)
     parser.add_argument("paths", nargs="*", type=Path)
     parser.add_argument("--skip-links", action="store_true",
-                        help="Do not hit the network; PII check only.")
+                        help="Do not hit the network; PII + internal link only.")
     parser.add_argument("--self-test", action="store_true",
                         help="Run the internal PII-regex regression tests.")
+    parser.add_argument("--diff-from", type=Path,
+                        help="Unified diff. When given, the external link "
+                             "check only runs on URLs in ADDED lines — "
+                             "pre-existing URLs in legacy content are not "
+                             "re-verified. PII and internal link checks still "
+                             "run on the specified files in full.")
     args = parser.parse_args()
 
     if args.self_test:
@@ -308,14 +363,26 @@ def main() -> int:
             if not ok:
                 internal_failures.append(f"{f}: internal link '{url}' -> {detail}")
 
-        if args.skip_links:
-            continue
-
-        # External link check — HEAD/GET over the network.
-        for url in extract_links(raw, suffix):
-            ok, detail = check_link(url)
-            if not ok:
-                link_failures.append(f"{f}: {url} -> {detail}")
+    # External link check.
+    if not args.skip_links:
+        if args.diff_from and args.diff_from.exists():
+            # Diff mode — only URLs on ADDED lines are checked.
+            added_urls = extract_added_urls(args.diff_from)
+            print(f"preflight: external link check — {len(added_urls)} "
+                  f"URL(s) on added lines in diff.")
+            for src_file, url in added_urls:
+                ok, detail = check_link(url)
+                if not ok:
+                    link_failures.append(f"{src_file}: {url} -> {detail}")
+        else:
+            # Full-file mode — every external URL in every scanned file.
+            for f in files:
+                raw = f.read_text(encoding="utf-8", errors="replace")
+                suffix = f.suffix.lower()
+                for url in extract_links(raw, suffix):
+                    ok, detail = check_link(url)
+                    if not ok:
+                        link_failures.append(f"{f}: {url} -> {detail}")
 
     print(f"preflight: scanned {len(files)} file(s).")
 

@@ -44,20 +44,25 @@ Runs three checks on new or changed markdown and HTML files:
 1. PII sweep — NHS numbers, hospital numbers, dates of birth, and common
    patient-name markers. DOI / PMID / PMCID identifiers are automatically
    excluded from the NHS-number check so reference fragments like
-   `DOI:10.1182/blood.2024024631` do not produce false positives.
+   `DOI:10.1182/blood.2024024631` do not produce false positives. Runs on
+   the listed files in full (fast; DOI suppression handles false positives).
 2. Internal link check — every `href` / `src` that points at another file
    in the repo is resolved on disk. Folder URLs (trailing slash) require an
    `index.html` inside. No network is used. Always runs, even with
-   `--skip-links`.
+   `--skip-links`. Runs on the listed files in full.
 3. External link check — HEAD request (fallback to GET) on every http/https
    URL. Allows 200, 301, 302, 303, 307, 308. Fails on 4xx, 5xx, timeouts.
+   When `--diff-from <path>` is passed, checks only URLs on ADDED lines —
+   pre-existing URLs in legacy content that was merely renamed or edited
+   elsewhere are not re-verified. This is what CI and the pre-commit hook use.
 
 Exit 0 on pass, exit 1 on any PII hit or broken link.
 
 ```bash
-python scripts/preflight.py --files-from changed.txt
-python scripts/preflight.py --skip-links path/to/file.html   # PII + internal links only
-python scripts/preflight.py --self-test                      # regression tests
+python scripts/preflight.py --files-from changed.txt --diff-from pr.diff   # CI mode
+python scripts/preflight.py --files-from changed.txt                       # full mode
+python scripts/preflight.py --skip-links path/to/file.html                 # PII + internal only
+python scripts/preflight.py --self-test                                    # regression tests
 ```
 
 ## Local use before pushing
