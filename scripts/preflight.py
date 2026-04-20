@@ -62,6 +62,30 @@ PII_PATTERNS = [
     ("Patient name marker", PATIENT_MARKER_RE),
 ]
 
+# A reference-identifier marker, followed only by word characters, whitespace,
+# or the separators typically found inside a DOI / PMID / PMCID string
+# (colon, equals, dot, slash, hyphen, brackets, square brackets). If such a
+# run reaches the end of the lead (i.e. directly adjoins the matched digits),
+# the matched digits are part of a reference identifier — not patient PII.
+_REF_MARKER_AT_END_RE = re.compile(
+    r"(?:DOI|doi\.org|dx\.doi\.org|PMID|PMCID|PMC|10\.\d{3,6})"
+    r"[\w\s:=./\-\[\]()]*$",
+    re.IGNORECASE,
+)
+
+
+def _is_reference_identifier(text: str, match_start: int) -> bool:
+    """True if an NHS-number match is actually a DOI / PMID / PMCID fragment.
+
+    Looks at up to 80 chars of the lead immediately before the match. Returns
+    True if a reference-identifier marker (DOI, PMID, PMCID, PMC, doi.org,
+    10.NNNN) appears and is connected to the match by a run of word chars,
+    whitespace, or common identifier separators (`:` `=` `.` `/` `-` `[` `]`).
+    """
+    window_start = max(0, match_start - 80)
+    lead = text[window_start:match_start]
+    return bool(_REF_MARKER_AT_END_RE.search(lead))
+
 # --- Link extraction -------------------------------------------------------
 
 URL_RE = re.compile(r"https?://[^\s'\"<>\)\]]+", re.IGNORECASE)
@@ -100,6 +124,10 @@ def scan_pii(path: Path, raw: str, suffix: str) -> list[str]:
     hits = []
     for label, pattern in PII_PATTERNS:
         for m in pattern.finditer(visible):
+            # Suppress NHS-number false positives on reference identifiers
+            # (DOI suffixes, PMIDs, PMCIDs).
+            if label == "NHS number" and _is_reference_identifier(visible, m.start()):
+                continue
             snippet = m.group(0)
             hits.append(f"{path}: possible {label} — '{snippet}'")
     return hits
@@ -134,13 +162,69 @@ def read_file_list(path: Path) -> list[Path]:
     return out
 
 
+def _self_test() -> int:
+    """Run the internal regression tests for PII detection.
+
+    Verifies that the NHS-number regex suppresses DOI / PMID / PMCID
+    false positives but still catches genuine 10-digit identifiers.
+    """
+    cases_no_hit = [
+        ("DOI:10.1182/blood.2024024631",          "See reference [DOI:10.1182/blood.2024024631]"),
+        ("doi.org URL",                            "https://doi.org/10.1056/NEJMoa2024024631"),
+        ("10.1182 DOI prefix",                     "Published Blood 2024 (10.1182/blood.2024024631)"),
+        ("PMID:1234567890",                        "PMID:1234567890 — Al-Sawaf et al"),
+        ("PMID 1234567890 (space)",                "[PMID 1234567890]"),
+        ("PMID: 1234567890 (colon+space)",         "Reference PMID: 1234567890 confirms this."),
+        ("PMCID:PMC1234567890",                    "PMCID:PMC1234567890"),
+        ("PMCID: PMC1234567890",                   "PMCID: PMC1234567890."),
+        ("DOI= (equals form)",                     "DOI=10.1182/blood.2024024631"),
+        ("DOI in bracket then slash",              "[DOI:10.1182/blood.2024024631] A2"),
+    ]
+    cases_one_hit = [
+        ("bare 10-digit NHS-style",   "Patient NHS 123 456 7890 presented with..."),
+        ("10-digit trust ref",        "Trust reference 9876543210 from casenote system."),
+        ("prose clinical note",       "Seen today: patient 2345678901 on DOAC therapy."),
+        ("no marker in lead",         "The number 1234567890 was reported."),
+    ]
+
+    failures = 0
+    for label, text in cases_no_hit:
+        hits = [h for h in scan_pii(Path("<self-test>"), text, ".md") if "NHS number" in h]
+        if hits:
+            failures += 1
+            print(f"FAIL  expected 0 NHS hits — {label}")
+            for h in hits:
+                print(f"      -> {h}")
+        else:
+            print(f"PASS  {label}")
+    for label, text in cases_one_hit:
+        hits = [h for h in scan_pii(Path("<self-test>"), text, ".md") if "NHS number" in h]
+        if len(hits) != 1:
+            failures += 1
+            print(f"FAIL  expected 1 NHS hit, got {len(hits)} — {label}")
+            for h in hits:
+                print(f"      -> {h}")
+        else:
+            print(f"PASS  {label}")
+
+    total = len(cases_no_hit) + len(cases_one_hit)
+    passed = total - failures
+    print(f"\nself-test: {passed}/{total} passed.")
+    return 0 if failures == 0 else 1
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="PII + link check for new content.")
     parser.add_argument("--files-from", type=Path)
     parser.add_argument("paths", nargs="*", type=Path)
     parser.add_argument("--skip-links", action="store_true",
                         help="Do not hit the network; PII check only.")
+    parser.add_argument("--self-test", action="store_true",
+                        help="Run the internal PII-regex regression tests.")
     args = parser.parse_args()
+
+    if args.self_test:
+        return _self_test()
 
     files: list[Path] = list(args.paths)
     if args.files_from and args.files_from.exists():
