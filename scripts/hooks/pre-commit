@@ -11,34 +11,40 @@ set -euo pipefail
 REPO_ROOT="$(git rev-parse --show-toplevel)"
 cd "$REPO_ROOT"
 
-# 1. Collect staged .md and .html files (Added or Modified, not Deleted).
+# 1. Generate a unified diff of staged changes, zero-context so only actually
+#    added lines get scanned (not unchanged surrounding lines from a rename).
+STAGED_DIFF=$(mktemp)
 STAGED_LIST=$(mktemp)
-trap 'rm -f "$STAGED_LIST"' EXIT
+trap 'rm -f "$STAGED_DIFF" "$STAGED_LIST"' EXIT
+
+git diff --cached --unified=0 -M > "$STAGED_DIFF"
 git diff --cached --name-only --diff-filter=AM \
   | grep -Ei '\.(md|html)$' > "$STAGED_LIST" || true
 
-if [ ! -s "$STAGED_LIST" ]; then
-  # No markdown or HTML changes staged — skip silently.
+# If no staged .md / .html content at all, skip silently.
+if [ ! -s "$STAGED_LIST" ] && [ ! -s "$STAGED_DIFF" ]; then
   exit 0
 fi
 
-echo "pre-commit: scanning $(wc -l < "$STAGED_LIST" | tr -d ' ') staged file(s)..."
+echo "pre-commit: scanning staged changes..."
 
-# 2. Run tone_guard.
-if ! python3 scripts/tone_guard.py --files-from "$STAGED_LIST"; then
+# 2. Tone guard — diff mode (only added lines checked).
+if ! python3 scripts/tone_guard.py --diff-from "$STAGED_DIFF"; then
   echo ""
-  echo "pre-commit: tone_guard FAILED. Fix the flagged lines and re-stage."
+  echo "pre-commit: tone_guard FAILED. Fix the flagged NEW lines and re-stage."
   echo "To bypass (emergency only): git commit --no-verify"
   exit 1
 fi
 
-# 3. Run preflight with --skip-links to keep the commit fast.
-#    External link checking runs in CI; here we only do PII sweep.
-if ! python3 scripts/preflight.py --files-from "$STAGED_LIST" --skip-links; then
-  echo ""
-  echo "pre-commit: preflight FAILED. Fix the PII hit(s) and re-stage."
-  echo "To bypass (emergency only): git commit --no-verify"
-  exit 1
+# 3. Preflight — PII + internal link check on the staged files.
+#    External link check is CI-only (--skip-links keeps the commit fast).
+if [ -s "$STAGED_LIST" ]; then
+  if ! python3 scripts/preflight.py --files-from "$STAGED_LIST" --skip-links; then
+    echo ""
+    echo "pre-commit: preflight FAILED. Fix the PII / internal-link issue(s) and re-stage."
+    echo "To bypass (emergency only): git commit --no-verify"
+    exit 1
+  fi
 fi
 
 echo "pre-commit: PASS."
