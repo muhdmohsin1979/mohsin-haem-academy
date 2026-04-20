@@ -1,0 +1,40 @@
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*-token.rtf
+*_token.rtf
+.github-token.rtf
+
+# Local scratch
+private/
+scratch/
+
+# Python tooling
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+venv/
+.venv/
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build / cache (future-proof for when/if a build step is added)
+node_modules/
+dist/
+build/
+.cache/
