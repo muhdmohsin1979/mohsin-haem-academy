@@ -1,31 +1,55 @@
-# Legacy URL redirects — preserve every old path after the content restructure.
-# Format: <old path>   <new path>   <status>
-# 301 = permanent; Cloudflare caches and search engines update.
+# Mohsin Haematology Academy — URL routing for Cloudflare Pages.
+# Evaluated top-to-bottom; first matching rule wins.
+# Format: <from>   <to>   <status>
+#   200 = internal rewrite (URL stays the same, content served from the target path)
+#   301 = permanent redirect (browser URL changes)
 
-/anaemia-in-pregnancy.html   /guidelines/anaemia-in-pregnancy/   301
-/anaemia-in-pregnancy-audit.xlsx   /guidelines/anaemia-in-pregnancy/audit.xlsx   301
-/anaemia-in-pregnancy-diagnostic-pathway.svg   /guidelines/anaemia-in-pregnancy/diagnostic-pathway.svg   301
-/anaemia-in-pregnancy-guideline.pdf   /guidelines/anaemia-in-pregnancy/guideline.pdf   301
-/anaemia-in-pregnancy-iv-iron-pathway.svg   /guidelines/anaemia-in-pregnancy/iv-iron-pathway.svg   301
-/anaemia-in-pregnancy-logic.json   /guidelines/anaemia-in-pregnancy/logic.json   301
+# --- Folder-style guideline URLs — serve index.html in place (URL preserved) ---
+/guidelines/anaemia-in-pregnancy/   /guidelines/anaemia-in-pregnancy/index.html   200
+/guidelines/cll/                    /guidelines/cll/index.html                    200
+/guidelines/itp/                    /guidelines/itp/index.html                    200
+/guidelines/vte-cancer/             /guidelines/vte-cancer/index.html             200
+
+# --- No-trailing-slash → clean trailing-slash form (browser URL updated) ---
+/guidelines/anaemia-in-pregnancy    /guidelines/anaemia-in-pregnancy/             301
+/guidelines/cll                     /guidelines/cll/                              301
+/guidelines/itp                     /guidelines/itp/                              301
+/guidelines/vte-cancer              /guidelines/vte-cancer/                       301
+
+# --- Legacy HTML URLs — permanently redirect to new clean folder URLs ---
+/anaemia-in-pregnancy.html          /guidelines/anaemia-in-pregnancy/             301
+/cll.html                           /guidelines/cll/                              301
+/itp.html                           /guidelines/itp/                              301
+/vte-cancer.html                    /guidelines/vte-cancer/                       301
+
+# --- Legacy asset URLs — permanently redirect to new paths ---
+# Anaemia in pregnancy
+/anaemia-in-pregnancy-audit.xlsx             /guidelines/anaemia-in-pregnancy/audit.xlsx             301
+/anaemia-in-pregnancy-diagnostic-pathway.svg /guidelines/anaemia-in-pregnancy/diagnostic-pathway.svg 301
+/anaemia-in-pregnancy-guideline.pdf          /guidelines/anaemia-in-pregnancy/guideline.pdf          301
+/anaemia-in-pregnancy-iv-iron-pathway.svg    /guidelines/anaemia-in-pregnancy/iv-iron-pathway.svg    301
+/anaemia-in-pregnancy-logic.json             /guidelines/anaemia-in-pregnancy/logic.json             301
 /anaemia-in-pregnancy-patient-leaflet.docx   /guidelines/anaemia-in-pregnancy/patient-leaflet.docx   301
-/anaemia-in-pregnancy-postpartum-pathway.svg   /guidelines/anaemia-in-pregnancy/postpartum-pathway.svg   301
-/anaemia-in-pregnancy-quickref.pdf   /guidelines/anaemia-in-pregnancy/quickref.pdf   301
-/anaemia-in-pregnancy-teaching-deck.pdf   /guidelines/anaemia-in-pregnancy/teaching-deck.pdf   301
-/anaemia-in-pregnancy-teaching-deck.pptx   /guidelines/anaemia-in-pregnancy/teaching-deck.pptx   301
-/anaemia-in-pregnancy-treatment-pathway.svg   /guidelines/anaemia-in-pregnancy/treatment-pathway.svg   301
-/cll.html   /guidelines/cll/   301
+/anaemia-in-pregnancy-postpartum-pathway.svg /guidelines/anaemia-in-pregnancy/postpartum-pathway.svg 301
+/anaemia-in-pregnancy-quickref.pdf           /guidelines/anaemia-in-pregnancy/quickref.pdf           301
+/anaemia-in-pregnancy-teaching-deck.pdf      /guidelines/anaemia-in-pregnancy/teaching-deck.pdf      301
+/anaemia-in-pregnancy-teaching-deck.pptx     /guidelines/anaemia-in-pregnancy/teaching-deck.pptx     301
+/anaemia-in-pregnancy-treatment-pathway.svg  /guidelines/anaemia-in-pregnancy/treatment-pathway.svg  301
+
+# CLL
 /cll-algorithm.excalidraw   /guidelines/cll/algorithm.excalidraw   301
-/cll-algorithm.svg   /guidelines/cll/algorithm.svg   301
-/cll-guideline.pdf   /guidelines/cll/guideline.pdf   301
-/cll-quickref.pdf   /guidelines/cll/quickref.pdf   301
-/itp.html   /guidelines/itp/   301
+/cll-algorithm.svg          /guidelines/cll/algorithm.svg          301
+/cll-guideline.pdf          /guidelines/cll/guideline.pdf          301
+/cll-quickref.pdf           /guidelines/cll/quickref.pdf           301
+
+# ITP
 /itp-algorithm.excalidraw   /guidelines/itp/algorithm.excalidraw   301
-/itp-algorithm.svg   /guidelines/itp/algorithm.svg   301
-/itp-guideline.pdf   /guidelines/itp/guideline.pdf   301
-/itp-quickref.pdf   /guidelines/itp/quickref.pdf   301
-/vte-cancer.html   /guidelines/vte-cancer/   301
+/itp-algorithm.svg          /guidelines/itp/algorithm.svg          301
+/itp-guideline.pdf          /guidelines/itp/guideline.pdf          301
+/itp-quickref.pdf           /guidelines/itp/quickref.pdf           301
+
+# VTE-cancer (the cat-* assets — CAT = Cancer-Associated Thrombosis)
 /cat-algorithm.excalidraw   /guidelines/vte-cancer/algorithm.excalidraw   301
-/cat-algorithm.svg   /guidelines/vte-cancer/algorithm.svg   301
-/cat-guideline.pdf   /guidelines/vte-cancer/guideline.pdf   301
-/cat-quickref.pdf   /guidelines/vte-cancer/quickref.pdf   301
+/cat-algorithm.svg          /guidelines/vte-cancer/algorithm.svg          301
+/cat-guideline.pdf          /guidelines/vte-cancer/guideline.pdf          301
+/cat-quickref.pdf           /guidelines/vte-cancer/quickref.pdf           301
