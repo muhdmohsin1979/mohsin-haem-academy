@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+#
+# pre-commit — runs the publishing guardrails on staged files before every
+# commit, so errors are caught locally instead of in CI.
+#
+# Installed by scripts/install-hooks.sh (sets core.hooksPath).
+# Bypass (emergency only): git commit --no-verify
+
+set -euo pipefail
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+cd "$REPO_ROOT"
+
+# 1. Collect staged .md and .html files (Added or Modified, not Deleted).
+STAGED_LIST=$(mktemp)
+trap 'rm -f "$STAGED_LIST"' EXIT
+git diff --cached --name-only --diff-filter=AM \
+  | grep -Ei '\.(md|html)$' > "$STAGED_LIST" || true
+
+if [ ! -s "$STAGED_LIST" ]; then
+  # No markdown or HTML changes staged — skip silently.
+  exit 0
+fi
+
+echo "pre-commit: scanning $(wc -l < "$STAGED_LIST" | tr -d ' ') staged file(s)..."
+
+# 2. Run tone_guard.
+if ! python3 scripts/tone_guard.py --files-from "$STAGED_LIST"; then
+  echo ""
+  echo "pre-commit: tone_guard FAILED. Fix the flagged lines and re-stage."
+  echo "To bypass (emergency only): git commit --no-verify"
+  exit 1
+fi
+
+# 3. Run preflight with --skip-links to keep the commit fast.
+#    External link checking runs in CI; here we only do PII sweep.
+if ! python3 scripts/preflight.py --files-from "$STAGED_LIST" --skip-links; then
+  echo ""
+  echo "pre-commit: preflight FAILED. Fix the PII hit(s) and re-stage."
+  echo "To bypass (emergency only): git commit --no-verify"
+  exit 1
+fi
+
+echo "pre-commit: PASS."
+exit 0
