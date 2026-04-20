@@ -1,0 +1,31 @@
+# Legacy URL redirects — preserve every old path after the content restructure.
+# Format: <old path>   <new path>   <status>
+# 301 = permanent; Cloudflare caches and search engines update.
+
+/anaemia-in-pregnancy.html   /guidelines/anaemia-in-pregnancy/   301
+/anaemia-in-pregnancy-audit.xlsx   /guidelines/anaemia-in-pregnancy/audit.xlsx   301
+/anaemia-in-pregnancy-diagnostic-pathway.svg   /guidelines/anaemia-in-pregnancy/diagnostic-pathway.svg   301
+/anaemia-in-pregnancy-guideline.pdf   /guidelines/anaemia-in-pregnancy/guideline.pdf   301
+/anaemia-in-pregnancy-iv-iron-pathway.svg   /guidelines/anaemia-in-pregnancy/iv-iron-pathway.svg   301
+/anaemia-in-pregnancy-logic.json   /guidelines/anaemia-in-pregnancy/logic.json   301
+/anaemia-in-pregnancy-patient-leaflet.docx   /guidelines/anaemia-in-pregnancy/patient-leaflet.docx   301
+/anaemia-in-pregnancy-postpartum-pathway.svg   /guidelines/anaemia-in-pregnancy/postpartum-pathway.svg   301
+/anaemia-in-pregnancy-quickref.pdf   /guidelines/anaemia-in-pregnancy/quickref.pdf   301
+/anaemia-in-pregnancy-teaching-deck.pdf   /guidelines/anaemia-in-pregnancy/teaching-deck.pdf   301
+/anaemia-in-pregnancy-teaching-deck.pptx   /guidelines/anaemia-in-pregnancy/teaching-deck.pptx   301
+/anaemia-in-pregnancy-treatment-pathway.svg   /guidelines/anaemia-in-pregnancy/treatment-pathway.svg   301
+/cll.html   /guidelines/cll/   301
+/cll-algorithm.excalidraw   /guidelines/cll/algorithm.excalidraw   301
+/cll-algorithm.svg   /guidelines/cll/algorithm.svg   301
+/cll-guideline.pdf   /guidelines/cll/guideline.pdf   301
+/cll-quickref.pdf   /guidelines/cll/quickref.pdf   301
+/itp.html   /guidelines/itp/   301
+/itp-algorithm.excalidraw   /guidelines/itp/algorithm.excalidraw   301
+/itp-algorithm.svg   /guidelines/itp/algorithm.svg   301
+/itp-guideline.pdf   /guidelines/itp/guideline.pdf   301
+/itp-quickref.pdf   /guidelines/itp/quickref.pdf   301
+/vte-cancer.html   /guidelines/vte-cancer/   301
+/cat-algorithm.excalidraw   /guidelines/vte-cancer/algorithm.excalidraw   301
+/cat-algorithm.svg   /guidelines/vte-cancer/algorithm.svg   301
+/cat-guideline.pdf   /guidelines/vte-cancer/guideline.pdf   301
+/cat-quickref.pdf   /guidelines/vte-cancer/quickref.pdf   301
