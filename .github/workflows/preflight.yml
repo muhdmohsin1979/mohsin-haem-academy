@@ -41,10 +41,13 @@ jobs:
           echo "base=$BASE" >> "$GITHUB_OUTPUT"
           echo "head=$HEAD" >> "$GITHUB_OUTPUT"
 
-      - name: Generate unified diff (added lines only)
+      - name: Generate unified diff (added lines only, excluding docs/templates)
         run: |
+          # docs/templates/* contain FILL IN placeholder text which would
+          # false-positive the tone guard. They are not published pages.
           git diff --unified=0 -M \
             "${{ steps.sha.outputs.base }}" "${{ steps.sha.outputs.head }}" \
+            -- . ':(exclude)docs/templates/**' \
             > pr.diff
           echo "diff size: $(wc -l < pr.diff) lines"
 
@@ -88,8 +91,14 @@ jobs:
           if [ -z "$BASE" ] || [ "$BASE" = "0000000000000000000000000000000000000000" ]; then
             BASE=$(git rev-list --max-parents=0 HEAD | tail -1)
           fi
+          # Scan .md and .html, but SKIP docs/templates/* — those files
+          # contain placeholder URLs and FILL IN markers that would fail
+          # the link and PII checks for no real reason (they are not
+          # served). Authors start from these files but the output is
+          # always placed under /guidelines/<topic>/ and gets its own scan.
           git diff --name-only --diff-filter=AM "$BASE" "$HEAD" \
-            | grep -Ei '\.(md|html)$' > changed.txt || true
+            | grep -Ei '\.(md|html)$' \
+            | grep -vE '^docs/templates/' > changed.txt || true
           echo "count=$(wc -l < changed.txt | tr -d ' ')" >> "$GITHUB_OUTPUT"
           cat changed.txt
 
@@ -113,6 +122,7 @@ jobs:
         run: |
           git diff --unified=0 -M \
             "${{ steps.sha.outputs.base }}" "${{ steps.sha.outputs.head }}" \
+            -- . ':(exclude)docs/templates/**' \
             > pr.diff
 
       - name: Run preflight (diff mode for external link check)
