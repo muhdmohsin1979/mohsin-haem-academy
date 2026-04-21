@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!--
+    Mohsin Haematology Academy — clinical tool page template
+    ========================================================
+    Every new tool/guideline in /guidelines/<topic>/index.html should start
+    from this file. It hard-codes the non-negotiable page structure required
+    by the roadmap (Phase 2):
+
+        Input -> Output -> Interpretation -> Suggested Action ->
+        Guideline Basis -> Last Updated
+
+    Replace every <!-- FILL IN --> block with real content, then run the
+    usual draft-first workflow (branch, PR, preview, deploy).
+
+    Banned-words list is enforced in CI. When in doubt, run locally:
+        python scripts/tone_guard.py --files-from <this-file>
+  -->
+  <title><!-- FILL IN: e.g. Neutropenic Sepsis — Mohsin Haematology Academy --></title>
+  <meta name="description" content="<!-- FILL IN: 150-160 characters; state what the tool does and which guideline it anchors to. Target one clinical search query. -->" />
+  <link rel="canonical" href="https://mohsinhaemacademy.com/guidelines/<!-- slug -->/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Use the existing house style (see any current /guidelines/*/index.html for the full stylesheet).
+       Copy the :root colour tokens and typography rules from an existing page rather than diverging. */
+  </style>
+</head>
+<body>
+
+  <header class="site-nav">
+    <!-- Nav bar — links back up two levels (../..) to root hub pages -->
+    <a href="../../index.html" class="brand">
+      <img src="../../logo.png" alt="Mohsin Haematology Academy logo" />
+    </a>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../guidelines.html">Guidelines</a>
+      <a href="../../education.html">Education</a>
+      <a href="../../journal-club.html">Journal Club</a>
+      <a href="../../about.html">About</a>
+      <a href="../../haemcalc.html" class="nav-cta">Open HaemCalc</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         HEADER BLOCK
+         ============================================================ -->
+    <section class="tool-header">
+      <h1><!-- FILL IN: clinical topic, e.g. Neutropenic Sepsis --></h1>
+      <p class="lede"><!-- FILL IN: one sentence. What decision does this tool support? --></p>
+      <p class="version">
+        v1.0 &middot; Updated <!-- YYYY-MM-DD --> &middot;
+        Author: Dr Muhammad Mohsin, Consultant Haematologist
+      </p>
+    </section>
+
+    <!-- ============================================================
+         1. INPUT
+         What the clinician collects before opening this tool.
+         ============================================================ -->
+    <section id="input">
+      <h2>1. Input</h2>
+      <p><!-- FILL IN: what data the clinician is expected to have to hand. Vitals, bloods, culture status, recent chemotherapy date, etc. --></p>
+      <ul>
+        <li><!-- input item --></li>
+        <li><!-- input item --></li>
+      </ul>
+    </section>
+
+    <!-- ============================================================
+         2. OUTPUT
+         What the tool returns when inputs are entered.
+         ============================================================ -->
+    <section id="output">
+      <h2>2. Output</h2>
+      <p><!-- FILL IN: numeric score, risk band, pathway branch, or categorical decision. --></p>
+    </section>
+
+    <!-- ============================================================
+         3. INTERPRETATION
+         What the output means clinically.
+         ============================================================ -->
+    <section id="interpretation">
+      <h2>3. Interpretation</h2>
+      <p><!-- FILL IN: what each output band means for this patient. Do not restate the output — translate it. --></p>
+    </section>
+
+    <!-- ============================================================
+         4. SUGGESTED ACTION
+         The concrete next step, clearly bounded.
+         ============================================================ -->
+    <section id="suggested-action">
+      <h2>4. Suggested Action</h2>
+      <p class="disclaimer">
+        This tool supports, not replaces, clinical judgement. Local policies take precedence.
+      </p>
+      <ol>
+        <li><!-- action step --></li>
+        <li><!-- action step --></li>
+      </ol>
+      <div class="red-flags">
+        <h3>Red flags — escalate immediately</h3>
+        <ul>
+          <li><!-- red flag --></li>
+          <li><!-- red flag --></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         5. GUIDELINE BASIS
+         Anchoring to named, verifiable sources.
+         ============================================================ -->
+    <section id="guideline-basis">
+      <h2>5. Guideline Basis</h2>
+      <ul>
+        <li><!-- e.g. NICE NG51 — Sepsis: recognition, diagnosis and early management (2016, updated 2024) --></li>
+        <li><!-- e.g. BSH 2024 — Cancer-Associated Thrombosis (Hunt et al, Br J Haematol) --></li>
+        <li><!-- additional sources --></li>
+      </ul>
+    </section>
+
+    <!-- ============================================================
+         6. HOW TO CITE THIS PAGE
+         ============================================================ -->
+    <section id="cite">
+      <h2>How to cite this page</h2>
+      <p><strong>APA:</strong>
+        Mohsin M. (<!-- year -->). <em><!-- tool title --></em>. Mohsin Haematology Academy.
+        https://mohsinhaemacademy.com/guidelines/<!-- slug -->/
+      </p>
+      <p><strong>Vancouver:</strong>
+        Mohsin M. <!-- tool title -->. Mohsin Haematology Academy;
+        <!-- year -->. Available from:
+        https://mohsinhaemacademy.com/guidelines/<!-- slug -->/
+      </p>
+      <details>
+        <summary>BibTeX</summary>
+<pre>@misc{mohsin_<!-- slug_underscored -->_<!-- year -->,
+  author = {Mohsin, Muhammad},
+  title  = {<!-- tool title -->},
+  year   = {<!-- year -->},
+  url    = {https://mohsinhaemacademy.com/guidelines/<!-- slug -->/},
+  note   = {Mohsin Haematology Academy}
+}</pre>
+      </details>
+    </section>
+
+    <!-- ============================================================
+         7. FEEDBACK
+         Lightweight mailto-based improvement loop (Phase 5).
+         ============================================================ -->
+    <section id="feedback">
+      <h2>Suggest an improvement</h2>
+      <p>
+        Spotted an error, out-of-date reference, or unclear step?
+        <a href="mailto:muhdmohsin@gmail.com?subject=MHA%20feedback%3A%20<!-- tool title -->">
+          Email Dr Mohsin
+        </a>.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Mohsin Haematology Academy &middot; Built by Dr Muhammad Mohsin, Consultant Haematologist</p>
+    <nav>
+      <a href="../../governance.html">Governance</a>
+      <a href="../../contact.html">Contact</a>
+      <a href="../../about.html">About</a>
+    </nav>
+  </footer>
+
+</body>
+</html>
