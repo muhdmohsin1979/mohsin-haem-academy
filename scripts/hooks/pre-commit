@@ -17,9 +17,14 @@ STAGED_DIFF=$(mktemp)
 STAGED_LIST=$(mktemp)
 trap 'rm -f "$STAGED_DIFF" "$STAGED_LIST"' EXIT
 
-git diff --cached --unified=0 -M > "$STAGED_DIFF"
+# Exclude docs/templates/* from guardrail scanning — those files contain
+# placeholder markers that would false-positive the checks. They are not
+# published pages; real output always lives under /guidelines/<topic>/.
+git diff --cached --unified=0 -M \
+  -- . ':(exclude)docs/templates/**' > "$STAGED_DIFF"
 git diff --cached --name-only --diff-filter=AM \
-  | grep -Ei '\.(md|html)$' > "$STAGED_LIST" || true
+  | grep -Ei '\.(md|html)$' \
+  | grep -vE '^docs/templates/' > "$STAGED_LIST" || true
 
 # If no staged .md / .html content at all, skip silently.
 if [ ! -s "$STAGED_LIST" ] && [ ! -s "$STAGED_DIFF" ]; then
