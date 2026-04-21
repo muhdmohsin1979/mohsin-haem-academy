@@ -14,6 +14,23 @@ Take the Academy from a live static site to a citable UK clinical education reso
 
 ---
 
+## A compass, not a contract
+
+This document is a direction, not a schedule. Ad hoc posts, unplanned
+guideline updates, patient-driven edits, and responses to new NICE / BSH /
+EHA publications take precedence over the cadence and topic order below.
+A missed six-week slot is a signal to re-plan, not a failure.
+
+Anything in the repo can still be worked on at any time:
+
+- New blog post, journal club post, or teaching case → lands in its own folder, independent of the schedule below.
+- Small edit to a live page (typo, new reference, updated dose) → version bump on the existing tool, not a schedule item.
+- A clinical event, a new trust policy, or a CPD day that sparks something → write it up when the spark is fresh, not when the schedule says so.
+
+The schedule below only directs **which brand-new clinical tool is started next.** Everything else is free.
+
+---
+
 ## If you focus on only four things
 
 These four actions drive 80% of the platform's long-term impact.
@@ -27,10 +44,10 @@ These four actions drive 80% of the platform's long-term impact.
 
 ## Cadence and success metric
 
-- **One new clinical tool every 6 weeks.** Sustainable for a full-time consultant with a family.
-- **Success metric by 1 April 2027: 10 clinical tools live at v1.0 or higher.** One number, fully under Dr Mohsin's control. Email subscribers and search traffic follow from shipped content and are tracked but not a gate.
+- **Target cadence: one new clinical tool roughly every 6 weeks.** A rhythm, not a deadline. Sustainable for a full-time consultant with a family; slips are fine.
+- **North-star metric by 1 April 2027: 10 clinical tools live at v1.0 or higher.** One number, under Dr Mohsin's direct control. Email subscribers and search traffic are tracked but do not gate progress.
 
-Topic schedule (locked; can be reordered on request):
+Topic schedule (proposed; reorder or swap at any time):
 
 | Month | Topic | Primary guideline |
 |---|---|---|
@@ -87,7 +104,7 @@ Recorded here so future readers know what is already in place.
 
 **Objective:** Drive adoption through real clinical utility.
 
-**Non-negotiable structure for every tool page** (see `docs/templates/tool-page-template.html`):
+**Default structure for every tool page** (see `docs/templates/tool-page-template.html`). Deviate when the clinical content demands it — this is a scaffold, not a straitjacket:
 
 > **Input → Output → Interpretation → Suggested Action → Guideline Basis → Last Updated (version + date)**
 
@@ -99,7 +116,7 @@ Each tool must include:
 - Versioning block: `v1.0 | Updated YYYY-MM-DD`
 - Disclaimer: *supports, not replaces, clinical judgement*
 
-**Topic schedule:** see [Cadence](#cadence-and-success-metric). Checklist per topic, ticked as each ships:
+**Proposed topic queue** (see [Cadence](#cadence-and-success-metric)). Ticked when shipped. Reorder or replace freely — the order below is a starting suggestion, not a commitment.
 
 - [ ] Neutropenic sepsis — `/guidelines/neutropenic-sepsis/`
 - [ ] Iron deficiency anaemia, adults — `/guidelines/iron-deficiency-anaemia/`
@@ -108,7 +125,7 @@ Each tool must include:
 - [ ] Myeloma workup — `/guidelines/myeloma-workup/`
 - [ ] AML induction fitness — `/guidelines/aml-induction/`
 
-**Phase 2 done when:** 10 tools live at v1.0+ (existing 4 + new 6). That is also the overall success metric.
+**Phase 2 done when:** 10 tools live at v1.0+ (existing 4 + new 6). That is also the overall north-star metric. Route taken and topic order are up to Dr Mohsin.
 
 ---
 
@@ -186,9 +203,10 @@ Do not build ahead of evidence.
 ## How this document evolves
 
 1. Every PR that ships a roadmap item ticks the box here in the same PR.
-2. Timeline updates (topic reordering, cadence change) land as a standalone `docs/ROADMAP.md` PR.
-3. A new snapshot (`docs/ROADMAP-v2.md`) is created when a major replan happens (e.g. at the end of Phase 2).
-4. The PDF that informed this document (`MHA strategic road map.pdf`) stays in the workspace as the historical source; contributor Muhammad Moaaz is credited below.
+2. Timeline updates (topic reordering, cadence change, scope cut) land as a standalone `docs/ROADMAP.md` PR — a single-line commit message is fine.
+3. A new snapshot (`docs/ROADMAP-v2.md`) is created only when a major replan happens (e.g. at the end of Phase 2). Small drift does not trigger one.
+4. If the schedule starts to feel like pressure rather than direction, edit the schedule. Do not let an artefact govern a human.
+5. The PDF that informed this document (`MHA strategic road map.pdf`) stays in the workspace as the historical source; contributor Muhammad Moaaz is credited below.
 
 ## Credits
 
