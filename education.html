@@ -39,6 +39,7 @@
     .brand-text { line-height: 1; }
     .brand-name { font-size: 0.95rem; font-weight: 700; color: var(--clr-primary); letter-spacing: -0.01em; }
     .brand-tagline { font-size: 0.66rem; font-weight: 500; color: var(--clr-muted); letter-spacing: 0.07em; text-transform: uppercase; margin-top: 3px; }
+    .nav-toggle { display: none; }
     .nav-links { display: flex; align-items: center; gap: 2px; }
     .nav-links a { font-size: 0.85rem; font-weight: 500; color: var(--clr-text-secondary); padding: 7px 13px; border-radius: var(--radius-sm); transition: color var(--ease), background var(--ease); white-space: nowrap; }
     .nav-links a:hover, .nav-links a.active { color: var(--clr-primary); background: var(--clr-primary-tint); }
@@ -155,6 +156,9 @@
             <div class="brand-tagline">Clinical Education &amp; Digital Tools</div>
           </div>
         </a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" onclick="var n=this.closest('.nav');var o=n.classList.toggle('nav-open');this.setAttribute('aria-expanded',o);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
         <div class="nav-links">
           <a href="tools.html">Tools</a>
           <a href="guidelines.html">Guidelines</a>
