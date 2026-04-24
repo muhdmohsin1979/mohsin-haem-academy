@@ -489,6 +489,177 @@
       margin: 52px 0 48px;
     }
 
+    /* ═══════════════════════════════════════════════
+       v2 ADDITIONS — CATEGORIES, STATUS BADGES, TAGS
+    ═══════════════════════════════════════════════ */
+
+    /* Top disclaimer banner */
+    .disclaimer-banner {
+      background: var(--clr-primary-tint);
+      border: 1px solid rgba(122,31,43,0.12);
+      border-left: 3px solid var(--clr-primary);
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 0 0 26px;
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: var(--clr-text-secondary);
+    }
+    .disclaimer-banner strong { color: var(--clr-text); }
+
+    /* Status legend */
+    .status-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 0.78rem;
+      color: var(--clr-muted);
+      margin: 0 0 32px;
+      padding: 10px 0 14px;
+      border-bottom: 1px dashed var(--clr-border);
+    }
+    .status-legend .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Category section */
+    .tool-category {
+      margin-top: 48px;
+      padding-top: 28px;
+      border-top: 1px solid var(--clr-border-light);
+    }
+    .tool-category.first {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+    .tool-category-heading {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .tool-category-heading h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--clr-text);
+      letter-spacing: -0.01em;
+    }
+    .tool-category-count {
+      font-size: 0.75rem;
+      color: var(--clr-muted);
+      font-weight: 500;
+    }
+    .tool-category-blurb {
+      font-size: 0.9rem;
+      color: var(--clr-text-secondary);
+      line-height: 1.65;
+      margin-bottom: 22px;
+      max-width: 68ch;
+    }
+
+    /* Tool card header (title + status badge) */
+    .tool-card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .tool-card-header h3 {
+      margin-bottom: 0;
+      flex: 1;
+    }
+
+    /* Status badges */
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.66rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 100px;
+      flex-shrink: 0;
+    }
+    .status-live {
+      color: #1a6b4a;
+      background: rgba(26,107,74,0.10);
+      border: 1px solid rgba(26,107,74,0.18);
+    }
+    .status-beta {
+      color: #b45309;
+      background: rgba(180,83,9,0.10);
+      border: 1px solid rgba(180,83,9,0.20);
+    }
+    .status-proposed {
+      color: var(--clr-muted);
+      background: rgba(107,113,122,0.09);
+      border: 1px solid rgba(107,113,122,0.18);
+    }
+
+    /* Tag pills */
+    .tool-card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 4px;
+    }
+    .tag {
+      font-size: 0.66rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: var(--clr-primary-tint);
+      color: var(--clr-primary-dark);
+      border: 1px solid rgba(122,31,43,0.10);
+    }
+    .tag-emergency    { color: #991b1b; background: rgba(153,27,27,0.08); border-color: rgba(153,27,27,0.14); }
+    .tag-mdt          { color: #1e4d8c; background: rgba(30,77,140,0.08); border-color: rgba(30,77,140,0.14); }
+    .tag-nice         { color: #1e4d8c; background: rgba(30,77,140,0.05); border-color: rgba(30,77,140,0.10); }
+    .tag-bsh          { color: var(--clr-primary-dark); background: var(--clr-primary-tint); border-color: rgba(122,31,43,0.12); }
+    .tag-audit        { color: #4a2e8e; background: rgba(74,46,142,0.08); border-color: rgba(74,46,142,0.14); }
+    .tag-prescribing  { color: #b45309; background: rgba(180,83,9,0.08); border-color: rgba(180,83,9,0.14); }
+    .tag-interpretation { color: var(--clr-text-secondary); background: rgba(107,113,122,0.08); border-color: rgba(107,113,122,0.14); }
+
+    /* Proposed card visual state */
+    .tool-card-proposed {
+      background: var(--clr-coming-soon-bg);
+      border-color: var(--clr-coming-soon-border);
+      border-top-color: var(--clr-coming-soon-border);
+      box-shadow: none;
+      cursor: default;
+    }
+    .tool-card-proposed:hover { transform: none; box-shadow: none; }
+    .tool-card-proposed h3    { color: var(--clr-muted); }
+    .tool-card-proposed p     { color: #6b717a; }
+
+    /* Beta card visual state */
+    .tool-card-beta {
+      background: var(--clr-surface);
+      border-top-color: #b45309;
+    }
+
+    /* Proposed disclaimer note inside the card */
+    .tool-card-proposed-note {
+      font-size: 0.72rem !important;
+      color: #8a5e00 !important;
+      background: rgba(180,83,9,0.06);
+      border-left: 2px solid rgba(180,83,9,0.35);
+      padding: 7px 10px;
+      border-radius: 4px;
+      margin-top: 10px !important;
+      line-height: 1.5 !important;
+    }
+
     /* Note block */
     .tools-note {
       background: var(--clr-surface-alt);
@@ -653,9 +824,9 @@
       </div>
       <h1>Digital tools for<br>structured clinical thinking</h1>
       <p class="page-lead">
-        This section contains digital tools and calculators designed to support structured
-        interpretation and practical learning in haematology. Each tool is built around
-        clinical clarity, usability, and safety.
+        Curated UK haematology decision-support tools and guideline summaries,
+        organised by category. Each entry is marked Live, Beta, or Proposed so
+        you can see at a glance what is usable today and what is still ahead.
       </p>
     </div>
   </div>
@@ -665,111 +836,1002 @@
   <main>
     <div class="container">
 
-      <!-- Featured: HaemCalc -->
-      <div class="section-label">Flagship Tool</div>
-      <div class="section-title">Now available</div>
+      <!-- Top disclaimer banner -->
+      <div class="disclaimer-banner">
+        <strong>Clinical decision-support only. Not for direct patient use.</strong>
+        Use alongside local policy, senior clinical judgement, and patient-specific context.
+        Proposed tools are placeholders and must not be used for any clinical decision.
+        See the <a href="governance.html" style="color:var(--clr-primary-dark);text-decoration:underline;">governance page</a>
+        for scope, limitations, and medico-legal framing.
+      </div>
 
-      <div class="tool-featured">
-        <div class="tool-featured-content">
-          <div class="tool-featured-badge">Haematology Decision Support</div>
-          <h2>HaemCalc</h2>
-          <p>
-            A structured digital tool for the interpretation of haematological parameters
-            across defined clinical scenarios. Designed for educational support, with an
-            emphasis on clarity, usability, and safe clinical reasoning.
-          </p>
-          <div class="tool-featured-meta">
-            <div class="tool-meta-item">
-              <span class="tool-meta-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"/></svg></span>
-              Point-of-care ready
-            </div>
-            <div class="tool-meta-item">
-              <span class="tool-meta-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"/></svg></span>
-              Educational use
-            </div>
-            <div class="tool-meta-item">
-              <span class="tool-meta-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"/></svg></span>
-              No login required
-            </div>
-          </div>
-        </div>
-        <div class="tool-featured-cta">
-          <a href="haemcalc" class="btn-white">Launch HaemCalc &rarr;</a>
-          <div class="tool-featured-cta-note">Free &middot; No account needed</div>
-        </div>
+      <!-- Status legend -->
+      <div class="status-legend" role="note" aria-label="Tool status legend">
+        <div class="legend-item"><span class="status-badge status-live">Live</span> Published and usable today</div>
+        <div class="legend-item"><span class="status-badge status-beta">Beta</span> Draft-ready; review feedback welcome</div>
+        <div class="legend-item"><span class="status-badge status-proposed">Proposed</span> Placeholder only; no clinical content yet</div>
       </div>
 
 
-      <!-- Additional Tools Grid -->
-      <hr class="divider">
-      <div class="section-label">In Development</div>
-      <div class="section-title">Further tools</div>
-
-      <div class="tools-grid">
-
-        <!-- Active: HaemCalc repeated as card for grid consistency -->
-        <a href="haemcalc" class="tool-card tool-card-link">
-          <div class="tool-card-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
-          </div>
-          <h3>HaemCalc</h3>
-          <p>Structured interpretation of haematological parameters in defined clinical scenarios.</p>
-          <div class="tool-card-action">Open tool &rarr;</div>
-        </a>
-
-        <!-- Coming soon -->
-        <div class="tool-card tool-card-coming">
-          <div class="tool-card-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-          </div>
-          <h3>Peripheral Blood Film Interpreter</h3>
-          <p>Guided interpretation of blood film findings with structured differentials and clinical correlation.</p>
-          <div class="coming-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Coming soon</div>
+      <!-- ═══ 1. FLAGSHIP ═══ -->
+      <section class="tool-category first">
+        <div class="tool-category-heading">
+          <h2>1. Flagship</h2>
+          <span class="tool-category-count">1 live</span>
         </div>
+        <p class="tool-category-blurb">
+          The primary featured tool. Structured haematology interpretation and
+          decision support.
+        </p>
 
-        <div class="tool-card tool-card-coming">
-          <div class="tool-card-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        <div class="tool-featured">
+          <div class="tool-featured-content">
+            <div class="tool-featured-badge">Haematology Decision Support</div>
+            <h2>HaemCalc</h2>
+            <p>
+              A structured digital tool for the interpretation of haematological parameters
+              across defined clinical scenarios. Designed for educational support, with
+              clarity, usability, and safe clinical reasoning.
+            </p>
+            <div class="tool-featured-meta">
+              <div class="tool-meta-item">
+                <span class="tool-meta-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Point-of-care ready
+              </div>
+              <div class="tool-meta-item">
+                <span class="tool-meta-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Educational use
+              </div>
+              <div class="tool-meta-item">
+                <span class="tool-meta-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"/></svg></span>
+                No login required
+              </div>
+            </div>
           </div>
-          <h3>Cytopenia Assessment Framework</h3>
-          <p>Step-by-step structured approach to investigating single and multi-lineage cytopenias.</p>
-          <div class="coming-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Coming soon</div>
-        </div>
-
-        <div class="tool-card tool-card-coming">
-          <div class="tool-card-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+          <div class="tool-featured-cta">
+            <a href="haemcalc" class="btn-white">Launch HaemCalc &rarr;</a>
+            <div class="tool-featured-cta-note">Free &middot; No account needed</div>
           </div>
-          <h3>Coagulation Pathway Tool</h3>
-          <p>Visual and interpretive support for PT, APTT, and mixing studies in coagulation workup.</p>
-          <div class="coming-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Coming soon</div>
         </div>
+      </section>
 
-        <div class="tool-card tool-card-coming">
-          <div class="tool-card-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+
+      <!-- ═══ 2. GENERAL HAEMATOLOGY INTERPRETATION ═══ -->
+      <section class="tool-category">
+        <div class="tool-category-heading">
+          <h2>2. General Haematology Interpretation</h2>
+          <span class="tool-category-count">2 live &middot; 8 proposed</span>
+        </div>
+        <p class="tool-category-blurb">
+          Structured interpretation of full blood count findings, iron and B12
+          metabolism, and other core general haematology investigations.
+        </p>
+
+        <div class="tools-grid">
+
+          <a href="guidelines/anaemia-in-pregnancy/" class="tool-card tool-card-link">
+            <div class="tool-card-header">
+              <h3>Anaemia in Pregnancy Guideline</h3>
+              <span class="status-badge status-live">Live</span>
+            </div>
+            <p>UK consultant-grade clinical guideline: trimester thresholds, ferritin interpretation, oral and IV iron pathways, postpartum bands, transfusion.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-interpretation">Interpretation</li>
+              <li class="tag tag-bsh">BSH</li>
+              <li class="tag tag-nice">NICE</li>
+              <li class="tag tag-prescribing">Prescribing</li>
+            </ul>
+            <div class="tool-card-action">Open guideline &rarr;</div>
+          </a>
+
+          <a href="guidelines/itp/" class="tool-card tool-card-link">
+            <div class="tool-card-header">
+              <h3>ITP in Adults Guideline</h3>
+              <span class="status-badge status-live">Live</span>
+            </div>
+            <p>Consultant-grade guideline summary for immune thrombocytopenia in adults: diagnosis of exclusion, when to treat vs observe, first-line and second-line.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-interpretation">Interpretation</li>
+              <li class="tag tag-bsh">BSH</li>
+              <li class="tag tag-nice">NICE</li>
+            </ul>
+            <div class="tool-card-action">Open guideline &rarr;</div>
+          </a>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Cytopenia Decision Engine</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Step-by-step structured approach to investigating single and multi-lineage cytopenias.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-interpretation">Interpretation</li>
+              <li class="tag tag-bsh">BSH</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
           </div>
-          <h3>Haematological Malignancy Staging Aid</h3>
-          <p>Reference tool covering staging criteria for lymphoma, myeloma, and leukaemia subtypes.</p>
-          <div class="coming-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Coming soon</div>
-        </div>
 
-        <div class="tool-card tool-card-coming">
-          <div class="tool-card-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M10 2v7.31L5.5 17A4 4 0 0 0 9 23h6a4 4 0 0 0 3.5-5.69L14 9.31V2"/><line x1="8.5" y1="2" x2="15.5" y2="2"/></svg>
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Anaemia Pattern Interpreter</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Microcytic, normocytic, and macrocytic pattern workup with red-flag prompts.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-interpretation">Interpretation</li>
+              <li class="tag tag-bsh">BSH</li>
+              <li class="tag tag-nice">NICE</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
           </div>
-          <h3>Iron Studies Interpreter</h3>
-          <p>Structured interpretation of ferritin, serum iron, TIBC, and transferrin saturation results.</p>
-          <div class="coming-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Coming soon</div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Iron Studies Interpreter</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Structured interpretation of ferritin, serum iron, TIBC, and transferrin saturation.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-interpretation">Interpretation</li>
+              <li class="tag tag-nice">NICE</li>
+              <li class="tag tag-bsh">BSH</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Macrocytosis Workup Tool</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Structured workup covering B12, folate, thyroid, liver, reticulocytes, MDS flags.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-interpretation">Interpretation</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Lymphocytosis Assessment Tool</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Benign versus malignant lymphocytosis workup, when to send flow cytometry.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-interpretation">Interpretation</li>
+              <li class="tag tag-bsh">BSH</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Thrombocytosis Assessment Tool</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Reactive vs clonal thrombocytosis, JAK2/CALR/MPL workup, referral triggers.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-interpretation">Interpretation</li>
+              <li class="tag tag-bsh">BSH</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Eosinophilia Assessment Tool</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Reactive vs clonal eosinophilia, parasitic and drug aetiologies, FIP1L1-PDGFRA.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-interpretation">Interpretation</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Splenomegaly Initial Assessment Tool</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Differential for palpable splenomegaly with imaging and workup checklist.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-interpretation">Interpretation</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
         </div>
+      </section>
 
-      </div>
 
+      <!-- ═══ 3. COAGULATION AND THROMBOSIS ═══ -->
+      <section class="tool-category">
+        <div class="tool-category-heading">
+          <h2>3. Coagulation and Thrombosis</h2>
+          <span class="tool-category-count">1 live &middot; 8 proposed</span>
+        </div>
+        <p class="tool-category-blurb">
+          Coagulation screen interpretation, DOAC and warfarin management,
+          and VTE pathway support.
+        </p>
+
+        <div class="tools-grid">
+
+          <a href="guidelines/vte-cancer/" class="tool-card tool-card-link">
+            <div class="tool-card-header">
+              <h3>Cancer-Associated Thrombosis</h3>
+              <span class="status-badge status-live">Live</span>
+            </div>
+            <p>Evidence-based guideline for cancer-associated VTE: diagnosis, anticoagulant choice, duration, Khorana risk stratification.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-interpretation">Interpretation</li>
+              <li class="tag tag-mdt">MDT</li>
+              <li class="tag tag-bsh">BSH</li>
+              <li class="tag tag-nice">NICE</li>
+              <li class="tag tag-prescribing">Prescribing</li>
+            </ul>
+            <div class="tool-card-action">Open guideline &rarr;</div>
+          </a>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>PT/APTT Abnormality Interpreter</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Structured approach to abnormal PT and APTT, including pre-analytical and drug causes.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-interpretation">Interpretation</li>
+              <li class="tag tag-bsh">BSH</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Mixing Study Interpreter</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>50:50 mixing study logic, correction vs inhibitor patterns, next-test logic.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-interpretation">Interpretation</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>DOAC Bleeding and Reversal Decision Aid</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>DOAC-specific reversal pathway: apixaban, rivaroxaban, edoxaban, dabigatran. Andexanet, idarucizumab, PCC guidance.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-emergency">Emergency</li>
+              <li class="tag tag-prescribing">Prescribing</li>
+              <li class="tag tag-bsh">BSH</li>
+              <li class="tag tag-nice">NICE</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Warfarin Reversal Decision Aid</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>INR-banded reversal: vitamin K, PCC, FFP. Pre-procedure bridging logic.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-emergency">Emergency</li>
+              <li class="tag tag-prescribing">Prescribing</li>
+              <li class="tag tag-bsh">BSH</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>DIC / Consumptive Coagulopathy Assessment</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>ISTH DIC score, obstetric vs sepsis-driven DIC, supportive management.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-emergency">Emergency</li>
+              <li class="tag tag-interpretation">Interpretation</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>HIT 4Ts Assessment Tool</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>4Ts score with next-step workup and alternative anticoagulant choice.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-interpretation">Interpretation</li>
+              <li class="tag tag-bsh">BSH</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>VTE Referral and Anticoagulation Checklist</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>First DVT/PE pathway, provoked vs unprovoked, duration and agent selection.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-prescribing">Prescribing</li>
+              <li class="tag tag-nice">NICE</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Peri-procedural Anticoagulation Planning</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Stop/restart timing for warfarin and DOACs around elective procedures, bridging logic.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-prescribing">Prescribing</li>
+              <li class="tag tag-bsh">BSH</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- ═══ 4. EMERGENCY HAEMATOLOGY ═══ -->
+      <section class="tool-category">
+        <div class="tool-category-heading">
+          <h2>4. Emergency Haematology</h2>
+          <span class="tool-category-count">6 proposed</span>
+        </div>
+        <p class="tool-category-blurb">
+          Time-critical haematology presentations. Every tool in this category
+          will carry an explicit senior-review escalation instruction. Not a
+          substitute for calling the on-call haematology consultant.
+        </p>
+
+        <div class="tools-grid">
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Suspected TTP / MAHA Pathway Tool</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>PLASMIC score, blood film request, ADAMTS13, urgent plasma exchange pathway.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-emergency">Emergency</li>
+              <li class="tag tag-mdt">MDT</li>
+              <li class="tag tag-bsh">BSH</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>HLH Screening Tool</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>HLH-2004 criteria, H-score, triggers for bone marrow and IL-2R testing.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-emergency">Emergency</li>
+              <li class="tag tag-interpretation">Interpretation</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Neutropenic Sepsis Initial Management</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Sepsis-6 + empirical antibiotic logic, MASCC risk index, admission vs ambulatory.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-emergency">Emergency</li>
+              <li class="tag tag-prescribing">Prescribing</li>
+              <li class="tag tag-nice">NICE</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Hyperviscosity / Leucostasis Risk Tool</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Symptom clustering, WCC / paraprotein thresholds, urgent leukopheresis pathway.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-emergency">Emergency</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Tumour Lysis Syndrome Risk Tool</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Cairo-Bishop criteria, risk-stratified prophylaxis, rasburicase indications.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-emergency">Emergency</li>
+              <li class="tag tag-prescribing">Prescribing</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Severe Bleeding Initial Support Tool</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Massive haemorrhage protocol triggers, tranexamic acid, fibrinogen replacement logic.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-emergency">Emergency</li>
+              <li class="tag tag-prescribing">Prescribing</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- ═══ 5. MALIGNANT HAEMATOLOGY ═══ -->
+      <section class="tool-category">
+        <div class="tool-category-heading">
+          <h2>5. Malignant Haematology</h2>
+          <span class="tool-category-count">1 live &middot; 9 proposed</span>
+        </div>
+        <p class="tool-category-blurb">
+          Haematological malignancy workup, prognostic stratification, and
+          MDT-ready summaries. Anchored to BSH, NICE TAs, IMWG, ELN, and
+          iwCLL criteria.
+        </p>
+
+        <div class="tools-grid">
+
+          <a href="guidelines/cll/" class="tool-card tool-card-link">
+            <div class="tool-card-header">
+              <h3>CLL Guideline</h3>
+              <span class="status-badge status-live">Live</span>
+            </div>
+            <p>Unified clinical guideline covering iwCLL criteria, TP53 / IGHV risk stratification, first-line and relapsed/refractory treatment.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-interpretation">Interpretation</li>
+              <li class="tag tag-mdt">MDT</li>
+              <li class="tag tag-bsh">BSH</li>
+              <li class="tag tag-nice">NICE</li>
+            </ul>
+            <div class="tool-card-action">Open guideline &rarr;</div>
+          </a>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Myeloma CRAB / SLiM-CRAB Assessment</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>IMWG 2024 criteria applied to the workup and MDT submission.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-interpretation">Interpretation</li>
+              <li class="tag tag-mdt">MDT</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Myeloma Imaging and Referral Checklist</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Whole-body MRI / low-dose CT pathway and bone marrow workup logic.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-mdt">MDT</li>
+              <li class="tag tag-interpretation">Interpretation</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Lymphoma MDT Summary Generator</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Structured lymphoma MDT summary template: histology, stage, IPI, treatment intent.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-mdt">MDT</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>DLBCL IPI / CNS-IPI Tool</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>International Prognostic Index and CNS-IPI with treatment-intent guidance.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-interpretation">Interpretation</li>
+              <li class="tag tag-mdt">MDT</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Follicular Lymphoma FLIPI Tool</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>FLIPI and FLIPI-2 with treatment-versus-observe indications.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-interpretation">Interpretation</li>
+              <li class="tag tag-mdt">MDT</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Mantle Cell Lymphoma MIPI Tool</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>MIPI and MIPI-b risk stratification, fit vs unfit pathway.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-interpretation">Interpretation</li>
+              <li class="tag tag-mdt">MDT</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>CML ELTS / Sokal Risk Tool</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>ELTS and Sokal scores with first-line TKI selection pointers.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-interpretation">Interpretation</li>
+              <li class="tag tag-mdt">MDT</li>
+              <li class="tag tag-bsh">BSH</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>MDS IPSS-R / IPSS-M Placeholder</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Links out to validated IWG-PM calculators until a local tool is in place.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-interpretation">Interpretation</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>MPN Thrombosis Risk Tool</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>IPSET-thrombosis and ET/PV risk banding with cytoreductive-therapy indications.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-interpretation">Interpretation</li>
+              <li class="tag tag-mdt">MDT</li>
+              <li class="tag tag-bsh">BSH</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- ═══ 6. TRANSFUSION MEDICINE ═══ -->
+      <section class="tool-category">
+        <div class="tool-category-heading">
+          <h2>6. Transfusion Medicine</h2>
+          <span class="tool-category-count">6 proposed</span>
+        </div>
+        <p class="tool-category-blurb">
+          Transfusion thresholds, massive haemorrhage support, reaction
+          workup, and IV iron prescribing.
+        </p>
+
+        <div class="tools-grid">
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Red Cell Transfusion Threshold Tool</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Hb thresholds per patient group: stable, ACS, intensive care, chronic.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-interpretation">Interpretation</li>
+              <li class="tag tag-nice">NICE</li>
+              <li class="tag tag-bsh">BSH</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Platelet Transfusion Threshold Tool</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Prophylactic vs procedural thresholds, bleeding thresholds, ABO-matched logic.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-interpretation">Interpretation</li>
+              <li class="tag tag-bsh">BSH</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Cryoprecipitate / Fibrinogen Tool</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Fibrinogen replacement threshold and dose guidance in bleeding contexts.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-interpretation">Interpretation</li>
+              <li class="tag tag-bsh">BSH</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Massive Haemorrhage Haematology Checklist</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Haematology side of the MHP: product ratios, TEG/ROTEM triggers, decision points.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-emergency">Emergency</li>
+              <li class="tag tag-prescribing">Prescribing</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Transfusion Reaction Initial Assessment</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Acute reaction differential: AHTR, TACO, TRALI, febrile non-haemolytic, allergic.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-emergency">Emergency</li>
+              <li class="tag tag-interpretation">Interpretation</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>IV Iron Dose and Suitability Tool</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Ganzoni dosing, product-specific limits, anaphylaxis risk, pregnancy-specific rules.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-prescribing">Prescribing</li>
+              <li class="tag tag-nice">NICE</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- ═══ 7. MDT AND PATHWAY TOOLS ═══ -->
+      <section class="tool-category">
+        <div class="tool-category-heading">
+          <h2>7. MDT and Pathway Tools</h2>
+          <span class="tool-category-count">7 proposed</span>
+        </div>
+        <p class="tool-category-blurb">
+          Tools for referral quality, pre-MDT preparation, and NHS cancer
+          pathway timing. Support for MDT coordinators and clinical teams.
+        </p>
+
+        <div class="tools-grid">
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Haematology MDT Summary Generator</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Structured MDT submission template with copy-to-clipboard output.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-mdt">MDT</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>28-Day Faster Diagnosis Standard Tracker</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Counts working days from referral to communication of diagnosis; flags breach risk.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-mdt">MDT</li>
+              <li class="tag tag-audit">Audit</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>62-Day Cancer Pathway Risk Tracker</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>2-week-wait to first treatment tracker with amber/red banding.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-mdt">MDT</li>
+              <li class="tag tag-audit">Audit</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Referral Quality Checker</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Does this referral have the right minimum dataset for haematology workup?</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-mdt">MDT</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Should this be referred to haematology?</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Primary-care facing: common abnormalities and which need specialist review.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-mdt">MDT</li>
+              <li class="tag tag-interpretation">Interpretation</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Watch-and-Wait Documentation Generator</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Structured W&amp;W letter for indolent lymphoma and CLL follow-up.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-mdt">MDT</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Pre-MDT Investigation Checklist</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Per-condition pre-MDT investigation lists: myeloma, lymphoma, MDS, CLL.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-mdt">MDT</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- ═══ 8. AUDIT AND GOVERNANCE ═══ -->
+      <section class="tool-category">
+        <div class="tool-category-heading">
+          <h2>8. Audit and Governance</h2>
+          <span class="tool-category-count">6 proposed</span>
+        </div>
+        <p class="tool-category-blurb">
+          Audit builders, incident reflection templates, and governance
+          summary generators for local service evaluation.
+        </p>
+
+        <div class="tools-grid">
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Neutropenic Sepsis Audit Builder</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Audit template against NICE NG51 with scoring grid and action log.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-audit">Audit</li>
+              <li class="tag tag-nice">NICE</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Transfusion Audit Builder</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>SHOT-aligned audit template for transfusion practice and reaction workup.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-audit">Audit</li>
+              <li class="tag tag-bsh">BSH</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>DOAC Reversal Audit Builder</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Audit template for DOAC-related bleeding and reversal decisions.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-audit">Audit</li>
+              <li class="tag tag-prescribing">Prescribing</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Cancer Pathway Delay Review Tool</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Structured review template for breached 62-day cancer pathways.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-audit">Audit</li>
+              <li class="tag tag-mdt">MDT</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Diagnostic Concordance Audit Tool</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Comparison of initial diagnosis vs MDT-confirmed diagnosis with RCPath alignment.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-audit">Audit</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+          <div class="tool-card tool-card-proposed">
+            <div class="tool-card-header">
+              <h3>Incident Reflection / Governance Summary</h3>
+              <span class="status-badge status-proposed">Proposed</span>
+            </div>
+            <p>Structured governance-report template for haematology incidents.</p>
+            <ul class="tool-card-tags">
+              <li class="tag tag-audit">Audit</li>
+            </ul>
+            <p class="tool-card-proposed-note">
+              Proposed tool. Not yet clinically validated. No clinical decision-making should be based on this placeholder.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- ═══ Closing note ═══ -->
       <div class="tools-note">
         <p>
-          <strong>Important:</strong> All tools on this platform are intended for educational
-          support only. They do not constitute clinical advice, replace specialist assessment,
-          or substitute for current national guidelines and local protocols.
+          <strong>Educational use only.</strong> All tools listed here are intended
+          for clinical decision support, not direct patient use. Local policies, senior
+          clinical judgement, and current national guidelines take precedence. Proposed
+          tools are placeholders only. None of the tools on this page have been formally
+          ratified by any NHS trust governance committee.
         </p>
       </div>
 
