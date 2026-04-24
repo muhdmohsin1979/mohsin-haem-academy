@@ -104,25 +104,50 @@
 
     <!-- ============================================================
          DISCLAIMER BLOCK (visible at top of every tool page)
-         Standard wording below fits most interpretive tools.
+         Standard wording below fits Live and Beta tools.
          Variants:
-           - EMERGENCY tools: add the <div class="escalate"> block.
-           - PRESCRIBING tools: keep the SmPC + licensing sentence
-             and set the "Prescribing" tag above.
+           - PROPOSED placeholders: swap the live-disclaimer paragraph
+             for the proposed-disclaimer paragraph below, and remove
+             every FILL IN section so no clinical content appears.
+           - EMERGENCY tools: uncomment the <div class="escalate"> block.
+           - PRESCRIBING tools: keep the SmPC + licensing sentence and
+             set the "Prescribing" tag above.
+
+         WORDING RULE: never use "approved", "ratified", "validated", or
+         "NHS-ready" on any tool page unless that status is formally
+         true. Personal academic sites cannot self-award those labels.
          ============================================================ -->
     <section class="disclaimer-block" role="note">
       <h2>Clinical decision support only</h2>
-      <p>
-        This tool supports, but does not replace, senior clinical judgement.
-        Local trust policies take precedence over any content on this page.
-        It is not a substitute for direct patient assessment, MDT discussion,
-        or specialist advice. For prescribing, always check renal and hepatic
-        function, weight, bleeding risk, drug interactions, pregnancy status,
-        and the current Summary of Product Characteristics before
-        administration. Off-label use must be clearly flagged. See the site
+
+      <!-- LIVE / BETA wording (standard; leave this on every shipped tool) -->
+      <p class="live-disclaimer">
+        <strong>Clinical decision-support only. Not for direct patient use.</strong>
+        Use alongside local policy, senior clinical judgement, and
+        patient-specific context. Local trust policies take precedence
+        over any content on this page. It is not a substitute for direct
+        patient assessment, MDT discussion, or specialist advice. For
+        prescribing, always check renal and hepatic function, weight,
+        bleeding risk, drug interactions, pregnancy status, and the
+        current Summary of Product Characteristics before administration.
+        Off-label use must be clearly flagged. See the site
         <a href="../../governance.html">governance page</a> for scope,
         limitations, and medico-legal framing.
       </p>
+
+      <!--
+        PROPOSED variant — if the page exists only as a placeholder
+        (the tool is listed on the Tools hub as "Proposed" but has no
+        clinical content yet), delete the live-disclaimer paragraph above
+        and use the block below instead, then strip every FILL IN section:
+      -->
+      <!--
+      <p class="proposed-disclaimer">
+        <strong>Proposed tool. Not yet clinically validated.</strong>
+        No clinical decision-making should be based on this placeholder.
+        Not for direct patient use.
+      </p>
+      -->
 
       <!--
         EMERGENCY variant — uncomment for emergency tools (e.g. neutropenic

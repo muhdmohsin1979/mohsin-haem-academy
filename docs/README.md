@@ -65,3 +65,29 @@ clinical tools read as decision support, not directive. Prefer:
 
 Emergency tools must carry a visible *"escalate to senior haematology
 immediately"* line in the red-flags block, not buried in prose.
+
+## Status-specific disclaimers
+
+Every tool page must carry one of two standard disclaimers at the top,
+matching its status on `tools.html`:
+
+- **Live / Beta tools** —
+  > *"Clinical decision-support only. Not for direct patient use.
+  > Use alongside local policy, senior clinical judgement, and
+  > patient-specific context."*
+
+- **Proposed placeholders** —
+  > *"Proposed tool. Not yet clinically validated. No clinical
+  > decision-making should be based on this placeholder. Not for
+  > direct patient use."*
+
+  Proposed pages must strip every FILL IN clinical section — the page
+  exists only as a placeholder until it is moved onto the roadmap and
+  drafted as Beta or Live.
+
+## Words to avoid on any public tool page
+
+Do **not** use *approved*, *ratified*, *validated*, or *NHS-ready*
+anywhere on the public site unless that status is formally true for
+the specific page. Only local NHS trust governance committees can
+ratify SOPs. Personal academic sites cannot self-award these labels.
