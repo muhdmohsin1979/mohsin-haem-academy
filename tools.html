@@ -603,14 +603,18 @@
       border: 1px solid rgba(107,113,122,0.18);
     }
 
-    /* Tag pills */
+    /* Tag pills — margin-top: auto pushes the tag row to the bottom of
+       every card so tags + status badge + proposed note all align at
+       the same vertical position across the grid, regardless of how
+       long the purpose paragraph is. */
     .tool-card-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
       list-style: none;
       padding: 0;
-      margin: 10px 0 4px;
+      margin: 14px 0 4px;
+      margin-top: auto;
     }
     .tag {
       font-size: 0.66rem;
@@ -774,6 +778,26 @@
       }
       .tools-grid {
         grid-template-columns: 1fr;
+      }
+      /* Smaller tag chips + tighter disclaimer on narrow screens */
+      .tag {
+        font-size: 0.62rem;
+        padding: 2px 6px;
+      }
+      .tool-card-tags {
+        gap: 4px;
+        margin: 10px 0 4px;
+        margin-top: auto;
+      }
+      .status-legend {
+        gap: 10px;
+        font-size: 0.72rem;
+      }
+      .tool-category-heading {
+        gap: 8px;
+      }
+      .tool-category-heading h2 {
+        font-size: 1.2rem;
       }
       .footer-inner {
         flex-direction: column;
