@@ -633,6 +633,25 @@
           <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.157v.003Z"/></svg>
           <h2 class="section-title">First-line Treatment</h2>
         </div>
+
+        <!-- Inline SVG pathway (v1.9 algorithm) — was previously link-only in the sidebar -->
+        <figure style="margin:0 0 22px; padding:16px 18px; background:var(--clr-surface); border:1px solid var(--clr-border); border-radius:10px; text-align:center;">
+          <figcaption style="font-size:0.82rem; color:var(--clr-muted); letter-spacing:0.03em; text-transform:uppercase; font-weight:600; margin-bottom:10px;">
+            CLL treatment decision algorithm &middot; v1.9 aligned with BSH 2025 and NICE
+          </figcaption>
+          <object data="algorithm.svg" type="image/svg+xml" aria-label="CLL treatment decision algorithm flowchart"
+                  style="width:100%; max-width:820px; height:auto; display:block; margin:0 auto;">
+            <!-- Fallback for browsers that do not render SVG via object -->
+            <a href="algorithm.svg"><img src="algorithm.svg" alt="CLL treatment decision algorithm flowchart" style="max-width:100%; height:auto;" /></a>
+          </object>
+          <figcaption style="font-size:0.76rem; color:var(--clr-muted); margin-top:10px; line-height:1.5;">
+            Static SVG rendering of the current v1.9 decision pathway. For a full-screen view or to edit in situ,
+            <a href="algorithm.svg" target="_blank" rel="noopener" style="color:var(--clr-primary-dark); text-decoration:underline;">open the SVG directly</a>
+            or use the FigJam / Excalidraw sources linked in the sidebar. The pathway reflects the sections below;
+            treat the diagram as a visual summary, not a substitute for the prose and referenced sources.
+          </figcaption>
+        </figure>
+
         <p>First-line treatment selection is guided by: (1) presence of del(17p) or TP53 mutation, (2) patient fitness (CIRS/eGFR/ECOG), and (3) patient preference (fixed-duration vs. continuous therapy). <strong>BSH 2025 endorses zanubrutinib and acalabrutinib as the preferred BTK inhibitors for new patients</strong>, with venetoclax-based fixed-duration combinations as the main alternative. Ibrutinib remains NICE-approved but is de-prioritised due to its inferior cardiac safety profile.</p>
 
         <!-- TP53/del17p PATHWAY -->
@@ -1016,7 +1035,7 @@
                 <tr><td>v1.7</td><td>Apr 2025</td><td>Dr M Mohsin</td><td>Section icons; BSH 2025 treatment order; GAIA/CLL13 population clarified</td></tr>
                 <tr><td>v1.8</td><td>Apr 2026</td><td>Dr M Mohsin</td><td>Peer-review: TA429 scope; TA689 monotherapy; MRD notation; AIHA framing; smear cells; SLL consistency</td></tr>
                 <tr><td>v1.9</td><td>Apr 2026</td><td>Dr M Mohsin</td><td>Final fact-check: AIHA 25%→20%; BRUIN PMID corrected; TA1119 date Jan 2026; SVG algorithm updated</td></tr>
-                <tr><td>v2.0-draft</td><td>Apr 2026</td><td>Dr M Mohsin</td><td>SOP scaffolding v2 applied: anchor nav and section headings renamed to SOP vocabulary; tool-metadata block (Scope / Intended users / Evidence base / Tags); v2 disclaimer with "Not for direct patient use"; quick-decision summary banner; citation block (APA / Vancouver / BibTeX). No clinical content altered.</td></tr>
+                <tr><td>v2.0-draft</td><td>Apr 2026</td><td>Dr M Mohsin</td><td>SOP scaffolding v2 applied: anchor nav and section headings renamed to SOP vocabulary; tool-metadata block (Scope / Intended users / Evidence base / Tags); v2 disclaimer with "Not for direct patient use"; quick-decision summary banner; citation block (APA / Vancouver / BibTeX); existing v1.9 algorithm SVG embedded inline at the top of Section 7. No clinical content altered. Quickref PDF (currently v1.4) remains out of sync with the v1.9 guideline and requires a separate clinical-content refresh before it can be considered aligned.</td></tr>
               </tbody>
             </table>
             <p style="font-size:0.78rem; color:var(--clr-muted); line-height:1.55;"><strong>Disclaimer:</strong> This guideline is for educational purposes and clinical decision support. It is not a substitute for individual clinical judgement. For UK practice, only BSH-aligned NICE-commissioned regimens apply. Always verify current NICE guidance before prescribing. Dr Muhammad Mohsin is responsible for the educational content of this page.</p>
@@ -1077,6 +1096,9 @@
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download Quick-Ref Card
           </a>
+          <p style="font-size:0.72rem; color:#8a5e00; background:rgba(180,83,9,0.06); border-left:2px solid rgba(180,83,9,0.35); padding:6px 9px; border-radius:4px; margin:8px 0 0; line-height:1.5;">
+            Quick-ref PDF is v1.4 and out of sync with the v1.9 guideline on this page. A refresh is pending. For current recommendations, read the sections on this page.
+          </p>
         </div>
       </div>
 
