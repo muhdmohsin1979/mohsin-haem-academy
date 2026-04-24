@@ -4,14 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <!--
-    Mohsin Haematology Academy — clinical tool page template
-    ========================================================
+    Mohsin Haematology Academy — clinical tool page template (v2)
+    =============================================================
     Every new tool/guideline in /guidelines/<topic>/index.html should start
-    from this file. It hard-codes the non-negotiable page structure required
-    by the roadmap (Phase 2):
+    from this file. The page structure required by the roadmap (Phase 2):
 
         Input -> Output -> Interpretation -> Suggested Action ->
         Guideline Basis -> Last Updated
+
+    v2 additions (April 2026):
+      - Scope / Intended users metadata row
+      - Tag bar (Emergency, MDT, NICE, BSH, Audit, Prescribing, Interpretation)
+      - Explicit Disclaimer block at the top of the page
+      - Safety-language reminders in every FILL IN block
+
+    SAFETY LANGUAGE — use these verbs in new clinical content:
+      "suggests"          (not "indicates", "proves", "confirms")
+      "is compatible with" (not "diagnoses")
+      "consider"          (not "start", "give", "prescribe")
+      "requires clinical correlation"
+      "requires senior review"
+      "local policies take precedence"
+    Do not give definitive diagnoses from limited inputs.
+    Prescribing tools must state: local policy, renal function, weight,
+    bleeding risk, interactions, pregnancy status, product licence must
+    be checked before administration.
 
     Replace every <!-- FILL IN --> block with real content, then run the
     usual draft-first workflow (branch, PR, preview, deploy).
@@ -55,10 +72,95 @@
     <section class="tool-header">
       <h1><!-- FILL IN: clinical topic, e.g. Neutropenic Sepsis --></h1>
       <p class="lede"><!-- FILL IN: one sentence. What decision does this tool support? --></p>
-      <p class="version">
-        v1.0 &middot; Updated <!-- YYYY-MM-DD --> &middot;
-        Author: Dr Muhammad Mohsin, Consultant Haematologist
+
+      <!-- Tags — pick any that apply. Remove unused ones. -->
+      <ul class="tool-tags" aria-label="tool tags">
+        <li class="tag tag-interpretation">Interpretation</li>
+        <!--
+          <li class="tag tag-emergency">Emergency</li>
+          <li class="tag tag-mdt">MDT</li>
+          <li class="tag tag-nice">NICE</li>
+          <li class="tag tag-bsh">BSH</li>
+          <li class="tag tag-audit">Audit</li>
+          <li class="tag tag-prescribing">Prescribing</li>
+        -->
+      </ul>
+
+      <!-- Scope + Intended users + version/date -->
+      <dl class="tool-meta">
+        <dt>Scope</dt>
+        <dd><!-- FILL IN: one sentence. What clinical decision is in / out of scope for this tool. --></dd>
+
+        <dt>Intended users</dt>
+        <dd><!-- FILL IN: e.g. "UK consultant haematologists, SHOs/registrars on call, CNS teams. Not intended for patients." --></dd>
+
+        <dt>Evidence base</dt>
+        <dd><!-- FILL IN: primary sources, e.g. "BSH 2025 guideline on CLL; NICE TA689; ELN 2022." --></dd>
+
+        <dt>Version / last reviewed</dt>
+        <dd>v1.0 &middot; <!-- YYYY-MM-DD --> &middot; Dr Muhammad Mohsin, Consultant Haematologist</dd>
+      </dl>
+    </section>
+
+    <!-- ============================================================
+         DISCLAIMER BLOCK (visible at top of every tool page)
+         Standard wording below fits Live and Beta tools.
+         Variants:
+           - PROPOSED placeholders: swap the live-disclaimer paragraph
+             for the proposed-disclaimer paragraph below, and remove
+             every FILL IN section so no clinical content appears.
+           - EMERGENCY tools: uncomment the <div class="escalate"> block.
+           - PRESCRIBING tools: keep the SmPC + licensing sentence and
+             set the "Prescribing" tag above.
+
+         WORDING RULE: never use "approved", "ratified", "validated", or
+         "NHS-ready" on any tool page unless that status is formally
+         true. Personal academic sites cannot self-award those labels.
+         ============================================================ -->
+    <section class="disclaimer-block" role="note">
+      <h2>Clinical decision support only</h2>
+
+      <!-- LIVE / BETA wording (standard; leave this on every shipped tool) -->
+      <p class="live-disclaimer">
+        <strong>Clinical decision-support only. Not for direct patient use.</strong>
+        Use alongside local policy, senior clinical judgement, and
+        patient-specific context. Local trust policies take precedence
+        over any content on this page. It is not a substitute for direct
+        patient assessment, MDT discussion, or specialist advice. For
+        prescribing, always check renal and hepatic function, weight,
+        bleeding risk, drug interactions, pregnancy status, and the
+        current Summary of Product Characteristics before administration.
+        Off-label use must be clearly flagged. See the site
+        <a href="../../governance.html">governance page</a> for scope,
+        limitations, and medico-legal framing.
       </p>
+
+      <!--
+        PROPOSED variant — if the page exists only as a placeholder
+        (the tool is listed on the Tools hub as "Proposed" but has no
+        clinical content yet), delete the live-disclaimer paragraph above
+        and use the block below instead, then strip every FILL IN section:
+      -->
+      <!--
+      <p class="proposed-disclaimer">
+        <strong>Proposed tool. Not yet clinically validated.</strong>
+        No clinical decision-making should be based on this placeholder.
+        Not for direct patient use.
+      </p>
+      -->
+
+      <!--
+        EMERGENCY variant — uncomment for emergency tools (e.g. neutropenic
+        sepsis, TTP, tumour lysis, massive haemorrhage):
+      -->
+      <!--
+      <div class="escalate" role="alert">
+        <strong>Emergency tool.</strong> If a patient meets any red flag
+        below, escalate immediately to the on-call haematology consultant
+        or registrar, and follow local trust emergency pathways. Do not
+        delay escalation to complete this tool.
+      </div>
+      -->
     </section>
 
     <!-- ============================================================
@@ -86,10 +188,12 @@
     <!-- ============================================================
          3. INTERPRETATION
          What the output means clinically.
+         Use safety language: "suggests", "is compatible with", "consider".
+         Do not write diagnoses from limited inputs.
          ============================================================ -->
     <section id="interpretation">
       <h2>3. Interpretation</h2>
-      <p><!-- FILL IN: what each output band means for this patient. Do not restate the output — translate it. --></p>
+      <p><!-- FILL IN: what each output band means for this patient. Do not restate the output — translate it. Use "suggests", "is compatible with", "requires clinical correlation". --></p>
     </section>
 
     <!-- ============================================================
