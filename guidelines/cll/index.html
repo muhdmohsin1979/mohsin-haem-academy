@@ -245,21 +245,21 @@
   </div>
 </nav>
 
-<!-- ── Anchor nav ── -->
+<!-- ── Anchor nav (SOP section order v2) ── -->
 <div class="anchor-nav">
   <div class="container">
     <div class="anchor-nav-inner">
       <a href="#scope">Scope</a>
-      <a href="#overview">Overview</a>
-      <a href="#methodology">Methodology</a>
+      <a href="#overview">Clinical Context</a>
+      <a href="#methodology">Guideline Basis</a>
       <a href="#diagnosis">Diagnosis</a>
-      <a href="#prognostics">Prognostics</a>
-      <a href="#indications">Indications</a>
-      <a href="#firstline">First-Line</a>
-      <a href="#rr">R/R</a>
-      <a href="#response">Response &amp; MRD</a>
+      <a href="#prognostics">Risk Stratification</a>
+      <a href="#indications">Indications for Treatment</a>
+      <a href="#firstline">First-line Treatment</a>
+      <a href="#rr">Relapsed / Refractory</a>
+      <a href="#response">Response &amp; Monitoring</a>
       <a href="#special">Special Populations</a>
-      <a href="#audit">Audit</a>
+      <a href="#audit">Audit &amp; Governance</a>
       <a href="#refs">References</a>
     </div>
   </div>
@@ -291,10 +291,40 @@
     <!-- ── MAIN CONTENT ── -->
     <main class="gl-main">
 
-      <!-- Educational Disclaimer -->
-      <div class="edu-banner" style="margin-top:24px;">
+      <!-- Tool metadata (v2 scaffolding) -->
+      <dl class="tool-meta" style="margin-top:24px; font-size:0.88rem; display:grid; grid-template-columns:auto 1fr; gap:6px 14px; border:1px solid var(--clr-border); border-radius:10px; padding:16px 20px; background:var(--clr-surface-alt);">
+        <dt style="font-weight:600; color:var(--clr-text-secondary);">Scope</dt>
+        <dd style="margin:0;">Diagnosis, risk stratification, first-line treatment, and relapsed/refractory management of CLL/SLL in adults aged &ge;18. Prolymphocytic leukaemia and Richter's transformation are addressed under Special Populations.</dd>
+
+        <dt style="font-weight:600; color:var(--clr-text-secondary);">Intended users</dt>
+        <dd style="margin:0;">UK consultant haematologists, haematology registrars and SHOs, CNS teams, and MDT coordinators. Not intended for patients.</dd>
+
+        <dt style="font-weight:600; color:var(--clr-text-secondary);">Evidence base</dt>
+        <dd style="margin:0;">BSH 2025 (primary UK standard) &middot; NICE TAs 429, 561, 689, 796, 891, 1119 &middot; ELN/ESMO 2024 &middot; ASH/NCCN 2024 &middot; iwCLL 2018 criteria.</dd>
+
+        <dt style="font-weight:600; color:var(--clr-text-secondary);">Tags</dt>
+        <dd style="margin:0;">
+          <span style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 7px; border-radius:4px; background:rgba(107,113,122,0.08); color:var(--clr-text-secondary); border:1px solid rgba(107,113,122,0.14); margin-right:4px;">Interpretation</span>
+          <span style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 7px; border-radius:4px; background:rgba(30,77,140,0.08); color:#1e4d8c; border:1px solid rgba(30,77,140,0.14); margin-right:4px;">MDT</span>
+          <span style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 7px; border-radius:4px; background:var(--clr-primary-tint); color:var(--clr-primary-dark); border:1px solid rgba(122,31,43,0.12); margin-right:4px;">BSH</span>
+          <span style="display:inline-block; font-size:0.7rem; font-weight:600; padding:2px 7px; border-radius:4px; background:rgba(30,77,140,0.05); color:#1e4d8c; border:1px solid rgba(30,77,140,0.10);">NICE</span>
+        </dd>
+
+        <dt style="font-weight:600; color:var(--clr-text-secondary);">Version / last reviewed</dt>
+        <dd style="margin:0;">v1.9 &middot; SOP scaffolding v2 applied 2026-04-24 &middot; Dr Muhammad Mohsin, Consultant Haematologist</dd>
+      </dl>
+
+      <!-- v2 disclaimer block (Live tool wording) -->
+      <div class="edu-banner" style="margin-top:16px;">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        <p><strong>Educational Purpose Statement.</strong> This guideline synthesises ELN (European LeukemiaNet), BSH (British Society for Haematology), and ASH (American Society of Hematology) recommendations for educational purposes. <strong>For UK clinical practice, only BSH-aligned regimens commissioned by NICE apply.</strong> ELN and ASH content is presented for international educational context only. Always verify current NICE commissioning status and local formulary before prescribing. Clinical judgement must be applied to individual patients.</p>
+        <p>
+          <strong>Clinical decision-support only. Not for direct patient use.</strong>
+          Use alongside local policy, senior clinical judgement, and patient-specific context.
+          Local trust policies take precedence over any content on this page. This guideline synthesises ELN, BSH 2025, and ASH/NCCN 2024 recommendations for educational purposes.
+          <strong>For UK clinical practice, only BSH-aligned regimens commissioned by NICE apply.</strong>
+          ELN and ASH content is presented for international educational context only. Always verify current NICE commissioning status and local formulary before prescribing. For prescribing, always check renal and hepatic function, weight, bleeding risk, drug interactions, pregnancy status, and the current Summary of Product Characteristics before administration. Off-label use must be clearly flagged. See the
+          <a href="../../governance.html">governance page</a> for scope, limitations, and medico-legal framing.
+        </p>
       </div>
 
       <!-- 1. SCOPE -->
@@ -366,7 +396,7 @@
         <div class="section-header">
           <div class="section-num">3</div>
           <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-          <h2 class="section-title">Methodology — Guideline Synthesis</h2>
+          <h2 class="section-title">Guideline Basis (Methodology)</h2>
         </div>
         <p>This guideline integrates three international frameworks using GRADE (Grading of Recommendations Assessment, Development and Evaluation) methodology. Each recommendation is tagged with its source society, evidence quality, and recommendation strength.</p>
         <div class="pico-grid">
@@ -469,7 +499,7 @@
         <div class="section-header">
           <div class="section-num">5</div>
           <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-          <h2 class="section-title">Prognostic Work-up and Molecular Markers</h2>
+          <h2 class="section-title">Risk Stratification (Prognostic Work-up &amp; Molecular Markers)</h2>
         </div>
         <p>Molecular profiling is mandatory <strong>before initiating any line of treatment</strong>, but is not required at diagnosis in patients managed with watch and wait. Once a treatment decision is reached, a complete prognostic panel must be performed — including at each relapse, as molecular profiles can evolve. Results directly determine treatment selection, eligibility for targeted agents, and the risk-benefit ratio of each approach.</p>
         <div class="info-box box-navy">
@@ -518,7 +548,7 @@
         <div class="section-header">
           <div class="section-num">6</div>
           <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          <h2 class="section-title">Treatment Indications — iwCLL Active Disease Criteria</h2>
+          <h2 class="section-title">Indications for Treatment (iwCLL Active Disease Criteria)</h2>
         </div>
         <p>The majority of newly diagnosed CLL patients do not require immediate treatment. Watch-and-wait is appropriate for asymptomatic patients regardless of lymphocyte count. Treatment is initiated only when active disease criteria are met.</p>
         <div class="info-box box-warn">
@@ -584,7 +614,7 @@
         <div class="section-header">
           <div class="section-num">7</div>
           <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.157v.003Z"/></svg>
-          <h2 class="section-title">First-Line Treatment</h2>
+          <h2 class="section-title">First-line Treatment</h2>
         </div>
         <p>First-line treatment selection is guided by: (1) presence of del(17p) or TP53 mutation, (2) patient fitness (CIRS/eGFR/ECOG), and (3) patient preference (fixed-duration vs. continuous therapy). <strong>BSH 2025 endorses zanubrutinib and acalabrutinib as the preferred BTK inhibitors for new patients</strong>, with venetoclax-based fixed-duration combinations as the main alternative. Ibrutinib remains NICE-approved but is de-prioritised due to its inferior cardiac safety profile.</p>
 
@@ -671,7 +701,7 @@
         <div class="section-header">
           <div class="section-num">8</div>
           <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
-          <h2 class="section-title">Relapsed and Refractory CLL</h2>
+          <h2 class="section-title">Relapsed / Refractory CLL</h2>
         </div>
         <div class="vignette">
           <strong>Clinical Vignette</strong>
@@ -733,7 +763,7 @@
         <div class="section-header">
           <div class="section-num">9</div>
           <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          <h2 class="section-title">Response Assessment and MRD</h2>
+          <h2 class="section-title">Response &amp; Monitoring (Response Assessment and MRD)</h2>
         </div>
         <table class="data-table">
           <thead>
@@ -844,7 +874,7 @@
         <div class="section-header">
           <div class="section-num">11</div>
           <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-          <h2 class="section-title">Audit Standards</h2>
+          <h2 class="section-title">Audit &amp; Governance (Audit Standards)</h2>
         </div>
         <p>The following quality indicators can be used to audit CLL management practice against BSH 2025 and NICE commissioning requirements.</p>
         <table class="data-table">
@@ -868,7 +898,7 @@
         <div class="section-header">
           <div class="section-num">12</div>
           <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          <h2 class="section-title">Limitations and Update Plan</h2>
+          <h2 class="section-title">Limitations and Update Plan (part of Audit &amp; Governance)</h2>
         </div>
         <ul style="line-height:1.8; color:var(--clr-text-secondary); font-size:0.9rem;">
           <li>Zanubrutinib (TA931) and acalabrutinib (TA689) are both NICE-commissioned for first-line CLL; Blueteq eligibility criteria should be verified for individual patients before prescribing.</li>
