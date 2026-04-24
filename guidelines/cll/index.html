@@ -55,6 +55,7 @@
     .brand-icon svg { width: 18px; height: 18px; stroke: #fff; fill: none; stroke-width: 2; }
     .brand-name { font-size: 0.95rem; font-weight: 700; color: var(--clr-text); line-height: 1.1; }
     .brand-tagline { font-size: 0.68rem; color: var(--clr-muted); font-weight: 400; }
+    .nav-toggle { display: none; }
     .nav-links { display: flex; align-items: center; gap: 2px; margin-left: auto; }
     .nav-links a { font-size: 0.85rem; font-weight: 500; color: var(--clr-text-secondary); padding: 7px 11px; border-radius: var(--radius-sm); transition: color var(--ease), background var(--ease); white-space: nowrap; text-decoration: none; }
     .nav-links a:hover { color: var(--clr-primary); background: var(--clr-primary-tint); }
@@ -235,10 +236,14 @@
         <div class="brand-tagline">Evidence — Education — Practice</div>
       </div>
     </a>
-    <div class="nav-links">
+    <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" onclick="var n=this.closest('.nav');var o=n.classList.toggle('nav-open');this.setAttribute('aria-expanded',o);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <div class="nav-links">
           <a href="../../tools.html">Tools</a>
           <a href="../../guidelines.html" class="active">Guidelines</a>
           <a href="../../education.html">Education</a>
+          <a href="../../journal-club.html">Journal Club</a>
           <a href="../../about.html">About</a>
           <a href="../../haemcalc.html" class="nav-cta">Open HaemCalc</a>
         </div>
