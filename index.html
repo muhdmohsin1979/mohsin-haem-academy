@@ -1,992 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mohsin Haematology Academy</title>
-  <meta name="description" content="Practical haematology education and clinical tools for trainees and clinicians, led by a Consultant Haematologist.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-  <style>
-
-    /* ═══════════════════════════════════════════════
-       RESET & TOKENS
-    ═══════════════════════════════════════════════ */
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    :root {
-      /* Palette */
-      --clr-primary:       #7a1f2b;
-      --clr-primary-dark:  #5c1720;
-      --clr-primary-mid:   #8e2535;
-      --clr-primary-tint:  rgba(122, 31, 43, 0.07);
-      --clr-primary-glow:  rgba(122, 31, 43, 0.18);
-
-      --clr-bg:            #f7f5f3;
-      --clr-bg-warm:       #fdf1f3;
-      --clr-surface:       #ffffff;
-      --clr-surface-alt:   #faf8f7;
-
-      --clr-text:          #1a1a1e;
-      --clr-text-secondary:#3d3d42;
-      --clr-muted:         #6b717a;
-      --clr-subtle:        #9ca3af;
-
-      --clr-border:        #e6e1dd;
-      --clr-border-light:  #f0ebe7;
-
-      /* Shadows */
-      --shadow-xs: 0 1px 2px rgba(0,0,0,.04);
-      --shadow-sm: 0 1px 4px rgba(0,0,0,.06), 0 2px 6px rgba(0,0,0,.04);
-      --shadow-md: 0 4px 16px rgba(0,0,0,.08), 0 2px 6px rgba(0,0,0,.04);
-      --shadow-lg: 0 12px 36px rgba(0,0,0,.10), 0 4px 12px rgba(0,0,0,.05);
-
-      /* Radii */
-      --radius-sm:  6px;
-      --radius-md:  12px;
-      --radius-lg:  18px;
-      --radius-xl:  24px;
-
-      /* Transitions */
-      --ease: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: var(--clr-bg);
-      color: var(--clr-text);
-      line-height: 1.6;
-      font-size: 16px;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    a { text-decoration: none; color: inherit; }
-    img { display: block; max-width: 100%; }
-
-
-    /* ═══════════════════════════════════════════════
-       LAYOUT
-    ═══════════════════════════════════════════════ */
-    .container {
-      width: min(1080px, 91%);
-      margin-inline: auto;
-    }
-
-
-    /* ═══════════════════════════════════════════════
-       HEADER / NAV
-    ═══════════════════════════════════════════════ */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 200;
-      background: rgba(255,255,255,0.96);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--clr-border);
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 68px;
-      gap: 24px;
-    }
-
-    /* Brand */
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-shrink: 0;
-    }
-
-    .brand img {
-      height: 40px;
-      width: auto;
-    }
-
-    .brand-text { line-height: 1; }
-
-    .brand-name {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--clr-primary);
-      letter-spacing: -0.01em;
-    }
-
-    .brand-tagline {
-      font-size: 0.66rem;
-      font-weight: 500;
-      color: var(--clr-muted);
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      margin-top: 3px;
-    }
-
-    /* Nav links */
-    .nav-toggle { display: none; }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2px;
-    }
-
-    .nav-links a {
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--clr-text-secondary);
-      padding: 7px 13px;
-      border-radius: var(--radius-sm);
-      transition: color var(--ease), background var(--ease);
-      white-space: nowrap;
-    }
-
-    .nav-links a:hover {
-      color: var(--clr-primary);
-      background: var(--clr-primary-tint);
-    }
-
-    .nav-cta {
-      background: var(--clr-primary) !important;
-      color: #fff !important;
-      font-weight: 600 !important;
-      padding: 7px 16px !important;
-      margin-left: 6px;
-      box-shadow: 0 2px 8px var(--clr-primary-glow);
-    }
-
-    .nav-cta:hover {
-      background: var(--clr-primary-dark) !important;
-      transform: translateY(-1px);
-    }
-
-
-    /* ═══════════════════════════════════════════════
-       HERO
-    ═══════════════════════════════════════════════ */
-    .hero {
-      padding: 88px 0 80px;
-      background:
-        radial-gradient(ellipse 70% 60% at 100% 0%, rgba(122,31,43,0.055) 0%, transparent 70%),
-        linear-gradient(175deg, #fff 0%, #fdf3f5 60%, #f8eced 100%);
-      border-bottom: 1px solid var(--clr-border-light);
-      overflow: hidden;
-      position: relative;
-    }
-
-    .hero-inner {
-      display: grid;
-      grid-template-columns: 1fr 220px;
-      gap: 56px;
-      align-items: center;
-    }
-
-    /* Pill label */
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      background: var(--clr-primary-tint);
-      color: var(--clr-primary);
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      padding: 5px 12px 5px 9px;
-      border-radius: 100px;
-      margin-bottom: 22px;
-      border: 1px solid rgba(122,31,43,0.12);
-    }
-
-    .eyebrow-dot {
-      width: 6px;
-      height: 6px;
-      background: var(--clr-primary);
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
-    /* Heading */
-    .hero h1 {
-      font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
-      font-size: clamp(2rem, 3.8vw, 2.85rem);
-      font-weight: 700;
-      line-height: 1.18;
-      letter-spacing: -0.025em;
-      color: var(--clr-primary-dark);
-      margin-bottom: 20px;
-    }
-
-    .hero h1 em {
-      font-style: italic;
-      color: var(--clr-primary-mid);
-    }
-
-    .hero-credential {
-      font-size: 0.82rem;
-      color: var(--clr-primary);
-      font-weight: 500;
-      margin-bottom: 14px;
-      opacity: 0.85;
-    }
-
-    .hero-credential strong {
-      font-weight: 700;
-    }
-
-    .hero-lead {
-      font-size: 1.05rem;
-      color: var(--clr-text-secondary);
-      line-height: 1.78;
-      max-width: 540px;
-      margin-bottom: 36px;
-    }
-
-    /* Actions */
-    .hero-actions {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    /* Stats panel */
-    .hero-stats {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .stat-card {
-      background: var(--clr-surface);
-      border: 1px solid var(--clr-border);
-      border-radius: var(--radius-md);
-      padding: 18px 20px;
-      box-shadow: var(--shadow-md);
-      text-align: center;
-    }
-
-    .stat-value {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.65rem;
-      font-weight: 700;
-      color: var(--clr-primary);
-      line-height: 1;
-    }
-
-    .stat-label {
-      font-size: 0.72rem;
-      font-weight: 500;
-      color: var(--clr-muted);
-      letter-spacing: 0.03em;
-      margin-top: 5px;
-    }
-
-
-    /* ═══════════════════════════════════════════════
-       BUTTONS
-    ═══════════════════════════════════════════════ */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 11px 22px;
-      border-radius: var(--radius-sm);
-      font-family: inherit;
-      font-weight: 600;
-      font-size: 0.875rem;
-      line-height: 1;
-      cursor: pointer;
-      border: none;
-      transition: all var(--ease);
-      white-space: nowrap;
-    }
-
-    .btn-primary {
-      background: var(--clr-primary);
-      color: #fff;
-      box-shadow: 0 2px 10px var(--clr-primary-glow);
-    }
-    .btn-primary:hover {
-      background: var(--clr-primary-dark);
-      box-shadow: 0 4px 16px var(--clr-primary-glow);
-      transform: translateY(-1px);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--clr-text-secondary);
-      border: 1px solid var(--clr-border);
-      box-shadow: var(--shadow-xs);
-    }
-    .btn-outline:hover {
-      border-color: var(--clr-primary);
-      color: var(--clr-primary);
-      background: var(--clr-primary-tint);
-      transform: translateY(-1px);
-    }
-
-    .btn-white {
-      background: #fff;
-      color: var(--clr-primary-dark);
-      font-weight: 700;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-    }
-    .btn-white:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.22);
-    }
-
-
-    /* ═══════════════════════════════════════════════
-       SECTIONS — shared
-    ═══════════════════════════════════════════════ */
-    .section {
-      padding: 72px 0;
-    }
-
-    .section-label {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--clr-primary);
-      margin-bottom: 8px;
-    }
-
-    .section-title {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(1.5rem, 3vw, 1.9rem);
-      font-weight: 700;
-      color: var(--clr-primary-dark);
-      letter-spacing: -0.02em;
-      line-height: 1.25;
-    }
-
-    .section-subtitle {
-      font-size: 0.975rem;
-      color: var(--clr-muted);
-      line-height: 1.72;
-      max-width: 540px;
-      margin-top: 10px;
-    }
-
-    .section-header {
-      margin-bottom: 40px;
-    }
-
-    hr.divider {
-      border: none;
-      border-top: 1px solid var(--clr-border);
-      margin: 0;
-    }
-
-
-    /* ═══════════════════════════════════════════════
-       FEATURE CARDS
-    ═══════════════════════════════════════════════ */
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .card {
-      background: var(--clr-surface);
-      border: 1px solid var(--clr-border);
-      border-radius: var(--radius-md);
-      padding: 28px 26px;
-      box-shadow: var(--shadow-sm);
-      transition: box-shadow var(--ease), transform var(--ease), border-color var(--ease);
-    }
-
-    .card:hover {
-      box-shadow: var(--shadow-md);
-      transform: translateY(-3px);
-      border-color: rgba(122,31,43,0.15);
-    }
-
-    .card-icon {
-      width: 46px;
-      height: 46px;
-      border-radius: 11px;
-      background: var(--clr-primary-tint);
-      border: 1px solid rgba(122,31,43,0.10);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--clr-primary);
-      margin-bottom: 18px;
-      flex-shrink: 0;
-    }
-
-    .card h3 {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--clr-primary-dark);
-      letter-spacing: -0.01em;
-      margin-bottom: 10px;
-      line-height: 1.3;
-    }
-
-    .card p {
-      font-size: 0.875rem;
-      color: var(--clr-muted);
-      line-height: 1.68;
-    }
-
-    /* Card with subtle accent line */
-    .card-accent {
-      border-top: 3px solid var(--clr-primary);
-    }
-
-
-    /* ═══════════════════════════════════════════════
-       HAEMCALC FEATURE BLOCK
-    ═══════════════════════════════════════════════ */
-    .feature-block {
-      background: linear-gradient(140deg, var(--clr-primary-dark) 0%, var(--clr-primary-mid) 100%);
-      border-radius: var(--radius-xl);
-      padding: 52px 56px;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 48px;
-      align-items: center;
-      box-shadow: var(--shadow-lg), 0 0 0 1px rgba(255,255,255,0.04) inset;
-      position: relative;
-      overflow: hidden;
-      color: #fff;
-    }
-
-    /* Decorative circles */
-    .feature-block::before,
-    .feature-block::after {
-      content: '';
-      position: absolute;
-      border-radius: 50%;
-      pointer-events: none;
-    }
-    .feature-block::before {
-      width: 280px; height: 280px;
-      top: -80px; right: 120px;
-      background: rgba(255,255,255,0.05);
-    }
-    .feature-block::after {
-      width: 180px; height: 180px;
-      bottom: -50px; right: -30px;
-      background: rgba(255,255,255,0.04);
-    }
-
-    .feature-eyebrow {
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      opacity: 0.55;
-      margin-bottom: 12px;
-    }
-
-    .feature-block h2 {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(1.6rem, 2.8vw, 2.1rem);
-      font-weight: 700;
-      letter-spacing: -0.025em;
-      margin-bottom: 14px;
-      line-height: 1.2;
-    }
-
-    .feature-block p {
-      font-size: 0.95rem;
-      line-height: 1.75;
-      opacity: 0.8;
-      max-width: 500px;
-    }
-
-    .feature-cta {
-      position: relative;
-      z-index: 1;
-      flex-shrink: 0;
-    }
-
-
-    /* ═══════════════════════════════════════════════
-       FOOTER
-    ═══════════════════════════════════════════════ */
-    footer {
-      background: var(--clr-surface);
-      border-top: 1px solid var(--clr-border);
-      padding: 36px 0;
-    }
-
-    .footer-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .footer-brand .brand-name {
-      font-size: 0.88rem;
-    }
-
-    .footer-brand .brand-tagline {
-      font-size: 0.64rem;
-      margin-top: 4px;
-    }
-
-    .footer-note {
-      font-size: 0.775rem;
-      color: var(--clr-muted);
-      text-align: right;
-      line-height: 1.6;
-    }
-
-    .footer-note strong {
-      color: var(--clr-text-secondary);
-      font-weight: 600;
-    }
-
-
-    /* ═══════════════════════════════════════════════
-       RESPONSIVE
-    ═══════════════════════════════════════════════ */
-    @media (max-width: 960px) {
-      .hero-inner {
-        grid-template-columns: 1fr;
-      }
-      .hero-stats {
-        flex-direction: row;
-        gap: 12px;
-      }
-      .stat-card {
-        flex: 1;
-      }
-      .cards-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-      .feature-block {
-        grid-template-columns: 1fr;
-        padding: 40px 36px;
-        gap: 28px;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .nav-links a:not(.nav-cta) {
-        display: none;
-      }
-
-      .hero {
-        padding: 60px 0 52px;
-      }
-
-      .hero h1 {
-        font-size: 1.9rem;
-      }
-
-      .hero-stats {
-        display: none;
-      }
-
-      .cards-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .feature-block {
-        padding: 32px 26px;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 14px;
-      }
-
-      .footer-note {
-        text-align: left;
-      }
-      .nav-toggle {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        background: none;
-        border: 1px solid var(--clr-border);
-        border-radius: 6px;
-        padding: 6px 8px;
-        cursor: pointer;
-        color: var(--clr-primary);
-      }
-      .nav { position: relative; }
-      .nav-links {
-        position: absolute;
-        top: 58px;
-        right: 0;
-        left: 0;
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        background: #fff;
-        border: 1px solid var(--clr-border);
-        border-radius: 10px;
-        padding: 10px;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04);
-        gap: 2px;
-        z-index: 201;
-      }
-      .nav.nav-open .nav-links { display: flex; }
-      .nav-links a:not(.nav-cta) { display: block; padding: 10px 12px; border-radius: 6px; }
-      .nav-links .nav-cta { margin-top: 6px; text-align: center; }
-
-    }
-
-
-    /* ═══════════════════════════════════════════════
-       MAILING LIST SIGNUP
-    ═══════════════════════════════════════════════ */
-    .signup-section {
-      padding: 72px 0;
-      background: linear-gradient(135deg, var(--clr-primary-dark) 0%, var(--clr-primary-mid) 100%);
-      position: relative;
-      overflow: hidden;
-    }
-    .signup-section::before,
-    .signup-section::after {
-      content: '';
-      position: absolute;
-      border-radius: 50%;
-      pointer-events: none;
-    }
-    .signup-section::before {
-      width: 360px; height: 360px;
-      top: -120px; right: -60px;
-      background: rgba(255,255,255,0.05);
-    }
-    .signup-section::after {
-      width: 200px; height: 200px;
-      bottom: -80px; left: 5%;
-      background: rgba(255,255,255,0.03);
-    }
-    .signup-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-    }
-    .signup-eyebrow {
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
-      margin-bottom: 12px;
-    }
-    .signup-text h2 {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(1.5rem, 2.5vw, 2rem);
-      font-weight: 700;
-      color: #fff;
-      letter-spacing: -0.02em;
-      line-height: 1.25;
-      margin-bottom: 12px;
-    }
-    .signup-text p {
-      font-size: 0.92rem;
-      color: rgba(255,255,255,0.68);
-      line-height: 1.72;
-    }
-    .mc-form-row {
-      display: flex;
-      gap: 0;
-      margin-bottom: 11px;
-    }
-    .mc-email-input {
-      flex: 1;
-      padding: 13px 16px;
-      font-family: inherit;
-      font-size: 0.9rem;
-      color: var(--clr-text);
-      background: #fff;
-      border: none;
-      border-radius: var(--radius-sm) 0 0 var(--radius-sm);
-      outline: none;
-      min-width: 0;
-    }
-    .mc-email-input::placeholder { color: var(--clr-muted); }
-    .mc-email-input:focus { box-shadow: 0 0 0 3px rgba(255,255,255,0.25); position: relative; z-index: 1; }
-    .mc-submit-btn {
-      padding: 13px 22px;
-      font-family: inherit;
-      font-size: 0.88rem;
-      font-weight: 700;
-      color: var(--clr-primary-dark);
-      background: #fff;
-      border: none;
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      cursor: pointer;
-      transition: background var(--ease), color var(--ease);
-      white-space: nowrap;
-      letter-spacing: -0.01em;
-    }
-    .mc-submit-btn:hover { background: #f5e8e9; }
-    .mc-privacy {
-      font-size: 0.73rem;
-      color: rgba(255,255,255,0.38);
-      line-height: 1.55;
-    }
-    #mce-responses { margin-top: 10px; }
-    #mce-error-response {
-      display: none;
-      font-size: 0.82rem;
-      color: #ffcdd2;
-      background: rgba(255,255,255,0.08);
-      padding: 8px 12px;
-      border-radius: var(--radius-sm);
-      margin-top: 8px;
-    }
-    #mce-success-response {
-      display: none;
-      font-size: 0.82rem;
-      color: #c8e6c9;
-      background: rgba(255,255,255,0.08);
-      padding: 8px 12px;
-      border-radius: var(--radius-sm);
-      margin-top: 8px;
-    }
-    @media (max-width: 760px) {
-      .signup-inner { grid-template-columns: 1fr; gap: 32px; }
-    }
-
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Mohsin Haematology Academy</title>
+<meta name="description" content="Practical haematology education and clinical tools for trainees and clinicians, led by a Consultant Haematologist.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --clr-primary: #7a1f2b;
+  --clr-primary-dark: #5c1720;
+  --clr-primary-mid: #8e2535;
+  --clr-primary-tint: rgba(122, 31, 43, 0.07);
+  --clr-primary-glow: rgba(122, 31, 43, 0.18);
+  --clr-bg: #f7f5f3;
+  --clr-bg-warm: #fdf1f3;
+  --clr-surface: #ffffff;
+  --clr-surface-alt: #faf8f7;
+  --clr-text: #1a1a1e;
+  --clr-text-secondary:#3d3d42;
+  --clr-muted: #6b717a;
+  --clr-subtle: #9ca3af;
+  --clr-border: #e6e1dd;
+  --clr-border-light: #f0ebe7;
+  --shadow-xs: 0 1px 2px rgba(0,0,0,.04);
+  --shadow-sm: 0 1px 4px rgba(0,0,0,.06), 0 2px 6px rgba(0,0,0,.04);
+  --shadow-md: 0 4px 16px rgba(0,0,0,.08), 0 2px 6px rgba(0,0,0,.04);
+  --shadow-lg: 0 12px 36px rgba(0,0,0,.10), 0 4px 12px rgba(0,0,0,.05);
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --ease: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--clr-bg); color: var(--clr-text); line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
+.container { width: min(1080px, 91%); margin-inline: auto; }
+header { position: sticky; top: 0; z-index: 200; background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--clr-border); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 24px; }
+.brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.brand img { height: 40px; width: auto; }
+.brand-text { line-height: 1; }
+.brand-name { font-size: 0.95rem; font-weight: 700; color: var(--clr-primary); letter-spacing: -0.01em; }
+.brand-tagline { font-size: 0.66rem; font-weight: 500; color: var(--clr-muted); letter-spacing: 0.07em; text-transform: uppercase; margin-top: 3px; }
+.nav-toggle { display: none; }
+.nav-links { display: flex; align-items: center; gap: 2px; }
+.nav-links a { font-size: 0.85rem; font-weight: 500; color: var(--clr-text-secondary); padding: 7px 13px; border-radius: var(--radius-sm); transition: color var(--ease), background var(--ease); white-space: nowrap; }
+.nav-links a:hover { color: var(--clr-primary); background: var(--clr-primary-tint); }
+.nav-cta { background: var(--clr-primary) !important; color: #fff !important; font-weight: 600 !important; padding: 7px 16px !important; margin-left: 6px; box-shadow: 0 2px 8px var(--clr-primary-glow); }
+.nav-cta:hover { background: var(--clr-primary-dark) !important; transform: translateY(-1px); }
+.hero { padding: 88px 0 80px; background: radial-gradient(ellipse 70% 60% at 100% 0%, rgba(122,31,43,0.055) 0%, transparent 70%), linear-gradient(175deg, #fff 0%, #fdf3f5 60%, #f8eced 100%); border-bottom: 1px solid var(--clr-border-light); overflow: hidden; position: relative; }
+.hero-inner { display: grid; grid-template-columns: 1fr 220px; gap: 56px; align-items: center; }
+.eyebrow { display: inline-flex; align-items: center; gap: 7px; background: var(--clr-primary-tint); color: var(--clr-primary); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 5px 12px 5px 9px; border-radius: 100px; margin-bottom: 22px; border: 1px solid rgba(122,31,43,0.12); }
+.eyebrow-dot { width: 6px; height: 6px; background: var(--clr-primary); border-radius: 50%; flex-shrink: 0; }
+.hero h1 { font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: clamp(2rem, 3.8vw, 2.85rem); font-weight: 700; line-height: 1.18; letter-spacing: -0.025em; color: var(--clr-primary-dark); margin-bottom: 20px; }
+.hero h1 em { font-style: italic; color: var(--clr-primary-mid); }
+.hero-credential { font-size: 0.82rem; color: var(--clr-primary); font-weight: 500; margin-bottom: 14px; opacity: 0.85; }
+.hero-credential strong { font-weight: 700; }
+.hero-lead { font-size: 1.05rem; color: var(--clr-text-secondary); line-height: 1.78; max-width: 540px; margin-bottom: 36px; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.hero-stats { display: flex; flex-direction: column; gap: 14px; }
+.stat-card { background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); padding: 18px 20px; box-shadow: var(--shadow-md); text-align: center; }
+.stat-value { font-family: 'Playfair Display', serif; font-size: 1.65rem; font-weight: 700; color: var(--clr-primary); line-height: 1; }
+.stat-label { font-size: 0.72rem; font-weight: 500; color: var(--clr-muted); letter-spacing: 0.03em; margin-top: 5px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 22px; border-radius: var(--radius-sm); font-family: inherit; font-weight: 600; font-size: 0.875rem; line-height: 1; cursor: pointer; border: none; transition: all var(--ease); white-space: nowrap; }
+.btn-primary { background: var(--clr-primary); color: #fff; box-shadow: 0 2px 10px var(--clr-primary-glow); }
+.btn-primary:hover { background: var(--clr-primary-dark); box-shadow: 0 4px 16px var(--clr-primary-glow); transform: translateY(-1px); }
+.btn-outline { background: transparent; color: var(--clr-text-secondary); border: 1px solid var(--clr-border); box-shadow: var(--shadow-xs); }
+.btn-outline:hover { border-color: var(--clr-primary); color: var(--clr-primary); background: var(--clr-primary-tint); transform: translateY(-1px); }
+.btn-white { background: #fff; color: var(--clr-primary-dark); font-weight: 700; box-shadow: 0 4px 16px rgba(0,0,0,0.18); }
+.btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.22); }
+.section { padding: 72px 0; }
+.section-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--clr-primary); margin-bottom: 8px; }
+.section-title { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.5rem, 3vw, 1.9rem); font-weight: 700; color: var(--clr-primary-dark); letter-spacing: -0.02em; line-height: 1.25; }
+.section-subtitle { font-size: 0.975rem; color: var(--clr-muted); line-height: 1.72; max-width: 540px; margin-top: 10px; }
+.section-header { margin-bottom: 40px; }
+hr.divider { border: none; border-top: 1px solid var(--clr-border); margin: 0; }
+.cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.card { background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); padding: 28px 26px; box-shadow: var(--shadow-sm); transition: box-shadow var(--ease), transform var(--ease), border-color var(--ease); }
+.card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); border-color: rgba(122,31,43,0.15); }
+.card-icon { width: 46px; height: 46px; border-radius: 11px; background: var(--clr-primary-tint); border: 1px solid rgba(122,31,43,0.10); display: flex; align-items: center; justify-content: center; color: var(--clr-primary); margin-bottom: 18px; flex-shrink: 0; }
+.card h3 { font-size: 1rem; font-weight: 700; color: var(--clr-primary-dark); letter-spacing: -0.01em; margin-bottom: 10px; line-height: 1.3; }
+.card p { font-size: 0.875rem; color: var(--clr-muted); line-height: 1.68; }
+.card-accent { border-top: 3px solid var(--clr-primary); }
+.feature-block { background: linear-gradient(140deg, var(--clr-primary-dark) 0%, var(--clr-primary-mid) 100%); border-radius: var(--radius-xl); padding: 52px 56px; display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; box-shadow: var(--shadow-lg), 0 0 0 1px rgba(255,255,255,0.04) inset; position: relative; overflow: hidden; color: #fff; }
+.feature-block::before, .feature-block::after { content: ''; position: absolute; border-radius: 50%; pointer-events: none; }
+.feature-block::before { width: 280px; height: 280px; top: -80px; right: 120px; background: rgba(255,255,255,0.05); }
+.feature-block::after { width: 180px; height: 180px; bottom: -50px; right: -30px; background: rgba(255,255,255,0.04); }
+.feature-eyebrow { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.55; margin-bottom: 12px; }
+.feature-block h2 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.6rem, 2.8vw, 2.1rem); font-weight: 700; letter-spacing: -0.025em; margin-bottom: 14px; line-height: 1.2; }
+.feature-block p { font-size: 0.95rem; line-height: 1.75; opacity: 0.8; max-width: 500px; }
+.feature-cta { position: relative; z-index: 1; flex-shrink: 0; }
+footer { background: var(--clr-surface); border-top: 1px solid var(--clr-border); padding: 36px 0; }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.footer-brand .brand-name { font-size: 0.88rem; }
+.footer-brand .brand-tagline { font-size: 0.64rem; margin-top: 4px; }
+.footer-note { font-size: 0.775rem; color: var(--clr-muted); text-align: right; line-height: 1.6; }
+.footer-note strong { color: var(--clr-text-secondary); font-weight: 600; }
+@media (max-width: 960px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-stats { flex-direction: row; gap: 12px; }
+  .stat-card { flex: 1; }
+  .cards-grid { grid-template-columns: 1fr 1fr; }
+  .feature-block { grid-template-columns: 1fr; padding: 40px 36px; gap: 28px; }
+}
+@media (max-width: 640px) {
+  .nav-links a:not(.nav-cta) { display: none; }
+  .hero { padding: 60px 0 52px; }
+  .hero h1 { font-size: 1.9rem; }
+  .hero-stats { display: none; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .feature-block { padding: 32px 26px; }
+  .footer-inner { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .footer-note { text-align: left; }
+  .nav-toggle { display: inline-flex; align-items: center; justify-content: center; background: none; border: 1px solid var(--clr-border); border-radius: 6px; padding: 6px 8px; cursor: pointer; color: var(--clr-primary); }
+  .nav { position: relative; }
+  .nav-links { position: absolute; top: 58px; right: 0; left: 0; display: none; flex-direction: column; align-items: stretch; background: #fff; border: 1px solid var(--clr-border); border-radius: 10px; padding: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04); gap: 2px; z-index: 201; }
+  .nav.nav-open .nav-links { display: flex; }
+  .nav-links a:not(.nav-cta) { display: block; padding: 10px 12px; border-radius: 6px; }
+  .nav-links .nav-cta { margin-top: 6px; text-align: center; }
+}
+.signup-section { padding: 72px 0; background: linear-gradient(135deg, var(--clr-primary-dark) 0%, var(--clr-primary-mid) 100%); position: relative; overflow: hidden; }
+.signup-section::before, .signup-section::after { content: ''; position: absolute; border-radius: 50%; pointer-events: none; }
+.signup-section::before { width: 360px; height: 360px; top: -120px; right: -60px; background: rgba(255,255,255,0.05); }
+.signup-section::after { width: 200px; height: 200px; bottom: -80px; left: 5%; background: rgba(255,255,255,0.03); }
+.signup-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; position: relative; z-index: 1; }
+.signup-eyebrow { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 12px; }
+.signup-text h2 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 700; color: #fff; letter-spacing: -0.02em; line-height: 1.25; margin-bottom: 12px; }
+.signup-text p { font-size: 0.92rem; color: rgba(255,255,255,0.68); line-height: 1.72; }
+.mc-form-row { display: flex; gap: 0; margin-bottom: 11px; }
+.mc-email-input { flex: 1; padding: 13px 16px; font-family: inherit; font-size: 0.9rem; color: var(--clr-text); background: #fff; border: none; border-radius: var(--radius-sm) 0 0 var(--radius-sm); outline: none; min-width: 0; }
+.mc-email-input::placeholder { color: var(--clr-muted); }
+.mc-email-input:focus { box-shadow: 0 0 0 3px rgba(255,255,255,0.25); position: relative; z-index: 1; }
+.mc-submit-btn { padding: 13px 22px; font-family: inherit; font-size: 0.88rem; font-weight: 700; color: var(--clr-primary-dark); background: #fff; border: none; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; cursor: pointer; transition: background var(--ease), color var(--ease); white-space: nowrap; letter-spacing: -0.01em; }
+.mc-submit-btn:hover { background: #f5e8e9; }
+.mc-privacy { font-size: 0.73rem; color: rgba(255,255,255,0.38); line-height: 1.55; }
+#mce-responses { margin-top: 10px; }
+#mce-error-response { display: none; font-size: 0.82rem; color: #ffcdd2; background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: var(--radius-sm); margin-top: 8px; }
+#mce-success-response { display: none; font-size: 0.82rem; color: #c8e6c9; background: rgba(255,255,255,0.08); padding: 8px 12px; border-radius: var(--radius-sm); margin-top: 8px; }
+@media (max-width: 760px) {
+  .signup-inner { grid-template-columns: 1fr; gap: 32px; }
+}
+</style>
 </head>
 <body>
 
-  <!-- ═══ HEADER ═══════════════════════════════════ -->
-  <header>
-    <div class="container">
-      <nav class="nav">
-        <a href="index.html" class="brand">
-          <img src="logo.png" alt="Mohsin Haematology Academy logo">
-          <div class="brand-text">
-            <div class="brand-name">Mohsin Haematology Academy</div>
-            <div class="brand-tagline">Clinical Education &amp; Digital Tools</div>
-          </div>
-        </a>
-        <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" onclick="var n=this.closest('.nav');var o=n.classList.toggle('nav-open');this.setAttribute('aria-expanded',o);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-        </button>
-        <div class="nav-links">
-          <a href="tools.html">Tools</a>
-          <a href="guidelines.html">Guidelines</a>
-          <a href="education.html">Education</a>
-          <a href="journal-club.html">Journal Club</a>
-          <a href="about.html">About</a>
-          <a href="haemcalc" class="nav-cta">Open HaemCalc</a>
+<header>
+  <div class="container">
+    <nav class="nav">
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="Mohsin Haematology Academy logo">
+        <div class="brand-text">
+          <div class="brand-name">Mohsin Haematology Academy</div>
+          <div class="brand-tagline">Clinical Education &amp; Digital Tools</div>
         </div>
-      </nav>
-    </div>
-  </header>
-
-
-  <!-- ═══ HERO ══════════════════════════════════════ -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-inner">
-
-        <div class="hero-content">
-          <div class="eyebrow">
-            <span class="eyebrow-dot"></span>
-            Consultant-Led Platform
-          </div>
-          <h1>Practical haematology<br><em>education</em> and clinical tools</h1>
-          <p class="hero-credential">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:5px;opacity:0.7;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            Curated by <strong>Dr Muhammad Mohsin</strong>, Consultant Haematologist, UK
-          </p>
-          <p class="hero-lead">
-            Structured learning, clinical resources, and digital decision-support tools
-            to support trainees and clinicians in real-world practice.
-          </p>
-          <div class="hero-actions">
-            <a href="haemcalc" class="btn btn-primary">Launch HaemCalc &rarr;</a>
-            <a href="about.html" class="btn btn-outline">About the Academy</a>
-          </div>
-        </div>
-
-        <div class="hero-stats">
-          <div class="stat-card">
-            <div class="stat-value">NHS</div>
-            <div class="stat-label">Consultant-Led</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-value">EBM</div>
-            <div class="stat-label">Evidence-Based</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-value">CPD</div>
-            <div class="stat-label">Aligned</div>
-          </div>
-        </div>
-
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" onclick="var n=this.closest('.nav');var o=n.classList.toggle('nav-open');this.setAttribute('aria-expanded',o);">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div class="nav-links">
+        <a href="tools.html">Tools</a>
+        <a href="guidelines.html">Guidelines</a>
+        <a href="education.html">Education</a>
+        <a href="journal-club.html">Journal Club</a>
+        <a href="about.html">About</a>
+        <a href="haemcalc" class="nav-cta">Open HaemCalc</a>
       </div>
-    </div>
-  </section>
+    </nav>
+  </div>
+</header>
 
-
-  <!-- ═══ FEATURE CARDS ═════════════════════════════ -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-label">What We Offer</div>
-        <div class="section-title">Resources built for clinical practice</div>
-        <p class="section-subtitle">
-          Designed by a practising Consultant Haematologist for trainees and
-          clinicians working at every level.
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span> Consultant-Led Platform
+        </div>
+        <h1>Practical haematology<br><em>education</em> and clinical tools</h1>
+        <p class="hero-credential">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:5px;opacity:0.7;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Curated by <strong>Dr Muhammad Mohsin</strong>, Consultant Haematologist, UK
         </p>
+        <p class="hero-lead">
+          Structured learning, clinical resources, and digital decision-support tools to support trainees and clinicians in real-world practice.
+        </p>
+        <div class="hero-actions">
+          <a href="haemcalc" class="btn btn-primary">Launch HaemCalc &rarr;</a>
+          <a href="about.html" class="btn btn-outline">About the Academy</a>
+        </div>
       </div>
-
-      <div class="cards-grid">
-        <div class="card card-accent">
-          <div class="card-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-          </div>
-          <h3>Educational Resources</h3>
-          <p>Structured haematology learning grounded in evidence-based practice and real clinical scenarios, suitable for trainees and consultants alike.</p>
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-value">NHS</div>
+          <div class="stat-label">Consultant-Led</div>
         </div>
-        <div class="card card-accent">
-          <div class="card-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          </div>
-          <h3>Clinical Tools</h3>
-          <p>Practical calculators and decision-support tools designed to assist in accurate interpretation of haematological parameters at the point of care.</p>
+        <div class="stat-card">
+          <div class="stat-value">EBM</div>
+          <div class="stat-label">Evidence-Based</div>
         </div>
-        <div class="card card-accent">
-          <div class="card-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><line x1="12" y1="11" x2="16" y2="11"/><line x1="12" y1="16" x2="16" y2="16"/><line x1="8" y1="11" x2="8.01" y2="11"/><line x1="8" y1="16" x2="8.01" y2="16"/></svg>
-          </div>
-          <h3>Practical Guides</h3>
-          <p>Real-world frameworks for clinical practice, including investigation pathways, treatment principles, and structured referral guidance.</p>
+        <div class="stat-card">
+          <div class="stat-value">CPD</div>
+          <div class="stat-label">Aligned</div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <hr class="divider">
-
-  <!-- ═══ HAEMCALC BLOCK ════════════════════════════ -->
-  <section class="section">
-    <div class="container">
-      <div class="feature-block">
-        <div class="feature-content">
-          <div class="feature-eyebrow">Flagship Tool</div>
-          <h2>HaemCalc</h2>
-          <p>
-            The Academy's clinical decision-support platform — a growing suite of
-            validated haematology calculators covering malignancy scoring, coagulation,
-            critical illness, and more. Built for point-of-care use on any device.
-            No login required.
-          </p>
-          <div style="margin-top: 10px; display:flex; flex-wrap:wrap; gap:8px;">
-            <span style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);color:#fff;font-size:0.78rem;font-weight:600;padding:5px 12px;border-radius:100px;">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              100+ calculators
-            </span>
-            <span style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);color:#fff;font-size:0.78rem;font-weight:600;padding:5px 12px;border-radius:100px;">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-              No login required
-            </span>
-            <span style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);color:#fff;font-size:0.78rem;font-weight:600;padding:5px 12px;border-radius:100px;">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-              Point-of-care ready
-            </span>
-          </div>
-          <div style="margin-top: 28px;">
-            <a href="haemcalc" class="btn btn-white">Launch HaemCalc &rarr;</a>
-          </div>
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">What We Offer</div>
+      <div class="section-title">Resources built for clinical practice</div>
+      <p class="section-subtitle">
+        Designed by a practising Consultant Haematologist for trainees and clinicians working at every level.
+      </p>
+    </div>
+    <div class="cards-grid">
+      <div class="card card-accent">
+        <div class="card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
         </div>
-        <div class="feature-cta"></div>
+        <h3>Educational Resources</h3>
+        <p>Structured haematology learning grounded in evidence-based practice and real clinical scenarios, suitable for trainees and consultants alike.</p>
+      </div>
+      <div class="card card-accent">
+        <div class="card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>Clinical Tools</h3>
+        <p>Practical calculators and decision-support tools designed to assist in accurate interpretation of haematological parameters at the point of care.</p>
+      </div>
+      <div class="card card-accent">
+        <div class="card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><line x1="12" y1="11" x2="16" y2="11"/><line x1="12" y1="16" x2="16" y2="16"/><line x1="8" y1="11" x2="8.01" y2="11"/><line x1="8" y1="16" x2="8.01" y2="16"/></svg>
+        </div>
+        <h3>Practical Guides</h3>
+        <p>Real-world frameworks for clinical practice, including investigation pathways, treatment principles, and structured referral guidance.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
+<hr class="divider">
 
-  <!-- ═══ MAILING LIST ════════════════════════════ -->
-  <section class="signup-section">
-    <div class="container">
-      <div class="signup-inner">
-
-        <div class="signup-text">
-          <div class="signup-eyebrow">Stay Updated</div>
-          <h2>Join the Academy mailing list</h2>
-          <p>New guidelines, clinical tools, journal club summaries, and educational content — delivered directly to your inbox as they publish. No spam. Unsubscribe any time.</p>
+<section class="section">
+  <div class="container">
+    <div class="feature-block">
+      <div class="feature-content">
+        <div class="feature-eyebrow">Flagship Tool</div>
+        <h2>HaemCalc</h2>
+        <p>
+          The Academy's clinical decision-support platform — a growing suite of validated haematology calculators covering malignancy scoring, coagulation, critical illness, and more. Built for point-of-care use on any device. No login required.
+        </p>
+        <div style="margin-top: 10px; display:flex; flex-wrap:wrap; gap:8px;">
+          <span style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);color:#fff;font-size:0.78rem;font-weight:600;padding:5px 12px;border-radius:100px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            100+ calculators
+          </span>
+          <span style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);color:#fff;font-size:0.78rem;font-weight:600;padding:5px 12px;border-radius:100px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            No login required
+          </span>
+          <span style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);color:#fff;font-size:0.78rem;font-weight:600;padding:5px 12px;border-radius:100px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            Point-of-care ready
+          </span>
         </div>
-
-        <div class="signup-form-wrap">
-          <form action="https://mohsinhaemacademy.us19.list-manage.com/subscribe/post?u=2a3cbe4be596321fa8d8e0193&amp;id=b268a64be0&amp;f_id=006fa9e4f0"
-                method="post"
-                id="mc-embedded-subscribe-form"
-                name="mc-embedded-subscribe-form"
-                class="validate"
-                target="_blank">
-            <div class="mc-form-row">
-              <input type="email"
-                     name="EMAIL"
-                     id="mce-EMAIL"
-                     class="required email mc-email-input"
-                     placeholder="Your email address"
-                     required="">
-              <button type="submit"
-                      name="subscribe"
-                      id="mc-embedded-subscribe"
-                      class="mc-submit-btn">Subscribe &rarr;</button>
-            </div>
-            <!-- Bot protection — do not remove -->
-            <div aria-hidden="true" style="position:absolute;left:-5000px;">
-              <input type="text" name="b_2a3cbe4be596321fa8d8e0193_b268a64be0" tabindex="-1" value="">
-            </div>
-            <div id="mce-responses">
-              <div id="mce-error-response"></div>
-              <div id="mce-success-response"></div>
-            </div>
-            <p class="mc-privacy">We respect your privacy. No patient data is ever collected. Powered by Mailchimp.</p>
-          </form>
+        <div style="margin-top: 28px;">
+          <a href="haemcalc" class="btn btn-white">Launch HaemCalc &rarr;</a>
         </div>
-
       </div>
+      <div class="feature-cta"></div>
     </div>
-  </section>
-  <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-  <script>(function($){window.fnames=new Array();window.ftypes=new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj=jQuery.noConflict(true);</script>
+  </div>
+</section>
 
-
-  <!-- ═══ FOOTER ════════════════════════════════════ -->
-  <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-brand brand">
-          <div class="brand-text">
-            <div class="brand-name">Mohsin Haematology Academy</div>
-            <div class="brand-tagline">Clinical Education &amp; Digital Tools</div>
+<section class="signup-section">
+  <div class="container">
+    <div class="signup-inner">
+      <div class="signup-text">
+        <div class="signup-eyebrow">Stay Updated</div>
+        <h2>Join the Academy mailing list</h2>
+        <p>New guidelines, clinical tools, journal club summaries, and educational content — delivered directly to your inbox as they publish. No spam. Unsubscribe any time.</p>
+      </div>
+      <div class="signup-form-wrap">
+        <form action="https://mohsinhaemacademy.us19.list-manage.com/subscribe/post?u=2a3cbe4be596321fa8d8e0193&amp;id=b268a64be0&amp;f_id=006fa9e4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+          <div class="mc-form-row">
+            <input type="email" name="EMAIL" id="mce-EMAIL" class="required email mc-email-input" placeholder="Your email address" required="">
+            <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="mc-submit-btn">Subscribe &rarr;</button>
           </div>
-        </div>
-        <div class="footer-note">
-          <strong>Educational use only.</strong><br>
-          Content does not replace clinical judgement or professional guidelines.<br>
-          <span style="font-size:0.72rem; color:var(--clr-muted); opacity:0.8;">Created by Dr. Muhammad Mohsin &middot; Contributor: Muhammad Moaaz &middot; <a href="contact.html" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Contact</a> &middot; <a href="governance.html" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Clinical Governance</a></span>
-        </div>
+          <div aria-hidden="true" style="position:absolute;left:-5000px;">
+            <input type="text" name="b_2a3cbe4be596321fa8d8e0193_b268a64be0" tabindex="-1" value="">
+          </div>
+          <div id="mce-responses">
+            <div id="mce-error-response"></div>
+            <div id="mce-success-response"></div>
+          </div>
+          <p class="mc-privacy">We respect your privacy. No patient data is ever collected. See our <a href="/legal/privacy/" style="color:rgba(255,255,255,0.7); text-decoration:underline;">Privacy Notice</a>. Powered by Mailchimp.</p>
+        </form>
       </div>
     </div>
-  </footer>
+  </div>
+</section>
+
+<script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+<script>(function($){window.fnames=new Array();window.ftypes=new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj=jQuery.noConflict(true);</script>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand brand">
+        <div class="brand-text">
+          <div class="brand-name">Mohsin Haematology Academy</div>
+          <div class="brand-tagline">Clinical Education &amp; Digital Tools</div>
+        </div>
+      </div>
+      <div class="footer-note">
+        <strong>Educational use only.</strong><br>
+        Content does not replace clinical judgement or professional guidelines.<br>
+        <span style="font-size:0.72rem; color:var(--clr-muted); opacity:0.8;">&copy; 2026 Dr Muhammad Mohsin &middot; Contributor: Muhammad Moaaz &middot; <a href="contact.html" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Contact</a> &middot; <a href="governance.html" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Clinical Governance</a> &middot; <a href="/legal/ip-notice/" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">IP &amp; Copyright</a> &middot; <a href="/legal/terms/" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Terms</a> &middot; <a href="/legal/disclaimer/" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Disclaimer</a> &middot; <a href="/legal/privacy/" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Privacy</a></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div id="mha-cookie-banner" hidden role="dialog" aria-live="polite" aria-label="Cookie consent" style="position:fixed; left:1rem; right:1rem; bottom:1rem; max-width:720px; margin:0 auto; background:#ffffff; color:#1a1a1e; border:1px solid #e6e1dd; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.08); padding:1rem 1.25rem; z-index:9999; font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size:0.9rem;">
+  <div style="display:flex; flex-wrap:wrap; gap:0.75rem; align-items:center; justify-content:space-between;">
+    <p style="margin:0; flex:1 1 320px;">
+      We use a small number of cookies to keep the site working. The Academy newsletter is sent via Mailchimp, which may set cookies when you submit the signup form. See our <a href="/legal/privacy/" style="color:#7a1f2b;">Privacy Notice</a>.
+    </p>
+    <button id="mha-cookie-ack" type="button" style="border:1px solid #7a1f2b; background:#7a1f2b; color:#ffffff; padding:0.5rem 0.9rem; border-radius:8px; cursor:pointer; font-family:inherit; font-size:0.9rem; font-weight:600;">OK, got it</button>
+  </div>
+</div>
+<script>
+  (function () {
+    var KEY = "mha_cookie_ack";
+    function isAcked() { return document.cookie.split("; ").some(function(r){return r.indexOf(KEY+"=")===0;}); }
+    function ack() {
+      var oneYear = 60 * 60 * 24 * 365;
+      document.cookie = KEY + "=1; max-age=" + oneYear + "; path=/; SameSite=Lax" + (location.protocol === "https:" ? "; Secure" : "");
+    }
+    var banner = document.getElementById("mha-cookie-banner");
+    if (!banner) return;
+    if (isAcked()) return;
+    banner.hidden = false;
+    document.getElementById("mha-cookie-ack").addEventListener("click", function () {
+      ack(); banner.hidden = true;
+    });
+  })();
+</script>
 
 </body>
 </html>
