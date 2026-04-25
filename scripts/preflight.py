@@ -2,24 +2,26 @@
 """
 preflight.py — PII sweep and external link check on new or changed content.
 
-Runs inside GitHub Actions after tone_guard.py passes. Exits:
-    0  all checks passed
-    1  PII pattern found OR one or more external links returned non-2xx/3xx
-    2  usage / IO error
+Runs inside GitHub Actions after tone_guard.py passes.
+
+Exits:
+    0 all checks passed
+    1 PII pattern found OR one or more external links returned non-2xx/3xx
+    2 usage / IO error
 
 Checks performed on each markdown/HTML file:
-  1. PII regex sweep — NHS numbers (10 digits, optionally spaced as
-     3-3-4), hospital numbers (common NHS trust patterns), dates of
-     birth, patient name markers.
-  2. Link check — HEAD request (fallback to GET) on every http/https
-     URL; allow 200/301/302/308; fail on 4xx/5xx/timeout.
+1. PII regex sweep — NHS numbers (10 digits, optionally spaced as 3-3-4),
+   hospital numbers (common NHS trust patterns), dates of birth, patient
+   name markers.
+2. Link check — HEAD request (fallback to GET) on every http/https URL;
+   allow 200/301/302/308; fail on 4xx/5xx/timeout.
 
 Usage:
     python scripts/preflight.py --files-from changed.txt
     python scripts/preflight.py path/to/file.html
 """
-
 from __future__ import annotations
+
 import argparse
 import re
 import sys
@@ -37,20 +39,24 @@ try:
 except ImportError:
     HAVE_BS4 = False
 
+
 # --- PII patterns ----------------------------------------------------------
 
 NHS_NUMBER_RE = re.compile(
     r"\b\d{3}[ -]?\d{3}[ -]?\d{4}\b"
 )
+
 # Common hospital / MRN patterns (letter prefix + 6-8 digits, or 8-10 digits)
 HOSPITAL_NUMBER_RE = re.compile(
     r"\b(?:MRN|Hospital No\.?|Hosp No\.?|NHS No\.?)[:\s]*([A-Z]{0,3}\d{6,10})\b",
     re.IGNORECASE,
 )
+
 DOB_RE = re.compile(
     r"\b(?:DOB|D\.O\.B|Date of birth)[:\s]*\d{1,2}[/\-\.]\d{1,2}[/\-\.]\d{2,4}\b",
     re.IGNORECASE,
 )
+
 PATIENT_MARKER_RE = re.compile(
     r"\b(?:Patient|Pt)\s+Name[:\s]+[A-Z][a-z]+(?:\s+[A-Z][a-z]+)+\b",
 )
@@ -86,6 +92,7 @@ def _is_reference_identifier(text: str, match_start: int) -> bool:
     lead = text[window_start:match_start]
     return bool(_REF_MARKER_AT_END_RE.search(lead))
 
+
 # --- Link extraction -------------------------------------------------------
 
 URL_RE = re.compile(r"https?://[^\s'\"<>\)\]]+", re.IGNORECASE)
@@ -99,15 +106,23 @@ HTML_INTERNAL_RE = re.compile(
 )
 # Anchor / query / external / non-file schemes we skip in the internal check.
 _INTERNAL_SKIP_PREFIXES = (
-    "http://", "https://", "mailto:", "tel:", "javascript:",
-    "data:", "#", "//",
+    "http://",
+    "https://",
+    "mailto:",
+    "tel:",
+    "javascript:",
+    "data:",
+    "#",
+    "//",
 )
 
 # Domains to skip (rate-limit themselves or block HEAD)
 SKIP_DOMAINS = {
-    "doi.org",           # always 301s reliably; no need to hammer
+    "doi.org",  # always 301s reliably; no need to hammer
     "dx.doi.org",
     "scholar.google.com",
+    "fonts.googleapis.com",   # Google Fonts CDN — returns 404 to bare HEAD
+    "fonts.gstatic.com",      # Google Fonts CDN — returns 404 to bare HEAD
 }
 
 ALLOW_STATUS = {200, 201, 202, 203, 204, 301, 302, 303, 307, 308}
@@ -166,9 +181,11 @@ def check_internal_link(src_file: Path, url: str, repo_root: Path) -> tuple[bool
 
     if target.is_file():
         return True, "file"
+
     # Also tolerate .html-less URLs pointing at a file that does exist with .html
     if target.suffix == "" and target.with_suffix(".html").is_file():
         return True, "file (.html implied)"
+
     return False, f"missing {target}"
 
 
@@ -218,6 +235,7 @@ def read_file_list(path: Path) -> list[Path]:
 def extract_added_urls(diff_path: Path) -> list[tuple[str, str]]:
     """Parse a unified diff and return [(file, url)] for every http/https URL
     that appears on an ADDED line (prefix '+', excluding '+++' headers).
+
     Used by --diff-from mode so external link-checking only touches URLs in
     NEW content, never in pre-existing legacy content that was renamed.
     """
@@ -253,6 +271,7 @@ def extract_added_urls(diff_path: Path) -> list[tuple[str, str]]:
                 urls.append((current_file, m.group(0).rstrip(".,;)")))
             for m in HTML_HREF_RE.finditer(added):
                 urls.append((current_file, m.group(1)))
+
     # dedupe while preserving order
     seen: set[tuple[str, str]] = set()
     out: list[tuple[str, str]] = []
@@ -267,26 +286,26 @@ def extract_added_urls(diff_path: Path) -> list[tuple[str, str]]:
 def _self_test() -> int:
     """Run the internal regression tests for PII detection.
 
-    Verifies that the NHS-number regex suppresses DOI / PMID / PMCID
-    false positives but still catches genuine 10-digit identifiers.
+    Verifies that the NHS-number regex suppresses DOI / PMID / PMCID false
+    positives but still catches genuine 10-digit identifiers.
     """
     cases_no_hit = [
-        ("DOI:10.1182/blood.2024024631",          "See reference [DOI:10.1182/blood.2024024631]"),
-        ("doi.org URL",                            "https://doi.org/10.1056/NEJMoa2024024631"),
-        ("10.1182 DOI prefix",                     "Published Blood 2024 (10.1182/blood.2024024631)"),
-        ("PMID:1234567890",                        "PMID:1234567890 — Al-Sawaf et al"),
-        ("PMID 1234567890 (space)",                "[PMID 1234567890]"),
-        ("PMID: 1234567890 (colon+space)",         "Reference PMID: 1234567890 confirms this."),
-        ("PMCID:PMC1234567890",                    "PMCID:PMC1234567890"),
-        ("PMCID: PMC1234567890",                   "PMCID: PMC1234567890."),
-        ("DOI= (equals form)",                     "DOI=10.1182/blood.2024024631"),
-        ("DOI in bracket then slash",              "[DOI:10.1182/blood.2024024631] A2"),
+        ("DOI:10.1182/blood.2024024631", "See reference [DOI:10.1182/blood.2024024631]"),
+        ("doi.org URL", "https://doi.org/10.1056/NEJMoa2024024631"),
+        ("10.1182 DOI prefix", "Published Blood 2024 (10.1182/blood.2024024631)"),
+        ("PMID:1234567890", "PMID:1234567890 — Al-Sawaf et al"),
+        ("PMID 1234567890 (space)", "[PMID 1234567890]"),
+        ("PMID: 1234567890 (colon+space)", "Reference PMID: 1234567890 confirms this."),
+        ("PMCID:PMC1234567890", "PMCID:PMC1234567890"),
+        ("PMCID: PMC1234567890", "PMCID: PMC1234567890."),
+        ("DOI= (equals form)", "DOI=10.1182/blood.2024024631"),
+        ("DOI in bracket then slash", "[DOI:10.1182/blood.2024024631] A2"),
     ]
     cases_one_hit = [
-        ("bare 10-digit NHS-style",   "Patient NHS 123 456 7890 presented with..."),
-        ("10-digit trust ref",        "Trust reference 9876543210 from casenote system."),
-        ("prose clinical note",       "Seen today: patient 2345678901 on DOAC therapy."),
-        ("no marker in lead",         "The number 1234567890 was reported."),
+        ("bare 10-digit NHS-style", "Patient NHS 123 456 7890 presented with..."),
+        ("10-digit trust ref", "Trust reference 9876543210 from casenote system."),
+        ("prose clinical note", "Seen today: patient 2345678901 on DOAC therapy."),
+        ("no marker in lead", "The number 1234567890 was reported."),
     ]
 
     failures = 0
@@ -294,20 +313,21 @@ def _self_test() -> int:
         hits = [h for h in scan_pii(Path("<self-test>"), text, ".md") if "NHS number" in h]
         if hits:
             failures += 1
-            print(f"FAIL  expected 0 NHS hits — {label}")
+            print(f"FAIL expected 0 NHS hits — {label}")
             for h in hits:
-                print(f"      -> {h}")
+                print(f"   -> {h}")
         else:
-            print(f"PASS  {label}")
+            print(f"PASS {label}")
+
     for label, text in cases_one_hit:
         hits = [h for h in scan_pii(Path("<self-test>"), text, ".md") if "NHS number" in h]
         if len(hits) != 1:
             failures += 1
-            print(f"FAIL  expected 1 NHS hit, got {len(hits)} — {label}")
+            print(f"FAIL expected 1 NHS hit, got {len(hits)} — {label}")
             for h in hits:
-                print(f"      -> {h}")
+                print(f"   -> {h}")
         else:
-            print(f"PASS  {label}")
+            print(f"PASS {label}")
 
     total = len(cases_no_hit) + len(cases_one_hit)
     passed = total - failures
@@ -337,7 +357,6 @@ def main() -> int:
     files: list[Path] = list(args.paths)
     if args.files_from and args.files_from.exists():
         files.extend(read_file_list(args.files_from))
-
     files = [p for p in files if p.suffix.lower() in {".md", ".markdown", ".html", ".htm"}]
     files = [p for p in files if p.exists() and p.is_file()]
 
@@ -351,7 +370,6 @@ def main() -> int:
     pii_hits: list[str] = []
     link_failures: list[str] = []
     internal_failures: list[str] = []
-
     for f in files:
         raw = f.read_text(encoding="utf-8", errors="replace")
         suffix = f.suffix.lower()
@@ -385,17 +403,14 @@ def main() -> int:
                         link_failures.append(f"{f}: {url} -> {detail}")
 
     print(f"preflight: scanned {len(files)} file(s).")
-
     if pii_hits:
         print("\nPII hits:")
         for h in pii_hits:
             print(f"  {h}")
-
     if internal_failures:
         print("\nInternal link failures:")
         for h in internal_failures:
             print(f"  {h}")
-
     if link_failures:
         print("\nExternal link failures:")
         for h in link_failures:
