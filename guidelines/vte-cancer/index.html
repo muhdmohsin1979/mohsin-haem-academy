@@ -739,11 +739,19 @@
     /* ── Sidebar ── */
     .gl-sidebar {
       position: sticky;
-      top: 140px;
+      top: 130px;
+      align-self: start;
       display: flex;
       flex-direction: column;
       gap: 16px;
+      max-height: calc(100vh - 150px);
+      overflow-y: auto;
+      padding-right: 4px;
+      scrollbar-width: thin;
     }
+    .gl-sidebar::-webkit-scrollbar { width: 6px; }
+    .gl-sidebar::-webkit-scrollbar-thumb { background: var(--clr-border); border-radius: 3px; }
+    .gl-sidebar::-webkit-scrollbar-thumb:hover { background: var(--clr-muted); }
 
     .sidebar-card {
       background: var(--clr-surface);
