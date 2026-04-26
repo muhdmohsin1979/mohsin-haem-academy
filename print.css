@@ -1,0 +1,202 @@
+/* ──────────────────────────────────────────────────────────────────────────
+   Mohsin Haematology Academy — print stylesheet.
+   Linked from every public page via:
+     <link rel="stylesheet" media="print" href="/print.css">
+   Goal: a printed guideline page should show the article content cleanly,
+   without site chrome, nav, sidebars, banners, or decorative backgrounds.
+   ────────────────────────────────────────────────────────────────────────── */
+
+@media print {
+
+  /* ── Page setup ── */
+  @page {
+    size: A4;
+    margin: 18mm 16mm 18mm 16mm;
+  }
+
+  /* ── Reset colours, backgrounds, shadows ── */
+  *, *::before, *::after {
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  html, body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 10.5pt;
+    line-height: 1.45;
+  }
+
+  body {
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+  }
+
+  /* ── Hide every piece of site chrome ── */
+  header,
+  footer,
+  nav.nav,
+  .nav,
+  .nav-toggle,
+  .nav-links,
+  .nav-cta,
+  .anchor-nav,
+  .gl-sidebar,
+  aside.gl-sidebar,
+  aside,
+  .sidebar-card,
+  .hero-actions,
+  .back-link,
+  .gl-source-chips,
+  #mha-cookie-banner,
+  .tool-topbar,
+  .topbar-right,
+  .footer,
+  .footer-inner,
+  .footer-note,
+  .footer-brand,
+  .related,
+  .stat-card,
+  .hero-stats,
+  iframe,
+  script,
+  .tool-iframe-wrap {
+    display: none !important;
+  }
+
+  /* ── Force single-column layout (sidebar removed) ── */
+  .gl-layout,
+  .gl-content,
+  .container {
+    display: block !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* ── Article body styling ── */
+  .gl-section,
+  article,
+  main,
+  .container > * {
+    background: #ffffff !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin-bottom: 8pt !important;
+  }
+
+  .gl-section {
+    margin-bottom: 14pt !important;
+    page-break-inside: avoid;
+  }
+
+  /* ── Headings ── */
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #000000 !important;
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+  h1 { font-size: 22pt; margin: 0 0 8pt; }
+  h2 { font-size: 14pt; margin: 14pt 0 6pt; border-bottom: 1px solid #999; padding-bottom: 3pt; }
+  h3 { font-size: 11.5pt; margin: 10pt 0 4pt; }
+
+  /* ── Avoid orphaned content ── */
+  p, li, table, blockquote {
+    orphans: 3;
+    widows: 3;
+  }
+  table, figure, .callout, .gl-section-header {
+    page-break-inside: avoid;
+  }
+
+  /* ── Tables ── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 6pt 0;
+    font-size: 9.5pt;
+  }
+  th, td {
+    border: 1px solid #999 !important;
+    padding: 4pt 6pt;
+    color: #000000 !important;
+  }
+  thead th {
+    background: #f0f0f0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    font-weight: 700;
+  }
+
+  /* ── Links: show URL after the link text so the print is still useful ── */
+  a[href] {
+    color: #000000 !important;
+    text-decoration: underline;
+  }
+  a[href^="http"]::after,
+  a[href^="//"]::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #555 !important;
+    word-break: break-all;
+  }
+  /* Don't show URL for in-page anchors (#section), mailto:, or relative links */
+  a[href^="#"]::after,
+  a[href^="mailto:"]::after,
+  a[href^="/"]::after,
+  a[href^="."]::after {
+    content: none !important;
+  }
+
+  /* ── Callouts: keep meaningful, remove colour fills ── */
+  .callout {
+    border-left: 3pt solid #555 !important;
+    padding: 6pt 8pt !important;
+    margin: 8pt 0 !important;
+  }
+  .callout.warn { border-left-color: #b45309 !important; }
+  .callout.danger { border-left-color: #991b1b !important; }
+  .callout.success { border-left-color: #166534 !important; }
+
+  /* ── KPI / chip blocks: print as plain inline text ── */
+  .kpi-row, .gl-source-chips, .intro-chips {
+    display: block !important;
+  }
+  .kpi {
+    display: inline-block !important;
+    background: transparent !important;
+    color: #000 !important;
+    border: 1px solid #999 !important;
+    padding: 4pt 8pt !important;
+    margin: 2pt;
+    font-weight: 600;
+  }
+
+  /* ── Inline SVG diagrams: keep visible at sensible size ── */
+  svg {
+    max-width: 100% !important;
+    height: auto !important;
+    page-break-inside: avoid;
+  }
+
+  /* ── Print-only footer note: tiny attribution at the bottom of every page ── */
+  body::after {
+    content: "Mohsin Haematology Academy — mohsinhaemacademy.com — printed for educational use; not a substitute for clinical judgement.";
+    display: block;
+    position: fixed;
+    bottom: 6mm;
+    left: 16mm;
+    right: 16mm;
+    font-size: 7.5pt;
+    color: #777;
+    text-align: center;
+    border-top: 0.3pt solid #ccc;
+    padding-top: 3pt;
+  }
+}
