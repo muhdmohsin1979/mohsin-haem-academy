@@ -121,6 +121,10 @@
     .tool-frame {
       background: var(--clr-surface); border: 1px solid var(--clr-border);
       border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-lg);
+      position: sticky; top: 70px;
+    }
+    @media (max-width: 760px) {
+      .tool-frame { position: static; }
     }
     .tool-topbar {
       display: flex; align-items: center; justify-content: space-between;
