@@ -95,7 +95,7 @@ def _is_reference_identifier(text: str, match_start: int) -> bool:
 
 # --- Link extraction -------------------------------------------------------
 
-URL_RE = re.compile(r"https?://[^\s'\"<>\)\]]+", re.IGNORECASE)
+URL_RE = re.compile(r"https?://[^\s'\"<>\)\]\}]+", re.IGNORECASE)
 HTML_HREF_RE = re.compile(r'(?:href|src)\s*=\s*["\'](https?://[^"\']+)["\']', re.IGNORECASE)
 
 # Internal (same-origin) link: any href or src that is not http(s)/mailto/tel/
