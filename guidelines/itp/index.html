@@ -891,6 +891,22 @@
             </div>
             <p style="margin-bottom:14px; font-size:0.88rem; color:var(--clr-text-secondary);">Visual decision pathway from presentation through first-line and second-line treatment. Based on ASH 2019 framework.<sup class="ref">[1]</sup> Scroll horizontally on smaller screens.</p>
 
+            <!-- Inline SVG pathway (v1.0 algorithm) — was previously link-only in the sidebar -->
+            <figure style="margin:0 0 22px; padding:16px 18px; background:var(--clr-surface); border:1px solid var(--clr-border); border-radius:10px; text-align:center;">
+              <figcaption style="font-size:0.82rem; color:var(--clr-muted); letter-spacing:0.03em; text-transform:uppercase; font-weight:600; margin-bottom:10px;">
+                ITP management algorithm &middot; v1.0 aligned with ASH 2019 and NICE
+              </figcaption>
+              <object data="algorithm.svg" type="image/svg+xml" aria-label="ITP management algorithm flowchart"
+                      style="width:100%; max-width:820px; height:auto; display:block; margin:0 auto;">
+                <a href="algorithm.svg"><img src="algorithm.svg" alt="ITP management algorithm flowchart" style="max-width:100%; height:auto;" /></a>
+              </object>
+              <figcaption style="font-size:0.76rem; color:var(--clr-muted); margin-top:10px; line-height:1.5;">
+                Static SVG rendering of the v1.0 decision pathway. For a full-screen view or to edit in place,
+                <a href="algorithm.svg" target="_blank" rel="noopener" style="color:var(--clr-primary-dark); text-decoration:underline;">open the SVG directly</a>
+                or use the FigJam / Excalidraw sources linked in the sidebar. The pathway reflects the sections below; treat the diagram as a visual summary, not a substitute for the prose and referenced sources.
+              </figcaption>
+            </figure>
+
             <div class="flowchart-wrap">
               <div class="flowchart-label">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
@@ -1441,7 +1457,7 @@
                       <td style="padding:8px 10px; border:1px solid var(--clr-border);">v2.0-draft</td>
                       <td style="padding:8px 10px; border:1px solid var(--clr-border);">Apr 2026</td>
                       <td style="padding:8px 10px; border:1px solid var(--clr-border);">Dr M Mohsin</td>
-                      <td style="padding:8px 10px; border:1px solid var(--clr-border);">SOP scaffolding v2 applied: tool-metadata block (Scope / Intended users / Evidence base / Tags); quick-decision summary banner; citation block (APA / Vancouver / BibTeX). No clinical content altered.</td>
+                      <td style="padding:8px 10px; border:1px solid var(--clr-border);">SOP scaffolding v2 applied: tool-metadata block (Scope / Intended users / Evidence base / Tags); quick-decision summary banner; citation block (APA / Vancouver / BibTeX); existing v1.0 algorithm SVG embedded inline at the top of Section 8; quickref alignment note added to sidebar. No clinical content altered.</td>
                     </tr>
                   </tbody>
                 </table>
@@ -1514,10 +1530,13 @@
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                 Download Full Guideline (PDF)
               </a>
-              <a href="quickref.pdf" download="ITP-QuickRef.pdf" style="display:flex; align-items:center; gap:8px; padding:8px 12px; background:#f3f4f6; border:1px solid var(--clr-border); border-radius:6px; font-size:0.8rem; font-weight:600; color:var(--clr-div); text-decoration:none;">
+              <a href="quickref.pdf" download="ITP-QuickRef.pdf" style="display:flex; align-items:center; gap:8px; padding:8px 12px; background:#f3f4f6; border:1px solid var(--clr-border); border-radius:6px; font-size:0.8rem; font-weight:600; color:var(--clr-div); text-decoration:none; margin-bottom:7px;">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                 Download Quick-Ref Card
               </a>
+              <p style="font-size:0.72rem; color:var(--clr-muted); margin:8px 0 0; line-height:1.5;">
+                Quick-ref is aligned to guideline v1.0. 2 pages A4.
+              </p>
             </div>
           </div>
 
