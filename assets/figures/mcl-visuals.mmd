@@ -1,0 +1,77 @@
+%% MCL Visual Decision Support — Mermaid fallback source
+%% v1.5.4 — MHA-MCL-2026-v1.5.4-DRAFT
+%% Independent educational synthesis. Not externally endorsed.
+%% Three diagrams below: first-line algorithm, pathway-at-a-glance, access status.
+
+%% ─────────────────────────────────────────────────────────────────
+%% A. First-Line Treatment Algorithm
+%% ─────────────────────────────────────────────────────────────────
+flowchart TD
+    A["1. NEW MCL DIAGNOSIS"]:::start
+    B["2. Confirm minimum dataset<br/>• Tissue diagnosis<br/>• Morphology<br/>• Ki-67 (percentage)<br/>• TP53 — IHC AND NGS<br/>• MIPI / MIPI-c"]:::box
+    C{"Indolent / non-nodal<br/>AND asymptomatic?"}:::diamond
+    OBS["Observe<br/>Watch & wait"]:::green
+    D{"Fit for intensive /<br/>cytarabine-based induction?"}:::diamond
+    F1["A. Current UK standard<br/>R-CHOP / R-DHAP cytarabine<br/>± ASCT consolidation<br/>+ rituximab maintenance"]:::green
+    F2["B. Evolving / access-dependent<br/>TRIANGLE ibrutinib-integrated<br/>induction + 2-yr maintenance<br/>Where legitimate access exists"]:::amber
+    O1["A. Current UK standard<br/>Bendamustine-rituximab (BR)<br/>± rituximab maintenance<br/>R-CHOP if BR contraindicated"]:::green
+    O2["B. Evolving / access-dependent<br/>Acalabrutinib + BR (ECHO)<br/>NICE GID-TA11091 in dev<br/>Not routine until final guidance"]:::amber
+    HR["High-Risk Biology Overlay<br/>TP53 / blastoid / pleomorphic /<br/>high Ki-67 / high MIPI-c /<br/>complex karyotype<br/>→ Trial discussion<br/>→ BTKi access route<br/>→ Early CAR-T pathway mapping"]:::red
+    DOC["5. Document at MDT<br/>• Evidence basis<br/>• Access / funding route<br/>• Alternatives and toxicity<br/>• Patient preference and consent"]:::start
+
+    A --> B
+    B --> C
+    C -->|YES| OBS
+    C -->|NO| D
+    D -->|FIT| F1
+    F1 --> F2
+    D -->|OLDER / LESS FIT| O1
+    O1 --> O2
+    F2 -.->|overlay| HR
+    O2 -.->|overlay| HR
+    HR --> DOC
+
+    classDef start fill:#7a1f2b,stroke:#7a1f2b,color:#fff,font-weight:700;
+    classDef box fill:#ffffff,stroke:#7a1f2b,color:#1a1a1a;
+    classDef diamond fill:#fff5f6,stroke:#7a1f2b,color:#1a1a1a;
+    classDef green fill:#e8f4ec,stroke:#2e6b3e,color:#1a1a1a;
+    classDef amber fill:#fdf5e3,stroke:#b08538,color:#1a1a1a;
+    classDef red fill:#fdecec,stroke:#8b2e2e,color:#1a1a1a;
+
+
+%% ─────────────────────────────────────────────────────────────────
+%% B. Pathway at a Glance — six-stage strip
+%% ─────────────────────────────────────────────────────────────────
+%% Diagnosis → Biology → Fitness → Access → MDT Decision → Follow-up
+%%
+%% (In Mermaid, use a left-to-right flowchart for this strip.)
+%% flowchart LR
+%%   S1[1 · Diagnosis] --> S2[2 · Biology] --> S3[3 · Fitness]
+%%   S3 --> S4[4 · Access] --> S5[5 · MDT Decision] --> S6[6 · Follow-up]
+
+
+%% ─────────────────────────────────────────────────────────────────
+%% C. UK Access / Evidence Status — traffic light table
+%% ─────────────────────────────────────────────────────────────────
+%% GREEN — NICE-recommended / commissioned:
+%%   - Ibrutinib (TA502) for R/R MCL after one previous line
+%%   - Zanubrutinib (TA1081) for R/R MCL after one previous line
+%%   - Brexucabtagene autoleucel (TA677) for post-BTKi R/R MCL, CDF
+%%
+%% AMBER — evidence-supported but access-dependent:
+%%   - TRIANGLE ibrutinib-integrated first-line (fit patients)
+%%   - Acalabrutinib + BR (ECHO) — NICE GID-TA11091 in development
+%%   - Ibrutinib + venetoclax (SYMPATICO) — non-routine NICE funding
+%%
+%% RED — not routine NHS-funded / investigational:
+%%   - Pirtobrutinib — UK access should not be assumed
+%%   - Lisocabtagene maraleucel in MCL — UK access uncertain
+%%   - SHINE pattern (frontline ibrutinib + BR) — not adopted as UK routine
+%%
+%% GREY — emerging / conference-level:
+%%   - MRD-guided treatment changes outside trials
+%%   - Bispecific T-cell engagers in MCL (glofitamab, epcoritamab)
+%%   - ASH/EHA 2024–2025 emerging abstracts
+%%
+%% Reminder line:
+%% "Evidence-supported does not equal NHS-commissioned."

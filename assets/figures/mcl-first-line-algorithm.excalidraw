@@ -1,0 +1,41 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://mohsinhaemacademy.com",
+  "elements": [
+    {"type":"text","x":40,"y":30,"width":420,"height":30,"fontSize":24,"fontFamily":1,"strokeColor":"#5a141d","backgroundColor":"transparent","fillStyle":"hachure","strokeWidth":1,"strokeStyle":"solid","roughness":0,"opacity":100,"text":"MCL First-Line Treatment Algorithm","seed":1,"groupIds":[]},
+    {"type":"rectangle","x":320,"y":90,"width":260,"height":48,"backgroundColor":"#7a1f2b","strokeColor":"#7a1f2b","fillStyle":"solid","strokeWidth":2,"roughness":0,"opacity":100,"seed":2,"groupIds":[]},
+    {"type":"text","x":380,"y":104,"width":140,"height":20,"fontSize":14,"fontFamily":1,"strokeColor":"#ffffff","text":"1. NEW MCL DIAGNOSIS","seed":3,"groupIds":[]},
+    {"type":"arrow","x":450,"y":140,"width":0,"height":30,"strokeColor":"#7a1f2b","strokeWidth":2,"roughness":0,"points":[[0,0],[0,30]],"endArrowhead":"arrow","seed":4,"groupIds":[]},
+    {"type":"rectangle","x":220,"y":172,"width":460,"height":116,"backgroundColor":"#ffffff","strokeColor":"#7a1f2b","fillStyle":"solid","strokeWidth":2,"roughness":0,"opacity":100,"seed":5,"groupIds":[]},
+    {"type":"text","x":300,"y":182,"width":300,"height":20,"fontSize":14,"fontFamily":1,"strokeColor":"#1a1a1a","text":"2. Confirm minimum dataset","seed":6,"groupIds":[]},
+    {"type":"text","x":240,"y":210,"width":400,"height":80,"fontSize":12,"fontFamily":1,"strokeColor":"#444","text":"- Tissue diagnosis (excisional / generous core biopsy)\n- Morphology (classical / blastoid / pleomorphic / leukaemic non-nodal)\n- Ki-67 (report as percentage)\n- TP53 - IHC pattern AND NGS\n- MIPI / MIPI-c","seed":7,"groupIds":[]},
+    {"type":"diamond","x":230,"y":322,"width":440,"height":132,"backgroundColor":"#fff5f6","strokeColor":"#7a1f2b","fillStyle":"solid","strokeWidth":2,"roughness":0,"seed":8,"groupIds":[]},
+    {"type":"text","x":320,"y":368,"width":260,"height":40,"fontSize":13,"fontFamily":1,"strokeColor":"#1a1a1a","text":"Indolent / non-nodal phenotype\nAND asymptomatic AND low Ki-67?","seed":9,"groupIds":[]},
+    {"type":"rectangle","x":20,"y":358,"width":115,"height":60,"backgroundColor":"#e8f4ec","strokeColor":"#2e6b3e","fillStyle":"solid","strokeWidth":2,"roughness":0,"seed":10,"groupIds":[]},
+    {"type":"text","x":40,"y":378,"width":75,"height":20,"fontSize":14,"fontFamily":1,"strokeColor":"#2e6b3e","text":"Observe","seed":11,"groupIds":[]},
+    {"type":"diamond","x":230,"y":486,"width":440,"height":124,"backgroundColor":"#fff5f6","strokeColor":"#7a1f2b","fillStyle":"solid","strokeWidth":2,"roughness":0,"seed":12,"groupIds":[]},
+    {"type":"text","x":300,"y":538,"width":300,"height":40,"fontSize":13,"fontFamily":1,"strokeColor":"#1a1a1a","text":"Fit for intensive / cytarabine-based\ninduction? (ECOG, frailty, renal, cardiac)","seed":13,"groupIds":[]},
+    {"type":"rectangle","x":20,"y":642,"width":230,"height":78,"backgroundColor":"#ffffff","strokeColor":"#2e6b3e","fillStyle":"solid","strokeWidth":2,"roughness":0,"seed":14,"groupIds":[]},
+    {"type":"text","x":40,"y":656,"width":190,"height":60,"fontSize":12,"fontFamily":1,"strokeColor":"#2e6b3e","text":"A. Current UK standard\n\nR-CHOP / R-DHAP + ASCT\n+ rituximab maintenance","seed":15,"groupIds":[]},
+    {"type":"rectangle","x":20,"y":746,"width":230,"height":76,"backgroundColor":"#ffffff","strokeColor":"#b08538","fillStyle":"solid","strokeWidth":2,"roughness":0,"seed":16,"groupIds":[]},
+    {"type":"text","x":40,"y":760,"width":190,"height":60,"fontSize":12,"fontFamily":1,"strokeColor":"#b08538","text":"B. Evolving / access-dependent\n\nTRIANGLE ibrutinib-integrated\nWhere legitimate access exists","seed":17,"groupIds":[]},
+    {"type":"rectangle","x":650,"y":642,"width":230,"height":78,"backgroundColor":"#ffffff","strokeColor":"#2e6b3e","fillStyle":"solid","strokeWidth":2,"roughness":0,"seed":18,"groupIds":[]},
+    {"type":"text","x":670,"y":656,"width":190,"height":60,"fontSize":12,"fontFamily":1,"strokeColor":"#2e6b3e","text":"A. Current UK standard\n\nBendamustine-rituximab (BR)\n+/- R maintenance","seed":19,"groupIds":[]},
+    {"type":"rectangle","x":650,"y":746,"width":230,"height":76,"backgroundColor":"#ffffff","strokeColor":"#b08538","fillStyle":"solid","strokeWidth":2,"roughness":0,"seed":20,"groupIds":[]},
+    {"type":"text","x":670,"y":760,"width":190,"height":60,"fontSize":12,"fontFamily":1,"strokeColor":"#b08538","text":"B. Evolving / access-dependent\n\nAcalabrutinib + BR (ECHO)\nNICE GID-TA11091 in dev","seed":21,"groupIds":[]},
+    {"type":"rectangle","x":190,"y":860,"width":520,"height":140,"backgroundColor":"#fdecec","strokeColor":"#8b2e2e","fillStyle":"solid","strokeWidth":2,"roughness":0,"seed":22,"groupIds":[]},
+    {"type":"text","x":210,"y":876,"width":480,"height":120,"fontSize":13,"fontFamily":1,"strokeColor":"#8b2e2e","text":"High-Risk Biology Overlay\n\nTP53 mutation / blastoid / pleomorphic / high Ki-67 / high MIPI-c / complex karyotype\n\nApply across either pathway:\n- Discuss clinical trial enrolment\n- Pursue BTKi access route where available\n- Refer early to JACIE CAR-T centre for forward planning","seed":23,"groupIds":[]},
+    {"type":"rectangle","x":180,"y":1032,"width":540,"height":108,"backgroundColor":"#7a1f2b","strokeColor":"#7a1f2b","fillStyle":"solid","strokeWidth":2,"roughness":0,"seed":24,"groupIds":[]},
+    {"type":"text","x":200,"y":1048,"width":500,"height":88,"fontSize":12,"fontFamily":1,"strokeColor":"#ffffff","text":"5. Document at MDT\n- Evidence basis (peer-reviewed / conference / regulatory)\n- Access / funding route (NICE, CAA, CDF, IFR, EAMS, trial, compassionate, exceptional)\n- Alternatives discussed and toxicity / interaction review\n- Patient preference and informed consent documented","seed":25,"groupIds":[]}
+  ],
+  "appState": {
+    "gridSize": null,
+    "viewBackgroundColor": "#ffffff",
+    "currentItemStrokeColor": "#7a1f2b",
+    "currentItemBackgroundColor": "#ffffff",
+    "currentItemFontFamily": 1,
+    "currentItemFontSize": 14
+  },
+  "files": {}
+}
