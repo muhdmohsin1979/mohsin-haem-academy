@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Mantle Cell Lymphoma (MCL) — Mohsin Haematology Academy (Preview v1.5.4)</title>
-<meta name="description" content="UK Practice-Oriented Evidence Guide for Mantle Cell Lymphoma — BSH 2024, NICE TA502/TA1081/TA677, ESMO, NCCN. Draft preview MHA-MCL-2026-v1.5.4-DRAFT." />
+<title>Mantle Cell Lymphoma (MCL) — Mohsin Haematology Academy (Preview v1.5.5)</title>
+<meta name="description" content="UK Practice-Oriented Evidence Guide for Mantle Cell Lymphoma — BSH 2024, NICE TA502/TA1081/TA677, ESMO, NCCN. Draft preview MHA-MCL-2026-v1.5.5-DRAFT." />
 <meta name="theme-color" content="#7a1f2b" />
 <script type="application/ld+json">
 {
@@ -66,7 +66,7 @@
   aside::-webkit-scrollbar { width: 8px; }
   aside::-webkit-scrollbar-thumb { background: var(--brand-line); border-radius: 8px; }
   aside::-webkit-scrollbar-track { background: transparent; }
-  /* Visual decision-support sidebar components (added v1.5.2, carried into v1.5.4) */
+  /* Visual decision-support sidebar components (added v1.5.2, carried into v1.5.5) */
   .mini-flow { display: grid; gap: 6px; font-size: 12.5px; }
   .flow-node { border: 1px solid var(--brand-line); background: var(--bg-soft); border-radius: 8px; padding: 7px 8px; text-align: center; line-height: 1.35; }
   .flow-node.start { background: var(--brand); color: #fff; border-color: var(--brand); font-weight: 700; }
@@ -130,6 +130,23 @@
   .emerging { color: var(--info); background: var(--info-soft); border: 1px dashed var(--info); padding: 0 4px; border-radius: 3px; font-size: 12.5px; font-weight: 600; }
 
   .summary-card { background: linear-gradient(180deg, #fff, var(--brand-soft)); border: 1px solid var(--brand-line); border-radius: 10px; padding: 18px 22px; margin: 18px 0 0; }
+  /* v1.5.5 — Visual MDT Tools prominent card */
+  .mdt-tools-card { background: linear-gradient(180deg, var(--brand-soft), #fff); border: 2px solid var(--brand); border-radius: 12px; padding: 18px 22px; margin: 22px 0 0; }
+  .mdt-tools-card > h3 { margin: 0 0 6px; color: var(--brand-dark); font-size: 20px; }
+  .mdt-tools-card > .lead { margin: 0 0 14px; font-size: 14px; color: var(--ink-soft); }
+  .mdt-tools-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .mdt-tool { background: #fff; border: 1px solid var(--brand-line); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; }
+  .mdt-tool .thumb { background: var(--bg-soft); border-bottom: 1px solid var(--brand-line); padding: 8px; }
+  .mdt-tool .thumb img { display: block; width: 100%; height: 110px; object-fit: contain; }
+  .mdt-tool .body { padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 4px; }
+  .mdt-tool .body h4 { margin: 0 0 4px; color: var(--brand-dark); font-size: 14.5px; }
+  .mdt-tool .body p { margin: 0 0 8px; font-size: 12.5px; color: var(--ink-soft); line-height: 1.4; }
+  .mdt-tool .actions { display: flex; flex-direction: column; gap: 6px; margin-top: 4px; }
+  .mdt-tool .actions a { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; font-size: 12.5px; font-weight: 600; border-radius: 6px; border: 1px solid var(--brand-line); background: #fff; color: var(--brand); text-decoration: none; }
+  .mdt-tool .actions a.primary { background: var(--brand); color: #fff; border-color: var(--brand); }
+  .mdt-tool .actions a:hover { background: var(--brand-soft); }
+  .mdt-tool .actions a.primary:hover { background: var(--brand-dark); }
+  @media (max-width: 900px) { .mdt-tools-grid { grid-template-columns: 1fr; } .mdt-tool .thumb img { height: 140px; } }
   .summary-card h3 { margin-top: 0; }
 
   .traffic { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 14px 0 18px; }
@@ -157,7 +174,7 @@
 <body>
 
 <div class="preview-bar">
-  <b>DRAFT PREVIEW v1.5.4</b> — Not deployed. For consultant review only. Document code <b>MHA-MCL-2026-v1.5.4-DRAFT</b>.
+  <b>DRAFT PREVIEW v1.5.5</b> — Not deployed. For consultant review only. Document code <b>MHA-MCL-2026-v1.5.5-DRAFT</b>.
 </div>
 <div class="endorse-bar">
   Independent educational synthesis — <b>not a NICE, BSH, NHS England, ESMO, or NCCN guideline</b> and not externally endorsed.
@@ -179,7 +196,7 @@
       <span class="badge">Haematological Malignancy</span>
       <span class="badge light">BSH 2024 · NICE · ESMO · NCCN</span>
       <span class="badge light">UK Practice-Oriented</span>
-      <span class="badge warn">DRAFT v1.5.4</span>
+      <span class="badge warn">DRAFT v1.5.5</span>
       <span class="badge amber">Not externally endorsed</span>
     </div>
     <h1 class="title">Mantle Cell Lymphoma (MCL)</h1>
@@ -190,7 +207,7 @@
     </p>
     <div class="tool-meta">
       <dl>
-        <dt>Document code</dt><dd class="doc-code">MHA-MCL-2026-v1.5.4-DRAFT</dd>
+        <dt>Document code</dt><dd class="doc-code">MHA-MCL-2026-v1.5.5-DRAFT</dd>
         <dt>Division</dt><dd>Haematological Malignancy</dd>
         <dt>Scope</dt><dd>Diagnosis, risk stratification, first-line and relapsed/refractory management, supportive care, surveillance, and service implementation for adults with MCL in UK NHS practice.</dd>
         <dt>Intended users</dt><dd>UK consultant haematologists, registrars and SHOs, CNS teams, haemato-oncology pharmacists, MDT coordinators. <b>Not for direct patient use.</b></dd>
@@ -214,6 +231,7 @@
 
 <nav class="anchor-nav" aria-label="On this page">
   <a href="#summary">Quick Summary</a>
+  <a href="#mdt-tools">★ Visual MDT Tools</a>
   <a href="#visual-support">★★★ Visual Decision Support</a>
   <a href="#access-key">Access Key</a>
   <a href="#uk-access">★ UK Access Snapshot</a>
@@ -252,23 +270,78 @@
   <p style="margin: 6px 0 0; font-size: 13px; color: var(--ink-soft);">Summary only. Full reasoning, evidence levels, and references in the sections below.</p>
 </div>
 
+<!-- v1.5.5 — Prominent Visual MDT Tools card immediately below Quick Decision Summary -->
+<div class="mdt-tools-card" id="mdt-tools">
+  <h3>★ Visual MDT Tools</h3>
+  <p class="lead">Three editable visual aids for at-a-glance MDT use. Each card opens the full-size SVG, downloads a print-ready PDF, or downloads the Excalidraw source for editing.</p>
+  <div class="mdt-tools-grid">
+
+    <div class="mdt-tool">
+      <a class="thumb" href="../../assets/figures/mcl-first-line-algorithm.svg" target="_blank" aria-label="Open first-line treatment algorithm in new tab">
+        <img src="../../assets/figures/mcl-first-line-algorithm.svg" alt="MCL first-line treatment algorithm thumbnail — decision tree from diagnosis through fit/older pathway branches to MDT documentation">
+      </a>
+      <div class="body">
+        <h4>First-line treatment algorithm</h4>
+        <p>Stepwise decision tree: diagnosis → fitness → fit vs older branches → high-risk overlay → MDT documentation.</p>
+        <div class="actions">
+          <a class="primary" href="../../assets/figures/mcl-first-line-algorithm.svg" target="_blank">Open full-size SVG &rarr;</a>
+          <a href="../../assets/pdfs/mcl-first-line-algorithm.pdf">Download PDF</a>
+          <a href="../../assets/figures/mcl-first-line-algorithm.excalidraw">Download Excalidraw source</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mdt-tool">
+      <a class="thumb" href="../../assets/figures/mcl-pathway-at-a-glance.svg" target="_blank" aria-label="Open MCL pathway at a glance in new tab">
+        <img src="../../assets/figures/mcl-pathway-at-a-glance.svg" alt="MCL pathway at a glance thumbnail — six-stage strip from diagnosis through biology, fitness, access, MDT decision to follow-up">
+      </a>
+      <div class="body">
+        <h4>MCL pathway at a glance</h4>
+        <p>Six-stage strip: Diagnosis → Biology → Fitness → Access → MDT Decision → Follow-up. Each stage carries a concrete checklist.</p>
+        <div class="actions">
+          <a class="primary" href="../../assets/figures/mcl-pathway-at-a-glance.svg" target="_blank">Open full-size SVG &rarr;</a>
+          <a href="../../assets/pdfs/mcl-pathway-at-a-glance.pdf">Download PDF</a>
+          <a href="../../assets/figures/mcl-pathway-at-a-glance.excalidraw">Download Excalidraw source</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mdt-tool">
+      <a class="thumb" href="../../assets/figures/mcl-access-status-chart.svg" target="_blank" aria-label="Open UK access and evidence status chart in new tab">
+        <img src="../../assets/figures/mcl-access-status-chart.svg" alt="UK access and evidence status chart thumbnail — green/amber/red/grey traffic-light categories for MCL therapies">
+      </a>
+      <div class="body">
+        <h4>UK access / evidence status chart</h4>
+        <p>Traffic-light categorisation: NICE-commissioned, evidence-supported-but-access-dependent, not-routine-NHS, and emerging.</p>
+        <div class="actions">
+          <a class="primary" href="../../assets/figures/mcl-access-status-chart.svg" target="_blank">Open full-size SVG &rarr;</a>
+          <a href="../../assets/pdfs/mcl-access-status-chart.pdf">Download PDF</a>
+          <a href="../../assets/figures/mcl-access-status-chart.excalidraw">Download Excalidraw source</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <p style="margin: 14px 0 0; font-size: 12.5px; color: var(--ink-soft);"><b>For MDT decision support only. Verify current NICE, NHS England and local formulary access before prescribing.</b></p>
+</div>
+
 <section id="visual-support">
   <h2><span class="num">★★★</span> Visual Decision Support</h2>
   <p>Three editable visual aids designed for rapid MDT use. Each is provided as inline SVG (scales cleanly), with downloadable SVG / PDF / Excalidraw sources in the sidebar.</p>
 
   <figure style="margin: 18px 0;">
     <img src="../../assets/figures/mcl-first-line-algorithm.svg" alt="MCL first-line treatment algorithm — stepwise MDT decision tree covering new diagnosis, minimum dataset confirmation, observation pathway, fit/intensive pathway with current standard and TRIANGLE-evolving branches, older/less-fit pathway with BR and ECHO branches, high-risk biology overlay, and MDT documentation step" style="display:block; max-width: 100%; height: auto; border: 1px solid var(--brand-line); border-radius: 10px;">
-    <figcaption style="margin-top: 8px; font-size: 13px; color: var(--ink-soft);"><b>First-line treatment algorithm.</b> For clinical decision support only. Verify current NICE / local access before treatment decisions.</figcaption>
+    <figcaption style="margin-top: 8px; font-size: 13px; color: var(--ink-soft);"><b>First-line treatment algorithm.</b> For MDT decision support only. Verify current NICE, NHS England and local formulary access before prescribing.</figcaption>
   </figure>
 
   <figure style="margin: 18px 0;">
     <img src="../../assets/figures/mcl-pathway-at-a-glance.svg" alt="MCL pathway at a glance — six-stage horizontal strip: Diagnosis, Biology, Fitness, Access, MDT Decision, Follow-up. Each stage has a detailed card listing the key items to confirm or check" style="display:block; max-width: 100%; height: auto; border: 1px solid var(--brand-line); border-radius: 10px;">
-    <figcaption style="margin-top: 8px; font-size: 13px; color: var(--ink-soft);"><b>MCL pathway at a glance.</b> For clinical decision support only. Verify current NICE / local access before treatment decisions.</figcaption>
+    <figcaption style="margin-top: 8px; font-size: 13px; color: var(--ink-soft);"><b>MCL pathway at a glance.</b> For MDT decision support only. Verify current NICE, NHS England and local formulary access before prescribing.</figcaption>
   </figure>
 
   <figure style="margin: 18px 0;">
     <img src="../../assets/figures/mcl-access-status-chart.svg" alt="UK access / evidence status chart — traffic-light categorisation of MCL therapies. Green: NICE-recommended (ibrutinib TA502, zanubrutinib TA1081, brexucabtagene autoleucel TA677). Amber: evidence-supported but access-dependent (TRIANGLE, acalabrutinib+BR, SYMPATICO). Red: not routine NHS-funded (pirtobrutinib, lisocabtagene maraleucel, SHINE pattern). Grey: emerging/conference-level (MRD-guided, bispecifics, ASH/EHA abstracts)" style="display:block; max-width: 100%; height: auto; border: 1px solid var(--brand-line); border-radius: 10px;">
-    <figcaption style="margin-top: 8px; font-size: 13px; color: var(--ink-soft);"><b>UK access / evidence status chart.</b> For clinical decision support only. Verify current NICE / local access before treatment decisions.</figcaption>
+    <figcaption style="margin-top: 8px; font-size: 13px; color: var(--ink-soft);"><b>UK access / evidence status chart.</b> For MDT decision support only. Verify current NICE, NHS England and local formulary access before prescribing.</figcaption>
   </figure>
 </section>
 
@@ -952,6 +1025,7 @@
       <tr><td>v1.5.2-DRAFT</td><td>14 May 2026</td><td>Dr M Mohsin (CLL-pattern visual sidebar enhancement)</td><td>Sidebar upgraded from navigation-only to CLL-pattern visual decision-support layer. Added seven panels: (1) MCL First-Line Algorithm (six-step ordered list); (2) Treatment Flowchart with semantic HTML flow-nodes, arrows, and yes/no splits; (3) MCL Pathway at a Glance staged strip (Diagnosis → Biology → Fitness → Access → MDT → Follow-up); (4) Access Status legend (green/amber/red/grey) with evidence-vs-access reminder; (5) High-risk MCL reminder panel with action; (6) MDT Documentation checklist; (7) Quick Links jump-list. Preserved NICE Commissioning and Related Content panels. Added CSS for mini-flow, flow-node, flow-split, pathway-strip, status-list, ordered-mini. Mobile fallback at ≤420px collapses flow-split to single column. No clinical content changes; sidebar mirrors main-text content for at-a-glance decision support.</td></tr>
       <tr><td>v1.5.3-DRAFT</td><td>14 May 2026</td><td>Dr M Mohsin (page-break overflow fix + bundle self-consistency)</td><td>Docx and PDF page-break overflow fix: callout boxes rebuilt as single-column multi-row tables (title + one body line per row) instead of single-cell tables. Each row breaks across page boundaries cleanly, eliminating the content overlap seen in v1.5.2. Table rows now explicitly cantSplit=false and tableHeader=true so headers repeat when a long table splits. HTML version labels bumped to v1.5.3 for bundle self-consistency (no HTML clinical content changes from v1.5.2).</td></tr>
       <tr><td>v1.5.4-DRAFT</td><td>14 May 2026</td><td>Dr M Mohsin (visual decision-support assets)</td><td>Visual / usability enhancement only. Added three custom MCL visual assets as editable SVG + PDF + Excalidraw: (1) First-Line Treatment Algorithm — full decision tree with decision diamonds, fit/older branches, high-risk overlay; (2) Pathway at a Glance — six-stage strip (Diagnosis → Biology → Fitness → Access → MDT Decision → Follow-up); (3) UK Access / Evidence Status Chart — green/amber/red/grey traffic-light categorisation. New "Visual Decision Support" main-body section after Quick Summary embeds all three SVGs with captions. Sidebar gains "Download visual guides" panel plus three image-thumbnail panels linking to full-size SVGs. PNG fallbacks generated. Mermaid source provided as text fallback. No clinical content changes.</td></tr>
+      <tr><td>v1.5.5-DRAFT</td><td>15 May 2026</td><td>Dr M Mohsin (Visual MDT Tools card)</td><td>Visual / usability enhancement only — no clinical wording changes. Added prominent "★ Visual MDT Tools" card immediately below Quick Decision Summary, before the full text begins. Three large cards (First-line algorithm, Pathway at a glance, Access / evidence status chart), each with a thumbnail preview and three action buttons: Open full-size SVG, Download PDF, Download Excalidraw source. Sidebar "Download visual guides" panel rebuilt with visible Excalidraw links (not just text reference) plus Mermaid text fallback link, grouped by visual asset. Caption under every visual standardised to "For MDT decision support only. Verify current NICE, NHS England and local formulary access before prescribing." Anchor nav adds a new ★ Visual MDT Tools entry.</td></tr>
     </tbody>
   </table>
 
@@ -972,23 +1046,36 @@
 </main>
 
 <aside aria-label="Decision-support sidebar">
-  <!-- Panel 0 — Download visual guides (added v1.5.4) -->
-  <div class="panel" style="border-color: var(--brand);">
-    <h4 style="color: var(--brand);">Download visual guides</h4>
-    <ul style="padding-left: 18px; margin: 0; font-size: 13px; line-height: 1.55;">
+  <!-- Panel 0 — Download visual guides (v1.5.5 — visible Excalidraw links) -->
+  <div class="panel" style="border-color: var(--brand); border-width: 2px;">
+    <h4 style="color: var(--brand);">★ Download visual guides</h4>
+    <p style="margin: 0 0 6px; font-size: 12px; color: var(--ink-soft);"><b>Full guideline</b></p>
+    <ul style="padding-left: 18px; margin: 0 0 10px; font-size: 13px; line-height: 1.55;">
       <li><a href="./guideline.pdf">Full guideline (PDF)</a></li>
       <li><a href="./guideline.docx">Full guideline (DOCX)</a></li>
-      <li><a href="../../assets/pdfs/mcl-first-line-algorithm.pdf">First-line algorithm (PDF)</a></li>
-      <li><a href="../../assets/figures/mcl-first-line-algorithm.svg">First-line algorithm (SVG)</a></li>
-      <li><a href="../../assets/pdfs/mcl-pathway-at-a-glance.pdf">Pathway at a glance (PDF)</a></li>
-      <li><a href="../../assets/figures/mcl-pathway-at-a-glance.svg">Pathway at a glance (SVG)</a></li>
-      <li><a href="../../assets/pdfs/mcl-access-status-chart.pdf">Access status chart (PDF)</a></li>
-      <li><a href="../../assets/figures/mcl-access-status-chart.svg">Access status chart (SVG)</a></li>
     </ul>
-    <p class="sidebar-note" style="margin-top: 8px; font-size: 11px;">Editable Excalidraw sources also available in <code style="font-size: 10.5px;">assets/figures/*.excalidraw</code>.</p>
+    <p style="margin: 0 0 6px; font-size: 12px; color: var(--ink-soft);"><b>First-line algorithm</b></p>
+    <ul style="padding-left: 18px; margin: 0 0 10px; font-size: 13px; line-height: 1.55;">
+      <li><a href="../../assets/figures/mcl-first-line-algorithm.svg">SVG (full-size)</a></li>
+      <li><a href="../../assets/pdfs/mcl-first-line-algorithm.pdf">PDF (print-ready)</a></li>
+      <li><a href="../../assets/figures/mcl-first-line-algorithm.excalidraw">Excalidraw source (editable)</a></li>
+    </ul>
+    <p style="margin: 0 0 6px; font-size: 12px; color: var(--ink-soft);"><b>Pathway at a glance</b></p>
+    <ul style="padding-left: 18px; margin: 0 0 10px; font-size: 13px; line-height: 1.55;">
+      <li><a href="../../assets/figures/mcl-pathway-at-a-glance.svg">SVG (full-size)</a></li>
+      <li><a href="../../assets/pdfs/mcl-pathway-at-a-glance.pdf">PDF (print-ready)</a></li>
+      <li><a href="../../assets/figures/mcl-pathway-at-a-glance.excalidraw">Excalidraw source (editable)</a></li>
+    </ul>
+    <p style="margin: 0 0 6px; font-size: 12px; color: var(--ink-soft);"><b>Access status chart</b></p>
+    <ul style="padding-left: 18px; margin: 0 0 8px; font-size: 13px; line-height: 1.55;">
+      <li><a href="../../assets/figures/mcl-access-status-chart.svg">SVG (full-size)</a></li>
+      <li><a href="../../assets/pdfs/mcl-access-status-chart.pdf">PDF (print-ready)</a></li>
+      <li><a href="../../assets/figures/mcl-access-status-chart.excalidraw">Excalidraw source (editable)</a></li>
+    </ul>
+    <p class="sidebar-note" style="margin: 6px 0 0; font-size: 11.5px;">Mermaid text fallback: <a href="../../assets/figures/mcl-visuals.mmd"><code style="font-size: 10.5px;">mcl-visuals.mmd</code></a>.</p>
   </div>
 
-  <!-- Panel 0a — First-line algorithm thumbnail (added v1.5.4) -->
+  <!-- Panel 0a — First-line algorithm thumbnail (added v1.5.5) -->
   <div class="panel">
     <h4>First-Line Algorithm</h4>
     <a href="../../assets/figures/mcl-first-line-algorithm.svg" target="_blank" title="Open full-size SVG in new tab">
@@ -997,7 +1084,7 @@
     <p class="sidebar-note">Click to open full-size SVG.</p>
   </div>
 
-  <!-- Panel 0b — Pathway at a glance thumbnail (added v1.5.4) -->
+  <!-- Panel 0b — Pathway at a glance thumbnail (added v1.5.5) -->
   <div class="panel">
     <h4>Pathway at a Glance</h4>
     <a href="../../assets/figures/mcl-pathway-at-a-glance.svg" target="_blank" title="Open full-size SVG in new tab">
@@ -1006,7 +1093,7 @@
     <p class="sidebar-note">Click to open full-size SVG.</p>
   </div>
 
-  <!-- Panel 0c — Access / evidence status chart thumbnail (added v1.5.4) -->
+  <!-- Panel 0c — Access / evidence status chart thumbnail (added v1.5.5) -->
   <div class="panel">
     <h4>Access / Evidence Status</h4>
     <a href="../../assets/figures/mcl-access-status-chart.svg" target="_blank" title="Open full-size SVG in new tab">
@@ -1155,7 +1242,7 @@
   <div class="wrap">
     Mohsin Haematology Academy · Clinical Education &amp; Digital Tools<br />
     <b>Educational use only.</b> Content does not replace clinical judgement or professional guidelines.<br />
-    © 2025–2026 Dr Muhammad Mohsin · MHA-MCL-2026-v1.5.4-DRAFT — Not for clinical use until approved.
+    © 2025–2026 Dr Muhammad Mohsin · MHA-MCL-2026-v1.5.5-DRAFT — Not for clinical use until approved.
   </div>
 </footer>
 
