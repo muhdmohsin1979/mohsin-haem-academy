@@ -1,0 +1,1098 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mantle Cell Lymphoma (MCL) — Mohsin Haematology Academy (Preview v1.5.3)</title>
+<meta name="description" content="UK Practice-Oriented Evidence Guide for Mantle Cell Lymphoma — BSH 2024, NICE TA502/TA1081/TA677, ESMO, NCCN. Draft preview MHA-MCL-2026-v1.5.3-DRAFT." />
+<meta name="theme-color" content="#7a1f2b" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalGuideline",
+  "name": "Mantle Cell Lymphoma — UK Practice-Oriented Evidence Guide",
+  "author": { "@type": "Person", "name": "Dr Muhammad Mohsin" },
+  "publisher": { "@type": "Organization", "name": "Mohsin Haematology Academy" },
+  "datePublished": "2026-05-14",
+  "dateModified": "2026-05-14",
+  "medicalSpecialty": "Haematology",
+  "reviewedBy": "Pending external review",
+  "reviewStatus": "Draft, not externally endorsed",
+  "disclaimer": "Independent educational synthesis. Not a NICE, BSH, NHS England, ESMO, or NCCN guideline."
+}
+</script>
+<style>
+  :root {
+    --brand: #7a1f2b; --brand-dark: #5a141d; --brand-soft: #fbeaec; --brand-line: #e6c9ce;
+    --ink: #1a1a1a; --ink-soft: #555; --line: #e3e3e3; --bg: #ffffff; --bg-soft: #faf7f7;
+    --good: #2e6b3e; --good-soft: #e8f4ec; --warn: #8b2e2e; --warn-soft: #fdecec;
+    --info: #1f4e79; --info-soft: #e8eff7; --amber: #b08538; --amber-soft: #fdf5e3;
+    --grey: #707070; --grey-soft: #ececec;
+    --max: 1280px;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--ink); line-height: 1.6; background: var(--bg); font-size: 16px;
+  }
+  a { color: var(--brand); text-decoration: none; } a:hover { text-decoration: underline; }
+  header.site { background: #fff; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 30; }
+  header.site .row { max-width: var(--max); margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .logo { font-weight: 700; color: var(--brand); font-size: 17px; }
+  .logo small { display: block; font-weight: 400; color: var(--ink-soft); font-size: 12px; }
+  nav.site a { color: var(--ink); margin-right: 18px; font-size: 14px; font-weight: 500; }
+  nav.site a:hover { color: var(--brand); }
+  .preview-bar { background: #2b2b2b; color: #fff; padding: 8px 24px; font-size: 13px; text-align: center; }
+  .preview-bar b { color: #ffd66e; }
+  .endorse-bar { background: var(--warn); color: #fff; padding: 8px 24px; font-size: 13px; text-align: center; }
+  .hero { background: linear-gradient(180deg, var(--brand-soft) 0%, #fff 100%); border-bottom: 1px solid var(--brand-line); padding: 36px 24px 24px; }
+  .hero .wrap { max-width: var(--max); margin: 0 auto; }
+  .badge-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+  .badge { display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; background: var(--brand); color: #fff; }
+  .badge.light { background: #fff; color: var(--brand); border: 1px solid var(--brand-line); }
+  .badge.warn { background: var(--warn); color: #fff; }
+  .badge.amber { background: var(--amber); color: #fff; }
+  h1.title { font-size: 38px; line-height: 1.15; margin: 0 0 12px; color: var(--brand-dark); font-weight: 800; letter-spacing: -0.02em; }
+  .lede { font-size: 17px; color: var(--ink-soft); margin: 0 0 16px; max-width: 800px; }
+  .doc-code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 13px; color: var(--ink-soft); }
+  .last-checked { background: var(--info-soft); border: 1px solid var(--info); border-radius: 6px; padding: 8px 14px; font-size: 13.5px; color: var(--info); margin-top: 14px; display: inline-block; }
+  .last-checked b { color: var(--ink); }
+
+  .layout { max-width: var(--max); margin: 0 auto; padding: 0 24px 64px; display: grid; grid-template-columns: 1fr 280px; gap: 36px; align-items: start; }
+  main { min-width: 0; }
+  aside { position: sticky; top: 80px; align-self: start; font-size: 14px; max-height: calc(100vh - 96px); overflow-y: auto; overscroll-behavior: contain; padding-right: 4px; }
+  aside::-webkit-scrollbar { width: 8px; }
+  aside::-webkit-scrollbar-thumb { background: var(--brand-line); border-radius: 8px; }
+  aside::-webkit-scrollbar-track { background: transparent; }
+  /* Visual decision-support sidebar components (added v1.5.2, carried into v1.5.3) */
+  .mini-flow { display: grid; gap: 6px; font-size: 12.5px; }
+  .flow-node { border: 1px solid var(--brand-line); background: var(--bg-soft); border-radius: 8px; padding: 7px 8px; text-align: center; line-height: 1.35; }
+  .flow-node.start { background: var(--brand); color: #fff; border-color: var(--brand); font-weight: 700; }
+  .flow-node.warn { background: var(--warn-soft); border-color: var(--warn); color: var(--warn); font-weight: 700; }
+  .flow-arrow { text-align: center; color: var(--brand); font-weight: 700; line-height: 1; }
+  .flow-split { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .flow-split > div { border: 1px solid var(--line); background: #fff; border-radius: 8px; padding: 7px 8px; text-align: center; font-size: 12px; line-height: 1.35; }
+  .flow-split span { color: var(--ink-soft); font-size: 11.5px; }
+  .pathway-strip { display: grid; gap: 6px; margin: 8px 0; }
+  .pathway-strip span.stage { display: block; background: var(--brand-soft); border: 1px solid var(--brand-line); color: var(--brand-dark); border-radius: 999px; padding: 5px 9px; font-size: 12px; font-weight: 700; text-align: center; }
+  .pathway-strip small { display: block; font-size: 11px; color: var(--ink-soft); text-align: center; line-height: 1.3; margin-top: 1px; }
+  .sidebar-note { font-size: 12.5px; color: var(--ink-soft); line-height: 1.45; margin: 6px 0 0; }
+  .status-list { list-style: none; padding-left: 0; margin: 0; }
+  .status-list li { display: flex; gap: 6px; align-items: baseline; margin-bottom: 6px; line-height: 1.35; }
+  .ordered-mini { padding-left: 18px; margin: 0; font-size: 12.5px; line-height: 1.45; }
+  .ordered-mini li { margin-bottom: 4px; }
+  aside .panel { background: #fff; border: 1px solid var(--brand-line); border-radius: 10px; padding: 14px 16px; margin-bottom: 16px; }
+  aside .panel h4 { margin: 0 0 8px; color: var(--brand-dark); font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--brand-line); padding-bottom: 6px; }
+  aside ul { padding-left: 18px; margin: 0; }
+  aside li { margin-bottom: 4px; line-height: 1.4; }
+  aside .panel.nice-ta a { display: block; padding: 4px 0; border-bottom: 1px dotted var(--brand-line); }
+  aside .panel.nice-ta a:last-child { border-bottom: 0; }
+  aside .star { color: var(--brand); font-weight: 700; }
+
+  .tool-meta { background: var(--bg-soft); border: 1px solid var(--line); border-radius: 10px; padding: 14px 18px; margin: 14px 0 0; font-size: 14px; }
+  .tool-meta dl { display: grid; grid-template-columns: 160px 1fr; gap: 6px 18px; margin: 0; }
+  .tool-meta dt { color: var(--brand); font-weight: 600; }
+  .tool-meta dd { margin: 0; color: var(--ink); }
+
+  .anchor-nav { margin: 24px 0; padding: 14px 18px; background: var(--bg-soft); border: 1px solid var(--line); border-radius: 10px; font-size: 14px; }
+  .anchor-nav a { display: inline-block; margin: 4px 14px 4px 0; color: var(--brand); border-bottom: 1px dotted var(--brand-line); }
+
+  section { padding: 28px 0 8px; border-top: 1px solid var(--line); }
+  section:first-of-type { border-top: 0; }
+  section > h2 { font-size: 26px; color: var(--brand-dark); margin: 0 0 8px; display: flex; align-items: baseline; gap: 10px; }
+  section > h2 .num { color: var(--brand); font-weight: 700; font-size: 18px; background: var(--brand-soft); padding: 2px 10px; border-radius: 6px; border: 1px solid var(--brand-line); }
+  h3 { font-size: 19px; margin: 22px 0 8px; color: var(--brand-dark); }
+  h4 { font-size: 16px; margin: 18px 0 6px; color: var(--ink); }
+  p { margin: 0 0 12px; }
+  ul, ol { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0 18px; font-size: 14.5px; background: #fff; }
+  th, td { border: 1px solid var(--line); padding: 9px 12px; text-align: left; vertical-align: top; }
+  th { background: var(--brand); color: #fff; font-weight: 600; }
+  tr:nth-child(even) td { background: var(--bg-soft); }
+
+  .callout { border-left: 5px solid var(--info); background: var(--info-soft); padding: 14px 18px; border-radius: 6px; margin: 16px 0; }
+  .callout h4 { margin: 0 0 6px; color: var(--info); font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .callout.good { border-left-color: var(--good); background: var(--good-soft); } .callout.good h4 { color: var(--good); }
+  .callout.warn { border-left-color: var(--warn); background: var(--warn-soft); } .callout.warn h4 { color: var(--warn); }
+  .callout.amber { border-left-color: var(--amber); background: var(--amber-soft); } .callout.amber h4 { color: var(--amber); }
+  .callout p:last-child, .callout ul:last-child { margin-bottom: 0; }
+  .callout.vignette { background: #fff; border: 1px solid var(--brand-line); border-left: 5px solid var(--brand); }
+  .callout.vignette h4 { color: var(--brand); }
+
+  .rec { background: #fff; border: 1px solid var(--brand-line); border-left: 4px solid var(--brand); padding: 12px 16px; margin: 12px 0; border-radius: 6px; }
+  .rec .tag { display: inline-block; font-size: 11px; font-weight: 700; background: var(--brand); color: #fff; padding: 2px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.04em; margin-right: 8px; }
+  .rec .tag.cond { background: var(--amber); }
+  .grade { display: inline-block; background: var(--bg-soft); border: 1px solid var(--line); padding: 1px 7px; border-radius: 4px; font-size: 12px; color: var(--ink-soft); margin-left: 6px; font-weight: 500; }
+  .verify { color: var(--warn); background: #fff4ee; border: 1px dashed var(--warn); padding: 0 4px; border-radius: 3px; font-size: 12.5px; font-weight: 600; }
+  .emerging { color: var(--info); background: var(--info-soft); border: 1px dashed var(--info); padding: 0 4px; border-radius: 3px; font-size: 12.5px; font-weight: 600; }
+
+  .summary-card { background: linear-gradient(180deg, #fff, var(--brand-soft)); border: 1px solid var(--brand-line); border-radius: 10px; padding: 18px 22px; margin: 18px 0 0; }
+  .summary-card h3 { margin-top: 0; }
+
+  .traffic { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 14px 0 18px; }
+  .traffic .t { padding: 8px 12px; border-radius: 6px; font-size: 13px; border: 1px solid var(--line); background: #fff; }
+  .traffic .t b { display: block; font-size: 13px; margin-bottom: 2px; }
+  .traffic .t.green { background: var(--good-soft); border-color: var(--good); color: var(--good); }
+  .traffic .t.amber { background: var(--amber-soft); border-color: var(--amber); color: var(--amber); }
+  .traffic .t.red { background: var(--warn-soft); border-color: var(--warn); color: var(--warn); }
+  .traffic .t.grey { background: var(--grey-soft); border-color: var(--grey); color: var(--grey); }
+  .access-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; vertical-align: middle; margin-right: 4px; }
+  .access-dot.green { background: #2e6b3e; } .access-dot.amber { background: #b08538; }
+  .access-dot.red { background: #8b2e2e; } .access-dot.grey { background: #707070; }
+
+  pre.bibtex { background: #f4ecee; border: 1px solid var(--brand-line); border-radius: 6px; padding: 12px 14px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 13px; overflow-x: auto; }
+
+  footer.site { border-top: 1px solid var(--line); margin-top: 40px; background: #fff; padding: 24px; font-size: 13px; color: var(--ink-soft); }
+  footer.site .wrap { max-width: var(--max); margin: 0 auto; }
+
+  @media print { header.site, footer.site, .anchor-nav, .preview-bar, .endorse-bar, aside { display: none; } body { font-size: 11.5pt; } .layout { display: block; padding: 0; } section { page-break-inside: avoid; } h1.title { font-size: 24pt; } }
+  @media (max-width: 1024px) { .layout { grid-template-columns: 1fr; } aside { position: static; max-height: none; overflow: visible; padding-right: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; } }
+  @media (max-width: 720px) { h1.title { font-size: 28px; } .tool-meta dl { grid-template-columns: 1fr; } .traffic { grid-template-columns: 1fr 1fr; } nav.site a { margin-right: 12px; } aside { grid-template-columns: 1fr; } }
+  @media (max-width: 420px) { .flow-split { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<div class="preview-bar">
+  <b>DRAFT PREVIEW v1.5.3</b> — Not deployed. For consultant review only. Document code <b>MHA-MCL-2026-v1.5.3-DRAFT</b>.
+</div>
+<div class="endorse-bar">
+  Independent educational synthesis — <b>not a NICE, BSH, NHS England, ESMO, or NCCN guideline</b> and not externally endorsed.
+</div>
+
+<header class="site">
+  <div class="row">
+    <div class="logo">Mohsin Haematology Academy<small>Clinical Education &amp; Digital Tools</small></div>
+    <nav class="site">
+      <a href="#">Tools</a><a href="#">Guidelines</a><a href="#">Education</a>
+      <a href="#">Journal Club</a><a href="#">About</a><a href="#">Open HaemCalc</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="badge-row">
+      <span class="badge">Haematological Malignancy</span>
+      <span class="badge light">BSH 2024 · NICE · ESMO · NCCN</span>
+      <span class="badge light">UK Practice-Oriented</span>
+      <span class="badge warn">DRAFT v1.5.3</span>
+      <span class="badge amber">Not externally endorsed</span>
+    </div>
+    <h1 class="title">Mantle Cell Lymphoma (MCL)</h1>
+    <p class="lede">
+      <b>UK Practice-Oriented Evidence Guide.</b> Independent educational synthesis of BSH 2024
+      (Eyre et al), NICE Technology Appraisals (TA502 ibrutinib, TA1081 zanubrutinib, TA677
+      brexucabtagene autoleucel), ESMO and NCCN recommendations. <b>Version 1.5.3 — May 2026.</b>
+    </p>
+    <div class="tool-meta">
+      <dl>
+        <dt>Document code</dt><dd class="doc-code">MHA-MCL-2026-v1.5.3-DRAFT</dd>
+        <dt>Division</dt><dd>Haematological Malignancy</dd>
+        <dt>Scope</dt><dd>Diagnosis, risk stratification, first-line and relapsed/refractory management, supportive care, surveillance, and service implementation for adults with MCL in UK NHS practice.</dd>
+        <dt>Intended users</dt><dd>UK consultant haematologists, registrars and SHOs, CNS teams, haemato-oncology pharmacists, MDT coordinators. <b>Not for direct patient use.</b></dd>
+        <dt>Evidence base</dt><dd>BSH 2024 (primary UK standard) · NICE TA502 · NICE TA1081 · NICE TA677 · ESMO · NCCN · TRIANGLE · SHINE · LYMA · ZUMA-2 · SYMPATICO · ECHO · BRUIN</dd>
+        <dt>Tags</dt><dd>Interpretation · MDT · BSH 2024 · NICE · Pathology · CAR-T pathway · Audit</dd>
+        <dt>Author</dt><dd>Dr Muhammad Mohsin, Consultant Haematologist</dd>
+        <dt>Review due</dt><dd>May 2028 or earlier on practice-changing evidence</dd>
+        <dt>Endorsement</dt><dd>Independent — not externally endorsed</dd>
+      </dl>
+    </div>
+    <div class="last-checked">
+      <b>Evidence checked:</b> 14 May 2026 &nbsp;·&nbsp;
+      <b>NICE / access checked:</b> 14 May 2026 &nbsp;·&nbsp;
+      <b>Next access check due:</b> before publication, then every 3 months
+    </div>
+  </div>
+</div>
+
+<div class="layout">
+<main>
+
+<nav class="anchor-nav" aria-label="On this page">
+  <a href="#summary">Quick Summary</a>
+  <a href="#access-key">Access Key</a>
+  <a href="#uk-access">★ UK Access Snapshot</a>
+  <a href="#scope">1. Scope</a>
+  <a href="#methods">2. Methodology</a>
+  <a href="#disease">3. Disease Overview</a>
+  <a href="#diagnosis">4. Diagnosis</a>
+  <a href="#risk">5. Risk Stratification</a>
+  <a href="#firstline">6. First-Line</a>
+  <a href="#rr">7. Relapsed / Refractory</a>
+  <a href="#commissioning">8. Commissioning Status</a>
+  <a href="#supportive">9. Supportive Care</a>
+  <a href="#surveillance">10. Surveillance</a>
+  <a href="#mdt-use">11. Using in MDT</a>
+  <a href="#consent">11a. Consent</a>
+  <a href="#devolved">11b. Devolved Nations</a>
+  <a href="#audit">12. Audit Standards</a>
+  <a href="#emerging">13. Emerging</a>
+  <a href="#refs">14. References</a>
+  <a href="#cite">15. How to Cite</a>
+  <a href="#governance">16. Governance</a>
+</nav>
+
+<div class="summary-card" id="summary">
+  <h3>Quick decision summary</h3>
+  <p style="margin: 0 0 10px;"><b>Treat or observe according to phenotype, biology, fitness, and access. Evidence-supported is not the same as NHS-commissioned.</b></p>
+  <ul>
+    <li><b>Diagnosis:</b> excisional or generous core biopsy; CD20+, CD5+, cyclin D1+, SOX11±; Ki-67 as percentage; FISH t(11;14) where cyclin D1 IHC negative; <b>TP53 by IHC AND NGS in every case.</b></li>
+    <li><b>Indolent / non-nodal phenotype:</b> watch and wait (BSH 2024, ESMO endorsed).</li>
+    <li><b>First-line — fit / intensive:</b> default pathway is cytarabine-containing immunochemotherapy ± ASCT + rituximab maintenance. TRIANGLE has redefined the evidence standard, but ibrutinib-integrated induction is <b>not yet uniformly commissioned as routine UK first-line</b>; consider where a legitimate non-routine access route exists (compassionate, manufacturer-supported, IFR, trial, locally approved exceptional pathway). TP53-mutated disease — ASCT should not be relied upon as the primary risk-overcoming strategy; prioritise trials, BTKi-based pathways, early CAR-T mapping.</li>
+    <li><b>First-line — older / non-intensive:</b> bendamustine-rituximab remains UK standard, with rituximab maintenance where tolerated. Acalabrutinib + BR (ECHO) is evolving evidence-standard — NICE GID-TA11091 in development. SHINE (frontline ibrutinib + BR) is not adopted as UK standard.</li>
+    <li><b>R/R after 1 prior line:</b> two NICE-recommended covalent BTKi — ibrutinib (TA502) and zanubrutinib (TA1081, July 2025). TA1081 directs use of the least-expensive option.</li>
+    <li><b>Post-BTKi:</b> brexucabtagene autoleucel (TA677, within Cancer Drugs Fund). TA677 review in development. Pirtobrutinib — routine UK access should not be assumed.</li>
+    <li><b>Always MDT. Local trust policy and current NICE / local formulary take precedence.</b> Document evidence basis, funding/access route, patient suitability, toxicity, alternatives, and informed consent.</li>
+  </ul>
+  <p style="margin: 6px 0 0; font-size: 13px; color: var(--ink-soft);">Summary only. Full reasoning, evidence levels, and references in the sections below.</p>
+</div>
+
+<section id="access-key">
+  <h2><span class="num">★</span> UK Access Key &amp; Evidence vs Access Principle</h2>
+  <div class="traffic">
+    <div class="t green"><b>Green</b>NICE-recommended / commissioned</div>
+    <div class="t amber"><b>Amber</b>Evidence-supported, access dependent</div>
+    <div class="t red"><b>Red</b>Investigational / not routine NHS-funded</div>
+    <div class="t grey"><b>Grey</b>Emerging / conference-level</div>
+  </div>
+  <div class="callout">
+    <h4>Evidence vs Access — Core Principle</h4>
+    <p>Evidence-supported does not equal NHS-commissioned. Every systemic therapy recommendation must be interpreted through current NICE guidance, NHS England commissioning, local formulary, trial availability, and patient-specific suitability. Items flagged <span class="verify">[VERIFY]</span> must be cross-checked at the time of prescribing or publication. Items flagged <span class="emerging">[EMERGING]</span> are not considered practice-changing under current UK frameworks.</p>
+  </div>
+</section>
+
+<section id="uk-access">
+  <h2><span class="num">★★</span> UK Access / Commissioning Snapshot</h2>
+  <p>This snapshot summarises the principal NICE / NHS England access positions used as a reference for this evidence guide. <b>Implementation may differ in Scotland (SMC), Wales (AWMSG), and Northern Ireland (HSCNI); local formulary positions should be checked.</b> Access positions change; verify at the time of prescribing or referral.</p>
+  <table>
+    <thead><tr><th>Therapy</th><th>Indication and access position</th><th>Reference</th></tr></thead>
+    <tbody>
+      <tr><td><span class="access-dot green"></span><b>Ibrutinib (R/R MCL)</b></td><td>Recommended after one previous line of therapy, subject to the commercial access agreement with NHS England.</td><td><a href="https://www.nice.org.uk/guidance/ta502">NICE TA502</a> (31 Jan 2018; last reviewed 8 Jul 2021)</td></tr>
+      <tr><td><span class="access-dot green"></span><b>Zanubrutinib (R/R MCL)</b></td><td>Recommended after one line of treatment only. Use the <em>least-expensive</em> option of zanubrutinib or ibrutinib per TA1081 direction; subject to simple discount patient access scheme.</td><td><a href="https://www.nice.org.uk/guidance/ta1081">NICE TA1081</a> (10 Jul 2025)</td></tr>
+      <tr><td><span class="access-dot green"></span><b>Brexucabtagene autoleucel (R/R MCL)</b></td><td>Recommended within the Cancer Drugs Fund for adults previously treated with a BTK inhibitor, subject to the managed access agreement. <b>A review of TA677 is in development.</b></td><td><a href="https://www.nice.org.uk/guidance/ta677">NICE TA677</a> (review <a href="https://www.nice.org.uk/guidance/indevelopment/gid-ta11545">GID-TA11545</a>)</td></tr>
+      <tr><td><span class="access-dot amber"></span><b>Acalabrutinib + BR (untreated MCL)</b></td><td>NICE appraisal <b>in development</b>. Expected publication 4 June 2026 (may be rescheduled). <b>Not adopted as routine UK standard before final NICE guidance.</b></td><td><a href="https://www.nice.org.uk/guidance/indevelopment/gid-ta11091">NICE GID-TA11091 (ID6155)</a></td></tr>
+      <tr><td><span class="access-dot red"></span><b>Pirtobrutinib (R/R MCL)</b></td><td>Routine UK NHS access should <b>not</b> be assumed. NICE appraisal ID3975 reported as suspended; ID6493 (BTKi-untreated R/R) in development.</td><td>NICE appraisals in development / suspended — <span class="verify">[VERIFY]</span></td></tr>
+      <tr><td><span class="access-dot amber"></span><b>TRIANGLE-style first-line ibrutinib-integrated induction</b></td><td>Practice-changing evidence benchmark in fit patients; <b>not uniformly commissioned</b> as routine UK first-line. Access via compassionate, manufacturer-supported, IFR, trial, or locally approved exceptional pathways.</td><td>Dreyling et al, <em>The Lancet</em> 2024 (PMID 38705160)</td></tr>
+    </tbody>
+  </table>
+  <div class="callout warn">
+    <h4>Prescribing safeguards</h4>
+    <p><b>Clinical decision-support only. Not for direct patient use. Local trust policies take precedence.</b> Always verify current NICE / NHS England / local formulary / SmPC before prescribing. For prescribing, always check renal and hepatic function, weight, bleeding risk, drug interactions, pregnancy status, infection risk, and the current SmPC. Off-label or non-routine use must be clearly flagged and documented.</p>
+  </div>
+</section>
+
+<section id="scope">
+  <h2><span class="num">1</span> Scope and Purpose</h2>
+  <p>This guide addresses the diagnosis, risk stratification, and management of adults (≥18 years) with mantle cell lymphoma — including classical, blastoid, pleomorphic, and leukaemic non-nodal variants, and in situ mantle cell neoplasia (ISMCN) — within UK NHS practice.</p>
+  <h3>Intended users</h3>
+  <p>UK consultant haematologists, registrars and SHOs, CNS teams, haemato-oncology pharmacists, MDT coordinators. <b>Not for direct use by patients. Not a prescribing protocol.</b></p>
+  <h3>Out of scope</h3>
+  <ul>
+    <li>Paediatric and adolescent MCL (extremely rare).</li>
+    <li>Detailed pharmacology — refer to BNF and SmPC.</li>
+    <li>Allogeneic transplant donor selection — refer to BSBMTCT guidance.</li>
+  </ul>
+</section>
+
+<section id="methods">
+  <h2><span class="num">2</span> Methodology and Evidence Sources</h2>
+  <ul>
+    <li><b>Tier 1 — UK regulatory and society:</b> NICE TAs (TA502, TA1081, TA677), NHS England Clinical Commissioning Policies, BSH MCL Guideline — <em>Eyre TA et al, BJH 2024;204(1):108–126</em> (superseding McKay et al 2018).</li>
+    <li><b>Tier 2 — International societies:</b> ESMO Clinical Practice Guidelines (Dreyling et al), EHA, NCCN.</li>
+    <li><b>Tier 3 — Key RCTs:</b> TRIANGLE, SHINE, LYMA, MCL Younger, Nordic MCL2/MCL3, VR-CAP, SYMPATICO, ECHO, ZUMA-2, TRANSCEND, BRUIN.</li>
+    <li><b>Tier 4 — Emerging conference data:</b> ASH/EHA 2023–2025, flagged <span class="emerging">[EMERGING]</span>.</li>
+  </ul>
+  <h3>Evidence grading (GRADE-adapted)</h3>
+  <table>
+    <thead><tr><th>Quality</th><th>Meaning</th></tr></thead>
+    <tbody>
+      <tr><td>High</td><td>Further research very unlikely to change confidence.</td></tr>
+      <tr><td>Moderate</td><td>Single RCT or RCTs with limitations.</td></tr>
+      <tr><td>Low</td><td>Observational or RCTs with serious limitations.</td></tr>
+      <tr><td>Very Low</td><td>Case series, expert opinion, indirect.</td></tr>
+    </tbody>
+  </table>
+  <p>Recommendation strength: <b>Strong</b> (benefits clearly outweigh harms) · <b>Conditional</b> (greater uncertainty, shared decision-making) · <b>Good practice statement (GPS).</b></p>
+</section>
+
+<section id="disease">
+  <h2><span class="num">3</span> Disease Overview</h2>
+  <p>MCL is a mature B-cell NHL defined by t(11;14)(q13;q32) IGH-CCND1 translocation and cyclin D1 overexpression. SOX11 expression is characteristic of classical and aggressive MCL.</p>
+  <h3>Epidemiology</h3>
+  <ul>
+    <li>5–7% of adult NHL in the UK.</li>
+    <li>Median age 65–70 years; M:F approximately 3:1.</li>
+    <li>70–80% present at Ann Arbor stage III–IV.</li>
+  </ul>
+  <h3>Biological variants</h3>
+  <table>
+    <thead><tr><th>Variant</th><th>Features</th><th>Implication</th></tr></thead>
+    <tbody>
+      <tr><td>Classical nodal</td><td>Lymphadenopathy; SOX11+; IGHV unmutated; t(11;14)</td><td>Standard pathways</td></tr>
+      <tr><td>Blastoid</td><td>Lymphoblast-like; very high Ki-67; frequent TP53 abnormality</td><td>Aggressive; BTKi-anchored / CAR-T pathway</td></tr>
+      <tr><td>Pleomorphic</td><td>Large pleomorphic cells; high proliferation</td><td>Aggressive; intensify</td></tr>
+      <tr><td>Leukaemic non-nodal</td><td>Blood / splenic disease; SOX11−; IGHV mutated</td><td>Often indolent; observe initially</td></tr>
+      <tr><td>ISMCN</td><td>Cyclin D1+ cells confined to mantle zone</td><td>Surveillance only in most cases</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="diagnosis">
+  <h2><span class="num">4</span> Diagnosis and Pathology Requirements</h2>
+
+  <div class="callout">
+    <h4>Pattern recognition — when to suspect MCL</h4>
+    <ul>
+      <li>Middle-aged or older patient with widespread lymphadenopathy, splenomegaly, and lymphocytosis.</li>
+      <li>Frequent GI involvement — biopsy multiple lymphomatous polyposis when symptomatic or radiologically suspicious.</li>
+      <li>B-symptoms with rapid progression — particularly consider blastoid or pleomorphic MCL.</li>
+      <li>Aberrant CD5-positive B-cell lymphoma that is CD23 negative or weak — think MCL, not CLL.</li>
+    </ul>
+  </div>
+
+  <div class="callout good">
+    <h4>Mnemonic — Diagnostic minimum (CCSKT)</h4>
+    <ul>
+      <li><b>C</b> — CD20, CD5, CD23 (CLL distinction)</li>
+      <li><b>C</b> — Cyclin D1 (BCL1) nuclear positivity</li>
+      <li><b>S</b> — SOX11 (classical / aggressive MCL) — negative supports indolent / leukaemic non-nodal phenotype</li>
+      <li><b>K</b> — Ki-67 percentage (≥30% adverse; report as a number, not "high")</li>
+      <li><b>T</b> — TP53 by IHC AND molecular NGS (do not rely on IHC alone)</li>
+    </ul>
+  </div>
+
+  <h3>Immunohistochemistry and flow cytometry</h3>
+  <table>
+    <thead><tr><th>Marker</th><th>Expected</th><th>Comment</th></tr></thead>
+    <tbody>
+      <tr><td>CD20</td><td>Positive</td><td>Surface B-cell marker</td></tr>
+      <tr><td>CD5</td><td>Positive (aberrant)</td><td>Differentiates from other small B-cell lymphomas</td></tr>
+      <tr><td>Cyclin D1 (BCL1)</td><td>Positive (nuclear)</td><td>Diagnostic. Cyclin D1-negative MCL exists — test SOX11, FISH, cyclin D2/D3</td></tr>
+      <tr><td>SOX11</td><td>Positive in classical/aggressive</td><td>Negative in indolent leukaemic non-nodal</td></tr>
+      <tr><td>CD23</td><td>Negative or weak</td><td>Distinguishes from CLL (typically CD23+)</td></tr>
+      <tr><td>CD10 / BCL6</td><td>Negative</td><td>Distinguishes from follicular and Burkitt</td></tr>
+      <tr><td>LEF1</td><td>Negative</td><td>Distinguishes from CLL (LEF1+)</td></tr>
+      <tr><td>Ki-67</td><td>Report as percentage</td><td>Strong independent prognostic marker; ≥30% adverse</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Pathology reporting minimum dataset</h3>
+  <ul>
+    <li>Morphological variant: classical, blastoid, pleomorphic, leukaemic non-nodal.</li>
+    <li>Ki-67 proliferation index as percentage.</li>
+    <li>Cyclin D1 and SOX11 status.</li>
+    <li>TP53 IHC pattern and molecular (NGS) mutation result.</li>
+    <li>FISH t(11;14) confirmation where cyclin D1 IHC negative / equivocal.</li>
+    <li>Bone marrow / peripheral blood involvement where assessed.</li>
+    <li>Differential diagnosis comment where relevant.</li>
+  </ul>
+
+  <h3>Molecular and cytogenetic testing</h3>
+  <ul>
+    <li>FISH for t(11;14)(q13;q32) IGH-CCND1 — mandatory if cyclin D1 IHC equivocal or negative.</li>
+    <li><b>TP53 mutation analysis by NGS</b> in every patient.</li>
+    <li>TP53 IHC as a screening surrogate.</li>
+    <li>Conventional karyotype where feasible — complex karyotype (≥3 aberrations) adverse.</li>
+    <li>Broader NGS lymphoma panel (ATM, CDKN2A, NOTCH1/2, NSD2, KMT2D) where locally available.</li>
+  </ul>
+
+  <h3>Baseline clinical work-up and imaging</h3>
+  <ul>
+    <li>FBC, U&amp;E, LFT, LDH, urate, calcium, magnesium, phosphate, β2-microglobulin, immunoglobulins.</li>
+    <li>HBsAg, anti-HBc, HCV antibody, HIV serology.</li>
+    <li>ECG and echocardiogram if anthracycline or BTKi planned.</li>
+    <li>Contrast-enhanced CT neck/chest/abdomen/pelvis; 18F-FDG PET-CT at baseline.</li>
+    <li>Bone marrow aspirate and trephine with flow cytometry and IHC for cyclin D1.</li>
+    <li>GI endoscopy with biopsy if clinically indicated.</li>
+    <li>MRI brain and CSF flow cytometry if blastoid, high MIPI, or neurological symptoms.</li>
+  </ul>
+
+  <div class="callout warn">
+    <h4>Common pitfalls — diagnostic</h4>
+    <ul>
+      <li>Excluding MCL on a single negative cyclin D1 IHC — cyclin D1-negative MCL exists; SOX11, FISH, cyclin D2/D3 needed.</li>
+      <li>Confusing CLL (CD23+, LEF1+) with MCL (CD23−, LEF1−) — both can be CD5+.</li>
+      <li>Treating in situ MCN as established disease — it is often incidental.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="risk">
+  <h2><span class="num">5</span> Staging and Risk Stratification</h2>
+  <p>Lugano-modified Ann Arbor staging. Most MCL presents at stage III or IV.</p>
+
+  <h3>MIPI and MIPI-c</h3>
+  <table>
+    <thead><tr><th>Risk group</th><th>MIPI score</th><th>Approximate median OS (chemoimmunotherapy era)</th></tr></thead>
+    <tbody>
+      <tr><td>Low</td><td>&lt; 5.7</td><td>Not reached at long follow-up</td></tr>
+      <tr><td>Intermediate</td><td>5.7–6.2</td><td>≈ 5–7 years</td></tr>
+      <tr><td>High</td><td>≥ 6.2</td><td>≈ 2–3 years</td></tr>
+    </tbody>
+  </table>
+  <p>MIPI-c incorporates Ki-67 ≥30% as adverse; improved discrimination for high-risk patients (Hoster et al, JCO 2016).</p>
+
+  <h3>TP53 status</h3>
+  <p>TP53 mutation is the single most powerful adverse molecular biomarker. Eskelund et al (<em>Blood</em> 2017;130(17):1903–1910, DOI 10.1182/blood-2017-04-779736) reported median overall survival of 1.8 years in TP53-mutated cases from Nordic MCL2/MCL3 versus 12.7 years in TP53-unmutated patients, despite intensive cytarabine-containing induction and ASCT consolidation.</p>
+
+  <div class="rec">
+    <span class="tag">Strong</span><span class="grade">Moderate quality</span>
+    All patients with MCL should undergo TP53 mutation testing at diagnosis.
+  </div>
+  <div class="rec">
+    <span class="tag cond">Conditional</span><span class="grade">Moderate quality</span>
+    TP53-mutated patients should be prioritised for BTKi-based regimens and early consideration of clinical trials or CAR-T pathways. ASCT should not be relied upon as the primary risk-overcoming strategy.
+  </div>
+
+  <h3>MDT risk category assignment</h3>
+  <p>At first treatment decision, assign a documented MDT risk category:</p>
+  <ul>
+    <li><b>Standard-risk MCL</b> — symptomatic, no TP53 mutation, non-blastoid, Ki-67 &lt; 30%. Standard first-line pathway.</li>
+    <li><b>Indolent / non-nodal MCL</b> — asymptomatic, low Ki-67, SOX11−, IGHV mutated, leukaemic non-nodal. Watch and wait.</li>
+    <li><b>High-risk MCL</b> — high MIPI-c, Ki-67 ≥ 30%, no TP53 mutation. Consider TRIANGLE-anchored BTKi-integrated approaches where accessible; earlier CAR-T pathway.</li>
+    <li><b>TP53-aberrant MCL</b> — TP53 mutation by NGS or strong/absent TP53 IHC pattern. Prioritise trials, BTKi-based approaches, early cellular therapy planning.</li>
+    <li><b>Blastoid / pleomorphic MCL</b> — aggressive variant. High-risk pathway, consider CNS prophylaxis, early CAR-T referral.</li>
+  </ul>
+</section>
+
+<section id="firstline">
+  <h2><span class="num">6</span> First-Line Management</h2>
+  <p>This section presents first-line management as a stepwise MDT algorithm. For each fitness group, options are separated into four practical categories: (A) current UK standard / routine, (B) evolving evidence-standard / access-dependent, (C) high-risk biology / selected alternative, and (D) historical / not routine. <b>Evidence-supported does not equal NHS-commissioned</b> — access route must be documented for any non-routine option.</p>
+
+  <h3>6.0 Treatment Decision at Diagnosis — MDT Algorithm</h3>
+  <h4>Step 1 — Is this indolent / non-nodal MCL suitable for observation?</h4>
+  <ul>
+    <li>Asymptomatic; low tumour burden; non-bulky.</li>
+    <li>Low Ki-67; non-blastoid / non-pleomorphic.</li>
+    <li>SOX11 negative and IGHV mutated leukaemic non-nodal phenotype where available.</li>
+  </ul>
+  <p>Decision: watch and wait, not immediate treatment.</p>
+
+  <h4>Step 2 — Is the patient fit for intensive / cytarabine-based treatment?</h4>
+  <ul>
+    <li>ECOG performance status and frailty (Clinical Frailty Scale).</li>
+    <li>Renal function (eGFR / creatinine clearance) and cardiac fitness.</li>
+    <li>Transplant fitness and end-organ reserve.</li>
+    <li>Comorbidity burden and patient preference.</li>
+  </ul>
+
+  <h4>Step 3 — Is there high-risk biology?</h4>
+  <ul>
+    <li>TP53 mutation or TP53-aberrant pattern by IHC.</li>
+    <li>Blastoid or pleomorphic morphology.</li>
+    <li>High Ki-67 proliferation index.</li>
+    <li>High MIPI-c.</li>
+    <li>Complex karyotype (≥ 3 cytogenetic aberrations).</li>
+  </ul>
+  <p>Decision: do not assume ASCT will overcome adverse biology. Prioritise clinical trial, BTKi-based approach where accessible, and prospective CAR-T pathway planning.</p>
+
+  <h4>Step 4 — Check access</h4>
+  <ul>
+    <li>NICE Technology Appraisal status.</li>
+    <li>NHS England / local commissioning position.</li>
+    <li>Local formulary approval.</li>
+    <li>Compassionate / manufacturer-supported route availability.</li>
+    <li>Individual Funding Request / exceptional funding route.</li>
+    <li>Clinical trial availability.</li>
+    <li>SmPC and patient-specific toxicity, interaction, and renal/hepatic considerations.</li>
+  </ul>
+
+  <h3>6.1 Observation Pathway</h3>
+  <ul>
+    <li><b>Who to observe:</b> asymptomatic patients with non-blastoid, low Ki-67, non-bulky MCL — particularly leukaemic non-nodal phenotype.</li>
+    <li><b>What to monitor:</b> clinical assessment, FBC, U&amp;E, LFT, LDH; imaging only on clinical suspicion.</li>
+    <li><b>When to treat:</b> development of MCL treatment triggers — B-symptoms, progressive cytopenias attributable to marrow or splenic disease, symptomatic or bulky nodal disease, threatened organ function, rapidly progressive disease, symptomatic splenomegaly, gastrointestinal complications, or unequivocal clinical or radiological progression.</li>
+    <li>Median time to treatment with watch-and-wait may exceed 2–4 years in selected patients.</li>
+  </ul>
+  <div class="callout warn">
+    <h4>Common pitfall — indolent MCL</h4>
+    <p>Lymphocytosis alone does not mandate treatment in indolent leukaemic non-nodal MCL. Treat when symptoms, cytopenias, bulky or progressive disease, organ compromise, or clinically meaningful progression emerges.</p>
+  </div>
+  <div class="rec">
+    <span class="tag cond">Conditional</span><span class="grade">Moderate quality (BSH 2024 / ESMO endorsed)</span>
+    Offer initial observation to asymptomatic patients with non-blastoid, low Ki-67, non-bulky MCL — particularly those with leukaemic non-nodal phenotype.
+  </div>
+
+  <h3>6.2 Fit / Intensive / Transplant-Eligible Pathway</h3>
+  <p>Defined pragmatically as patients fit for cytarabine-based induction and, where applicable, autologous stem-cell transplant. The four categories below should be considered in order at MDT.</p>
+
+  <h4>6.2.A Current UK standard / routine pathway</h4>
+  <ul>
+    <li>Cytarabine-containing immunochemotherapy (e.g. R-CHOP/R-DHAP-style induction) in fit patients.</li>
+    <li>ASCT consolidation in selected eligible patients where BTKi integration is not accessible.</li>
+    <li>Rituximab maintenance after ASCT (LYMA pattern, Le Gouill et al, <em>NEJM</em> 2017;377:1250–1260, PMID 28953447).</li>
+  </ul>
+  <p><em>Position: established pathway. Remains relevant where BTKi-integrated induction is not accessible.</em></p>
+
+  <h4>6.2.B Evolving evidence-standard / access-dependent pathway (TRIANGLE)</h4>
+  <p>Dreyling et al, <em>The Lancet</em> 2024, PMID 38705160. 870 patients ≤65 randomised. Three-year failure-free survival 88% (arm A+I) vs 72% (arm A); HR 0.52; p = 0.0008. The ibrutinib-without-ASCT arm (I) was not inferior to the ibrutinib-plus-ASCT arm (A+I), with less toxicity. No demonstrated superiority of the ASCT-containing ibrutinib arm over ibrutinib without ASCT in available analysis.</p>
+  <div class="callout good">
+    <h4>UK position — practice-changing evidence benchmark; UK access transitional</h4>
+    <p>Following TRIANGLE, ibrutinib-integrated induction and maintenance is now a <b>major evidence benchmark</b> for fit patients with newly diagnosed MCL. This approach is not yet uniformly embedded as a routine commissioned UK first-line pathway, but access is increasingly being explored through <b>legitimate non-routine routes</b> — including compassionate access, manufacturer-supported programmes, individual funding mechanisms, clinical trials, or locally approved exceptional pathways.</p>
+    <p>Where available, use should be agreed through lymphoma MDT with explicit documentation of the evidence basis, funding route, patient suitability, toxicity considerations, alternatives, and informed consent.</p>
+  </div>
+  <p><em>Position: practice-changing evidence benchmark; not uniformly commissioned as routine UK first-line; consider where legitimate access route exists.</em></p>
+
+  <h4>6.2.C High-risk biology / TP53-aberrant pathway</h4>
+  <ul>
+    <li>TP53-mutated MCL has poor outcomes with intensive chemoimmunotherapy and ASCT (Eskelund et al, <em>Blood</em> 2017;130(17):1903–1910, DOI 10.1182/blood-2017-04-779736).</li>
+    <li>ASCT should not be relied upon as the primary risk-overcoming strategy.</li>
+    <li>Prioritise clinical trial enrolment.</li>
+    <li>Consider BTKi-based strategies where accessible (commissioned, compassionate, manufacturer-supported, IFR, or trial).</li>
+    <li>Map the CAR-T pathway early — refer to a JACIE-accredited CAR-T centre for forward planning.</li>
+    <li>Consider CNS assessment / prophylaxis only where risk features and local policy support it (individualised MDT decision).</li>
+  </ul>
+
+  <h4>6.2.D Historical / not routine</h4>
+  <ul>
+    <li>R-CHOP alone in fit younger patients — historically important comparator; not preferred routine pathway.</li>
+    <li>CHOP-like therapy without cytarabine intensification — superseded by cytarabine-containing pathways.</li>
+    <li>Automatic ASCT for every fit patient without considering TRIANGLE biology and access — no longer the default.</li>
+  </ul>
+  <p><em>Position: historically important comparator or fallback only; not preferred as routine decision pathway in modern MDT practice.</em></p>
+
+  <h4>6.2 First-Line Fit Pathway — Summary Table</h4>
+  <table>
+    <thead><tr><th>Category</th><th>Regimen / approach</th><th>Practical status</th><th>When to consider</th><th>Key caveat</th></tr></thead>
+    <tbody>
+      <tr><td><b>A. Current UK standard / routine</b></td><td>R-CHOP/R-DHAP induction + ASCT + rituximab maintenance</td><td>Established pathway</td><td>Where BTKi integration is not accessible</td><td>Cytarabine intensification supported by high-quality evidence; ASCT role being redefined</td></tr>
+      <tr><td><b>B. Evolving evidence-standard / access-dependent</b></td><td>Ibrutinib-integrated induction + maintenance (TRIANGLE)</td><td>Practice-changing evidence benchmark; not uniformly commissioned</td><td>Where legitimate access route exists (compassionate, manufacturer, IFR, trial, locally approved exceptional)</td><td>Document evidence basis, funding route, suitability, toxicity, alternatives, consent</td></tr>
+      <tr><td><b>C. High-risk biology / TP53-aberrant</b></td><td>BTKi-based approaches; clinical trial; early CAR-T pathway planning</td><td>Selected pathway for TP53-aberrant or blastoid disease</td><td>TP53 mutation, blastoid/pleomorphic, complex karyotype, high MIPI-c with high Ki-67</td><td>ASCT should not be relied upon as primary risk-overcoming strategy</td></tr>
+      <tr><td><b>D. Historical / not routine</b></td><td>R-CHOP alone; CHOP without cytarabine; automatic ASCT without biology/access review</td><td>Historical or fallback only</td><td>Where standard pathways unsuitable and no alternative exists</td><td>Not preferred routine decision pathway in modern MDT practice</td></tr>
+    </tbody>
+  </table>
+
+  <h3>6.3 Older / Less Fit / Non-Intensive Pathway</h3>
+  <p>Defined as patients unsuitable for cytarabine-containing induction or ASCT. Functional and biological assessment outweighs chronological age.</p>
+
+  <h4>6.3.A Current UK standard / routine pathway</h4>
+  <ul>
+    <li>Bendamustine-rituximab (BR) — remains the practical standard for many older or less fit patients (StiL trial, Rummel et al).</li>
+    <li>Rituximab maintenance after response where appropriate and tolerated.</li>
+    <li>R-CHOP — only where BR is contraindicated; vigilance for anthracycline cardiotoxicity.</li>
+  </ul>
+
+  <h4>6.3.B Evolving evidence-standard / access-dependent pathway (ECHO / acalabrutinib + BR)</h4>
+  <p>Wang ML et al, <em>Journal of Clinical Oncology</em> 2025;43:2276–2284. PMID 40311141. DOI 10.1200/JCO-25-00690. Phase III: 598 patients ≥65 with previously untreated MCL randomised to acalabrutinib + BR vs placebo + BR. Median follow-up 49.8 months. Median PFS 66.4 vs 49.6 months (HR 0.73; 95% CI 0.57–0.94; p = 0.016). ORR 91.0% (CR 66.6%) vs 88.0% (CR 53.5%). Overall survival was not significantly different. FDA approval was granted in January 2025 and European Commission approval on 6 May 2025 (following CHMP positive opinion), both for adults with previously untreated MCL who are ineligible for autologous HSCT.</p>
+  <p><b>Safety nuance (FDA prescribing information):</b> serious adverse reactions were reported in approximately 69% of patients receiving acalabrutinib + BR, with fatal adverse reactions in approximately 12%. Common adverse reactions (≥15%) included rash, COVID-19, fatigue, diarrhoea, pneumonia, headache, upper respiratory infection, pyrexia, cough, vomiting, constipation, haemorrhage, oedema, second primary malignancy, dizziness, arthralgia, and dyspnoea. Although toxicity was considered manageable in the trial context, serious and fatal adverse reactions were reported; UK adoption should therefore depend on NICE appraisal, patient fitness, infection risk, comorbidity, and local governance.</p>
+  <ul>
+    <li>NICE appraisal <a href="https://www.nice.org.uk/guidance/indevelopment/gid-ta11091">GID-TA11091 (ID6155)</a> — in development for acalabrutinib with bendamustine and rituximab for untreated MCL. Expected publication 4 June 2026 (may be rescheduled).</li>
+    <li><b>Position:</b> practice-informing phase III evidence with FDA / EU approval, but <b>not adopted as routine UK standard until NICE final guidance and local commissioning are in place</b>.</li>
+    <li>Other BTKi-BR approaches should be discussed cautiously and not assumed standard.</li>
+  </ul>
+
+  <h4>6.3.C Selected alternatives / frailty pathway</h4>
+  <ul>
+    <li>R-CHOP where BR is contraindicated.</li>
+    <li>Palliative / attenuated approaches in frail patients.</li>
+    <li>Single-agent or low-intensity approaches only in selected frail or palliative contexts.</li>
+    <li>Integrate clinical nurse specialist input, pharmacy review, infection prevention, transfusion support, and specialist palliative care where appropriate, with clear treatment-escalation boundaries.</li>
+  </ul>
+
+  <h4>6.3.D Historical / not routine</h4>
+  <ul>
+    <li>Routine frontline ibrutinib + BR (<b>SHINE</b>, Wang et al, <em>NEJM</em> 2022;386:2482–2494, PMID 35657079) is <b>not adopted as UK standard</b>. PFS benefit (6.7 vs 4.4 years) without OS advantage; excess atrial fibrillation, bleeding, and pneumonia.</li>
+    <li>VR-CAP (LYM-3002, Robak et al, NEJM 2015) — rarely used in UK and not generally NICE-funded for first-line MCL.</li>
+    <li>R-squared (rituximab + lenalidomide) — should not be presented as routine UK first-line unless a live funding route exists.</li>
+  </ul>
+
+  <h4>6.3 First-Line Older / Less Fit Pathway — Summary Table</h4>
+  <table>
+    <thead><tr><th>Category</th><th>Regimen / approach</th><th>Practical status</th><th>When to consider</th><th>Key caveat</th></tr></thead>
+    <tbody>
+      <tr><td><b>A. Current UK standard / routine</b></td><td>Bendamustine-rituximab; rituximab maintenance where appropriate; R-CHOP if BR contraindicated</td><td>Established pathway</td><td>Most older or less fit patients</td><td>Match intensity to fitness and comorbidity</td></tr>
+      <tr><td><b>B. Evolving evidence-standard / access-dependent</b></td><td>Acalabrutinib + BR (ECHO)</td><td>Phase III PFS benefit; NICE appraisal GID-TA11091 in development</td><td>Awaiting NICE / local commissioning</td><td>Not adopted as routine UK standard until NICE final guidance</td></tr>
+      <tr><td><b>C. Selected alternatives / frailty</b></td><td>R-CHOP where BR contraindicated; attenuated / palliative approaches; supportive care</td><td>Selected pathway</td><td>Frailty, comorbidity, palliative intent</td><td>Goals-of-care discussion essential</td></tr>
+      <tr><td><b>D. Historical / not routine</b></td><td>Frontline ibrutinib + BR (SHINE); VR-CAP; R-squared in first-line</td><td>Not adopted as UK routine standard</td><td>Trial / exceptional / individual funding only</td><td>SHINE: no OS benefit, excess toxicity</td></tr>
+    </tbody>
+  </table>
+
+  <h3>6.4 First-Line Summary by Clinical Group</h3>
+  <table>
+    <thead><tr><th>Clinical group</th><th>Default practical pathway</th><th>Evolving / access-dependent option</th><th>Avoid / not routine</th><th>MDT documentation point</th></tr></thead>
+    <tbody>
+      <tr><td><b>Indolent / non-nodal</b></td><td>Observation (watch and wait)</td><td>n/a — observation is the default</td><td>Treating on lymphocytosis alone</td><td>Document indolent phenotype: SOX11−, IGHV mutated, leukaemic non-nodal, low Ki-67</td></tr>
+      <tr><td><b>Fit standard-risk</b></td><td>R-CHOP/R-DHAP + ASCT + rituximab maintenance</td><td>TRIANGLE — ibrutinib-integrated induction + maintenance (where access available)</td><td>Automatic ASCT without biology / access review</td><td>Document evidence benchmark, access route, alternatives, consent</td></tr>
+      <tr><td><b>Fit high-risk / TP53-aberrant</b></td><td>BTKi-based pathway where accessible; trial enrolment; CAR-T centre referral</td><td>TRIANGLE-style with BTKi maintenance; early CAR-T mapping</td><td>Reliance on ASCT to overcome TP53</td><td>Document TP53 status, trial discussion, CAR-T pathway</td></tr>
+      <tr><td><b>Older / less fit</b></td><td>Bendamustine-rituximab (± rituximab maintenance)</td><td>Acalabrutinib + BR (ECHO; NICE in development)</td><td>Routine frontline ibrutinib + BR (SHINE)</td><td>Document fitness, comorbidity, access route if non-routine</td></tr>
+      <tr><td><b>Frail / palliative</b></td><td>Attenuated / supportive approach; R-mini regimens; symptom control</td><td>n/a — focus on goals of care</td><td>Intensive cytarabine-based therapy</td><td>Document goals-of-care discussion and consent</td></tr>
+      <tr><td><b>Blastoid / pleomorphic</b></td><td>Intensive pathway in fit patients; consider CNS assessment</td><td>TRIANGLE-style BTKi-integrated approach where accessible; early CAR-T mapping</td><td>Standard chemoimmunotherapy alone without biology consideration</td><td>Document morphological variant, CAR-T pathway</td></tr>
+    </tbody>
+  </table>
+
+  <h3>6.5 MDT Documentation Checklist (First-Line)</h3>
+  <ul>
+    <li>Diagnosis and morphological variant confirmed.</li>
+    <li>Ki-67 proliferation index recorded as percentage.</li>
+    <li>TP53 mutation status by NGS, with TP53 IHC pattern.</li>
+    <li>SOX11 and IGHV status if indolent phenotype suspected.</li>
+    <li>MIPI and MIPI-c calculated and recorded.</li>
+    <li>Fitness / frailty assessment (ECOG, Clinical Frailty Scale).</li>
+    <li>Renal function (eGFR) and cardiac assessment.</li>
+    <li>Intended pathway category: routine / evolving access-dependent / selected alternative / not routine.</li>
+    <li>Funding / access route identified (NICE-commissioned, compassionate, manufacturer-supported, IFR, EAMS, clinical trial, locally approved exceptional pathway).</li>
+    <li>Evidence basis identified.</li>
+    <li>Alternatives discussed.</li>
+    <li>Toxicity, drug interaction, and infection risk reviewed.</li>
+    <li>Patient preference and informed consent documented.</li>
+    <li>CAR-T centre discussion documented where high-risk or relapse planning is relevant.</li>
+  </ul>
+
+  <h3>6.6 CNS Prophylaxis</h3>
+  <p>Evidence supporting CNS prophylaxis in MCL is limited and largely extrapolated from aggressive B-cell lymphoma practice. Routine CNS prophylaxis is not recommended for all patients. Decisions should be individualised and documented at MDT, balancing blastoid / pleomorphic morphology, high MIPI with high Ki-67, TP53 abnormality, CNS symptoms, renal function, and fitness for high-dose methotrexate.</p>
+</section>
+
+<section id="rr">
+  <h2><span class="num">7</span> Relapsed and Refractory MCL</h2>
+
+  <div class="callout vignette">
+    <h4>Clinical Vignette</h4>
+    <p>A 71-year-old man treated 22 months ago with six cycles of BR for stage IV MCL (MIPI intermediate, Ki-67 25%, TP53 wildtype) presents with new cervical lymphadenopathy and a rising LDH. He has well-controlled atrial fibrillation on apixaban and an eGFR of 58 mL/min. He has had no prior BTKi exposure. <b>What is the next step?</b></p>
+    <p>Action: Re-biopsy the dominant node; repeat TP53 by NGS (clonal evolution at relapse). PET-CT to exclude bulky / unexpected disease. Refer the case to lymphoma MDT. Anticipate covalent BTKi at first relapse under NICE TA502 (ibrutinib) or TA1081 (zanubrutinib) — TA1081 directs use of the least-expensive option. Discuss anticoagulant interaction (favour selective BTKi where AF / bleeding risk material). At the same MDT, prospectively flag the case for the local JACIE CAR-T centre so the post-BTKi pathway is mapped before the next failure.</p>
+  </div>
+
+  <h3>7.1 Principles at relapse</h3>
+  <ul>
+    <li>Re-biopsy dominant lesion where feasible — confirm relapse, exclude transformation, reassess TP53 and Ki-67.</li>
+    <li>Re-stage with CT and PET-CT; CSF analysis if blastoid relapse or neurological features.</li>
+    <li>Document time from prior therapy, prior agents, response duration, organ function.</li>
+    <li>Early discussion with a JACIE CAR-T centre at first relapse for fit patients.</li>
+  </ul>
+
+  <h3>7.2 Covalent BTK inhibitors</h3>
+  <p>In the UK, two covalent BTKi are NICE-recommended for adults with R/R MCL who have had one previous line of treatment only:</p>
+  <ul>
+    <li><b><span class="access-dot green"></span>Ibrutinib (NICE TA502):</b> published 31 January 2018, last reviewed 8 July 2021. Subject to commercial access agreement with NHS England.</li>
+    <li><b><span class="access-dot green"></span>Zanubrutinib (NICE TA1081):</b> published 10 July 2025. Subject to simple discount patient access scheme. NICE directs use of the <em>least-expensive option</em> of zanubrutinib or ibrutinib, having discussed advantages and disadvantages with the patient. Funded in England within 30 days of final publication.</li>
+    <li><b><span class="access-dot amber"></span>Acalabrutinib:</b> not currently NICE-recommended in MCL. Access in MCL should be verified locally. <span class="verify">[VERIFY]</span></li>
+  </ul>
+  <p>Practical UK choice between ibrutinib and zanubrutinib: TA1081 least-expensive-option directive, comorbidity, cardiovascular and bleeding risk, drug interactions, prior cardiac history, anticoagulation, and local formulary.</p>
+
+  <h3>7.3 BTKi combination — ibrutinib + venetoclax (SYMPATICO)</h3>
+  <p>Wang et al, <em>Lancet Oncology</em> 2025;26(2):200–213, PMID 39914418. 267 patients R/R MCL after 1–5 prior lines. Median PFS 31.9 vs 22.1 months (HR 0.65; p = 0.0052). <b><span class="access-dot red"></span>Not routinely NICE-funded for MCL</b>; UK access may be limited to clinical trials or individual funding. <span class="verify">[VERIFY UK access]</span></p>
+
+  <h3>7.4 Non-covalent BTKi — pirtobrutinib</h3>
+  <p>Pirtobrutinib has clinically important activity post-covalent BTKi (BRUIN, BRUIN MCL-321). <b><span class="access-dot red"></span>Routine UK NHS access should not be assumed.</b> As of May 2026, NICE appraisal ID3975 is reported as suspended pending company evidence submission; a separate appraisal ID6493 (BTKi-untreated R/R MCL) is in development. UK access may depend on NICE publication, local formulary, compassionate, EAMS, trial, or IFR routes. <span class="verify">[VERIFY current NICE / NHS access]</span></p>
+
+  <h3>7.5 CAR-T cell therapy</h3>
+  <h4>Brexucabtagene autoleucel (KTE-X19)</h4>
+  <p>ZUMA-2 (Wang et al, <em>NEJM</em> 2020;382(14):1331–1342): ORR 93%, CR 67%; three-year follow-up (PMID 35658525) confirms durable responses. <b><span class="access-dot green"></span>NICE TA677</b> recommends brexucabtagene autoleucel within the Cancer Drugs Fund for adults with R/R MCL post-BTK inhibitor, subject to managed access agreement.</p>
+  <p><b>Important:</b> a NICE review of TA677 (for use after two or more prior systemic treatments) is in development. CAR-T access is sensitive to managed access reviews and commissioning updates. <b>Before referral or publication, confirm the current NHS England / NICE position.</b> <span class="verify">[VERIFY TA677 status]</span></p>
+
+  <h4>Lisocabtagene maraleucel</h4>
+  <p>TRANSCEND NHL 001 and MCL cohort report clinically meaningful activity with a potentially differentiated tolerability profile. <b><span class="access-dot amber"></span>UK access status to verify at referral.</b> <span class="verify">[VERIFY]</span></p>
+
+  <div class="callout">
+    <h4>CAR-T pathway practical points</h4>
+    <ul>
+      <li>Refer eligible patients to a JACIE-accredited CAR-T centre at first relapse — not after multiple failures.</li>
+      <li>Bridging therapy commonly required between leukapheresis and lymphodepletion.</li>
+      <li>Manage CRS and ICANS per local CAR-T protocols.</li>
+      <li>Long-term shared care for infection prophylaxis and immunoglobulin replacement.</li>
+    </ul>
+  </div>
+
+  <h3>7.6 Other options</h3>
+  <ul>
+    <li>Lenalidomide (± rituximab) in BTKi-exposed, CAR-T-ineligible patients.</li>
+    <li>Bendamustine-rituximab if not used in first line.</li>
+    <li>Bortezomib in selected patients.</li>
+    <li>Allogeneic SCT for fit patients with chemosensitive disease — especially post-CAR-T or selected younger TP53-mutated patients in remission.</li>
+    <li>Clinical trial enrolment offered whenever available.</li>
+  </ul>
+
+  <h3>7.7 Sequencing principles</h3>
+  <ul>
+    <li>Preserve BTKi for relapse where possible if not used in first line.</li>
+    <li>CAR-T eligibility window is finite — refer early, do not delay through multiple sequential lines.</li>
+    <li>Allogeneic transplant remains an option for selected younger patients, especially post-CAR-T failure or selected TP53-mutated patients in good response.</li>
+  </ul>
+</section>
+
+<section id="commissioning">
+  <h2><span class="num">8</span> UK Commissioning Status Summary</h2>
+  <p>This table separates evidence position from current UK NICE / NHS England commissioning. <b>Evidence-supported does not equal NHS-commissioned.</b></p>
+  <table>
+    <thead><tr><th>Intervention</th><th>Evidence position</th><th>Current UK / NICE position (May 2026)</th><th>Practical action</th></tr></thead>
+    <tbody>
+      <tr><td><span class="access-dot green"></span><b>Ibrutinib (R/R MCL)</b></td><td>Established covalent BTKi</td><td>NICE TA502 — recommended after 1 prior line, subject to commercial access agreement</td><td>Confirm CAA, local pathway, and TA1081 least-expensive-option logic</td></tr>
+      <tr><td><span class="access-dot green"></span><b>Zanubrutinib (R/R MCL)</b></td><td>Covalent BTKi, favourable cardiovascular profile</td><td>NICE TA1081 (10 July 2025) — recommended after 1 prior line; use least-expensive of zanubrutinib or ibrutinib</td><td>Implement per TA1081; confirm local formulary uptake</td></tr>
+      <tr><td><span class="access-dot amber"></span><b>Acalabrutinib (R/R MCL)</b></td><td>Selective covalent BTKi</td><td>Not currently NICE-recommended in MCL; UK access uncertain</td><td>Verify locally; trial or alternative funding [VERIFY]</td></tr>
+      <tr><td><span class="access-dot amber"></span><b>Acalabrutinib + BR (first-line older)</b></td><td>Phase III ECHO: mPFS 66.4 vs 49.6m, HR 0.73; no OS benefit yet</td><td>NICE appraisal pending; full peer-reviewed publication pending</td><td>Do not present as routine UK practice until final NICE guidance</td></tr>
+      <tr><td><span class="access-dot amber"></span><b>Ibrutinib-integrated induction (TRIANGLE)</b></td><td>Phase III: practice-changing evidence benchmark in fit patients</td><td>Not yet uniformly commissioned as routine UK first-line; emerging non-routine access (compassionate, manufacturer, IFR, trials)</td><td>MDT discussion with explicit access route and consent</td></tr>
+      <tr><td><span class="access-dot red"></span><b>Ibrutinib + venetoclax (SYMPATICO)</b></td><td>Phase III: mPFS 31.9 vs 22.1m, HR 0.65</td><td>Not routinely NICE-funded for MCL</td><td>Trial or individual funding only [VERIFY]</td></tr>
+      <tr><td><span class="access-dot red"></span><b>Pirtobrutinib</b></td><td>Active post-covalent-BTKi (BRUIN)</td><td>NICE ID3975 reported as suspended; ID6493 (BTKi-untreated R/R) in development</td><td>Trial, EAMS, compassionate, or IFR only unless funded; verify [VERIFY]</td></tr>
+      <tr><td><span class="access-dot green"></span><b>Brexucabtagene autoleucel</b></td><td>Phase II ZUMA-2: ORR 93%, CR 67%</td><td>NICE TA677 (within CDF, post-BTKi); review in development</td><td>Early JACIE CAR-T referral; verify current TA677 status [VERIFY]</td></tr>
+      <tr><td><span class="access-dot amber"></span><b>Lisocabtagene maraleucel</b></td><td>TRANSCEND NHL 001 MCL cohort</td><td>UK access status uncertain</td><td>Verify locally and at referral [VERIFY]</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="supportive">
+  <h2><span class="num">9</span> Supportive Care</h2>
+
+  <h3>Infection prophylaxis and vaccination</h3>
+  <ul>
+    <li>Co-trimoxazole PJP prophylaxis during/after R-CHOP/R-DHAP, BR, BTKi, and CAR-T per local policy.</li>
+    <li>Antiviral prophylaxis (aciclovir / valaciclovir) during BTKi and CAR-T pathways.</li>
+    <li>Antifungal prophylaxis per local risk assessment.</li>
+    <li>HBV screen and antiviral prophylaxis in HBsAg+ or anti-HBc+ patients receiving rituximab.</li>
+    <li>Annual inactivated influenza, PCV13 + PPSV23, SARS-CoV-2 per UK schedule; avoid live vaccines during active immunosuppression.</li>
+  </ul>
+
+  <h3>Regimen-specific supportive care</h3>
+  <table>
+    <thead><tr><th>Treatment</th><th>Key risks</th><th>Minimum supportive care</th></tr></thead>
+    <tbody>
+      <tr><td>Bendamustine-rituximab</td><td>Prolonged T-cell suppression, infection</td><td>PJP prophylaxis, antiviral prophylaxis, HBV screen/prophylaxis, Ig monitoring</td></tr>
+      <tr><td>BTKi (ibrutinib, zanubrutinib)</td><td>Bleeding, AF, hypertension, infection, drug interactions</td><td>Baseline ECG/BP, cardiac history, anticoagulant / antiplatelet review, CYP3A check, ongoing BP and infection surveillance</td></tr>
+      <tr><td>R-CHOP</td><td>Anthracycline cardiotoxicity, infection, neuropathy</td><td>Baseline echo, infection prophylaxis, neurological assessment, antiemetics</td></tr>
+      <tr><td>CAR-T (brexu-cel / liso-cel)</td><td>CRS, ICANS, cytopenias, hypogammaglobulinaemia, late infection</td><td>CAR-T centre protocol for CRS/ICANS, prolonged infection prophylaxis, Ig monitoring/replacement, revaccination plan</td></tr>
+      <tr><td>Rituximab maintenance</td><td>HBV reactivation, hypogammaglobulinaemia</td><td>HBV screen/prophylaxis, Ig monitoring</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="surveillance">
+  <h2><span class="num">10</span> Surveillance</h2>
+  <p>No high-quality evidence supports imaging surveillance over symptom-driven assessment in asymptomatic remission. Routine PET-CT surveillance is not recommended.</p>
+  <ul>
+    <li>Clinical review every 3 months for the first 2 years, then every 6 months until 5 years, then annually.</li>
+    <li>FBC, U&amp;E, LFT, LDH at each visit.</li>
+    <li>Imaging guided by clinical suspicion.</li>
+    <li>MRD monitoring in trial contexts only.</li>
+  </ul>
+</section>
+
+<section id="mdt-use">
+  <h2><span class="num">11</span> How to Use This Guide in MDT</h2>
+  <h3>Operational workflow</h3>
+  <ul>
+    <li>Confirm diagnosis, morphological variant, and pathology minimum dataset.</li>
+    <li>Assign MIPI and MIPI-c.</li>
+    <li>Confirm TP53 molecular status (NGS) and TP53 IHC pattern.</li>
+    <li>Assign an MDT risk category.</li>
+    <li>Define treatment intent: observe / standard / high-risk / relapse / trial.</li>
+    <li>Check current NICE / NHS England commissioning and local formulary.</li>
+    <li>Document trial availability and CAR-T pathway discussion.</li>
+    <li>Document the chosen access route where non-routine.</li>
+  </ul>
+
+  <h3>Minimum MDT dataset</h3>
+  <ul>
+    <li>Age, ECOG, frailty.</li>
+    <li>Stage, bulk, LDH, WCC.</li>
+    <li>Ki-67 percentage.</li>
+    <li>TP53 mutation status (NGS) and TP53 IHC pattern.</li>
+    <li>Morphological variant.</li>
+    <li>SOX11 / IGHV phenotype if indolent disease suspected.</li>
+    <li>Previous therapy and response duration (at relapse).</li>
+    <li>BTKi exposure (at relapse).</li>
+    <li>CAR-T eligibility.</li>
+    <li>Infection risk and HBV / HCV / HIV status.</li>
+    <li>Current NICE-commissioned option(s).</li>
+    <li>Trial availability and patient preference.</li>
+  </ul>
+</section>
+
+<section id="consent">
+  <h2><span class="num">11a</span> Patient Consent and Shared Decision-Making for Non-Routine Access</h2>
+  <p>For non-routine, compassionate, manufacturer-supported, IFR-funded, or trial-associated access, patients should be counselled and the discussion documented in the MDT record and clinic letter:</p>
+  <ul>
+    <li>Evidence basis and maturity of the proposed approach (peer-reviewed full publication versus conference abstract versus emerging signal).</li>
+    <li>Funding / access route and any time-limited or conditional elements of that route.</li>
+    <li>Uncertainty (including unknowns about long-term efficacy and toxicity in the specific subgroup).</li>
+    <li>Toxicity profile and monitoring requirements.</li>
+    <li>Alternatives, including standard commissioned pathways and clinical trial enrolment.</li>
+    <li>Effect on subsequent therapy options (e.g. later BTKi, CAR-T eligibility, or trial enrolment).</li>
+    <li>Patient preference, performance status, comorbidity, and frailty.</li>
+    <li>Documentation in the MDT outcome and the clinic letter.</li>
+  </ul>
+</section>
+
+<section id="devolved">
+  <h2><span class="num">11b</span> Devolved Nations</h2>
+  <p>NICE and NHS England positions are used as the principal access reference. Implementation may differ in Scotland, Wales and Northern Ireland; clinicians should check SMC, AWMSG, HSCNI and local formulary positions where relevant.</p>
+  <ul>
+    <li><b>Scotland</b> — Scottish Medicines Consortium (SMC) recommendations and NHS Scotland commissioning.</li>
+    <li><b>Wales</b> — All Wales Medicines Strategy Group (AWMSG) and NHS Wales commissioning.</li>
+    <li><b>Northern Ireland</b> — Health and Social Care Northern Ireland (HSCNI) commissioning.</li>
+  </ul>
+  <p>Devolved-nation status for each named therapy should be checked locally at the time of prescribing or referral.</p>
+</section>
+
+<section id="audit">
+  <h2><span class="num">12</span> Audit Standards and KPIs</h2>
+  <table>
+    <thead><tr><th>Indicator</th><th>Standard</th><th>Numerator / Denominator</th></tr></thead>
+    <tbody>
+      <tr><td>TP53 testing at diagnosis</td><td>≥ 95%</td><td>Patients with TP53 result / All new MCL diagnoses</td></tr>
+      <tr><td>MDT discussion before treatment</td><td>100%</td><td>Patients with documented MDT outcome / All new MCL diagnoses</td></tr>
+      <tr><td>Documented MDT risk category</td><td>≥ 95%</td><td>Patients with category assigned / All new MCL diagnoses</td></tr>
+      <tr><td>Time from diagnosis to first treatment (symptomatic)</td><td>≤ 31 days</td><td>Patients meeting standard / All requiring treatment</td></tr>
+      <tr><td>CNS evaluation in blastoid / high-risk</td><td>≥ 90%</td><td>Patients with documented CNS assessment / Eligible</td></tr>
+      <tr><td>Rituximab maintenance offered post-ASCT</td><td>≥ 95%</td><td>Patients offered RM / Patients completing ASCT in remission</td></tr>
+      <tr><td>BTKi (TA502 or TA1081) considered at first relapse</td><td>≥ 95%</td><td>Patients considered / First-relapse patients</td></tr>
+      <tr><td>CAR-T referral at BTKi failure (eligible)</td><td>≥ 90%</td><td>Patients referred / BTKi-failure patients fit for CAR-T</td></tr>
+      <tr><td>Infection prophylaxis prescribed where indicated</td><td>≥ 95%</td><td>Patients with appropriate prophylaxis / Eligible</td></tr>
+      <tr><td>Vaccination plan documented</td><td>≥ 90%</td><td>Patients with plan / All patients on therapy</td></tr>
+      <tr><td>Access route documented when non-commissioned regimen used</td><td>≥ 95%</td><td>Patients with documented access route / Patients on non-commissioned regimens</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="emerging">
+  <h2><span class="num">13</span> Emerging Evidence (Practice-Informing, Not Routine)</h2>
+  <p>Emerging evidence is included for consultant-level awareness and may inform MDT discussion, trial referral, or access planning, but should not be used as the sole basis for routine treatment outside approved access routes.</p>
+  <div class="callout warn">
+    <h4>Use with caution</h4>
+    <p>Items below are flagged <span class="emerging">[EMERGING]</span>. They should inform MDT discussion and access planning but should not be used as the sole basis for routine clinical practice or commissioning decisions until peer-reviewed publication and UK regulatory confirmation.</p>
+  </div>
+  <h3>Bispecific T-cell engagers</h3>
+  <p>Glofitamab and epcoritamab — activity in heavily pre-treated MCL in early-phase studies and dedicated MCL cohorts. Not yet UK-approved in MCL. <span class="emerging">[EMERGING]</span></p>
+  <h3>MRD-guided strategies</h3>
+  <p>Trials exploring MRD-guided maintenance duration, treatment de-escalation, and pre-emptive intervention at MRD relapse are ongoing. Outside trials, MRD remains prognostic rather than predictive of intervention benefit. <span class="emerging">[EMERGING]</span></p>
+  <h3>Combination strategies</h3>
+  <p>Triplets including BTKi + anti-CD20 + venetoclax, and BTKi + lenalidomide + rituximab. Not yet standard. <span class="emerging">[EMERGING]</span></p>
+  <h3>ASH / EHA 2024–2025 signals</h3>
+  <p>Review primary ASH 2025 proceedings directly before citing in this guide. <span class="emerging">[VERIFY before citation]</span></p>
+</section>
+
+<section id="refs">
+  <h2><span class="num">14</span> References</h2>
+  <p>Graded: A1 society/regulatory · A2 high-quality RCT/meta-analysis · B observational/secondary · C narrative/low certainty.</p>
+  <h3>UK and society guidelines</h3>
+  <ol>
+    <li>Eyre TA, Bishton MJ, McCulloch R, O'Reilly M, Sanderson R, Menon G, Iyengar S, Lewis D, Lambert J, Linton KM, McKay P. Diagnosis and management of mantle cell lymphoma: A British Society for Haematology Guideline. <em>British Journal of Haematology</em> 2024;204(1):108–126. [A1]</li>
+    <li>McKay P, Leach M, Jackson B et al. Guideline for the management of mantle cell lymphoma. <em>BJH</em> 2018;182(1):46–62 (predecessor, superseded). [A1]</li>
+    <li>Dreyling M, Campo E, Hermine O et al. ESMO Clinical Practice Guidelines: Mantle Cell Lymphoma. <em>Annals of Oncology</em> (multiple editions). [A1]</li>
+    <li>NCCN Clinical Practice Guidelines in Oncology: B-Cell Lymphomas — current version. [A1]</li>
+    <li><b>NICE TA502</b>: Ibrutinib for treating R/R MCL. Published 31 January 2018, last reviewed 8 July 2021. <a href="https://www.nice.org.uk/guidance/ta502">nice.org.uk/guidance/ta502</a>. [A1]</li>
+    <li><b>NICE TA1081</b>: Zanubrutinib for treating R/R MCL after 1 prior line. Published 10 July 2025. <a href="https://www.nice.org.uk/guidance/ta1081">nice.org.uk/guidance/ta1081</a>. [A1]</li>
+    <li><b>NICE TA677</b>: Brexucabtagene autoleucel for treating R/R MCL (within CDF, post-BTKi). Review in development. <a href="https://www.nice.org.uk/guidance/ta677">nice.org.uk/guidance/ta677</a>. [A1]</li>
+    <li>NICE appraisal ID3975 (Pirtobrutinib for R/R MCL) — suspended pending company evidence submission (May 2026). [A1]</li>
+    <li>NICE appraisal ID6493 (Pirtobrutinib for R/R MCL untreated with a BTKi) — in development. [A1]</li>
+  </ol>
+  <h3>Key trials and prognostic biomarkers</h3>
+  <ol start="10">
+    <li>Hoster E, Dreyling M, Klapper W et al. A new prognostic index (MIPI) for advanced-stage mantle cell lymphoma. <em>Blood</em> 2008;111(2):558–565. PMID 17962512. DOI 10.1182/blood-2007-06-095331. [A2]</li>
+    <li>Hoster E, Rosenwald A, Berger F et al. Prognostic value of Ki-67 index, cytology, and growth pattern in mantle-cell lymphoma (MIPI-c). <em>Journal of Clinical Oncology</em> 2016. [A2]</li>
+    <li>Eskelund CW, Dahl C, Hansen JW et al. TP53 mutations identify younger MCL patients who do not benefit from intensive chemoimmunotherapy. <em>Blood</em> 2017;130(17):1903–1910. DOI 10.1182/blood-2017-04-779736. [A2]</li>
+    <li>Geisler CH et al. Nordic MCL2 follow-up. <em>BJH</em>. [A2]</li>
+    <li>Hermine O et al. Addition of high-dose cytarabine before ASCT (MCL Younger). <em>Lancet</em>. [A2]</li>
+    <li>Le Gouill S et al. Rituximab after ASCT in MCL (LYMA). <em>NEJM</em> 2017;377:1250–1260. PMID 28953447. DOI 10.1056/NEJMoa1701769. [A2]</li>
+    <li>Rummel MJ et al. Bendamustine plus rituximab vs CHOP-R (StiL). <em>Lancet</em>. [A2]</li>
+    <li>Robak T et al. VR-CAP for newly diagnosed MCL (LYM-3002). <em>NEJM</em> 2015. [A2]</li>
+    <li>Wang ML et al. Ibrutinib plus BR in untreated MCL (SHINE). <em>NEJM</em> 2022;386:2482–2494. PMID 35657079. DOI 10.1056/NEJMoa2201817. [A2]</li>
+    <li>Dreyling M et al. TRIANGLE — ibrutinib + immunochemotherapy ± ASCT in untreated MCL. <em>The Lancet</em> 2024. PMID 38705160. [A2]</li>
+    <li>Wang ML et al. KTE-X19 CAR T-cell therapy in R/R MCL (ZUMA-2). <em>NEJM</em> 2020;382(14):1331–1342. Three-year follow-up PMID 35658525. [A2]</li>
+    <li>Wang ML et al. Pirtobrutinib in covalent-BTKi pre-treated MCL (BRUIN / BRUIN MCL-321). [A2]</li>
+    <li>Wang ML et al. Ibrutinib + venetoclax in R/R MCL (SYMPATICO). <em>Lancet Oncology</em> 2025;26(2):200–213. PMID 39914418. [A2]</li>
+    <li>Wang ML et al. Acalabrutinib plus bendamustine-rituximab in untreated mantle cell lymphoma (ECHO). <em>Journal of Clinical Oncology</em> 2025;43:2276–2284. PMID 40311141. DOI 10.1200/JCO-25-00690. [A2]</li>
+    <li>NICE appraisal <a href="https://www.nice.org.uk/guidance/indevelopment/gid-ta11091">GID-TA11091 (ID6155)</a>: Acalabrutinib with bendamustine and rituximab for untreated mantle cell lymphoma — in development. Expected publication 4 June 2026 (may be rescheduled). [A1]</li>
+  </ol>
+</section>
+
+<section id="cite">
+  <h2><span class="num">15</span> How to Cite This Guide</h2>
+  <p>Update the access year when citing.</p>
+  <h3>APA</h3>
+  <p>Mohsin, M. (2026). <em>Mantle Cell Lymphoma — UK Practice-Oriented Evidence Guide</em>. Mohsin Haematology Academy. https://mohsinhaemacademy.com/guidelines/mcl/</p>
+  <h3>Vancouver</h3>
+  <p>Mohsin M. Mantle Cell Lymphoma — UK Practice-Oriented Evidence Guide. Mohsin Haematology Academy; 2026. Available from: https://mohsinhaemacademy.com/guidelines/mcl/</p>
+  <h3>BibTeX</h3>
+<pre class="bibtex">@misc{mohsin_mcl_2026,
+  author = {Mohsin, Muhammad},
+  title  = {Mantle Cell Lymphoma --- UK Practice-Oriented Evidence Guide},
+  year   = {2026},
+  url    = {https://mohsinhaemacademy.com/guidelines/mcl/},
+  note   = {Mohsin Haematology Academy. Educational decision-support resource.}
+}</pre>
+  <p style="font-size: 13.5px; color: var(--ink-soft);"><em>Citation etiquette: when citing this guide to inform a clinical discussion, please also cite the primary BSH, NICE, ESMO, NCCN, and trial sources. This guide is a synthesis, not a primary source.</em></p>
+</section>
+
+<section id="governance">
+  <h2><span class="num">16</span> Governance, AI Use, and Disclaimer</h2>
+  <h3>Versioning</h3>
+  <table>
+    <thead><tr><th>Version</th><th>Date</th><th>Author</th><th>Change</th></tr></thead>
+    <tbody>
+      <tr><td>v1.0-DRAFT</td><td>13 May 2026</td><td>Dr M Mohsin (AI-assisted)</td><td>Initial draft.</td></tr>
+      <tr><td>v1.1-DRAFT</td><td>14 May 2026</td><td>Dr M Mohsin (AI-assisted + peer feedback)</td><td>Added TA1081 zanubrutinib; updated pirtobrutinib NICE status; TA677 review caveat; reframed TRIANGLE as practice-changing evidence benchmark with transitional UK position and emerging non-routine access; softened TP53/ASCT language; added MDT risk category, pathology and MDT minimum datasets, regimen-specific supportive care, UK Access Key, evidence-vs-access principle, AI/COI/not-endorsed statements; renamed title to "UK Practice-Oriented Evidence Guide"; added Last Checked metadata.</td></tr>
+      <tr><td>v1.2-DRAFT</td><td>14 May 2026</td><td>Dr M Mohsin (CLL-pattern alignment)</td><td>Aligned structure to mohsinhaemacademy.com CLL guideline pattern: added Tool Metadata block, anchor + sidebar navigation, Quick decision summary banner, Pattern recognition / Mnemonic / Common pitfall callouts, Clinical Vignette at R/R, NICE Commissioning sidebar, Visual Diagrams section, BibTeX citation, verified PMIDs and DOIs in references. No new clinical recommendations beyond v1.1.</td></tr>
+      <tr><td>v1.3-DRAFT</td><td>14 May 2026</td><td>Dr M Mohsin (post peer-feedback refinements)</td><td>Pre-deploy refinements: title throughout reframed away from "UK Clinical Practice Guideline" to "UK Practice-Oriented Evidence Guide"; AI-use wording softened to author-responsible-for-verification framing; emerging-evidence section reframed as practice-informing rather than not-practice-changing; added Patient Consent and Shared Decision-Making section for non-routine access; added Devolved Nations section (SMC, AWMSG, HSCNI); minor TRIANGLE wording refinement. No new clinical recommendations.</td></tr>
+      <tr><td>v1.4-DRAFT</td><td>14 May 2026</td><td>Dr M Mohsin (final consistency pass)</td><td>Document-control fixes only: version numbers harmonised; executive-summary wording shifted from "This guideline synthesises... NHS-deployable" to "This evidence guide synthesises... NHS-facing"; methodology emerging-evidence sentence aligned with practice-informing wording; devolved-nations body text changed to principal-access-reference phrasing.</td></tr>
+      <tr><td>v1.5-DRAFT</td><td>14 May 2026</td><td>Dr M Mohsin (CLL-pattern MDT evidence guide refactor)</td><td>Refactor MCL guideline into CLL-pattern MDT evidence guide. Added UK Access / Commissioning Snapshot section. Rebuilt Section 6 (First-Line Management) into MDT algorithm + observation pathway + fit pathway A/B/C/D + older-less-fit pathway A/B/C/D + summary table + MDT documentation checklist + CNS prophylaxis. Updated ECHO reference to verified JCO 2025;43:2276-2284 (PMID 40311141, DOI 10.1200/JCO-25-00690) and added NICE GID-TA11091 (ID6155) reference. Quick decision summary made decision-facing with separate fit / older-non-intensive bullets. Sidebar CSS fixed for sticky + independent scroll on desktop with mobile fallback. Added prescribing-safeguards callout. No new clinical recommendations beyond v1.4 except updated ECHO publication anchor.</td></tr>
+      <tr><td>v1.5.1-DRAFT</td><td>14 May 2026</td><td>Dr M Mohsin (polish patch — fact-safety + wording fixes)</td><td>Five polish fixes: (1) replaced "iwCLL-style active-disease criteria" with MCL-specific treatment triggers; (2) EU approval re-anchored to European Commission 6 May 2025 for transplant-ineligible patients following CHMP positive opinion; (3) fixed "CNS / SPC / CNS allocation" typo; (4) sidebar "preferred under TA1081" replaced with accurate least-expensive-option wording; (5) added ECHO safety nuance from FDA prescribing information with UK adoption caveat.</td></tr>
+      <tr><td>v1.5.2-DRAFT</td><td>14 May 2026</td><td>Dr M Mohsin (CLL-pattern visual sidebar enhancement)</td><td>Sidebar upgraded from navigation-only to CLL-pattern visual decision-support layer. Added seven panels: (1) MCL First-Line Algorithm (six-step ordered list); (2) Treatment Flowchart with semantic HTML flow-nodes, arrows, and yes/no splits; (3) MCL Pathway at a Glance staged strip (Diagnosis → Biology → Fitness → Access → MDT → Follow-up); (4) Access Status legend (green/amber/red/grey) with evidence-vs-access reminder; (5) High-risk MCL reminder panel with action; (6) MDT Documentation checklist; (7) Quick Links jump-list. Preserved NICE Commissioning and Related Content panels. Added CSS for mini-flow, flow-node, flow-split, pathway-strip, status-list, ordered-mini. Mobile fallback at ≤420px collapses flow-split to single column. No clinical content changes; sidebar mirrors main-text content for at-a-glance decision support.</td></tr>
+      <tr><td>v1.5.3-DRAFT</td><td>14 May 2026</td><td>Dr M Mohsin (page-break overflow fix + bundle self-consistency)</td><td>Docx and PDF page-break overflow fix: callout boxes rebuilt as single-column multi-row tables (title + one body line per row) instead of single-cell tables. Each row breaks across page boundaries cleanly, eliminating the content overlap seen in v1.5.2. Table rows now explicitly cantSplit=false and tableHeader=true so headers repeat when a long table splits. HTML version labels bumped to v1.5.3 for bundle self-consistency (no HTML clinical content changes from v1.5.2).</td></tr>
+    </tbody>
+  </table>
+
+  <h3>AI use, conflicts, and external endorsement</h3>
+  <ul>
+    <li><b>AI use:</b> AI was used to assist drafting and structuring this document. The author is responsible for clinical verification before publication. All treatment recommendations and regulatory statements should be checked against primary sources, NICE, SmPCs, and local commissioning pathways before use. AI was not used to fabricate, infer, or extrapolate clinical data, trial findings, or regulatory positions.</li>
+    <li><b>Conflicts of interest:</b> None declared by the author at the time of writing.</li>
+    <li><b>External endorsement:</b> This is an independent educational synthesis. It is not a NICE, BSH, NHS England, ESMO, or NCCN guideline and has not been externally endorsed unless explicitly stated in writing.</li>
+    <li><b>External review:</b> Status and reviewer names to be added if external peer review is undertaken before publication.</li>
+  </ul>
+
+  <div class="callout warn">
+    <h4>Disclaimer</h4>
+    <p><b>This document is not a prescribing protocol</b> and should not be used as the sole authority for treatment selection, funding approval, dose modification, toxicity management, or consent. Clinicians must confirm current NICE guidance, NHS England commissioning criteria, local formulary approval, SmPC requirements, trial eligibility, and patient-specific factors before treatment. <b>Patient information leaflet pending — professional version only.</b></p>
+  </div>
+</section>
+
+</main>
+
+<aside aria-label="Decision-support sidebar">
+  <!-- Panel 1 — Mini Algorithm -->
+  <div class="panel">
+    <h4>MCL First-Line Algorithm</h4>
+    <ol class="ordered-mini">
+      <li>Confirm diagnosis, morphology, Ki-67, and TP53.</li>
+      <li>If indolent / non-nodal and asymptomatic: <b>observe</b>.</li>
+      <li>If fit / intensive: cytarabine-containing pathway ± ASCT; consider TRIANGLE-style BTKi integration where legitimate access exists.</li>
+      <li>If older / less fit: BR remains current UK standard; ECHO / acalabrutinib-BR is evidence-supported but access-dependent.</li>
+      <li>If TP53-mutated, blastoid, pleomorphic or high-risk: prioritise trial, BTKi access route, and early CAR-T planning.</li>
+      <li>Document evidence basis, funding/access route, toxicity, alternatives, and consent.</li>
+    </ol>
+  </div>
+
+  <!-- Panel 2 — Treatment Flowchart -->
+  <div class="panel">
+    <h4>Treatment Flowchart</h4>
+    <div class="mini-flow" role="img" aria-label="MCL treatment flowchart">
+      <div class="flow-node start">New MCL diagnosis</div>
+      <div class="flow-arrow" aria-hidden="true">↓</div>
+      <div class="flow-node">Indolent / asymptomatic?</div>
+      <div class="flow-split">
+        <div><b>Yes</b><br>Observe</div>
+        <div><b>No</b><br>Assess fitness</div>
+      </div>
+      <div class="flow-arrow" aria-hidden="true">↓</div>
+      <div class="flow-node">Fit vs older / less fit</div>
+      <div class="flow-split">
+        <div><b>Fit</b><br>Cytarabine ± ASCT<br><span>TRIANGLE if accessible</span></div>
+        <div><b>Older</b><br>BR standard<br><span>ECHO if accessible</span></div>
+      </div>
+      <div class="flow-arrow" aria-hidden="true">↓</div>
+      <div class="flow-node warn">High-risk: trial / BTKi access / CAR-T planning</div>
+    </div>
+  </div>
+
+  <!-- Panel 3 — Pathway Illustration -->
+  <div class="panel">
+    <h4>MCL Pathway at a Glance</h4>
+    <div class="pathway-strip">
+      <span class="stage">Diagnosis</span>
+      <small>tissue, cyclin D1 / SOX11, t(11;14)</small>
+      <span class="stage">Biology</span>
+      <small>Ki-67, TP53, morphology</small>
+      <span class="stage">Fitness</span>
+      <small>frailty, renal, cardiac, transplant suitability</small>
+      <span class="stage">Access</span>
+      <small>NICE, formulary, trial, compassionate / IFR</small>
+      <span class="stage">MDT</span>
+      <small>pathway category and consent</small>
+      <span class="stage">Follow-up</span>
+      <small>response, relapse, supportive care</small>
+    </div>
+  </div>
+
+  <!-- Panel 4 — Access Legend -->
+  <div class="panel">
+    <h4>Access Status</h4>
+    <ul class="status-list">
+      <li><span class="access-dot green"></span><b>Green</b> — NICE-recommended / commissioned</li>
+      <li><span class="access-dot amber"></span><b>Amber</b> — evidence-supported but access-dependent</li>
+      <li><span class="access-dot red"></span><b>Red</b> — investigational / not routine NHS-funded</li>
+      <li><span class="access-dot grey"></span><b>Grey</b> — emerging / conference-level</li>
+    </ul>
+    <p class="sidebar-note"><b>Evidence-supported does not equal NHS-commissioned.</b></p>
+  </div>
+
+  <!-- Panel 5 — High-Risk MCL Reminder -->
+  <div class="panel" style="border-color: var(--warn);">
+    <h4 style="color: var(--warn); border-bottom-color: var(--warn);">High-risk MCL</h4>
+    <p style="margin: 0 0 6px; font-size: 13px;"><b>High-risk features:</b></p>
+    <ul style="padding-left: 18px; margin: 0 0 8px; font-size: 12.5px; line-height: 1.4;">
+      <li>TP53 mutation or TP53-aberrant IHC pattern</li>
+      <li>blastoid / pleomorphic morphology</li>
+      <li>high Ki-67</li>
+      <li>high MIPI-c</li>
+      <li>complex karyotype</li>
+    </ul>
+    <p class="sidebar-note"><b>Action:</b> trigger early trial discussion, BTKi access review, and CAR-T pathway mapping. ASCT should not be relied upon as the primary risk-overcoming strategy.</p>
+  </div>
+
+  <!-- Panel 6 — MDT Documentation -->
+  <div class="panel">
+    <h4>Document at MDT</h4>
+    <ul style="padding-left: 18px; margin: 0; font-size: 12.5px; line-height: 1.4;">
+      <li>Diagnosis and morphology</li>
+      <li>Ki-67 percentage</li>
+      <li>TP53 NGS result</li>
+      <li>MIPI / MIPI-c</li>
+      <li>Fitness / frailty</li>
+      <li>Pathway category</li>
+      <li>Access / funding route</li>
+      <li>Alternatives and toxicity</li>
+      <li>Consent and patient preference</li>
+      <li>CAR-T / trial discussion where relevant</li>
+    </ul>
+  </div>
+
+  <!-- Panel 7 — Quick Links -->
+  <div class="panel">
+    <h4>Jump to</h4>
+    <ul style="padding-left: 18px; margin: 0; font-size: 13px; line-height: 1.5;">
+      <li><a href="#summary">Quick summary</a></li>
+      <li><a href="#uk-access">UK access snapshot</a></li>
+      <li><a href="#diagnosis">Diagnosis</a></li>
+      <li><a href="#risk">Risk stratification</a></li>
+      <li><a href="#firstline">First-line pathway</a></li>
+      <li><a href="#rr">Relapsed / refractory</a></li>
+      <li><a href="#supportive">Supportive care</a></li>
+      <li><a href="#audit">Audit</a></li>
+      <li><a href="#refs">References</a></li>
+    </ul>
+  </div>
+
+  <!-- NICE Commissioning (preserved) -->
+  <div class="panel nice-ta">
+    <h4>NICE Commissioning</h4>
+    <p style="margin: 0 0 8px; font-size: 13px;"><b>R/R MCL (one prior line):</b></p>
+    <a href="#rr">TA502 — Ibrutinib</a>
+    <a href="#rr">TA1081 — Zanubrutinib ★</a>
+    <p style="margin: 10px 0 6px; font-size: 13px;"><b>Post-BTKi:</b></p>
+    <a href="#rr">TA677 — Brexu-cel (CDF; review in development)</a>
+    <p style="margin: 8px 0 0; font-size: 11.5px; color: var(--ink-soft);">★ TA1081: use the least-expensive suitable BTKi option after discussing advantages and disadvantages with the patient.</p>
+  </div>
+
+  <!-- Related Content (preserved) -->
+  <div class="panel">
+    <h4>Related Content</h4>
+    <ul style="padding-left: 18px; margin: 0;">
+      <li><a href="https://mohsinhaemacademy.com/guidelines/cll/">CLL Guideline</a></li>
+      <li><a href="https://mohsinhaemacademy.com/guidelines/vte-cancer/">Cancer-Associated VTE</a></li>
+      <li><a href="https://mohsinhaemacademy.com/journal-club">Journal Club</a></li>
+    </ul>
+  </div>
+</aside>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    Mohsin Haematology Academy · Clinical Education &amp; Digital Tools<br />
+    <b>Educational use only.</b> Content does not replace clinical judgement or professional guidelines.<br />
+    © 2025–2026 Dr Muhammad Mohsin · MHA-MCL-2026-v1.5.3-DRAFT — Not for clinical use until approved.
+  </div>
+</footer>
+
+</body>
+</html>
