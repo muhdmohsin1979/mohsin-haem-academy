@@ -136,8 +136,9 @@
   .mdt-tools-card > .lead { margin: 0 0 14px; font-size: 14px; color: var(--ink-soft); }
   .mdt-tools-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
   .mdt-tool { background: #fff; border: 1px solid var(--brand-line); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; }
-  .mdt-tool .thumb { background: var(--bg-soft); border-bottom: 1px solid var(--brand-line); padding: 8px; }
-  .mdt-tool .thumb img { display: block; width: 100%; height: 110px; object-fit: contain; }
+  .mdt-tool .thumb { display: block; background: var(--bg-soft); border-bottom: 1px solid var(--brand-line); padding: 8px; text-decoration: none; }
+  .mdt-tool .thumb img { display: block; width: 100%; height: 110px; object-fit: contain; border: 1px solid var(--brand-line); border-radius: 4px; background: #fff; }
+  .mdt-tool .thumb:hover img { border-color: var(--brand); }
   .mdt-tool .body { padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 4px; }
   .mdt-tool .body h4 { margin: 0 0 4px; color: var(--brand-dark); font-size: 14.5px; }
   .mdt-tool .body p { margin: 0 0 8px; font-size: 12.5px; color: var(--ink-soft); line-height: 1.4; }
@@ -232,7 +233,7 @@
 <nav class="anchor-nav" aria-label="On this page">
   <a href="#summary">Quick Summary</a>
   <a href="#mdt-tools">★ Visual MDT Tools</a>
-  <a href="#visual-support">★★★ Visual Decision Support</a>
+  <a href="#visual-support">★★ Embedded Previews</a>
   <a href="#access-key">Access Key</a>
   <a href="#uk-access">★ UK Access Snapshot</a>
   <a href="#scope">1. Scope</a>
@@ -273,12 +274,13 @@
 <!-- v1.5.5 — Prominent Visual MDT Tools card immediately below Quick Decision Summary -->
 <div class="mdt-tools-card" id="mdt-tools">
   <h3>★ Visual MDT Tools</h3>
+  <p class="lead" style="margin-bottom: 6px;"><b>These tools are intended to support MDT discussion and pathway consistency; they are not prescribing protocols.</b></p>
   <p class="lead">Three editable visual aids for at-a-glance MDT use. Each card opens the full-size SVG, downloads a print-ready PDF, or downloads the Excalidraw source for editing.</p>
   <div class="mdt-tools-grid">
 
     <div class="mdt-tool">
-      <a class="thumb" href="../../assets/figures/mcl-first-line-algorithm.svg" target="_blank" aria-label="Open first-line treatment algorithm in new tab">
-        <img src="../../assets/figures/mcl-first-line-algorithm.svg" alt="MCL first-line treatment algorithm thumbnail — decision tree from diagnosis through fit/older pathway branches to MDT documentation">
+      <a class="thumb" href="../../assets/figures/mcl-first-line-algorithm.svg" target="_blank" aria-label="MCL first-line treatment algorithm — open full-size SVG in new tab">
+        <img src="../../assets/figures/mcl-first-line-algorithm.svg" alt="MCL first-line treatment algorithm — stepwise MDT decision tree from new diagnosis through minimum-dataset confirmation, indolent observation, fit and older fitness branches with current standard and evolving access-dependent options, high-risk biology overlay, and MDT documentation step">
       </a>
       <div class="body">
         <h4>First-line treatment algorithm</h4>
@@ -292,8 +294,8 @@
     </div>
 
     <div class="mdt-tool">
-      <a class="thumb" href="../../assets/figures/mcl-pathway-at-a-glance.svg" target="_blank" aria-label="Open MCL pathway at a glance in new tab">
-        <img src="../../assets/figures/mcl-pathway-at-a-glance.svg" alt="MCL pathway at a glance thumbnail — six-stage strip from diagnosis through biology, fitness, access, MDT decision to follow-up">
+      <a class="thumb" href="../../assets/figures/mcl-pathway-at-a-glance.svg" target="_blank" aria-label="MCL pathway at a glance — open full-size SVG in new tab">
+        <img src="../../assets/figures/mcl-pathway-at-a-glance.svg" alt="MCL pathway at a glance — six-stage horizontal strip (Diagnosis, Biology, Fitness, Access, MDT Decision, Follow-up) with a concrete checklist beneath each stage">
       </a>
       <div class="body">
         <h4>MCL pathway at a glance</h4>
@@ -307,8 +309,8 @@
     </div>
 
     <div class="mdt-tool">
-      <a class="thumb" href="../../assets/figures/mcl-access-status-chart.svg" target="_blank" aria-label="Open UK access and evidence status chart in new tab">
-        <img src="../../assets/figures/mcl-access-status-chart.svg" alt="UK access and evidence status chart thumbnail — green/amber/red/grey traffic-light categories for MCL therapies">
+      <a class="thumb" href="../../assets/figures/mcl-access-status-chart.svg" target="_blank" aria-label="UK access / evidence status chart — open full-size SVG in new tab">
+        <img src="../../assets/figures/mcl-access-status-chart.svg" alt="UK access / evidence status chart — traffic-light categorisation of MCL therapies: green NICE-recommended, amber evidence-supported but access-dependent, red not routine NHS-funded, grey emerging or conference-level">
       </a>
       <div class="body">
         <h4>UK access / evidence status chart</h4>
@@ -326,8 +328,8 @@
 </div>
 
 <section id="visual-support">
-  <h2><span class="num">★★★</span> Visual Decision Support</h2>
-  <p>Three editable visual aids designed for rapid MDT use. Each is provided as inline SVG (scales cleanly), with downloadable SVG / PDF / Excalidraw sources in the sidebar.</p>
+  <h2><span class="num">★★</span> Embedded Visual Previews</h2>
+  <p>These embedded previews are shown below for quick viewing; <b>downloadable SVG, PDF and editable Excalidraw files are available in the Visual MDT Tools panel above</b>.</p>
 
   <figure style="margin: 18px 0;">
     <img src="../../assets/figures/mcl-first-line-algorithm.svg" alt="MCL first-line treatment algorithm — stepwise MDT decision tree covering new diagnosis, minimum dataset confirmation, observation pathway, fit/intensive pathway with current standard and TRIANGLE-evolving branches, older/less-fit pathway with BR and ECHO branches, high-risk biology overlay, and MDT documentation step" style="display:block; max-width: 100%; height: auto; border: 1px solid var(--brand-line); border-radius: 10px;">
@@ -1025,7 +1027,7 @@
       <tr><td>v1.5.2-DRAFT</td><td>14 May 2026</td><td>Dr M Mohsin (CLL-pattern visual sidebar enhancement)</td><td>Sidebar upgraded from navigation-only to CLL-pattern visual decision-support layer. Added seven panels: (1) MCL First-Line Algorithm (six-step ordered list); (2) Treatment Flowchart with semantic HTML flow-nodes, arrows, and yes/no splits; (3) MCL Pathway at a Glance staged strip (Diagnosis → Biology → Fitness → Access → MDT → Follow-up); (4) Access Status legend (green/amber/red/grey) with evidence-vs-access reminder; (5) High-risk MCL reminder panel with action; (6) MDT Documentation checklist; (7) Quick Links jump-list. Preserved NICE Commissioning and Related Content panels. Added CSS for mini-flow, flow-node, flow-split, pathway-strip, status-list, ordered-mini. Mobile fallback at ≤420px collapses flow-split to single column. No clinical content changes; sidebar mirrors main-text content for at-a-glance decision support.</td></tr>
       <tr><td>v1.5.3-DRAFT</td><td>14 May 2026</td><td>Dr M Mohsin (page-break overflow fix + bundle self-consistency)</td><td>Docx and PDF page-break overflow fix: callout boxes rebuilt as single-column multi-row tables (title + one body line per row) instead of single-cell tables. Each row breaks across page boundaries cleanly, eliminating the content overlap seen in v1.5.2. Table rows now explicitly cantSplit=false and tableHeader=true so headers repeat when a long table splits. HTML version labels bumped to v1.5.3 for bundle self-consistency (no HTML clinical content changes from v1.5.2).</td></tr>
       <tr><td>v1.5.4-DRAFT</td><td>14 May 2026</td><td>Dr M Mohsin (visual decision-support assets)</td><td>Visual / usability enhancement only. Added three custom MCL visual assets as editable SVG + PDF + Excalidraw: (1) First-Line Treatment Algorithm — full decision tree with decision diamonds, fit/older branches, high-risk overlay; (2) Pathway at a Glance — six-stage strip (Diagnosis → Biology → Fitness → Access → MDT Decision → Follow-up); (3) UK Access / Evidence Status Chart — green/amber/red/grey traffic-light categorisation. New "Visual Decision Support" main-body section after Quick Summary embeds all three SVGs with captions. Sidebar gains "Download visual guides" panel plus three image-thumbnail panels linking to full-size SVGs. PNG fallbacks generated. Mermaid source provided as text fallback. No clinical content changes.</td></tr>
-      <tr><td>v1.5.5-DRAFT</td><td>15 May 2026</td><td>Dr M Mohsin (Visual MDT Tools card)</td><td>Visual / usability enhancement only — no clinical wording changes. Added prominent "★ Visual MDT Tools" card immediately below Quick Decision Summary, before the full text begins. Three large cards (First-line algorithm, Pathway at a glance, Access / evidence status chart), each with a thumbnail preview and three action buttons: Open full-size SVG, Download PDF, Download Excalidraw source. Sidebar "Download visual guides" panel rebuilt with visible Excalidraw links (not just text reference) plus Mermaid text fallback link, grouped by visual asset. Caption under every visual standardised to "For MDT decision support only. Verify current NICE, NHS England and local formulary access before prescribing." Anchor nav adds a new ★ Visual MDT Tools entry.</td></tr>
+      <tr><td>v1.5.5-DRAFT</td><td>15 May 2026</td><td>Dr M Mohsin (Visual MDT Tools card + duplication-removal refinements)</td><td>Visual / usability enhancement only — no clinical wording changes. Added prominent "★ Visual MDT Tools" card immediately below Quick Decision Summary, before the full text begins. Three large cards (First-line algorithm, Pathway at a glance, Access / evidence status chart), each with a thumbnail preview and three action buttons: Open full-size SVG, Download PDF, Download Excalidraw source. Sidebar "Download visual guides" panel rebuilt with visible Excalidraw links (not just text reference) plus Mermaid text fallback link, grouped by visual asset. Caption under every visual standardised to "For MDT decision support only. Verify current NICE, NHS England and local formulary access before prescribing." Anchor nav adds Visual MDT Tools entry. Final refinements: added prominent MDT-support-not-prescribing-protocol disclaimer beneath Visual MDT Tools heading; renamed the previous "Visual Decision Support" section to "Embedded Visual Previews" with a bridge sentence pointing users back to the MDT Tools panel for downloads, to remove duplication; standardised thumbnail alt text to match the embedded section's descriptive wording; added visible thumbnail frame and hover state.</td></tr>
     </tbody>
   </table>
 
