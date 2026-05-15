@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" font-family="Inter, -apple-system, 'Segoe UI', Roboto, sans-serif">
-  <title>MCL Pathway at a Glance — v1.5.5</title>
+  <title>MCL Pathway at a Glance — v1.6.0</title>
   <desc>Six-stage MCL clinical pathway strip: Diagnosis, Biology, Fitness, Access, MDT Decision, Follow-up. Each stage has a one-line meaning and concrete checklist items. Independent educational synthesis; not externally endorsed.</desc>
 
   <style>
@@ -27,7 +27,7 @@
 
   <!-- Title -->
   <text x="40" y="35" class="title">MCL Pathway at a Glance</text>
-  <text x="40" y="52" class="subtitle">Six-stage MDT pathway from diagnosis to follow-up  ·  MHA-MCL-2026-v1.5.5-DRAFT</text>
+  <text x="40" y="52" class="subtitle">Six-stage MDT pathway from diagnosis to follow-up  ·  MHA-MCL-2026-v1.6.0</text>
 
   <!-- Six pill stages along the top -->
   <g>
@@ -154,5 +154,5 @@
   <text x="80" y="483" class="label">Evidence-supported does not equal NHS-commissioned. Verify current NICE / local commissioning / SmPC at the point of every decision.</text>
 
   <text x="40" y="520" class="footer">Independent educational synthesis. Not externally endorsed. Local trust policy / current NICE / local formulary / SmPC take precedence.</text>
-  <text x="1160" y="528" text-anchor="end" class="corner">mohsinhaemacademy.com / guidelines / mcl  ·  v1.5.5 May 2026</text>
+  <text x="1160" y="528" text-anchor="end" class="corner">mohsinhaemacademy.com / guidelines / mcl  ·  v1.6.0 May 2026</text>
 </svg>
