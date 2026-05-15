@@ -1,0 +1,41 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://mohsinhaemacademy.com",
+  "elements": [
+    {"type":"text","x":40,"y":20,"width":350,"height":30,"fontSize":24,"fontFamily":1,"strokeColor":"#5a141d","text":"MCL Pathway at a Glance","seed":1,"groupIds":[]},
+    {"type":"rectangle","x":40,"y":90,"width":170,"height":48,"backgroundColor":"#7a1f2b","strokeColor":"#7a1f2b","fillStyle":"solid","strokeWidth":2,"roughness":0,"opacity":100,"seed":10,"groupIds":["stage1"]},
+    {"type":"text","x":90,"y":104,"width":120,"height":24,"fontSize":18,"fontFamily":1,"strokeColor":"#ffffff","text":"1 Diagnosis","seed":11,"groupIds":["stage1"]},
+    {"type":"rectangle","x":225,"y":90,"width":170,"height":48,"backgroundColor":"#7a1f2b","strokeColor":"#7a1f2b","fillStyle":"solid","strokeWidth":2,"roughness":0,"opacity":100,"seed":20,"groupIds":["stage2"]},
+    {"type":"text","x":275,"y":104,"width":120,"height":24,"fontSize":18,"fontFamily":1,"strokeColor":"#ffffff","text":"2 Biology","seed":21,"groupIds":["stage2"]},
+    {"type":"rectangle","x":410,"y":90,"width":170,"height":48,"backgroundColor":"#7a1f2b","strokeColor":"#7a1f2b","fillStyle":"solid","strokeWidth":2,"roughness":0,"opacity":100,"seed":30,"groupIds":["stage3"]},
+    {"type":"text","x":460,"y":104,"width":120,"height":24,"fontSize":18,"fontFamily":1,"strokeColor":"#ffffff","text":"3 Fitness","seed":31,"groupIds":["stage3"]},
+    {"type":"rectangle","x":595,"y":90,"width":170,"height":48,"backgroundColor":"#7a1f2b","strokeColor":"#7a1f2b","fillStyle":"solid","strokeWidth":2,"roughness":0,"opacity":100,"seed":40,"groupIds":["stage4"]},
+    {"type":"text","x":645,"y":104,"width":120,"height":24,"fontSize":18,"fontFamily":1,"strokeColor":"#ffffff","text":"4 Access","seed":41,"groupIds":["stage4"]},
+    {"type":"rectangle","x":780,"y":90,"width":200,"height":48,"backgroundColor":"#7a1f2b","strokeColor":"#7a1f2b","fillStyle":"solid","strokeWidth":2,"roughness":0,"opacity":100,"seed":50,"groupIds":["stage5"]},
+    {"type":"text","x":820,"y":104,"width":160,"height":24,"fontSize":18,"fontFamily":1,"strokeColor":"#ffffff","text":"5 MDT Decision","seed":51,"groupIds":["stage5"]},
+    {"type":"rectangle","x":995,"y":90,"width":170,"height":48,"backgroundColor":"#7a1f2b","strokeColor":"#7a1f2b","fillStyle":"solid","strokeWidth":2,"roughness":0,"opacity":100,"seed":60,"groupIds":["stage6"]},
+    {"type":"text","x":1040,"y":104,"width":120,"height":24,"fontSize":18,"fontFamily":1,"strokeColor":"#ffffff","text":"6 Follow-up","seed":61,"groupIds":["stage6"]},
+    {"type":"rectangle","x":40,"y":158,"width":170,"height":280,"backgroundColor":"#ffffff","strokeColor":"#e6c9ce","fillStyle":"solid","strokeWidth":2,"roughness":0,"seed":100,"groupIds":["card1"]},
+    {"type":"text","x":50,"y":180,"width":150,"height":160,"fontSize":12,"fontFamily":1,"strokeColor":"#1a1a1a","text":"Confirm the diagnosis\n\n- Tissue biopsy\n- Cyclin D1 (BCL1)\n- SOX11 IHC\n- t(11;14) FISH if\n  cyclin D1 negative\n- Morphological variant","seed":101,"groupIds":["card1"]},
+    {"type":"rectangle","x":225,"y":158,"width":170,"height":280,"backgroundColor":"#ffffff","strokeColor":"#e6c9ce","fillStyle":"solid","strokeWidth":2,"roughness":0,"seed":110,"groupIds":["card2"]},
+    {"type":"text","x":235,"y":180,"width":150,"height":160,"fontSize":12,"fontFamily":1,"strokeColor":"#1a1a1a","text":"Risk-stratify\n\n- Ki-67 (percentage)\n- TP53 IHC AND NGS\n- MIPI / MIPI-c\n- Morphological variant\n- Complex karyotype\n- Assign MDT risk category","seed":111,"groupIds":["card2"]},
+    {"type":"rectangle","x":410,"y":158,"width":170,"height":280,"backgroundColor":"#ffffff","strokeColor":"#e6c9ce","fillStyle":"solid","strokeWidth":2,"roughness":0,"seed":120,"groupIds":["card3"]},
+    {"type":"text","x":420,"y":180,"width":150,"height":160,"fontSize":12,"fontFamily":1,"strokeColor":"#1a1a1a","text":"Assess fitness\n\n- ECOG performance status\n- Clinical Frailty Scale\n- Renal function (eGFR)\n- Cardiac assessment\n- Transplant suitability\n- Comorbidity burden","seed":121,"groupIds":["card3"]},
+    {"type":"rectangle","x":595,"y":158,"width":170,"height":280,"backgroundColor":"#ffffff","strokeColor":"#e6c9ce","fillStyle":"solid","strokeWidth":2,"roughness":0,"seed":130,"groupIds":["card4"]},
+    {"type":"text","x":605,"y":180,"width":150,"height":160,"fontSize":12,"fontFamily":1,"strokeColor":"#1a1a1a","text":"Check access\n\n- NICE TA status\n- Local formulary\n- NHS England commissioning\n- Clinical trial availability\n- Compassionate / IFR / EAMS","seed":131,"groupIds":["card4"]},
+    {"type":"rectangle","x":780,"y":158,"width":200,"height":280,"backgroundColor":"#ffffff","strokeColor":"#e6c9ce","fillStyle":"solid","strokeWidth":2,"roughness":0,"seed":140,"groupIds":["card5"]},
+    {"type":"text","x":790,"y":180,"width":180,"height":240,"fontSize":12,"fontFamily":1,"strokeColor":"#1a1a1a","text":"Categorise & document\n\nA. Routine\n   Current UK standard\nB. Evolving access-dependent\n   Practice-changing evidence\nC. Selected alternative\n   Frailty / palliative\nD. Not routine\n   Historical / no evidence","seed":141,"groupIds":["card5"]},
+    {"type":"rectangle","x":995,"y":158,"width":170,"height":280,"backgroundColor":"#ffffff","strokeColor":"#e6c9ce","fillStyle":"solid","strokeWidth":2,"roughness":0,"seed":150,"groupIds":["card6"]},
+    {"type":"text","x":1005,"y":180,"width":150,"height":160,"fontSize":12,"fontFamily":1,"strokeColor":"#1a1a1a","text":"Follow-up\n\n- Response assessment\n- Surveillance (clinical + bloods; symptom-led imaging)\n- Supportive care (vaccination, Ig, PJP)\n- Re-biopsy at relapse\n- Re-test TP53 at relapse","seed":151,"groupIds":["card6"]},
+    {"type":"rectangle","x":40,"y":458,"width":1125,"height":40,"backgroundColor":"#fdf5e3","strokeColor":"#b08538","fillStyle":"solid","strokeWidth":2,"roughness":0,"seed":200,"groupIds":[]},
+    {"type":"text","x":60,"y":472,"width":1080,"height":20,"fontSize":13,"fontFamily":1,"strokeColor":"#b08538","text":"Evidence-supported does not equal NHS-commissioned. Verify current NICE / local commissioning / SmPC at the point of every decision.","seed":201,"groupIds":[]}
+  ],
+  "appState": {
+    "gridSize": null,
+    "viewBackgroundColor": "#ffffff",
+    "currentItemStrokeColor": "#7a1f2b",
+    "currentItemFontFamily": 1
+  },
+  "files": {}
+}

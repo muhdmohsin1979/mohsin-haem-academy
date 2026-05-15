@@ -1,0 +1,37 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://mohsinhaemacademy.com",
+  "elements": [
+    {"type":"text","x":40,"y":20,"width":420,"height":30,"fontSize":24,"fontFamily":1,"strokeColor":"#5a141d","text":"UK Access / Evidence Status","seed":1,"groupIds":[]},
+    {"type":"rectangle","x":40,"y":90,"width":240,"height":160,"backgroundColor":"#2e6b3e","strokeColor":"#2e6b3e","fillStyle":"solid","strokeWidth":2,"roughness":0,"seed":10,"groupIds":["green"]},
+    {"type":"text","x":90,"y":110,"width":140,"height":30,"fontSize":20,"fontFamily":1,"strokeColor":"#ffffff","text":"GREEN","seed":11,"groupIds":["green"]},
+    {"type":"text","x":60,"y":150,"width":200,"height":80,"fontSize":12,"fontFamily":1,"strokeColor":"#ffffff","text":"NICE-recommended / commissioned for current UK NHS use under the stated indication and access agreement.","seed":12,"groupIds":["green"]},
+    {"type":"rectangle","x":300,"y":90,"width":760,"height":160,"backgroundColor":"#ffffff","strokeColor":"#2e6b3e","fillStyle":"solid","strokeWidth":2,"roughness":0,"seed":13,"groupIds":["green-content"]},
+    {"type":"text","x":320,"y":105,"width":720,"height":130,"fontSize":13,"fontFamily":1,"strokeColor":"#1a1a1a","text":"Ibrutinib - R/R MCL after one previous line (NICE TA502, subject to commercial access agreement)\n\nZanubrutinib - R/R MCL after one previous line (NICE TA1081, 10 Jul 2025). Use least-expensive of zanubrutinib or ibrutinib.\n\nBrexucabtagene autoleucel - post-BTKi R/R MCL (NICE TA677, Cancer Drugs Fund, managed access agreement; review GID-TA11545 in development)","seed":14,"groupIds":["green-content"]},
+    {"type":"rectangle","x":40,"y":270,"width":240,"height":170,"backgroundColor":"#b08538","strokeColor":"#b08538","fillStyle":"solid","strokeWidth":2,"roughness":0,"seed":20,"groupIds":["amber"]},
+    {"type":"text","x":90,"y":290,"width":140,"height":30,"fontSize":20,"fontFamily":1,"strokeColor":"#ffffff","text":"AMBER","seed":21,"groupIds":["amber"]},
+    {"type":"text","x":60,"y":330,"width":200,"height":90,"fontSize":12,"fontFamily":1,"strokeColor":"#ffffff","text":"Evidence-supported but access-dependent. Practice-changing evidence benchmark, not uniformly commissioned. Consider via legitimate non-routine access routes.","seed":22,"groupIds":["amber"]},
+    {"type":"rectangle","x":300,"y":270,"width":760,"height":170,"backgroundColor":"#ffffff","strokeColor":"#b08538","fillStyle":"solid","strokeWidth":2,"roughness":0,"seed":23,"groupIds":["amber-content"]},
+    {"type":"text","x":320,"y":285,"width":720,"height":140,"fontSize":13,"fontFamily":1,"strokeColor":"#1a1a1a","text":"TRIANGLE - ibrutinib-integrated first-line induction and maintenance (fit patients). Lancet 2024.\n\nAcalabrutinib + bendamustine-rituximab - previously untreated MCL ineligible for ASCT. ECHO Phase III. NICE GID-TA11091 in development.\n\nIbrutinib + venetoclax (SYMPATICO) - R/R MCL. Not routinely NICE-funded for MCL.","seed":24,"groupIds":["amber-content"]},
+    {"type":"rectangle","x":40,"y":460,"width":240,"height":160,"backgroundColor":"#8b2e2e","strokeColor":"#8b2e2e","fillStyle":"solid","strokeWidth":2,"roughness":0,"seed":30,"groupIds":["red"]},
+    {"type":"text","x":90,"y":480,"width":140,"height":30,"fontSize":20,"fontFamily":1,"strokeColor":"#ffffff","text":"RED","seed":31,"groupIds":["red"]},
+    {"type":"text","x":60,"y":520,"width":200,"height":90,"fontSize":12,"fontFamily":1,"strokeColor":"#ffffff","text":"Not routine NHS-funded / investigational / access uncertain. Do not assume availability outside trial, EAMS, compassionate, or IFR routes.","seed":32,"groupIds":["red"]},
+    {"type":"rectangle","x":300,"y":460,"width":760,"height":160,"backgroundColor":"#ffffff","strokeColor":"#8b2e2e","fillStyle":"solid","strokeWidth":2,"roughness":0,"seed":33,"groupIds":["red-content"]},
+    {"type":"text","x":320,"y":475,"width":720,"height":130,"fontSize":13,"fontFamily":1,"strokeColor":"#1a1a1a","text":"Pirtobrutinib - post-covalent-BTKi R/R MCL. NICE ID3975 suspended; ID6493 in development. Routine UK NHS access should not be assumed.\n\nLisocabtagene maraleucel - R/R MCL. UK access uncertain.\n\nSHINE pattern - frontline ibrutinib + BR (Wang NEJM 2022). Not adopted as UK routine first-line standard.","seed":34,"groupIds":["red-content"]},
+    {"type":"rectangle","x":40,"y":640,"width":240,"height":120,"backgroundColor":"#707070","strokeColor":"#707070","fillStyle":"solid","strokeWidth":2,"roughness":0,"seed":40,"groupIds":["grey"]},
+    {"type":"text","x":90,"y":660,"width":140,"height":30,"fontSize":20,"fontFamily":1,"strokeColor":"#ffffff","text":"GREY","seed":41,"groupIds":["grey"]},
+    {"type":"text","x":60,"y":700,"width":200,"height":60,"fontSize":12,"fontFamily":1,"strokeColor":"#ffffff","text":"Emerging / conference-level. May inform MDT discussion, trial referral, or access planning. Not for routine treatment.","seed":42,"groupIds":["grey"]},
+    {"type":"rectangle","x":300,"y":640,"width":760,"height":120,"backgroundColor":"#ffffff","strokeColor":"#707070","fillStyle":"solid","strokeWidth":2,"roughness":0,"seed":43,"groupIds":["grey-content"]},
+    {"type":"text","x":320,"y":655,"width":720,"height":100,"fontSize":13,"fontFamily":1,"strokeColor":"#1a1a1a","text":"MRD-guided treatment changes outside clinical trials\n\nBispecific T-cell engagers in MCL (glofitamab, epcoritamab) - not currently UK-approved\n\nASH / EHA 2024-2025 emerging abstracts - verify primary source before citation","seed":44,"groupIds":["grey-content"]},
+    {"type":"rectangle","x":40,"y":775,"width":1020,"height":20,"backgroundColor":"#fbeaec","strokeColor":"#e6c9ce","fillStyle":"solid","strokeWidth":1,"roughness":0,"seed":50,"groupIds":[]},
+    {"type":"text","x":60,"y":780,"width":1000,"height":15,"fontSize":12,"fontFamily":1,"strokeColor":"#7a1f2b","text":"Evidence-supported does not equal NHS-commissioned. Devolved nations: check SMC / AWMSG / HSCNI.","seed":51,"groupIds":[]}
+  ],
+  "appState": {
+    "gridSize": null,
+    "viewBackgroundColor": "#ffffff",
+    "currentItemStrokeColor": "#7a1f2b",
+    "currentItemFontFamily": 1
+  },
+  "files": {}
+}

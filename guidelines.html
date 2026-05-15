@@ -1,619 +1,631 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Guidelines | Mohsin Haematology Academy</title>
-  <meta name="description" content="Haematology guideline summaries by BSH division — Malignant Haematology, General Haematology, Haemostasis &amp; Thrombosis, and Transfusion Medicine.">
-  <!-- ── SEO / Social — added by SEO pass v1 ── -->
-  <link rel="canonical" href="https://mohsinhaemacademy.com/guidelines" />
-  <meta property="og:site_name" content="Mohsin Haematology Academy" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://mohsinhaemacademy.com/guidelines" />
-  <meta property="og:title" content="Guidelines" />
-  <meta property="og:description" content="Haematology guideline summaries by BSH division — Malignant Haematology, General Haematology, Haemostasis &amp; Thrombosis, and Transfusion Medicine." />
-  <meta property="og:image" content="https://mohsinhaemacademy.com/logo.png" />
-  <meta property="og:image:width" content="1536" />
-  <meta property="og:image:height" content="1024" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Guidelines" />
-  <meta name="twitter:description" content="Haematology guideline summaries by BSH division — Malignant Haematology, General Haematology, Haemostasis &amp; Thrombosis, and Transfusion Medicine." />
-  <meta name="twitter:image" content="https://mohsinhaemacademy.com/logo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --clr-primary: #7a1f2b; --clr-primary-dark: #5c1720; --clr-primary-tint: rgba(122,31,43,0.07);
-      --clr-primary-glow: rgba(122,31,43,0.18); --clr-bg: #f7f5f3; --clr-surface: #ffffff;
-      --clr-text: #1a1a1e; --clr-text-secondary: #3d3d42; --clr-muted: #6b717a;
-      --clr-border: #e6e1dd; --radius-sm: 6px; --radius-md: 12px; --ease: 0.22s cubic-bezier(0.4,0,0.2,1);
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Guidelines | Mohsin Haematology Academy</title>
+<meta name="description" content="Haematology guideline summaries by BSH division — Malignant Haematology, General Haematology, Haemostasis &amp; Thrombosis, and Transfusion Medicine.">
+<!-- ── SEO / Social — added by SEO pass v1 ── -->
+<link rel="canonical" href="https://mohsinhaemacademy.com/guidelines" />
+<meta property="og:site_name" content="Mohsin Haematology Academy" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://mohsinhaemacademy.com/guidelines" />
+<meta property="og:title" content="Guidelines" />
+<meta property="og:description" content="Haematology guideline summaries by BSH division — Malignant Haematology, General Haematology, Haemostasis &amp; Thrombosis, and Transfusion Medicine." />
+<meta property="og:image" content="https://mohsinhaemacademy.com/logo.png" />
+<meta property="og:image:width" content="1536" />
+<meta property="og:image:height" content="1024" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Guidelines" />
+<meta name="twitter:description" content="Haematology guideline summaries by BSH division — Malignant Haematology, General Haematology, Haemostasis &amp; Thrombosis, and Transfusion Medicine." />
+<meta name="twitter:image" content="https://mohsinhaemacademy.com/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+--clr-primary: #7a1f2b; --clr-primary-dark: #5c1720; --clr-primary-tint: rgba(122,31,43,0.07);
+--clr-primary-glow: rgba(122,31,43,0.18); --clr-bg: #f7f5f3; --clr-surface: #ffffff;
+--clr-text: #1a1a1e; --clr-text-secondary: #3d3d42; --clr-muted: #6b717a;
+--clr-border: #e6e1dd; --radius-sm: 6px; --radius-md: 12px; --ease: 0.22s cubic-bezier(0.4,0,0.2,1);
 
-      /* BSH division colours */
-      --cat-mal: #7a1f2b;        --cat-mal-tint: rgba(122,31,43,0.07);   --cat-mal-border: rgba(122,31,43,0.14);
-      --cat-gen: #1e4d8c;        --cat-gen-tint: rgba(30,77,140,0.07);    --cat-gen-border: rgba(30,77,140,0.14);
-      --cat-hae: #1a6b4a;        --cat-hae-tint: rgba(26,107,74,0.07);    --cat-hae-border: rgba(26,107,74,0.14);
-      --cat-tra: #7a4f1f;        --cat-tra-tint: rgba(122,79,31,0.07);    --cat-tra-border: rgba(122,79,31,0.14);
-    }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--clr-bg); color: var(--clr-text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-    a { text-decoration: none; color: inherit; }
-    img { display: block; max-width: 100%; }
-    .container { width: min(1080px, 91%); margin-inline: auto; }
+/* BSH division colours */
+--cat-mal: #7a1f2b; --cat-mal-tint: rgba(122,31,43,0.07); --cat-mal-border: rgba(122,31,43,0.14);
+--cat-gen: #1e4d8c; --cat-gen-tint: rgba(30,77,140,0.07); --cat-gen-border: rgba(30,77,140,0.14);
+--cat-hae: #1a6b4a; --cat-hae-tint: rgba(26,107,74,0.07); --cat-hae-border: rgba(26,107,74,0.14);
+--cat-tra: #7a4f1f; --cat-tra-tint: rgba(122,79,31,0.07); --cat-tra-border: rgba(122,79,31,0.14);
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', -apple-system, sans-serif; background: var(--clr-bg); color: var(--clr-text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
+.container { width: min(1080px, 91%); margin-inline: auto; }
 
-    /* ── NAV ── */
-    header { position: sticky; top: 0; z-index: 200; background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--clr-border); }
-    .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 24px; }
-    .brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
-    .brand img { height: 40px; width: auto; }
-    .brand-text { line-height: 1; }
-    .brand-name { font-size: 0.95rem; font-weight: 700; color: var(--clr-primary); letter-spacing: -0.01em; }
-    .brand-tagline { font-size: 0.66rem; font-weight: 500; color: var(--clr-muted); letter-spacing: 0.07em; text-transform: uppercase; margin-top: 3px; }
-    .nav-toggle { display: none; }
-    .nav-links { display: flex; align-items: center; gap: 2px; }
-    .nav-links a { font-size: 0.85rem; font-weight: 500; color: var(--clr-text-secondary); padding: 7px 13px; border-radius: var(--radius-sm); transition: color var(--ease), background var(--ease); white-space: nowrap; }
-    .nav-links a:hover, .nav-links a.active { color: var(--clr-primary); background: var(--clr-primary-tint); }
-    .nav-cta { background: var(--clr-primary) !important; color: #fff !important; font-weight: 600 !important; padding: 7px 16px !important; margin-left: 6px; box-shadow: 0 2px 8px var(--clr-primary-glow); }
-    .nav-cta:hover { background: var(--clr-primary-dark) !important; transform: translateY(-1px); }
+/* ── NAV ── */
+header { position: sticky; top: 0; z-index: 200; background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--clr-border); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 24px; }
+.brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.brand img { height: 40px; width: auto; }
+.brand-text { line-height: 1; }
+.brand-name { font-size: 0.95rem; font-weight: 700; color: var(--clr-primary); letter-spacing: -0.01em; }
+.brand-tagline { font-size: 0.66rem; font-weight: 500; color: var(--clr-muted); letter-spacing: 0.07em; text-transform: uppercase; margin-top: 3px; }
+.nav-toggle { display: none; }
+.nav-links { display: flex; align-items: center; gap: 2px; }
+.nav-links a { font-size: 0.85rem; font-weight: 500; color: var(--clr-text-secondary); padding: 7px 13px; border-radius: var(--radius-sm); transition: color var(--ease), background var(--ease); white-space: nowrap; }
+.nav-links a:hover, .nav-links a.active { color: var(--clr-primary); background: var(--clr-primary-tint); }
+.nav-cta { background: var(--clr-primary) !important; color: #fff !important; font-weight: 600 !important; padding: 7px 16px !important; margin-left: 6px; box-shadow: 0 2px 8px var(--clr-primary-glow); }
+.nav-cta:hover { background: var(--clr-primary-dark) !important; transform: translateY(-1px); }
 
-    /* ── PAGE HERO ── */
-    .page-hero {
-      padding: 72px 0 60px;
-      text-align: center;
-      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(122,31,43,0.06) 0%, transparent 70%), linear-gradient(180deg, #fff 0%, var(--clr-bg) 100%);
-      border-bottom: 1px solid var(--clr-border);
-    }
-    .page-eyebrow { display: inline-flex; align-items: center; gap: 7px; background: var(--clr-primary-tint); color: var(--clr-primary); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 5px 14px; border-radius: 100px; margin-bottom: 20px; border: 1px solid rgba(122,31,43,0.12); }
-    .page-hero h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.9rem, 4vw, 2.9rem); font-weight: 700; color: var(--clr-primary-dark); letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 16px; }
-    .page-hero p { font-size: 1rem; color: var(--clr-text-secondary); line-height: 1.75; max-width: 560px; margin: 0 auto 32px; }
+/* ── PAGE HERO ── */
+.page-hero {
+padding: 72px 0 60px;
+text-align: center;
+background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(122,31,43,0.06) 0%, transparent 70%), linear-gradient(180deg, #fff 0%, var(--clr-bg) 100%);
+border-bottom: 1px solid var(--clr-border);
+}
+.page-eyebrow { display: inline-flex; align-items: center; gap: 7px; background: var(--clr-primary-tint); color: var(--clr-primary); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 5px 14px; border-radius: 100px; margin-bottom: 20px; border: 1px solid rgba(122,31,43,0.12); }
+.page-hero h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.9rem, 4vw, 2.9rem); font-weight: 700; color: var(--clr-primary-dark); letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 16px; }
+.page-hero p { font-size: 1rem; color: var(--clr-text-secondary); line-height: 1.75; max-width: 560px; margin: 0 auto 32px; }
 
-    /* ── ANCHOR JUMP NAV ── */
-    .jump-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; padding-bottom: 4px; }
-    .jump-pill {
-      display: inline-flex; align-items: center; gap: 7px;
-      font-size: 0.78rem; font-weight: 600; padding: 7px 16px; border-radius: 100px;
-      border: 1px solid; transition: opacity var(--ease), transform var(--ease);
-      cursor: pointer;
-    }
-    .jump-pill:hover { opacity: 0.82; transform: translateY(-1px); }
-    .jump-pill.mal { background: var(--cat-mal-tint); color: var(--cat-mal); border-color: var(--cat-mal-border); }
-    .jump-pill.gen { background: var(--cat-gen-tint); color: var(--cat-gen); border-color: var(--cat-gen-border); }
-    .jump-pill.hae { background: var(--cat-hae-tint); color: var(--cat-hae); border-color: var(--cat-hae-border); }
-    .jump-pill.tra { background: var(--cat-tra-tint); color: var(--cat-tra); border-color: var(--cat-tra-border); }
+/* ── ANCHOR JUMP NAV ── */
+.jump-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; padding-bottom: 4px; }
+.jump-pill {
+display: inline-flex; align-items: center; gap: 7px;
+font-size: 0.78rem; font-weight: 600; padding: 7px 16px; border-radius: 100px;
+border: 1px solid; transition: opacity var(--ease), transform var(--ease);
+cursor: pointer;
+}
+.jump-pill:hover { opacity: 0.82; transform: translateY(-1px); }
+.jump-pill.mal { background: var(--cat-mal-tint); color: var(--cat-mal); border-color: var(--cat-mal-border); }
+.jump-pill.gen { background: var(--cat-gen-tint); color: var(--cat-gen); border-color: var(--cat-gen-border); }
+.jump-pill.hae { background: var(--cat-hae-tint); color: var(--cat-hae); border-color: var(--cat-hae-border); }
+.jump-pill.tra { background: var(--cat-tra-tint); color: var(--cat-tra); border-color: var(--cat-tra-border); }
 
-    /* ── CATEGORY SECTIONS ── */
-    .cat-section { padding: 60px 0 52px; border-bottom: 1px solid var(--clr-border); }
-    .cat-section:last-child { border-bottom: none; padding-bottom: 80px; }
+/* ── CATEGORY SECTIONS ── */
+.cat-section { padding: 60px 0 52px; border-bottom: 1px solid var(--clr-border); }
+.cat-section:last-child { border-bottom: none; padding-bottom: 80px; }
 
-    .cat-header { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 32px; }
-    .cat-icon {
-      width: 48px; height: 48px; border-radius: 13px; flex-shrink: 0;
-      display: flex; align-items: center; justify-content: center;
-      border: 1px solid;
-    }
-    .cat-icon.mal { background: var(--cat-mal-tint); color: var(--cat-mal); border-color: var(--cat-mal-border); }
-    .cat-icon.gen { background: var(--cat-gen-tint); color: var(--cat-gen); border-color: var(--cat-gen-border); }
-    .cat-icon.hae { background: var(--cat-hae-tint); color: var(--cat-hae); border-color: var(--cat-hae-border); }
-    .cat-icon.tra { background: var(--cat-tra-tint); color: var(--cat-tra); border-color: var(--cat-tra-border); }
+.cat-header { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 32px; }
+.cat-icon {
+width: 48px; height: 48px; border-radius: 13px; flex-shrink: 0;
+display: flex; align-items: center; justify-content: center;
+border: 1px solid;
+}
+.cat-icon.mal { background: var(--cat-mal-tint); color: var(--cat-mal); border-color: var(--cat-mal-border); }
+.cat-icon.gen { background: var(--cat-gen-tint); color: var(--cat-gen); border-color: var(--cat-gen-border); }
+.cat-icon.hae { background: var(--cat-hae-tint); color: var(--cat-hae); border-color: var(--cat-hae-border); }
+.cat-icon.tra { background: var(--cat-tra-tint); color: var(--cat-tra); border-color: var(--cat-tra-border); }
 
-    .cat-title-group { flex: 1; }
-    .cat-division-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; margin-bottom: 5px; }
-    .cat-division-label.mal { color: var(--cat-mal); }
-    .cat-division-label.gen { color: var(--cat-gen); }
-    .cat-division-label.hae { color: var(--cat-hae); }
-    .cat-division-label.tra { color: var(--cat-tra); }
+.cat-title-group { flex: 1; }
+.cat-division-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; margin-bottom: 5px; }
+.cat-division-label.mal { color: var(--cat-mal); }
+.cat-division-label.gen { color: var(--cat-gen); }
+.cat-division-label.hae { color: var(--cat-hae); }
+.cat-division-label.tra { color: var(--cat-tra); }
 
-    .cat-header h2 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.3rem, 2.5vw, 1.75rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; }
-    .cat-header h2.mal { color: var(--cat-mal); }
-    .cat-header h2.gen { color: var(--cat-gen); }
-    .cat-header h2.hae { color: var(--cat-hae); }
-    .cat-header h2.tra { color: var(--cat-tra); }
-    .cat-desc { font-size: 0.88rem; color: var(--clr-muted); margin-top: 6px; line-height: 1.65; max-width: 560px; }
+.cat-header h2 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.3rem, 2.5vw, 1.75rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; }
+.cat-header h2.mal { color: var(--cat-mal); }
+.cat-header h2.gen { color: var(--cat-gen); }
+.cat-header h2.hae { color: var(--cat-hae); }
+.cat-header h2.tra { color: var(--cat-tra); }
+.cat-desc { font-size: 0.88rem; color: var(--clr-muted); margin-top: 6px; line-height: 1.65; max-width: 560px; }
 
-    /* ── GUIDE GRID ── */
-    .guide-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+/* ── GUIDE GRID ── */
+.guide-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 
-    .guide-card {
-      background: var(--clr-surface); border: 1px solid var(--clr-border);
-      border-radius: var(--radius-md); overflow: hidden;
-      display: flex; flex-direction: column;
-      transition: box-shadow var(--ease), transform var(--ease);
-    }
-    .guide-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.08); transform: translateY(-2px); }
+.guide-card {
+background: var(--clr-surface); border: 1px solid var(--clr-border);
+border-radius: var(--radius-md); overflow: hidden;
+display: flex; flex-direction: column;
+transition: box-shadow var(--ease), transform var(--ease);
+}
+.guide-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.08); transform: translateY(-2px); }
 
-    .card-accent { height: 4px; flex-shrink: 0; }
-    .card-accent.mal { background: var(--cat-mal); }
-    .card-accent.gen { background: var(--cat-gen); }
-    .card-accent.hae { background: var(--cat-hae); }
-    .card-accent.tra { background: var(--cat-tra); }
+.card-accent { height: 4px; flex-shrink: 0; }
+.card-accent.mal { background: var(--cat-mal); }
+.card-accent.gen { background: var(--cat-gen); }
+.card-accent.hae { background: var(--cat-hae); }
+.card-accent.tra { background: var(--cat-tra); }
 
-    .card-body { padding: 20px 20px 16px; flex: 1; display: flex; flex-direction: column; }
-    .card-body h3 { font-size: 0.88rem; font-weight: 700; line-height: 1.4; margin-bottom: 8px; }
-    .card-body h3.mal { color: var(--cat-mal); }
-    .card-body h3.gen { color: var(--cat-gen); }
-    .card-body h3.hae { color: var(--cat-hae); }
-    .card-body h3.tra { color: var(--cat-tra); }
-    .card-body p { font-size: 0.8rem; color: var(--clr-muted); line-height: 1.65; flex: 1; }
+.card-body { padding: 20px 20px 16px; flex: 1; display: flex; flex-direction: column; }
+.card-body h3 { font-size: 0.88rem; font-weight: 700; line-height: 1.4; margin-bottom: 8px; }
+.card-body h3.mal { color: var(--cat-mal); }
+.card-body h3.gen { color: var(--cat-gen); }
+.card-body h3.hae { color: var(--cat-hae); }
+.card-body h3.tra { color: var(--cat-tra); }
+.card-body p { font-size: 0.8rem; color: var(--clr-muted); line-height: 1.65; flex: 1; }
 
-    .card-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--clr-border); }
-    .source-badge { font-size: 0.68rem; font-weight: 600; color: var(--clr-muted); background: var(--clr-bg); border: 1px solid var(--clr-border); padding: 3px 8px; border-radius: 4px; }
-    .soon-badge { font-size: 0.64rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 3px 9px; border-radius: 100px; border: 1px solid; white-space: nowrap; }
-    .soon-badge.mal { background: var(--cat-mal-tint); color: var(--cat-mal); border-color: var(--cat-mal-border); }
-    .soon-badge.gen { background: var(--cat-gen-tint); color: var(--cat-gen); border-color: var(--cat-gen-border); }
-    .soon-badge.hae { background: var(--cat-hae-tint); color: var(--cat-hae); border-color: var(--cat-hae-border); }
-    .soon-badge.tra { background: var(--cat-tra-tint); color: var(--cat-tra); border-color: var(--cat-tra-border); }
+.card-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--clr-border); }
+.source-badge { font-size: 0.68rem; font-weight: 600; color: var(--clr-muted); background: var(--clr-bg); border: 1px solid var(--clr-border); padding: 3px 8px; border-radius: 4px; }
+.soon-badge { font-size: 0.64rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 3px 9px; border-radius: 100px; border: 1px solid; white-space: nowrap; }
+.soon-badge.mal { background: var(--cat-mal-tint); color: var(--cat-mal); border-color: var(--cat-mal-border); }
+.soon-badge.gen { background: var(--cat-gen-tint); color: var(--cat-gen); border-color: var(--cat-gen-border); }
+.soon-badge.hae { background: var(--cat-hae-tint); color: var(--cat-hae); border-color: var(--cat-hae-border); }
+.soon-badge.tra { background: var(--cat-tra-tint); color: var(--cat-tra); border-color: var(--cat-tra-border); }
 
-    /* ── FOOTER ── */
-    footer { background: var(--clr-surface); border-top: 1px solid var(--clr-border); padding: 36px 0; }
-    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .footer-note { font-size: 0.775rem; color: var(--clr-muted); text-align: right; line-height: 1.6; }
-    .footer-note strong { color: var(--clr-text-secondary); font-weight: 600; }
+/* ── FOOTER ── */
+footer { background: var(--clr-surface); border-top: 1px solid var(--clr-border); padding: 36px 0; }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.footer-note { font-size: 0.775rem; color: var(--clr-muted); text-align: right; line-height: 1.6; }
+.footer-note strong { color: var(--clr-text-secondary); font-weight: 600; }
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 860px) { .guide-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 560px) { .guide-grid { grid-template-columns: 1fr; } .cat-header { flex-direction: column; gap: 12px; } }
-    @media (max-width: 640px) { .nav-links a:not(.nav-cta) { display: none; } .footer-inner { flex-direction: column; align-items: flex-start; gap: 14px; } .footer-note { text-align: left; } }
-  </style>
-  <!-- ── Favicons / Web Manifest — added by favicon polish v1 ── -->
-  <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <meta name="theme-color" content="#7a1f2b" />
-  <link rel="stylesheet" media="print" href="/print.css" />
+/* ── RESPONSIVE ── */
+@media (max-width: 860px) { .guide-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .guide-grid { grid-template-columns: 1fr; } .cat-header { flex-direction: column; gap: 12px; } }
+@media (max-width: 640px) { .nav-links a:not(.nav-cta) { display: none; } .footer-inner { flex-direction: column; align-items: flex-start; gap: 14px; } .footer-note { text-align: left; } }
+</style>
+<!-- ── Favicons / Web Manifest — added by favicon polish v1 ── -->
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#7a1f2b" />
+<link rel="stylesheet" media="print" href="/print.css" />
 </head>
 <body>
-  <header>
-    <div class="container">
-      <nav class="nav">
-        <a href="/" class="brand">
-          <img src="logo.png" alt="Mohsin Haematology Academy logo">
-          <div class="brand-text">
-            <div class="brand-name">Mohsin Haematology Academy</div>
-            <div class="brand-tagline">Clinical Education &amp; Digital Tools</div>
-          </div>
-        </a>
-        <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" onclick="var n=this.closest('.nav');var o=n.classList.toggle('nav-open');this.setAttribute('aria-expanded',o);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-        </button>
-        <div class="nav-links">
-          <a href="/tools">Tools</a>
-          <a href="/guidelines" class="active">Guidelines</a>
-          <a href="/education">Education</a>
-          <a href="/journal-club">Journal Club</a>
-          <a href="/about">About</a>
-          <a href="haemcalc.html" class="nav-cta">Open HaemCalc</a>
-        </div>
-      </nav>
-    </div>
-  </header>
+<header>
+<div class="container">
+<nav class="nav">
+<a href="/" class="brand">
+<img src="logo.png" alt="Mohsin Haematology Academy logo">
+<div class="brand-text">
+<div class="brand-name">Mohsin Haematology Academy</div>
+<div class="brand-tagline">Clinical Education &amp; Digital Tools</div>
+</div>
+</a>
+<button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" onclick="var n=this.closest('.nav');var o=n.classList.toggle('nav-open');this.setAttribute('aria-expanded',o);">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+</button>
+<div class="nav-links">
+<a href="/tools">Tools</a>
+<a href="/guidelines" class="active">Guidelines</a>
+<a href="/education">Education</a>
+<a href="/journal-club">Journal Club</a>
+<a href="/about">About</a>
+<a href="haemcalc.html" class="nav-cta">Open HaemCalc</a>
+</div>
+</nav>
+</div>
+</header>
 
-  <!-- PAGE HERO -->
-  <div class="page-hero">
-    <div class="container">
-      <div class="page-eyebrow">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        In Development
-      </div>
-      <h1>Haematology Guidelines</h1>
-      <p>Structured summaries of BSH, NICE, and ELN guidelines — organised by BSH division and written for clinical use at the bedside, not just reference shelves.</p>
-      <!-- Jump nav -->
-      <div class="jump-nav">
-        <a href="#malignant" class="jump-pill mal">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-          Malignant Haematology
-        </a>
-        <a href="#general" class="jump-pill gen">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          General Haematology
-        </a>
-        <a href="#haemostasis" class="jump-pill hae">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          Haemostasis &amp; Thrombosis
-        </a>
-        <a href="#transfusion" class="jump-pill tra">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          Transfusion Medicine
-        </a>
-      </div>
-    </div>
-  </div>
+<!-- PAGE HERO -->
+<div class="page-hero">
+<div class="container">
+<div class="page-eyebrow">
+<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+In Development
+</div>
+<h1>Haematology Guidelines</h1>
+<p>Structured summaries of BSH, NICE, and ELN guidelines — organised by BSH division and written for clinical use at the bedside, not just reference shelves.</p>
+<!-- Jump nav -->
+<div class="jump-nav">
+<a href="#malignant" class="jump-pill mal">
+<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+Malignant Haematology
+</a>
+<a href="#general" class="jump-pill gen">
+<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+General Haematology
+</a>
+<a href="#haemostasis" class="jump-pill hae">
+<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+Haemostasis &amp; Thrombosis
+</a>
+<a href="#transfusion" class="jump-pill tra">
+<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+Transfusion Medicine
+</a>
+</div>
+</div>
+</div>
 
-  <main>
-    <div class="container">
+<main>
+<div class="container">
 
-      <!-- ══ SECTION 1: MALIGNANT HAEMATOLOGY ══ -->
-      <section class="cat-section" id="malignant">
-        <div class="cat-header">
-          <div class="cat-icon mal">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-          </div>
-          <div class="cat-title-group">
-            <div class="cat-division-label mal">BSH Division</div>
-            <h2 class="mal">Malignant Haematology</h2>
-            <p class="cat-desc">Leukaemia, lymphoma, myeloma, and myeloproliferative conditions — diagnostic criteria, staging, and treatment frameworks aligned to ELN, BSH, and NICE.</p>
-          </div>
-        </div>
+<!-- ══ SECTION 1: MALIGNANT HAEMATOLOGY ══ -->
+<section class="cat-section" id="malignant">
+<div class="cat-header">
+<div class="cat-icon mal">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+</div>
+<div class="cat-title-group">
+<div class="cat-division-label mal">BSH Division</div>
+<h2 class="mal">Malignant Haematology</h2>
+<p class="cat-desc">Leukaemia, lymphoma, myeloma, and myeloproliferative conditions — diagnostic criteria, staging, and treatment frameworks aligned to ELN, BSH, and NICE.</p>
+</div>
+</div>
 
-        <div class="guide-grid">
+<div class="guide-grid">
 
-          <div class="guide-card">
-            <div class="card-accent mal"></div>
-            <div class="card-body">
-              <h3 class="mal">AML — Diagnosis &amp; Risk Stratification</h3>
-              <p>WHO 2022 classification, ELN 2022 risk categories, and frontline treatment pathways including intensive and non-intensive options.</p>
-              <div class="card-footer">
-                <span class="source-badge">ELN 2022 · BSH</span>
-                <span class="soon-badge mal">Coming Soon</span>
-              </div>
-            </div>
-          </div>
+<div class="guide-card">
+<div class="card-accent mal"></div>
+<div class="card-body">
+<h3 class="mal">AML — Diagnosis &amp; Risk Stratification</h3>
+<p>WHO 2022 classification, ELN 2022 risk categories, and frontline treatment pathways including intensive and non-intensive options.</p>
+<div class="card-footer">
+<span class="source-badge">ELN 2022 · BSH</span>
+<span class="soon-badge mal">Coming Soon</span>
+</div>
+</div>
+</div>
 
-          <div class="guide-card">
-            <div class="card-accent mal"></div>
-            <div class="card-body">
-              <h3 class="mal">CML — Diagnosis, Monitoring &amp; TKI Selection</h3>
-              <p>BCR-ABL1 monitoring milestones, ELN response criteria, TKI choice, and management of treatment resistance or intolerance.</p>
-              <div class="card-footer">
-                <span class="source-badge">ELN 2020 · BSH</span>
-                <span class="soon-badge mal">Coming Soon</span>
-              </div>
-            </div>
-          </div>
+<div class="guide-card">
+<div class="card-accent mal"></div>
+<div class="card-body">
+<h3 class="mal">CML — Diagnosis, Monitoring &amp; TKI Selection</h3>
+<p>BCR-ABL1 monitoring milestones, ELN response criteria, TKI choice, and management of treatment resistance or intolerance.</p>
+<div class="card-footer">
+<span class="source-badge">ELN 2020 · BSH</span>
+<span class="soon-badge mal">Coming Soon</span>
+</div>
+</div>
+</div>
 
-          <div class="guide-card">
-            <div class="card-accent mal"></div>
-            <div class="card-body">
-              <h3 class="mal">Myeloma — Diagnosis, Staging &amp; Response</h3>
-              <p>IMWG diagnostic criteria, R-ISS staging, MRD assessment, and response evaluation in transplant-eligible and non-eligible patients.</p>
-              <div class="card-footer">
-                <span class="source-badge">IMWG · BSH · NICE</span>
-                <span class="soon-badge mal">Coming Soon</span>
-              </div>
-            </div>
-          </div>
+<div class="guide-card">
+<div class="card-accent mal"></div>
+<div class="card-body">
+<h3 class="mal">Myeloma — Diagnosis, Staging &amp; Response</h3>
+<p>IMWG diagnostic criteria, R-ISS staging, MRD assessment, and response evaluation in transplant-eligible and non-eligible patients.</p>
+<div class="card-footer">
+<span class="source-badge">IMWG · BSH · NICE</span>
+<span class="soon-badge mal">Coming Soon</span>
+</div>
+</div>
+</div>
 
-          <div class="guide-card">
-            <div class="card-accent mal"></div>
-            <div class="card-body">
-              <h3 class="mal">DLBCL — Classification &amp; Management</h3>
-              <p>WHO 2022 lymphoma classification, IPI risk stratification, R-CHOP-based regimens, and CNS prophylaxis criteria.</p>
-              <div class="card-footer">
-                <span class="source-badge">BSH · NICE NG52</span>
-                <span class="soon-badge mal">Coming Soon</span>
-              </div>
-            </div>
-          </div>
+<div class="guide-card">
+<div class="card-accent mal"></div>
+<div class="card-body">
+<h3 class="mal">DLBCL — Classification &amp; Management</h3>
+<p>WHO 2022 lymphoma classification, IPI risk stratification, R-CHOP-based regimens, and CNS prophylaxis criteria.</p>
+<div class="card-footer">
+<span class="source-badge">BSH · NICE NG52</span>
+<span class="soon-badge mal">Coming Soon</span>
+</div>
+</div>
+</div>
 
-          <a href="guidelines/cll/" class="guide-card guide-card--live" style="display:block; text-decoration:none; color:inherit;">
-            <div class="card-accent mal"></div>
-            <div class="card-body">
-              <h3 class="mal">CLL — Unified ELN / BSH / ASH Guideline</h3>
-              <p>MBL distinction, iwCLL active disease criteria, Binet/Rai staging, FISH + TP53 + IGHV work-up, first-line treatment (zanubrutinib TA931, acalabrutinib TA689, venetoclax+obi TA1119), R/R management, Richter's transformation, and infection prophylaxis. BSH 2025 · NICE aligned · v1.9 April 2026.</p>
-              <div class="card-footer">
-                <span class="source-badge">BSH 2025 · ELN · NCCN · NICE TA931/TA689/TA1119</span>
-                <span class="soon-badge mal" style="background:var(--cat-mal); color:#fff; border:none;">Read →</span>
-              </div>
-            </div>
-          </a>
+<a href="guidelines/cll/" class="guide-card guide-card--live" style="display:block; text-decoration:none; color:inherit;">
+<div class="card-accent mal"></div>
+<div class="card-body">
+<h3 class="mal">CLL — Unified ELN / BSH / ASH Guideline</h3>
+<p>MBL distinction, iwCLL active disease criteria, Binet/Rai staging, FISH + TP53 + IGHV work-up, first-line treatment (zanubrutinib TA931, acalabrutinib TA689, venetoclax+obi TA1119), R/R management, Richter's transformation, and infection prophylaxis. BSH 2025 · NICE aligned · v1.9 April 2026.</p>
+<div class="card-footer">
+<span class="source-badge">BSH 2025 · ELN · NCCN · NICE TA931/TA689/TA1119</span>
+<span class="soon-badge mal" style="background:var(--cat-mal); color:#fff; border:none;">Read →</span>
+</div>
+</div>
+</a>
 
-          <div class="guide-card">
-            <div class="card-accent mal"></div>
-            <div class="card-body">
-              <h3 class="mal">MDS — Diagnosis &amp; Risk Stratification</h3>
-              <p>WHO 2022 classification, IPSS-R scoring, treatment pathway including ESAs, hypomethylating agents, and transplant eligibility.</p>
-              <div class="card-footer">
-                <span class="source-badge">WHO 2022 · ELN · BSH</span>
-                <span class="soon-badge mal">Coming Soon</span>
-              </div>
-            </div>
-          </div>
+<a href="guidelines/mcl/" class="guide-card guide-card--live" style="display:block; text-decoration:none; color:inherit;">
+<div class="card-accent mal"></div>
+<div class="card-body">
+<h3 class="mal">MCL — UK Practice-Oriented Evidence Guide</h3>
+<p>Diagnosis, risk stratification (MIPI/MIPI-c, Ki-67, TP53), four-category first-line pathway for fit and older/less fit patients, R/R management (NICE TA502 ibrutinib, TA1081 zanubrutinib, TA677 brexu-cel), supportive care, audit. BSH 2024 &middot; TRIANGLE &middot; ECHO &middot; SYMPATICO &middot; v1.5.3 May 2026.</p>
+<div class="card-footer">
+<span class="source-badge">BSH 2024 &middot; NICE TA502/TA1081/TA677 &middot; ESMO &middot; NCCN</span>
+<span class="soon-badge mal" style="background:var(--cat-mal); color:#fff; border:none;">Read &rarr;</span>
+</div>
+</div>
+</a>
 
-        </div>
-      </section>
+<div class="guide-card">
+<div class="card-accent mal"></div>
+<div class="card-body">
+<h3 class="mal">MDS — Diagnosis &amp; Risk Stratification</h3>
+<p>WHO 2022 classification, IPSS-R scoring, treatment pathway including ESAs, hypomethylating agents, and transplant eligibility.</p>
+<div class="card-footer">
+<span class="source-badge">WHO 2022 · ELN · BSH</span>
+<span class="soon-badge mal">Coming Soon</span>
+</div>
+</div>
+</div>
 
-      <!-- ══ SECTION 2: GENERAL HAEMATOLOGY ══ -->
-      <section class="cat-section" id="general">
-        <div class="cat-header">
-          <div class="cat-icon gen">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          </div>
-          <div class="cat-title-group">
-            <div class="cat-division-label gen">BSH Division</div>
-            <h2 class="gen">General Haematology</h2>
-            <p class="cat-desc">Anaemia, haemoglobinopathies, cytopenias, and haematological emergencies — grounded in NICE and BSH guidance for everyday clinical decision-making.</p>
-          </div>
-        </div>
+</div>
+</section>
 
-        <div class="guide-grid">
+<!-- ══ SECTION 2: GENERAL HAEMATOLOGY ══ -->
+<section class="cat-section" id="general">
+<div class="cat-header">
+<div class="cat-icon gen">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+</div>
+<div class="cat-title-group">
+<div class="cat-division-label gen">BSH Division</div>
+<h2 class="gen">General Haematology</h2>
+<p class="cat-desc">Anaemia, haemoglobinopathies, cytopenias, and haematological emergencies — grounded in NICE and BSH guidance for everyday clinical decision-making.</p>
+</div>
+</div>
 
-          <a href="guidelines/anaemia-in-pregnancy/" class="guide-card guide-card--live" style="display:block; text-decoration:none; color:inherit;">
-            <div class="card-accent gen"></div>
-            <div class="card-body">
-              <h3 class="gen">Anaemia in Pregnancy — UK Clinical Guideline</h3>
-              <p>Trimester Hb thresholds, ferritin interpretation, oral iron first-line, IV iron indications &amp; safety, postpartum Hb bands, and transfusion principles. Four pathway diagrams, one-page bedside summary, teaching deck, patient leaflet and audit workbook. BSH 2020 · NICE · RCOG · MHRA · NHS SCT. v1.0 April 2026.</p>
-              <div class="card-footer">
-                <span class="source-badge">BSH 2020 · NICE NG201/NG24 · RCOG GTG47/52 · MHRA</span>
-                <span class="soon-badge gen" style="background:var(--cat-gen); color:#fff; border:none;">Read →</span>
-              </div>
-            </div>
-          </a>
+<div class="guide-grid">
 
-          <div class="guide-card">
-            <div class="card-accent gen"></div>
-            <div class="card-body">
-              <h3 class="gen">Anaemia — Investigation &amp; Management</h3>
-              <p>Diagnostic pathway covering iron deficiency, B12/folate deficiency, haemolytic anaemia, and anaemia of chronic disease including investigation algorithm.</p>
-              <div class="card-footer">
-                <span class="source-badge">BSH · NICE NG24</span>
-                <span class="soon-badge gen">Coming Soon</span>
-              </div>
-            </div>
-          </div>
+<a href="guidelines/anaemia-in-pregnancy/" class="guide-card guide-card--live" style="display:block; text-decoration:none; color:inherit;">
+<div class="card-accent gen"></div>
+<div class="card-body">
+<h3 class="gen">Anaemia in Pregnancy — UK Clinical Guideline</h3>
+<p>Trimester Hb thresholds, ferritin interpretation, oral iron first-line, IV iron indications &amp; safety, postpartum Hb bands, and transfusion principles. Four pathway diagrams, one-page bedside summary, teaching deck, patient leaflet and audit workbook. BSH 2020 · NICE · RCOG · MHRA · NHS SCT. v1.0 April 2026.</p>
+<div class="card-footer">
+<span class="source-badge">BSH 2020 · NICE NG201/NG24 · RCOG GTG47/52 · MHRA</span>
+<span class="soon-badge gen" style="background:var(--cat-gen); color:#fff; border:none;">Read →</span>
+</div>
+</div>
+</a>
 
-          <div class="guide-card">
-            <div class="card-accent gen"></div>
-            <div class="card-body">
-              <h3 class="gen">Neutropenic Sepsis — Assessment &amp; Treatment</h3>
-              <p>Febrile neutropenia risk stratification using MASCC score, empirical antibiotic pathways, escalation criteria, and antifungal considerations.</p>
-              <div class="card-footer">
-                <span class="source-badge">NICE CG151 · BSH</span>
-                <span class="soon-badge gen">Coming Soon</span>
-              </div>
-            </div>
-          </div>
+<div class="guide-card">
+<div class="card-accent gen"></div>
+<div class="card-body">
+<h3 class="gen">Anaemia — Investigation &amp; Management</h3>
+<p>Diagnostic pathway covering iron deficiency, B12/folate deficiency, haemolytic anaemia, and anaemia of chronic disease including investigation algorithm.</p>
+<div class="card-footer">
+<span class="source-badge">BSH · NICE NG24</span>
+<span class="soon-badge gen">Coming Soon</span>
+</div>
+</div>
+</div>
 
-          <div class="guide-card">
-            <div class="card-accent gen"></div>
-            <div class="card-body">
-              <h3 class="gen">Sickle Cell Disease — Acute &amp; Long-Term Care</h3>
-              <p>Management of acute crisis, acute chest syndrome, and chronic complications. Hydroxyurea indications, transfusion thresholds, and newborn screening.</p>
-              <div class="card-footer">
-                <span class="source-badge">BSH · NICE NG143</span>
-                <span class="soon-badge gen">Coming Soon</span>
-              </div>
-            </div>
-          </div>
+<div class="guide-card">
+<div class="card-accent gen"></div>
+<div class="card-body">
+<h3 class="gen">Neutropenic Sepsis — Assessment &amp; Treatment</h3>
+<p>Febrile neutropenia risk stratification using MASCC score, empirical antibiotic pathways, escalation criteria, and antifungal considerations.</p>
+<div class="card-footer">
+<span class="source-badge">NICE CG151 · BSH</span>
+<span class="soon-badge gen">Coming Soon</span>
+</div>
+</div>
+</div>
 
-          <div class="guide-card">
-            <div class="card-accent gen"></div>
-            <div class="card-body">
-              <h3 class="gen">Thrombocytopenia — Differential &amp; Approach</h3>
-              <p>Structured diagnostic approach to low platelet counts, distinguishing ITP, hypersplenism, marrow failure, HIT, and TTP/HUS.</p>
-              <div class="card-footer">
-                <span class="source-badge">BSH · BCSH</span>
-                <span class="soon-badge gen">Coming Soon</span>
-              </div>
-            </div>
-          </div>
+<div class="guide-card">
+<div class="card-accent gen"></div>
+<div class="card-body">
+<h3 class="gen">Sickle Cell Disease — Acute &amp; Long-Term Care</h3>
+<p>Management of acute crisis, acute chest syndrome, and chronic complications. Hydroxyurea indications, transfusion thresholds, and newborn screening.</p>
+<div class="card-footer">
+<span class="source-badge">BSH · NICE NG143</span>
+<span class="soon-badge gen">Coming Soon</span>
+</div>
+</div>
+</div>
 
-          <div class="guide-card">
-            <div class="card-accent gen"></div>
-            <div class="card-body">
-              <h3 class="gen">Aplastic Anaemia — Diagnosis &amp; Management</h3>
-              <p>Severity criteria (SAA/vSAA), bone marrow transplant eligibility, IST with ATG/cyclosporin, and eltrombopag use in the current era.</p>
-              <div class="card-footer">
-                <span class="source-badge">BSH · EBMT</span>
-                <span class="soon-badge gen">Coming Soon</span>
-              </div>
-            </div>
-          </div>
+<div class="guide-card">
+<div class="card-accent gen"></div>
+<div class="card-body">
+<h3 class="gen">Thrombocytopenia — Differential &amp; Approach</h3>
+<p>Structured diagnostic approach to low platelet counts, distinguishing ITP, hypersplenism, marrow failure, HIT, and TTP/HUS.</p>
+<div class="card-footer">
+<span class="source-badge">BSH · BCSH</span>
+<span class="soon-badge gen">Coming Soon</span>
+</div>
+</div>
+</div>
 
-          <div class="guide-card">
-            <div class="card-accent gen"></div>
-            <div class="card-body">
-              <h3 class="gen">Thalassaemia — Classification &amp; Monitoring</h3>
-              <p>Alpha and beta thalassaemia genotypes, transfusion dependency criteria, iron chelation regimens, and transplant/gene therapy indications.</p>
-              <div class="card-footer">
-                <span class="source-badge">BSH · TIF Guidelines</span>
-                <span class="soon-badge gen">Coming Soon</span>
-              </div>
-            </div>
-          </div>
+<div class="guide-card">
+<div class="card-accent gen"></div>
+<div class="card-body">
+<h3 class="gen">Aplastic Anaemia — Diagnosis &amp; Management</h3>
+<p>Severity criteria (SAA/vSAA), bone marrow transplant eligibility, IST with ATG/cyclosporin, and eltrombopag use in the current era.</p>
+<div class="card-footer">
+<span class="source-badge">BSH · EBMT</span>
+<span class="soon-badge gen">Coming Soon</span>
+</div>
+</div>
+</div>
 
-        </div>
-      </section>
+<div class="guide-card">
+<div class="card-accent gen"></div>
+<div class="card-body">
+<h3 class="gen">Thalassaemia — Classification &amp; Monitoring</h3>
+<p>Alpha and beta thalassaemia genotypes, transfusion dependency criteria, iron chelation regimens, and transplant/gene therapy indications.</p>
+<div class="card-footer">
+<span class="source-badge">BSH · TIF Guidelines</span>
+<span class="soon-badge gen">Coming Soon</span>
+</div>
+</div>
+</div>
 
-      <!-- ══ SECTION 3: HAEMOSTASIS & THROMBOSIS ══ -->
-      <section class="cat-section" id="haemostasis">
-        <div class="cat-header">
-          <div class="cat-icon hae">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <div class="cat-title-group">
-            <div class="cat-division-label hae">BSH Division</div>
-            <h2 class="hae">Haemostasis &amp; Thrombosis</h2>
-            <p class="cat-desc">Venous and arterial thrombosis, bleeding disorders, and coagulopathies — from anticoagulation management to inherited bleeding conditions.</p>
-          </div>
-        </div>
+</div>
+</section>
 
-        <div class="guide-grid">
+<!-- ══ SECTION 3: HAEMOSTASIS & THROMBOSIS ══ -->
+<section class="cat-section" id="haemostasis">
+<div class="cat-header">
+<div class="cat-icon hae">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+</div>
+<div class="cat-title-group">
+<div class="cat-division-label hae">BSH Division</div>
+<h2 class="hae">Haemostasis &amp; Thrombosis</h2>
+<p class="cat-desc">Venous and arterial thrombosis, bleeding disorders, and coagulopathies — from anticoagulation management to inherited bleeding conditions.</p>
+</div>
+</div>
 
-          <a href="guidelines/vte-cancer/" class="guide-card guide-card--live" style="display:block; text-decoration:none; color:inherit;">
-            <div class="card-accent hae"></div>
-            <div class="card-body">
-              <h3 class="hae">Cancer-Associated Thrombosis — VTE Management</h3>
-              <p>Anticoagulant selection (DOAC vs LMWH), Khorana risk stratification, duration of therapy, recurrent VTE, and thromboprophylaxis decisions in active malignancy.</p>
-              <div class="card-footer">
-                <span class="source-badge">NICE NG158 · BSH 2024 · ASCO 2023</span>
-                <span class="soon-badge hae" style="background:var(--cat-hae); color:#fff; border:none;">Read →</span>
-              </div>
-            </div>
-          </a>
+<div class="guide-grid">
 
-          <a href="guidelines/itp/" class="guide-card guide-card--live" style="display:block; text-decoration:none; color:inherit;">
-            <div class="card-accent hae"></div>
-            <div class="card-body">
-              <h3 class="hae">ITP in Adults — Diagnosis &amp; Management</h3>
-              <p>Diagnosis of exclusion, when to treat vs observe, first-line corticosteroids/IVIG, TPO-RA therapy (NICE TA221/TA853), splenectomy, and emergency bleeding management.</p>
-              <div class="card-footer">
-                <span class="source-badge">ASH 2019 · NICE TA221 · NICE TA853</span>
-                <span class="soon-badge hae" style="background:var(--cat-hae); color:#fff; border:none;">Read →</span>
-              </div>
-            </div>
-          </a>
+<a href="guidelines/vte-cancer/" class="guide-card guide-card--live" style="display:block; text-decoration:none; color:inherit;">
+<div class="card-accent hae"></div>
+<div class="card-body">
+<h3 class="hae">Cancer-Associated Thrombosis — VTE Management</h3>
+<p>Anticoagulant selection (DOAC vs LMWH), Khorana risk stratification, duration of therapy, recurrent VTE, and thromboprophylaxis decisions in active malignancy.</p>
+<div class="card-footer">
+<span class="source-badge">NICE NG158 · BSH 2024 · ASCO 2023</span>
+<span class="soon-badge hae" style="background:var(--cat-hae); color:#fff; border:none;">Read →</span>
+</div>
+</div>
+</a>
 
-          <div class="guide-card">
-            <div class="card-accent hae"></div>
-            <div class="card-body">
-              <h3 class="hae">TTP — Recognition &amp; Emergency Treatment</h3>
-              <p>PLASMIC score, ADAMTS13 testing, plasma exchange, caplacizumab, rituximab, and monitoring for relapse in acquired TTP.</p>
-              <div class="card-footer">
-                <span class="source-badge">BSH · ISTH</span>
-                <span class="soon-badge hae">Coming Soon</span>
-              </div>
-            </div>
-          </div>
+<a href="guidelines/itp/" class="guide-card guide-card--live" style="display:block; text-decoration:none; color:inherit;">
+<div class="card-accent hae"></div>
+<div class="card-body">
+<h3 class="hae">ITP in Adults — Diagnosis &amp; Management</h3>
+<p>Diagnosis of exclusion, when to treat vs observe, first-line corticosteroids/IVIG, TPO-RA therapy (NICE TA221/TA853), splenectomy, and emergency bleeding management.</p>
+<div class="card-footer">
+<span class="source-badge">ASH 2019 · NICE TA221 · NICE TA853</span>
+<span class="soon-badge hae" style="background:var(--cat-hae); color:#fff; border:none;">Read →</span>
+</div>
+</div>
+</a>
 
-          <div class="guide-card">
-            <div class="card-accent hae"></div>
-            <div class="card-body">
-              <h3 class="hae">HIT — Diagnosis &amp; Anticoagulation</h3>
-              <p>4T score, HIT antibody testing, heparin cessation, and alternative anticoagulant selection (argatroban, fondaparinux, DOACs).</p>
-              <div class="card-footer">
-                <span class="source-badge">BSH · ASH</span>
-                <span class="soon-badge hae">Coming Soon</span>
-              </div>
-            </div>
-          </div>
+<div class="guide-card">
+<div class="card-accent hae"></div>
+<div class="card-body">
+<h3 class="hae">TTP — Recognition &amp; Emergency Treatment</h3>
+<p>PLASMIC score, ADAMTS13 testing, plasma exchange, caplacizumab, rituximab, and monitoring for relapse in acquired TTP.</p>
+<div class="card-footer">
+<span class="source-badge">BSH · ISTH</span>
+<span class="soon-badge hae">Coming Soon</span>
+</div>
+</div>
+</div>
 
-          <div class="guide-card">
-            <div class="card-accent hae"></div>
-            <div class="card-body">
-              <h3 class="hae">Haemophilia — Factor Replacement &amp; Prophylaxis</h3>
-              <p>Severity classification, prophylaxis regimens, extended half-life factors, emicizumab, inhibitor management, and perioperative cover.</p>
-              <div class="card-footer">
-                <span class="source-badge">BSH · WFH 2020</span>
-                <span class="soon-badge hae">Coming Soon</span>
-              </div>
-            </div>
-          </div>
+<div class="guide-card">
+<div class="card-accent hae"></div>
+<div class="card-body">
+<h3 class="hae">HIT — Diagnosis &amp; Anticoagulation</h3>
+<p>4T score, HIT antibody testing, heparin cessation, and alternative anticoagulant selection (argatroban, fondaparinux, DOACs).</p>
+<div class="card-footer">
+<span class="source-badge">BSH · ASH</span>
+<span class="soon-badge hae">Coming Soon</span>
+</div>
+</div>
+</div>
 
-          <div class="guide-card">
-            <div class="card-accent hae"></div>
-            <div class="card-body">
-              <h3 class="hae">Antiphospholipid Syndrome</h3>
-              <p>Revised Sapporo classification, antibody testing interpretation, anticoagulation in thrombotic APS, and obstetric APS management.</p>
-              <div class="card-footer">
-                <span class="source-badge">BSH · EULAR</span>
-                <span class="soon-badge hae">Coming Soon</span>
-              </div>
-            </div>
-          </div>
+<div class="guide-card">
+<div class="card-accent hae"></div>
+<div class="card-body">
+<h3 class="hae">Haemophilia — Factor Replacement &amp; Prophylaxis</h3>
+<p>Severity classification, prophylaxis regimens, extended half-life factors, emicizumab, inhibitor management, and perioperative cover.</p>
+<div class="card-footer">
+<span class="source-badge">BSH · WFH 2020</span>
+<span class="soon-badge hae">Coming Soon</span>
+</div>
+</div>
+</div>
 
-        </div>
-      </section>
+<div class="guide-card">
+<div class="card-accent hae"></div>
+<div class="card-body">
+<h3 class="hae">Antiphospholipid Syndrome</h3>
+<p>Revised Sapporo classification, antibody testing interpretation, anticoagulation in thrombotic APS, and obstetric APS management.</p>
+<div class="card-footer">
+<span class="source-badge">BSH · EULAR</span>
+<span class="soon-badge hae">Coming Soon</span>
+</div>
+</div>
+</div>
 
-      <!-- ══ SECTION 4: TRANSFUSION MEDICINE ══ -->
-      <section class="cat-section" id="transfusion">
-        <div class="cat-header">
-          <div class="cat-icon tra">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </div>
-          <div class="cat-title-group">
-            <div class="cat-division-label tra">BSH Division</div>
-            <h2 class="tra">Transfusion Medicine</h2>
-            <p class="cat-desc">Blood component use, patient blood management, transfusion reactions, and special situations — including transfusion support in haematological malignancy.</p>
-          </div>
-        </div>
+</div>
+</section>
 
-        <div class="guide-grid">
+<!-- ══ SECTION 4: TRANSFUSION MEDICINE ══ -->
+<section class="cat-section" id="transfusion">
+<div class="cat-header">
+<div class="cat-icon tra">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+</div>
+<div class="cat-title-group">
+<div class="cat-division-label tra">BSH Division</div>
+<h2 class="tra">Transfusion Medicine</h2>
+<p class="cat-desc">Blood component use, patient blood management, transfusion reactions, and special situations — including transfusion support in haematological malignancy.</p>
+</div>
+</div>
 
-          <div class="guide-card">
-            <div class="card-accent tra"></div>
-            <div class="card-body">
-              <h3 class="tra">Red Cell Transfusion — Thresholds &amp; Consent</h3>
-              <p>Restrictive vs liberal transfusion strategies, Hb thresholds by clinical context, pre-transfusion sampling, and patient consent requirements.</p>
-              <div class="card-footer">
-                <span class="source-badge">BSH 2023 · NICE</span>
-                <span class="soon-badge tra">Coming Soon</span>
-              </div>
-            </div>
-          </div>
+<div class="guide-grid">
 
-          <div class="guide-card">
-            <div class="card-accent tra"></div>
-            <div class="card-body">
-              <h3 class="tra">Platelet Transfusion — Indications &amp; Thresholds</h3>
-              <p>Prophylactic and therapeutic thresholds for platelets in bleeding, procedures, and haematological malignancy. Irradiated and HLA-matched components.</p>
-              <div class="card-footer">
-                <span class="source-badge">BSH · NICE</span>
-                <span class="soon-badge tra">Coming Soon</span>
-              </div>
-            </div>
-          </div>
+<div class="guide-card">
+<div class="card-accent tra"></div>
+<div class="card-body">
+<h3 class="tra">Red Cell Transfusion — Thresholds &amp; Consent</h3>
+<p>Restrictive vs liberal transfusion strategies, Hb thresholds by clinical context, pre-transfusion sampling, and patient consent requirements.</p>
+<div class="card-footer">
+<span class="source-badge">BSH 2023 · NICE</span>
+<span class="soon-badge tra">Coming Soon</span>
+</div>
+</div>
+</div>
 
-          <div class="guide-card">
-            <div class="card-accent tra"></div>
-            <div class="card-body">
-              <h3 class="tra">Massive Haemorrhage Protocol</h3>
-              <p>MHP activation criteria, ratio-based resuscitation (RBC:FFP:platelets), viscoelastic testing (ROTEM/TEG), TXA use, and cell salvage.</p>
-              <div class="card-footer">
-                <span class="source-badge">BSH · SHOT</span>
-                <span class="soon-badge tra">Coming Soon</span>
-              </div>
-            </div>
-          </div>
+<div class="guide-card">
+<div class="card-accent tra"></div>
+<div class="card-body">
+<h3 class="tra">Platelet Transfusion — Indications &amp; Thresholds</h3>
+<p>Prophylactic and therapeutic thresholds for platelets in bleeding, procedures, and haematological malignancy. Irradiated and HLA-matched components.</p>
+<div class="card-footer">
+<span class="source-badge">BSH · NICE</span>
+<span class="soon-badge tra">Coming Soon</span>
+</div>
+</div>
+</div>
 
-          <div class="guide-card">
-            <div class="card-accent tra"></div>
-            <div class="card-body">
-              <h3 class="tra">Patient Blood Management</h3>
-              <p>Pre-operative optimisation, iron infusion protocols, intraoperative blood conservation, and post-operative anaemia management aligned to NHS PBM programme.</p>
-              <div class="card-footer">
-                <span class="source-badge">NHS PBM · BSH</span>
-                <span class="soon-badge tra">Coming Soon</span>
-              </div>
-            </div>
-          </div>
+<div class="guide-card">
+<div class="card-accent tra"></div>
+<div class="card-body">
+<h3 class="tra">Massive Haemorrhage Protocol</h3>
+<p>MHP activation criteria, ratio-based resuscitation (RBC:FFP:platelets), viscoelastic testing (ROTEM/TEG), TXA use, and cell salvage.</p>
+<div class="card-footer">
+<span class="source-badge">BSH · SHOT</span>
+<span class="soon-badge tra">Coming Soon</span>
+</div>
+</div>
+</div>
 
-          <div class="guide-card">
-            <div class="card-accent tra"></div>
-            <div class="card-body">
-              <h3 class="tra">Transfusion Reactions — Recognition &amp; Management</h3>
-              <p>Classification of acute and delayed reactions, immediate management of TACO, TRALI, acute haemolytic reactions, and SHOT reporting pathway.</p>
-              <div class="card-footer">
-                <span class="source-badge">SHOT · BSH · JPAC</span>
-                <span class="soon-badge tra">Coming Soon</span>
-              </div>
-            </div>
-          </div>
+<div class="guide-card">
+<div class="card-accent tra"></div>
+<div class="card-body">
+<h3 class="tra">Patient Blood Management</h3>
+<p>Pre-operative optimisation, iron infusion protocols, intraoperative blood conservation, and post-operative anaemia management aligned to NHS PBM programme.</p>
+<div class="card-footer">
+<span class="source-badge">NHS PBM · BSH</span>
+<span class="soon-badge tra">Coming Soon</span>
+</div>
+</div>
+</div>
 
-          <div class="guide-card">
-            <div class="card-accent tra"></div>
-            <div class="card-body">
-              <h3 class="tra">Transfusion in Haematological Malignancy</h3>
-              <p>Indications for irradiated and CMV-negative components, chronic transfusion support in MDS and aplasia, and iron overload monitoring.</p>
-              <div class="card-footer">
-                <span class="source-badge">BSH · BCSH</span>
-                <span class="soon-badge tra">Coming Soon</span>
-              </div>
-            </div>
-          </div>
+<div class="guide-card">
+<div class="card-accent tra"></div>
+<div class="card-body">
+<h3 class="tra">Transfusion Reactions — Recognition &amp; Management</h3>
+<p>Classification of acute and delayed reactions, immediate management of TACO, TRALI, acute haemolytic reactions, and SHOT reporting pathway.</p>
+<div class="card-footer">
+<span class="source-badge">SHOT · BSH · JPAC</span>
+<span class="soon-badge tra">Coming Soon</span>
+</div>
+</div>
+</div>
 
-        </div>
-      </section>
+<div class="guide-card">
+<div class="card-accent tra"></div>
+<div class="card-body">
+<h3 class="tra">Transfusion in Haematological Malignancy</h3>
+<p>Indications for irradiated and CMV-negative components, chronic transfusion support in MDS and aplasia, and iron overload monitoring.</p>
+<div class="card-footer">
+<span class="source-badge">BSH · BCSH</span>
+<span class="soon-badge tra">Coming Soon</span>
+</div>
+</div>
+</div>
 
-    </div>
-  </main>
+</div>
+</section>
 
-  <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <div>
-          <div class="brand-name">Mohsin Haematology Academy</div>
-          <div class="brand-tagline" style="font-size:0.64rem; color:var(--clr-muted); letter-spacing:0.07em; text-transform:uppercase; margin-top:3px; font-weight:500;">Clinical Education &amp; Digital Tools</div>
-        </div>
-        <div class="footer-note">
-          <strong>Educational use only.</strong><br>
-          Content does not replace clinical judgement or professional guidelines.<br>
-          <span style="font-size:0.72rem; color:var(--clr-muted); opacity:0.8;">&copy; 2025–2026 Dr Muhammad Mohsin &middot; Contributor: Muhammad Moaaz &middot; <a href="/contact" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Contact</a> &middot; <a href="/governance" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Clinical Governance</a> &middot; <a href="/legal/ip-notice/" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">IP &amp; Copyright</a> &middot; <a href="/legal/terms/" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Terms</a> &middot; <a href="/legal/disclaimer/" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Disclaimer</a> &middot; <a href="/legal/privacy/" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Privacy</a></span>
-        </div>
-      </div>
-    </div>
-  </footer>
+</div>
+</main>
+
+<footer>
+<div class="container">
+<div class="footer-inner">
+<div>
+<div class="brand-name">Mohsin Haematology Academy</div>
+<div class="brand-tagline" style="font-size:0.64rem; color:var(--clr-muted); letter-spacing:0.07em; text-transform:uppercase; margin-top:3px; font-weight:500;">Clinical Education &amp; Digital Tools</div>
+</div>
+<div class="footer-note">
+<strong>Educational use only.</strong><br>
+Content does not replace clinical judgement or professional guidelines.<br>
+<span style="font-size:0.72rem; color:var(--clr-muted); opacity:0.8;">&copy; 2025–2026 Dr Muhammad Mohsin &middot; Contributor: Muhammad Moaaz &middot; <a href="/contact" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Contact</a> &middot; <a href="/governance" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Clinical Governance</a> &middot; <a href="/legal/ip-notice/" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">IP &amp; Copyright</a> &middot; <a href="/legal/terms/" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Terms</a> &middot; <a href="/legal/disclaimer/" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Disclaimer</a> &middot; <a href="/legal/privacy/" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Privacy</a></span>
+</div>
+</div>
+</div>
+</footer>
 <script src="/legal/cookie-banner.js" defer></script>
 
 </body>

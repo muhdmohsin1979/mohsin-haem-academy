@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" font-family="Inter, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title>MCL Pathway at a Glance — v1.5.3</title>
+  <desc>Six-stage MCL clinical pathway strip: Diagnosis, Biology, Fitness, Access, MDT Decision, Follow-up. Each stage has a one-line meaning and concrete checklist items. Independent educational synthesis; not externally endorsed.</desc>
+
+  <style>
+    .title    { font-size: 22px; font-weight: 800; fill: #5a141d; }
+    .subtitle { font-size: 13px; fill: #555; }
+    .footer   { font-size: 11px; fill: #707070; }
+    .stage    { font-size: 16px; font-weight: 800; fill: #fff; }
+    .num      { font-size: 13px; font-weight: 800; fill: #fbeaec; }
+    .label    { font-size: 12px; font-weight: 600; fill: #1a1a1a; }
+    .sub      { font-size: 11.5px; fill: #444; }
+    .corner   { font-size: 10px; fill: #8a8a8a; }
+  </style>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7a1f2b"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1200" height="540" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="60" fill="#fbeaec"/>
+  <rect x="0" y="60" width="1200" height="3" fill="#7a1f2b"/>
+
+  <!-- Title -->
+  <text x="40" y="35" class="title">MCL Pathway at a Glance</text>
+  <text x="40" y="52" class="subtitle">Six-stage MDT pathway from diagnosis to follow-up  ·  MHA-MCL-2026-v1.5.3-DRAFT</text>
+
+  <!-- Six pill stages along the top -->
+  <g>
+    <!-- 1. Diagnosis -->
+    <rect x="40" y="90" width="170" height="48" rx="24" fill="#7a1f2b"/>
+    <text x="62" y="120" class="num">1</text>
+    <text x="125" y="120" text-anchor="middle" class="stage">Diagnosis</text>
+
+    <!-- 2. Biology -->
+    <rect x="225" y="90" width="170" height="48" rx="24" fill="#7a1f2b"/>
+    <text x="247" y="120" class="num">2</text>
+    <text x="310" y="120" text-anchor="middle" class="stage">Biology</text>
+
+    <!-- 3. Fitness -->
+    <rect x="410" y="90" width="170" height="48" rx="24" fill="#7a1f2b"/>
+    <text x="432" y="120" class="num">3</text>
+    <text x="495" y="120" text-anchor="middle" class="stage">Fitness</text>
+
+    <!-- 4. Access -->
+    <rect x="595" y="90" width="170" height="48" rx="24" fill="#7a1f2b"/>
+    <text x="617" y="120" class="num">4</text>
+    <text x="680" y="120" text-anchor="middle" class="stage">Access</text>
+
+    <!-- 5. MDT Decision -->
+    <rect x="780" y="90" width="200" height="48" rx="24" fill="#7a1f2b"/>
+    <text x="802" y="120" class="num">5</text>
+    <text x="880" y="120" text-anchor="middle" class="stage">MDT Decision</text>
+
+    <!-- 6. Follow-up -->
+    <rect x="995" y="90" width="170" height="48" rx="24" fill="#7a1f2b"/>
+    <text x="1017" y="120" class="num">6</text>
+    <text x="1080" y="120" text-anchor="middle" class="stage">Follow-up</text>
+  </g>
+
+  <!-- Connector arrows between pills -->
+  <line x1="210" y1="114" x2="223" y2="114" stroke="#7a1f2b" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="395" y1="114" x2="408" y2="114" stroke="#7a1f2b" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="580" y1="114" x2="593" y2="114" stroke="#7a1f2b" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="765" y1="114" x2="778" y2="114" stroke="#7a1f2b" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="980" y1="114" x2="993" y2="114" stroke="#7a1f2b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Stage detail cards below -->
+  <!-- 1. Diagnosis -->
+  <rect x="40" y="158" width="170" height="280" rx="10" fill="#ffffff" stroke="#e6c9ce" stroke-width="1.5"/>
+  <rect x="40" y="158" width="170" height="4" rx="2" fill="#7a1f2b"/>
+  <text x="125" y="180" text-anchor="middle" class="label">Confirm the diagnosis</text>
+  <text x="52" y="202" class="sub">•  Tissue biopsy</text>
+  <text x="52" y="220" class="sub">•  Cyclin D1 (BCL1)</text>
+  <text x="52" y="238" class="sub">•  SOX11 IHC</text>
+  <text x="52" y="256" class="sub">•  t(11;14) FISH if</text>
+  <text x="52" y="272" class="sub">    cyclin D1 negative</text>
+  <text x="52" y="294" class="sub">•  Morphological variant</text>
+  <text x="52" y="312" class="sub">    (classical / blastoid /</text>
+  <text x="52" y="328" class="sub">    pleomorphic / leukaemic</text>
+  <text x="52" y="344" class="sub">    non-nodal)</text>
+
+  <!-- 2. Biology -->
+  <rect x="225" y="158" width="170" height="280" rx="10" fill="#ffffff" stroke="#e6c9ce" stroke-width="1.5"/>
+  <rect x="225" y="158" width="170" height="4" rx="2" fill="#7a1f2b"/>
+  <text x="310" y="180" text-anchor="middle" class="label">Risk-stratify</text>
+  <text x="237" y="202" class="sub">•  Ki-67 (percentage)</text>
+  <text x="237" y="220" class="sub">•  TP53 IHC pattern</text>
+  <text x="237" y="238" class="sub">    AND NGS</text>
+  <text x="237" y="260" class="sub">•  MIPI / MIPI-c</text>
+  <text x="237" y="282" class="sub">•  Morphological variant</text>
+  <text x="237" y="300" class="sub">•  Complex karyotype</text>
+  <text x="237" y="322" class="sub">•  Assign MDT</text>
+  <text x="237" y="338" class="sub">    risk category</text>
+
+  <!-- 3. Fitness -->
+  <rect x="410" y="158" width="170" height="280" rx="10" fill="#ffffff" stroke="#e6c9ce" stroke-width="1.5"/>
+  <rect x="410" y="158" width="170" height="4" rx="2" fill="#7a1f2b"/>
+  <text x="495" y="180" text-anchor="middle" class="label">Assess fitness</text>
+  <text x="422" y="202" class="sub">•  ECOG performance</text>
+  <text x="422" y="220" class="sub">    status</text>
+  <text x="422" y="242" class="sub">•  Clinical Frailty Scale</text>
+  <text x="422" y="264" class="sub">•  Renal function (eGFR)</text>
+  <text x="422" y="286" class="sub">•  Cardiac assessment</text>
+  <text x="422" y="308" class="sub">•  Transplant suitability</text>
+  <text x="422" y="330" class="sub">•  Comorbidity burden</text>
+
+  <!-- 4. Access -->
+  <rect x="595" y="158" width="170" height="280" rx="10" fill="#ffffff" stroke="#e6c9ce" stroke-width="1.5"/>
+  <rect x="595" y="158" width="170" height="4" rx="2" fill="#7a1f2b"/>
+  <text x="680" y="180" text-anchor="middle" class="label">Check access</text>
+  <text x="607" y="202" class="sub">•  NICE TA status</text>
+  <text x="607" y="220" class="sub">•  Local formulary</text>
+  <text x="607" y="242" class="sub">•  NHS England</text>
+  <text x="607" y="258" class="sub">    commissioning</text>
+  <text x="607" y="280" class="sub">•  Clinical trial</text>
+  <text x="607" y="296" class="sub">    availability</text>
+  <text x="607" y="318" class="sub">•  Compassionate</text>
+  <text x="607" y="334" class="sub">    access / IFR / EAMS</text>
+
+  <!-- 5. MDT Decision -->
+  <rect x="780" y="158" width="200" height="280" rx="10" fill="#ffffff" stroke="#e6c9ce" stroke-width="1.5"/>
+  <rect x="780" y="158" width="200" height="4" rx="2" fill="#7a1f2b"/>
+  <text x="880" y="180" text-anchor="middle" class="label">Categorise &amp; document</text>
+  <text x="792" y="204" class="sub" font-weight="700" fill="#2e6b3e">A.  Routine</text>
+  <text x="792" y="220" class="sub">Current UK standard</text>
+  <text x="792" y="244" class="sub" font-weight="700" fill="#b08538">B.  Evolving access-dependent</text>
+  <text x="792" y="260" class="sub">Practice-changing evidence</text>
+  <text x="792" y="284" class="sub" font-weight="700" fill="#1f4e79">C.  Selected alternative</text>
+  <text x="792" y="300" class="sub">Frailty / palliative</text>
+  <text x="792" y="324" class="sub" font-weight="700" fill="#707070">D.  Not routine</text>
+  <text x="792" y="340" class="sub">Historical / no evidence</text>
+
+  <!-- 6. Follow-up -->
+  <rect x="995" y="158" width="170" height="280" rx="10" fill="#ffffff" stroke="#e6c9ce" stroke-width="1.5"/>
+  <rect x="995" y="158" width="170" height="4" rx="2" fill="#7a1f2b"/>
+  <text x="1080" y="180" text-anchor="middle" class="label">Follow-up</text>
+  <text x="1007" y="202" class="sub">•  Response assessment</text>
+  <text x="1007" y="224" class="sub">•  Surveillance (clinical</text>
+  <text x="1007" y="240" class="sub">    + bloods; symptom-led</text>
+  <text x="1007" y="256" class="sub">    imaging)</text>
+  <text x="1007" y="278" class="sub">•  Supportive care</text>
+  <text x="1007" y="294" class="sub">    (vaccination, Ig, PJP)</text>
+  <text x="1007" y="316" class="sub">•  Re-biopsy at relapse</text>
+  <text x="1007" y="334" class="sub">•  Re-test TP53 at relapse</text>
+
+  <!-- Footer reminder -->
+  <rect x="40" y="458" width="1125" height="40" rx="8" fill="#fdf5e3" stroke="#b08538" stroke-width="1.5"/>
+  <text x="60" y="483" class="label" fill="#b08538">⚠</text>
+  <text x="80" y="483" class="label">Evidence-supported does not equal NHS-commissioned. Verify current NICE / local commissioning / SmPC at the point of every decision.</text>
+
+  <text x="40" y="520" class="footer">Independent educational synthesis. Not externally endorsed. Local trust policy / current NICE / local formulary / SmPC take precedence.</text>
+  <text x="1160" y="528" text-anchor="end" class="corner">mohsinhaemacademy.com / guidelines / mcl  ·  v1.5.3 May 2026</text>
+</svg>
