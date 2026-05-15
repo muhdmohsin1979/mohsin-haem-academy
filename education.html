@@ -1,647 +1,564 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Education | Mohsin Haematology Academy</title>
-  <meta name="description" content="Haematology education for every level — medical students, resident doctors, trainees, consultants, nurses, GPs, and CPD. Built from real clinical practice.">
-  <!-- ── SEO / Social — added by SEO pass v1 ── -->
-  <link rel="canonical" href="https://mohsinhaemacademy.com/education" />
-  <meta property="og:site_name" content="Mohsin Haematology Academy" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://mohsinhaemacademy.com/education" />
-  <meta property="og:title" content="Education" />
-  <meta property="og:description" content="Haematology education for every level — medical students, resident doctors, trainees, consultants, nurses, GPs, and CPD. Built from real clinical practice." />
-  <meta property="og:image" content="https://mohsinhaemacademy.com/logo.png" />
-  <meta property="og:image:width" content="1536" />
-  <meta property="og:image:height" content="1024" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Education" />
-  <meta name="twitter:description" content="Haematology education for every level — medical students, resident doctors, trainees, consultants, nurses, GPs, and CPD. Built from real clinical practice." />
-  <meta name="twitter:image" content="https://mohsinhaemacademy.com/logo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --clr-primary: #7a1f2b; --clr-primary-dark: #5c1720; --clr-primary-tint: rgba(122,31,43,0.07);
-      --clr-primary-glow: rgba(122,31,43,0.18); --clr-bg: #f7f5f3; --clr-surface: #ffffff;
-      --clr-text: #1a1a1e; --clr-text-secondary: #3d3d42; --clr-muted: #6b717a;
-      --clr-border: #e6e1dd; --radius-sm: 6px; --radius-md: 12px; --ease: 0.22s cubic-bezier(0.4,0,0.2,1);
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Education | Mohsin Haematology Academy</title>
+<meta name="description" content="Haematology education for every level, from medical students through to, resident doctors, trainees, consultants, nurses, GPs, pharmacists, biomedical scientists, transfusion practitioners, and CPD. Built from real clinical practice.">
+<!-- ── SEO / Social ── -->
+<link rel="canonical" href="https://mohsinhaemacademy.com/education" />
+<meta property="og:site_name" content="Mohsin Haematology Academy" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://mohsinhaemacademy.com/education" />
+<meta property="og:title" content="Education" />
+<meta property="og:description" content="Haematology education for every clinical role and content type. Built from real clinical practice." />
+<meta property="og:image" content="https://mohsinhaemacademy.com/logo.png" />
+<meta property="og:image:width" content="1536" />
+<meta property="og:image:height" content="1024" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Education" />
+<meta name="twitter:description" content="Haematology education for every clinical role and content type. Built from real clinical practice." />
+<meta name="twitter:image" content="https://mohsinhaemacademy.com/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --clr-primary: #7a1f2b; --clr-primary-dark: #5c1720; --clr-primary-tint: rgba(122,31,43,0.07);
+  --clr-primary-glow: rgba(122,31,43,0.18); --clr-bg: #f7f5f3; --clr-surface: #ffffff;
+  --clr-text: #1a1a1e; --clr-text-secondary: #3d3d42; --clr-muted: #6b717a;
+  --clr-border: #e6e1dd; --radius-sm: 6px; --radius-md: 12px; --ease: 0.22s cubic-bezier(0.4,0,0.2,1);
 
-      /* Audience colours */
-      --cat-stu: #5a3a8a;   --cat-stu-tint: rgba(90,58,138,0.07);   --cat-stu-border: rgba(90,58,138,0.16);
-      --cat-fy:  #1a6b5a;   --cat-fy-tint:  rgba(26,107,90,0.07);   --cat-fy-border:  rgba(26,107,90,0.16);
-      --cat-tra: #1e4d8c;   --cat-tra-tint: rgba(30,77,140,0.07);   --cat-tra-border: rgba(30,77,140,0.16);
-      --cat-con: #1a2c5c;   --cat-con-tint: rgba(26,44,92,0.07);    --cat-con-border: rgba(26,44,92,0.16);
-      --cat-nur: #8c1e4a;   --cat-nur-tint: rgba(140,30,74,0.07);   --cat-nur-border: rgba(140,30,74,0.16);
-      --cat-gp:  #2d6b2d;   --cat-gp-tint:  rgba(45,107,45,0.07);   --cat-gp-border:  rgba(45,107,45,0.16);
-      --cat-cpd: #7a5a1a;   --cat-cpd-tint: rgba(122,90,26,0.08);   --cat-cpd-border: rgba(122,90,26,0.18);
-    }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--clr-bg); color: var(--clr-text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-    a { text-decoration: none; color: inherit; }
-    img { display: block; max-width: 100%; }
-    .container { width: min(1080px, 91%); margin-inline: auto; }
+  /* Audience colours: Clinical Training Pathway */
+  --cat-stu: #5a3a8a; --cat-stu-tint: rgba(90,58,138,0.07); --cat-stu-border: rgba(90,58,138,0.16);
+  --cat-fy: #1a6b5a; --cat-fy-tint: rgba(26,107,90,0.07); --cat-fy-border: rgba(26,107,90,0.16);
+  --cat-tra: #1e4d8c; --cat-tra-tint: rgba(30,77,140,0.07); --cat-tra-border: rgba(30,77,140,0.16);
+  --cat-con: #1a2c5c; --cat-con-tint: rgba(26,44,92,0.07); --cat-con-border: rgba(26,44,92,0.16);
 
-    /* ── NAV ── */
-    header { position: sticky; top: 0; z-index: 200; background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--clr-border); }
-    .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 24px; }
-    .brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
-    .brand img { height: 40px; width: auto; }
-    .brand-text { line-height: 1; }
-    .brand-name { font-size: 0.95rem; font-weight: 700; color: var(--clr-primary); letter-spacing: -0.01em; }
-    .brand-tagline { font-size: 0.66rem; font-weight: 500; color: var(--clr-muted); letter-spacing: 0.07em; text-transform: uppercase; margin-top: 3px; }
-    .nav-toggle { display: none; }
-    .nav-links { display: flex; align-items: center; gap: 2px; }
-    .nav-links a { font-size: 0.85rem; font-weight: 500; color: var(--clr-text-secondary); padding: 7px 13px; border-radius: var(--radius-sm); transition: color var(--ease), background var(--ease); white-space: nowrap; }
-    .nav-links a:hover, .nav-links a.active { color: var(--clr-primary); background: var(--clr-primary-tint); }
-    .nav-cta { background: var(--clr-primary) !important; color: #fff !important; font-weight: 600 !important; padding: 7px 16px !important; margin-left: 6px; box-shadow: 0 2px 8px var(--clr-primary-glow); }
-    .nav-cta:hover { background: var(--clr-primary-dark) !important; transform: translateY(-1px); }
+  /* Audience colours: Clinical Partners */
+  --cat-nur: #8c1e4a; --cat-nur-tint: rgba(140,30,74,0.07); --cat-nur-border: rgba(140,30,74,0.16);
+  --cat-gp: #2d6b2d; --cat-gp-tint: rgba(45,107,45,0.07); --cat-gp-border: rgba(45,107,45,0.16);
+  --cat-pha: #a04e1a; --cat-pha-tint: rgba(160,78,26,0.07); --cat-pha-border: rgba(160,78,26,0.16);
+  --cat-bms: #2e5e6e; --cat-bms-tint: rgba(46,94,110,0.07); --cat-bms-border: rgba(46,94,110,0.16);
+  --cat-tp:  #7d2447; --cat-tp-tint:  rgba(125,36,71,0.07); --cat-tp-border:  rgba(125,36,71,0.16);
 
-    /* ── PAGE HERO ── */
-    .page-hero { padding: 72px 0 56px; text-align: center; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(122,31,43,0.06) 0%, transparent 70%), linear-gradient(180deg, #fff 0%, var(--clr-bg) 100%); border-bottom: 1px solid var(--clr-border); }
-    .page-eyebrow { display: inline-flex; align-items: center; gap: 7px; background: var(--clr-primary-tint); color: var(--clr-primary); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 5px 14px; border-radius: 100px; margin-bottom: 20px; border: 1px solid rgba(122,31,43,0.12); }
-    .page-hero h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.9rem, 4vw, 2.9rem); font-weight: 700; color: var(--clr-primary-dark); letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 16px; }
-    .page-hero > .container > p { font-size: 1rem; color: var(--clr-text-secondary); line-height: 1.75; max-width: 560px; margin: 0 auto 32px; }
+  /* Standalone content-type sections */
+  --cat-cnm: #3d4e7a; --cat-cnm-tint: rgba(61,78,122,0.08); --cat-cnm-border: rgba(61,78,122,0.18);
+  --cat-cpd: #7a5a1a; --cat-cpd-tint: rgba(122,90,26,0.08); --cat-cpd-border: rgba(122,90,26,0.18);
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', -apple-system, sans-serif; background: var(--clr-bg); color: var(--clr-text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
+.container { width: min(1080px, 91%); margin-inline: auto; }
 
-    /* ── FORMAT STRIP ── */
-    .format-strip { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 4px; }
-    .format-chip { display: inline-flex; align-items: center; gap: 6px; font-size: 0.76rem; font-weight: 600; color: var(--clr-text-secondary); background: var(--clr-surface); border: 1px solid var(--clr-border); padding: 5px 13px; border-radius: 100px; white-space: nowrap; }
-    .format-chip svg { color: var(--clr-muted); }
-    .format-label { font-size: 0.68rem; font-weight: 600; color: var(--clr-muted); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 10px; }
+/* ── NAV ── */
+header { position: sticky; top: 0; z-index: 200; background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--clr-border); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 24px; }
+.brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.brand img { height: 40px; width: auto; }
+.brand-text { line-height: 1; }
+.brand-name { font-size: 0.95rem; font-weight: 700; color: var(--clr-primary); letter-spacing: -0.01em; }
+.brand-tagline { font-size: 0.66rem; font-weight: 500; color: var(--clr-muted); letter-spacing: 0.07em; text-transform: uppercase; margin-top: 3px; }
+.nav-toggle { display: none; }
+.nav-links { display: flex; align-items: center; gap: 2px; }
+.nav-links a { font-size: 0.85rem; font-weight: 500; color: var(--clr-text-secondary); padding: 7px 13px; border-radius: var(--radius-sm); transition: color var(--ease), background var(--ease); white-space: nowrap; }
+.nav-links a:hover, .nav-links a.active { color: var(--clr-primary); background: var(--clr-primary-tint); }
+.nav-cta { background: var(--clr-primary) !important; color: #fff !important; font-weight: 600 !important; padding: 7px 16px !important; margin-left: 6px; box-shadow: 0 2px 8px var(--clr-primary-glow); }
+.nav-cta:hover { background: var(--clr-primary-dark) !important; transform: translateY(-1px); }
 
-    /* ── CLUSTER HEADER ── */
-    .cluster-header { padding: 60px 0 0; }
-    .cluster-tag { display: inline-flex; align-items: center; gap: 6px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--clr-muted); margin-bottom: 6px; }
-    .cluster-tag::before { content: ''; display: block; width: 18px; height: 2px; background: var(--clr-border); border-radius: 2px; }
-    .cluster-header h2 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.2rem, 2.5vw, 1.55rem); font-weight: 700; color: var(--clr-text); letter-spacing: -0.02em; margin-bottom: 6px; }
-    .cluster-header p { font-size: 0.875rem; color: var(--clr-muted); max-width: 520px; line-height: 1.65; }
-    .cluster-divider { height: 1px; background: var(--clr-border); margin: 28px 0 0; }
+/* ── PAGE HERO ── */
+.page-hero { padding: 72px 0 56px; text-align: center; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(122,31,43,0.06) 0%, transparent 70%), linear-gradient(180deg, #fff 0%, var(--clr-bg) 100%); border-bottom: 1px solid var(--clr-border); }
+.page-eyebrow { display: inline-flex; align-items: center; gap: 7px; background: var(--clr-primary-tint); color: var(--clr-primary); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 5px 14px; border-radius: 100px; margin-bottom: 20px; border: 1px solid rgba(122,31,43,0.12); }
+.page-hero h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.9rem, 4vw, 2.9rem); font-weight: 700; color: var(--clr-primary-dark); letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 16px; }
+.page-hero > .container > p { font-size: 1rem; color: var(--clr-text-secondary); line-height: 1.75; max-width: 560px; margin: 0 auto 32px; }
 
-    /* ── AUDIENCE SECTION ── */
-    .aud-section { padding: 44px 0 8px; }
-    .aud-header { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 24px; }
-    .aud-icon { width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border: 1px solid; }
-    .aud-icon.stu { background: var(--cat-stu-tint); color: var(--cat-stu); border-color: var(--cat-stu-border); }
-    .aud-icon.fy  { background: var(--cat-fy-tint);  color: var(--cat-fy);  border-color: var(--cat-fy-border); }
-    .aud-icon.tra { background: var(--cat-tra-tint); color: var(--cat-tra); border-color: var(--cat-tra-border); }
-    .aud-icon.con { background: var(--cat-con-tint); color: var(--cat-con); border-color: var(--cat-con-border); }
-    .aud-icon.nur { background: var(--cat-nur-tint); color: var(--cat-nur); border-color: var(--cat-nur-border); }
-    .aud-icon.gp  { background: var(--cat-gp-tint);  color: var(--cat-gp);  border-color: var(--cat-gp-border); }
+/* ── FORMAT STRIP ── */
+.format-strip { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 4px; }
+.format-chip { display: inline-flex; align-items: center; gap: 6px; font-size: 0.76rem; font-weight: 600; color: var(--clr-text-secondary); background: var(--clr-surface); border: 1px solid var(--clr-border); padding: 5px 13px; border-radius: 100px; white-space: nowrap; }
+.format-chip svg { color: var(--clr-muted); }
+.format-label { font-size: 0.68rem; font-weight: 600; color: var(--clr-muted); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 10px; }
 
-    .aud-title-group { flex: 1; }
-    .aud-level { font-size: 0.67rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; margin-bottom: 4px; }
-    .aud-level.stu { color: var(--cat-stu); } .aud-level.fy { color: var(--cat-fy); }
-    .aud-level.tra { color: var(--cat-tra); } .aud-level.con { color: var(--cat-con); }
-    .aud-level.nur { color: var(--cat-nur); } .aud-level.gp  { color: var(--cat-gp); }
+/* ── CLUSTER HEADER ── */
+.cluster-header { padding: 60px 0 0; }
+.cluster-tag { display: inline-flex; align-items: center; gap: 6px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--clr-muted); margin-bottom: 6px; }
+.cluster-tag::before { content: ''; display: block; width: 18px; height: 2px; background: var(--clr-border); border-radius: 2px; }
+.cluster-header h2 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.2rem, 2.5vw, 1.55rem); font-weight: 700; color: var(--clr-text); letter-spacing: -0.02em; margin-bottom: 6px; }
+.cluster-header p { font-size: 0.875rem; color: var(--clr-muted); max-width: 520px; line-height: 1.65; }
+.cluster-divider { height: 1px; background: var(--clr-border); margin: 28px 0 0; }
 
-    .aud-header h3 { font-size: clamp(1rem, 2vw, 1.2rem); font-weight: 700; line-height: 1.25; letter-spacing: -0.01em; }
-    .aud-header h3.stu { color: var(--cat-stu); } .aud-header h3.fy { color: var(--cat-fy); }
-    .aud-header h3.tra { color: var(--cat-tra); } .aud-header h3.con { color: var(--cat-con); }
-    .aud-header h3.nur { color: var(--cat-nur); } .aud-header h3.gp  { color: var(--cat-gp); }
-    .aud-desc { font-size: 0.84rem; color: var(--clr-muted); line-height: 1.65; margin-top: 5px; max-width: 500px; }
+/* ── AUDIENCE SECTION ── */
+.aud-section { padding: 44px 0 8px; }
+.aud-header { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 24px; }
+.aud-icon { width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border: 1px solid; }
+.aud-icon.stu { background: var(--cat-stu-tint); color: var(--cat-stu); border-color: var(--cat-stu-border); }
+.aud-icon.fy  { background: var(--cat-fy-tint);  color: var(--cat-fy);  border-color: var(--cat-fy-border); }
+.aud-icon.tra { background: var(--cat-tra-tint); color: var(--cat-tra); border-color: var(--cat-tra-border); }
+.aud-icon.con { background: var(--cat-con-tint); color: var(--cat-con); border-color: var(--cat-con-border); }
+.aud-icon.nur { background: var(--cat-nur-tint); color: var(--cat-nur); border-color: var(--cat-nur-border); }
+.aud-icon.gp  { background: var(--cat-gp-tint);  color: var(--cat-gp);  border-color: var(--cat-gp-border); }
+.aud-icon.pha { background: var(--cat-pha-tint); color: var(--cat-pha); border-color: var(--cat-pha-border); }
+.aud-icon.bms { background: var(--cat-bms-tint); color: var(--cat-bms); border-color: var(--cat-bms-border); }
+.aud-icon.tp  { background: var(--cat-tp-tint);  color: var(--cat-tp);  border-color: var(--cat-tp-border); }
 
-    /* ── CONTENT CARDS ── */
-    .card-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; padding-bottom: 40px; border-bottom: 1px solid var(--clr-border); }
-    .card-grid.partners { grid-template-columns: repeat(4, 1fr); }
-    .edu-card { background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); overflow: hidden; display: flex; flex-direction: column; transition: box-shadow var(--ease), transform var(--ease); }
-    .edu-card:hover { box-shadow: 0 5px 20px rgba(0,0,0,0.07); transform: translateY(-2px); }
-    .card-top { height: 3px; flex-shrink: 0; }
-    .card-top.stu { background: var(--cat-stu); } .card-top.fy { background: var(--cat-fy); }
-    .card-top.tra { background: var(--cat-tra); } .card-top.con { background: var(--cat-con); }
-    .card-top.nur { background: var(--cat-nur); } .card-top.gp  { background: var(--cat-gp); }
-    .card-inner { padding: 18px 17px 15px; flex: 1; display: flex; flex-direction: column; }
-    .card-format { font-size: 0.64rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 8px; }
-    .card-format.stu { color: var(--cat-stu); } .card-format.fy { color: var(--cat-fy); }
-    .card-format.tra { color: var(--cat-tra); } .card-format.con { color: var(--cat-con); }
-    .card-format.nur { color: var(--cat-nur); } .card-format.gp  { color: var(--cat-gp); }
-    .edu-card h4 { font-size: 0.86rem; font-weight: 700; color: var(--clr-text); line-height: 1.4; margin-bottom: 7px; }
-    .edu-card p { font-size: 0.78rem; color: var(--clr-muted); line-height: 1.65; flex: 1; }
-    .card-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 0.63rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-top: 12px; padding: 3px 8px; border-radius: 100px; border: 1px solid; align-self: flex-start; }
-    .card-badge.stu { background: var(--cat-stu-tint); color: var(--cat-stu); border-color: var(--cat-stu-border); }
-    .card-badge.fy  { background: var(--cat-fy-tint);  color: var(--cat-fy);  border-color: var(--cat-fy-border); }
-    .card-badge.tra { background: var(--cat-tra-tint); color: var(--cat-tra); border-color: var(--cat-tra-border); }
-    .card-badge.con { background: var(--cat-con-tint); color: var(--cat-con); border-color: var(--cat-con-border); }
-    .card-badge.nur { background: var(--cat-nur-tint); color: var(--cat-nur); border-color: var(--cat-nur-border); }
-    .card-badge.gp  { background: var(--cat-gp-tint);  color: var(--cat-gp);  border-color: var(--cat-gp-border); }
+.aud-title-group { flex: 1; }
+.aud-level { font-size: 0.67rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; margin-bottom: 4px; }
+.aud-level.stu { color: var(--cat-stu); } .aud-level.fy { color: var(--cat-fy); }
+.aud-level.tra { color: var(--cat-tra); } .aud-level.con { color: var(--cat-con); }
+.aud-level.nur { color: var(--cat-nur); } .aud-level.gp  { color: var(--cat-gp); }
+.aud-level.pha { color: var(--cat-pha); } .aud-level.bms { color: var(--cat-bms); }
+.aud-level.tp  { color: var(--cat-tp); }
 
-    /* ── CPD STANDALONE ── */
-    .cpd-section { margin: 56px 0 0; background: linear-gradient(135deg, rgba(122,90,26,0.05) 0%, rgba(122,90,26,0.02) 100%); border: 1px solid var(--cat-cpd-border); border-radius: 16px; padding: 40px 40px 36px; margin-bottom: 72px; }
-    .cpd-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; margin-bottom: 28px; flex-wrap: wrap; }
-    .cpd-title-block { display: flex; align-items: flex-start; gap: 14px; }
-    .cpd-icon { width: 48px; height: 48px; border-radius: 13px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: var(--cat-cpd-tint); color: var(--cat-cpd); border: 1px solid var(--cat-cpd-border); }
-    .cpd-label { font-size: 0.67rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--cat-cpd); margin-bottom: 4px; }
-    .cpd-section h2 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.1rem, 2.5vw, 1.45rem); font-weight: 700; color: var(--cat-cpd); letter-spacing: -0.02em; }
-    .cpd-desc { font-size: 0.84rem; color: var(--clr-muted); line-height: 1.65; margin-top: 5px; max-width: 480px; }
-    .cpd-span-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 0.72rem; font-weight: 600; color: var(--cat-cpd); background: var(--cat-cpd-tint); border: 1px solid var(--cat-cpd-border); padding: 6px 14px; border-radius: 100px; white-space: nowrap; align-self: flex-start; }
-    .cpd-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-    .cpd-card { background: var(--clr-surface); border: 1px solid var(--cat-cpd-border); border-radius: var(--radius-md); overflow: hidden; transition: box-shadow var(--ease), transform var(--ease); }
-    .cpd-card:hover { box-shadow: 0 5px 20px rgba(122,90,26,0.12); transform: translateY(-2px); }
-    .cpd-card-top { height: 3px; background: var(--cat-cpd); }
-    .cpd-card-inner { padding: 18px 17px 15px; }
-    .cpd-card-format { font-size: 0.64rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--cat-cpd); margin-bottom: 8px; }
-    .cpd-card h4 { font-size: 0.86rem; font-weight: 700; color: var(--clr-text); line-height: 1.4; margin-bottom: 7px; }
-    .cpd-card p { font-size: 0.78rem; color: var(--clr-muted); line-height: 1.65; }
-    .cpd-card-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 0.63rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-top: 12px; padding: 3px 8px; border-radius: 100px; background: var(--cat-cpd-tint); color: var(--cat-cpd); border: 1px solid var(--cat-cpd-border); }
+.aud-header h3 { font-size: clamp(1rem, 2vw, 1.2rem); font-weight: 700; line-height: 1.25; letter-spacing: -0.01em; }
+.aud-header h3.stu { color: var(--cat-stu); } .aud-header h3.fy { color: var(--cat-fy); }
+.aud-header h3.tra { color: var(--cat-tra); } .aud-header h3.con { color: var(--cat-con); }
+.aud-header h3.nur { color: var(--cat-nur); } .aud-header h3.gp  { color: var(--cat-gp); }
+.aud-header h3.pha { color: var(--cat-pha); } .aud-header h3.bms { color: var(--cat-bms); }
+.aud-header h3.tp  { color: var(--cat-tp); }
+.aud-desc { font-size: 0.84rem; color: var(--clr-muted); line-height: 1.65; margin-top: 5px; max-width: 500px; }
 
-    /* ── FOOTER ── */
-    footer { background: var(--clr-surface); border-top: 1px solid var(--clr-border); padding: 36px 0; }
-    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .footer-note { font-size: 0.775rem; color: var(--clr-muted); text-align: right; line-height: 1.6; }
-    .footer-note strong { color: var(--clr-text-secondary); font-weight: 600; }
+/* "View section" link under each audience header */
+.aud-link { display: inline-flex; align-items: center; gap: 5px; font-size: 0.78rem; font-weight: 600; margin-top: 10px; padding: 4px 0; transition: gap var(--ease); }
+.aud-link:hover { gap: 9px; }
+.aud-link.pha { color: var(--cat-pha); } .aud-link.bms { color: var(--cat-bms); } .aud-link.tp { color: var(--cat-tp); }
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 900px) { .card-grid, .cpd-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 560px) { .card-grid, .cpd-grid { grid-template-columns: 1fr; } .cpd-section { padding: 28px 20px 24px; } .aud-header { flex-direction: column; gap: 10px; } .cpd-title-block { flex-direction: column; gap: 10px; } }
-    @media (max-width: 640px) { .nav-links a:not(.nav-cta) { display: none; } .footer-inner { flex-direction: column; align-items: flex-start; gap: 14px; } .footer-note { text-align: left; } }
-  </style>
-  <!-- ── Favicons / Web Manifest — added by favicon polish v1 ── -->
-  <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <meta name="theme-color" content="#7a1f2b" />
-  <link rel="stylesheet" media="print" href="/print.css" />
+/* ── CONTENT CARDS ── */
+.card-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; padding-bottom: 40px; border-bottom: 1px solid var(--clr-border); }
+.edu-card { background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); overflow: hidden; display: flex; flex-direction: column; transition: box-shadow var(--ease), transform var(--ease); }
+.edu-card:hover { box-shadow: 0 5px 20px rgba(0,0,0,0.07); transform: translateY(-2px); }
+.card-top { height: 3px; flex-shrink: 0; }
+.card-top.stu { background: var(--cat-stu); } .card-top.fy { background: var(--cat-fy); }
+.card-top.tra { background: var(--cat-tra); } .card-top.con { background: var(--cat-con); }
+.card-top.nur { background: var(--cat-nur); } .card-top.gp  { background: var(--cat-gp); }
+.card-top.pha { background: var(--cat-pha); } .card-top.bms { background: var(--cat-bms); }
+.card-top.tp  { background: var(--cat-tp); }
+.card-inner { padding: 18px 17px 15px; flex: 1; display: flex; flex-direction: column; }
+.card-format { font-size: 0.64rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 8px; }
+.card-format.stu { color: var(--cat-stu); } .card-format.fy { color: var(--cat-fy); }
+.card-format.tra { color: var(--cat-tra); } .card-format.con { color: var(--cat-con); }
+.card-format.nur { color: var(--cat-nur); } .card-format.gp  { color: var(--cat-gp); }
+.card-format.pha { color: var(--cat-pha); } .card-format.bms { color: var(--cat-bms); }
+.card-format.tp  { color: var(--cat-tp); }
+.edu-card h4 { font-size: 0.86rem; font-weight: 700; color: var(--clr-text); line-height: 1.4; margin-bottom: 7px; }
+.edu-card p { font-size: 0.78rem; color: var(--clr-muted); line-height: 1.65; flex: 1; }
+.card-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 0.63rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-top: 12px; padding: 3px 8px; border-radius: 100px; border: 1px solid; align-self: flex-start; }
+.card-badge.stu { background: var(--cat-stu-tint); color: var(--cat-stu); border-color: var(--cat-stu-border); }
+.card-badge.fy  { background: var(--cat-fy-tint);  color: var(--cat-fy);  border-color: var(--cat-fy-border); }
+.card-badge.tra { background: var(--cat-tra-tint); color: var(--cat-tra); border-color: var(--cat-tra-border); }
+.card-badge.con { background: var(--cat-con-tint); color: var(--cat-con); border-color: var(--cat-con-border); }
+.card-badge.nur { background: var(--cat-nur-tint); color: var(--cat-nur); border-color: var(--cat-nur-border); }
+.card-badge.gp  { background: var(--cat-gp-tint);  color: var(--cat-gp);  border-color: var(--cat-gp-border); }
+.card-badge.pha { background: var(--cat-pha-tint); color: var(--cat-pha); border-color: var(--cat-pha-border); }
+.card-badge.bms { background: var(--cat-bms-tint); color: var(--cat-bms); border-color: var(--cat-bms-border); }
+.card-badge.tp  { background: var(--cat-tp-tint);  color: var(--cat-tp);  border-color: var(--cat-tp-border); }
+.card-badge.live { background: var(--cat-cnm-tint); color: var(--cat-cnm); border-color: var(--cat-cnm-border); }
+
+/* ── STANDALONE SECTIONS (Conferences & CPD) ── */
+.standalone-section { margin: 56px 0 0; border-radius: 16px; padding: 40px 40px 36px; margin-bottom: 36px; }
+.standalone-section.cnm { background: linear-gradient(135deg, rgba(61,78,122,0.06) 0%, rgba(61,78,122,0.02) 100%); border: 1px solid var(--cat-cnm-border); }
+.standalone-section.cpd { background: linear-gradient(135deg, rgba(122,90,26,0.05) 0%, rgba(122,90,26,0.02) 100%); border: 1px solid var(--cat-cpd-border); margin-bottom: 72px; }
+
+.standalone-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; margin-bottom: 28px; flex-wrap: wrap; }
+.standalone-title-block { display: flex; align-items: flex-start; gap: 14px; }
+.standalone-icon { width: 48px; height: 48px; border-radius: 13px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border: 1px solid; }
+.standalone-icon.cnm { background: var(--cat-cnm-tint); color: var(--cat-cnm); border-color: var(--cat-cnm-border); }
+.standalone-icon.cpd { background: var(--cat-cpd-tint); color: var(--cat-cpd); border-color: var(--cat-cpd-border); }
+.standalone-label { font-size: 0.67rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; margin-bottom: 4px; }
+.standalone-label.cnm { color: var(--cat-cnm); }
+.standalone-label.cpd { color: var(--cat-cpd); }
+.standalone-section h2 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.1rem, 2.5vw, 1.45rem); font-weight: 700; letter-spacing: -0.02em; }
+.standalone-section.cnm h2 { color: var(--cat-cnm); }
+.standalone-section.cpd h2 { color: var(--cat-cpd); }
+.standalone-desc { font-size: 0.84rem; color: var(--clr-muted); line-height: 1.65; margin-top: 5px; max-width: 480px; }
+.span-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 0.72rem; font-weight: 600; padding: 6px 14px; border-radius: 100px; white-space: nowrap; align-self: flex-start; border: 1px solid; }
+.span-badge.cnm { color: var(--cat-cnm); background: var(--cat-cnm-tint); border-color: var(--cat-cnm-border); }
+.span-badge.cpd { color: var(--cat-cpd); background: var(--cat-cpd-tint); border-color: var(--cat-cpd-border); }
+
+.standalone-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.standalone-card { background: var(--clr-surface); border-radius: var(--radius-md); overflow: hidden; transition: box-shadow var(--ease), transform var(--ease); display: flex; flex-direction: column; }
+.standalone-card.cnm { border: 1px solid var(--cat-cnm-border); }
+.standalone-card.cpd { border: 1px solid var(--cat-cpd-border); }
+.standalone-card:hover { transform: translateY(-2px); }
+.standalone-card.cnm:hover { box-shadow: 0 5px 20px rgba(61,78,122,0.12); }
+.standalone-card.cpd:hover { box-shadow: 0 5px 20px rgba(122,90,26,0.12); }
+.standalone-card-top { height: 3px; }
+.standalone-card-top.cnm { background: var(--cat-cnm); }
+.standalone-card-top.cpd { background: var(--cat-cpd); }
+.standalone-card-inner { padding: 18px 17px 15px; flex: 1; display: flex; flex-direction: column; }
+.standalone-card-format { font-size: 0.64rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 8px; }
+.standalone-card-format.cnm { color: var(--cat-cnm); }
+.standalone-card-format.cpd { color: var(--cat-cpd); }
+.standalone-card h4 { font-size: 0.86rem; font-weight: 700; color: var(--clr-text); line-height: 1.4; margin-bottom: 7px; }
+.standalone-card p { font-size: 0.78rem; color: var(--clr-muted); line-height: 1.65; flex: 1; }
+.standalone-card-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 0.63rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-top: 12px; padding: 3px 8px; border-radius: 100px; border: 1px solid; align-self: flex-start; }
+.standalone-card-badge.cnm { background: var(--cat-cnm-tint); color: var(--cat-cnm); border-color: var(--cat-cnm-border); }
+.standalone-card-badge.cpd { background: var(--cat-cpd-tint); color: var(--cat-cpd); border-color: var(--cat-cpd-border); }
+.standalone-card-badge.live { background: rgba(45,107,45,0.08); color: #2d6b2d; border-color: rgba(45,107,45,0.20); }
+
+/* ── FOOTER ── */
+footer { background: var(--clr-surface); border-top: 1px solid var(--clr-border); padding: 36px 0; }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.footer-note { font-size: 0.775rem; color: var(--clr-muted); text-align: right; line-height: 1.6; }
+.footer-note strong { color: var(--clr-text-secondary); font-weight: 600; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) { .card-grid, .standalone-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .card-grid, .standalone-grid { grid-template-columns: 1fr; } .standalone-section { padding: 28px 20px 24px; } .aud-header { flex-direction: column; gap: 10px; } .standalone-title-block { flex-direction: column; gap: 10px; } }
+@media (max-width: 640px) { .nav-links a:not(.nav-cta) { display: none; } .footer-inner { flex-direction: column; align-items: flex-start; gap: 14px; } .footer-note { text-align: left; } }
+</style>
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#7a1f2b" />
+<link rel="stylesheet" media="print" href="/print.css" />
 </head>
 <body>
 
-  <header>
-    <div class="container">
-      <nav class="nav">
-        <a href="/" class="brand">
-          <img src="logo.png" alt="Mohsin Haematology Academy logo">
-          <div class="brand-text">
-            <div class="brand-name">Mohsin Haematology Academy</div>
-            <div class="brand-tagline">Clinical Education &amp; Digital Tools</div>
+<header>
+  <div class="container">
+    <nav class="nav">
+      <a href="/" class="brand">
+        <img src="logo.png" alt="Mohsin Haematology Academy logo">
+        <div class="brand-text">
+          <div class="brand-name">Mohsin Haematology Academy</div>
+          <div class="brand-tagline">Clinical Education &amp; Digital Tools</div>
+        </div>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" onclick="var n=this.closest('.nav');var o=n.classList.toggle('nav-open');this.setAttribute('aria-expanded',o);">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div class="nav-links">
+        <a href="/tools">Tools</a>
+        <a href="/guidelines">Guidelines</a>
+        <a href="/education" class="active">Education</a>
+        <a href="/journal-club">Journal Club</a>
+        <a href="/about">About</a>
+        <a href="haemcalc.html" class="nav-cta">Open HaemCalc</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    <div class="page-eyebrow">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      In Development
+    </div>
+    <h1>Haematology Education</h1>
+    <p>Structured learning resources for every clinical role, from medical students encountering haematology for the first time to consultants keeping pace with a fast-moving field, plus content streams for the wider allied team and for live educational events.</p>
+    <p class="format-label">Content formats across all sections</p>
+    <div class="format-strip">
+      <span class="format-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>Cases</span>
+      <span class="format-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Journal Club</span>
+      <span class="format-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Clinical Pearls</span>
+      <span class="format-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg>Teaching Slides</span>
+      <span class="format-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Investigations</span>
+      <span class="format-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="m7 21 5-5 5 5"/><path d="M12 16v5"/></svg>Symposium Notes</span>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="container">
+
+    <!-- ══════════════════════════════════════
+         CLUSTER 1: CLINICAL TRAINING PATHWAY
+         ══════════════════════════════════════ -->
+    <div class="cluster-header" id="training">
+      <div class="cluster-tag">Clinical Training Pathway</div>
+      <h2>From Foundation to Consultant Level</h2>
+      <p>Progressive learning through the clinical career, each level pitched to the real questions, decisions, and knowledge gaps at that stage of practice.</p>
+      <div class="cluster-divider"></div>
+    </div>
+
+    <!-- MEDICAL STUDENTS -->
+    <div class="aud-section" id="students">
+      <div class="aud-header">
+        <div class="aud-icon stu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+        <div class="aud-title-group">
+          <div class="aud-level stu">Level 1 &nbsp;·&nbsp; Clinical Training Pathway</div>
+          <h3 class="stu">Medical Students</h3>
+          <p class="aud-desc">Haematology fundamentals: understanding blood, recognising abnormal results, and knowing what a haematology team actually does.</p>
+        </div>
+      </div>
+      <div class="card-grid">
+        <div class="edu-card"><div class="card-top stu"></div><div class="card-inner"><div class="card-format stu">Foundation</div><h4>Understanding the Full Blood Count</h4><p>How to read and interpret a FBC systematically, normal ranges, what each parameter means, and which abnormalities matter most clinically.</p><span class="card-badge stu">Coming Soon</span></div></div>
+        <div class="edu-card"><div class="card-top stu"></div><div class="card-inner"><div class="card-format stu">Visual Guide</div><h4>Blood Film Basics</h4><p>A systematic approach to reading a peripheral blood film, normal morphology, red cell changes, white cell abnormalities, and platelet clumping.</p><span class="card-badge stu">Coming Soon</span></div></div>
+        <div class="edu-card"><div class="card-top stu"></div><div class="card-inner"><div class="card-format stu">Clinical Guide</div><h4>Common Haematology Presentations</h4><p>Anaemia, bruising, lymphadenopathy, splenomegaly: how to approach each presentation from history and examination through to initial investigations.</p><span class="card-badge stu">Coming Soon</span></div></div>
+        <div class="edu-card"><div class="card-top stu"></div><div class="card-inner"><div class="card-format stu">Rotation Guide</div><h4>Haematology on the Wards</h4><p>What to expect on a haematology placement, common conditions seen, procedures observed, and how to get the most from a specialist rotation.</p><span class="card-badge stu">Coming Soon</span></div></div>
+      </div>
+    </div>
+
+    <!-- FOUNDATION / RESIDENT DOCTORS -->
+    <div class="aud-section" id="foundation">
+      <div class="aud-header">
+        <div class="aud-icon fy"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="aud-title-group">
+          <div class="aud-level fy">Level 2 &nbsp;·&nbsp; Clinical Training Pathway</div>
+          <h3 class="fy">Foundation &amp; Resident Doctors</h3>
+          <p class="aud-desc">Practical clinical decisions: recognising haematological emergencies, knowing when to refer, and managing common haematology problems on the general ward.</p>
+        </div>
+      </div>
+      <div class="card-grid">
+        <div class="edu-card"><div class="card-top fy"></div><div class="card-inner"><div class="card-format fy">Decision Guide</div><h4>When to Call Haematology</h4><p>Urgent vs routine referral criteria, what information to have ready, what haematology will ask, and which presentations cannot wait until morning.</p><span class="card-badge fy">Coming Soon</span></div></div>
+        <div class="edu-card"><div class="card-top fy"></div><div class="card-inner"><div class="card-format fy">Emergency</div><h4>Haematological Emergencies</h4><p>Neutropenic sepsis, hyperviscosity, TTP, and acute haemolysis: immediate recognition, initial management steps, and safe escalation.</p><span class="card-badge fy">Coming Soon</span></div></div>
+        <div class="edu-card"><div class="card-top fy"></div><div class="card-inner"><div class="card-format fy">Prescribing</div><h4>Anticoagulation in Practice</h4><p>DOAC dosing, LMWH prescribing, reversal agents, bridging decisions, and the common pitfalls that cause harm on general medical wards.</p><span class="card-badge fy">Coming Soon</span></div></div>
+        <div class="edu-card"><div class="card-top fy"></div><div class="card-inner"><div class="card-format fy">Interpretation</div><h4>Abnormal Results: What Needs Action</h4><p>Which haematology abnormalities are urgent, which can wait, and which are commonly over-investigated: a practical triage guide for busy doctors.</p><span class="card-badge fy">Coming Soon</span></div></div>
+      </div>
+    </div>
+
+    <!-- HAEMATOLOGY TRAINEES -->
+    <div class="aud-section" id="trainees">
+      <div class="aud-header">
+        <div class="aud-icon tra"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+        <div class="aud-title-group">
+          <div class="aud-level tra">Level 3 &nbsp;·&nbsp; Clinical Training Pathway</div>
+          <h3 class="tra">Haematology Trainees (ST3–ST7)</h3>
+          <p class="aud-desc">Advanced clinical reasoning, FRCPath preparation, and guideline application: content built around the real demands of specialist haematology training.</p>
+        </div>
+      </div>
+      <div class="card-grid">
+        <div class="edu-card"><div class="card-top tra"></div><div class="card-inner"><div class="card-format tra">FRCPath Prep</div><h4>Structured Examination Preparation</h4><p>Topic-by-topic coverage for Part 1 and Part 2 FRCPath, structured to reflect the exam syllabus, with worked examples and self-assessment material.</p><span class="card-badge tra">Coming Soon</span></div></div>
+        <div class="edu-card"><div class="card-top tra"></div><div class="card-inner"><div class="card-format tra">Cases</div><h4>Advanced Case-Based Learning</h4><p>Complex haematology cases with full diagnostic reasoning, investigation interpretation, treatment selection, and discussion of alternative approaches.</p><span class="card-badge tra">Coming Soon</span></div></div>
+        <div class="edu-card"><div class="card-top tra"></div><div class="card-inner"><div class="card-format tra">MDT Skills</div><h4>MDT Reasoning &amp; Presentation</h4><p>How to present cases clearly in MDT, contribute to complex decisions, and translate guideline recommendations into individual patient management plans.</p><span class="card-badge tra">Coming Soon</span></div></div>
+        <div class="edu-card"><div class="card-top tra"></div><div class="card-inner"><div class="card-format tra">Guidelines</div><h4>Applying BSH &amp; ELN Guidelines</h4><p>Translating published guidelines into real clinical decisions: understanding where guidelines give flexibility and where they draw firm boundaries.</p><span class="card-badge tra">Coming Soon</span></div></div>
+      </div>
+    </div>
+
+    <!-- CONSULTANTS -->
+    <div class="aud-section" id="consultants">
+      <div class="aud-header">
+        <div class="aud-icon con"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/><polyline points="16 11 18 13 22 9"/></svg></div>
+        <div class="aud-title-group">
+          <div class="aud-level con">Level 4 &nbsp;·&nbsp; Clinical Training Pathway</div>
+          <h3 class="con">Consultants</h3>
+          <p class="aud-desc">Consultant-level clinical work, service leadership, teaching methodology, and the judgement calls that guidelines alone cannot resolve.</p>
+        </div>
+      </div>
+      <div class="card-grid">
+        <div class="edu-card"><div class="card-top con"></div><div class="card-inner"><div class="card-format con">Complex Cases</div><h4>Consultant-Level Case Discussion</h4><p>Diagnostically and therapeutically challenging cases, presented with full reasoning, management notes, and commentary on decision points where evidence is incomplete.</p><span class="card-badge con">Coming Soon</span></div></div>
+        <div class="edu-card"><div class="card-top con"></div><div class="card-inner"><div class="card-format con">Leadership</div><h4>Service Development &amp; Governance</h4><p>Practical frameworks for building haematology services, implementing new pathways, and meeting governance requirements without losing clinical focus.</p><span class="card-badge con">Coming Soon</span></div></div>
+        <div class="edu-card"><div class="card-top con"></div><div class="card-inner"><div class="card-format con">Teaching</div><h4>Teaching &amp; Supervision Skills</h4><p>Effective teaching strategies for haematology: giving feedback, structuring ward rounds educationally, and supporting trainees through difficult stages.</p><span class="card-badge con">Coming Soon</span></div></div>
+        <div class="edu-card"><div class="card-top con"></div><div class="card-inner"><div class="card-format con">Clinical Pearls</div><h4>High-Level Clinical Pearls</h4><p>Consultant-level observations from real practice: the pattern recognition, clinical instincts, and interpretive subtleties that experience builds but textbooks rarely capture.</p><span class="card-badge con">Coming Soon</span></div></div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         CLUSTER 2: CLINICAL PARTNERS
+         ══════════════════════════════════════ -->
+    <div class="cluster-header" id="partners">
+      <div class="cluster-tag">Clinical Partners</div>
+      <h2>Haematology Literacy for the Wider Team</h2>
+      <p>Role-specific content for the clinical professionals who work alongside haematology patients every day, not on a training pathway but with their own distinct educational needs.</p>
+      <div class="cluster-divider"></div>
+    </div>
+
+    <!-- NURSES -->
+    <div class="aud-section" id="nurses">
+      <div class="aud-header">
+        <div class="aud-icon nur"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <div class="aud-title-group">
+          <div class="aud-level nur">Clinical Partners</div>
+          <h3 class="nur">Nurses &amp; Clinical Nurse Specialists</h3>
+          <p class="aud-desc">Practical, ward-level haematology: safe administration of anti-cancer treatments, transfusion nursing, recognising deterioration, and supporting patients through complex diagnoses.</p>
+        </div>
+      </div>
+      <div class="card-grid">
+        <div class="edu-card"><div class="card-top nur"></div><div class="card-inner"><div class="card-format nur">SACT</div><h4>SACT Administration</h4><p>Safe SACT (anti-cancer therapy) administration, monitoring parameters, toxicity recognition, dose modification triggers, and escalation pathways for haematology nursing staff.</p><span class="card-badge nur">Coming Soon</span></div></div>
+        <div class="edu-card"><div class="card-top nur"></div><div class="card-inner"><div class="card-format nur">Transfusion</div><h4>Transfusion Nursing Practice</h4><p>Blood component administration, pre-transfusion checks, reaction recognition and management, SHOT reporting, and special requirements such as irradiated or CMV-negative components.</p><span class="card-badge nur">Coming Soon</span></div></div>
+        <div class="edu-card"><div class="card-top nur"></div><div class="card-inner"><div class="card-format nur">Emergency</div><h4>Recognising Haematological Deterioration</h4><p>Early warning signs in neutropenic patients, bleeding complications, signs of hyperviscosity, and when and how to escalate safely to the haematology team.</p><span class="card-badge nur">Coming Soon</span></div></div>
+        <div class="edu-card"><div class="card-top nur"></div><div class="card-inner"><div class="card-format nur">Patient Support</div><h4>Patient &amp; Carer Education</h4><p>Supporting patients through new diagnoses, treatment cycles, and long-term follow-up: practical communication frameworks for haematology nurses and CNS staff.</p><span class="card-badge nur">Coming Soon</span></div></div>
+      </div>
+    </div>
+
+    <!-- GPs -->
+    <div class="aud-section" id="gps">
+      <div class="aud-header">
+        <div class="aud-icon gp"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/><circle cx="19" cy="6" r="3"/></svg></div>
+        <div class="aud-title-group">
+          <div class="aud-level gp">Clinical Partners</div>
+          <h3 class="gp">GPs &amp; Primary Care</h3>
+          <p class="aud-desc">Haematology from the primary care lens: red flag recognition, appropriate referral, managing patients on shared care protocols, and interpreting haematology discharge letters.</p>
+        </div>
+      </div>
+      <div class="card-grid">
+        <div class="edu-card"><div class="card-top gp"></div><div class="card-inner"><div class="card-format gp">Red Flags</div><h4>Haematology Red Flags in Primary Care</h4><p>Which blood results and clinical features demand urgent haematology attention, and which incidental findings can be safely monitored without immediate referral.</p><span class="card-badge gp">Coming Soon</span></div></div>
+        <div class="edu-card"><div class="card-top gp"></div><div class="card-inner"><div class="card-format gp">Referral</div><h4>When &amp; How to Refer to Haematology</h4><p>Urgent, 2-week-wait, and routine referral criteria: what information haematology needs in the referral, and how to communicate clinical urgency effectively.</p><span class="card-badge gp">Coming Soon</span></div></div>
+        <div class="edu-card"><div class="card-top gp"></div><div class="card-inner"><div class="card-format gp">Shared Care</div><h4>Managing Haematology Patients in Practice</h4><p>Shared care protocols for myeloma, CLL, MDS, and anticoagulated patients: monitoring responsibilities, when to contact the haematology team, and safe prescribing boundaries.</p><span class="card-badge gp">Coming Soon</span></div></div>
+        <div class="edu-card"><div class="card-top gp"></div><div class="card-inner"><div class="card-format gp">Anticoagulation</div><h4>Anticoagulation in Primary Care</h4><p>DOAC prescribing and monitoring in GP settings, warfarin management, reversal in bleeding emergencies, and managing patients on long-term anticoagulation.</p><span class="card-badge gp">Coming Soon</span></div></div>
+      </div>
+    </div>
+
+    <!-- PHARMACISTS -->
+    <div class="aud-section" id="pharmacists">
+      <div class="aud-header">
+        <div class="aud-icon pha"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg></div>
+        <div class="aud-title-group">
+          <div class="aud-level pha">Clinical Partners</div>
+          <h3 class="pha">Pharmacists</h3>
+          <p class="aud-desc">Haematology-specific prescribing, drug interaction review, patient counselling on oral therapies, and the medication safety questions that arise in real haematology practice.</p>
+          <a href="/education/pharmacists/" class="aud-link pha">View section
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="card-grid">
+        <div class="edu-card"><div class="card-top pha"></div><div class="card-inner"><div class="card-format pha">SACT Safety</div><h4>SACT Prescribing &amp; Verification</h4><p>SACT verification in haematology: dose checks, renal and hepatic adjustments, supportive prescribing, and the common errors caught at pharmacy review.</p><span class="card-badge pha">Coming Soon</span></div></div>
+        <div class="edu-card"><div class="card-top pha"></div><div class="card-inner"><div class="card-format pha">Interactions</div><h4>Drug Interactions in Haematology</h4><p>Clinically important interactions affecting TKIs, IMiDs, anticoagulants, antifungals, and supportive therapies, with practical management notes for prescribers.</p><span class="card-badge pha">Coming Soon</span></div></div>
+        <div class="edu-card"><div class="card-top pha"></div><div class="card-inner"><div class="card-format pha">Counselling</div><h4>Oral Therapy Counselling</h4><p>Counselling frameworks for oral TKIs, IMiDs, BTK inhibitors, and other oral anti-cancer agents: adherence, side-effect management, and red flags patients should report.</p><span class="card-badge pha">Coming Soon</span></div></div>
+        <div class="edu-card"><div class="card-top pha"></div><div class="card-inner"><div class="card-format pha">Anticoagulation</div><h4>Anticoagulant Review &amp; MURs</h4><p>Medicines use reviews for warfarin, DOACs, and LMWH in haematology patients: dose appropriateness, monitoring, reversal planning, and shared care interfaces.</p><span class="card-badge pha">Coming Soon</span></div></div>
+      </div>
+    </div>
+
+    <!-- BIOMEDICAL SCIENTISTS -->
+    <div class="aud-section" id="biomedical-scientists">
+      <div class="aud-header">
+        <div class="aud-icon bms"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></svg></div>
+        <div class="aud-title-group">
+          <div class="aud-level bms">Clinical Partners</div>
+          <h3 class="bms">Biomedical Scientists</h3>
+          <p class="aud-desc">Laboratory-facing haematology content: morphology, coagulation interpretation, flow cytometry, and the clinical context behind the results leaving the lab.</p>
+          <a href="/education/biomedical-scientists/" class="aud-link bms">View section
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="card-grid">
+        <div class="edu-card"><div class="card-top bms"></div><div class="card-inner"><div class="card-format bms">Morphology</div><h4>Blood Film Reference Atlas</h4><p>Reference morphology for benign and malignant haematology: red cell changes, leukocyte abnormalities, platelet morphology, and the appearances that should trigger a clinical alert.</p><span class="card-badge bms">Coming Soon</span></div></div>
+        <div class="edu-card"><div class="card-top bms"></div><div class="card-inner"><div class="card-format bms">Coagulation</div><h4>Coagulation Test Interpretation</h4><p>PT, APTT, fibrinogen, mixing studies, factor assays, and inhibitor screens: how results combine to define a clinical picture, and what to recommend when the lab pattern is unusual.</p><span class="card-badge bms">Coming Soon</span></div></div>
+        <div class="edu-card"><div class="card-top bms"></div><div class="card-inner"><div class="card-format bms">Flow Cytometry</div><h4>Flow Cytometry Essentials</h4><p>Antibody panels for leukaemia and lymphoma, gating strategies, MRD assessment, and the reporting conventions that link flow data to clinical decisions.</p><span class="card-badge bms">Coming Soon</span></div></div>
+        <div class="edu-card"><div class="card-top bms"></div><div class="card-inner"><div class="card-format bms">Bone Marrow</div><h4>Bone Marrow Reporting</h4><p>Bone marrow aspirate and trephine interpretation: cellularity, lineage assessment, infiltration patterns, and the clinical questions a marrow report needs to answer.</p><span class="card-badge bms">Coming Soon</span></div></div>
+      </div>
+    </div>
+
+    <!-- TRANSFUSION PRACTITIONERS -->
+    <div class="aud-section" id="transfusion-practitioners">
+      <div class="aud-header">
+        <div class="aud-icon tp"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></div>
+        <div class="aud-title-group">
+          <div class="aud-level tp">Clinical Partners</div>
+          <h3 class="tp">Transfusion Practitioners</h3>
+          <p class="aud-desc">Day-to-day transfusion practice and governance: protocol-level content for transfusion practitioners, transfusion laboratory staff, and the wider hospital transfusion team.</p>
+          <a href="/education/transfusion-practitioners/" class="aud-link tp">View section
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="card-grid">
+        <div class="edu-card"><div class="card-top tp"></div><div class="card-inner"><div class="card-format tp">Major Haemorrhage</div><h4>Major Haemorrhage Protocols</h4><p>Activation criteria, component ratios, laboratory interface, and post-event debrief frameworks for hospital major haemorrhage protocols.</p><span class="card-badge tp">Coming Soon</span></div></div>
+        <div class="edu-card"><div class="card-top tp"></div><div class="card-inner"><div class="card-format tp">Components</div><h4>Special Component Requirements</h4><p>Indications for irradiated, CMV-negative, washed, and HEV-screened components, with clear practical guidance on when each is needed and how to request it.</p><span class="card-badge tp">Coming Soon</span></div></div>
+        <div class="edu-card"><div class="card-top tp"></div><div class="card-inner"><div class="card-format tp">Reactions</div><h4>Transfusion Reactions</h4><p>Acute and delayed transfusion reactions: recognition, immediate management, investigation pathway, and the role of the transfusion practitioner in coordinating the response.</p><span class="card-badge tp">Coming Soon</span></div></div>
+        <div class="edu-card"><div class="card-top tp"></div><div class="card-inner"><div class="card-format tp">Governance</div><h4>SHOT Reporting &amp; Governance</h4><p>SHOT and SABRE reporting, root cause analysis for transfusion incidents, audit themes, and how transfusion governance feeds into wider hospital patient safety work.</p><span class="card-badge tp">Coming Soon</span></div></div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         STANDALONE: CONFERENCES & MASTERCLASSES
+         ══════════════════════════════════════ -->
+    <div class="standalone-section cnm" id="conferences-and-masterclasses">
+      <div class="standalone-header">
+        <div class="standalone-title-block">
+          <div class="standalone-icon cnm"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="m7 21 5-5 5 5"/><path d="M12 16v5"/></svg></div>
+          <div>
+            <div class="standalone-label cnm">Standalone Section</div>
+            <h2>Conferences &amp; Masterclasses</h2>
+            <p class="standalone-desc">Fact-checked notes from live educational events: symposia, masterclasses, and society meetings. Captured during the meeting, verified against primary publications, and posted as structured records for clinicians who could not attend.</p>
+          </div>
+        </div>
+        <a href="/education/conferences-and-masterclasses/" class="span-badge cnm">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          View all
+        </a>
+      </div>
+      <div class="standalone-grid">
+        <a href="/education/conferences-and-masterclasses/dots-masterclass-2026-rrmm-bcma/" class="standalone-card cnm">
+          <div class="standalone-card-top cnm"></div>
+          <div class="standalone-card-inner">
+            <div class="standalone-card-format cnm">Symposium Notes</div>
+            <h4>DOTS Masterclass 2026, Lisbon</h4>
+            <p>Advances in relapsed and refractory multiple myeloma: BCMA-directed therapies, the DREAMM-7, DREAMM-8, CARTITUDE-4, and MajesTEC-3 data, regulatory status of belantamab mafodotin, and the emerging concept of functional cure.</p>
+            <div class="standalone-card-badge live">Available now</div>
           </div>
         </a>
-        <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" onclick="var n=this.closest('.nav');var o=n.classList.toggle('nav-open');this.setAttribute('aria-expanded',o);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-        </button>
-        <div class="nav-links">
-          <a href="/tools">Tools</a>
-          <a href="/guidelines">Guidelines</a>
-          <a href="/education" class="active">Education</a>
-          <a href="/journal-club">Journal Club</a>
-          <a href="/about">About</a>
-          <a href="haemcalc.html" class="nav-cta">Open HaemCalc</a>
+        <div class="standalone-card cnm">
+          <div class="standalone-card-top cnm"></div>
+          <div class="standalone-card-inner">
+            <div class="standalone-card-format cnm">Society Meeting</div>
+            <h4>ASH 2026 Highlights</h4>
+            <p>Fact-checked summary notes from the American Society of Hematology annual meeting: practice-changing studies in lymphoma, leukaemia, myeloma, and benign haematology.</p>
+            <div class="standalone-card-badge cnm">Coming Soon</div>
+          </div>
         </div>
-      </nav>
-    </div>
-  </header>
-
-  <!-- PAGE HERO -->
-  <div class="page-hero">
-    <div class="container">
-      <div class="page-eyebrow">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        In Development
+        <div class="standalone-card cnm">
+          <div class="standalone-card-top cnm"></div>
+          <div class="standalone-card-inner">
+            <div class="standalone-card-format cnm">Society Meeting</div>
+            <h4>EHA 2026 Highlights</h4>
+            <p>European Hematology Association annual congress: trial readouts, plenary sessions, and educational symposia distilled into structured working notes.</p>
+            <div class="standalone-card-badge cnm">Coming Soon</div>
+          </div>
+        </div>
+        <div class="standalone-card cnm">
+          <div class="standalone-card-top cnm"></div>
+          <div class="standalone-card-inner">
+            <div class="standalone-card-format cnm">Society Meeting</div>
+            <h4>BSH 2026</h4>
+            <p>British Society for Haematology annual scientific meeting: UK practice-oriented summary notes and key sessions for the UK haematology audience.</p>
+            <div class="standalone-card-badge cnm">Coming Soon</div>
+          </div>
+        </div>
       </div>
-      <h1>Haematology Education</h1>
-      <p>Structured learning resources for every clinical role — from medical students encountering haematology for the first time, to consultants keeping pace with a fast-moving field.</p>
-      <!-- Format types -->
-      <p class="format-label">Content formats across all sections</p>
-      <div class="format-strip">
-        <span class="format-chip">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
-          Cases
+    </div>
+
+    <!-- ══════════════════════════════════════
+         STANDALONE: CPD
+         ══════════════════════════════════════ -->
+    <div class="standalone-section cpd" id="cpd">
+      <div class="standalone-header">
+        <div class="standalone-title-block">
+          <div class="standalone-icon cpd"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+          <div>
+            <div class="standalone-label cpd">Standalone Section</div>
+            <h2>Continuing Professional Development</h2>
+            <p class="standalone-desc">Revalidation-supporting content for all registered professionals: journal club appraisals, guideline updates, audit frameworks, and clinical pearls that support annual appraisal and portfolio evidence.</p>
+          </div>
+        </div>
+        <span class="span-badge cpd">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          All professional groups
         </span>
-        <span class="format-chip">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-          Journal Club
-        </span>
-        <span class="format-chip">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          Clinical Pearls
-        </span>
-        <span class="format-chip">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg>
-          Teaching Slides
-        </span>
-        <span class="format-chip">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          Investigations
-        </span>
+      </div>
+      <div class="standalone-grid">
+        <div class="standalone-card cpd"><div class="standalone-card-top cpd"></div><div class="standalone-card-inner"><div class="standalone-card-format cpd">Journal Club</div><h4>Monthly Trial Appraisals</h4><p>Critical appraisals of high-impact haematology publications: key findings, statistical interpretation, and what the results mean for practice.</p><div class="standalone-card-badge cpd">Coming Soon</div></div></div>
+        <div class="standalone-card cpd"><div class="standalone-card-top cpd"></div><div class="standalone-card-inner"><div class="standalone-card-format cpd">Guidelines</div><h4>New Guidelines &amp; Regulatory Updates</h4><p>Plain-language summaries of major BSH, ELN, NICE, and ISTH updates: what changed, why it changed, and what it means for your patients.</p><div class="standalone-card-badge cpd">Coming Soon</div></div></div>
+        <div class="standalone-card cpd"><div class="standalone-card-top cpd"></div><div class="standalone-card-inner"><div class="standalone-card-format cpd">Audit &amp; QI</div><h4>Audit &amp; Quality Improvement Resources</h4><p>Audit templates, QI frameworks, and worked examples relevant to haematology: designed to generate appraisal-ready evidence and support revalidation.</p><div class="standalone-card-badge cpd">Coming Soon</div></div></div>
+        <div class="standalone-card cpd"><div class="standalone-card-top cpd"></div><div class="standalone-card-inner"><div class="standalone-card-format cpd">Clinical Pearls</div><h4>Practice-Changing Observations</h4><p>Short, high-signal notes from haematology practice: the findings, interpretations, and approaches that change how experienced clinicians think and act.</p><div class="standalone-card-badge cpd">Coming Soon</div></div></div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="brand-name">Mohsin Haematology Academy</div>
+        <div class="brand-tagline" style="font-size:0.64rem; color:var(--clr-muted); letter-spacing:0.07em; text-transform:uppercase; margin-top:3px; font-weight:500;">Clinical Education &amp; Digital Tools</div>
+      </div>
+      <div class="footer-note">
+        <strong>Educational use only.</strong><br>
+        Content does not replace clinical judgement or professional guidelines.<br>
+        <span style="font-size:0.72rem; color:var(--clr-muted); opacity:0.8;">&copy; 2025–2026 Dr Muhammad Mohsin &middot; Contributor: Muhammad Moaaz &middot; <a href="/contact" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Contact</a> &middot; <a href="/governance" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Clinical Governance</a> &middot; <a href="/legal/ip-notice/" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">IP &amp; Copyright</a> &middot; <a href="/legal/terms/" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Terms</a> &middot; <a href="/legal/disclaimer/" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Disclaimer</a> &middot; <a href="/legal/privacy/" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Privacy</a></span>
       </div>
     </div>
   </div>
-
-  <main>
-    <div class="container">
-
-      <!-- ══════════════════════════════════════
-           CLUSTER 1: CLINICAL TRAINING PATHWAY
-      ══════════════════════════════════════ -->
-      <div class="cluster-header" id="training">
-        <div class="cluster-tag">Clinical Training Pathway</div>
-        <h2>From Foundation to Consultant Level</h2>
-        <p>Progressive learning through the clinical career — each level pitched to the real questions, decisions, and knowledge gaps at that stage of practice.</p>
-        <div class="cluster-divider"></div>
-      </div>
-
-      <!-- MEDICAL STUDENTS -->
-      <div class="aud-section" id="students">
-        <div class="aud-header">
-          <div class="aud-icon stu">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-          </div>
-          <div class="aud-title-group">
-            <div class="aud-level stu">Level 1 &nbsp;·&nbsp; Clinical Training Pathway</div>
-            <h3 class="stu">Medical Students</h3>
-            <p class="aud-desc">Haematology fundamentals — understanding blood, recognising abnormal results, and knowing what a haematology team actually does.</p>
-          </div>
-        </div>
-        <div class="card-grid">
-          <div class="edu-card">
-            <div class="card-top stu"></div>
-            <div class="card-inner">
-              <div class="card-format stu">Foundation</div>
-              <h4>Understanding the Full Blood Count</h4>
-              <p>How to read and interpret a FBC systematically — normal ranges, what each parameter means, and which abnormalities matter most clinically.</p>
-              <span class="card-badge stu">Coming Soon</span>
-            </div>
-          </div>
-          <div class="edu-card">
-            <div class="card-top stu"></div>
-            <div class="card-inner">
-              <div class="card-format stu">Visual Guide</div>
-              <h4>Blood Film Basics</h4>
-              <p>A systematic approach to reading a peripheral blood film — normal morphology, red cell changes, white cell abnormalities, and platelet clumping.</p>
-              <span class="card-badge stu">Coming Soon</span>
-            </div>
-          </div>
-          <div class="edu-card">
-            <div class="card-top stu"></div>
-            <div class="card-inner">
-              <div class="card-format stu">Clinical Guide</div>
-              <h4>Common Haematology Presentations</h4>
-              <p>Anaemia, bruising, lymphadenopathy, splenomegaly — how to approach each presentation from history and examination through to initial investigations.</p>
-              <span class="card-badge stu">Coming Soon</span>
-            </div>
-          </div>
-          <div class="edu-card">
-            <div class="card-top stu"></div>
-            <div class="card-inner">
-              <div class="card-format stu">Rotation Guide</div>
-              <h4>Haematology on the Wards</h4>
-              <p>What to expect on a haematology placement — common conditions seen, procedures observed, and how to get the most from a specialist rotation.</p>
-              <span class="card-badge stu">Coming Soon</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- FOUNDATION / RESIDENT DOCTORS -->
-      <div class="aud-section" id="foundation">
-        <div class="aud-header">
-          <div class="aud-icon fy">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          </div>
-          <div class="aud-title-group">
-            <div class="aud-level fy">Level 2 &nbsp;·&nbsp; Clinical Training Pathway</div>
-            <h3 class="fy">Foundation &amp; Resident Doctors</h3>
-            <p class="aud-desc">Practical clinical decisions — recognising haematological emergencies, knowing when to refer, and managing common haematology problems on the general ward.</p>
-          </div>
-        </div>
-        <div class="card-grid">
-          <div class="edu-card">
-            <div class="card-top fy"></div>
-            <div class="card-inner">
-              <div class="card-format fy">Decision Guide</div>
-              <h4>When to Call Haematology</h4>
-              <p>Urgent vs routine referral criteria — what information to have ready, what haematology will ask, and which presentations cannot wait until morning.</p>
-              <span class="card-badge fy">Coming Soon</span>
-            </div>
-          </div>
-          <div class="edu-card">
-            <div class="card-top fy"></div>
-            <div class="card-inner">
-              <div class="card-format fy">Emergency</div>
-              <h4>Haematological Emergencies</h4>
-              <p>Neutropenic sepsis, hyperviscosity, TTP, and acute haemolysis — immediate recognition, initial management steps, and safe escalation.</p>
-              <span class="card-badge fy">Coming Soon</span>
-            </div>
-          </div>
-          <div class="edu-card">
-            <div class="card-top fy"></div>
-            <div class="card-inner">
-              <div class="card-format fy">Prescribing</div>
-              <h4>Anticoagulation in Practice</h4>
-              <p>DOAC dosing, LMWH prescribing, reversal agents, bridging decisions, and the common pitfalls that cause harm on general medical wards.</p>
-              <span class="card-badge fy">Coming Soon</span>
-            </div>
-          </div>
-          <div class="edu-card">
-            <div class="card-top fy"></div>
-            <div class="card-inner">
-              <div class="card-format fy">Interpretation</div>
-              <h4>Abnormal Results — What Needs Action</h4>
-              <p>Which haematology abnormalities are urgent, which can wait, and which are commonly over-investigated — a practical triage guide for busy doctors.</p>
-              <span class="card-badge fy">Coming Soon</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- HAEMATOLOGY TRAINEES -->
-      <div class="aud-section" id="trainees">
-        <div class="aud-header">
-          <div class="aud-icon tra">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-          </div>
-          <div class="aud-title-group">
-            <div class="aud-level tra">Level 3 &nbsp;·&nbsp; Clinical Training Pathway</div>
-            <h3 class="tra">Haematology Trainees (ST3–ST7)</h3>
-            <p class="aud-desc">Advanced clinical reasoning, FRCPath preparation, and guideline application — content built around the real demands of specialist haematology training.</p>
-          </div>
-        </div>
-        <div class="card-grid">
-          <div class="edu-card">
-            <div class="card-top tra"></div>
-            <div class="card-inner">
-              <div class="card-format tra">FRCPath Prep</div>
-              <h4>Structured Examination Preparation</h4>
-              <p>Topic-by-topic coverage for Part 1 and Part 2 FRCPath — structured to reflect the exam syllabus, with worked examples and self-assessment material.</p>
-              <span class="card-badge tra">Coming Soon</span>
-            </div>
-          </div>
-          <div class="edu-card">
-            <div class="card-top tra"></div>
-            <div class="card-inner">
-              <div class="card-format tra">Cases</div>
-              <h4>Advanced Case-Based Learning</h4>
-              <p>Complex haematology cases with full diagnostic reasoning, investigation interpretation, treatment selection, and discussion of alternative approaches.</p>
-              <span class="card-badge tra">Coming Soon</span>
-            </div>
-          </div>
-          <div class="edu-card">
-            <div class="card-top tra"></div>
-            <div class="card-inner">
-              <div class="card-format tra">MDT Skills</div>
-              <h4>MDT Reasoning &amp; Presentation</h4>
-              <p>How to present cases clearly in MDT, contribute to complex decisions, and translate guideline recommendations into individual patient management plans.</p>
-              <span class="card-badge tra">Coming Soon</span>
-            </div>
-          </div>
-          <div class="edu-card">
-            <div class="card-top tra"></div>
-            <div class="card-inner">
-              <div class="card-format tra">Guidelines</div>
-              <h4>Applying BSH &amp; ELN Guidelines</h4>
-              <p>Translating published guidelines into real clinical decisions — understanding where guidelines give flexibility and where they draw firm boundaries.</p>
-              <span class="card-badge tra">Coming Soon</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- CONSULTANTS -->
-      <div class="aud-section" id="consultants">
-        <div class="aud-header">
-          <div class="aud-icon con">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/><polyline points="16 11 18 13 22 9"/></svg>
-          </div>
-          <div class="aud-title-group">
-            <div class="aud-level con">Level 4 &nbsp;·&nbsp; Clinical Training Pathway</div>
-            <h3 class="con">Consultants</h3>
-            <p class="aud-desc">Consultant-level clinical complexity, service leadership, teaching methodology, and the judgement calls that guidelines alone cannot resolve.</p>
-          </div>
-        </div>
-        <div class="card-grid">
-          <div class="edu-card">
-            <div class="card-top con"></div>
-            <div class="card-inner">
-              <div class="card-format con">Complex Cases</div>
-              <h4>Consultant-Level Case Discussion</h4>
-              <p>Diagnostically and therapeutically challenging cases — presented with full reasoning, management nuance, and commentary on decision points where evidence is incomplete.</p>
-              <span class="card-badge con">Coming Soon</span>
-            </div>
-          </div>
-          <div class="edu-card">
-            <div class="card-top con"></div>
-            <div class="card-inner">
-              <div class="card-format con">Leadership</div>
-              <h4>Service Development &amp; Governance</h4>
-              <p>Practical frameworks for building haematology services, implementing new pathways, and meeting governance requirements without losing clinical focus.</p>
-              <span class="card-badge con">Coming Soon</span>
-            </div>
-          </div>
-          <div class="edu-card">
-            <div class="card-top con"></div>
-            <div class="card-inner">
-              <div class="card-format con">Teaching</div>
-              <h4>Teaching &amp; Supervision Skills</h4>
-              <p>Effective teaching strategies for haematology — giving feedback, structuring ward rounds educationally, and supporting trainees through difficult stages.</p>
-              <span class="card-badge con">Coming Soon</span>
-            </div>
-          </div>
-          <div class="edu-card">
-            <div class="card-top con"></div>
-            <div class="card-inner">
-              <div class="card-format con">Clinical Pearls</div>
-              <h4>High-Level Clinical Pearls</h4>
-              <p>Consultant-level insights from real practice — the pattern recognition, clinical instincts, and interpretive subtleties that experience builds but textbooks rarely capture.</p>
-              <span class="card-badge con">Coming Soon</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ══════════════════════════════════════
-           CLUSTER 2: CLINICAL PARTNERS
-      ══════════════════════════════════════ -->
-      <div class="cluster-header" id="partners">
-        <div class="cluster-tag">Clinical Partners</div>
-        <h2>Haematology Literacy for the Wider Team</h2>
-        <p>Role-specific content for the clinical professionals who work alongside haematology patients every day — not on a training pathway, but with their own distinct educational needs.</p>
-        <div class="cluster-divider"></div>
-      </div>
-
-      <!-- NURSES -->
-      <div class="aud-section" id="nurses">
-        <div class="aud-header">
-          <div class="aud-icon nur">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </div>
-          <div class="aud-title-group">
-            <div class="aud-level nur">Clinical Partners</div>
-            <h3 class="nur">Nurses &amp; Clinical Nurse Specialists</h3>
-            <p class="aud-desc">Practical, ward-level haematology — safe administration of systemic treatments, transfusion nursing, recognising deterioration, and supporting patients through complex diagnoses.</p>
-          </div>
-        </div>
-        <div class="card-grid">
-          <div class="edu-card">
-            <div class="card-top nur"></div>
-            <div class="card-inner">
-              <div class="card-format nur">SACT</div>
-              <h4>Systemic Treatment Administration</h4>
-              <p>Safe SACT administration, monitoring parameters, toxicity recognition, dose modification triggers, and escalation pathways for haematology nursing staff.</p>
-              <span class="card-badge nur">Coming Soon</span>
-            </div>
-          </div>
-          <div class="edu-card">
-            <div class="card-top nur"></div>
-            <div class="card-inner">
-              <div class="card-format nur">Transfusion</div>
-              <h4>Transfusion Nursing Practice</h4>
-              <p>Blood component administration, pre-transfusion checks, reaction recognition and management, SHOT reporting, and special requirements — irradiated, CMV-negative components.</p>
-              <span class="card-badge nur">Coming Soon</span>
-            </div>
-          </div>
-          <div class="edu-card">
-            <div class="card-top nur"></div>
-            <div class="card-inner">
-              <div class="card-format nur">Emergency</div>
-              <h4>Recognising Haematological Deterioration</h4>
-              <p>Early warning signs in neutropenic patients, bleeding complications, signs of hyperviscosity, and when and how to escalate safely to the haematology team.</p>
-              <span class="card-badge nur">Coming Soon</span>
-            </div>
-          </div>
-          <div class="edu-card">
-            <div class="card-top nur"></div>
-            <div class="card-inner">
-              <div class="card-format nur">Patient Support</div>
-              <h4>Patient &amp; Carer Education</h4>
-              <p>Supporting patients through new diagnoses, treatment cycles, and long-term follow-up — practical communication frameworks for haematology nurses and CNS staff.</p>
-              <span class="card-badge nur">Coming Soon</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- GPs -->
-      <div class="aud-section" id="gps">
-        <div class="aud-header">
-          <div class="aud-icon gp">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/><circle cx="19" cy="6" r="3"/></svg>
-          </div>
-          <div class="aud-title-group">
-            <div class="aud-level gp">Clinical Partners</div>
-            <h3 class="gp">GPs &amp; Primary Care</h3>
-            <p class="aud-desc">Haematology from the primary care lens — red flag recognition, appropriate referral, managing patients on shared care protocols, and interpreting haematology discharge letters.</p>
-          </div>
-        </div>
-        <div class="card-grid">
-          <div class="edu-card">
-            <div class="card-top gp"></div>
-            <div class="card-inner">
-              <div class="card-format gp">Red Flags</div>
-              <h4>Haematology Red Flags in Primary Care</h4>
-              <p>Which blood results and clinical features demand urgent haematology attention — and which incidental findings can be safely monitored without immediate referral.</p>
-              <span class="card-badge gp">Coming Soon</span>
-            </div>
-          </div>
-          <div class="edu-card">
-            <div class="card-top gp"></div>
-            <div class="card-inner">
-              <div class="card-format gp">Referral</div>
-              <h4>When &amp; How to Refer to Haematology</h4>
-              <p>Urgent, 2-week-wait, and routine referral criteria — what information haematology needs in the referral, and how to communicate clinical urgency effectively.</p>
-              <span class="card-badge gp">Coming Soon</span>
-            </div>
-          </div>
-          <div class="edu-card">
-            <div class="card-top gp"></div>
-            <div class="card-inner">
-              <div class="card-format gp">Shared Care</div>
-              <h4>Managing Haematology Patients in Practice</h4>
-              <p>Shared care protocols for myeloma, CLL, MDS, and anticoagulated patients — monitoring responsibilities, when to contact the haematology team, and safe prescribing boundaries.</p>
-              <span class="card-badge gp">Coming Soon</span>
-            </div>
-          </div>
-          <div class="edu-card">
-            <div class="card-top gp"></div>
-            <div class="card-inner">
-              <div class="card-format gp">Anticoagulation</div>
-              <h4>Anticoagulation in Primary Care</h4>
-              <p>DOAC prescribing and monitoring in GP settings, warfarin management, reversal in bleeding emergencies, and managing patients on long-term anticoagulation.</p>
-              <span class="card-badge gp">Coming Soon</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ══════════════════════════════════════
-           CPD — STANDALONE
-      ══════════════════════════════════════ -->
-      <div class="cpd-section" id="cpd">
-        <div class="cpd-header">
-          <div class="cpd-title-block">
-            <div class="cpd-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-            </div>
-            <div>
-              <div class="cpd-label">Standalone Section</div>
-              <h2>Continuing Professional Development</h2>
-              <p class="cpd-desc">Revalidation-supporting content for all registered professionals — journal club appraisals, guideline updates, audit frameworks, and clinical pearls that support annual appraisal and portfolio evidence.</p>
-            </div>
-          </div>
-          <span class="cpd-span-badge">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            All professional groups
-          </span>
-        </div>
-        <div class="cpd-grid">
-          <div class="cpd-card">
-            <div class="cpd-card-top"></div>
-            <div class="cpd-card-inner">
-              <div class="cpd-card-format">Journal Club</div>
-              <h4>Monthly Trial Appraisals</h4>
-              <p>Critical appraisals of high-impact haematology publications — key findings, statistical interpretation, and what the results mean for practice.</p>
-              <div class="cpd-card-badge">Coming Soon</div>
-            </div>
-          </div>
-          <div class="cpd-card">
-            <div class="cpd-card-top"></div>
-            <div class="cpd-card-inner">
-              <div class="cpd-card-format">Guidelines</div>
-              <h4>New Guidelines &amp; Regulatory Updates</h4>
-              <p>Plain-language summaries of major BSH, ELN, NICE, and ISTH updates — what changed, why it changed, and what it means for your patients.</p>
-              <div class="cpd-card-badge">Coming Soon</div>
-            </div>
-          </div>
-          <div class="cpd-card">
-            <div class="cpd-card-top"></div>
-            <div class="cpd-card-inner">
-              <div class="cpd-card-format">Audit &amp; QI</div>
-              <h4>Audit &amp; Quality Improvement Resources</h4>
-              <p>Audit templates, QI frameworks, and worked examples relevant to haematology — designed to generate appraisal-ready evidence and support revalidation.</p>
-              <div class="cpd-card-badge">Coming Soon</div>
-            </div>
-          </div>
-          <div class="cpd-card">
-            <div class="cpd-card-top"></div>
-            <div class="cpd-card-inner">
-              <div class="cpd-card-format">Clinical Pearls</div>
-              <h4>Practice-Changing Observations</h4>
-              <p>Short, high-signal insights from haematology practice — the findings, interpretations, and approaches that change how experienced clinicians think and act.</p>
-              <div class="cpd-card-badge">Coming Soon</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </main>
-
-  <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <div>
-          <div class="brand-name">Mohsin Haematology Academy</div>
-          <div class="brand-tagline" style="font-size:0.64rem; color:var(--clr-muted); letter-spacing:0.07em; text-transform:uppercase; margin-top:3px; font-weight:500;">Clinical Education &amp; Digital Tools</div>
-        </div>
-        <div class="footer-note">
-          <strong>Educational use only.</strong><br>
-          Content does not replace clinical judgement or professional guidelines.<br>
-          <span style="font-size:0.72rem; color:var(--clr-muted); opacity:0.8;">&copy; 2025–2026 Dr Muhammad Mohsin &middot; Contributor: Muhammad Moaaz &middot; <a href="/contact" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Contact</a> &middot; <a href="/governance" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Clinical Governance</a> &middot; <a href="/legal/ip-notice/" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">IP &amp; Copyright</a> &middot; <a href="/legal/terms/" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Terms</a> &middot; <a href="/legal/disclaimer/" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Disclaimer</a> &middot; <a href="/legal/privacy/" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Privacy</a></span>
-        </div>
-      </div>
-    </div>
-  </footer>
+</footer>
 
 <script src="/legal/cookie-banner.js" defer></script>
 
