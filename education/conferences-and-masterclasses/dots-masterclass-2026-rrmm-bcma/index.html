@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>DOTS Masterclass 2026, Lisbon: Advances in RRMM | Mohsin Haematology Academy</title>
+<meta name="description" content="Fact-checked symposium notes from the DOTS Masterclass 2026 GSK symposium in Lisbon: BCMA-directed therapies, DREAMM-7, DREAMM-8, CARTITUDE-4, MajesTEC-3, belantamab mafodotin regulatory status, and the concept of functional cure in multiple myeloma.">
+<link rel="canonical" href="https://mohsinhaemacademy.com/education/conferences-and-masterclasses/dots-masterclass-2026-rrmm-bcma/" />
+<meta property="og:site_name" content="Mohsin Haematology Academy" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mohsinhaemacademy.com/education/conferences-and-masterclasses/dots-masterclass-2026-rrmm-bcma/" />
+<meta property="og:title" content="DOTS Masterclass 2026, Lisbon: Advances in Relapsed and Refractory Multiple Myeloma" />
+<meta property="og:description" content="Fact-checked symposium notes: BCMA-directed therapies, DREAMM-7/8, CARTITUDE-4, MajesTEC-3, belantamab regulatory status, and functional cure." />
+<meta property="og:image" content="https://mohsinhaemacademy.com/logo.png" />
+<meta property="article:published_time" content="2026-05-15" />
+<meta property="article:author" content="Dr Muhammad Mohsin" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --clr-primary: #7a1f2b; --clr-primary-dark: #5c1720; --clr-primary-tint: rgba(122,31,43,0.07);
+  --clr-primary-glow: rgba(122,31,43,0.18); --clr-bg: #f7f5f3; --clr-surface: #ffffff;
+  --clr-text: #1a1a1e; --clr-text-secondary: #3d3d42; --clr-muted: #6b717a;
+  --clr-border: #e6e1dd; --radius-sm: 6px; --radius-md: 12px; --ease: 0.22s cubic-bezier(0.4,0,0.2,1);
+  --accent: #3d4e7a; --accent-dark: #2d3a5c;
+  --accent-tint: rgba(61,78,122,0.08); --accent-border: rgba(61,78,122,0.20);
+  --accent-glow: rgba(61,78,122,0.22);
+  --warn-bg: #fdf6e7; --warn-border: #d4a85a; --warn-text: #6b4a0f;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', -apple-system, sans-serif; background: var(--clr-bg); color: var(--clr-text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
+.container { width: min(880px, 91%); margin-inline: auto; }
+.container-wide { width: min(1080px, 91%); margin-inline: auto; }
+
+/* NAV */
+header { position: sticky; top: 0; z-index: 200; background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--clr-border); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 24px; }
+.brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.brand img { height: 40px; width: auto; }
+.brand-text { line-height: 1; }
+.brand-name { font-size: 0.95rem; font-weight: 700; color: var(--clr-primary); letter-spacing: -0.01em; }
+.brand-tagline { font-size: 0.66rem; font-weight: 500; color: var(--clr-muted); letter-spacing: 0.07em; text-transform: uppercase; margin-top: 3px; }
+.nav-links { display: flex; align-items: center; gap: 2px; }
+.nav-links a { font-size: 0.85rem; font-weight: 500; color: var(--clr-text-secondary); padding: 7px 13px; border-radius: var(--radius-sm); transition: color var(--ease), background var(--ease); white-space: nowrap; }
+.nav-links a:hover, .nav-links a.active { color: var(--clr-primary); background: var(--clr-primary-tint); }
+.nav-cta { background: var(--clr-primary) !important; color: #fff !important; font-weight: 600 !important; padding: 7px 16px !important; margin-left: 6px; box-shadow: 0 2px 8px var(--clr-primary-glow); }
+.nav-cta:hover { background: var(--clr-primary-dark) !important; transform: translateY(-1px); }
+
+/* BREADCRUMB BACK LINK */
+.back-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.82rem; font-weight: 500; color: var(--clr-muted); padding: 22px 0 0; transition: color var(--ease); }
+.back-link:hover { color: var(--accent); }
+
+/* PAGE HERO */
+.page-hero { padding: 28px 0 40px; }
+.page-eyebrow { display: inline-flex; align-items: center; gap: 7px; background: var(--accent-tint); color: var(--accent); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 5px 14px; border-radius: 100px; margin-bottom: 18px; border: 1px solid var(--accent-border); }
+.page-hero h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.9rem, 4vw, 2.55rem); font-weight: 700; color: var(--accent-dark); letter-spacing: -0.022em; line-height: 1.18; margin-bottom: 14px; }
+.page-hero .subtitle { font-size: 1.05rem; color: var(--clr-text-secondary); line-height: 1.6; margin-bottom: 22px; max-width: 720px; font-weight: 500; }
+.meta-row { display: flex; flex-wrap: wrap; gap: 20px 28px; font-size: 0.78rem; color: var(--clr-muted); padding-top: 8px; border-top: 1px solid var(--clr-border); margin-top: 24px; }
+.meta-row dl { display: flex; gap: 6px; }
+.meta-row dt { font-weight: 600; color: var(--clr-text-secondary); }
+.meta-row dd { color: var(--clr-muted); }
+
+/* CTA BOX */
+.cta-box { background: linear-gradient(135deg, rgba(61,78,122,0.06) 0%, rgba(61,78,122,0.02) 100%); border: 1px solid var(--accent-border); border-radius: var(--radius-md); padding: 22px 26px; margin: 28px 0 0; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.cta-box-text strong { font-size: 0.95rem; color: var(--accent-dark); font-weight: 700; display: block; margin-bottom: 4px; }
+.cta-box-text span { font-size: 0.84rem; color: var(--clr-muted); }
+.cta-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #fff !important; padding: 11px 22px; border-radius: 8px; font-size: 0.88rem; font-weight: 600; box-shadow: 0 2px 8px var(--accent-glow); transition: background var(--ease), transform var(--ease); }
+.cta-btn:hover { background: var(--accent-dark); transform: translateY(-1px); }
+
+/* SCOPE PANEL */
+.scope-panel { background: var(--warn-bg); border: 1px solid var(--warn-border); border-left: 4px solid var(--warn-border); border-radius: var(--radius-md); padding: 22px 26px; margin: 36px 0 0; }
+.scope-panel h2 { font-size: 0.92rem; font-weight: 700; color: var(--warn-text); margin-bottom: 10px; letter-spacing: -0.01em; }
+.scope-panel p { font-size: 0.84rem; color: var(--warn-text); line-height: 1.7; }
+.scope-panel p + p { margin-top: 8px; }
+
+/* MAIN CONTENT */
+main { padding: 56px 0 24px; }
+section.body-section { padding-bottom: 36px; }
+section.body-section:not(:first-child) { padding-top: 36px; border-top: 1px solid var(--clr-border); }
+section.body-section h2 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.35rem, 2.6vw, 1.65rem); font-weight: 700; color: var(--accent-dark); letter-spacing: -0.018em; margin-bottom: 6px; }
+section.body-section .section-number { font-size: 0.74rem; font-weight: 700; color: var(--accent); letter-spacing: 0.09em; text-transform: uppercase; margin-bottom: 6px; }
+section.body-section h3 { font-size: 1.05rem; font-weight: 700; color: var(--clr-text); margin-top: 24px; margin-bottom: 10px; letter-spacing: -0.01em; }
+section.body-section p { font-size: 0.95rem; color: var(--clr-text-secondary); line-height: 1.78; margin-bottom: 14px; }
+section.body-section p:last-child { margin-bottom: 0; }
+section.body-section ul, section.body-section ol { margin: 4px 0 14px 22px; }
+section.body-section li { font-size: 0.95rem; color: var(--clr-text-secondary); line-height: 1.78; margin-bottom: 6px; }
+section.body-section strong { color: var(--clr-text); font-weight: 600; }
+section.body-section em { color: var(--clr-text-secondary); font-style: italic; }
+
+/* TABLES */
+.tbl-wrap { overflow-x: auto; margin: 14px 0 16px; border: 1px solid var(--clr-border); border-radius: var(--radius-md); }
+table { width: 100%; border-collapse: collapse; background: var(--clr-surface); font-size: 0.86rem; }
+table caption { caption-side: top; text-align: left; padding: 12px 16px; background: var(--accent-tint); color: var(--accent-dark); font-weight: 700; font-size: 0.85rem; border-bottom: 1px solid var(--accent-border); }
+th, td { padding: 11px 14px; border-bottom: 1px solid var(--clr-border); text-align: left; vertical-align: top; line-height: 1.55; }
+thead th { background: #faf8f5; color: var(--clr-text); font-weight: 700; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.04em; border-bottom: 2px solid var(--clr-border); }
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: rgba(61,78,122,0.025); }
+td.num { font-variant-numeric: tabular-nums; }
+
+/* CALLOUT */
+.callout { background: var(--clr-surface); border: 1px solid var(--clr-border); border-left: 4px solid var(--accent); border-radius: var(--radius-md); padding: 18px 22px; margin: 16px 0; }
+.callout strong { color: var(--accent-dark); font-weight: 700; }
+.callout p { font-size: 0.89rem; color: var(--clr-text-secondary); line-height: 1.7; margin-bottom: 0; }
+
+/* REFERENCES */
+.refs-list { padding-left: 22px; }
+.refs-list li { font-size: 0.85rem; color: var(--clr-text-secondary); line-height: 1.7; margin-bottom: 10px; padding-left: 4px; }
+.refs-list li a { color: var(--accent); border-bottom: 1px solid var(--accent-border); transition: color var(--ease), border-color var(--ease); word-break: break-word; }
+.refs-list li a:hover { color: var(--accent-dark); border-bottom-color: var(--accent-dark); }
+
+/* FOOTER */
+footer { background: var(--clr-surface); border-top: 1px solid var(--clr-border); padding: 36px 0; margin-top: 80px; }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.footer-note { font-size: 0.775rem; color: var(--clr-muted); text-align: right; line-height: 1.6; }
+.footer-note strong { color: var(--clr-text-secondary); font-weight: 600; }
+
+@media (max-width: 640px) {
+  .nav-links a:not(.nav-cta) { display: none; }
+  .footer-inner { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .footer-note { text-align: left; }
+  .cta-box { flex-direction: column; align-items: flex-start; }
+  .scope-panel, .cta-box { padding: 18px 18px; }
+  table { font-size: 0.78rem; }
+  th, td { padding: 9px 11px; }
+}
+</style>
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#7a1f2b" />
+<link rel="stylesheet" media="print" href="/print.css" />
+</head>
+<body>
+
+<header>
+  <div class="container-wide">
+    <nav class="nav">
+      <a href="/" class="brand">
+        <img src="/logo.png" alt="Mohsin Haematology Academy logo">
+        <div class="brand-text">
+          <div class="brand-name">Mohsin Haematology Academy</div>
+          <div class="brand-tagline">Clinical Education &amp; Digital Tools</div>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="/tools">Tools</a>
+        <a href="/guidelines">Guidelines</a>
+        <a href="/education" class="active">Education</a>
+        <a href="/journal-club">Journal Club</a>
+        <a href="/about">About</a>
+        <a href="/haemcalc.html" class="nav-cta">Open HaemCalc</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <a href="/education/conferences-and-masterclasses/" class="back-link">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    Conferences &amp; Masterclasses
+  </a>
+</div>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="page-eyebrow">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="m7 21 5-5 5 5"/><path d="M12 16v5"/></svg>
+      Symposium Notes &nbsp;·&nbsp; Lisbon, May 2026
+    </div>
+    <h1>DOTS Masterclass 2026: Advances in Relapsed and Refractory Multiple Myeloma</h1>
+    <p class="subtitle">BCMA-directed therapies, treatment sequencing, and the emerging concept of cure. Fact-checked working notes from the GSK-sponsored DOTS Masterclass.</p>
+
+    <div class="meta-row">
+      <dl><dt>Author:</dt><dd>Dr Muhammad Mohsin</dd></dl>
+      <dl><dt>Event:</dt><dd>DOTS Masterclass 2026, Lisbon (GSK symposium)</dd></dl>
+      <dl><dt>Published:</dt><dd>May 2026</dd></dl>
+      <dl><dt>Last verified:</dt><dd>10 May 2026</dd></dl>
+    </div>
+
+    <div class="cta-box">
+      <div class="cta-box-text">
+        <strong>Download the full 23-page document</strong>
+        <span>Complete PDF version with figures, full reference list, and the unresolved-points panel.</span>
+      </div>
+      <a href="/assets/pdfs/dots-masterclass-2026-rrmm-bcma.pdf" class="cta-btn" download>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download PDF (773 KB)
+      </a>
+    </div>
+
+    <div class="scope-panel">
+      <h2>Scope &amp; limitations</h2>
+      <p>These working notes record the principal teaching points from the symposium, with verification against the primary trial publications. They are not a full literature review, a systematic appraisal, or a treatment guideline.</p>
+      <p>Each major numerical claim is mapped either to a verified primary source or labelled as symposium-attributed pending source confirmation. The unresolved-points panel in the full PDF lists every figure or claim that remains uncertain. References should be re-checked locally before clinical use.</p>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="container">
+
+    <section class="body-section">
+      <div class="section-number">Section 1</div>
+      <h2>Executive summary</h2>
+      <p>The document covers the second-line setting in relapsed and refractory multiple myeloma (RRMM), BCMA-directed therapeutic modalities, the DREAMM-7 and DREAMM-8 trials, the CARTITUDE-4 and MajesTEC-3 results, the regulatory status of belantamab mafodotin across the UK, EU, and US, and the open question of functional cure in myeloma.</p>
+      <p>Three BCMA-directed modalities are now in clinical use: antibody-drug conjugate (belantamab mafodotin), CAR-T cell therapy (ciltacabtagene autoleucel), and bispecific T-cell engagers (teclistamab, elranatamab). DREAMM-7 (BVd vs DVd) and CARTITUDE-4 (cilta-cel vs standard of care) have demonstrated published overall survival superiority over comparator regimens. MajesTEC-3 (teclistamab plus daratumumab) demonstrated a marked progression-free survival benefit in the published primary analysis.</p>
+      <p>Belantamab mafodotin has regained regulatory approval after a 2022 to 2024 withdrawal: UK MHRA in April 2025 for BVd and BPd combinations; European Commission in July 2025; and US FDA in October 2025 for BVd after at least two prior lines.</p>
+    </section>
+
+    <section class="body-section">
+      <div class="section-number">Section 2</div>
+      <h2>The second-line setting in RRMM</h2>
+
+      <h3>The treatment context</h3>
+      <p>Almost all patients with multiple myeloma eventually relapse. At first relapse, treatment selection is driven by what the patient has already received, the pace and pattern of relapse, cytogenetic risk, organ function, and patient preference. Lenalidomide-refractory disease is now the rule rather than the exception because lenalidomide is used both in induction and in maintenance for newly diagnosed patients. Multi-class refractory disease, particularly to a lenalidomide-bortezomib backbone, is associated with shorter progression-free survival on every comparator regimen.</p>
+
+      <h3>Real-world prescribing patterns</h3>
+      <p>Symposium-presented US real-world data (primary citation not located): approximately 44.4% of patients receive doublet therapy at first relapse, 41% receive triplet therapy, and 2.1% receive a quadruplet regimen. Doublet therapy at first relapse is associated with shorter progression-free survival than triplet therapy. A substantial proportion of patients still receive less than the evidence supports. <em>Treat these percentages as symposium-attributed pending identification of the primary source.</em></p>
+
+      <h3>BCMA as a target</h3>
+      <p>B-cell maturation antigen (BCMA) is a member of the TNF receptor superfamily. It is highly expressed on malignant plasma cells, and is also present on normal late-stage B cells and plasmablasts. This biological pattern explains the hypogammaglobulinaemia and infection susceptibility seen with all BCMA-directed approaches, regardless of modality. For patients refractory to immunomodulatory drugs, proteasome inhibitors, and anti-CD38 antibodies, BCMA represents a separate mechanism of action and a meaningful therapeutic option.</p>
+
+      <h3>Adjacent emerging classes</h3>
+      <p>Cereblon E3 ligase modulatory drugs (CELMoDs), of which iberdomide and mezigdomide are the most clinically advanced, are entering the relapsed and refractory setting. They are mechanistically related to the IMiDs but offer deeper cereblon engagement and activity in lenalidomide-refractory disease. They sit alongside, rather than replace, BCMA-directed therapies in the sequencing discussion.</p>
+    </section>
+
+    <section class="body-section">
+      <div class="section-number">Section 3</div>
+      <h2>BCMA-directed therapeutic modalities</h2>
+      <p>Three modalities are now in clinical use for relapsed and refractory disease.</p>
+
+      <div class="tbl-wrap">
+        <table>
+          <caption>Comparison of the three BCMA-directed therapeutic modalities</caption>
+          <thead><tr><th>Modality</th><th>Example agent</th><th>Mechanism</th><th>T-cell dependent</th><th>Principal toxicity</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>ADC</strong></td>
+              <td>Belantamab mafodotin</td>
+              <td>BCMA binding, internalisation, MMAF payload causing microtubule disruption and apoptosis</td>
+              <td>No</td>
+              <td>Ocular: keratopathy, blurred vision, dry eye</td>
+            </tr>
+            <tr>
+              <td><strong>CAR-T</strong></td>
+              <td>Ciltacabtagene autoleucel (cilta-cel)</td>
+              <td>Autologous T cells engineered with anti-BCMA chimeric antigen receptor (4-1BB costimulation)</td>
+              <td>Yes</td>
+              <td>CRS, ICANS, prolonged cytopenias, infections, parkinsonism reported</td>
+            </tr>
+            <tr>
+              <td><strong>BsAb</strong></td>
+              <td>Teclistamab; elranatamab</td>
+              <td>BCMA &times; CD3 bispecific T-cell engagement, off-the-shelf</td>
+              <td>Yes</td>
+              <td>CRS, ICANS, infections (CMV, opportunistic)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Practical contrasts at the bedside</h3>
+      <p><strong>Antibody-drug conjugate (belantamab mafodotin):</strong> 30-minute intravenous infusion every 3 weeks, no mandated hospitalisation, no CRS or ICANS reported in DREAMM-7 or DREAMM-8, but ocular adverse events occur in roughly 80% of treated patients with grade 3 or 4 events in approximately 40%. Most ocular events are reversible with dose modification. The ADC modality offers a wider therapeutic window than T-cell-redirecting modalities, with a clearer separation between toxic and therapeutic dose ranges.</p>
+      <p><strong>CAR-T cell therapy (cilta-cel):</strong> single infusion. Apheresis to infusion typically requires 4 to 6 weeks, with bridging therapy needed for many patients. Cytokine release syndrome, immune effector cell-associated neurotoxicity syndrome, prolonged cytopenias, and an increased risk of infection are recognised. Some patients show parkinsonism-like neurotoxicity, and second primary malignancies have been reported.</p>
+      <p><strong>Bispecific antibody (teclistamab plus daratumumab):</strong> subcutaneous administration, off-the-shelf, with step-up dosing requiring inpatient monitoring. Cytokine release syndrome and infection risk are notable. Grade 3 or 4 infections in MajesTEC-3 occurred in roughly half of patients, with infection-related deaths reported.</p>
+    </section>
+
+    <section class="body-section">
+      <div class="section-number">Section 4</div>
+      <h2>DREAMM-7: BVd versus DVd</h2>
+
+      <h3>Trial design</h3>
+      <p>DREAMM-7 was an international, open-label, randomised, phase 3 trial of belantamab mafodotin plus bortezomib and dexamethasone (BVd) versus daratumumab plus bortezomib and dexamethasone (DVd) in patients with RRMM who had received at least one prior line of therapy. Patients refractory to or intolerant of bortezomib were excluded; this was a bortezomib-refractory exclusion, not a wider proteasome-inhibitor-refractory exclusion. 494 patients were randomised (243 BVd, 251 DVd).</p>
+      <p>Baseline characteristics were balanced. Approximately 51% of patients had received only one prior line of therapy. Approximately 52% had prior lenalidomide exposure and approximately 34% had lenalidomide-refractory disease. High-risk cytogenetics (defined as one or more of t(4;14), t(14;16) or del(17p13)) were present in approximately 28% of patients.</p>
+
+      <h3>Efficacy</h3>
+      <div class="tbl-wrap">
+        <table>
+          <caption>DREAMM-7 efficacy and safety outcomes</caption>
+          <thead><tr><th>Endpoint</th><th>BVd (n = 243)</th><th>DVd (n = 251)</th></tr></thead>
+          <tbody>
+            <tr><td>Median PFS (primary analysis, 28.2-month follow-up)</td><td class="num">36.6 months (95% CI 28.4 to NR)</td><td class="num">13.4 months (95% CI 11.1 to 17.5)</td></tr>
+            <tr><td>Hazard ratio for progression or death</td><td class="num" colspan="2">0.41 (95% CI 0.31 to 0.53); P &lt; 0.00001</td></tr>
+            <tr><td>18-month overall survival (primary)</td><td class="num">84%</td><td class="num">73%</td></tr>
+            <tr><td>36-month overall survival (updated, 39.4-month follow-up)</td><td class="num">74%</td><td class="num">60%</td></tr>
+            <tr><td>Hazard ratio for death (updated)</td><td class="num" colspan="2">0.58 (95% CI 0.43 to 0.79); P = 0.00023</td></tr>
+            <tr><td>Overall response rate</td><td class="num">82.7% (77.4 to 87.3)</td><td class="num">71.3% (65.3 to 76.8)</td></tr>
+            <tr><td>Complete response or better, MRD-negative (10⁻⁵)</td><td class="num">25%</td><td class="num">10%</td></tr>
+            <tr><td>PFS2 (updated analysis)</td><td class="num">Not reached (45.6 to NR)</td><td class="num">33.4 months (26.7 to 44.9); HR 0.59</td></tr>
+            <tr><td>Any-grade ocular adverse events</td><td class="num">79%</td><td class="num">29%</td></tr>
+            <tr><td>Grade 3 or 4 thrombocytopenia</td><td class="num">56%</td><td class="num">35%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Safety</h3>
+      <p>Grade 3 or higher adverse events occurred in 95% of BVd patients and 78% of DVd patients in the primary analysis. Serious adverse events were reported in approximately half of BVd patients and 38% of DVd patients. Pneumonia was the most frequent serious infection. There were no cases of cytokine release syndrome or ICANS in the BVd arm.</p>
+
+      <div class="callout">
+        <p><strong>Toxicity attribution at the bedside:</strong> the ocular adverse events seen with BVd are belantamab-driven, while gastrointestinal toxicity in either arm is largely bortezomib-driven. This separation is useful when investigating new symptoms in a patient on the regimen, since dose-modifying or pausing the right component is the appropriate response.</p>
+      </div>
+
+      <p>Ocular outcomes (symposium-presented detail): for first events of best corrected visual acuity at 20/50 or worse, approximately 98% of patients showed improvement with dose modification. Rare cases of corneal ulcer were managed by treatment interruption until healing was complete. <em>These figures were presented at the symposium and have not been independently re-verified against the primary publication; treat as symposium-attributed.</em></p>
+      <p>Lower rates of opportunistic infection and reduced IVIg use were observed with BVd compared with DVd. Most cases of decreased visual acuity returned to baseline with dose adjustment, and the efficacy benefit of BVd was preserved across patients who required ocular dose modification.</p>
+
+      <h3>PFS2: a useful clinical signal</h3>
+      <p>PFS2, the time from randomisation to progression on the next line of therapy or death, was substantially longer with BVd than DVd (median not reached versus 33.4 months, HR 0.59). The benefit of BVd is therefore not lost when the patient moves to subsequent therapy. This is reassuring when balancing first-relapse choice against later options.</p>
+    </section>
+
+    <section class="body-section">
+      <div class="section-number">Section 5</div>
+      <h2>DREAMM-8: BPd versus PVd</h2>
+
+      <h3>Trial design</h3>
+      <p>DREAMM-8 was an international, open-label, randomised, phase 3 trial of belantamab mafodotin plus pomalidomide and dexamethasone (BPd) versus pomalidomide plus bortezomib and dexamethasone (PVd) in patients with RRMM who had received at least one prior line of therapy that included lenalidomide. Patients refractory to or intolerant of bortezomib were excluded. 302 patients were randomised.</p>
+      <p>All patients had prior lenalidomide exposure and 78% to 81% had lenalidomide-refractory disease. Anti-CD38 refractory disease was present in approximately 23% of patients. High-risk cytogenetics were present in approximately 34% of patients.</p>
+
+      <h3>Efficacy</h3>
+      <div class="tbl-wrap">
+        <table>
+          <caption>DREAMM-8 efficacy and safety outcomes</caption>
+          <thead><tr><th>Endpoint</th><th>BPd (n = 155)</th><th>PVd (n = 147)</th></tr></thead>
+          <tbody>
+            <tr><td>12-month PFS (primary interim, follow-up 21.8 months)</td><td class="num">71% (63 to 78)</td><td class="num">51% (42 to 60)</td></tr>
+            <tr><td>Median PFS (primary interim)</td><td class="num">Not reached</td><td class="num">12.7 months</td></tr>
+            <tr><td>Hazard ratio for progression or death (primary)</td><td class="num" colspan="2">0.52 (95% CI 0.37 to 0.73); P &lt; 0.001</td></tr>
+            <tr><td>Overall response rate (primary)</td><td class="num">77% (70 to 84)</td><td class="num">72% (64 to 79)</td></tr>
+            <tr><td>Complete response or better (primary)</td><td class="num">40% (32 to 48)</td><td class="num">16% (11 to 23)</td></tr>
+            <tr><td>Grade 3 or higher adverse events</td><td class="num">94%</td><td class="num">76%</td></tr>
+            <tr><td>Grade 3 or 4 ocular adverse events</td><td class="num">43%</td><td class="num">2%</td></tr>
+            <tr><td>Median PFS (updated post-hoc; source to be specified)</td><td class="num">32.6 months</td><td class="num">12.5 months</td></tr>
+            <tr><td>PFS2 (updated post-hoc; source to be specified)</td><td class="num">47.1 months</td><td class="num">21.7 months</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Safety profile</h3>
+      <p>Any adverse event was reported in over 99% of BPd patients and approximately 96% of PVd patients. The most common grade 3 or 4 adverse events with BPd were ocular events (43%) and infections. There were no cases of cytokine release syndrome or ICANS. Ocular events were managed with dose modification and the efficacy benefit was preserved across patients who required dose adjustments.</p>
+
+      <h3>Where BPd fits clinically</h3>
+      <p>BPd is well placed for patients who are lenalidomide-refractory but proteasome-inhibitor naive or sensitive, anti-CD38 refractory or unsuitable for an anti-CD38 retreatment, and able to tolerate ocular toxicity. The off-the-shelf profile and outpatient administration are practical assets, particularly when access to CAR-T or bispecific products is limited.</p>
+    </section>
+
+    <section class="body-section">
+      <div class="section-number">Section 6</div>
+      <h2>Trial efficacy benchmarks and sequencing</h2>
+
+      <h3>Verified efficacy benchmarks: key trials</h3>
+      <p>Three BCMA-directed trials in the second-line and later setting are summarised below. DREAMM-7 and CARTITUDE-4 have demonstrated and published overall survival superiority over standard of care. For MajesTEC-3, the published primary analysis demonstrates a marked PFS benefit; the OS data are not in the published abstract and have not been retained as a verified figure here pending review of the full publication.</p>
+
+      <div class="tbl-wrap">
+        <table>
+          <caption>Verified efficacy benchmarks: DREAMM-7, CARTITUDE-4, MajesTEC-3</caption>
+          <thead><tr><th>Trial</th><th>Regimen</th><th>Key efficacy finding</th><th>Source</th></tr></thead>
+          <tbody>
+            <tr><td><strong>DREAMM-7</strong></td><td>BVd vs DVd</td><td class="num">36-month OS 74% vs 60%; HR 0.58 (0.43 to 0.79); P = 0.00023</td><td>Hungria 2025, Lancet Oncol</td></tr>
+            <tr><td><strong>CARTITUDE-4</strong></td><td>Cilta-cel vs SoC (PVd or DPd)</td><td class="num">30-month OS 76.4% vs 63.8%; HR 0.55 (0.39 to 0.79); P = 0.0009</td><td>Einsele 2026, Lancet Oncol</td></tr>
+            <tr><td><strong>MajesTEC-3 (PFS only)</strong></td><td>Tec + Dara vs DPd or DVd</td><td class="num">36-month PFS 83.4% vs 29.7%; HR 0.17 (0.12 to 0.23); P &lt; 0.001. OS not retained (see caveat).</td><td>Costa 2026, NEJM</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout">
+        <p><strong>Caveat on MajesTEC-3 OS:</strong> the published abstract reports a marked PFS benefit but does not present an OS figure suitable for use as a verified benchmark. The OS row has not been retained pending review of the full NEJM publication or supplement.</p>
+      </div>
+
+      <div class="callout">
+        <p><strong>Caveat on cross-trial comparison:</strong> these are not head-to-head comparisons. Patient populations and SoC comparators differ. CARTITUDE-4 enrolled lenalidomide-refractory patients only; MajesTEC-3 enrolled patients largely naive to or non-refractory to anti-CD38 antibodies; DREAMM-7 enrolled bortezomib-non-refractory patients. Cross-trial OS percentages are best read as a guide to where each modality is likely to deliver benefit, not as a head-to-head ranking.</p>
+      </div>
+
+      <h3>Sequencing principles</h3>
+      <p>UK anchor: the current BSH and UK Myeloma Society UK-specific guideline reference for second-line and later management at the time of writing is the BSH/UKMS 2025 relapsed myeloma guideline (Jenner et al, Br J Haematol 2025). The general sequencing principles below align with that guideline and with current NCCN guidance, while leaving room for local commissioning and access decisions.</p>
+      <ul>
+        <li>Anti-CD38 retreatment is generally not recommended in patients with documented anti-CD38 refractory disease. For anti-CD38 naive patients, anti-CD38-based regimens remain a viable option in subsequent lines.</li>
+        <li>Cross-modality activity within BCMA-directed therapies is described but evidence remains limited. Small case series suggest that bispecific antibodies retain activity after a prior BCMA-directed ADC, but data are early and the optimal sequencing strategy is not yet defined.</li>
+        <li>Selection between modalities at first relapse usually balances patient frailty and willingness to tolerate inpatient monitoring (CAR-T, bispecific) against outpatient deliverability and ocular tolerance (belantamab combination), as well as access and time-to-treatment.</li>
+      </ul>
+
+      <h3>Resistance</h3>
+      <p>Described mechanisms of resistance to BCMA-directed therapy include T-cell dysfunction (relevant to T-cell engaging modalities), antigen escape with reduced cell-surface BCMA expression, and TNFRSF17 mutations affecting the BCMA gene. Soluble BCMA shedding may also reduce drug access to the cell surface. These mechanisms are described in case reports and small series and remain an area of active study; flag as emerging rather than established.</p>
+    </section>
+
+    <section class="body-section">
+      <div class="section-number">Section 7</div>
+      <h2>Belantamab mafodotin: regulatory status</h2>
+      <p>The regulatory pathway for belantamab mafodotin has been complicated. After a withdrawal in 2022 to 2024 driven by negative confirmatory data, the agent has now regained approval in selected jurisdictions for use in combination based on the DREAMM-7 and DREAMM-8 trials, with the exact indication differing between regions. The timeline below records the current position as of the date of writing.</p>
+
+      <ul>
+        <li><strong>August 2020:</strong> FDA accelerated approval for monotherapy in heavily pretreated RRMM, based on DREAMM-2.</li>
+        <li><strong>November 2022:</strong> GSK announced the start of the US withdrawal process at the FDA's request, after the confirmatory DREAMM-3 trial failed to meet its primary PFS endpoint versus pomalidomide-dexamethasone.</li>
+        <li><strong>February 2023:</strong> FDA formally revoked the BLA (Federal Register notice published March 2023).</li>
+        <li><strong>2024:</strong> Belantamab withdrawn from EU and UK markets.</li>
+        <li><strong>2025:</strong> FDA accepted a new BLA for the BVd and BPd combinations based on DREAMM-7 and DREAMM-8 data.</li>
+        <li><strong>17 April 2025 (UK):</strong> MHRA approved belantamab mafodotin combinations for relapsed or refractory multiple myeloma: BVd after at least one prior therapy, and BPd after at least one prior therapy including lenalidomide.</li>
+        <li><strong>July 2025 (EU):</strong> European Commission approved belantamab mafodotin combinations for RRMM based on DREAMM-7 and DREAMM-8 results. Indications include BVd after at least one prior therapy and BPd after at least one prior therapy including lenalidomide.</li>
+        <li><strong>July 2025 (US ODAC):</strong> FDA Oncologic Drugs Advisory Committee voted 5 to 3 against the benefit-risk profile of BVd, citing concerns about ocular toxicity and overall tolerability. The PDUFA decision date was set for 23 October 2025.</li>
+        <li><strong>23 October 2025 (US):</strong> FDA approved belantamab mafodotin-blmf (Blenrep) in combination with bortezomib and dexamethasone for adults with RRMM who have received at least two prior lines of therapy, including a proteasome inhibitor and an immunomodulatory agent. The approval is accompanied by a boxed warning and a REMS programme for ocular toxicity; in the FDA-described DREAMM-7 efficacy population, ocular toxicity was reported in approximately 92% of patients, including grade 3 or 4 events in 77%, with 83% requiring dose modification.</li>
+      </ul>
+
+      <div class="callout">
+        <p><strong>Current position as of May 2026:</strong> belantamab mafodotin has regained regulatory approval in selected jurisdictions, but indications and access differ by region. UK local availability, NICE technology-appraisal status, and Trust formulary or commissioning decisions should still be checked before clinical use; regulatory approval does not by itself guarantee NHS-funded access.</p>
+      </div>
+
+      <p><strong>Practical point:</strong> any teaching slide that describes belantamab as 'approved' should be qualified with the year, jurisdiction, and line of therapy specified. The trial efficacy data described above are not in dispute; the indication wording and the question of how, where and when belantamab is available for routine prescribing differs by region.</p>
+    </section>
+
+    <section class="body-section">
+      <div class="section-number">Section 8</div>
+      <h2>Clinical case applications</h2>
+      <p>Three case vignettes were used at the symposium to anchor decision-making. They are working examples rather than prescriptive recommendations.</p>
+      <p><strong>Decision framework:</strong> the symposium and current NCCN guidance both organise the choice of second-line therapy around three concurrent factors: <em>patient factors</em> (age, frailty, comorbidities, social and access circumstances, willingness to tolerate hospitalisation), <em>disease factors</em> (cytogenetic risk, pace of relapse, extramedullary disease, organ involvement), and <em>treatment factors</em> (prior agents, refractory status, time on previous regimen, depth of previous response).</p>
+
+      <h3>Case 1. 65-year-old, anti-CD38 naive, lenalidomide-refractory, photographer</h3>
+      <p><strong>Profile:</strong> ECOG 1, standard-risk cytogenetics, single prior line of lenalidomide-bortezomib-dexamethasone with maintenance, now relapsed. Strong patient preference for minimal hospital visits.</p>
+      <p><strong>Approach:</strong> reasonable choice between an anti-CD38-based triplet and a BCMA-directed approach. If access permits and the patient is comfortable with ocular monitoring, BVd is well supported by the DREAMM-7 data and offers an outpatient profile compatible with the patient's preferences. An anti-CD38 triplet such as DPd or carfilzomib-based regimens are also rational options. Either decision is defensible.</p>
+
+      <h3>Case 2. 73-year-old, six years on DRd, now relapsed, with diabetes</h3>
+      <p><strong>Profile:</strong> anti-CD38 and lenalidomide refractory, proteasome-inhibitor naive, ECOG 1, standard-risk cytogenetics, type 2 diabetes on metformin, values quality of life and cooking.</p>
+      <p><strong>Approach:</strong> BVd is well placed in this patient: the proteasome inhibitor is novel for him, the regimen is outpatient-friendly, and dexamethasone dose can be reduced to limit hyperglycaemia. Renal function and prior peripheral neuropathy will guide bortezomib scheduling. Subcutaneous bortezomib is preferred. Carfilzomib-based combinations are an alternative if neuropathy is a concern, although there is no head-to-head comparison with BVd in this population.</p>
+
+      <h3>Case 3. 67-year-old, prior DVRd plus ASCT plus lenalidomide maintenance, aggressive relapse</h3>
+      <p><strong>Profile:</strong> triple-class exposed (anti-CD38, PI, IMiD), high-risk cytogenetics including del(17p), ISS Stage III, aggressive relapse with extramedullary disease, active professional, family caregiving role.</p>
+      <p><strong>Approach:</strong> functionally high-risk biology with limited prior options. Cilta-cel offers the strongest published OS benefit in lenalidomide-refractory disease and would be the first choice if the patient can be bridged safely to apheresis and infusion. If access is limited or bridging is not feasible, BPd is a reasonable alternative based on DREAMM-8, especially given the patient is bortezomib-naive with respect to the pomalidomide-bortezomib combination. Teclistamab plus daratumumab would be considered if the patient is not anti-CD38 refractory; the MajesTEC-3 dataset enrolled an anti-CD38 naive or sensitive population and may not extrapolate cleanly here.</p>
+      <p><em>Note on transplant timing:</em> in patients who deferred upfront ASCT, current evidence (including DETERMINATION-style data) suggests that delayed transplant in standard-risk disease can give similar overall survival to upfront transplant, although progression-free survival is typically longer with upfront ASCT. In a high-risk patient with aggressive relapse and triple-class exposure, the priority shifts to a deep cytoreduction with a novel mechanism rather than salvage transplant per se.</p>
+    </section>
+
+    <section class="body-section">
+      <div class="section-number">Section 9</div>
+      <h2>The concept of cure in multiple myeloma</h2>
+
+      <h3>Functional cure as an emerging goal</h3>
+      <p>Functional cure, defined as durable remission off therapy with sustained MRD negativity and clinical stability, is now an open question rather than a fixed definition. The Engelhardt review in Haematologica (2024) frames this as 'operational' or 'functional' cure rather than biological cure, and notes that the field still lacks a formal consensus definition. The IMWG has not endorsed a single threshold, and clinical trials use a range of MRD sensitivities (10⁻⁵ to 10⁻⁶) and follow-up durations (12 months, 3 years, 5 years).</p>
+
+      <h3>A working definition for clinical practice</h3>
+      <p>An emerging working definition (not formal IMWG consensus) used in expert forums is sustained MRD negativity at 10⁻⁶ for more than 5 years, alongside imaging-negative remission and clinical stability off therapy. This is a useful clinical anchor but should not be quoted as a settled definition.</p>
+
+      <h3>Empirical evidence for functional cure</h3>
+      <p>The CARTITUDE-1 5-year follow-up (Jagannath, JCO 2025) provides one of the strongest available empirical signals for prolonged treatment-free remission after BCMA-directed CAR-T therapy. With a median follow-up of 61.3 months, median OS was 60.7 months and 32 of 97 treated patients (33%) remained alive and progression-free at 5 years without maintenance treatment after a single cilta-cel infusion. In a single-centre subset of 12 patients, all (100%) were MRD-negative (10⁻⁵) and PET-CT negative at year 5 or beyond.</p>
+
+      <div class="callout">
+        <p><strong>Interpretation:</strong> the CARTITUDE-1 5-year follow-up provides an important empirical signal that a subset of heavily pretreated RRMM patients can achieve prolonged treatment-free remission after cilta-cel. Whether this represents functional cure remains a matter for longer follow-up and consensus definition; the data should not be used to support a settled cure claim.</p>
+      </div>
+
+      <h3>Heterogeneity in cure achievability</h3>
+      <p>A 'tale of two cities' framing was used at the symposium to illustrate this heterogeneity: two patients with similar baseline biology can have substantially different long-term outcomes depending on the depth and intensity of first-line therapy. The patient who reaches sustained MRD negativity after a quadruplet induction with anti-CD38 antibody, proteasome inhibitor, IMiD and dexamethasone, followed by transplant and maintenance, sits on a different long-term trajectory from the patient with the same risk profile who received a doublet. The implication is that access to optimal first-line therapy is itself one of the determinants of whether functional cure is achievable.</p>
+      <p>Functional cure is not equally accessible across patient subgroups. Standard-risk patients with deep responses to frontline therapy are more likely to achieve sustained MRD negativity than high-risk patients. The MASTER trial showed that, in newly diagnosed standard-risk patients reaching MRD negativity who entered surveillance off therapy, progression rates were low; however, in high-risk patients with two or more cytogenetic abnormalities, off-treatment progression remained substantial.</p>
+
+      <h3>What the field still needs</h3>
+      <ul>
+        <li>A formal IMWG consensus definition with a stated MRD threshold and follow-up duration.</li>
+        <li>Validation of MRD as a regulatory surrogate in the relapsed setting (the Landgren EVIDENCE meta-analysis supports MRD surrogacy in newly diagnosed disease but not yet definitively in RRMM).</li>
+        <li>Long-term safety follow-up across all BCMA modalities to map out late toxicities, second primary malignancies, and immune reconstitution.</li>
+      </ul>
+    </section>
+
+    <section class="body-section">
+      <div class="section-number">Section 10</div>
+      <h2>References</h2>
+      <p>All references below were verified against PubMed and Scite metadata. References last verified on 10 May 2026. The complete reference list including regulatory sources is in the PDF.</p>
+
+      <ol class="refs-list">
+        <li>Hungria V, Robak P, Hus M, et al; DREAMM-7 Investigators. Belantamab Mafodotin, Bortezomib, and Dexamethasone for Multiple Myeloma. <em>N Engl J Med.</em> 2024;391(5):393-407. <a href="https://doi.org/10.1056/NEJMoa2405090">doi:10.1056/NEJMoa2405090</a>. PMID: 38828933.</li>
+        <li>Hungria V, Robak P, Hus M, et al. Belantamab mafodotin plus bortezomib and dexamethasone in patients with relapsed or refractory multiple myeloma (DREAMM-7): updated overall survival analysis from a global, randomised, open-label, phase 3 trial. <em>Lancet Oncol.</em> 2025;26(8):1067-1080. <a href="https://doi.org/10.1016/S1470-2045(25)00330-4">doi:10.1016/S1470-2045(25)00330-4</a>.</li>
+        <li>Dimopoulos MA, Beksac M, Pour L, et al; DREAMM-8 Investigators. Belantamab Mafodotin, Pomalidomide, and Dexamethasone in Multiple Myeloma. <em>N Engl J Med.</em> 2024;391(5):408-421. <a href="https://doi.org/10.1056/NEJMoa2403407">doi:10.1056/NEJMoa2403407</a>.</li>
+        <li>San-Miguel J, Dhakal B, Yong K, et al. Cilta-cel or Standard Care in Lenalidomide-Refractory Multiple Myeloma. <em>N Engl J Med.</em> 2023;389(4):335-347. <a href="https://doi.org/10.1056/NEJMoa2303379">doi:10.1056/NEJMoa2303379</a>.</li>
+        <li>Einsele H, San-Miguel J, Dhakal B, et al. Cilta-cel in lenalidomide-refractory multiple myeloma (CARTITUDE-4): an updated analysis including overall survival. <em>Lancet Oncol.</em> 2026;27(2):254-268. <a href="https://doi.org/10.1016/S1470-2045(25)00653-9">doi:10.1016/S1470-2045(25)00653-9</a>.</li>
+        <li>Costa LJ, Bahlis NJ, Perrot A, et al. Teclistamab plus Daratumumab in Relapsed or Refractory Multiple Myeloma. <em>N Engl J Med.</em> 2026;394(8):739-752. <a href="https://doi.org/10.1056/NEJMoa2514663">doi:10.1056/NEJMoa2514663</a>.</li>
+        <li>Jagannath S, Martin TG, Lin Y, et al. Long-Term (&ge;5-Year) Remission and Survival After Treatment With Ciltacabtagene Autoleucel in CARTITUDE-1 Patients With Relapsed/Refractory Multiple Myeloma. <em>J Clin Oncol.</em> 2025;43(25):2766-2771. <a href="https://doi.org/10.1200/JCO-25-00760">doi:10.1200/JCO-25-00760</a>.</li>
+        <li>Engelhardt M, W&auml;sch R, Reinhardt H, et al. Functional cure and long-term survival in multiple myeloma: how to challenge the previously impossible. <em>Haematologica.</em> 2024. <a href="https://haematologica.org/article/view/11443">Available at haematologica.org</a>.</li>
+        <li>Kumar SK, Paiva B, Anderson KC, et al. International Myeloma Working Group consensus criteria for response and minimal residual disease assessment in multiple myeloma. <em>Lancet Oncol.</em> 2016;17(8):e328-e346.</li>
+        <li>Popat R, Augustson B, Cannell P, et al. Efficacy and Safety of Belantamab Mafodotin with Bortezomib Plus Dexamethasone in Patients with Relapsed/Refractory Multiple Myeloma: the DREAMM-6 Arm B Trial. <em>Clin Cancer Res.</em> 2026. <a href="https://doi.org/10.1158/1078-0432.CCR-25-3216">doi:10.1158/1078-0432.CCR-25-3216</a>.</li>
+        <li>Jenner M, Boyd K, Choudhuri S, et al; British Society of Haematology and UK Myeloma Society. Management of relapsed multiple myeloma: A BSH and UK Myeloma Society guideline. <em>Br J Haematol.</em> 2025;207(6):2322-2354. <a href="https://doi.org/10.1111/bjh.70149">doi:10.1111/bjh.70149</a>. PMID: 41069303.</li>
+        <li>US FDA. FDA approves belantamab mafodotin-blmf for relapsed or refractory multiple myeloma. 23 October 2025. <a href="https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-belantamab-mafodotin-blmf-relapsed-or-refractory-multiple-myeloma">Available at fda.gov</a>.</li>
+      </ol>
+
+      <p style="font-size:0.82rem; color:var(--clr-muted); margin-top:18px; font-style:italic;">Searches were performed on 10 May 2026 using PubMed (NLM), Scite (smart citations and metadata), and Consensus (peer-reviewed corpus). The complete reference list, including regulatory sources, supplementary citations, and the unresolved-points panel, is in the downloadable PDF.</p>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container-wide">
+    <div class="footer-inner">
+      <div>
+        <div class="brand-name">Mohsin Haematology Academy</div>
+        <div class="brand-tagline" style="font-size:0.64rem; color:var(--clr-muted); letter-spacing:0.07em; text-transform:uppercase; margin-top:3px; font-weight:500;">Clinical Education &amp; Digital Tools</div>
+      </div>
+      <div class="footer-note">
+        <strong>Educational use only.</strong><br>
+        Content does not replace clinical judgement or professional guidelines.<br>
+        <span style="font-size:0.72rem; color:var(--clr-muted); opacity:0.8;">&copy; 2025&ndash;2026 Dr Muhammad Mohsin &middot; <a href="/contact" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Contact</a> &middot; <a href="/governance" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Clinical Governance</a> &middot; <a href="/legal/ip-notice/" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">IP &amp; Copyright</a> &middot; <a href="/legal/terms/" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Terms</a> &middot; <a href="/legal/disclaimer/" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Disclaimer</a> &middot; <a href="/legal/privacy/" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Privacy</a></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/legal/cookie-banner.js" defer></script>
+
+</body>
+</html>
