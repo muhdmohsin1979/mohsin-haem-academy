@@ -166,7 +166,16 @@
   footer.site { border-top: 1px solid var(--line); margin-top: 40px; background: #fff; padding: 24px; font-size: 13px; color: var(--ink-soft); }
   footer.site .wrap { max-width: var(--max); margin: 0 auto; }
 
-  @media print { header.site, footer.site, .anchor-nav, .preview-bar, .endorse-bar, aside { display: none; } body { font-size: 11.5pt; } .layout { display: block; padding: 0; } section { page-break-inside: avoid; } h1.title { font-size: 24pt; } }
+  /* Governance footer block — visually separated, not part of the guideline body or navigation */
+  .governance-footer { background: var(--bg-soft); border-top: 1px solid var(--brand-line); border-bottom: 1px solid var(--brand-line); margin-top: 0; padding: 22px 24px; }
+  .governance-footer .wrap { max-width: var(--max); margin: 0 auto; }
+  .governance-footer h2 { margin: 0 0 8px; font-size: 16px; color: var(--brand-dark); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; border: 0; padding: 0; display: block; }
+  .governance-footer p { margin: 0 0 10px; font-size: 13.5px; color: var(--ink-soft); line-height: 1.55; max-width: 900px; }
+  .governance-footer p.links { margin: 0; font-size: 13.5px; }
+  .governance-footer p.links a { color: var(--brand); font-weight: 600; }
+  .governance-footer p.links span { color: var(--brand-line); margin: 0 8px; }
+
+  @media print { header.site, footer.site, .anchor-nav, .preview-bar, .endorse-bar, aside { display: none; } body { font-size: 11.5pt; } .layout { display: block; padding: 0; } section { page-break-inside: avoid; } h1.title { font-size: 24pt; } .governance-footer { background: #fff; } }
   @media (max-width: 1024px) { .layout { grid-template-columns: 1fr; } aside { position: static; max-height: none; overflow: visible; padding-right: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; } }
   @media (max-width: 720px) { h1.title { font-size: 28px; } .tool-meta dl { grid-template-columns: 1fr; } .traffic { grid-template-columns: 1fr 1fr; } nav.site a { margin-right: 12px; } aside { grid-template-columns: 1fr; } }
   @media (max-width: 420px) { .flow-split { grid-template-columns: 1fr; } }
@@ -253,7 +262,6 @@
   <a href="#emerging">13. Emerging</a>
   <a href="#refs">14. References</a>
   <a href="#cite">15. How to Cite</a>
-  <a href="#governance">16. Governance</a>
 </nav>
 
 <div class="summary-card" id="summary">
@@ -1011,40 +1019,6 @@
   <p style="font-size: 13.5px; color: var(--ink-soft);"><em>Citation etiquette: when citing this guide to inform a clinical discussion, please also cite the primary BSH, NICE, ESMO, NCCN, and trial sources. This guide is a synthesis, not a primary source.</em></p>
 </section>
 
-<section id="governance">
-  <h2><span class="num">16</span> Governance, AI Use, and Disclaimer</h2>
-  <h3>Versioning</h3>
-  <table>
-    <thead><tr><th>Version</th><th>Date</th><th>Author</th><th>Change</th></tr></thead>
-    <tbody>
-      <tr><td>v1.0-DRAFT</td><td>13 May 2026</td><td>Dr M Mohsin (AI-assisted)</td><td>Initial draft.</td></tr>
-      <tr><td>v1.1-DRAFT</td><td>14 May 2026</td><td>Dr M Mohsin (AI-assisted + peer feedback)</td><td>Added TA1081 zanubrutinib; updated pirtobrutinib NICE status; TA677 review caveat; reframed TRIANGLE as practice-changing evidence benchmark with transitional UK position and emerging non-routine access; softened TP53/ASCT language; added MDT risk category, pathology and MDT minimum datasets, regimen-specific supportive care, UK Access Key, evidence-vs-access principle, AI/COI/not-endorsed statements; renamed title to "UK Practice-Oriented Evidence Guide"; added Last Checked metadata.</td></tr>
-      <tr><td>v1.2-DRAFT</td><td>14 May 2026</td><td>Dr M Mohsin (CLL-pattern alignment)</td><td>Aligned structure to mohsinhaemacademy.com CLL guideline pattern: added Tool Metadata block, anchor + sidebar navigation, Quick decision summary banner, Pattern recognition / Mnemonic / Common pitfall callouts, Clinical Vignette at R/R, NICE Commissioning sidebar, Visual Diagrams section, BibTeX citation, verified PMIDs and DOIs in references. No new clinical recommendations beyond v1.1.</td></tr>
-      <tr><td>v1.3-DRAFT</td><td>14 May 2026</td><td>Dr M Mohsin (post peer-feedback refinements)</td><td>Pre-deploy refinements: title throughout reframed away from "UK Clinical Practice Guideline" to "UK Practice-Oriented Evidence Guide"; AI-use wording softened to author-responsible-for-verification framing; emerging-evidence section reframed as practice-informing rather than not-practice-changing; added Patient Consent and Shared Decision-Making section for non-routine access; added Devolved Nations section (SMC, AWMSG, HSCNI); minor TRIANGLE wording refinement. No new clinical recommendations.</td></tr>
-      <tr><td>v1.4-DRAFT</td><td>14 May 2026</td><td>Dr M Mohsin (final consistency pass)</td><td>Document-control fixes only: version numbers harmonised; executive-summary wording shifted from "This guideline synthesises... NHS-deployable" to "This evidence guide synthesises... NHS-facing"; methodology emerging-evidence sentence aligned with practice-informing wording; devolved-nations body text changed to principal-access-reference phrasing.</td></tr>
-      <tr><td>v1.5-DRAFT</td><td>14 May 2026</td><td>Dr M Mohsin (CLL-pattern MDT evidence guide refactor)</td><td>Refactor MCL guideline into CLL-pattern MDT evidence guide. Added UK Access / Commissioning Snapshot section. Rebuilt Section 6 (First-Line Management) into MDT algorithm + observation pathway + fit pathway A/B/C/D + older-less-fit pathway A/B/C/D + summary table + MDT documentation checklist + CNS prophylaxis. Updated ECHO reference to verified JCO 2025;43:2276-2284 (PMID 40311141, DOI 10.1200/JCO-25-00690) and added NICE GID-TA11091 (ID6155) reference. Quick decision summary made decision-facing with separate fit / older-non-intensive bullets. Sidebar CSS fixed for sticky + independent scroll on desktop with mobile fallback. Added prescribing-safeguards callout. No new clinical recommendations beyond v1.4 except updated ECHO publication anchor.</td></tr>
-      <tr><td>v1.5.1-DRAFT</td><td>14 May 2026</td><td>Dr M Mohsin (polish patch — fact-safety + wording fixes)</td><td>Five polish fixes: (1) replaced "iwCLL-style active-disease criteria" with MCL-specific treatment triggers; (2) EU approval re-anchored to European Commission 6 May 2025 for transplant-ineligible patients following CHMP positive opinion; (3) fixed "CNS / SPC / CNS allocation" typo; (4) sidebar "preferred under TA1081" replaced with accurate least-expensive-option wording; (5) added ECHO safety nuance from FDA prescribing information with UK adoption caveat.</td></tr>
-      <tr><td>v1.5.2-DRAFT</td><td>14 May 2026</td><td>Dr M Mohsin (CLL-pattern visual sidebar enhancement)</td><td>Sidebar upgraded from navigation-only to CLL-pattern visual decision-support layer. Added seven panels: (1) MCL First-Line Algorithm (six-step ordered list); (2) Treatment Flowchart with semantic HTML flow-nodes, arrows, and yes/no splits; (3) MCL Pathway at a Glance staged strip (Diagnosis → Biology → Fitness → Access → MDT → Follow-up); (4) Access Status legend (green/amber/red/grey) with evidence-vs-access reminder; (5) High-risk MCL reminder panel with action; (6) MDT Documentation checklist; (7) Quick Links jump-list. Preserved NICE Commissioning and Related Content panels. Added CSS for mini-flow, flow-node, flow-split, pathway-strip, status-list, ordered-mini. Mobile fallback at ≤420px collapses flow-split to single column. No clinical content changes; sidebar mirrors main-text content for at-a-glance decision support.</td></tr>
-      <tr><td>v1.5.3-DRAFT</td><td>14 May 2026</td><td>Dr M Mohsin (page-break overflow fix + bundle self-consistency)</td><td>Docx and PDF page-break overflow fix: callout boxes rebuilt as single-column multi-row tables (title + one body line per row) instead of single-cell tables. Each row breaks across page boundaries cleanly, eliminating the content overlap seen in v1.5.2. Table rows now explicitly cantSplit=false and tableHeader=true so headers repeat when a long table splits. HTML version labels bumped to v1.5.3 for bundle self-consistency (no HTML clinical content changes from v1.5.2).</td></tr>
-      <tr><td>v1.5.4-DRAFT</td><td>14 May 2026</td><td>Dr M Mohsin (visual decision-support assets)</td><td>Visual / usability enhancement only. Added three custom MCL visual assets as editable SVG + PDF + Excalidraw: (1) First-Line Treatment Algorithm — full decision tree with decision diamonds, fit/older branches, high-risk overlay; (2) Pathway at a Glance — six-stage strip (Diagnosis → Biology → Fitness → Access → MDT Decision → Follow-up); (3) UK Access / Evidence Status Chart — green/amber/red/grey traffic-light categorisation. New "Visual Decision Support" main-body section after Quick Summary embeds all three SVGs with captions. Sidebar gains "Download visual guides" panel plus three image-thumbnail panels linking to full-size SVGs. PNG fallbacks generated. Mermaid source provided as text fallback. No clinical content changes.</td></tr>
-      <tr><td>v1.5.5-DRAFT</td><td>15 May 2026</td><td>Dr M Mohsin (Visual MDT Tools card + duplication-removal refinements)</td><td>Visual / usability enhancement only — no clinical wording changes. Added prominent "★ Visual MDT Tools" card immediately below Quick Decision Summary, before the full text begins. Three large cards (First-line algorithm, Pathway at a glance, Access / evidence status chart), each with a thumbnail preview and three action buttons: Open full-size SVG, Download PDF, Download Excalidraw source. Sidebar "Download visual guides" panel rebuilt with visible Excalidraw links (not just text reference) plus Mermaid text fallback link, grouped by visual asset. Caption under every visual standardised to "For MDT decision support only. Verify current NICE, NHS England and local formulary access before prescribing." Anchor nav adds Visual MDT Tools entry. Final refinements: added prominent MDT-support-not-prescribing-protocol disclaimer beneath Visual MDT Tools heading; renamed the previous "Visual Decision Support" section to "Embedded Visual Previews" with a bridge sentence pointing users back to the MDT Tools panel for downloads, to remove duplication; standardised thumbnail alt text to match the embedded section's descriptive wording; added visible thumbnail frame and hover state.</td></tr>
-    </tbody>
-  </table>
-
-  <h3>AI use, conflicts, and external endorsement</h3>
-  <ul>
-    <li><b>AI use:</b> AI was used to assist drafting and structuring this document. The author is responsible for clinical verification before publication. All treatment recommendations and regulatory statements should be checked against primary sources, NICE, SmPCs, and local commissioning pathways before use. AI was not used to fabricate, infer, or extrapolate clinical data, trial findings, or regulatory positions.</li>
-    <li><b>Conflicts of interest:</b> None declared by the author at the time of writing.</li>
-    <li><b>External endorsement:</b> This is an independent educational synthesis. It is not a NICE, BSH, NHS England, ESMO, or NCCN guideline and has not been externally endorsed unless explicitly stated in writing.</li>
-    <li><b>External review:</b> Status and reviewer names to be added if external peer review is undertaken before publication.</li>
-  </ul>
-
-  <div class="callout warn">
-    <h4>Disclaimer</h4>
-    <p><b>This document is not a prescribing protocol</b> and should not be used as the sole authority for treatment selection, funding approval, dose modification, toxicity management, or consent. Clinicians must confirm current NICE guidance, NHS England commissioning criteria, local formulary approval, SmPC requirements, trial eligibility, and patient-specific factors before treatment. <b>Patient information leaflet pending — professional version only.</b></p>
-  </div>
-</section>
-
 </main>
 
 <aside aria-label="Decision-support sidebar">
@@ -1238,6 +1212,21 @@
     </ul>
   </div>
 </aside>
+</div>
+
+<!-- Governance footer block — visually separated, not part of the guideline body or navigation -->
+<div class="governance-footer" aria-label="Governance and use of this guideline">
+  <div class="wrap">
+    <h2>Governance and use of this guideline</h2>
+    <p>This guideline is intended to support specialist clinical decision-making and MDT discussion. It should be used alongside current NICE/NHS England access criteria, local Trust policy and clinician judgement.</p>
+    <p class="links">
+      <a href="/governance/">Governance statement</a>
+      <span aria-hidden="true">·</span>
+      <a href="/ai-use/">AI use statement</a>
+      <span aria-hidden="true">·</span>
+      <a href="/disclaimer/">Disclaimer</a>
+    </p>
+  </div>
 </div>
 
 <footer class="site">
