@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 845" font-family="Inter, -apple-system, 'Segoe UI', Roboto, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1360 845" font-family="Inter, -apple-system, 'Segoe UI', Roboto, sans-serif">
   <title>MCL UK Access / Evidence Status Chart — v1.5.5</title>
   <desc>Traffic-light categorisation of mantle cell lymphoma therapies for UK practice. Green: NICE-recommended / commissioned. Amber: evidence-supported but access-dependent. Red: not routine NHS-funded / investigational / access uncertain. Grey: emerging / conference-level / not for routine decisions. Independent educational synthesis; not externally endorsed.</desc>
 
@@ -15,9 +15,9 @@
   </style>
 
   <!-- Background -->
-  <rect x="0" y="0" width="1280" height="845" fill="#ffffff"/>
-  <rect x="0" y="0" width="1280" height="60" fill="#fbeaec"/>
-  <rect x="0" y="60" width="1280" height="3" fill="#7a1f2b"/>
+  <rect x="0" y="0" width="1360" height="845" fill="#ffffff"/>
+  <rect x="0" y="0" width="1360" height="60" fill="#fbeaec"/>
+  <rect x="0" y="60" width="1360" height="3" fill="#7a1f2b"/>
 
   <!-- Title -->
   <text x="40" y="35" class="title">UK Access / Evidence Status</text>
@@ -34,7 +34,7 @@
   <text x="58" y="206" class="catdesc">stated indication and</text>
   <text x="58" y="223" class="catdesc">access agreement.</text>
 
-  <rect x="300" y="90" width="940" height="160" rx="10" fill="#ffffff" stroke="#2e6b3e" stroke-width="2"/>
+  <rect x="300" y="90" width="1020" height="160" rx="10" fill="#ffffff" stroke="#2e6b3e" stroke-width="2"/>
   <text x="320" y="115" class="row">Ibrutinib — R/R MCL after one previous line</text>
   <text x="320" y="132" class="rowsub">NICE TA502 (31 Jan 2018), subject to commercial access agreement</text>
 
@@ -59,7 +59,7 @@
   <text x="58" y="420" class="catdesc">via legitimate non-routine</text>
   <text x="58" y="437" class="catdesc">access routes.</text>
 
-  <rect x="300" y="270" width="940" height="170" rx="10" fill="#ffffff" stroke="#b08538" stroke-width="2"/>
+  <rect x="300" y="270" width="1020" height="170" rx="10" fill="#ffffff" stroke="#b08538" stroke-width="2"/>
   <text x="320" y="295" class="row">TRIANGLE — ibrutinib-integrated first-line induction and maintenance (fit patients)</text>
   <text x="320" y="312" class="rowsub">Practice-changing evidence benchmark (Dreyling et al, Lancet 2024). Not yet uniformly commissioned as routine UK first-line.</text>
 
@@ -82,7 +82,7 @@
   <text x="58" y="593" class="catdesc">EAMS, compassionate, or</text>
   <text x="58" y="610" class="catdesc">IFR routes.</text>
 
-  <rect x="300" y="460" width="940" height="160" rx="10" fill="#ffffff" stroke="#8b2e2e" stroke-width="2"/>
+  <rect x="300" y="460" width="1020" height="160" rx="10" fill="#ffffff" stroke="#8b2e2e" stroke-width="2"/>
   <text x="320" y="485" class="row">Pirtobrutinib — post-covalent-BTKi R/R MCL</text>
   <text x="320" y="502" class="rowsub">NICE ID3975 reported as suspended (no company evidence submission); ID6493 (BTKi-untreated R/R MCL) in development. Routine UK NHS access should not be assumed.</text>
 
@@ -105,7 +105,7 @@
   <text x="58" y="754" class="catdesc">planning. Not the sole basis</text>
   <text x="58" y="770" class="catdesc" fill="#fff" opacity="1.0">for routine treatment.</text>
 
-  <rect x="300" y="640" width="940" height="145" rx="10" fill="#ffffff" stroke="#707070" stroke-width="2"/>
+  <rect x="300" y="640" width="1020" height="145" rx="10" fill="#ffffff" stroke="#707070" stroke-width="2"/>
   <text x="320" y="665" class="row">MRD-guided treatment changes (outside clinical trials)</text>
   <text x="320" y="681" class="rowsub">Prognostic value established; predictive value for treatment modification not established outside trials.</text>
 
@@ -116,10 +116,10 @@
   <text x="320" y="761" class="rowsub">Verify primary source before citation. Not yet considered practice-changing under current UK frameworks.</text>
 
   <!-- Footer reminder banner -->
-  <rect x="40" y="800" width="1200" height="20" rx="6" fill="#fbeaec" stroke="#e6c9ce" stroke-width="1"/>
+  <rect x="40" y="800" width="1280" height="20" rx="6" fill="#fbeaec" stroke="#e6c9ce" stroke-width="1"/>
   <text x="60" y="814" class="row" fill="#7a1f2b">Evidence-supported does not equal NHS-commissioned.</text>
   <text x="430" y="814" class="rowsub">Implementation may differ in Scotland (SMC), Wales (AWMSG), and Northern Ireland (HSCNI) — check local positions.</text>
 
   <text x="40" y="838" class="footer">Independent educational synthesis. Not a NICE, BSH, NHS England, ESMO, or NCCN guideline. Not externally endorsed. For clinical decision support only.</text>
-  <text x="1240" y="840" text-anchor="end" class="corner">v1.5.5 May 2026</text>
+  <text x="1320" y="840" text-anchor="end" class="corner">v1.5.5 May 2026</text>
 </svg>
