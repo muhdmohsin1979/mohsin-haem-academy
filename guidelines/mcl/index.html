@@ -96,14 +96,19 @@
   .tool-meta dt { color: var(--brand); font-weight: 600; }
   .tool-meta dd { margin: 0; color: var(--ink); }
 
-  /* Sticky single-line anchor nav (v1.5.7) — pins below site header so users can jump sections without scrolling back to top */
-  .anchor-nav { position: sticky; top: 68px; z-index: 25; margin: 24px 0; padding: 8px 14px; background: rgba(255,255,255,0.96); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid var(--brand-line); border-radius: 10px; font-size: 13.5px; white-space: nowrap; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; scrollbar-width: thin; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+  /* Anchor-nav wrapper (v1.6.2) — top-of-page placement above hero, centred at page max-width */
+  .anchor-nav-wrap { max-width: var(--max); margin: 0 auto; padding: 14px 24px 0; }
+  /* Sticky single-line anchor nav (v1.6.2) — solid burgundy-tinted background, prominent border, pill-style links for clear visibility */
+  .anchor-nav { position: sticky; top: 68px; z-index: 25; margin: 0; padding: 10px 14px; background: var(--brand-soft); border: 1.5px solid var(--brand-line); border-radius: 12px; font-size: 13.5px; white-space: nowrap; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; scrollbar-width: thin; box-shadow: 0 2px 10px rgba(122,31,43,0.08); }
   .anchor-nav::-webkit-scrollbar { height: 6px; }
-  .anchor-nav::-webkit-scrollbar-thumb { background: var(--brand-line); border-radius: 3px; }
+  .anchor-nav::-webkit-scrollbar-thumb { background: var(--brand); border-radius: 3px; }
   .anchor-nav::-webkit-scrollbar-track { background: transparent; }
-  .anchor-nav a { display: inline-block; margin: 0; padding: 4px 12px; color: var(--brand); border-bottom: 0; border-right: 1px solid var(--brand-line); transition: background-color 0.15s ease; font-weight: 500; }
-  .anchor-nav a:last-child { border-right: 0; }
-  .anchor-nav a:hover { background: var(--brand-soft); text-decoration: none; }
+  .anchor-nav a { display: inline-block; margin: 0 4px 0 0; padding: 5px 12px; color: var(--brand-dark); background: rgba(255,255,255,0.6); border: 1px solid var(--brand-line); border-radius: 999px; transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease; font-weight: 600; }
+  .anchor-nav a:last-child { margin-right: 0; }
+  .anchor-nav a:hover { background: var(--brand); color: #ffffff; border-color: var(--brand); text-decoration: none; }
+  /* Brand link wrapper - keep logo block clickable, no underline */
+  .logo-link { text-decoration: none; color: inherit; }
+  .logo-link:hover .logo { color: var(--brand-dark); }
   /* Section scroll-margin so anchor clicks don't hide the heading behind the sticky bars (header 68 + anchor-nav 42 + gap 10) */
   section[id] { scroll-margin-top: 120px; }
 
@@ -183,7 +188,7 @@
   .governance-footer p.links a { color: var(--brand); font-weight: 600; }
   .governance-footer p.links span { color: var(--brand-line); margin: 0 8px; }
 
-  @media print { header.site, footer.site, .anchor-nav, .preview-bar, .endorse-bar, aside { display: none; } body { font-size: 11.5pt; } .layout { display: block; padding: 0; } section { page-break-inside: avoid; } h1.title { font-size: 24pt; } .governance-footer { background: #fff; } }
+  @media print { header.site, footer.site, .anchor-nav, .anchor-nav-wrap, .preview-bar, .endorse-bar, aside { display: none; } body { font-size: 11.5pt; } .layout { display: block; padding: 0; } section { page-break-inside: avoid; } h1.title { font-size: 24pt; } .governance-footer { background: #fff; } }
   @media (max-width: 1024px) { .layout { grid-template-columns: 1fr; } aside { position: static; max-height: none; overflow: visible; padding-right: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; } }
   @media (max-width: 720px) { h1.title { font-size: 28px; } .tool-meta dl { grid-template-columns: 1fr; } .traffic { grid-template-columns: 1fr 1fr; } nav.site a { margin-right: 12px; } aside { grid-template-columns: 1fr; } }
   @media (max-width: 420px) { .flow-split { grid-template-columns: 1fr; } }
@@ -197,13 +202,40 @@
 
 <header class="site">
   <div class="row">
-    <div class="logo">Mohsin Haematology Academy<small>Clinical Education &amp; Digital Tools</small></div>
+    <a href="../../" class="logo-link" aria-label="Mohsin Haematology Academy — home"><div class="logo">Mohsin Haematology Academy<small>Clinical Education &amp; Digital Tools</small></div></a>
     <nav class="site">
-      <a href="#">Tools</a><a href="#">Guidelines</a><a href="#">Education</a>
-      <a href="#">Journal Club</a><a href="#">About</a><a href="#">Open HaemCalc</a>
+      <a href="../../tools.html">Tools</a><a href="../../guidelines.html">Guidelines</a><a href="../../education.html">Education</a>
+      <a href="../../journal-club.html">Journal Club</a><a href="../../about.html">About</a><a href="../../haemcalc.html">Open HaemCalc</a>
     </nav>
   </div>
 </header>
+
+<div class="anchor-nav-wrap">
+<nav class="anchor-nav" aria-label="On this page">
+  <a href="#summary">Quick Summary</a>
+  <a href="#mdt-tools">★ Visual MDT Tools</a>
+  <a href="#visual-support">★★ Embedded Previews</a>
+  <a href="#access-key">Access Key</a>
+  <a href="#uk-access">★ UK Access Snapshot</a>
+  <a href="#scope">1. Scope</a>
+  <a href="#methods">2. Methodology</a>
+  <a href="#disease">3. Disease Overview</a>
+  <a href="#diagnosis">4. Diagnosis</a>
+  <a href="#risk">5. Risk Stratification</a>
+  <a href="#firstline">6. First-Line</a>
+  <a href="#rr">7. Relapsed / Refractory</a>
+  <a href="#commissioning">8. Commissioning Status</a>
+  <a href="#supportive">9. Supportive Care</a>
+  <a href="#surveillance">10. Surveillance</a>
+  <a href="#mdt-use">11. Using in MDT</a>
+  <a href="#consent">11a. Consent</a>
+  <a href="#devolved">11b. Devolved Nations</a>
+  <a href="#audit">12. Audit Standards</a>
+  <a href="#emerging">13. Emerging</a>
+  <a href="#refs">14. References</a>
+  <a href="#cite">15. How to Cite</a>
+</nav>
+</div>
 
 <div class="hero">
   <div class="wrap">
@@ -243,31 +275,6 @@
 
 <div class="layout">
 <main>
-
-<nav class="anchor-nav" aria-label="On this page">
-  <a href="#summary">Quick Summary</a>
-  <a href="#mdt-tools">★ Visual MDT Tools</a>
-  <a href="#visual-support">★★ Embedded Previews</a>
-  <a href="#access-key">Access Key</a>
-  <a href="#uk-access">★ UK Access Snapshot</a>
-  <a href="#scope">1. Scope</a>
-  <a href="#methods">2. Methodology</a>
-  <a href="#disease">3. Disease Overview</a>
-  <a href="#diagnosis">4. Diagnosis</a>
-  <a href="#risk">5. Risk Stratification</a>
-  <a href="#firstline">6. First-Line</a>
-  <a href="#rr">7. Relapsed / Refractory</a>
-  <a href="#commissioning">8. Commissioning Status</a>
-  <a href="#supportive">9. Supportive Care</a>
-  <a href="#surveillance">10. Surveillance</a>
-  <a href="#mdt-use">11. Using in MDT</a>
-  <a href="#consent">11a. Consent</a>
-  <a href="#devolved">11b. Devolved Nations</a>
-  <a href="#audit">12. Audit Standards</a>
-  <a href="#emerging">13. Emerging</a>
-  <a href="#refs">14. References</a>
-  <a href="#cite">15. How to Cite</a>
-</nav>
 
 <div class="summary-card" id="summary">
   <h3>Quick decision summary</h3>
