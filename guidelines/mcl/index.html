@@ -96,14 +96,17 @@
   .tool-meta dt { color: var(--brand); font-weight: 600; }
   .tool-meta dd { margin: 0; color: var(--ink); }
 
-  /* Sticky single-line anchor nav (v1.5.7) — pins below site header so users can jump sections without scrolling back to top */
-  .anchor-nav { position: sticky; top: 68px; z-index: 25; margin: 24px 0; padding: 8px 14px; background: rgba(255,255,255,0.96); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid var(--brand-line); border-radius: 10px; font-size: 13.5px; white-space: nowrap; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; scrollbar-width: thin; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+  /* Sticky single-line anchor nav (v1.6.1) — solid burgundy-tinted background, prominent border, pill-style links for clear visibility */
+  .anchor-nav { position: sticky; top: 68px; z-index: 25; margin: 24px 0; padding: 10px 14px; background: var(--brand-soft); border: 1.5px solid var(--brand-line); border-radius: 12px; font-size: 13.5px; white-space: nowrap; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; scrollbar-width: thin; box-shadow: 0 2px 10px rgba(122,31,43,0.08); }
   .anchor-nav::-webkit-scrollbar { height: 6px; }
-  .anchor-nav::-webkit-scrollbar-thumb { background: var(--brand-line); border-radius: 3px; }
+  .anchor-nav::-webkit-scrollbar-thumb { background: var(--brand); border-radius: 3px; }
   .anchor-nav::-webkit-scrollbar-track { background: transparent; }
-  .anchor-nav a { display: inline-block; margin: 0; padding: 4px 12px; color: var(--brand); border-bottom: 0; border-right: 1px solid var(--brand-line); transition: background-color 0.15s ease; font-weight: 500; }
-  .anchor-nav a:last-child { border-right: 0; }
-  .anchor-nav a:hover { background: var(--brand-soft); text-decoration: none; }
+  .anchor-nav a { display: inline-block; margin: 0 4px 0 0; padding: 5px 12px; color: var(--brand-dark); background: rgba(255,255,255,0.6); border: 1px solid var(--brand-line); border-radius: 999px; transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease; font-weight: 600; }
+  .anchor-nav a:last-child { margin-right: 0; }
+  .anchor-nav a:hover { background: var(--brand); color: #ffffff; border-color: var(--brand); text-decoration: none; }
+  /* Brand link wrapper - keep logo block clickable, no underline */
+  .logo-link { text-decoration: none; color: inherit; }
+  .logo-link:hover .logo { color: var(--brand-dark); }
   /* Section scroll-margin so anchor clicks don't hide the heading behind the sticky bars (header 68 + anchor-nav 42 + gap 10) */
   section[id] { scroll-margin-top: 120px; }
 
@@ -197,10 +200,10 @@
 
 <header class="site">
   <div class="row">
-    <div class="logo">Mohsin Haematology Academy<small>Clinical Education &amp; Digital Tools</small></div>
+    <a href="../../" class="logo-link" aria-label="Mohsin Haematology Academy — home"><div class="logo">Mohsin Haematology Academy<small>Clinical Education &amp; Digital Tools</small></div></a>
     <nav class="site">
-      <a href="#">Tools</a><a href="#">Guidelines</a><a href="#">Education</a>
-      <a href="#">Journal Club</a><a href="#">About</a><a href="#">Open HaemCalc</a>
+      <a href="../../tools.html">Tools</a><a href="../../guidelines.html">Guidelines</a><a href="../../education.html">Education</a>
+      <a href="../../journal-club.html">Journal Club</a><a href="../../about.html">About</a><a href="../../haemcalc.html">Open HaemCalc</a>
     </nav>
   </div>
 </header>
