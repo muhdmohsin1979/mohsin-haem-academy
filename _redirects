@@ -11,22 +11,28 @@
 /governance.html  /governance  301
 /index.html       /            301
 
+# --- Internal-only paths — hard-block before any folder rewrite below ---
+/guidelines/myeloma/_dev/*       /404.html  404
+
 # --- Folder-style guideline URLs — serve index.html in place (URL preserved) ---
 /guidelines/anaemia-in-pregnancy/ /guidelines/anaemia-in-pregnancy/index.html 200
 /guidelines/cll/ /guidelines/cll/index.html 200
 /guidelines/itp/ /guidelines/itp/index.html 200
+/guidelines/myeloma/ /guidelines/myeloma/index.html 200
 /guidelines/vte-cancer/ /guidelines/vte-cancer/index.html 200
 
 # --- No-trailing-slash → clean trailing-slash form (browser URL updated) ---
 /guidelines/anaemia-in-pregnancy /guidelines/anaemia-in-pregnancy/ 301
 /guidelines/cll /guidelines/cll/ 301
 /guidelines/itp /guidelines/itp/ 301
+/guidelines/myeloma /guidelines/myeloma/ 301
 /guidelines/vte-cancer /guidelines/vte-cancer/ 301
 
 # --- Legacy HTML URLs — permanently redirect to new clean folder URLs ---
 /anaemia-in-pregnancy.html /guidelines/anaemia-in-pregnancy/ 301
 /cll.html /guidelines/cll/ 301
 /itp.html /guidelines/itp/ 301
+/myeloma.html /guidelines/myeloma/ 301
 /vte-cancer.html /guidelines/vte-cancer/ 301
 
 # --- Legacy asset URLs — permanently redirect to new paths ---

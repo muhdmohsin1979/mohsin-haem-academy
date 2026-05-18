@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1520" font-family="Georgia, serif">
+<title>Myeloma R/R treatment pathway — MHA-MYELOMA-2026-v0.4.1-GOVERNANCE-POLISH</title>
+<desc>Decision algorithm for relapsed and refractory multiple myeloma covering progression evaluation, class-switch principles, line-by-line treatment selection, bispecifics, CAR-T and trial considerations. Aligned to BSH/UKMS 2025 (Jenner) and current NICE TAs.</desc>
+
+<defs>
+<marker id="arrow2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+<path d="M0,0 L0,6 L9,3 z" fill="#7a1f2b"/>
+</marker>
+</defs>
+
+<style>
+.title { font-size: 24px; font-weight: bold; fill: #7a1f2b; }
+.subtitle { font-size: 14px; fill: #4a4a4a; font-style: italic; }
+.section-header { font-size: 16px; font-weight: bold; fill: #fff; }
+.box-text { font-size: 13px; fill: #1d1d1d; }
+.box-text-bold { font-size: 13px; font-weight: bold; fill: #1d1d1d; }
+.box-text-small { font-size: 11px; fill: #4a4a4a; }
+.decision-text { font-size: 13px; font-weight: bold; fill: #fff; text-anchor: middle; }
+.ta-chip { font-size: 10px; font-weight: bold; fill: #7a1f2b; }
+.ta-chip-warn { font-size: 10px; font-weight: bold; fill: #c87a00; }
+.ta-chip-off { font-size: 10px; font-weight: bold; fill: #aa3a3a; }
+</style>
+
+<!-- Background -->
+<rect width="1280" height="1520" fill="#fbf8f7"/>
+
+<!-- Title -->
+<text x="640" y="40" class="title" text-anchor="middle">Relapsed / Refractory Multiple Myeloma — Treatment Pathway</text>
+<text x="640" y="62" class="subtitle" text-anchor="middle">MHA-MYELOMA-2026-v0.4.1-GOVERNANCE-POLISH · Aligned to BSH/UKMS 2025 (Jenner) and current NICE technology appraisals</text>
+
+<!-- Step 1: Trigger -->
+<rect x="440" y="90" width="400" height="60" rx="6" fill="#7a1f2b" stroke="#7a1f2b"/>
+<text x="640" y="115" class="section-header" text-anchor="middle">1. Suspected relapse or progression</text>
+<text x="640" y="135" class="box-text" fill="#fff" text-anchor="middle">Biochemical, symptomatic or imaging-detected</text>
+
+<line x1="640" y1="150" x2="640" y2="180" stroke="#7a1f2b" stroke-width="2" marker-end="url(#arrow2)"/>
+
+<!-- Step 2: Evaluation -->
+<rect x="120" y="190" width="1040" height="120" rx="6" fill="#fff" stroke="#d8c9cb" stroke-width="1"/>
+<text x="640" y="212" class="box-text-bold" text-anchor="middle">2. Evaluation at progression</text>
+<text x="140" y="236" class="box-text">• Repeat FBC, U&amp;E, Ca, LDH, β2-M, immunoglobulins, SPE, IFE, serum FLC, urine ACR</text>
+<text x="140" y="254" class="box-text">• Bone marrow aspirate + trephine — repeat FISH and TP53 (clonal evolution in ≥20% at relapse) and exclude MDS</text>
+<text x="140" y="272" class="box-text">• WB-MRI or PET-CT for new bone symptoms, oligo-secretory or extramedullary disease (plain X-ray inadequate)</text>
+<text x="140" y="290" class="box-text">• Reassess fitness, comorbidity, performance status, previous toxicities · MDT · Consider clinical trial enrolment</text>
+
+<line x1="640" y1="310" x2="640" y2="340" stroke="#7a1f2b" stroke-width="2" marker-end="url(#arrow2)"/>
+
+<!-- Step 3: Decision diamond - active treatment required? -->
+<polygon points="640,345 800,440 640,535 480,440" fill="#b04050" stroke="#7a1f2b" stroke-width="2"/>
+<text x="640" y="425" class="decision-text">Active treatment?</text>
+<text x="640" y="445" class="box-text" fill="#fff" text-anchor="middle">CRAB · rapid trajectory ·</text>
+<text x="640" y="461" class="box-text" fill="#fff" text-anchor="middle">EMD · light chain</text>
+<text x="640" y="477" class="box-text" fill="#fff" text-anchor="middle">renal injury</text>
+
+<!-- Yes/No paths -->
+<line x1="480" y1="440" x2="290" y2="440" stroke="#7a1f2b" stroke-width="2" marker-end="url(#arrow2)"/>
+<text x="385" y="430" class="box-text-bold" text-anchor="middle" fill="#7a1f2b">NO — biochemical only</text>
+
+<line x1="640" y1="535" x2="640" y2="570" stroke="#7a1f2b" stroke-width="2" marker-end="url(#arrow2)"/>
+<text x="660" y="555" class="box-text-bold" fill="#7a1f2b">YES</text>
+
+<!-- Biochemical relapse (left) -->
+<rect x="40" y="410" width="240" height="80" rx="6" fill="#e7f0f7" stroke="#1e5d8c" stroke-width="1"/>
+<text x="160" y="432" class="box-text-bold" text-anchor="middle">3a. Monthly monitoring</text>
+<text x="50" y="453" class="box-text-small">Trigger treatment if rapid trajectory,</text>
+<text x="50" y="469" class="box-text-small">high-risk features, prior short TFI,</text>
+<text x="50" y="485" class="box-text-small">light chain renal injury, EMD, HR cyto.</text>
+
+<!-- ============= MAIN TREATMENT SELECTION (CENTRE) ============= -->
+
+<rect x="120" y="580" width="1040" height="80" rx="6" fill="#f5e9eb" stroke="#b04050"/>
+<text x="640" y="603" class="box-text-bold" text-anchor="middle">4. Principles of treatment selection (BSH/UKMS 2025)</text>
+<text x="140" y="623" class="box-text">• Triplets preferred over doublets, subject to tolerance · Switch backbone class from most recent regimen unless long TFI</text>
+<text x="140" y="641" class="box-text">• Carfilzomib-dex preferred over bortezomib-dex; risk-adapted thromboprophylaxis with IMiDs; antiviral with PIs · Restart bisphosphonates at frank relapse</text>
+
+<line x1="640" y1="660" x2="640" y2="685" stroke="#7a1f2b" stroke-width="2" marker-end="url(#arrow2)"/>
+
+<!-- Three-column line stratification -->
+
+<!-- 1st relapse (left) -->
+<rect x="40" y="700" width="380" height="280" rx="6" fill="#fff" stroke="#7a1f2b" stroke-width="2"/>
+<text x="230" y="723" class="box-text-bold" text-anchor="middle">5a. First relapse</text>
+<text x="230" y="745" class="box-text" text-anchor="middle">Class-switch from prior backbone</text>
+<line x1="60" y1="755" x2="400" y2="755" stroke="#d8c9cb"/>
+
+<text x="60" y="775" class="box-text-bold">Post-Vel exposed:</text>
+<text x="60" y="793" class="box-text">• Carfilzomib + Len + dex (KRd)</text>
+<text x="60" y="809" class="ta-chip">NICE TA695</text>
+<text x="60" y="827" class="box-text">• Daratumumab + Rd (Dara-Rd, POLLUX)</text>
+<text x="60" y="843" class="box-text">• Isatuximab + Pd (ICARIA)</text>
+<text x="60" y="861" class="ta-chip-warn">TA status — verify</text>
+
+<text x="60" y="887" class="box-text-bold">Post-Len exposed:</text>
+<text x="60" y="905" class="box-text">• Daratumumab + Vd (Dara-Vd, CASTOR)</text>
+<text x="60" y="923" class="box-text">• Isatuximab + Kd (Isa-Kd, IKEMA)</text>
+<text x="60" y="941" class="box-text">• Pomalidomide + Vd (PVd, OPTIMISMM)</text>
+<text x="60" y="959" class="box-text">• Pomalidomide + dex (Pd, MM-003)</text>
+<text x="60" y="975" class="ta-chip">NICE TA427</text>
+
+<!-- 2nd-3rd relapse (centre) -->
+<rect x="450" y="700" width="380" height="280" rx="6" fill="#fff" stroke="#7a1f2b" stroke-width="2"/>
+<text x="640" y="723" class="box-text-bold" text-anchor="middle">5b. Second / third relapse</text>
+<text x="640" y="745" class="box-text" text-anchor="middle">Further class-switch · Consider 2nd ASCT</text>
+<line x1="470" y1="755" x2="810" y2="755" stroke="#d8c9cb"/>
+
+<text x="470" y="775" class="box-text-bold">2nd ASCT:</text>
+<text x="470" y="793" class="box-text-small">Consider in fit patients who achieved ≥PR</text>
+<text x="470" y="809" class="box-text-small">at first ASCT and ≥PR on reinduction.</text>
+<text x="470" y="825" class="box-text-small">Repeat FISH first. Melphalan 200 mg/m².</text>
+
+<text x="470" y="853" class="box-text-bold">Re-treatment / cycling:</text>
+<text x="470" y="871" class="box-text-small">Consider returning to anti-CD38 if long</text>
+<text x="470" y="887" class="box-text-small">TFI since last exposure. Re-treat with</text>
+<text x="470" y="903" class="box-text-small">PI or IMiD class not used recently.</text>
+
+<text x="470" y="931" class="box-text-bold">Daratumumab monotherapy:</text>
+<text x="470" y="949" class="box-text">After ≥3 prior lines, BTKi-intolerant</text>
+<text x="470" y="965" class="ta-chip">NICE TA510</text>
+
+<!-- Triple-class refractory (right) -->
+<rect x="860" y="700" width="380" height="280" rx="6" fill="#fff" stroke="#7a1f2b" stroke-width="2"/>
+<text x="1050" y="723" class="box-text-bold" text-anchor="middle">5c. Triple-class refractory</text>
+<text x="1050" y="745" class="box-text" text-anchor="middle">≥3 prior lines (IMiD, PI, anti-CD38)</text>
+<line x1="880" y1="755" x2="1220" y2="755" stroke="#d8c9cb"/>
+
+<text x="880" y="775" class="box-text-bold">Teclistamab (BCMA × CD3)</text>
+<text x="880" y="793" class="box-text-small">SC step-up, then 1.5 mg/kg weekly</text>
+<text x="880" y="809" class="ta-chip">NICE TA1015 (Nov 2024)</text>
+
+<text x="880" y="833" class="box-text-bold">Elranatamab (BCMA × CD3)</text>
+<text x="880" y="851" class="ta-chip-warn">CDF / draft NICE — verify</text>
+
+<text x="880" y="877" class="box-text-bold">Talquetamab (GPRC5D × CD3)</text>
+<text x="880" y="895" class="ta-chip-warn">TA status — verify</text>
+
+<text x="880" y="921" class="box-text-bold">CAR-T (ide-cel; cilta-cel)</text>
+<text x="880" y="939" class="box-text-small">Specialist-centre referral</text>
+<text x="880" y="955" class="ta-chip-off">TA889 cilta-cel terminated</text>
+<text x="880" y="973" class="ta-chip-warn">ide-cel TA — verify</text>
+
+<!-- Connection from 5a/5b/5c to 6 -->
+<line x1="230" y1="980" x2="230" y2="1005" stroke="#7a1f2b" stroke-width="2"/>
+<line x1="640" y1="980" x2="640" y2="1005" stroke="#7a1f2b" stroke-width="2"/>
+<line x1="1050" y1="980" x2="1050" y2="1005" stroke="#7a1f2b" stroke-width="2"/>
+<line x1="230" y1="1005" x2="1050" y2="1005" stroke="#7a1f2b" stroke-width="2"/>
+<line x1="640" y1="1005" x2="640" y2="1030" stroke="#7a1f2b" stroke-width="2" marker-end="url(#arrow2)"/>
+
+<!-- Penta-refractory / late-line -->
+<rect x="120" y="1040" width="1040" height="120" rx="6" fill="#fff7e6" stroke="#c87a00" stroke-width="2"/>
+<text x="640" y="1063" class="box-text-bold" text-anchor="middle">6. Late-line and specialist-route options</text>
+<text x="140" y="1086" class="box-text-bold">Belantamab mafodotin + Pd (BPd, DREAMM-8) <tspan class="ta-chip">NICE TA1133</tspan></text>
+<text x="140" y="1102" class="box-text">After 1 prior Len-containing line if Len-intolerant or Len-refractory · mandatory pre-dose ophthalmology · not a generic late-line option</text>
+<text x="140" y="1122" class="box-text-bold">Selinexor + dex <tspan class="ta-chip">NICE TA970 — after ≥4 prior</tspan></text>
+<text x="140" y="1138" class="box-text">Aggressive anti-emetic and supportive plan from C1</text>
+<text x="140" y="1156" class="box-text-bold">Venetoclax for t(11;14) <tspan class="ta-chip-off">Not NICE-commissioned · off-label · biomarker-restricted</tspan></text>
+
+<line x1="640" y1="1160" x2="640" y2="1185" stroke="#7a1f2b" stroke-width="2" marker-end="url(#arrow2)"/>
+
+<!-- Always consider -->
+<rect x="240" y="1195" width="800" height="100" rx="6" fill="#e7f0f7" stroke="#1e5d8c" stroke-width="2"/>
+<text x="640" y="1218" class="box-text-bold" text-anchor="middle">7. Throughout the pathway</text>
+<text x="260" y="1240" class="box-text">• Clinical trial enrolment at every line of therapy</text>
+<text x="260" y="1258" class="box-text">• Supportive care — bisphosphonates, antiviral and antimicrobial prophylaxis, vaccination, IVIg where appropriate</text>
+<text x="260" y="1276" class="box-text">• Holistic needs assessment, palliative-care input early, advance care planning in heavily pre-treated patients</text>
+
+<!-- Footer -->
+<rect x="40" y="1320" width="1200" height="120" rx="6" fill="#fff" stroke="#d8c9cb"/>
+<text x="640" y="1342" class="box-text-bold" text-anchor="middle">Class-switch principle and important reminders</text>
+<text x="60" y="1366" class="box-text-small">• Switch backbone class from most recent line unless treatment-free interval is long; consider returning to anti-CD38 only after sufficient interval since last exposure.</text>
+<text x="60" y="1382" class="box-text-small">• Always re-test FISH and TP53 at progression — clonal evolution alters treatment selection in ≥20% of patients.</text>
+<text x="60" y="1398" class="box-text-small">• Bispecific and CAR-T pre-treatment workup: baseline immunoglobulins (and IVIg plan), HBV/HCV/HIV screening, cardiac assessment, bridging therapy plan, approved-centre referral.</text>
+<text x="60" y="1414" class="box-text-small">• Local NICE TA status, Blueteq eligibility, NHS England commissioning policy and local formulary access take precedence over this summary.</text>
+<text x="60" y="1430" class="box-text-small">• MHA-MYELOMA-2026-v0.4.1-GOVERNANCE-POLISH (draft) · Educational use only · For UK clinical practice only BSH-aligned NICE-commissioned regimens apply.</text>
+
+<!-- Educational footer (v0.4.1) -->
+<rect x="40" y="1450" width="1200" height="20" rx="3" fill="#fff4e0" stroke="#c87a00"/>
+<text x="640" y="1464" font-family="Georgia, serif" font-size="11" font-style="italic" fill="#c87a00" text-anchor="middle" font-weight="bold">Educational pathway summary only. NICE/Blueteq/local formulary and SmPC verification required before treatment.</text>
+
+</svg>

@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1520" font-family="Georgia, serif">
+<title>Myeloma NDMM treatment pathway — MHA-MYELOMA-2026-v0.4.1-GOVERNANCE-POLISH</title>
+<desc>Decision algorithm for newly diagnosed multiple myeloma covering diagnosis, staging, risk stratification, transplant-eligible and transplant-ineligible treatment pathways, ASCT, maintenance, and high-risk approaches. Aligned to BSH/UKMS 2024 and current NICE TAs.</desc>
+
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+<path d="M0,0 L0,6 L9,3 z" fill="#7a1f2b"/>
+</marker>
+<marker id="arrowGrey" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+<path d="M0,0 L0,6 L9,3 z" fill="#666"/>
+</marker>
+</defs>
+
+<style>
+.title { font-size: 24px; font-weight: bold; fill: #7a1f2b; }
+.subtitle { font-size: 14px; fill: #4a4a4a; font-style: italic; }
+.section-header { font-size: 16px; font-weight: bold; fill: #fff; }
+.box-text { font-size: 13px; fill: #1d1d1d; }
+.box-text-bold { font-size: 13px; font-weight: bold; fill: #1d1d1d; }
+.box-text-small { font-size: 11px; fill: #4a4a4a; }
+.decision-text { font-size: 13px; font-weight: bold; fill: #fff; text-anchor: middle; }
+.ta-chip { font-size: 10px; font-weight: bold; fill: #7a1f2b; }
+.caption { font-size: 11px; fill: #6a6a6a; font-style: italic; }
+.footer { font-size: 10px; fill: #6a6a6a; }
+</style>
+
+<!-- Background -->
+<rect width="1280" height="1520" fill="#fbf8f7"/>
+
+<!-- Title -->
+<text x="640" y="40" class="title" text-anchor="middle">Newly Diagnosed Multiple Myeloma — Treatment Pathway</text>
+<text x="640" y="62" class="subtitle" text-anchor="middle">MHA-MYELOMA-2026-v0.4.1-GOVERNANCE-POLISH · Aligned to BSH/UKMS 2024–2025 and current NICE technology appraisals</text>
+
+<!-- Step 1: Confirm diagnosis -->
+<rect x="440" y="90" width="400" height="80" rx="6" fill="#7a1f2b" stroke="#7a1f2b"/>
+<text x="640" y="115" class="section-header" text-anchor="middle">1. Confirm diagnosis — IMWG 2014</text>
+<text x="640" y="138" class="box-text" fill="#fff" text-anchor="middle">Clonal BMPC ≥10% (or plasmacytoma)</text>
+<text x="640" y="156" class="box-text" fill="#fff" text-anchor="middle">PLUS any SLiM CRAB feature</text>
+
+<line x1="640" y1="170" x2="640" y2="200" stroke="#7a1f2b" stroke-width="2" marker-end="url(#arrow)"/>
+
+<!-- Step 2: Baseline workup -->
+<rect x="120" y="210" width="1040" height="120" rx="6" fill="#fff" stroke="#d8c9cb" stroke-width="1"/>
+<text x="640" y="232" class="box-text-bold" text-anchor="middle">2. Baseline workup and risk assessment</text>
+<text x="140" y="258" class="box-text">• FBC, U&amp;E, Ca, LDH, β2-microglobulin, albumin, immunoglobulins, SPE, IFE, serum FLC, urine ACR</text>
+<text x="140" y="278" class="box-text">• Bone marrow aspirate + trephine; CD138 plasma cell phenotyping; extended FISH (t(4;14), t(14;16), t(14;20), del(1p), gain(1q), del(17p))</text>
+<text x="140" y="298" class="box-text">• Whole-body imaging — WB-MRI preferred; PET-CT or low-dose WB-CT acceptable per local protocol</text>
+<text x="140" y="318" class="box-text">• Stage with ISS / R-ISS / R2-ISS · MDT discussion · Frailty assessment if ≥75 or apparent frailty</text>
+
+<line x1="640" y1="330" x2="640" y2="360" stroke="#7a1f2b" stroke-width="2" marker-end="url(#arrow)"/>
+
+<!-- Step 3: Decision diamond - transplant-eligible? -->
+<polygon points="640,365 800,460 640,555 480,460" fill="#b04050" stroke="#7a1f2b" stroke-width="2"/>
+<text x="640" y="445" class="decision-text">Transplant-eligible?</text>
+<text x="640" y="465" class="box-text" fill="#fff" text-anchor="middle">Age, fitness, comorbidity,</text>
+<text x="640" y="482" class="box-text" fill="#fff" text-anchor="middle">organ function, patient view</text>
+
+<!-- Yes arrow (left to TE pathway) -->
+<line x1="480" y1="460" x2="280" y2="460" stroke="#7a1f2b" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="380" y="450" class="box-text-bold" text-anchor="middle" fill="#7a1f2b">YES</text>
+
+<!-- No arrow (right to TI pathway) -->
+<line x1="800" y1="460" x2="1000" y2="460" stroke="#7a1f2b" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="900" y="450" class="box-text-bold" text-anchor="middle" fill="#7a1f2b">NO</text>
+
+<!-- ======================== TE PATHWAY (LEFT) ======================== -->
+
+<!-- TE: Stratify by risk -->
+<rect x="40" y="490" width="480" height="60" rx="6" fill="#f5e9eb" stroke="#b04050"/>
+<text x="280" y="515" class="box-text-bold" text-anchor="middle">3a. Risk-stratify transplant-eligible NDMM</text>
+<text x="280" y="535" class="box-text" text-anchor="middle">2+ HRCA, SKY92 high-risk GEP, primary PCL?</text>
+
+<line x1="280" y1="550" x2="280" y2="580" stroke="#7a1f2b" stroke-width="2"/>
+<line x1="120" y1="580" x2="440" y2="580" stroke="#7a1f2b" stroke-width="2"/>
+<line x1="120" y1="580" x2="120" y2="610" stroke="#7a1f2b" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="440" y1="580" x2="440" y2="610" stroke="#7a1f2b" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="200" y="600" class="box-text-bold" fill="#7a1f2b">Standard risk</text>
+<text x="380" y="600" class="box-text-bold" fill="#7a1f2b">High risk</text>
+
+<!-- TE Standard risk pathway -->
+<rect x="40" y="620" width="170" height="180" rx="6" fill="#fff" stroke="#7a1f2b" stroke-width="2"/>
+<text x="125" y="643" class="box-text-bold" text-anchor="middle">4a. Induction</text>
+<text x="125" y="665" class="box-text" text-anchor="middle">D-VTd × 4 cycles</text>
+<text x="125" y="682" class="ta-chip" text-anchor="middle">NICE TA763</text>
+<line x1="50" y1="695" x2="200" y2="695" stroke="#d8c9cb"/>
+<text x="125" y="713" class="box-text-small" text-anchor="middle">D-VRd (PERSEUS):</text>
+<text x="125" y="729" class="box-text-small" text-anchor="middle">horizon/evidence only;</text>
+<text x="125" y="745" class="box-text-small" text-anchor="middle">NICE GID-TA10726/ID3843</text>
+<text x="125" y="761" class="box-text-small" text-anchor="middle">(transplant-unsuitable)</text>
+<text x="125" y="755" class="box-text-small" text-anchor="middle">Older triplet: VTd</text>
+<text x="125" y="769" class="box-text-small" text-anchor="middle">(TA228/TA311)</text>
+<text x="125" y="788" class="box-text-small" text-anchor="middle">VCd if renal impairment</text>
+
+<line x1="125" y1="800" x2="125" y2="820" stroke="#7a1f2b" stroke-width="2" marker-end="url(#arrow)"/>
+
+<!-- TE Standard risk - ASCT -->
+<rect x="40" y="830" width="170" height="80" rx="6" fill="#fff" stroke="#7a1f2b" stroke-width="2"/>
+<text x="125" y="853" class="box-text-bold" text-anchor="middle">5a. ASCT</text>
+<text x="125" y="873" class="box-text" text-anchor="middle">Single ASCT</text>
+<text x="125" y="893" class="box-text" text-anchor="middle">Melphalan 200 mg/m²</text>
+
+<line x1="125" y1="910" x2="125" y2="930" stroke="#7a1f2b" stroke-width="2" marker-end="url(#arrow)"/>
+
+<!-- TE Standard risk - Consolidation -->
+<rect x="40" y="940" width="170" height="60" rx="6" fill="#fff" stroke="#7a1f2b" stroke-width="2"/>
+<text x="125" y="963" class="box-text-bold" text-anchor="middle">6a. Consolidation</text>
+<text x="125" y="983" class="box-text" text-anchor="middle">D-VTd × 2 (per TA763)</text>
+
+<line x1="125" y1="1000" x2="125" y2="1020" stroke="#7a1f2b" stroke-width="2" marker-end="url(#arrow)"/>
+
+<!-- TE Standard risk - Maintenance -->
+<rect x="40" y="1030" width="170" height="100" rx="6" fill="#fff" stroke="#7a1f2b" stroke-width="2"/>
+<text x="125" y="1053" class="box-text-bold" text-anchor="middle">7a. Maintenance</text>
+<text x="125" y="1075" class="box-text" text-anchor="middle">Lenalidomide 10 mg OD</text>
+<text x="125" y="1093" class="box-text" text-anchor="middle">until progression</text>
+<text x="125" y="1115" class="ta-chip" text-anchor="middle">NICE TA680</text>
+
+<!-- TE High risk pathway -->
+<rect x="240" y="620" width="280" height="180" rx="6" fill="#fff7e6" stroke="#c87a00" stroke-width="2"/>
+<text x="380" y="643" class="box-text-bold" text-anchor="middle">4b. High-risk strategies</text>
+<text x="260" y="665" class="box-text-small">• OPTIMUM/MUKnine: Dara-CVRd induction,</text>
+<text x="260" y="681" class="box-text-small">  bortezomib-augmented ASCT, Dara-VRd</text>
+<text x="260" y="697" class="box-text-small">  consolidation, Dara-R maintenance</text>
+<text x="260" y="717" class="box-text-small">• GMMG-CONCEPT: Isa-KRd × 6, ASCT,</text>
+<text x="260" y="733" class="box-text-small">  Isa-KRd × 4, Isa-KR maintenance</text>
+<text x="260" y="753" class="box-text-small">• IFM 2018-04: Dara-KRd, tandem ASCT,</text>
+<text x="260" y="769" class="box-text-small">  Dara-KRd consolidation, Dara-R maintenance</text>
+<text x="260" y="789" class="box-text-small">• EMN12 (primary PCL): KRd ± tandem ASCT</text>
+
+<line x1="380" y1="800" x2="380" y2="830" stroke="#c87a00" stroke-width="2" marker-end="url(#arrow)"/>
+
+<!-- TE High risk - NHS reality -->
+<rect x="240" y="840" width="280" height="100" rx="6" fill="#fff7e6" stroke="#c87a00" stroke-width="2"/>
+<text x="380" y="863" class="box-text-bold" text-anchor="middle">5b. UK NHS standard for HRMM</text>
+<text x="260" y="885" class="box-text-small">Single ASCT routine; tandem ASCT</text>
+<text x="260" y="901" class="box-text-small">per EHA-EMN and EMN02 subgroup data</text>
+<text x="260" y="921" class="box-text-small">Trial enrolment strongly recommended</text>
+
+<line x1="380" y1="940" x2="380" y2="970" stroke="#c87a00" stroke-width="2" marker-end="url(#arrow)"/>
+
+<rect x="240" y="980" width="280" height="60" rx="6" fill="#fff7e6" stroke="#c87a00" stroke-width="2"/>
+<text x="380" y="1003" class="box-text-bold" text-anchor="middle">6b. Maintenance</text>
+<text x="380" y="1023" class="box-text" text-anchor="middle">Lenalidomide (TA680) ± consider extended</text>
+
+<!-- ======================== TI PATHWAY (RIGHT) ======================== -->
+
+<rect x="760" y="490" width="480" height="60" rx="6" fill="#f5e9eb" stroke="#b04050"/>
+<text x="1000" y="515" class="box-text-bold" text-anchor="middle">3b. Transplant-ineligible NDMM</text>
+<text x="1000" y="535" class="box-text" text-anchor="middle">Frailty-adjusted dosing per IMWG frailty score</text>
+
+<line x1="1000" y1="550" x2="1000" y2="580" stroke="#7a1f2b" stroke-width="2" marker-end="url(#arrow)"/>
+
+<rect x="760" y="590" width="480" height="120" rx="6" fill="#fff" stroke="#7a1f2b" stroke-width="2"/>
+<text x="1000" y="613" class="box-text-bold" text-anchor="middle">4c. First-line treatment</text>
+<text x="1000" y="638" class="box-text" text-anchor="middle">Lenalidomide + dexamethasone (Rd, continuous)</text>
+<text x="1000" y="657" class="ta-chip" text-anchor="middle">NICE TA587</text>
+<line x1="775" y1="670" x2="1225" y2="670" stroke="#d8c9cb"/>
+<text x="780" y="688" class="box-text-small">Daratumumab-containing quadruplets (Dara-Rd/MAIA; Dara-VMP/ALCYONE):</text>
+<text x="780" y="702" class="box-text-small">verify current NICE TA before prescribing.</text>
+
+<line x1="1000" y1="710" x2="1000" y2="740" stroke="#7a1f2b" stroke-width="2" marker-end="url(#arrow)"/>
+
+<rect x="760" y="750" width="480" height="100" rx="6" fill="#fff" stroke="#7a1f2b" stroke-width="2"/>
+<text x="1000" y="773" class="box-text-bold" text-anchor="middle">5c. Continuous treatment until progression</text>
+<text x="1000" y="795" class="box-text" text-anchor="middle">Rd continuous outperforms fixed Rd18</text>
+<text x="1000" y="815" class="box-text" text-anchor="middle">Dose-reduce dexamethasone to 20 mg weekly</text>
+<text x="1000" y="833" class="box-text" text-anchor="middle">in patients ≥75 or frail</text>
+
+<!-- ======================== ALL PATHWAYS LEAD TO MONITORING ======================== -->
+
+<line x1="125" y1="1130" x2="125" y2="1170" stroke="#7a1f2b" stroke-width="2"/>
+<line x1="380" y1="1040" x2="380" y2="1170" stroke="#7a1f2b" stroke-width="2"/>
+<line x1="1000" y1="850" x2="1000" y2="1170" stroke="#7a1f2b" stroke-width="2"/>
+<line x1="125" y1="1170" x2="1000" y2="1170" stroke="#7a1f2b" stroke-width="2"/>
+<line x1="562" y1="1170" x2="562" y2="1195" stroke="#7a1f2b" stroke-width="2" marker-end="url(#arrow)"/>
+
+<rect x="240" y="1205" width="800" height="100" rx="6" fill="#e7f0f7" stroke="#1e5d8c" stroke-width="2"/>
+<text x="640" y="1228" class="box-text-bold" text-anchor="middle">8. Response assessment and monitoring (IMWG criteria)</text>
+<text x="260" y="1252" class="box-text">• Serial M-protein, SFLC, FBC, U&amp;E, Ca, immunoglobulins every cycle during treatment, 3-monthly stable phase</text>
+<text x="260" y="1270" class="box-text">• MRD assessment (10⁻⁵ or 10⁻⁶) in trial settings; informs stopping rules in selected fixed-duration regimens</text>
+<text x="260" y="1288" class="box-text">• Re-image with WB-MRI or PET-CT at suspected progression, new bone pain, oligo-secretory or extramedullary disease</text>
+
+<line x1="640" y1="1305" x2="640" y2="1330" stroke="#7a1f2b" stroke-width="2" marker-end="url(#arrow)"/>
+
+<rect x="380" y="1340" width="520" height="60" rx="6" fill="#7a1f2b" stroke="#7a1f2b"/>
+<text x="640" y="1363" class="section-header" text-anchor="middle">On progression → see R/R pathway algorithm</text>
+<text x="640" y="1383" class="box-text" fill="#fff" text-anchor="middle">Repeat FISH and TP53; reassess fitness; MDT; consider clinical trial</text>
+
+<!-- Footer / supportive care strip -->
+<rect x="40" y="1420" width="1200" height="60" rx="6" fill="#fff" stroke="#d8c9cb"/>
+<text x="640" y="1442" class="box-text-bold" text-anchor="middle">Concurrent supportive care across the pathway</text>
+<text x="60" y="1462" class="box-text-small">• Bisphosphonates (zoledronic acid or pamidronate) in all treated patients; dental assessment before initiation</text>
+<text x="60" y="1476" class="box-text-small">• VTE prophylaxis with IMiD regimens (aspirin low-risk; LMWH/apixaban higher-risk) · Aciclovir with PI-based therapy · Vaccinations · Renal protection · Holistic needs assessment</text>
+
+<!-- Educational footer (v0.4.1) -->
+<rect x="40" y="1488" width="1200" height="20" rx="3" fill="#fff4e0" stroke="#c87a00"/>
+<text x="640" y="1502" font-family="Georgia, serif" font-size="11" font-style="italic" fill="#c87a00" text-anchor="middle" font-weight="bold">Educational pathway summary only. NICE/Blueteq/local formulary and SmPC verification required before treatment.</text>
+
+</svg>
