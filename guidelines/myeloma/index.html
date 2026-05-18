@@ -32,7 +32,7 @@ html, body { background: var(--mha-bg); color: var(--mha-ink); font-family: Geor
 .skip-link { position: absolute; left: -9999px; }
 .skip-link:focus { left: 1rem; top: 1rem; background: var(--mha-burgundy); color: #fff; padding: .5rem .75rem; z-index: 1000; }
 .page { display: grid; grid-template-columns: 1fr 280px; gap: 2.5rem; max-width: 1280px; margin: 0 auto; padding: 1.5rem 1.5rem 4rem; }
-@media (max-width: 980px) { .page { grid-template-columns: 1fr; } .sidebar { order: 2; } }
+@media (max-width: 980px) { .page { grid-template-columns: 1fr; } .gl-sidebar { order: 2; position: static; max-height: none; overflow: visible; } }
 header.mha { border-bottom: 1px solid var(--mha-rule); padding: 1rem 1.5rem; background: #fff; }
 header.mha .inner { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
 header.mha a { color: var(--mha-burgundy); text-decoration: none; font-weight: 600; }
@@ -100,7 +100,7 @@ table caption { caption-side: bottom; text-align: left; font-size: .82rem; color
 .algorithm { background: #fff; border: 1px solid var(--mha-rule); border-radius: 6px; padding: 1rem; margin: 1rem 0; text-align: center; }
 .algorithm img, .algorithm svg { max-width: 100%; height: auto; }
 .algorithm-caption { font-size: .85rem; color: var(--mha-ink-soft); margin-top: .45rem; }
-.sidebar { font-size: .88rem; }
+.gl-sidebar { font-size: .88rem; }
 .side-card { background: #fff; border: 1px solid var(--mha-rule); border-radius: 6px; padding: .9rem 1rem; margin-bottom: 1rem; }
 .side-card h4 { margin: 0 0 .5rem; color: var(--mha-burgundy); font-size: .92rem; }
 .side-card ul { margin: 0; padding-left: 1.1rem; }
@@ -128,6 +128,28 @@ footer.mha strong { color: var(--mha-burgundy); }
 .ref-list .grade.B { background: #ececec; color: var(--mha-grade-vlow); }
 .draft-banner { background: var(--mha-warn-soft); border: 1px solid var(--mha-warn); border-top: 4px solid var(--mha-warn); border-radius: 6px; padding: .8rem 1.1rem; margin: 1rem 0 0; font-size: .92rem; color: var(--mha-grade-mod); }
 .draft-banner strong { color: var(--mha-warn); }
+/* Educational-reference disclaimer (replaces the amber draft banner; v1.6 UX pass May 2026) */
+.educational-ref { font-style: italic; font-size: .82rem; color: var(--mha-ink-soft); margin: .35rem 0 1.1rem; line-height: 1.5; }
+/* Versioning collapsible footer (v1.6 UX pass May 2026) */
+.versioning-block details { margin: 0; }
+.versioning-block details summary { cursor: pointer; font-size: .82rem; color: var(--mha-ink-soft); padding: .55rem .75rem; border: 1px solid var(--mha-rule); border-radius: 4px; background: var(--mha-bg-card); list-style: none; user-select: none; }
+.versioning-block details summary::-webkit-details-marker { display: none; }
+.versioning-block details summary:hover { background: var(--mha-burgundy-soft); color: var(--mha-burgundy); }
+.versioning-block details[open] summary { background: var(--mha-burgundy-soft); color: var(--mha-burgundy); border-bottom: 1px solid var(--mha-rule); border-radius: 4px 4px 0 0; }
+.versioning-block details[open] > *:not(summary) { padding: 0; margin-top: .8rem; }
+.versioning-block details h3 { margin-top: .8rem; }
+/* Sticky chrome (UX pass May 2026) — screen only; print keeps natural flow */
+@media screen {
+  header.mha { position: sticky; top: 0; z-index: 200; }
+  nav.section-anchors { position: sticky; top: 68px; z-index: 150; background: #fff; }
+  .gl-sidebar { position: sticky; top: 130px; align-self: start; max-height: calc(100vh - 150px); overflow-y: auto; padding-right: 4px; scrollbar-width: thin; }
+  .gl-sidebar::-webkit-scrollbar { width: 6px; }
+  .gl-sidebar::-webkit-scrollbar-thumb { background: var(--mha-rule); border-radius: 3px; }
+  .gl-sidebar::-webkit-scrollbar-track { background: transparent; }
+}
+@media print {
+  header.mha, nav.section-anchors, .gl-sidebar { position: static; max-height: none; overflow: visible; }
+}
 </style>
 </head>
 <body>
@@ -181,11 +203,9 @@ footer.mha strong { color: var(--mha-burgundy); }
 </div>
 
 <h1>Multiple Myeloma</h1>
-<p class="lede">Unified UK clinical guideline synthesising BSH 2017–2025 (UK Myeloma Society / UK Myeloma Forum) and EHA-EMN 2025, anchored in NICE NG35 and current NICE technology appraisals. International diagnostic and response frameworks (IMWG 2014, IMWG 2021 PCL, EMN, EHA-EMN 2025) are used for criteria, staging, response assessment and wider context. <strong>Version 0.4.1 GOVERNANCE POLISH — May 2026.</strong></p>
+<p class="lede">Unified UK clinical guideline synthesising BSH 2017–2025 (UK Myeloma Society / UK Myeloma Forum) and EHA-EMN 2025, anchored in NICE NG35 and current NICE technology appraisals. International diagnostic and response frameworks (IMWG 2014, IMWG 2021 PCL, EMN, EHA-EMN 2025) are used for criteria, staging, response assessment and wider context.</p>
 
-<div class="draft-banner">
-<strong>PROPOSAL ONLY — DRAFT — GOVERNANCE REVIEW (v0.4.1 GOVERNANCE POLISH). Not for publication, deployment or clinical use without consultant and pharmacy sign-off.</strong> Section structure matches the live MHA CLL framework (SOP scaffolding v2). NICE technology appraisal entries reflect selected checks at May 2026 only; the live NICE register must be re-verified before any prescribing or commissioning decision. v0.4.1 polish refinements: belantamab + Pd repositioned as post-Len option (TA1133) not generic penta-refractory; D-VRd (GID-TA10726 / ID3843) clarified as horizon/evidence for transplant-unsuitable NDMM, not commissioned for transplant-eligible disease; TA763 wording softened ("within NICE criteria"); star symbol re-explained; algorithm safety footers added. See Section 1A (NICE Horizon Scanning) and the publication checklist in Section 13 before any deployment step.
-</div>
+<p class="educational-ref">Educational reference compiled from BSH/UKMS, EHA-EMN, IMWG and current NICE technology appraisals. Verify locally against current SmPC and the live NICE TA register before any prescribing decision. Last reviewed: May 2026.</p>
 
 <p><strong>Document code:</strong> MHA-MYELOMA-2026-v0.4.1-GOVERNANCE-POLISH
 &nbsp;&nbsp; <strong>Division:</strong> Haematological Malignancy
@@ -1441,6 +1461,8 @@ footer.mha strong { color: var(--mha-burgundy); }
 </div>
 
 <div class="versioning-block">
+<details>
+<summary>Document code: MHA-MYELOMA-2026 &middot; Version v0.4.1 &middot; Last reviewed May 2026 &middot; Full version history &#9662;</summary>
 <h3>Versioning and Governance — MHA-MYELOMA-2026-v0.4.1-GOVERNANCE-POLISH</h3>
 <table>
 <thead>
@@ -1452,8 +1474,10 @@ footer.mha strong { color: var(--mha-burgundy); }
 <tr><td>v0.3</td><td>May 2026</td><td>Dr M Mohsin (Claude-assisted re-cast)</td><td>SOP scaffolding v2 applied: document identity block; tool-metadata block (Scope / Intended users / Evidence base / Tags / Version); section numbering with anchor IDs matching CLL framework; quick decision summary banner; PICO methodology section; clinical vignettes for NDMM overview, MGRS and R/R; pattern recognition and common pitfall callouts; treatment regimen blocks restyled with dose / NICE TA / trial basis / evidence grade chips; explicit NICE TA chips on every named regimen (verified TA763, TA680, TA587, TA228, TA311, TA427, TA510, TA586, TA587, TA657, TA695, TA1015, TA970; flagged TA889 terminated; in-development TAs noted); reference list with PMID/DOI on EHA-EMN 2025 plus credibility grading (A1/A2/B); APA/Vancouver/BibTeX citation block; sidebar widgets drafted (anchor list, visual diagrams, downloads, NICE commissioning, related content); two embedded SVG algorithm placeholders (NDMM and R/R); theme colour aligned to live MHA palette (#7a1f2b).</td></tr>
 <tr><td>v0.4 GOVERNANCE REVIEW</td><td>May 2026</td><td>Dr M Mohsin (Claude-assisted)</td><td>Governance review: status renamed to v0.4-GOVERNANCE-REVIEW; draft banner expanded; D-VRd identifier corrected from incorrect TA11254 to NICE in-development identifier GID-TA10726 / ID3843; new Section 1A NICE Horizon Scanning inserted between Section 1 and Section 2, distinguishing currently recommended / managed-access / in-development / awaiting-development / discontinued / terminated / off-label categories; NICE TA wording softened to "selected entries checked May 2026; live NICE verification required before prescribing"; NCCN removed from disclaimer (only EHA-EMN and IMWG used substantively); ixazomib maintenance reclassified from "in development" to "discontinued February 2026" (GID-TA10843 / ID1517); new entries added — TA1098 Isa-VRd (Sept 2025), TA1023 elranatamab managed access (Dec 2024), TA1114 talquetamab routine NHS (Dec 2025), TA1133 belantamab + Pd (Feb 2026); cilta-cel TA889 (terminated) and GID-TA10905 / ID4012 (in development earlier line) kept explicitly separate; TI-NDMM dara-quadruplet language tightened — D-Rd / D-VMP not presented as available without verified TA; global dose-block caveat added; expanded publication governance checklist with 16 items; algorithm assets linked to JPEG with SVG retained as source; v0.4 PDF/DOCX filenames in sidebar; safety footer added to quick-ref card.</td></tr>
 <tr><td>v0.4.1 GOVERNANCE POLISH</td><td>May 2026</td><td>Dr M Mohsin (Claude-assisted; ChatGPT-reviewed)</td><td>Minimal safety polish: (1) Belantamab + Pd (TA1133) repositioned as a post-Len option after 1 prior lenalidomide-containing line if Len-intolerant or Len-refractory; ocular monitoring warning retained; no longer described as a generic penta-refractory option. (2) D-VRd (GID-TA10726 / ID3843) clarified as "horizon/evidence only" — cited NICE in-development entry currently relates to transplant-unsuitable NDMM; removed from the TE-NDMM commissioned-options list in Section 1 and the TE-NDMM regimen-block area in Section 8; added to the TI-NDMM / horizon area with explicit pathway-placement warning; sidebar NICE Commissioning panel moved D-VRd from "transplant-eligible" to "in development / awaiting"; NDMM algorithm SVG updated to show D-VRd as horizon for transplant-unsuitable. (3) Star symbol wording replaced throughout from "currently preferred where eligible" to "recently appraised / commonly pathway-relevant where NICE criteria and local access are met". (4) TA763 wording reworded as "D-VTd induction/consolidation for newly diagnosed transplant-eligible myeloma, within NICE criteria". (5) Algorithm safety footer added to both NDMM and R/R SVGs: "Educational pathway summary only. NICE/Blueteq/local formulary and SmPC verification required before treatment." JPEGs regenerated from updated SVGs. (6) Filenames updated to v0.4.1; banner retained as PROPOSAL ONLY — DRAFT — GOVERNANCE REVIEW with consultant/pharmacy sign-off requirement preserved. No new clinical recommendations introduced.</td></tr>
+<tr><td>v1.6 UX pass</td><td>May 2026</td><td>Dr M Mohsin (Cowork-assisted)</td><td>Site UX pass: amber DRAFT banner replaced by neutral educational-reference disclaimer; sticky site header, anchor-nav and right sidebar added; versioning block converted to a collapsible footer. No clinical content changes; no NICE TA wording changes.</td></tr>
 </tbody>
 </table>
+</details>
 </div>
 
 <div class="disclaimer-block">
@@ -1463,7 +1487,7 @@ footer.mha strong { color: var(--mha-burgundy); }
 </main>
 
 <!-- ==================== SIDEBAR ==================== -->
-<aside class="sidebar">
+<aside class="gl-sidebar">
 
 <div class="side-card">
 <h4>On This Page</h4>
