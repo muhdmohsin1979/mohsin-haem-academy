@@ -1,0 +1,1574 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Myeloma Guideline (v0.4.1 GOVERNANCE POLISH) — Mohsin Haematology Academy</title>
+<meta name="description" content="Unified UK myeloma guideline synthesising BSH, UKMS/UKMF 2025, EHA-EMN 2025 and NICE — covering MGUS, smouldering myeloma, MGRS, newly diagnosed myeloma, high-risk transplant-eligible disease, imaging, relapsed disease, supportive care, audit, NICE horizon scanning and references. MHA-MYELOMA-2026-v0.4.1-GOVERNANCE-POLISH. Proposal only; not for clinical use without consultant and pharmacy sign-off.">
+<meta name="theme-color" content="#7a1f2b">
+<style>
+:root {
+  --mha-burgundy: #7a1f2b;
+  --mha-burgundy-soft: #f5e9eb;
+  --mha-burgundy-mid: #b04050;
+  --mha-ink: #1d1d1d;
+  --mha-ink-soft: #4a4a4a;
+  --mha-rule: #d8c9cb;
+  --mha-bg: #fbf8f7;
+  --mha-bg-card: #ffffff;
+  --mha-warn: #c87a00;
+  --mha-warn-soft: #fff4e0;
+  --mha-info: #1e5d8c;
+  --mha-info-soft: #e7f0f7;
+  --mha-good: #2a6b3b;
+  --mha-good-soft: #e8f2ea;
+  --mha-grade-high: #2a6b3b;
+  --mha-grade-mod: #c87a00;
+  --mha-grade-low: #aa3a3a;
+  --mha-grade-vlow: #6a6a6a;
+}
+* { box-sizing: border-box; }
+html, body { background: var(--mha-bg); color: var(--mha-ink); font-family: Georgia, 'Times New Roman', serif; line-height: 1.55; margin: 0; padding: 0; }
+.skip-link { position: absolute; left: -9999px; }
+.skip-link:focus { left: 1rem; top: 1rem; background: var(--mha-burgundy); color: #fff; padding: .5rem .75rem; z-index: 1000; }
+.page { display: grid; grid-template-columns: 1fr 280px; gap: 2.5rem; max-width: 1280px; margin: 0 auto; padding: 1.5rem 1.5rem 4rem; }
+@media (max-width: 980px) { .page { grid-template-columns: 1fr; } .sidebar { order: 2; } }
+header.mha { border-bottom: 1px solid var(--mha-rule); padding: 1rem 1.5rem; background: #fff; }
+header.mha .inner { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+header.mha a { color: var(--mha-burgundy); text-decoration: none; font-weight: 600; }
+header.mha nav a { margin-left: 1rem; font-weight: 500; color: var(--mha-ink-soft); }
+header.mha nav a:hover { color: var(--mha-burgundy); }
+.brand { font-weight: 700; color: var(--mha-burgundy); font-size: 1.05rem; }
+.brand-sub { display: block; font-weight: 400; color: var(--mha-ink-soft); font-size: .8rem; }
+nav.section-anchors { background: #fff; border-bottom: 1px solid var(--mha-rule); padding: .6rem 1.5rem; font-size: .85rem; }
+nav.section-anchors .inner { max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 1rem 1.25rem; }
+nav.section-anchors a { color: var(--mha-burgundy); text-decoration: none; }
+nav.section-anchors a:hover { text-decoration: underline; }
+.chip-row { display: flex; flex-wrap: wrap; gap: .4rem; margin: .6rem 0 .8rem; }
+.chip { display: inline-block; padding: .2rem .55rem; border-radius: 999px; font-size: .72rem; font-weight: 600; background: var(--mha-burgundy-soft); color: var(--mha-burgundy); border: 1px solid var(--mha-rule); letter-spacing: .02em; }
+.chip.tag-cat { background: var(--mha-burgundy); color: #fff; border-color: var(--mha-burgundy); }
+.chip.tag-evid { background: #fff; color: var(--mha-ink-soft); }
+.chip.tag-uk { background: var(--mha-info-soft); color: var(--mha-info); border-color: #b9d2e1; }
+.chip.tag-grade-high { background: var(--mha-good-soft); color: var(--mha-grade-high); border-color: #b9d8be; }
+.chip.tag-grade-mod { background: var(--mha-warn-soft); color: var(--mha-grade-mod); border-color: #e6c891; }
+.chip.tag-grade-low { background: #f7e1e1; color: var(--mha-grade-low); border-color: #d8a9a9; }
+.chip.tag-grade-vlow { background: #ececec; color: var(--mha-grade-vlow); border-color: #c8c8c8; }
+.chip.tag-ta { background: #fff; color: var(--mha-burgundy); border-color: var(--mha-burgundy-mid); font-weight: 700; }
+.chip.tag-ta-pending { background: #fff7e6; color: var(--mha-warn); border-color: #e6c891; font-weight: 700; }
+.chip.tag-ta-off { background: #f7e1e1; color: var(--mha-grade-low); border-color: #d8a9a9; font-weight: 700; }
+h1 { font-size: 1.95rem; color: var(--mha-burgundy); margin: .4rem 0 .2rem; line-height: 1.2; }
+h2 { font-size: 1.4rem; color: var(--mha-burgundy); margin: 2.2rem 0 .6rem; padding-bottom: .3rem; border-bottom: 2px solid var(--mha-rule); }
+h2 .num { display: inline-block; width: 1.7rem; height: 1.7rem; border-radius: 50%; background: var(--mha-burgundy); color: #fff; text-align: center; line-height: 1.7rem; font-size: .9rem; font-weight: 700; margin-right: .55rem; vertical-align: middle; }
+h3 { font-size: 1.1rem; color: var(--mha-burgundy); margin: 1.4rem 0 .4rem; }
+h4 { font-size: .98rem; color: var(--mha-ink); margin: 1rem 0 .35rem; font-weight: 700; }
+p, ul, ol { margin: .55rem 0; }
+ul li, ol li { margin: .25rem 0; }
+code { background: #f0eaea; padding: 0 .25em; border-radius: 3px; font-size: .92em; }
+a { color: var(--mha-burgundy); }
+.summary-line { color: var(--mha-ink-soft); font-style: italic; font-size: .95rem; margin: 0 0 .8rem; }
+.lede { font-size: 1rem; color: var(--mha-ink); }
+.metadata-block { background: var(--mha-bg-card); border: 1px solid var(--mha-rule); border-radius: 6px; padding: 1rem 1.1rem; margin: 1rem 0; }
+.metadata-block dl { display: grid; grid-template-columns: 160px 1fr; gap: .5rem .9rem; margin: 0; font-size: .9rem; }
+.metadata-block dt { font-weight: 700; color: var(--mha-burgundy); }
+.metadata-block dd { margin: 0; color: var(--mha-ink); }
+.disclaimer-block { background: var(--mha-burgundy-soft); border: 1px solid var(--mha-burgundy-mid); border-left: 4px solid var(--mha-burgundy); border-radius: 4px; padding: .9rem 1.1rem; margin: 1rem 0; font-size: .92rem; }
+.disclaimer-block strong { color: var(--mha-burgundy); }
+.callout { border-left: 4px solid var(--mha-burgundy); background: var(--mha-burgundy-soft); padding: .8rem 1.1rem; margin: 1rem 0; border-radius: 0 4px 4px 0; }
+.callout-info { border-left-color: var(--mha-info); background: var(--mha-info-soft); }
+.callout-warn { border-left-color: var(--mha-warn); background: var(--mha-warn-soft); }
+.callout-good { border-left-color: var(--mha-good); background: var(--mha-good-soft); }
+.callout h4 { margin-top: 0; color: var(--mha-burgundy); }
+.callout-info h4 { color: var(--mha-info); }
+.callout-warn h4 { color: var(--mha-warn); }
+.callout-good h4 { color: var(--mha-good); }
+.quick-decision { background: #fff; border: 1px solid var(--mha-burgundy-mid); border-top: 4px solid var(--mha-burgundy); border-radius: 6px; padding: 1rem 1.2rem; margin: 1.2rem 0 1.5rem; }
+.quick-decision h3 { margin-top: 0; }
+.regimen-block { background: var(--mha-bg-card); border: 1px solid var(--mha-rule); border-radius: 6px; padding: .9rem 1rem; margin: .9rem 0; }
+.regimen-block .name { font-weight: 700; color: var(--mha-burgundy); font-size: 1rem; display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+.regimen-block .name .ta-chips { display: inline-flex; gap: .35rem; flex-wrap: wrap; }
+.regimen-block dl { display: grid; grid-template-columns: 110px 1fr; gap: .25rem .8rem; margin: .55rem 0 0; font-size: .9rem; }
+.regimen-block dt { font-weight: 700; color: var(--mha-ink-soft); }
+.regimen-block dd { margin: 0; }
+table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .9rem; }
+table th, table td { border: 1px solid var(--mha-rule); padding: .45rem .55rem; text-align: left; vertical-align: top; }
+table th { background: var(--mha-burgundy-soft); color: var(--mha-burgundy); font-weight: 700; }
+table tr:nth-child(even) td { background: #fafafa; }
+table caption { caption-side: bottom; text-align: left; font-size: .82rem; color: var(--mha-ink-soft); padding: .35rem 0; font-style: italic; }
+.attribution { font-size: .8rem; color: var(--mha-ink-soft); font-style: italic; margin: .1rem 0 .8rem; }
+.vignette { border: 1px solid var(--mha-info); background: var(--mha-info-soft); border-radius: 6px; padding: .9rem 1.1rem; margin: 1rem 0; }
+.vignette h4 { color: var(--mha-info); margin: 0 0 .35rem; }
+.algorithm { background: #fff; border: 1px solid var(--mha-rule); border-radius: 6px; padding: 1rem; margin: 1rem 0; text-align: center; }
+.algorithm img, .algorithm svg { max-width: 100%; height: auto; }
+.algorithm-caption { font-size: .85rem; color: var(--mha-ink-soft); margin-top: .45rem; }
+.sidebar { font-size: .88rem; }
+.side-card { background: #fff; border: 1px solid var(--mha-rule); border-radius: 6px; padding: .9rem 1rem; margin-bottom: 1rem; }
+.side-card h4 { margin: 0 0 .5rem; color: var(--mha-burgundy); font-size: .92rem; }
+.side-card ul { margin: 0; padding-left: 1.1rem; }
+.side-card li { margin: .2rem 0; }
+.side-card a { color: var(--mha-burgundy); text-decoration: none; }
+.side-card a:hover { text-decoration: underline; }
+.side-card .ta-list { padding-left: 0; list-style: none; font-size: .82rem; }
+.side-card .ta-list li { padding: .15rem 0; }
+.side-card .ta-list .pref { color: var(--mha-good); font-weight: 700; }
+.cite-block { background: #fff; border: 1px solid var(--mha-rule); border-radius: 6px; padding: 1rem 1.1rem; margin: 1rem 0; font-size: .88rem; }
+.cite-block code { background: #f0eaea; padding: .6rem .7rem; display: block; white-space: pre-wrap; margin: .35rem 0 .6rem; border-radius: 4px; font-family: 'Courier New', monospace; font-size: .85em; }
+.cite-block h4 { margin: .6rem 0 .2rem; }
+.cite-block h4:first-child { margin-top: 0; }
+.versioning-block { font-size: .85rem; margin: 1.2rem 0; }
+.versioning-block table { font-size: .82rem; }
+footer.mha { border-top: 1px solid var(--mha-rule); padding: 1.2rem 1.5rem; background: #fff; color: var(--mha-ink-soft); font-size: .85rem; }
+footer.mha .inner { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem; }
+footer.mha strong { color: var(--mha-burgundy); }
+.ref-list { font-size: .88rem; }
+.ref-list ol { padding-left: 1.4rem; }
+.ref-list li { margin: .35rem 0; }
+.ref-list .grade { display: inline-block; padding: .05rem .35rem; border-radius: 3px; font-size: .72rem; font-weight: 700; margin-left: .3rem; vertical-align: middle; }
+.ref-list .grade.A1 { background: var(--mha-good-soft); color: var(--mha-grade-high); }
+.ref-list .grade.A2 { background: var(--mha-info-soft); color: var(--mha-info); }
+.ref-list .grade.B { background: #ececec; color: var(--mha-grade-vlow); }
+.draft-banner { background: var(--mha-warn-soft); border: 1px solid var(--mha-warn); border-top: 4px solid var(--mha-warn); border-radius: 6px; padding: .8rem 1.1rem; margin: 1rem 0 0; font-size: .92rem; color: var(--mha-grade-mod); }
+.draft-banner strong { color: var(--mha-warn); }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="mha">
+  <div class="inner">
+    <a href="https://mohsinhaemacademy.com/">
+      <span class="brand">Mohsin Haematology Academy<span class="brand-sub">Evidence — Education — Practice</span></span>
+    </a>
+    <nav>
+      <a href="https://mohsinhaemacademy.com/tools.html">Tools</a>
+      <a href="https://mohsinhaemacademy.com/guidelines.html">Guidelines</a>
+      <a href="https://mohsinhaemacademy.com/education.html">Education</a>
+      <a href="https://mohsinhaemacademy.com/journal-club.html">Journal Club</a>
+      <a href="https://mohsinhaemacademy.com/about.html">About</a>
+      <a href="https://mohsinhaemacademy.com/haemcalc.html">Open HaemCalc</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="section-anchors" aria-label="Section anchors">
+  <div class="inner">
+    <a href="#scope">Scope</a>
+    <a href="#horizon">Horizon Scanning</a>
+    <a href="#overview">Clinical Context</a>
+    <a href="#methodology">Guideline Basis</a>
+    <a href="#continuum">Continuum</a>
+    <a href="#mgus">MGUS</a>
+    <a href="#smm">Smouldering</a>
+    <a href="#mgrs">MGRS</a>
+    <a href="#ndmm">NDMM</a>
+    <a href="#hrmm">High-risk TE</a>
+    <a href="#imaging">Imaging</a>
+    <a href="#rr">R/R</a>
+    <a href="#supportive">Supportive care</a>
+    <a href="#audit">Audit &amp; Governance</a>
+    <a href="#refs">References</a>
+    <a href="#cite">Cite</a>
+  </div>
+</nav>
+
+<div class="page">
+<main id="main">
+
+<div class="chip-row" style="margin-top:.5rem;">
+  <span class="chip tag-cat">Haematological Malignancy</span>
+  <span class="chip">BSH · UKMS/UKMF · IMWG</span>
+  <span class="chip">EHA-EMN 2025 · NICE NG35</span>
+  <span class="chip tag-uk">UK Practice: BSH &amp; NICE</span>
+</div>
+
+<h1>Multiple Myeloma</h1>
+<p class="lede">Unified UK clinical guideline synthesising BSH 2017–2025 (UK Myeloma Society / UK Myeloma Forum) and EHA-EMN 2025, anchored in NICE NG35 and current NICE technology appraisals. International diagnostic and response frameworks (IMWG 2014, IMWG 2021 PCL, EMN, EHA-EMN 2025) are used for criteria, staging, response assessment and wider context. <strong>Version 0.4.1 GOVERNANCE POLISH — May 2026.</strong></p>
+
+<div class="draft-banner">
+<strong>PROPOSAL ONLY — DRAFT — GOVERNANCE REVIEW (v0.4.1 GOVERNANCE POLISH). Not for publication, deployment or clinical use without consultant and pharmacy sign-off.</strong> Section structure matches the live MHA CLL framework (SOP scaffolding v2). NICE technology appraisal entries reflect selected checks at May 2026 only; the live NICE register must be re-verified before any prescribing or commissioning decision. v0.4.1 polish refinements: belantamab + Pd repositioned as post-Len option (TA1133) not generic penta-refractory; D-VRd (GID-TA10726 / ID3843) clarified as horizon/evidence for transplant-unsuitable NDMM, not commissioned for transplant-eligible disease; TA763 wording softened ("within NICE criteria"); star symbol re-explained; algorithm safety footers added. See Section 1A (NICE Horizon Scanning) and the publication checklist in Section 13 before any deployment step.
+</div>
+
+<p><strong>Document code:</strong> MHA-MYELOMA-2026-v0.4.1-GOVERNANCE-POLISH
+&nbsp;&nbsp; <strong>Division:</strong> Haematological Malignancy
+&nbsp;&nbsp; <strong>Current version:</strong> May 2026 (governance-polish draft)
+&nbsp;&nbsp; <strong>Review due:</strong> Before any deployment — consultant and pharmacy sign-off; then May 2027 or sooner on NICE / BSH / UKMS / EHA-EMN update.</p>
+
+<div class="metadata-block">
+<dl>
+<dt>Scope</dt>
+<dd>Diagnosis, monitoring and management of plasma cell disorders in adults aged ≥18 across the disease continuum: MGUS, smouldering myeloma, MGRS, newly diagnosed myeloma (transplant-eligible and ineligible, including high-risk), imaging, relapsed and refractory disease, supportive care and survivorship. Primary plasma cell leukaemia and amyloid-light-chain (AL) amyloidosis are signposted to dedicated pathways.</dd>
+<dt>Intended users</dt>
+<dd>UK consultant haematologists, haematology registrars and SHOs, myeloma clinical nurse specialists, CNS teams, MDT coordinators, and renal/nephrology and palliative-care colleagues working in joint MDT pathways. Not intended for patients.</dd>
+<dt>Evidence base</dt>
+<dd>BSH 2017–2025 and UK Myeloma Society / UK Myeloma Forum Good Practice Papers and guidelines (Snowden 2017, Sive 2021, Stern 2023, Hughes 2024, Kaiser 2024 high-risk TE-NDMM, Kaiser 2024 advanced imaging, Pinney 2025, Jenner 2025) · NICE NG35 · NICE technology appraisals · IMWG 2014 diagnostic criteria · IMWG 2021 PCL · IKMG 2019 · EHA-EMN 2025.</dd>
+<dt>Tags</dt>
+<dd>Interpretation · MDT · BSH · NICE · UKMS · IMWG</dd>
+<dt>Version / last reviewed</dt>
+<dd>v0.4.1 GOVERNANCE POLISH · belantamab + Pd repositioned per NICE TA1133 indication · D-VRd clarified as transplant-unsuitable horizon scanning (GID-TA10726 / ID3843) · star symbol wording softened · TA763 reworded ("within NICE criteria") · algorithm safety footers added · May 2026 · Dr Muhammad Mohsin, Consultant Haematologist.</dd>
+</dl>
+</div>
+
+<div class="disclaimer-block">
+<strong>Clinical decision-support only. Not for direct patient use.</strong> Use alongside local trust policy, senior clinical judgement and patient-specific context. Local trust policies take precedence over any content on this page. This page synthesises BSH/UKMS, EHA-EMN and IMWG recommendations for educational purposes. <strong>For UK clinical practice, only BSH-aligned regimens commissioned by NICE apply.</strong> EHA-EMN and IMWG content is used for European/international diagnostic, staging and response-assessment context. UK practice should follow NICE commissioning, BSH/UKMS guidance, Blueteq criteria and local MDT policy. Always verify current NICE commissioning status, Blueteq eligibility and local formulary before prescribing. For prescribing, always check renal and hepatic function, weight, bleeding risk, drug interactions, pregnancy status, and the current Summary of Product Characteristics before administration. Off-label use must be clearly flagged. See the <a href="https://mohsinhaemacademy.com/governance.html">governance page</a> for scope, limitations, and medico-legal framing.
+</div>
+
+<div class="quick-decision">
+<h3>Quick decision summary</h3>
+<ul>
+<li><strong>MGUS:</strong> risk-stratify all new cases with the Mayo 2005 model. Low and low-intermediate risk need no bone marrow and no imaging at diagnosis; discharge low-risk to primary care after the 6-month confirmation visit. High-intermediate and high-risk need bone marrow plus whole-body imaging.</li>
+<li><strong>Smouldering myeloma:</strong> stratify with Mayo 20-2-20 (or IMWG 2020). Treatment is not NHS standard of care outside trials. High-risk SMM is for clinical-trial consideration.</li>
+<li><strong>MGRS:</strong> renal biopsy plus full haematological workup, joint nephrology-haematology MDT. Treat the clone where renal function is at risk; depth of haematological response drives renal outcome.</li>
+<li><strong>NDMM transplant-eligible (standard risk):</strong> daratumumab-containing quadruplet induction per current NICE technology appraisal (currently D-VTd per TA763, within NICE criteria), plus single ASCT, plus lenalidomide maintenance until progression (TA680). D-VRd (PERSEUS-based, GID-TA10726 / ID3843) is in development for <em>transplant-unsuitable</em> NDMM and is not a commissioned TE-NDMM option.</li>
+<li><strong>NDMM transplant-eligible (high-risk by 2+ HRCA, SKY92 or primary PCL):</strong> consider stratified induction-consolidation-maintenance evidence (OPTIMUM/MUKnine, GMMG-CONCEPT, IFM 2018-04, EMN12) within the limits of current NHS commissioning.</li>
+<li><strong>Relapse:</strong> class-switch principle, triplet preferred over doublet, repeat FISH and TP53. Bispecifics (teclistamab TA1015) and CAR-T are reserved for triple-class exposed disease in approved centres. Always consider clinical trial.</li>
+<li><strong>Always MDT.</strong> Escalate to consultant haematology for any treatment decision. Local trust policies and current NICE commissioning status take precedence.</li>
+</ul>
+<p class="summary-line">Summary only. Full reasoning, evidence levels, and references are in the sections below.</p>
+</div>
+
+<!-- ==================== SECTION 1 ==================== -->
+<h2 id="scope"><span class="num">1</span>Scope and Purpose</h2>
+
+<p>This page covers the diagnosis, monitoring and management of plasma cell disorders in adults aged ≥18 years across the full disease continuum, integrating BSH and UK Myeloma Society / UK Myeloma Forum recommendations with NICE technology appraisals, NICE NG35 and EHA-EMN 2025 evidence-based guidelines. It applies in outpatient haematology, day-case and inpatient settings, and in shared-care pathways with nephrology, palliative care, transplant centres and approved cellular-therapy centres.</p>
+
+<p>Primary plasma cell leukaemia, AL amyloidosis and Waldenström macroglobulinaemia are biologically related but follow separate UK pathways and are signposted only.</p>
+
+<div class="callout callout-info">
+<h4>UK Clinical Practice — Applicable NICE Technology Appraisals</h4>
+<p>The following NICE-commissioned technology appraisals govern UK clinical practice for myeloma at the time of writing. <strong>Selected entries checked May 2026; live NICE verification required before prescribing.</strong> TA numbers and commissioning criteria are subject to revision. Several relevant appraisals are in development, in managed-access, or have been terminated — see Section 1A (NICE Horizon Scanning) for the active landscape.</p>
+<p><strong>Newly diagnosed, transplant-eligible:</strong></p>
+<ul>
+<li><strong>TA763</strong> — D-VTd induction/consolidation for newly diagnosed transplant-eligible myeloma, within NICE criteria (Feb 2022).</li>
+<li><strong>TA228</strong> — Bortezomib + thalidomide for first-line transplant-eligible induction (older TA; superseded in routine practice by quadruplet regimens where available).</li>
+<li><strong>TA311</strong> — Bortezomib induction before HDT/ASCT (2014).</li>
+</ul>
+<p><strong>Newly diagnosed, transplant-ineligible:</strong></p>
+<ul>
+<li><strong>TA587</strong> — Lenalidomide + dexamethasone for previously untreated myeloma (2019).</li>
+<li><strong>TA1098</strong> — Isatuximab + bortezomib + lenalidomide + dexamethasone (Isa-VRd, IMROZ-based) for untreated myeloma when stem cell transplant is unsuitable (Sept 2025). Recently appraised — verify final recommendation wording, restrictions and commercial arrangement before prescribing.</li>
+<li><strong>GID-TA10726 / ID3843</strong> — Daratumumab + bortezomib + lenalidomide + dexamethasone (D-VRd, PERSEUS-based) for <em>untreated myeloma when stem cell transplant is unsuitable</em>. <strong>Horizon / evidence only; NICE appraisal in development.</strong> Cited NICE GID-TA10726 / ID3843 currently relates to transplant-unsuitable NDMM; verify live NICE indication before pathway placement. See Section 1A.</li>
+</ul>
+<p><strong>Maintenance after ASCT:</strong></p>
+<ul>
+<li><strong>TA680</strong> — Lenalidomide maintenance for newly diagnosed myeloma after ASCT (2021).</li>
+<li><strong>GID-TA11846 / ID6639</strong> — Isatuximab maintenance after ASCT — <em>NICE awaiting development; horizon scanning only.</em></li>
+<li><strong>GID-TA10843 / ID1517</strong> — Ixazomib citrate maintenance after ASCT — <em>NICE appraisal DISCONTINUED 25 February 2026 after prior suspension.</em> Not anticipated as a routine NICE-commissioned maintenance option.</li>
+</ul>
+<p><strong>Relapsed/refractory:</strong></p>
+<ul>
+<li><strong>TA586</strong> — Lenalidomide + dexamethasone after one prior bortezomib regimen.</li>
+<li><strong>TA695</strong> — Carfilzomib + lenalidomide + dexamethasone (KRd) for previously treated myeloma (partially replaces TA657).</li>
+<li><strong>TA657</strong> — Carfilzomib for previously treated myeloma (2020) — partially replaced by TA695.</li>
+<li><strong>TA510</strong> — Daratumumab monotherapy for R/R myeloma.</li>
+<li><strong>TA129</strong> — Bortezomib monotherapy at first relapse (older TA).</li>
+<li><strong>TA427</strong> — Pomalidomide + dexamethasone for R/R myeloma.</li>
+<li><strong>TA1015</strong> — Teclistamab for R/R myeloma after ≥3 prior treatments (Nov 2024; replaces and updates TA869).</li>
+<li><strong>TA1023</strong> — Elranatamab for R/R myeloma after ≥3 prior treatments (Dec 2024; <em>managed access — evidence collection</em>).</li>
+<li><strong>TA1114</strong> — Talquetamab for R/R myeloma after ≥3 prior treatments (Dec 2025; routine NHS option within NICE criteria).</li>
+<li><strong>TA1133</strong> — Belantamab mafodotin + pomalidomide + dexamethasone for previously treated myeloma after at least one prior therapy including lenalidomide (Feb 2026). Verify recommendation restrictions and ocular-toxicity monitoring requirements before pathway placement.</li>
+<li><strong>TA970</strong> — Selinexor + dexamethasone for R/R myeloma after ≥4 prior treatments.</li>
+<li><strong>TA889</strong> — Ciltacabtagene autoleucel — <strong>terminated appraisal</strong> (Janssen withdrew submission); no NICE recommendation in routine commissioning. Cross-reference separately from in-development GID-TA10905 / ID4012.</li>
+<li><strong>GID-TA10905 / ID4012</strong> — Ciltacabtagene autoleucel for relapsed and lenalidomide-refractory myeloma after 1–3 therapies — <em>NICE appraisal in development</em>. Access requires final NICE guidance and approved-centre pathway; do not confuse with terminated TA889.</li>
+</ul>
+<p><strong>Reviewer note:</strong> Pomalidomide + dex (TA427), elotuzumab, panobinostat (TA380), isatuximab combinations and several maintenance and earlier-line bispecific or CAR-T regimens have additional or older TAs; verify against the live NICE register before publication. Daratumumab-containing quadruplet regimens for transplant-ineligible NDMM (D-Rd MAIA; D-VMP ALCYONE) do not have a verified TA number in this draft — confirm current NICE TA, Blueteq and local formulary status before use rather than presenting these as available.</p>
+</div>
+
+<!-- ==================== SECTION 1A — NICE HORIZON SCANNING ==================== -->
+<h2 id="horizon"><span class="num">1A</span>NICE Horizon Scanning: Recently Approved, In-Development and Evolving Myeloma Therapies</h2>
+
+<div class="callout callout-warn">
+<h4>Important — horizon scanning only</h4>
+<p>This section is horizon scanning only. <strong>It must not be used as a prescribing or commissioning statement.</strong> NICE appraisal status, Blueteq eligibility, NHS England commissioning, local formulary position and approved-centre access must be verified immediately before treatment decisions. Identifiers and dates listed are derived from NICE pages checked at May 2026; status of any in-development or managed-access entry may change at short notice.</p>
+</div>
+
+<p>This section separates therapies by their current NICE classification: routinely recommended; managed-access / Cancer Drugs Fund; in development; awaiting development; discontinued or terminated; and off-label, specialist-centre or trial-only. Entries are listed in order of pathway position (frontline → maintenance → relapse → cellular therapy → biomarker-restricted).</p>
+
+<table>
+<thead>
+<tr><th>Therapy / regimen</th><th>Setting</th><th>NICE status</th><th>Guideline wording</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>D-VRd</strong><br>Daratumumab + bortezomib + lenalidomide + dexamethasone</td>
+<td>Untreated myeloma when stem cell transplant is unsuitable</td>
+<td><strong>In development</strong>: GID-TA10726 / ID3843. Status in progress; NICE expected publication date 13 May 2026 has passed at the time of this draft. <em>Requires live NICE verification.</em></td>
+<td>Evolving frontline quadruplet strategy. Treat as NICE horizon scanning only. <strong>Do not describe as routinely commissioned unless final NICE guidance is published and local Blueteq/formulary access confirms it.</strong></td>
+</tr>
+<tr>
+<td><strong>Isa-VRd</strong><br>Isatuximab + bortezomib + lenalidomide + dexamethasone</td>
+<td>Untreated myeloma when stem cell transplant is unsuitable</td>
+<td><strong>Recommended</strong>: TA1098, published 24 September 2025. Subject to simple discount commercial arrangement.</td>
+<td>NICE-appraised anti-CD38 quadruplet for transplant-ineligible NDMM. Confirm the final recommendation wording, restrictions and commercial arrangement before prescribing.</td>
+</tr>
+<tr>
+<td><strong>Isatuximab maintenance</strong> post-ASCT</td>
+<td>NDMM after autologous stem cell transplant</td>
+<td><strong>Awaiting development</strong>: GID-TA11846 / ID6639. Expected publication date TBC.</td>
+<td>Horizon scanning only. <strong>Do not present as standard maintenance.</strong> Lenalidomide maintenance (TA680) remains the established NICE-commissioned maintenance reference unless superseded by current NICE guidance.</td>
+</tr>
+<tr>
+<td><strong>Ixazomib maintenance</strong> post-ASCT</td>
+<td>NDMM after autologous stem cell transplant</td>
+<td><strong>Discontinued</strong>: GID-TA10843 / ID1517 discontinued 25 February 2026 after prior suspension.</td>
+<td>Out of active in-development list. Labelled as a discontinued appraisal. <strong>Do not imply anticipated NICE availability.</strong></td>
+</tr>
+<tr>
+<td><strong>Ciltacabtagene autoleucel</strong> (cilta-cel), earlier-line</td>
+<td>Relapsed and lenalidomide-refractory myeloma after 1 to 3 therapies</td>
+<td><strong>In development</strong>: GID-TA10905 / ID4012. Status in progress; appraisal scheduled to begin early July 2026 per NICE timeline. Expected publication TBC.</td>
+<td>Cellular-therapy horizon scanning only. Access requires final NICE guidance and approved-centre pathway. <strong>Do not confuse with terminated TA889.</strong></td>
+</tr>
+<tr>
+<td><strong>Ciltacabtagene autoleucel</strong> (cilta-cel), late-line</td>
+<td>Relapsed and refractory myeloma (heavily pre-treated, original indication)</td>
+<td><strong>Terminated</strong>: TA889. No routine NHS recommendation from this appraisal.</td>
+<td>Historical terminated appraisal. Keep cross-referenced separately from GID-TA10905 / ID4012.</td>
+</tr>
+<tr>
+<td><strong>Teclistamab</strong> (BCMA × CD3)</td>
+<td>R/R myeloma after ≥3 prior treatments</td>
+<td><strong>Recommended</strong>: TA1015, published 13 November 2024. Replaces TA869.</td>
+<td>NICE-recommended option after ≥3 prior lines including IMiD, PI and anti-CD38 exposure, subject to NICE wording and commercial arrangement.</td>
+</tr>
+<tr>
+<td><strong>Elranatamab</strong> (BCMA × CD3)</td>
+<td>R/R myeloma after ≥3 prior treatments</td>
+<td><strong>Managed access</strong>: TA1023, published 11 December 2024. Evidence collection arrangement.</td>
+<td>Managed-access BCMA bispecific option. Evidence being collected; NICE will update guidance after further evidence review.</td>
+</tr>
+<tr>
+<td><strong>Talquetamab</strong> (GPRC5D × CD3)</td>
+<td>R/R myeloma after ≥3 prior treatments</td>
+<td><strong>Recommended</strong>: TA1114, published 3 December 2025. Routine NHS option within NICE criteria.</td>
+<td>GPRC5D bispecific option after ≥3 prior lines including IMiD, PI and anti-CD38 antibody, where disease has progressed on last treatment and commercial arrangement applies.</td>
+</tr>
+<tr>
+<td><strong>Belantamab mafodotin + pomalidomide + dexamethasone</strong> (BPd, DREAMM-8)</td>
+<td>Previously treated myeloma after ≥1 prior therapy including lenalidomide</td>
+<td><strong>Recommended</strong>: TA1133, published 18 February 2026.</td>
+<td>Recently appraised relapse option. Verify recommendation restrictions and ocular-toxicity monitoring requirements before pathway placement. Mandatory pre-dose ophthalmology assessment.</td>
+</tr>
+<tr>
+<td><strong>Venetoclax</strong> for t(11;14) myeloma</td>
+<td>Molecularly selected R/R disease</td>
+<td><strong>Not NICE-commissioned</strong> for myeloma. Off-label / specialist-centre / trial-only.</td>
+<td>Mention only as biomarker-directed investigational or off-label context. <strong>Do not present as a routine UK option.</strong></td>
+</tr>
+</tbody>
+</table>
+
+<div class="callout callout-warn">
+<h4>Verification requirements before any clinical use</h4>
+<ul>
+<li>NICE horizon-scanning section checked against live NICE pages immediately before deployment.</li>
+<li>Distinction confirmed between currently recommended, managed-access, in-development, awaiting-development, discontinued and terminated appraisals.</li>
+<li>D-VRd identifier verified as GID-TA10726 / ID3843 unless NICE has since issued final TA guidance with a new TA number.</li>
+<li>Cilta-cel TA889 (terminated) and GID-TA10905 / ID4012 (in development) kept separate at every point in this document.</li>
+<li>Ixazomib maintenance GID-TA10843 labelled discontinued, not in development, at every point in this document.</li>
+</ul>
+</div>
+
+<!-- ==================== SECTION 2 ==================== -->
+<h2 id="overview"><span class="num">2</span>Clinical Overview and Epidemiology</h2>
+
+<div class="vignette">
+<h4>Clinical Vignette</h4>
+<p>A 67-year-old woman is referred by her GP with a four-month history of progressive lumbar back pain, fatigue and a 5 kg unintentional weight loss. Investigations show Hb 96 g/L, creatinine 168 µmol/L, corrected calcium 2.78 mmol/L, total protein 102 g/L, albumin 32 g/L. Serum electrophoresis shows an IgG-kappa M-protein of 42 g/L. Serum free light chains show involved kappa 380 mg/L, uninvolved lambda 4 mg/L, ratio 95. She asks whether she has myeloma and what happens next.</p>
+</div>
+
+<p>Plasma cell disorders form a biological continuum from <strong>monoclonal gammopathy of undetermined significance (MGUS)</strong>, through <strong>smouldering multiple myeloma (SMM)</strong>, to symptomatic <strong>multiple myeloma (MM)</strong>, <strong>plasma cell leukaemia (PCL)</strong> and related lymphoplasmacytic malignancies. The same clonal genetic events are detectable across these states, with progressive acquisition of secondary copy-number changes and single-nucleotide variants as disease evolves.</p>
+
+<p>Myeloma accounts for approximately 2% of all cancers in the UK and is the second most common haematological malignancy. Median age at diagnosis is 70 years, with a slight male predominance. Five-year survival has more than doubled over the past two decades with sequential approval of proteasome inhibitors, immunomodulatory agents, anti-CD38 monoclonal antibodies and, most recently, T-cell-redirecting therapies. Cure remains uncommon outside selected high-risk transplant strategies and clinical trials, so the standard framing is one of sustained disease control rather than eradication.</p>
+
+<p>Two parallel concepts now sit alongside the traditional diagnostic boundaries. <strong>Monoclonal gammopathy of clinical significance (MGCS)</strong> captures patients in whom a small clone causes organ injury without meeting criteria for haematological malignancy. <strong>Monoclonal gammopathy of renal significance (MGRS)</strong> is the renal subset of MGCS and is addressed in its own section.</p>
+
+<h3>Defining the entities — IMWG 2014 framework</h3>
+
+<table>
+<thead>
+<tr><th>Entity</th><th>Serum M-protein</th><th>Clonal bone marrow plasma cells</th><th>Myeloma-defining events</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>MGUS</strong></td><td>&lt; 30 g/L</td><td>&lt; 10%</td><td>None</td></tr>
+<tr><td><strong>Smouldering myeloma</strong></td><td>≥ 30 g/L (or urinary M-protein ≥ 500 mg/24 h) and/or BMPC 10–59%</td><td>10–59%</td><td>None (no SLiM CRAB)</td></tr>
+<tr><td><strong>Multiple myeloma</strong></td><td>Any</td><td>≥ 10% (or biopsy-proven plasmacytoma)</td><td>Any SLiM CRAB feature</td></tr>
+<tr><td><strong>Plasma cell leukaemia</strong></td><td>Any</td><td>Any, with circulating plasma cells</td><td>≥ 5% circulating plasma cells (IMWG 2021 redefinition)</td></tr>
+</tbody>
+</table>
+<p class="attribution">Source: Rajkumar 2014 (Lancet Oncol); Fernández de Larrea 2021 (Blood Cancer J).</p>
+
+<h3>SLiM CRAB — Myeloma-defining events</h3>
+
+<table>
+<thead>
+<tr><th>Marker</th><th>Definition</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>S</strong> — Sixty per cent</td><td>≥ 60% clonal plasma cells in bone marrow</td></tr>
+<tr><td><strong>Li</strong> — Light chain ratio</td><td>Involved : uninvolved serum free light chain ratio &gt; 100 (involved FLC &gt; 100 mg/L by FREELITE)</td></tr>
+<tr><td><strong>M</strong> — MRI focal lesion</td><td>More than one focal lesion &gt; 5 mm on MRI</td></tr>
+<tr><td><strong>C</strong> — Calcium elevation</td><td>Serum calcium &gt; 2.75 mmol/L or &gt; 0.25 mmol/L above the upper limit of normal</td></tr>
+<tr><td><strong>R</strong> — Renal insufficiency</td><td>Serum creatinine &gt; 177 µmol/L or creatinine clearance &lt; 40 mL/min, attributable to myeloma</td></tr>
+<tr><td><strong>A</strong> — Anaemia</td><td>Haemoglobin &lt; 100 g/L or ≥ 20 g/L below the lower limit of normal</td></tr>
+<tr><td><strong>B</strong> — Bone lesions</td><td>One or more osteolytic lesions ≥ 5 mm on CT, PET-CT or skeletal imaging</td></tr>
+</tbody>
+</table>
+<p class="attribution">Source: Rajkumar 2014; reproduced in Hughes 2024 BSH Good Practice Paper.</p>
+
+<div class="callout">
+<h4>Pattern recognition — SLiM CRAB ≠ Rai/Binet</h4>
+<p>SLiM features (60% BMPC, FLC ratio &gt;100, &gt;1 MRI focal lesion) define <em>active</em> myeloma even without overt end-organ damage. A patient with 70% BMPC and no CRAB still has myeloma and warrants treatment. Do not wait for CRAB to declare when SLiM is present.</p>
+</div>
+
+<!-- ==================== SECTION 3 ==================== -->
+<h2 id="methodology"><span class="num">3</span>Guideline Basis (Methodology)</h2>
+
+<p>This page integrates UK, European and international evidence frameworks. Each recommendation is tagged with its source society and (where available) evidence grade. UK clinical practice statements are drawn from BSH/UKMS/UKMF and NICE; European context is drawn from EHA-EMN 2025; international diagnostic and response criteria are drawn from IMWG.</p>
+
+<h4>P — Population</h4>
+<p>Adults (≥18 years) with confirmed MGUS, SMM, MGRS, NDMM (transplant-eligible or ineligible), high-risk myeloma, or relapsed/refractory disease.</p>
+
+<h4>I — Intervention</h4>
+<p>Surveillance protocols; proteasome inhibitors (bortezomib, carfilzomib, ixazomib); immunomodulatory agents (lenalidomide, pomalidomide, thalidomide); anti-CD38 monoclonal antibodies (daratumumab, isatuximab); high-dose melphalan and ASCT; BCMA-directed T-cell engagers (teclistamab, elranatamab, linvoseltamab); GPRC5D T-cell engager (talquetamab); BCMA CAR-T (ide-cel, cilta-cel); BCL2 inhibitor in t(11;14) (venetoclax, off-label in UK); selective inhibitor of nuclear export (selinexor); BCMA antibody-drug conjugate (belantamab mafodotin).</p>
+
+<h4>C — Comparator</h4>
+<p>Alternative regimens within or across drug classes; clinical trial enrolment; supportive care alone in selected late-line patients.</p>
+
+<h4>O — Outcomes</h4>
+<p>Progression-free survival, overall survival, MRD-negativity (10⁻⁵ and 10⁻⁶), overall response rate, treatment-related mortality, infection rate, quality of life, treatment-free interval.</p>
+
+<h4>Source societies and frameworks</h4>
+<ul>
+<li><strong>BSH and UK Myeloma Society / UK Myeloma Forum</strong> — UK national guideline framework; primary driver for UK practice (Snowden 2017, Sive 2021, Stern 2023, Hughes 2024, two Kaiser 2024 papers, Pinney 2025, Jenner 2025).</li>
+<li><strong>NICE</strong> — NG35 (diagnosis and management) and the individual technology appraisals listed in Section 1.</li>
+<li><strong>EHA-EMN 2025</strong> — European Hematology Association / European Myeloma Network evidence-based guideline (Dimopoulos 2025, Nat Rev Clin Oncol). Replaces EHA-ESMO 2021.</li>
+<li><strong>IMWG</strong> — 2014 diagnostic criteria (Rajkumar), 2020 risk model for SMM (Mateos), 2021 PCL redefinition (Fernández de Larrea).</li>
+<li><strong>IKMG 2019</strong> — International Kidney and Monoclonal Gammopathy Research Group consensus on MGRS (Leung).</li>
+</ul>
+
+<h4>Evidence grading</h4>
+<ul>
+<li><strong>High</strong> — RCTs or meta-analyses with consistent results.</li>
+<li><strong>Moderate</strong> — RCTs with limitations or observational data with a strong effect size.</li>
+<li><strong>Low</strong> — Observational or indirect evidence.</li>
+<li><strong>Very low</strong> — Case series or expert opinion.</li>
+</ul>
+
+<!-- ==================== SECTION 4 (CONTINUUM ANCHOR) ==================== -->
+<h2 id="continuum"><span class="num">4</span>The Plasma Cell Disease Continuum</h2>
+
+<p>The boundary between MGUS, SMM and active myeloma is biological rather than absolute. Disease moves along the continuum at a rate that varies with clonal burden, cytogenetic features and host factors. A consistent monitoring framework, with timely transitions in care intensity, prevents both overtreatment and missed progression.</p>
+
+<table>
+<thead>
+<tr><th>State</th><th>Prevalence / incidence</th><th>Approximate annual progression to MM</th><th>Action</th></tr>
+</thead>
+<tbody>
+<tr><td>MGUS (Mayo low-risk)</td><td>~3% of those aged ≥50</td><td>≈0.3–0.5% per year</td><td>Primary-care surveillance after baseline confirmation</td></tr>
+<tr><td>MGUS (Mayo high-risk)</td><td>~5–10% of MGUS</td><td>≈2–3% per year</td><td>Annual haematology review, bone marrow and imaging at baseline</td></tr>
+<tr><td>SMM (Mayo 20-2-20, 0 factors)</td><td>~20% of SMM</td><td>~10% over 2 years</td><td>6–12 monthly surveillance</td></tr>
+<tr><td>SMM (Mayo 20-2-20, 1 factor)</td><td>~40% of SMM</td><td>~26% over 2 years</td><td>3-monthly surveillance, trial consideration</td></tr>
+<tr><td>SMM (Mayo 20-2-20, ≥2 factors)</td><td>~40% of SMM</td><td>~47% over 2 years</td><td>3-monthly surveillance, trial consideration mandatory</td></tr>
+<tr><td>Active myeloma</td><td>~6 per 100,000 / year (UK)</td><td>n/a</td><td>Specialist MDT treatment pathway</td></tr>
+</tbody>
+</table>
+<p class="attribution">Sources: Stern 2023 BSH MGUS; Hughes 2024 BSH SMM; Lakshman 2018; Mateos 2020.</p>
+
+<!-- ==================== SECTION 5 — MGUS ==================== -->
+<h2 id="mgus"><span class="num">5</span>MGUS — Investigation and Risk Stratification</h2>
+
+<p>MGUS is defined by a serum M-protein &lt; 30 g/L, clonal bone marrow plasma cells &lt; 10%, and the absence of any feature of myeloma or a related lymphoplasmacytic malignancy. Prevalence is approximately 3% over the age of 50 and rises with age. Most patients die of unrelated causes. The average risk of progression to a related malignancy is approximately 1% per year and persists beyond 25 years. IgM MGUS is more likely to progress to lymphoplasmacytic lymphoma or Waldenström macroglobulinaemia than to myeloma.</p>
+
+<h3>Initial investigations (all patients)</h3>
+<ul>
+<li>FBC, urea and electrolytes, eGFR, corrected calcium, albumin.</li>
+<li>Urine dipstick for proteinuria; if positive, send urine protein:creatinine ratio (PCR) or albumin:creatinine ratio (ACR).</li>
+<li>Serum protein electrophoresis with quantification of the M-protein and uninvolved immunoglobulins.</li>
+<li>Immunofixation to confirm M-protein type.</li>
+<li>Serum free light chain assay (kappa, lambda, ratio).</li>
+<li>Serum LDH and β2-microglobulin only if myeloma is suspected.</li>
+</ul>
+
+<p>Serum FLC testing is central to assessment. Routine 24-hour urine collection is not required for initial screening in most UK pathways. Urine studies remain important where local laboratory protocols, amyloid/MGRS assessment, response assessment or trial requirements specify them.</p>
+
+<h3>Mayo Clinic risk stratification — preferred UK model</h3>
+
+<p>The 2005 Mayo Clinic model uses three readily available variables: an abnormal kappa:lambda FLC ratio (&lt; 0.26 or &gt; 1.65), a serum M-protein &gt; 15 g/L, and a non-IgG isotype (IgA or IgM). Patients are stratified by the number of risk factors present.</p>
+
+<table>
+<thead>
+<tr><th>Risk factors</th><th>Risk group</th><th>Absolute risk of progression at 20 years</th></tr>
+</thead>
+<tbody>
+<tr><td>0</td><td>Low risk</td><td>2%</td></tr>
+<tr><td>1</td><td>Low-intermediate</td><td>10%</td></tr>
+<tr><td>2</td><td>High-intermediate</td><td>18%</td></tr>
+<tr><td>3</td><td>High risk</td><td>27%</td></tr>
+</tbody>
+</table>
+<p class="attribution">Source: Rajkumar 2005 (Blood); endorsed by Stern 2023 BSH Good Practice Paper.</p>
+
+<p>BSH 2023 recommends a model that does not require bone marrow biopsy. Alternative models (Spanish PETHEMA, Swedish four-factor with immunoparesis, IMWG) have not been compared head-to-head with the Mayo model and remain supplementary in UK practice.</p>
+
+<h3>Bone marrow and imaging — risk-stratified</h3>
+<ul>
+<li><strong>Low and low-intermediate risk MGUS:</strong> no bone marrow examination and no imaging at diagnosis.</li>
+<li><strong>High-intermediate and high-risk MGUS:</strong> bone marrow aspirate, trephine, plasma cell immunophenotyping and FISH; whole-body imaging (low-dose WB-CT, WB-MRI or PET-CT, by clinical question and local access).</li>
+<li>At the high-intermediate or high-risk threshold, also send urine ACR, troponin and NT-proBNP to screen for AL amyloidosis.</li>
+</ul>
+
+<h3>Monitoring schedule</h3>
+<ul>
+<li><strong>All newly diagnosed MGUS:</strong> repeat FBC, creatinine, calcium, M-protein and serum FLC at 6 months.</li>
+<li><strong>Low-risk MGUS:</strong> annually thereafter; consider longer intervals or discharge to primary care where life expectancy is short.</li>
+<li><strong>Low-intermediate MGUS:</strong> annual review in primary or secondary care.</li>
+<li><strong>High-intermediate and high-risk MGUS:</strong> annual secondary-care review (virtual or face-to-face). Re-stratify formally every 3 years.</li>
+<li>Any progressive rise in M-protein or FLC, or development of anaemia, ESR rise, renal impairment, hypercalcaemia or new bone pain, prompts urgent reassessment.</li>
+</ul>
+
+<div class="callout">
+<h4>Pattern recognition — IgM MGUS</h4>
+<p>IgM MGUS is biologically distinct. It carries a different progression risk profile (lymphoplasmacytic lymphoma / Waldenström macroglobulinaemia rather than myeloma) and a different surveillance pathway. CT neck-thorax-abdomen-pelvis at baseline is appropriate where the IgM concentration is rising or symptoms suggest nodal disease.</p>
+</div>
+
+<div class="callout callout-warn">
+<h4>Common pitfall — proteinuria assumed benign</h4>
+<p>Urine dipstick is insensitive to light chains. A "trace" or "negative" dipstick does not exclude significant Bence Jones proteinuria. Always send urine ACR (not PCR) where AL amyloid or MGRS is in the differential.</p>
+</div>
+
+<h3>BSH 2023 recommendations</h3>
+<ul>
+<li>Risk-stratify all newly diagnosed MGUS using a validated published model that does not require bone marrow biopsy (Mayo criteria preferred).</li>
+<li>Low and low-intermediate risk MGUS do not need bone marrow examination or imaging at diagnosis.</li>
+<li>High-intermediate and high-risk MGUS need bone marrow examination and whole-body imaging.</li>
+<li>Decisions to treat MGCS with systemic chemotherapy must be made through an MDT with appropriate sub-specialty representation.</li>
+<li>Clear information and psychological support at diagnosis and at each review.</li>
+</ul>
+
+<h3>MGCS — monoclonal gammopathy of clinical significance</h3>
+<p>MGCS describes organ damage from a small B-cell or plasma cell clone where criteria for haematological malignancy are not met. Recognised entities include scleromyxoedema, IgM-associated peripheral neuropathy, cold agglutinin disease, POEMS syndrome, Schnitzler syndrome, type 2 mixed cryoglobulinaemia and capillary leak syndrome. Management is sub-specialty led with MDT input.</p>
+
+<h3>Other MGUS-associated risks</h3>
+<ul>
+<li>Increased risk of axial fractures; optimise vitamin D and calcium; consider DEXA in patients with additional osteoporosis risk factors.</li>
+<li>Modestly increased risk of venous (and to a lesser extent arterial) thrombosis; routine primary thromboprophylaxis is not recommended.</li>
+<li>Increased risk of bacterial infection; ensure vaccination is current.</li>
+<li>Psychological burden of watch-and-wait should be acknowledged and supported at each visit.</li>
+</ul>
+
+<!-- ==================== SECTION 6 — SMM ==================== -->
+<h2 id="smm"><span class="num">6</span>Smouldering Myeloma — Diagnosis, Risk and Monitoring</h2>
+
+<p>Smouldering myeloma sits between MGUS and active myeloma. Untreated, the rate of progression to symptomatic myeloma is approximately 10% per year in the first five years, 3% per year for the next five years, and 1% per year thereafter. The risk varies widely with biological behaviour and is best estimated using a validated model.</p>
+
+<h3>Diagnostic criteria (IMWG 2014)</h3>
+<ul>
+<li>Serum M-protein ≥ 30 g/L, or urinary M-protein ≥ 500 mg/24 h, and/or clonal bone marrow plasma cells 10–59%.</li>
+<li>Absence of myeloma-defining events (SLiM CRAB) and no amyloidosis.</li>
+</ul>
+
+<h3>Investigations at diagnosis</h3>
+
+<table>
+<thead>
+<tr><th>Domain</th><th>Recommended tests</th></tr>
+</thead>
+<tbody>
+<tr><td>Screening</td><td>FBC, U&amp;E, calcium, immunoglobulins, serum protein electrophoresis, immunofixation, serum FLC.</td></tr>
+<tr><td>Diagnostic</td><td>Bone marrow aspirate and trephine with plasma cell phenotyping; cross-sectional imaging (WB-MRI preferred, then PET-CT, then low-dose WB-CT). Skeletal survey is not recommended as the sole staging investigation.</td></tr>
+<tr><td>Risk and prognosis</td><td>Interphase FISH on CD138-selected cells for t(4;14), t(14;16), t(11;14), del(17p), gain(1q), del(1p); consider t(14;20), del(13q) and hyperdiploidy. β2-microglobulin, LDH, albumin.</td></tr>
+<tr><td>Light-chain SMM or possible amyloidosis</td><td>Urine ACR, troponin, NT-proBNP; renal biopsy if SFLC &lt; 500 mg/L and renal impairment is unexplained.</td></tr>
+</tbody>
+</table>
+<p class="attribution">Source: Hughes 2024 BSH Good Practice Paper; cross-referenced with Sive 2021 BSH/UKMF guideline.</p>
+
+<h3>Risk stratification — Mayo 20-2-20 and IMWG 2020</h3>
+
+<p>BSH 2024 endorses the Mayo 20-2-20 (2018) and the updated IMWG 2020 model that incorporates FISH.</p>
+
+<table>
+<thead>
+<tr><th>Risk factor</th><th>Threshold</th></tr>
+</thead>
+<tbody>
+<tr><td>Bone marrow plasma cells</td><td>&gt; 20%</td></tr>
+<tr><td>Serum M-protein</td><td>&gt; 20 g/L</td></tr>
+<tr><td>Involved : uninvolved SFLC ratio</td><td>&gt; 20</td></tr>
+<tr><td>High-risk cytogenetics (IMWG 2020 only)</td><td>t(4;14), t(14;16), gain(1q), monosomy 13 or del(13q)</td></tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr><th>Risk group (Mayo 20-2-20)</th><th>2-year progression risk</th><th>Median time to progression</th></tr>
+</thead>
+<tbody>
+<tr><td>Low (0 risk factors)</td><td>~10%</td><td>~110 months</td></tr>
+<tr><td>Intermediate (1 risk factor)</td><td>~26%</td><td>~45 months</td></tr>
+<tr><td>High (≥ 2 risk factors)</td><td>~47%</td><td>~23 months</td></tr>
+</tbody>
+</table>
+<p class="attribution">Source: Lakshman 2018 (Blood Cancer J); endorsed by Hughes 2024.</p>
+
+<p>Re-stratify patients annually for the first five years post-diagnosis. Movement to a higher risk group between assessments is itself prognostic.</p>
+
+<div class="callout">
+<h4>Pattern recognition — evolving SMM</h4>
+<p>An evolving M-protein or FLC trajectory (a rise of more than 10% over six months, or any new immunoparesis) carries independent prognostic weight beyond the static Mayo 20-2-20 group. Re-stratify and consider trial referral early.</p>
+</div>
+
+<h3>Monitoring and intervention</h3>
+<ul>
+<li><strong>Low-risk SMM:</strong> 3-monthly clinical and biochemical review for the first year, extending to 6–12 monthly if stable.</li>
+<li><strong>Intermediate-risk SMM:</strong> 3-monthly review for 1–2 years, extending to 4–6 monthly if stable.</li>
+<li><strong>High-risk SMM:</strong> 3-monthly review for at least 5 years; consider entry into a clinical trial. Outside trials, BSH 2024 states there is insufficient evidence to treat SMM routinely.</li>
+<li>Repeat imaging annually in high-risk SMM and at a low threshold in those with evolving disease markers. Equivocal or solitary focal lesions at baseline warrant interval imaging at 3–6 months.</li>
+<li>QuiRedex and SWOG E3A06 showed benefit from early lenalidomide-based therapy in high-risk SMM. Treatment of SMM is not NHS standard of care outside trials at the time of this draft.</li>
+</ul>
+
+<h3>Supportive care in SMM</h3>
+<ul>
+<li>Annual flu vaccination, full COVID-19 schedule, conjugate pneumococcal (PCV13) followed by polysaccharide (PPV23) at 2 months, repeated 5-yearly. Functional antibody check at 6 weeks in patients with recurrent infection.</li>
+<li>Recombinant zoster vaccine (Shingrix) two-dose schedule in patients over 50 years.</li>
+<li>No routine VTE prophylaxis. No routine bisphosphonates outside osteoporosis indication.</li>
+<li>Psychological support and clear information at diagnosis and at each review.</li>
+</ul>
+
+<!-- ==================== SECTION 7 — MGRS ==================== -->
+<h2 id="mgrs"><span class="num">7</span>MGRS — Monoclonal Gammopathy of Renal Significance</h2>
+
+<div class="vignette">
+<h4>Clinical Vignette</h4>
+<p>A 59-year-old man under MGUS surveillance for two years (low-risk Mayo, IgG-kappa, M-protein 12 g/L) attends with new ankle swelling and an eGFR drop from 78 to 49 mL/min/1.73 m². Urine ACR is 320 mg/mmol. He has no anaemia, no hypercalcaemia, no bone pain, no skeletal lesions on subsequent low-dose WB-CT. His M-protein remains stable. Is this MGRS?</p>
+</div>
+
+<p>MGRS describes any kidney disease caused directly or indirectly by a small B-cell or plasma cell clone that does not meet WHO criteria for haematological neoplasm. Diagnosis links the underlying clone to a defined renal lesion confirmed on biopsy. The most common MGRS-associated disorder in the UK is AL amyloidosis. Progression to end-stage kidney disease (ESKD) is common; outcome is determined primarily by depth of haematological response.</p>
+
+<h3>Screening in haematology clinic</h3>
+<ul>
+<li>All patients with a known MGUS should have serum creatinine, eGFR, urinalysis and urine ACR (not PCR) checked at first presentation.</li>
+<li>Urine dipstick is insensitive to light chains; do not use it to exclude light-chain proteinuria.</li>
+<li>Refer to nephrology if ACR &gt; 30 mg/mmol with a detectable clone, microscopic haematuria, or eGFR declines by more than 25% in 12 months.</li>
+</ul>
+
+<h3>Histological classification (IKMG)</h3>
+
+<table>
+<thead>
+<tr><th>MGRS-associated lesion</th><th>Type of deposit</th></tr>
+</thead>
+<tbody>
+<tr><td>Immunoglobulin-related amyloidosis (AL, AH, AHL)</td><td>Organised fibrils, Congo red positive</td></tr>
+<tr><td>Monoclonal immunoglobulin deposition disease (LCDD, LHCDD, HCDD)</td><td>Non-organised, finely granular, linear Ig along GBM and TBM</td></tr>
+<tr><td>Proliferative GN with monoclonal Ig deposits (PGNMID)</td><td>Granular monotypic Ig deposits, mostly IgG3-kappa</td></tr>
+<tr><td>Monotypic immunotactoid GN</td><td>Organised microtubules (14–60 nm) with light chain restriction</td></tr>
+<tr><td>Type 1 / type 2 cryoglobulinaemic GN</td><td>Microtubules or intraluminal crystals with light chain restriction</td></tr>
+<tr><td>C3 glomerulopathy with monoclonal gammopathy</td><td>C3-predominant deposits without polyclonal Ig</td></tr>
+<tr><td>Thrombotic microangiopathy with monoclonal gammopathy</td><td>No immune deposits; characteristic GBM and endothelial changes</td></tr>
+<tr><td>Light-chain proximal tubulopathy</td><td>Proximal tubular light chain accumulation (crystals or lysosomal)</td></tr>
+<tr><td>Crystal-storing histiocytosis</td><td>Crystals within histiocytes; often multi-organ</td></tr>
+</tbody>
+</table>
+<p class="attribution">Source: Pinney 2025 BSH Good Practice Paper; IKMG consensus (Leung 2019, Nat Rev Nephrol).</p>
+
+<h3>Diagnostic workup</h3>
+<ul>
+<li>Renal biopsy with light microscopy, immunofluorescence on frozen tissue, electron microscopy, Congo red and where indicated DNAJB9 and protease-digested immunofluorescence. Biopsies should be reported using the Mayo Clinic / Renal Pathology Society standardised report.</li>
+<li>Full haematological workup with bone marrow aspirate and trephine, CD138 and CD20 immunohistochemistry, flow cytometry and FISH for plasma cell or B-cell clones.</li>
+<li>Imaging: WB-MRI or PET-CT for plasma cell clones; CT neck, thorax, abdomen and pelvis (and lymph node biopsy where indicated) for B-cell clones.</li>
+<li>Discussion at a specialist joint haematology and nephrology MDT with renal pathology input.</li>
+</ul>
+
+<h3>Principles of treatment</h3>
+<ul>
+<li>Aim for the deepest haematological response possible; achieving at least VGPR is associated with better renal outcomes.</li>
+<li>AL amyloidosis follows the separate BSH AL amyloidosis guideline pathway.</li>
+<li>Treatment of the underlying clone is recommended in patients at risk of declining renal function at all stages of CKD to prevent progression to ESKD (eGFR &lt; 15 mL/min/1.73 m²).</li>
+<li>In patients already at ESKD with no extra-renal disease, treatment is reserved for those eligible for renal transplantation; aim for at least VGPR before listing.</li>
+<li>Consider autologous stem cell transplantation in suitable patients who have not achieved CR.</li>
+<li>Long-term joint nephrology and haematology follow-up; lifelong monitoring after treatment completion.</li>
+</ul>
+
+<h3>General supportive care in MGRS</h3>
+
+<table>
+<thead>
+<tr><th>Issue</th><th>Management</th></tr>
+</thead>
+<tbody>
+<tr><td>Blood pressure</td><td>Individualised target under nephrology guidance; ACE inhibitor or ARB where appropriate, with caution in nephrotic hypotension, AKI or advanced CKD.</td></tr>
+<tr><td>Fluid balance</td><td>Weight and clinical assessment; loop diuretic first line, then thiazide (metolazone), then potassium-sparing diuretic if required.</td></tr>
+<tr><td>Thrombosis</td><td>Prophylactic anticoagulation (enoxaparin or apixaban) while albumin &lt; 30 g/L and proteinuria &gt; 3 g/24 h, balanced against bleeding risk.</td></tr>
+<tr><td>Vaccination</td><td>Annual influenza, COVID-19 schedule, 5-yearly pneumococcal, Shingrix if over 50 years and on chemotherapy.</td></tr>
+<tr><td>Post-treatment proteinuria</td><td>Optimise renoprotective therapy under nephrology guidance; consider SGLT2 inhibitor only where indicated by current NICE CKD/diabetes guidance, renal function, albuminuria category and contraindications.</td></tr>
+</tbody>
+</table>
+
+<div class="callout callout-warn">
+<h4>Common pitfall — stable M-protein does not exclude MGRS</h4>
+<p>MGRS can present with falling eGFR and rising proteinuria while the M-protein remains numerically stable. The clinical decision to biopsy and treat is driven by the renal trajectory and biopsy findings, not by absolute M-protein concentration.</p>
+</div>
+
+<!-- ==================== SECTION 8 — NDMM ==================== -->
+<h2 id="ndmm"><span class="num">8</span>Newly Diagnosed Myeloma — Diagnosis and Workup</h2>
+
+<p>Diagnosis follows the IMWG 2014 criteria: clonal bone marrow plasma cells ≥ 10% (or biopsy-proven plasmacytoma) plus one or more myeloma-defining events (SLiM CRAB). Workup is governed in UK practice by the BSH/UKMF 2021 guideline (Sive 2021) and updated for high-risk disease by Kaiser 2024.</p>
+
+<h3>Baseline assessment</h3>
+<ul>
+<li>Full history including bone pain, fatigue, infection, neuropathy, autonomic and amyloid symptoms; performance status; geriatric assessment in patients aged 75 years or over.</li>
+<li>FBC, U&amp;E, calcium, albumin, LDH, β2-microglobulin, immunoglobulins, SPE, immunofixation, serum FLC, urine ACR.</li>
+<li>Bone marrow aspirate and trephine with plasma cell phenotyping and FISH on CD138-selected cells.</li>
+<li>Cross-sectional imaging by WB-MRI (preferred) or PET-CT. Low-dose WB-CT may be used where appropriate for cortical bone assessment or where WB-MRI/PET-CT is unavailable or unsuitable. Plain skeletal survey should not be used as the sole standard staging investigation where modern whole-body imaging is available.</li>
+<li>Troponin, NT-proBNP, urine ACR and consideration of subcutaneous fat or organ biopsy if amyloidosis is suspected.</li>
+<li>All new diagnoses discussed at a specialist myeloma MDT.</li>
+</ul>
+
+<h3>Staging — ISS, R-ISS and R2-ISS</h3>
+
+<table>
+<thead>
+<tr><th>Stage</th><th>ISS</th><th>R-ISS</th><th>R2-ISS</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Components</strong></td><td>β2-microglobulin and albumin</td><td>ISS plus LDH and high-risk FISH: t(4;14), t(14;16), del(17p)</td><td>R-ISS components plus 1q21 gain/amplification; four-stage system, better stratifies intermediate-risk</td></tr>
+<tr><td><strong>UK practice</strong></td><td>Universal</td><td>Standard prognostic tool</td><td>Increasingly used in trials and referenced in EHA-EMN 2025</td></tr>
+</tbody>
+</table>
+<p class="attribution">References: Greipp 2005 (JCO); Palumbo 2015 (JCO); D'Agostino 2022 (JCO).</p>
+
+<h3>Cytogenetic and molecular profiling (BSH 2024)</h3>
+<p>BSH 2024 recommends extended cytogenetic profiling at diagnosis in all NDMM patients. Test the complete set: t(4;14), t(14;16), t(14;20), del(1p), gain(1q) and del(17p) by FISH or equivalent validated molecular methods. Where technically feasible, results should be available within four weeks of an adequate first bone marrow sample and a maximum of eight weeks if repeat biopsy is required. Gene expression profiling (for example SKY92) identifies an additional approximately 10% of high-risk patients not detected by FISH alone.</p>
+
+<div class="callout">
+<h4>Pattern recognition — extramedullary disease at diagnosis</h4>
+<p>Soft-tissue plasmacytomas separate from bone, especially when accompanied by ≥ 2 HRCA or a primary plasma cell leukaemia picture, are a strong marker of high-risk biology. Repeat FISH on the plasmacytoma where feasible; consider trial referral.</p>
+</div>
+
+<h3>Standard-risk transplant-eligible NDMM — UK NHS framework</h3>
+
+<p>Standard UK NHS induction has been a bortezomib-based triplet (most commonly VTd or VCd) followed by ASCT with melphalan 200 mg/m² conditioning and lenalidomide maintenance until progression (TA680). Daratumumab-containing quadruplet induction is increasingly used in line with the CASSIOPEIA evidence base and current NICE technology appraisals. <strong>The current NICE-commissioned quadruplet for the transplant-eligible setting is D-VTd (TA763, within NICE criteria).</strong> D-VRd (PERSEUS-based) is the subject of an in-development NICE appraisal under identifier GID-TA10726 / ID3843 (the v0.3 draft incorrectly cited TA11254 — corrected in v0.4); the cited NICE in-development reference relates to <em>transplant-unsuitable</em> NDMM, not transplant-eligible disease. D-VRd should be treated as horizon/evidence content only for the TE-NDMM pathway pending final NICE guidance and verified pathway placement.</p>
+
+<div class="callout callout-warn">
+<h4>Dose-block caveat (applies throughout this document)</h4>
+<p>Dose examples shown in every regimen block on this page are <strong>educational only</strong>. They must not override local e-prescribing protocols, current Summary of Product Characteristics, renal or hepatic dose adjustment, frailty modification, pharmacy verification, or consultant decision-making. Always check the current SmPC, local Trust e-prescribing protocol, Blueteq form and pharmacy review before any prescribing.</p>
+</div>
+
+<div class="regimen-block">
+<div class="name">Daratumumab + bortezomib + thalidomide + dexamethasone (D-VTd)
+<span class="ta-chips"><span class="chip tag-ta">NICE TA763</span> <span class="chip tag-grade-high">High / Strong</span></span>
+</div>
+<dl>
+<dt>Dose</dt><dd>Subcutaneous daratumumab 1,800 mg weekly cycles 1–2, then every 2 weeks cycles 3–4 and consolidation; bortezomib 1.3 mg/m² SC days 1, 4, 8, 11 of each 28-day cycle; thalidomide 100 mg PO daily; dexamethasone per CASSIOPEIA schedule. Four induction cycles, ASCT, then two consolidation cycles.</dd>
+<dt>NICE TA</dt><dd>TA763 — recommended Feb 2022 for untreated NDMM when stem cell transplant is suitable.</dd>
+<dt>Trial basis</dt><dd>CASSIOPEIA (Moreau et al., Lancet 2019; long-term update Moreau 2024). D-VTd improved sCR and PFS versus VTd; survival benefit sustained at &gt;6-year follow-up.</dd>
+<dt>Notes</dt><dd>Currently the principal NICE-commissioned quadruplet induction in the UK. Daratumumab maintenance arm of CASSIOPEIA is supportive of post-ASCT daratumumab but lenalidomide maintenance (TA680) remains the UK standard.</dd>
+</dl>
+</div>
+
+<div class="regimen-block">
+<div class="name">Bortezomib + thalidomide + dexamethasone (VTd) — older triplet
+<span class="ta-chips"><span class="chip tag-ta">NICE TA228</span> <span class="chip tag-ta">TA311</span> <span class="chip tag-grade-high">High / Conditional</span></span>
+</div>
+<dl>
+<dt>Dose</dt><dd>Bortezomib 1.3 mg/m² SC days 1, 4, 8, 11 of each 21-day cycle; thalidomide 100–200 mg PO daily; dexamethasone 20–40 mg per cycle. Four induction cycles before ASCT.</dd>
+<dt>NICE TA</dt><dd>TA228 (2011) for first-line MM; TA311 (2014) for bortezomib induction before HDT/ASCT.</dd>
+<dt>Notes</dt><dd>Effective triplet historically used where quadruplet not appropriate or available; thalidomide-related neuropathy, teratogenicity and VTE risk require active management. Decreasing use as quadruplet regimens are commissioned.</dd>
+</dl>
+</div>
+
+<div class="regimen-block">
+<div class="name">Bortezomib + cyclophosphamide + dexamethasone (VCd)
+<span class="ta-chips"><span class="chip tag-grade-mod">Moderate / Conditional</span></span>
+</div>
+<dl>
+<dt>Dose</dt><dd>Bortezomib 1.3 mg/m² SC days 1, 4, 8, 11; cyclophosphamide 500 mg PO weekly; dexamethasone 40 mg weekly. Three to four induction cycles before ASCT.</dd>
+<dt>Notes</dt><dd>Used where thalidomide or lenalidomide are not suitable. Pragmatic UK option particularly in renal impairment at presentation, with rapid response and a manageable toxicity profile. Not the primary NICE-recommended TE-NDMM induction where alternatives are available.</dd>
+</dl>
+</div>
+
+<h3>Maintenance after ASCT</h3>
+
+<div class="regimen-block">
+<div class="name">Lenalidomide maintenance
+<span class="ta-chips"><span class="chip tag-ta">NICE TA680</span> <span class="chip tag-grade-high">High / Strong</span></span>
+</div>
+<dl>
+<dt>Dose</dt><dd>Lenalidomide 10 mg PO daily, continuous, days 1–21 of 28-day cycles in some protocols. Continue until progression or unacceptable toxicity.</dd>
+<dt>NICE TA</dt><dd>TA680 (2021) — recommended for newly diagnosed myeloma after ASCT.</dd>
+<dt>Trial basis</dt><dd>Myeloma XI (Jackson et al., Lancet Oncol 2019) and CALGB 100104 — PFS benefit with acceptable second-primary-malignancy signal.</dd>
+<dt>Notes</dt><dd>Current UK standard. Monitor blood counts, thyroid function and second-primary malignancy risk. Ixazomib maintenance (GID-TA10843 / ID1517) is <strong>discontinued at NICE (February 2026)</strong> and is not anticipated as a routine alternative.</dd>
+</dl>
+</div>
+
+<h3>Transplant-ineligible NDMM</h3>
+
+<div class="regimen-block">
+<div class="name">Lenalidomide + dexamethasone (Rd)
+<span class="ta-chips"><span class="chip tag-ta">NICE TA587</span> <span class="chip tag-grade-high">High / Strong</span></span>
+</div>
+<dl>
+<dt>Dose</dt><dd>Lenalidomide 25 mg PO days 1–21 of 28-day cycle + dexamethasone 40 mg weekly. Until progression or unacceptable toxicity.</dd>
+<dt>NICE TA</dt><dd>TA587 (2019) — recommended for previously untreated myeloma.</dd>
+<dt>Notes</dt><dd>Pragmatic option in older or frail patients. Dose-reduce dexamethasone to 20 mg weekly in those aged ≥75 or frail by IMWG frailty score. Continuous lenalidomide (Rd) outperforms fixed-duration Rd18.</dd>
+</dl>
+</div>
+
+<div class="regimen-block">
+<div class="name">Isatuximab + bortezomib + lenalidomide + dexamethasone (Isa-VRd) — IMROZ regimen
+<span class="ta-chips"><span class="chip tag-ta">NICE TA1098</span> <span class="chip tag-grade-high">High / Strong</span></span>
+</div>
+<dl>
+<dt>Dose</dt><dd>Isatuximab 10 mg/kg IV + bortezomib 1.3 mg/m² SC + lenalidomide 25 mg PO days 1–21 + dexamethasone, per IMROZ schedule. <strong>Dose example only — verify against current SmPC, local e-prescribing protocol, renal/hepatic and frailty modifications, and pharmacy verification before any prescribing.</strong></dd>
+<dt>NICE TA</dt><dd>TA1098 (Sept 2025) — recommended for untreated multiple myeloma in adults when an autologous stem cell transplant is unsuitable, subject to simple discount commercial arrangement. Confirm final recommendation wording and local commissioning before use.</dd>
+<dt>Trial basis</dt><dd>IMROZ (Facon et al., NEJM 2024) — Isa-VRd improved PFS versus VRd in transplant-ineligible NDMM.</dd>
+<dt>Notes</dt><dd>NICE-appraised anti-CD38 quadruplet for transplant-ineligible NDMM. Adds a new first-line option alongside Rd (TA587) for this group.</dd>
+</dl>
+</div>
+
+<div class="callout callout-warn">
+<h4>Reviewer note — daratumumab-containing quadruplets for transplant-ineligible NDMM</h4>
+<p>Daratumumab-containing quadruplet regimens for transplant-ineligible NDMM (D-Rd per MAIA; D-VMP per ALCYONE) do not have a verified TA number in this draft. <strong>Verify current NICE TA, Blueteq and local formulary status before use rather than presenting these regimens as available.</strong> The NICE-appraised quadruplet for transplant-ineligible NDMM at the time of this draft is Isa-VRd (TA1098, September 2025).</p>
+</div>
+
+<div class="regimen-block">
+<div class="name">Daratumumab + bortezomib + lenalidomide + dexamethasone (D-VRd, PERSEUS) — horizon/evidence only
+<span class="ta-chips"><span class="chip tag-ta-pending">NICE GID-TA10726 / ID3843 in development</span> <span class="chip tag-grade-high">High / Strong (trial evidence)</span></span>
+</div>
+<dl>
+<dt>Pathway placement</dt><dd><strong>Horizon/evidence only.</strong> Cited NICE GID-TA10726 / ID3843 currently relates to untreated myeloma when stem cell transplant is <em>unsuitable</em>. Verify live NICE indication before pathway placement. Not commissioned for the transplant-eligible setting.</dd>
+<dt>Dose</dt><dd>Daratumumab subcutaneous schedule + bortezomib 1.3 mg/m² SC + lenalidomide 25 mg PO days 1–21 + dexamethasone, in 28-day cycles, induction (four cycles), ASCT (in the PERSEUS trial), consolidation (two cycles), D-R maintenance. <strong>Dose example only — verify against current SmPC, local e-prescribing protocol, renal/hepatic and frailty modifications, and pharmacy verification before any prescribing.</strong></dd>
+<dt>Trial basis</dt><dd>PERSEUS (Sonneveld et al., NEJM 2024) — D-VRd induction/consolidation with D-R maintenance improved PFS over VRd with R maintenance, with deeper MRD response. PERSEUS was conducted in transplant-eligible NDMM; the NICE in-development appraisal under GID-TA10726 / ID3843 addresses the transplant-unsuitable population specifically.</dd>
+<dt>Notes</dt><dd><strong>Not routinely commissioned in NHS England at the time of this draft.</strong> The v0.3 draft incorrectly cited TA11254; corrected to GID-TA10726 / ID3843 in v0.4 and the indication clarified as transplant-unsuitable in v0.4.1. Do not present as routinely commissioned. See Section 1A NICE Horizon Scanning.</dd>
+</dl>
+</div>
+
+<!-- ==================== SECTION 9 — HRMM ==================== -->
+<h2 id="hrmm"><span class="num">9</span>High-Risk and Transplant-Eligible NDMM</h2>
+
+<p>Approximately 25% of transplant-eligible patients experience early relapse after high-dose melphalan and ASCT. These patients have substantially shortened overall survival and are now defined by molecular features.</p>
+
+<h3>Molecular definition (BSH 2024)</h3>
+<ul>
+<li>Two or more high-risk cytogenetic abnormalities (2+ HRCA, also called double-hit): any pair drawn from t(4;14), t(14;16), t(14;20), del(1p), gain(1q) and del(17p).</li>
+<li>SKY92 GEP high-risk signature (an additional approximately 10% of HRMM).</li>
+<li>Primary plasma cell leukaemia (≥ 5% circulating plasma cells, IMWG 2021 redefinition).</li>
+<li>Extramedullary disease at diagnosis is associated with HRCA and a high-risk gene expression profile.</li>
+</ul>
+
+<h3>Stratified treatment evidence base</h3>
+
+<table>
+<thead>
+<tr><th>Trial</th><th>Population</th><th>Regimen</th><th>30-month PFS (or as stated)</th></tr>
+</thead>
+<tbody>
+<tr><td>OPTIMUM / MUKnine (UK)</td><td>2+ HRCA, SKY92 high-risk GEP or PCL</td><td>Dara-CVRd induction, bortezomib-augmented ASCT, Dara-VRd consolidation 1, Dara-VR consolidation 2, Dara-R maintenance until progression</td><td>77% (40% in a digital Myeloma XI comparator)</td></tr>
+<tr><td>GMMG-CONCEPT</td><td>ISS 2/3 plus one or more of t(4;14), t(14;16), amp(1q)</td><td>Isa-KRd × 6, single ASCT, Isa-KRd × 4, Isa-KR maintenance × 26</td><td>78% (3-year PFS 68.9%)</td></tr>
+<tr><td>IFM 2018-04</td><td>del(17p), t(4;14) or t(14;16)</td><td>Dara-KRd × 6, ASCT, Dara-KRd × 4, second ASCT, Dara-R maintenance × 24</td><td>80%</td></tr>
+<tr><td>EMN12 (TE PCL)</td><td>Primary plasma cell leukaemia</td><td>KRd × 4, single or tandem ASCT (or auto-allo), KRd × 4, KR maintenance until progression</td><td>Median PFS 15.5 months, median OS 28.4 months</td></tr>
+</tbody>
+</table>
+<p class="attribution">Source: Kaiser 2024 BSH/UKMS Good Practice Paper.</p>
+
+<h3>UK practice points</h3>
+<ul>
+<li>Current NHS England standard for high-risk NDMM is single ASCT; tandem ASCT is recommended in EHA-EMN and is the only HRMM-specific intensification routinely available on the NHS, based on the EMN02 subgroup analysis. BSH 2024 notes that tandem ASCT carries cumulative toxicity and quality-of-life burden.</li>
+<li>Where access permits, treatment as per OPTIMUM, CONCEPT, IFM 2018-04 or EMN12 should be considered.</li>
+<li>Tandem ASCT may be considered for HRMM when extended intensified consolidation and maintenance are not available.</li>
+<li>Toxicities should be monitored closely with early dose reduction rather than discontinuation of multi-target combinations.</li>
+<li>Subcutaneous and home-administered supportive treatments should be used where safe.</li>
+</ul>
+
+<!-- ==================== SECTION 10 — IMAGING ==================== -->
+<h2 id="imaging"><span class="num">10</span>Imaging Across the Pathway</h2>
+
+<p>Whole-body MRI with diffusion weighting (WB-MRI), FDG PET-CT and low-dose whole-body CT all have defined roles in modern myeloma pathways. WB-MRI and PET-CT can detect marrow or extramedullary disease before cortical bone destruction, while CT remains useful for cortical bone assessment and fracture risk. NICE NG35 recommends modern whole-body imaging at diagnosis; local pathways should specify the first-line modality according to access, clinical question and reporting expertise.</p>
+
+<h3>Indications for advanced imaging</h3>
+
+<table>
+<thead>
+<tr><th>Clinical scenario</th><th>Recommended imaging</th></tr>
+</thead>
+<tbody>
+<tr><td>High-intermediate or high-risk MGUS</td><td>WB-MRI, PET-CT or low-dose WB-CT to exclude focal lesions</td></tr>
+<tr><td>Suspected or confirmed SMM</td><td>WB-MRI, PET-CT or low-dose WB-CT according to indication, availability and local protocol; repeat imaging in high-risk SMM or evolving disease as guided by specialist review</td></tr>
+<tr><td>Newly diagnosed myeloma</td><td>Whole-body imaging in all patients; modality should follow NICE/BSH guidance, local access and clinical question</td></tr>
+<tr><td>Biochemical or symptomatic relapse</td><td>WB-MRI or PET-CT, especially in new bone symptoms, extramedullary or oligo-secretory disease</td></tr>
+<tr><td>Oligo- or non-secretory myeloma</td><td>WB imaging at 3–4 month intervals; balance cumulative ionising radiation when choosing modality</td></tr>
+<tr><td>Response assessment (clinical trial)</td><td>PET-CT is the most evidence-based for imaging MRD; WB-MRI can be used in routine care</td></tr>
+</tbody>
+</table>
+<p class="attribution">Source: Kaiser 2024 BSH/UKMS advanced imaging paper; NICE NG35.</p>
+
+<h3>Imaging not recommended</h3>
+<ul>
+<li>Skeletal X-ray survey should not be used as the sole standard assessment where modern whole-body imaging is available.</li>
+<li>Axial MRI alone is less complete than WB-MRI and may miss extra-axial disease; reserve it for focused clinical questions such as suspected cord compression or local symptoms.</li>
+<li>At relapse, imaging should be matched to the clinical question. Where extramedullary, oligo-secretory or non-secretory progression is suspected, WB-MRI or PET-CT should be considered rather than relying only on cortical bone imaging.</li>
+</ul>
+
+<div class="callout callout-warn">
+<h4>Common pitfall — MSCC and out-of-hours imaging</h4>
+<p>Suspected metastatic spinal cord compression in a known or suspected myeloma patient is a same-day emergency. WB-MRI is the diagnostic standard. Where WB-MRI access is delayed, urgent MRI of the symptomatic region is the minimum; do not wait for routine WB-MRI capacity.</p>
+</div>
+
+<!-- ==================== SECTION 11 — RELAPSED / REFRACTORY ==================== -->
+<h2 id="rr"><span class="num">11</span>Relapsed and Refractory Myeloma</h2>
+
+<div class="vignette">
+<h4>Clinical Vignette</h4>
+<p>A 64-year-old man, three years post-ASCT, has had stable disease on lenalidomide maintenance. He attends with rising IgG-kappa M-protein from 8 to 22 g/L over four months and a fall in haemoglobin from 128 to 104 g/L. No bone pain, no hypercalcaemia. Repeat FISH shows acquired gain(1q) and del(17p) not present at diagnosis. He has a working knowledge of his diagnosis and asks about cellular therapies. What is the appropriate next step?</p>
+</div>
+
+<p>Definitions follow IMWG and BSH/UKMS 2025. <strong>Relapsed myeloma (RMM)</strong> describes serological or clinical progression in patients who had a minimal response or better. <strong>Relapsed and refractory myeloma (RRMM)</strong> describes progression on treatment or within 60 days of completing the last therapy. <strong>Triple-class refractory myeloma</strong> is refractoriness to at least one IMiD, one PI and one anti-CD38 monoclonal antibody. <strong>Penta-refractory myeloma</strong> is refractoriness to two IMiDs, two PIs and an anti-CD38 antibody.</p>
+
+<h3>Evaluation at progression</h3>
+<ul>
+<li>Repeat FBC, U&amp;E, calcium, LDH, β2-microglobulin, immunoglobulins, SPE, immunofixation and serum FLC.</li>
+<li>Bone marrow aspirate and trephine, particularly at first or second relapse, to characterise the clone and exclude myelodysplasia. Repeat FISH where genomic information may direct therapy (for example t(11;14) for venetoclax).</li>
+<li>Functional cross-sectional imaging (WB-MRI or PET-CT) for new bone symptoms, oligo-secretory or extramedullary disease. Plain X-ray is inadequate.</li>
+<li>Full reassessment of patient-specific factors: previous response, toxicities, performance status, frailty, comorbidity, preference and trial eligibility.</li>
+</ul>
+
+<h3>Asymptomatic biochemical relapse</h3>
+<ul>
+<li>Slow progression without CRAB criteria can be monitored initially every month.</li>
+<li>A rapid trajectory of biochemical progression, high-risk features, prior short treatment-free interval, light chain renal injury, extramedullary disease or unfavourable cytogenetics support earlier treatment initiation.</li>
+</ul>
+
+<h3>Principles of treatment selection (BSH/UKMS 2025)</h3>
+<ul>
+<li>Triplet regimens are recommended over doublets, subject to tolerance (Strong / High).</li>
+<li>Generally use a PI–IMiD–steroid combination (carfilzomib–lenalidomide–dexamethasone; ixazomib–lenalidomide–dexamethasone; pomalidomide–bortezomib–dexamethasone).</li>
+<li>Switch backbone agent from the most recent regimen unless there has been a long treatment-free interval.</li>
+<li>When a PI doublet is used, carfilzomib–dexamethasone is preferred to bortezomib–dexamethasone.</li>
+<li>When an IMiD doublet is used, lenalidomide–dexamethasone or pomalidomide–dexamethasone are options.</li>
+<li>Use risk-adapted thromboprophylaxis with all IMiDs and varicella zoster prophylaxis with proteasome inhibitors.</li>
+<li>Restart bisphosphonates at frank relapse if previously stopped.</li>
+<li>Clinical trial enrolment should be considered at every line of therapy, including in multiply-relapsed patients.</li>
+</ul>
+
+<div class="callout">
+<h4>Pattern recognition — class-switch at relapse</h4>
+<p>The most reliable principle in relapsed myeloma is to switch the backbone class from the most recent line, unless the treatment-free interval has been long. PI-refractory disease usually responds to an IMiD-backboned regimen and vice-versa; anti-CD38 sensitivity may be retained after a sufficient interval since last exposure.</p>
+</div>
+
+<h3>UK-relevant regimens at relapse</h3>
+
+<div class="regimen-block">
+<div class="name">Carfilzomib + lenalidomide + dexamethasone (KRd)
+<span class="ta-chips"><span class="chip tag-ta">NICE TA695</span> <span class="chip tag-grade-high">High / Strong</span></span>
+</div>
+<dl>
+<dt>Dose</dt><dd>Carfilzomib 27 mg/m² IV (escalating from 20 mg/m² on cycle 1 day 1) days 1, 2, 8, 9, 15, 16; lenalidomide 25 mg PO days 1–21; dexamethasone 40 mg weekly. 28-day cycles.</dd>
+<dt>NICE TA</dt><dd>TA695 — recommended for previously treated multiple myeloma (partially replaces TA657).</dd>
+<dt>Trial basis</dt><dd>ASPIRE (Stewart et al., NEJM 2015) — improved PFS and OS over Rd.</dd>
+</dl>
+</div>
+
+<div class="regimen-block">
+<div class="name">Daratumumab + bortezomib + dexamethasone (Dara-Vd)
+<span class="ta-chips"><span class="chip tag-grade-high">High / Strong</span></span>
+</div>
+<dl>
+<dt>Dose</dt><dd>Daratumumab subcutaneous 1,800 mg weekly cycles 1–3, every 3 weeks cycles 4–8, then every 4 weeks; bortezomib 1.3 mg/m² SC days 1, 4, 8, 11; dexamethasone 20 mg D1–2, 4–5, 8–9, 11–12 of 21-day cycle.</dd>
+<dt>Trial basis</dt><dd>CASTOR (Palumbo et al., NEJM 2016) — improved PFS over Vd.</dd>
+<dt>Notes</dt><dd>NICE TA status varies by line of therapy and prior exposure; verify current TA before prescribing.</dd>
+</dl>
+</div>
+
+<div class="regimen-block">
+<div class="name">Daratumumab + lenalidomide + dexamethasone (Dara-Rd)
+<span class="ta-chips"><span class="chip tag-grade-high">High / Strong</span></span>
+</div>
+<dl>
+<dt>Dose</dt><dd>Daratumumab subcutaneous; lenalidomide 25 mg PO days 1–21 of 28-day cycle; dexamethasone 40 mg weekly.</dd>
+<dt>Trial basis</dt><dd>POLLUX (Dimopoulos et al., NEJM 2016) — improved PFS over Rd; long-term follow-up shows sustained benefit.</dd>
+<dt>Notes</dt><dd>NICE TA status varies by prior treatment line and exposure; verify current TA.</dd>
+</dl>
+</div>
+
+<div class="regimen-block">
+<div class="name">Isatuximab + carfilzomib + dexamethasone (Isa-Kd)
+<span class="ta-chips"><span class="chip tag-grade-high">High / Strong</span></span>
+</div>
+<dl>
+<dt>Dose</dt><dd>Isatuximab 10 mg/kg IV (weekly cycle 1, then every 2 weeks); carfilzomib 56 mg/m² IV; dexamethasone 20 mg twice weekly.</dd>
+<dt>Trial basis</dt><dd>IKEMA (Moreau et al., Lancet 2021) — improved PFS over Kd.</dd>
+<dt>Notes</dt><dd>NICE TA status to be verified against the live register.</dd>
+</dl>
+</div>
+
+<div class="regimen-block">
+<div class="name">Isatuximab + pomalidomide + dexamethasone (Isa-Pd)
+<span class="ta-chips"><span class="chip tag-grade-high">High / Strong</span></span>
+</div>
+<dl>
+<dt>Dose</dt><dd>Isatuximab 10 mg/kg IV (weekly cycle 1, then every 2 weeks); pomalidomide 4 mg PO days 1–21; dexamethasone 40 mg weekly.</dd>
+<dt>Trial basis</dt><dd>ICARIA-MM (Attal et al., Lancet 2019) — improved PFS in lenalidomide-refractory disease.</dd>
+</dl>
+</div>
+
+<div class="regimen-block">
+<div class="name">Pomalidomide + bortezomib + dexamethasone (PVd)
+<span class="ta-chips"><span class="chip tag-grade-mod">Moderate / Strong</span></span>
+</div>
+<dl>
+<dt>Dose</dt><dd>Pomalidomide 4 mg PO days 1–14 of 21-day cycle; bortezomib 1.3 mg/m² SC days 1, 8 (cycles 1–8) then day 1; dexamethasone 20 mg twice weekly.</dd>
+<dt>Trial basis</dt><dd>OPTIMISMM (Richardson et al., Lancet Oncol 2019) — improved PFS over Vd in lenalidomide-exposed patients.</dd>
+</dl>
+</div>
+
+<div class="regimen-block">
+<div class="name">Pomalidomide + dexamethasone (Pd)
+<span class="ta-chips"><span class="chip tag-ta">NICE TA427</span> <span class="chip tag-grade-mod">Moderate / Strong</span></span>
+</div>
+<dl>
+<dt>Dose</dt><dd>Pomalidomide 4 mg PO days 1–21 of 28-day cycle; dexamethasone 40 mg weekly (20 mg if aged &gt;75).</dd>
+<dt>NICE TA</dt><dd>TA427 — established NHS option for R/R MM after ≥3 prior treatments.</dd>
+<dt>Trial basis</dt><dd>MM-003 (San Miguel, Lancet Oncol 2013).</dd>
+<dt>Notes</dt><dd>Main current UK comparator for late-line treatments (referenced explicitly in TA1015 teclistamab appraisal).</dd>
+</dl>
+</div>
+
+<div class="regimen-block">
+<div class="name">Teclistamab (BCMA × CD3 T-cell engager)
+<span class="ta-chips"><span class="chip tag-ta">NICE TA1015</span> <span class="chip tag-grade-high">High / Strong</span></span>
+</div>
+<dl>
+<dt>Dose</dt><dd>Subcutaneous step-up dosing (0.06 mg/kg, 0.3 mg/kg, then full dose 1.5 mg/kg) followed by 1.5 mg/kg weekly; transition to every 2 weeks after sustained response per current SmPC.</dd>
+<dt>NICE TA</dt><dd>TA1015 — recommended Nov 2024 for R/R MM after ≥3 prior lines (including an IMiD, PI and anti-CD38) with progression on the last treatment. Replaces and updates TA869.</dd>
+<dt>Trial basis</dt><dd>MajesTEC-1 (Moreau et al., NEJM 2022).</dd>
+<dt>Notes</dt><dd>Treatment in approved centres with cytokine release syndrome and ICANS management protocols. Mandatory step-up dosing with monitoring. Hypogammaglobulinaemia almost universal — consider IVIg replacement and antimicrobial prophylaxis.</dd>
+</dl>
+</div>
+
+<div class="regimen-block">
+<div class="name">Elranatamab (BCMA × CD3 T-cell engager)
+<span class="ta-chips"><span class="chip tag-ta">NICE TA1023 (managed access)</span> <span class="chip tag-grade-high">High / Conditional</span></span>
+</div>
+<dl>
+<dt>Dose</dt><dd>Subcutaneous step-up then weekly maintenance per current SmPC. <strong>Dose example only — verify against current SmPC, local e-prescribing protocol, renal/hepatic adjustment, frailty modification, pharmacy verification.</strong></dd>
+<dt>NICE TA</dt><dd>TA1023 (Dec 2024) — recommended for R/R MM after ≥3 prior treatments (including IMiD, PI and anti-CD38) under a managed-access evidence-collection arrangement. NICE will review guidance after further evidence review.</dd>
+<dt>Trial basis</dt><dd>MagnetisMM-3 (Lesokhin et al., Nat Med 2023).</dd>
+<dt>Notes</dt><dd>Managed-access BCMA bispecific option. Treatment in approved centres with CRS and ICANS management protocols. Hypogammaglobulinaemia almost universal — IVIg replacement and antimicrobial prophylaxis. Verify current managed-access criteria and Blueteq form before prescribing.</dd>
+</dl>
+</div>
+
+<div class="regimen-block">
+<div class="name">Linvoseltamab (BCMA × CD3 T-cell engager)
+<span class="ta-chips"><span class="chip tag-ta-pending">No current NICE TA</span> <span class="chip tag-grade-mod">Moderate / Conditional</span></span>
+</div>
+<dl>
+<dt>Trial basis</dt><dd>LINKER-MM1 (Jagannath et al., 2024).</dd>
+<dt>Notes</dt><dd>No current NICE TA at the time of this draft. Not routinely commissioned. Access via trial or named-patient programme only.</dd>
+</dl>
+</div>
+
+<div class="regimen-block">
+<div class="name">Talquetamab (GPRC5D × CD3 T-cell engager)
+<span class="ta-chips"><span class="chip tag-ta">NICE TA1114</span> <span class="chip tag-grade-high">High / Strong</span></span>
+</div>
+<dl>
+<dt>Dose</dt><dd>Subcutaneous step-up dosing then weekly or every-2-week maintenance per current SmPC. <strong>Dose example only — verify against current SmPC, local e-prescribing protocol, renal/hepatic adjustment, frailty modification, pharmacy verification.</strong></dd>
+<dt>NICE TA</dt><dd>TA1114 (Dec 2025) — recommended as a routine NHS option for R/R MM after ≥3 prior lines including an IMiD, a PI and an anti-CD38 antibody, where disease has progressed on last treatment and commercial arrangement applies.</dd>
+<dt>Trial basis</dt><dd>MonumenTAL-1 (Chari et al., NEJM 2022).</dd>
+<dt>Notes</dt><dd>GPRC5D bispecific. Distinct toxicity profile (dysgeusia, oral and skin toxicity, nail changes, weight loss) versus BCMA T-cell engagers. Approved-centre pathway. Verify Blueteq and local formulary access before prescribing.</dd>
+</dl>
+</div>
+
+<div class="regimen-block">
+<div class="name">Idecabtagene vicleucel (ide-cel, BCMA CAR-T)
+<span class="ta-chips"><span class="chip tag-ta-pending">NICE TA status to verify</span> <span class="chip tag-grade-high">High / Conditional</span></span>
+</div>
+<dl>
+<dt>Trial basis</dt><dd>KarMMa (Munshi et al., NEJM 2021); KarMMa-3 (Rodriguez-Otero et al., NEJM 2023).</dd>
+<dt>Notes</dt><dd>One-off autologous BCMA CAR-T. Treatment in approved centres only. Bridging therapy commonly required. Cytokine release syndrome, ICANS, prolonged cytopenias and hypogammaglobulinaemia routine. Verify current NICE TA and NHS England specialised commissioning before referral.</dd>
+</dl>
+</div>
+
+<div class="regimen-block">
+<div class="name">Ciltacabtagene autoleucel (cilta-cel, BCMA CAR-T)
+<span class="ta-chips"><span class="chip tag-ta-off">TA889 terminated</span> <span class="chip tag-ta-pending">GID-TA10905 / ID4012 in development (earlier line)</span></span>
+</div>
+<dl>
+<dt>Trial basis</dt><dd>CARTITUDE-1 (Berdeja et al., Lancet 2021); CARTITUDE-4 (San-Miguel et al., NEJM 2023).</dd>
+<dt>Notes</dt><dd><strong>TA889 was terminated</strong> after Janssen withdrew its submission — no NICE recommendation for routine commissioning under that appraisal. A separate NICE appraisal (GID-TA10905 / ID4012) for cilta-cel in relapsed and lenalidomide-refractory myeloma after 1 to 3 prior therapies is in development, with appraisal scheduled to begin early July 2026 per the NICE timeline. <strong>These are two distinct appraisals and must not be conflated.</strong> Access in UK routine commissioning currently absent; specialist-centre decision and individual funding only. Approved-centre pathway and live NICE verification required before referral.</dd>
+</dl>
+</div>
+
+<div class="regimen-block">
+<div class="name">Selinexor + dexamethasone
+<span class="ta-chips"><span class="chip tag-ta">NICE TA970</span> <span class="chip tag-grade-mod">Moderate / Conditional</span></span>
+</div>
+<dl>
+<dt>Dose</dt><dd>Selinexor 80 mg PO twice weekly with dexamethasone 20 mg twice weekly. Aggressive anti-emetic and supportive plan from cycle 1.</dd>
+<dt>NICE TA</dt><dd>TA970 — for R/R MM after ≥4 prior therapies (penta-refractory disease).</dd>
+<dt>Trial basis</dt><dd>STORM (Chari et al., NEJM 2019).</dd>
+<dt>Notes</dt><dd>High symptom burden (fatigue, nausea, anorexia, thrombocytopenia, hyponatraemia). Pre-emptive anti-emetic regimen, frequent monitoring, and proactive dose modification are essential. Selinexor + bortezomib + dex (BOSTON, Grosicki et al., Lancet 2020) is not currently NICE-commissioned in the UK and should not be presented as a routine option.</dd>
+</dl>
+</div>
+
+<div class="regimen-block">
+<div class="name">Belantamab mafodotin + pomalidomide + dexamethasone (BPd, DREAMM-8)
+<span class="ta-chips"><span class="chip tag-ta">NICE TA1133</span> <span class="chip tag-grade-high">High / Strong</span></span>
+</div>
+<dl>
+<dt>Indication</dt><dd><strong>Option after one prior lenalidomide-containing line if lenalidomide is not tolerated or disease is lenalidomide-refractory.</strong> Not a generic penta-refractory option. Verify ocular monitoring service, commercial arrangement, Blueteq form and local pathway before prescribing.</dd>
+<dt>Dose</dt><dd>Belantamab mafodotin 2.5 mg/kg IV every 4 weeks (cycle 1) and 1.9 mg/kg IV every 4 weeks thereafter, with pomalidomide and dexamethasone per DREAMM-8 schedule. <strong>Dose example only — verify against current SmPC, local e-prescribing protocol, renal/hepatic adjustment, frailty modification, pharmacy verification. Mandatory pre-dose ophthalmology assessment before each cycle (visual acuity and keratopathy grading per protocol).</strong></dd>
+<dt>NICE TA</dt><dd>TA1133 (Feb 2026) — recommended for previously treated myeloma after at least one prior therapy including lenalidomide. Verify recommendation restrictions and ocular-toxicity monitoring requirements before pathway placement.</dd>
+<dt>Trial basis</dt><dd>DREAMM-8 (Trudel et al., NEJM 2024) — belantamab + Pd improved PFS over PVd.</dd>
+<dt>Notes</dt><dd>Structured ophthalmology pathway essential (delayed dosing for grade 2+ keratopathy per protocol). DREAMM-7 (belantamab + Vd) data are supportive but TA1133 covers the BPd regimen specifically — verify the live NICE wording for which combination(s) are commissioned.</dd>
+</dl>
+</div>
+
+<div class="regimen-block">
+<div class="name">Venetoclax for t(11;14) myeloma
+<span class="ta-chips"><span class="chip tag-ta-off">Not NICE-commissioned (off-label)</span> <span class="chip tag-grade-mod">Moderate / Conditional</span></span>
+</div>
+<dl>
+<dt>Trial basis</dt><dd>BELLINI (Kumar et al., Lancet Oncol 2020) and M13-367.</dd>
+<dt>Notes</dt><dd><strong>Not NICE-approved for myeloma.</strong> Off-label, restricted to t(11;14) disease in trial protocols or specialist-centre decisions with individual funding. Infection prophylaxis required (PJP, fungal). The BELLINI signal of increased mortality with venetoclax in non-t(11;14) myeloma underlines that this is a biomarker-restricted indication.</dd>
+</dl>
+</div>
+
+<div class="regimen-block">
+<div class="name">Panobinostat + bortezomib + dexamethasone
+<span class="ta-chips"><span class="chip tag-ta">NICE TA380</span> <span class="chip tag-grade-low">Low / Conditional</span></span>
+</div>
+<dl>
+<dt>Trial basis</dt><dd>PANORAMA-1 (San-Miguel et al., Lancet Oncol 2014).</dd>
+<dt>Notes</dt><dd>Reserved option where preferred alternatives are unsuitable. TA380 commissioning status should be verified before prescribing.</dd>
+</dl>
+</div>
+
+<h3>Second autologous stem cell transplant</h3>
+<ul>
+<li>Consider second ASCT in suitable patients who have achieved at least PR with reinduction.</li>
+<li>Outcomes are less favourable in the presence of high-risk cytogenetics; repeat FISH at relapse is recommended where second ASCT is being considered.</li>
+<li>Melphalan 200 mg/m² remains the standard conditioning regimen.</li>
+<li>Collect sufficient stem cells at first mobilisation for two transplants where feasible.</li>
+</ul>
+
+<div class="callout callout-warn">
+<h4>Common pitfall — bispecific and CAR-T pre-treatment workup</h4>
+<p>Cellular and bispecific therapies have specific pre-treatment requirements: baseline immunoglobulins (and IVIg planning), screening for occult infection (HBV, HCV, HIV, HTLV per local protocol), cardiac assessment for cytokine release syndrome tolerance, and an explicit plan for bridging therapy. Referral to an approved centre well before final-line failure is appropriate.</p>
+</div>
+
+<h3>Response assessment</h3>
+
+<table>
+<thead>
+<tr><th>Response</th><th>Definition (IMWG)</th></tr>
+</thead>
+<tbody>
+<tr><td>Stringent complete response (sCR)</td><td>CR plus normal SFLC ratio and absence of clonal cells in bone marrow by IHC</td></tr>
+<tr><td>Complete response (CR)</td><td>Negative immunofixation in serum and urine; disappearance of soft-tissue plasmacytomas; &lt; 5% bone marrow plasma cells</td></tr>
+<tr><td>Very good partial response (VGPR)</td><td>SPE or immunofixation negative but bone marrow positive; or ≥ 90% reduction in serum M-protein and urine M-protein &lt; 100 mg/24 h</td></tr>
+<tr><td>Partial response (PR)</td><td>≥ 50% reduction in serum M-protein and ≥ 90% reduction in urine M-protein (or to &lt; 200 mg/24 h)</td></tr>
+<tr><td>Stable disease (SD)</td><td>Not meeting any other category</td></tr>
+<tr><td>Progressive disease (PD)</td><td>≥ 25% increase from nadir in M-protein (absolute increase ≥ 5 g/L) or other defined criteria</td></tr>
+<tr><td>MRD-negative (10⁻⁵ or 10⁻⁶)</td><td>Absence of clonal plasma cells by validated NGS or NGF; used in trial settings and to guide stopping rules in selected fixed-duration protocols</td></tr>
+</tbody>
+</table>
+<p class="attribution">Source: IMWG response criteria, Kumar 2016 (Lancet Oncol); EHA-EMN 2025.</p>
+
+<!-- ==================== SECTION 12 — SUPPORTIVE CARE ==================== -->
+<h2 id="supportive"><span class="num">12</span>Supportive Care and Survivorship</h2>
+
+<p>Survival in myeloma has improved substantially over the past two decades. Cumulative burden of disease and treatment now drives a survivorship agenda alongside relapse management. The BSH 2017 guideline on late and long-term consequences (Snowden 2017) remains the UK reference and should be read alongside NICE NG35 and the BSH supportive care framework.</p>
+
+<h3>Infection and immunity</h3>
+<ul>
+<li>Infection is a major cause of morbidity and mortality in myeloma. Immunosuppression is greatest at diagnosis, during aggressive relapse and in heavily pre-treated disease.</li>
+<li>Routine antibacterial prophylaxis is not recommended at every stage; consider prophylactic antibiotics in selected high-risk windows.</li>
+<li>Offer antiviral prophylaxis (aciclovir or valaciclovir) with proteasome inhibitor-based treatment until at least six weeks after stopping. Consider lifelong prophylaxis in patients with previous shingles.</li>
+<li>Consider IVIg replacement based on infection history, hypogammaglobulinaemia, comorbidities and vaccine response, in line with NHS England immunoglobulin guidance.</li>
+<li>Avoid live attenuated vaccines (BCG, MMR, oral typhoid, yellow fever, varicella zoster live vaccine). Use Shingrix (recombinant zoster vaccine) for shingles protection.</li>
+<li>Annual influenza and full COVID-19 vaccination schedules for patients and household contacts.</li>
+<li>PCV13 followed by PPV23 at 2 months, repeated 5-yearly; Hib vaccination should also be considered.</li>
+</ul>
+
+<h3>Bone health and pain</h3>
+<ul>
+<li>Bisphosphonates (zoledronic acid or pamidronate) for all newly diagnosed patients requiring treatment, regardless of demonstrable bone lesions.</li>
+<li>Restart bisphosphonates at frank relapse if previously stopped.</li>
+<li>Optimise calcium and vitamin D; consider DEXA in patients with additional osteoporosis risk factors.</li>
+<li>Maintain dental review and consider osteonecrosis of the jaw risk; assess before initiating bisphosphonates.</li>
+<li>Active pain management including neuropathic pain control with gabapentin or pregabalin; refer to pain specialist where indicated.</li>
+</ul>
+
+<h3>Renal, cardiovascular and metabolic</h3>
+<ul>
+<li>Routine monitoring of eGFR and urine ACR; protect renal function.</li>
+<li>Annual cardiovascular risk assessment including blood pressure, HbA1c and lipid profile.</li>
+<li>NT-proBNP or BNP as a screening tool for cardiac amyloidosis or other cardiac dysfunction; echocardiography and specialist referral if elevated.</li>
+<li>Awareness of metabolic syndrome, sarcopenic obesity and steroid-related complications. Encourage tailored physical activity programmes.</li>
+</ul>
+
+<h3>Endocrine, neurological and other late effects</h3>
+<ul>
+<li>Annual screening for hypothyroidism and hypogonadism, particularly post-HSCT.</li>
+<li>Screen patients with peripheral neuropathy for vitamin B12 deficiency, diabetes and renal causes.</li>
+<li>Annual ophthalmic screening for cataract and steroid-related eye disease. Belantamab patients have specific ophthalmology pathway.</li>
+<li>Consider second primary malignancies (especially AML and MDS) in unexplained or worsening cytopenias.</li>
+<li>Maintain oral and dental hygiene; refer for management of treatment-related dryness, taste change and candidiasis.</li>
+</ul>
+
+<h3>Psychosocial and rehabilitation</h3>
+<ul>
+<li>Routine holistic needs assessment at diagnosis and at the start and end of each line of therapy.</li>
+<li>Address fatigue, fear of recurrence and coping with watch-and-wait in MGUS and SMM.</li>
+<li>Engage specialist nursing, physiotherapy, occupational therapy and palliative care input appropriate to the stage of disease.</li>
+<li>Signpost to UK patient organisations including Myeloma UK.</li>
+</ul>
+
+<h3>Frailty assessment in older patients</h3>
+<p>Consider baseline geriatric assessment in patients aged 75 years or over and any patient with apparent frailty. The IMWG frailty score (age, comorbidity, geriatric assessment) is simple to apply and correlates with severe toxicity. Use the result to guide treatment intensity, dose reductions and supportive care.</p>
+
+<!-- ==================== SECTION 13 — AUDIT ==================== -->
+<h2 id="audit"><span class="num">13</span>Audit and Governance</h2>
+
+<p>The following audit standards derive from BSH 2023 (MGUS), BSH 2024 (SMM) and BSH/UKMS 2024–2025 (NDMM, high-risk, imaging and relapse). They support trust-level governance and a structured framework for service improvement.</p>
+
+<h3>MGUS audit standards (BSH 2023 derived)</h3>
+
+<table>
+<thead>
+<tr><th>Standard</th><th>Data source</th><th>Target</th></tr>
+</thead>
+<tbody>
+<tr><td>On detection of a new M-protein, immunofixation and serum FLC assay are both performed.</td><td>Laboratory records, clinic letters</td><td>≥ 98%</td></tr>
+<tr><td>Laboratory diagnostic sets ensure complete testing in suspected MGUS or myeloma.</td><td>Laboratory protocol</td><td>100%</td></tr>
+<tr><td>Laboratory flagging systems alert clinicians to high-risk results and the appropriate referral pathway.</td><td>Laboratory governance</td><td>100%</td></tr>
+<tr><td>Patients with proteinuria have a urine PCR or ACR and are considered for nephrology referral.</td><td>Clinic letters</td><td>≥ 90%</td></tr>
+<tr><td>Newly diagnosed MGUS is risk-stratified using a validated published model that does not require bone marrow biopsy.</td><td>Clinic letters</td><td>≥ 95%</td></tr>
+<tr><td>Low and low-intermediate risk MGUS do not undergo bone marrow examination or imaging.</td><td>Clinic letters, imaging requests</td><td>≥ 90%</td></tr>
+<tr><td>High-intermediate and high-risk MGUS undergo bone marrow examination and whole-body imaging.</td><td>Clinic letters, BM and imaging records</td><td>≥ 90%</td></tr>
+<tr><td>MGCS treated with systemic chemotherapy is discussed at MDT with sub-specialty representation.</td><td>MDT records</td><td>100%</td></tr>
+<tr><td>Patients receive clear information and psychological support at diagnosis.</td><td>Patient questionnaire</td><td>≥ 90%</td></tr>
+</tbody>
+</table>
+
+<h3>SMM audit standards (BSH 2024 derived)</h3>
+
+<table>
+<thead>
+<tr><th>Standard</th><th>Data source</th><th>Target</th></tr>
+</thead>
+<tbody>
+<tr><td>Screening blood tests are completed: FBC, U&amp;E, calcium, immunoglobulins, SPE, IFE, SFLC.</td><td>Laboratory records</td><td>≥ 98%</td></tr>
+<tr><td>Diagnostic bone marrow aspirate and trephine are taken with plasma cell phenotyping.</td><td>BM records</td><td>≥ 95%</td></tr>
+<tr><td>Cross-sectional imaging is performed (WB-MRI, PET-CT or low-dose WB-CT); skeletal survey is not used.</td><td>Imaging records</td><td>≥ 95%</td></tr>
+<tr><td>Interphase FISH on CD138-selected cells is performed for t(4;14), t(14;16), t(11;14), del(17p), gain(1q), del(1p).</td><td>Cytogenetics records</td><td>≥ 90%</td></tr>
+<tr><td>Tumour burden tests: β2-microglobulin, LDH, albumin.</td><td>Laboratory records</td><td>≥ 95%</td></tr>
+<tr><td>Renal biopsy is performed where myeloma is the suspected cause of renal impairment and SFLC &lt; 500 mg/L.</td><td>Renal records</td><td>≥ 80%</td></tr>
+<tr><td>Cases are discussed at MDT.</td><td>MDT records</td><td>100%</td></tr>
+<tr><td>Risk stratification uses Mayo 20-2-20 (2018) or IMWG 2020.</td><td>Clinic letters</td><td>≥ 95%</td></tr>
+<tr><td>Patients with evolving disease are re-staged.</td><td>Clinic letters</td><td>≥ 90%</td></tr>
+<tr><td>Vaccinations are recorded and offered as per BSH/UK DoH guidance.</td><td>Vaccination records</td><td>≥ 90%</td></tr>
+<tr><td>Monitoring schedules are matched to risk group.</td><td>Clinic letters</td><td>≥ 90%</td></tr>
+</tbody>
+</table>
+
+<h3>NDMM and relapsed-disease audit standards (BSH/UKMS 2024–2025 derived)</h3>
+
+<table>
+<thead>
+<tr><th>Standard</th><th>Data source</th><th>Target</th></tr>
+</thead>
+<tbody>
+<tr><td>All NDMM patients have a complete diagnostic workup including FISH, β2M, albumin, LDH, imaging and MDT discussion.</td><td>MDT records, clinic letters</td><td>≥ 95%</td></tr>
+<tr><td>Extended FISH panel reported within 4 weeks of adequate first BM sample (8 weeks if repeat needed).</td><td>Cytogenetics turnaround records</td><td>≥ 80%</td></tr>
+<tr><td>Modern whole-body imaging (WB-MRI or PET-CT) performed at diagnosis where access permits.</td><td>Imaging records</td><td>≥ 90%</td></tr>
+<tr><td>Transplant-eligible NDMM receives a NICE-commissioned induction regimen with documented MDT rationale.</td><td>Blueteq / pharmacy records</td><td>≥ 95%</td></tr>
+<tr><td>Lenalidomide maintenance (TA680) offered to all eligible patients after ASCT.</td><td>Pharmacy records</td><td>≥ 90%</td></tr>
+<tr><td>At relapse, repeat FISH and TP53 testing performed where treatment selection may be informed.</td><td>Cytogenetics records</td><td>≥ 80%</td></tr>
+<tr><td>Bispecific and CAR-T referrals routed through approved centres with structured pre-assessment.</td><td>Referral records</td><td>100%</td></tr>
+<tr><td>Bisphosphonates reinstated at frank relapse if previously stopped.</td><td>Prescribing records</td><td>≥ 90%</td></tr>
+<tr><td>Holistic needs assessment at diagnosis, at start of each line of therapy, and at relapse.</td><td>CNS records</td><td>≥ 90%</td></tr>
+</tbody>
+</table>
+
+<h3>Local implementation checklist (MHA-suggested)</h3>
+<ul>
+<li>Confirm pathway for laboratory flagging of new M-proteins and abnormal SFLC ratios.</li>
+<li>Define risk stratification responsibility (primary versus secondary care) and document in local guideline.</li>
+<li>Establish virtual clinic capacity for high-intermediate and high-risk MGUS monitoring.</li>
+<li>Confirm imaging capacity for WB-MRI and PET-CT; pathway for repeat imaging in evolving SMM and at biochemical relapse.</li>
+<li>Local cytogenetic and FISH turnaround times benchmarked against the BSH 2024 four-week target (eight weeks if repeat biopsy required).</li>
+<li>MDT structure with renal, cardiology and amyloidosis input where MGRS or amyloidosis is identified.</li>
+<li>Bispecific and CAR-T pathway: referral route, bridging therapy, supportive care, IVIg, infection prophylaxis.</li>
+<li>Survivorship and holistic needs assessment integrated into routine follow-up.</li>
+<li>Annual audit cycle against the BSH 2023 MGUS, BSH 2024 SMM and BSH/UKMS 2024–2025 NDMM/imaging/relapse audit templates.</li>
+</ul>
+
+<h3>UK-anchored treatment and commissioning statement</h3>
+<p>All treatment principles on this page are anchored in BSH and UKMF / UK Myeloma Society guidance, NICE NG35 and current NICE technology appraisal status where explicitly verified. International diagnostic and response frameworks (IMWG, EHA-EMN 2025) are used for criteria, staging, response assessment and wider context. Where international and UK guidance differ, <strong>UK guidance, NHS commissioning and local MDT policy prevail.</strong></p>
+
+<h3>Limitations and update plan</h3>
+<ul>
+<li>This is an educational summary and does not replace specialist MDT decision making, current NICE technology appraisals, NHS England commissioning criteria or local trust protocols.</li>
+<li>NICE TA numbers cited here are valid as of May 2026; verification against the live NICE register is required before each review cycle and before any prescribing decision.</li>
+<li>Several relevant appraisals remain in development: GID-TA10726 / ID3843 (D-VRd), TA11465 (isatuximab combinations induction), GID-TA10905 / ID4012 (cilta-cel earlier-line), GID-TA11846 / ID6639 (isatuximab maintenance). Ixazomib maintenance (GID-TA10843 / ID1517) was discontinued at NICE in February 2026. This page will be updated when relevant guidance is published.</li>
+<li>Belantamab combination access is in re-evaluation; verify current status.</li>
+<li>Cilta-cel access in routine commissioning is currently limited (TA889 terminated); this may change with the in-development earlier-line appraisal.</li>
+<li>Venetoclax for t(11;14) is not NICE-commissioned for myeloma and is presented as off-label / specialist-centre use only.</li>
+<li><strong>Update schedule:</strong> review in May 2027 or sooner on relevant NICE, BSH/UKMS or EHA-EMN updates.</li>
+</ul>
+
+<h3>Pre-publication governance checklist (must be cleared before live deployment)</h3>
+<ul>
+<li>Live NICE TA verification completed for every named regimen.</li>
+<li>Blueteq form requirements / NHS England commissioning status checked for every regimen presented as available.</li>
+<li>Regimen access statements (routine, managed-access, in-development, terminated, off-label) checked by consultant haematologist and pharmacist before sign-off.</li>
+<li>Doses checked against current SmPC, local Trust e-prescribing protocols and renal/hepatic adjustment rules. Dose blocks remain marked as educational only.</li>
+<li>Algorithm asset links (HTML to JPEG / SVG) verified — no broken links to assets that are not present in the repository.</li>
+<li>Quick-ref card and full guideline cross-checked for consistency on TA numbers, line of therapy, and regimen access.</li>
+<li>References checked for DOI, PMID and year accuracy.</li>
+<li>NICE horizon-scanning section (Section 1A) re-checked against live NICE pages immediately before deployment.</li>
+<li>Distinction confirmed between currently recommended (TA763, TA587, TA1098, TA680, TA695, TA1015, TA1114, TA1133 and others), managed-access (TA1023 elranatamab), in-development (GID-TA10726 / ID3843 D-VRd; GID-TA10905 / ID4012 cilta-cel earlier line; GID-TA11846 / ID6639 isatuximab maintenance), discontinued (GID-TA10843 / ID1517 ixazomib maintenance) and terminated (TA889 cilta-cel) appraisals.</li>
+<li>D-VRd identifier confirmed as GID-TA10726 / ID3843 unless NICE has since issued final TA guidance with a new TA number — replace throughout if updated.</li>
+<li>Cilta-cel TA889 (terminated) and GID-TA10905 / ID4012 (in development, earlier line) kept separate in every reference throughout the document.</li>
+<li>Ixazomib maintenance GID-TA10843 / ID1517 labelled discontinued (Feb 2026), not in development, in every reference throughout the document.</li>
+<li>Page layout, sidebar, evidence badges and download links match the live MHA malignant guideline framework (CLL page v1.9 as reference).</li>
+<li>Quick-ref card carries the safety footer on every page; dose blocks within it carry the dose-example caveat.</li>
+<li>Pharmacy review of thromboprophylaxis, antiviral prophylaxis, antimicrobial prophylaxis, IVIg, steroid toxicity mitigation and renal dose-adjustment language confirmed.</li>
+<li>The draft label removed only after consultant review, pharmacy review, NICE TA re-verification and approved-centre confirmation are complete.</li>
+</ul>
+
+<!-- ==================== SECTION 14 — REFERENCES ==================== -->
+<h2 id="refs"><span class="num">14</span>References</h2>
+
+<div class="ref-list">
+<p>References graded by credibility: <span class="grade A1">A1</span> Society guideline / NICE TA · <span class="grade A2">A2</span> High-quality RCT or meta-analysis · <span class="grade B">B</span> Observational or secondary source.</p>
+<ol>
+<li>Stern S, Chaudhuri S, Drayson M, Henshaw S, Karunanithi K, Willis F. Investigation and management of the monoclonal gammopathy of undetermined significance: a BSH Good Practice Paper. <em>Br J Haematol</em> 2023;202:734–744. <span class="grade A1">A1</span></li>
+<li>Hughes D, Yong K, Ramasamy K, et al. Diagnosis and management of smouldering myeloma: a BSH Good Practice Paper. <em>Br J Haematol</em> 2024;204:1193–1206. <span class="grade A1">A1</span></li>
+<li>Pinney J, Roufosse C, Kousios A, et al. Diagnosis and management of monoclonal gammopathy of renal significance: a BSH Good Practice Paper. <em>Br J Haematol</em> 2025;206:447–463. <span class="grade A1">A1</span></li>
+<li>Kaiser M, Pratt G, Bygrave C, Bowles K, Stern S, Jenner M. Diagnosis and initial treatment of transplant-eligible high-risk myeloma patients: a BSH/UK Myeloma Society Good Practice Paper. <em>Br J Haematol</em> 2024;205:833–839. <span class="grade A1">A1</span></li>
+<li>Kaiser M, Goh V, Stern S, et al. Advanced imaging for earlier diagnosis and morbidity prevention in multiple myeloma: a BSH/UK Myeloma Society Good Practice Paper. <em>Br J Haematol</em> 2024;205:1319–1325. <span class="grade A1">A1</span></li>
+<li>Jenner M, Boyd K, Choudhuri S, Parrish C, Garg M, Stern S. Management of relapsed multiple myeloma: a BSH/UK Myeloma Society guideline. <em>Br J Haematol</em> 2025;207:2322–2354. <span class="grade A1">A1</span></li>
+<li>Snowden JA, Greenfield DM, Bird JM, et al. Guidelines for screening and management of late and long-term consequences of myeloma and its treatment. <em>Br J Haematol</em> 2017;176:888–907. <span class="grade A1">A1</span></li>
+<li>Sive J, Cuthill K, Hunter H, Kazmi M, Pratt G, Smith D. Guidelines on the diagnosis, investigation and initial treatment of myeloma: a BSH/UK Myeloma Forum guideline. <em>Br J Haematol</em> 2021;193:245–268. <span class="grade A1">A1</span></li>
+<li>Rajkumar SV, Dimopoulos MA, Palumbo A, et al. International Myeloma Working Group updated criteria for the diagnosis of multiple myeloma. <em>Lancet Oncol</em> 2014;15:e538–548. <span class="grade A1">A1</span></li>
+<li>Rajkumar SV, Kyle RA, Therneau TM, et al. Serum free light chain ratio is an independent risk factor for progression in MGUS. <em>Blood</em> 2005;106:812–817. <span class="grade A2">A2</span></li>
+<li>Mateos MV, Kumar S, Dimopoulos MA, et al. International Myeloma Working Group risk stratification model for smouldering multiple myeloma. <em>Blood Cancer J</em> 2020;10:102. <span class="grade A2">A2</span></li>
+<li>Lakshman A, Rajkumar SV, Buadi FK, et al. Risk stratification of smouldering multiple myeloma incorporating revised IMWG diagnostic criteria. <em>Blood Cancer J</em> 2018;8:59. <span class="grade A2">A2</span></li>
+<li>Fernández de Larrea C, Kyle R, Rosiñol L, et al. Primary plasma cell leukaemia: consensus definition by the IMWG. <em>Blood Cancer J</em> 2021;11:192. <span class="grade A1">A1</span></li>
+<li>Greipp PR, San Miguel J, Durie BG, et al. International staging system for multiple myeloma. <em>J Clin Oncol</em> 2005;23:3412–3420. <span class="grade A2">A2</span></li>
+<li>Palumbo A, Avet-Loiseau H, Oliva S, et al. Revised International Staging System for multiple myeloma: an IMWG report. <em>J Clin Oncol</em> 2015;33:2863–2869. <span class="grade A2">A2</span></li>
+<li>D'Agostino M, Cairns DA, Lahuerta JJ, et al. Second revision of the International Staging System (R2-ISS) for overall survival in multiple myeloma: a European Myeloma Network (EMN) report within the HARMONY project. <em>J Clin Oncol</em> 2022;40:3406–3418. <span class="grade A2">A2</span></li>
+<li>Dimopoulos MA, Moreau P, Terpos E, et al. Multiple myeloma: EHA-ESMO Clinical Practice Guidelines for diagnosis, treatment and follow-up. <em>Ann Oncol</em> 2021;32:309–322. <span class="grade A1">A1</span></li>
+<li>Dimopoulos MA, Terpos E, Boccadoro M, Moreau P, Mateos MV, Zweegman S, et al. EHA–EMN Evidence-Based Guidelines for diagnosis, treatment and follow-up of patients with multiple myeloma. <em>Nat Rev Clin Oncol</em> 2025;22(9):680–700. doi:10.1038/s41571-025-01041-x. Epub 2025 Jul 7. PMID: 40624367. <span class="grade A1">A1</span></li>
+<li>National Institute for Health and Care Excellence. Myeloma: diagnosis and management. NG35. Last updated 2018. nice.org.uk/guidance/ng35. <span class="grade A1">A1</span></li>
+<li>Leung N, Bridoux F, Batuman V, et al. The evaluation of monoclonal gammopathy of renal significance: an IKMG consensus report. <em>Nat Rev Nephrol</em> 2019;15:45–59. <span class="grade A1">A1</span></li>
+<li>Fermand JP, Bridoux F, Dispenzieri A, et al. Monoclonal gammopathy of clinical significance: a novel concept with therapeutic consequences. <em>Blood</em> 2018;132:1478–1485. <span class="grade A2">A2</span></li>
+<li>Moreau P, Attal M, Hulin C, et al. Bortezomib, thalidomide, and dexamethasone with or without daratumumab before and after autologous stem-cell transplantation for newly diagnosed multiple myeloma (CASSIOPEIA): a randomised, open-label, phase 3 trial. <em>Lancet</em> 2019;394:29–38. <span class="grade A2">A2</span></li>
+<li>Sonneveld P, Dimopoulos MA, Boccadoro M, et al. Daratumumab, bortezomib, lenalidomide and dexamethasone for multiple myeloma (PERSEUS). <em>N Engl J Med</em> 2024;390:301–313. <span class="grade A2">A2</span></li>
+<li>Stewart AK, Rajkumar SV, Dimopoulos MA, et al. Carfilzomib, lenalidomide, and dexamethasone for relapsed multiple myeloma (ASPIRE). <em>N Engl J Med</em> 2015;372:142–152. <span class="grade A2">A2</span></li>
+<li>Dimopoulos MA, Oriol A, Nahi H, et al. Daratumumab, lenalidomide, and dexamethasone for multiple myeloma (POLLUX). <em>N Engl J Med</em> 2016;375:1319–1331. <span class="grade A2">A2</span></li>
+<li>Palumbo A, Chanan-Khan A, Weisel K, et al. Daratumumab, bortezomib, and dexamethasone for multiple myeloma (CASTOR). <em>N Engl J Med</em> 2016;375:754–766. <span class="grade A2">A2</span></li>
+<li>Moreau P, Garfall AL, van de Donk NWCJ, et al. Teclistamab in relapsed or refractory multiple myeloma (MajesTEC-1). <em>N Engl J Med</em> 2022;387:495–505. <span class="grade A2">A2</span></li>
+<li>Munshi NC, Anderson LD, Shah N, et al. Idecabtagene vicleucel in relapsed and refractory multiple myeloma (KarMMa). <em>N Engl J Med</em> 2021;384:705–716. <span class="grade A2">A2</span></li>
+<li>Rodriguez-Otero P, Ailawadhi S, Arnulf B, et al. Ide-cel or standard regimens in relapsed and refractory multiple myeloma (KarMMa-3). <em>N Engl J Med</em> 2023;388:1002–1014. <span class="grade A2">A2</span></li>
+<li>Berdeja JG, Madduri D, Usmani SZ, et al. Ciltacabtagene autoleucel, a B-cell maturation antigen-directed chimeric antigen receptor T-cell therapy in patients with relapsed or refractory multiple myeloma (CARTITUDE-1). <em>Lancet</em> 2021;398:314–324. <span class="grade A2">A2</span></li>
+<li>San-Miguel J, Dhakal B, Yong K, et al. Cilta-cel or standard care in lenalidomide-refractory multiple myeloma (CARTITUDE-4). <em>N Engl J Med</em> 2023;389:335–347. <span class="grade A2">A2</span></li>
+<li>Chari A, Minnema MC, Berdeja JG, et al. Talquetamab, a T-cell-redirecting GPRC5D bispecific antibody for multiple myeloma (MonumenTAL-1). <em>N Engl J Med</em> 2022;387:2232–2244. <span class="grade A2">A2</span></li>
+<li>Lesokhin AM, Tomasson MH, Arnulf B, et al. Elranatamab in relapsed or refractory multiple myeloma (MagnetisMM-3). <em>Nat Med</em> 2023;29:2259–2267. <span class="grade A2">A2</span></li>
+<li>Chari A, Vogl DT, Gavriatopoulou M, et al. Oral selinexor-dexamethasone for triple-class refractory multiple myeloma (STORM). <em>N Engl J Med</em> 2019;381:727–738. <span class="grade A2">A2</span></li>
+<li>Hungria V, Robak P, Hus M, et al. Belantamab mafodotin, bortezomib, and dexamethasone for multiple myeloma (DREAMM-7). <em>N Engl J Med</em> 2024;391:393–407. <span class="grade A2">A2</span></li>
+<li>Trudel S, Beksac M, Pour L, et al. Belantamab mafodotin, pomalidomide, and dexamethasone in multiple myeloma (DREAMM-8). <em>N Engl J Med</em> 2024;391:408–421. <span class="grade A2">A2</span></li>
+<li>Kumar SK, Harrison SJ, Cavo M, et al. Venetoclax or placebo in combination with bortezomib and dexamethasone in patients with relapsed or refractory multiple myeloma (BELLINI). <em>Lancet Oncol</em> 2020;21:1630–1642. <span class="grade A2">A2</span></li>
+<li>Jackson GH, Davies FE, Pawlyn C, et al. Lenalidomide maintenance versus observation for newly diagnosed multiple myeloma (Myeloma XI). <em>Lancet Oncol</em> 2019;20:57–73. <span class="grade A2">A2</span></li>
+<li>Moreau P, Dimopoulos MA, Mikhael J, et al. Isatuximab, carfilzomib, and dexamethasone in relapsed multiple myeloma (IKEMA). <em>Lancet</em> 2021;397:2361–2371. <span class="grade A2">A2</span></li>
+<li>Attal M, Richardson PG, Rajkumar SV, et al. Isatuximab plus pomalidomide and low-dose dexamethasone versus pomalidomide and low-dose dexamethasone in patients with relapsed and refractory multiple myeloma (ICARIA-MM). <em>Lancet</em> 2019;394:2096–2107. <span class="grade A2">A2</span></li>
+<li>Richardson PG, Oriol A, Beksac M, et al. Pomalidomide, bortezomib, and dexamethasone for patients with relapsed or refractory multiple myeloma previously treated with lenalidomide (OPTIMISMM). <em>Lancet Oncol</em> 2019;20:781–794. <span class="grade A2">A2</span></li>
+<li>San-Miguel JF, Hungria VT, Yoon SS, et al. Panobinostat plus bortezomib and dexamethasone versus placebo plus bortezomib and dexamethasone in patients with relapsed or relapsed and refractory multiple myeloma (PANORAMA-1). <em>Lancet Oncol</em> 2014;15:1195–1206. <span class="grade A2">A2</span></li>
+<li>Grosicki S, Simonova M, Spicka I, et al. Once-per-week selinexor, bortezomib, and dexamethasone versus twice-per-week bortezomib and dexamethasone in patients with multiple myeloma (BOSTON). <em>Lancet</em> 2020;396:1563–1573. <span class="grade A2">A2</span></li>
+<li>San Miguel J, Weisel K, Moreau P, et al. Pomalidomide plus low-dose dexamethasone versus high-dose dexamethasone alone for patients with relapsed and refractory multiple myeloma (MM-003). <em>Lancet Oncol</em> 2013;14:1055–1066. <span class="grade A2">A2</span></li>
+</ol>
+<p><strong>NICE technology appraisals — selected entries checked May 2026; live NICE verification required before prescribing:</strong></p>
+<ul>
+<li>TA129 — Bortezomib monotherapy for relapsed MM (2007). <span class="grade A1">A1</span></li>
+<li>TA228 — Bortezomib + thalidomide for first-line MM (2011). <span class="grade A1">A1</span></li>
+<li>TA311 — Bortezomib induction before HDT/ASCT (2014). <span class="grade A1">A1</span></li>
+<li>TA380 — Panobinostat + bortezomib + dex for R/R MM. <span class="grade A1">A1</span></li>
+<li>TA427 — Pomalidomide + dex for R/R MM. <span class="grade A1">A1</span></li>
+<li>TA510 — Daratumumab monotherapy for R/R MM. <span class="grade A1">A1</span></li>
+<li>TA586 — Lenalidomide + dex for MM after one bortezomib regimen. <span class="grade A1">A1</span></li>
+<li>TA587 — Lenalidomide + dex for previously untreated MM (2019). <span class="grade A1">A1</span></li>
+<li>TA657 — Carfilzomib for previously treated MM (2020). <span class="grade A1">A1</span></li>
+<li>TA680 — Lenalidomide maintenance after ASCT for NDMM (2021). <span class="grade A1">A1</span></li>
+<li>TA695 — Carfilzomib + dex + lenalidomide (KRd) for previously treated MM. <span class="grade A1">A1</span></li>
+<li>TA763 — Daratumumab + VTd for untreated MM when ASCT suitable (Feb 2022). <span class="grade A1">A1</span></li>
+<li>TA869 — Teclistamab (terminated; replaced by TA1015). <span class="grade A1">A1</span></li>
+<li>TA889 — Cilta-cel for R/R MM (terminated; Janssen withdrew submission). <span class="grade A1">A1</span></li>
+<li>TA970 — Selinexor + dex for R/R MM after ≥4 prior treatments. <span class="grade A1">A1</span></li>
+<li>TA1015 — Teclistamab for R/R MM after ≥3 prior treatments (Nov 2024). <span class="grade A1">A1</span></li>
+<li>TA1023 — Elranatamab for R/R MM after ≥3 prior treatments (Dec 2024; managed access). <span class="grade A1">A1</span></li>
+<li>TA1098 — Isatuximab + bortezomib + lenalidomide + dexamethasone (Isa-VRd) for untreated MM when ASCT unsuitable (Sept 2025). <span class="grade A1">A1</span></li>
+<li>TA1114 — Talquetamab for R/R MM after ≥3 prior treatments (Dec 2025; routine NHS option). <span class="grade A1">A1</span></li>
+<li>TA1133 — Belantamab mafodotin + Pd for previously treated MM after ≥1 prior therapy including lenalidomide (Feb 2026). <span class="grade A1">A1</span></li>
+<li>In development: GID-TA10726 / ID3843 (D-VRd, PERSEUS); GID-TA10905 / ID4012 (cilta-cel after 1–3 therapies); GID-TA11846 / ID6639 (isatuximab maintenance after ASCT).</li>
+<li>Discontinued: GID-TA10843 / ID1517 (ixazomib maintenance after ASCT; discontinued Feb 2026).</li>
+</ul>
+</div>
+
+<!-- ==================== SECTION 15 — CITE ==================== -->
+<h2 id="cite"><span class="num">15</span>How to Cite This Page</h2>
+
+<div class="cite-block">
+<p>Copy one of the formats below if you are citing this guideline in a presentation, teaching pack, audit write-up, or letter. Update the access year if you are reading this at a later date.</p>
+
+<h4>APA</h4>
+<code>Mohsin, M. (2026). Multiple Myeloma — Unified UK Practice Guideline. Mohsin Haematology Academy. https://mohsinhaemacademy.com/guidelines/myeloma/</code>
+
+<h4>Vancouver</h4>
+<code>Mohsin M. Multiple Myeloma — Unified UK Practice Guideline. Mohsin Haematology Academy; 2026. Available from: https://mohsinhaemacademy.com/guidelines/myeloma/</code>
+
+<h4>BibTeX</h4>
+<code>@misc{mohsin_myeloma_2026,
+  author = {Mohsin, Muhammad},
+  title  = {Multiple Myeloma --- Unified UK Practice Guideline},
+  year   = {2026},
+  url    = {https://mohsinhaemacademy.com/guidelines/myeloma/},
+  note   = {Mohsin Haematology Academy. Educational decision-support resource.}
+}</code>
+
+<p><strong>Citation etiquette:</strong> when you use this guideline to inform a clinical discussion, please also cite the primary BSH / UKMS / NICE / IMWG / EHA-EMN sources listed in the References section — this page is a synthesis, not a primary source.</p>
+</div>
+
+<div class="versioning-block">
+<h3>Versioning and Governance — MHA-MYELOMA-2026-v0.4.1-GOVERNANCE-POLISH</h3>
+<table>
+<thead>
+<tr><th>Version</th><th>Date</th><th>Author</th><th>Change</th></tr>
+</thead>
+<tbody>
+<tr><td>v0.1</td><td>May 2026</td><td>Dr M Mohsin</td><td>Initial proposal — continuum structure, MGUS/SMM/MGRS/NDMM/HRMM/imaging/relapse/survivorship/audit sections; cross-check against BSH source PDFs.</td></tr>
+<tr><td>v0.2</td><td>May 2026</td><td>Dr M Mohsin (ChatGPT-assisted governance pass)</td><td>Strengthened publication control; softened imaging absolutes; retained urine testing for amyloid/MGRS/trial contexts; MGRS supportive-care nephrology-led; added EHA-EMN 2025; added publication governance checklist.</td></tr>
+<tr><td>v0.3</td><td>May 2026</td><td>Dr M Mohsin (Claude-assisted re-cast)</td><td>SOP scaffolding v2 applied: document identity block; tool-metadata block (Scope / Intended users / Evidence base / Tags / Version); section numbering with anchor IDs matching CLL framework; quick decision summary banner; PICO methodology section; clinical vignettes for NDMM overview, MGRS and R/R; pattern recognition and common pitfall callouts; treatment regimen blocks restyled with dose / NICE TA / trial basis / evidence grade chips; explicit NICE TA chips on every named regimen (verified TA763, TA680, TA587, TA228, TA311, TA427, TA510, TA586, TA587, TA657, TA695, TA1015, TA970; flagged TA889 terminated; in-development TAs noted); reference list with PMID/DOI on EHA-EMN 2025 plus credibility grading (A1/A2/B); APA/Vancouver/BibTeX citation block; sidebar widgets drafted (anchor list, visual diagrams, downloads, NICE commissioning, related content); two embedded SVG algorithm placeholders (NDMM and R/R); theme colour aligned to live MHA palette (#7a1f2b).</td></tr>
+<tr><td>v0.4 GOVERNANCE REVIEW</td><td>May 2026</td><td>Dr M Mohsin (Claude-assisted)</td><td>Governance review: status renamed to v0.4-GOVERNANCE-REVIEW; draft banner expanded; D-VRd identifier corrected from incorrect TA11254 to NICE in-development identifier GID-TA10726 / ID3843; new Section 1A NICE Horizon Scanning inserted between Section 1 and Section 2, distinguishing currently recommended / managed-access / in-development / awaiting-development / discontinued / terminated / off-label categories; NICE TA wording softened to "selected entries checked May 2026; live NICE verification required before prescribing"; NCCN removed from disclaimer (only EHA-EMN and IMWG used substantively); ixazomib maintenance reclassified from "in development" to "discontinued February 2026" (GID-TA10843 / ID1517); new entries added — TA1098 Isa-VRd (Sept 2025), TA1023 elranatamab managed access (Dec 2024), TA1114 talquetamab routine NHS (Dec 2025), TA1133 belantamab + Pd (Feb 2026); cilta-cel TA889 (terminated) and GID-TA10905 / ID4012 (in development earlier line) kept explicitly separate; TI-NDMM dara-quadruplet language tightened — D-Rd / D-VMP not presented as available without verified TA; global dose-block caveat added; expanded publication governance checklist with 16 items; algorithm assets linked to JPEG with SVG retained as source; v0.4 PDF/DOCX filenames in sidebar; safety footer added to quick-ref card.</td></tr>
+<tr><td>v0.4.1 GOVERNANCE POLISH</td><td>May 2026</td><td>Dr M Mohsin (Claude-assisted; ChatGPT-reviewed)</td><td>Minimal safety polish: (1) Belantamab + Pd (TA1133) repositioned as a post-Len option after 1 prior lenalidomide-containing line if Len-intolerant or Len-refractory; ocular monitoring warning retained; no longer described as a generic penta-refractory option. (2) D-VRd (GID-TA10726 / ID3843) clarified as "horizon/evidence only" — cited NICE in-development entry currently relates to transplant-unsuitable NDMM; removed from the TE-NDMM commissioned-options list in Section 1 and the TE-NDMM regimen-block area in Section 8; added to the TI-NDMM / horizon area with explicit pathway-placement warning; sidebar NICE Commissioning panel moved D-VRd from "transplant-eligible" to "in development / awaiting"; NDMM algorithm SVG updated to show D-VRd as horizon for transplant-unsuitable. (3) Star symbol wording replaced throughout from "currently preferred where eligible" to "recently appraised / commonly pathway-relevant where NICE criteria and local access are met". (4) TA763 wording reworded as "D-VTd induction/consolidation for newly diagnosed transplant-eligible myeloma, within NICE criteria". (5) Algorithm safety footer added to both NDMM and R/R SVGs: "Educational pathway summary only. NICE/Blueteq/local formulary and SmPC verification required before treatment." JPEGs regenerated from updated SVGs. (6) Filenames updated to v0.4.1; banner retained as PROPOSAL ONLY — DRAFT — GOVERNANCE REVIEW with consultant/pharmacy sign-off requirement preserved. No new clinical recommendations introduced.</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="disclaimer-block">
+<strong>Disclaimer.</strong> This guideline is for educational purposes and clinical decision support. It is not a substitute for individual clinical judgement. For UK practice, only BSH-aligned NICE-commissioned regimens apply. Always verify current NICE guidance, Blueteq eligibility, NHS England commissioning rules and local trust protocols before prescribing. Dr Muhammad Mohsin is responsible for the educational content of this page.
+</div>
+
+</main>
+
+<!-- ==================== SIDEBAR ==================== -->
+<aside class="sidebar">
+
+<div class="side-card">
+<h4>On This Page</h4>
+<ul>
+<li><a href="#scope">1. Scope</a></li>
+<li><a href="#horizon">1A. NICE Horizon Scanning</a></li>
+<li><a href="#overview">2. Clinical Context</a></li>
+<li><a href="#methodology">3. Guideline Basis</a></li>
+<li><a href="#continuum">4. Continuum</a></li>
+<li><a href="#mgus">5. MGUS</a></li>
+<li><a href="#smm">6. Smouldering Myeloma</a></li>
+<li><a href="#mgrs">7. MGRS</a></li>
+<li><a href="#ndmm">8. NDMM</a></li>
+<li><a href="#hrmm">9. High-risk &amp; TE-NDMM</a></li>
+<li><a href="#imaging">10. Imaging</a></li>
+<li><a href="#rr">11. Relapsed &amp; Refractory</a></li>
+<li><a href="#supportive">12. Supportive Care</a></li>
+<li><a href="#audit">13. Audit &amp; Governance</a></li>
+<li><a href="#refs">14. References</a></li>
+<li><a href="#cite">15. How to Cite</a></li>
+</ul>
+</div>
+
+<div class="side-card">
+<h4>Visual Diagrams</h4>
+<p>Myeloma decision algorithms — v0.4.1 aligned with BSH/UKMS 2024–2025 and current NICE TAs.</p>
+<ul>
+<li><a href="algorithm-ndmm.jpeg">NDMM pathway (JPEG)</a></li>
+<li><a href="algorithm-rr.jpeg">R/R pathway (JPEG)</a></li>
+<li><a href="algorithm-ndmm.svg">NDMM pathway — editable SVG source</a></li>
+<li><a href="algorithm-rr.svg">R/R pathway — editable SVG source</a></li>
+</ul>
+<p style="font-size:.8rem; color:var(--mha-ink-soft); margin-top:.5rem;">FigJam and Excalidraw editable source files still pending; SVG sources above are the current editable artefacts.</p>
+</div>
+
+<div class="side-card">
+<h4>Download PDFs</h4>
+<p>Full multi-page guideline or compact summary card (v0.4.1 governance polish).</p>
+<ul>
+<li><a href="guideline.pdf">Full Guideline (PDF)</a></li>
+<li><a href="quickref.pdf">Quick-Ref Card (PDF)</a></li>
+</ul>
+<p style="font-size:.8rem; color:var(--mha-ink-soft); margin-top:.5rem;">Both files marked DRAFT — not for clinical use without consultant and pharmacy sign-off.</p>
+</div>
+
+<div class="side-card">
+<h4>NICE Commissioning</h4>
+<p style="margin-top:0;"><strong>NDMM transplant-eligible:</strong></p>
+<ul class="ta-list">
+<li><span class="pref">★</span> TA763 — D-VTd induction/consolidation, within NICE criteria</li>
+<li>TA680 — Lenalidomide maintenance</li>
+</ul>
+<p><strong>NDMM transplant-ineligible:</strong></p>
+<ul class="ta-list">
+<li>TA587 — Rd</li>
+<li><span class="pref">★</span> TA1098 — Isa-VRd (Sep 2025)</li>
+</ul>
+<p><strong>Relapsed/Refractory:</strong></p>
+<ul class="ta-list">
+<li>TA695 — KRd</li>
+<li>TA427 — Pd</li>
+<li>TA510 — Dara mono</li>
+<li>TA586 — Rd after Vel</li>
+<li>TA970 — Selinexor-dex (≥4 prior)</li>
+<li>TA1015 — Teclistamab (≥3 prior)</li>
+<li>TA1023 — Elranatamab (managed access)</li>
+<li>TA1114 — Talquetamab (≥3 prior)</li>
+<li>TA1133 — Belantamab + Pd (after ≥1 prior Len-containing line)</li>
+</ul>
+<p><strong>In development / awaiting:</strong></p>
+<ul class="ta-list">
+<li><em>GID-TA10726 / ID3843 — D-VRd (transplant-unsuitable, in dev)</em></li>
+<li><em>GID-TA10905 / ID4012 — Cilta-cel (earlier line)</em></li>
+<li><em>GID-TA11846 / ID6639 — Isatuximab maintenance</em></li>
+</ul>
+<p><strong>Discontinued / terminated:</strong></p>
+<ul class="ta-list">
+<li>GID-TA10843 / ID1517 — Ixazomib maintenance (discontinued Feb 2026)</li>
+<li>TA889 — Cilta-cel (terminated, Janssen withdrew)</li>
+<li>TA869 — Teclistamab (replaced by TA1015)</li>
+</ul>
+<p style="font-size:.8rem; color:var(--mha-ink-soft); margin-top:.5rem;">★ = recently appraised / commonly pathway-relevant where NICE criteria and local access are met. <strong>Live NICE verification required before prescribing.</strong></p>
+</div>
+
+<div class="side-card">
+<h4>Related Content</h4>
+<ul>
+<li><a href="https://mohsinhaemacademy.com/guidelines/cll/">CLL Guideline</a></li>
+<li><a href="https://mohsinhaemacademy.com/guidelines/vte-cancer/">Cancer-Associated VTE</a></li>
+<li><a href="https://mohsinhaemacademy.com/guidelines/itp/">ITP Guideline</a></li>
+<li><a href="https://mohsinhaemacademy.com/journal-club.html">Journal Club</a></li>
+</ul>
+</div>
+
+</aside>
+
+</div>
+
+<footer class="mha">
+<div class="inner">
+<div><strong>Mohsin Haematology Academy</strong> · Evidence — Education — Practice</div>
+<div>MHA-MYELOMA-2026-v0.4.1-GOVERNANCE-POLISH (draft) | Educational use only · BSH/UKMS and NICE regimens apply for UK clinical practice</div>
+<div>© 2025–2026 Dr Muhammad Mohsin, Consultant Haematologist</div>
+</div>
+</footer>
+
+</body>
+</html>
