@@ -1,0 +1,1936 @@
+<!--
+---
+title: "Low Neutrophil Count in Patients of African, Caribbean, Middle Eastern & Yemenite Jewish Heritage"
+slug: "danc-adan-gp-guide"
+date: 2026-05-22
+author: "Dr Muhammad Mohsin"
+section: "education"
+audience: "general practice"
+tags: ["DANC", "ADAN", "Duffy-null", "neutropenia", "GP education", "haematology", "clozapine"]
+status: "draft"
+description: "Interactive GP decision tool for Duffy-null associated neutrophil count. When to reassure, when to refer, how to explain it to patients."
+sources:
+  - {type: pubmed, pmid: "39506297", doi: "10.1002/pbc.31430", title: "Clinical and Laboratory Characteristics of Pediatric Patients With ACKR1/DARC-Associated Neutropenia", journal: "Pediatr Blood Cancer", year: 2024, author: "Oz-Alcalay et al."}
+  - {type: pubmed, pmid: "37633776", doi: "10.1016/j.schres.2023.08.002", title: "Clozapine and neutrophil response in patients of African descent", journal: "Schizophr Res", year: 2023, author: "Kelly DL et al."}
+  - {type: pubmed, pmid: "39979175", doi: "10.1016/j.pathol.2024.11.010", title: "Clinical parameters of patients with Duffy null phenotype: a single centre retrospective review", journal: "Pathology", year: 2025, author: "Zammar et al."}
+  - {type: web, doi: "10.1001/jama.2023.7467", title: "Development of Duffy null-specific absolute neutrophil count reference ranges", journal: "JAMA", year: 2023, author: "Merz et al."}
+  - {type: web, doi: "10.1001/jamanetworkopen.2024.32475", title: "Cancer trial eligibility and therapy modifications for individuals with Duffy null-associated neutrophil count", journal: "JAMA Netw Open", year: 2024, author: "Hibbs et al."}
+  - {type: web, doi: "10.1002/bcp.70576", title: "CERSI-PGx ACKR1/Duffy-null genotype testing for clozapine guideline", journal: "Br J Clin Pharmacol", year: 2026, author: "Murtough et al."}
+  - {type: pubmed, pmid: "33181819", doi: "10.1182/blood.2020008600", title: "When non-Whiteness becomes a condition", journal: "Blood", year: 2021, author: "Merz LE, Achebe M"}
+  - {type: pubmed, doi: "10.1097/MOH.0000000000000834", title: "Novel neutrophil biology underlying ACKR1/DARC-associated neutropenia", journal: "Curr Opin Hematol", year: 2024, author: "Liu JM, Luo HR"}
+  - {type: pubmed, doi: "10.1007/s10549-025-07856-7", title: "Effect of Duffy status on patients with breast cancer receiving CDK 4/6 inhibitors", journal: "Breast Cancer Res Treat", year: 2025, author: "Ferri GM et al."}
+  - {type: web, doi: "10.1097/HS9.0000000000000972", title: "Invisible Infrastructure in Haematology: Neutrophil Reference Ranges and the Duffy-null Phenotype", journal: "HemaSphere", year: 2023, author: "Hibbs SP, Achebe MO"}
+---
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Low Neutrophil Count (DANC/ADAN) — A GP Guide | Mohsin Haematology Academy</title>
+<meta name="description" content="Interactive primary-care decision tool for Duffy-null associated neutrophil count (DANC/ADAN): when to reassure, when to refer, and how to explain it.">
+<link rel="canonical" href="https://mohsinhaemacademy.com/education/general-practitioners" />
+<meta property="og:site_name" content="Mohsin Haematology Academy" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://mohsinhaemacademy.com/education/general-practitioners" />
+<meta property="og:title" content="Low Neutrophil Count in Patients of African, Caribbean, Middle Eastern &amp; Yemenite Jewish Heritage — A GP guide to DANC/ADAN" />
+<meta property="og:description" content="Interactive primary-care decision tool for Duffy-null associated neutrophil count (DANC/ADAN): when to reassure, when to refer, and how to explain it." />
+<meta property="og:image" content="https://mohsinhaemacademy.com/logo.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Low Neutrophil Count in Patients of African, Caribbean, Middle Eastern &amp; Yemenite Jewish Heritage — A GP guide to DANC/ADAN" />
+<meta name="twitter:description" content="Interactive primary-care decision tool for Duffy-null associated neutrophil count (DANC/ADAN): when to reassure, when to refer, and how to explain it." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --clr-primary: #7a1f2b; --clr-primary-dark: #5c1720; --clr-primary-tint: rgba(122,31,43,0.07);
+  --clr-primary-glow: rgba(122,31,43,0.18); --clr-bg: #f7f5f3; --clr-surface: #ffffff;
+  --clr-text: #1a1a1e; --clr-text-secondary: #3d3d42; --clr-muted: #6b717a;
+  --clr-border: #e6e1dd; --radius-sm: 6px; --radius-md: 12px; --ease: 0.22s cubic-bezier(0.4,0,0.2,1);
+  --cat-gp: #2d6b2d; --cat-gp-tint: rgba(45,107,45,0.07); --cat-gp-border: rgba(45,107,45,0.16);
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', -apple-system, sans-serif; background: var(--clr-bg); color: var(--clr-text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
+.container { width: min(900px, 91%); margin-inline: auto; }
+
+/* NAV — site shared */
+header.site-header { position: sticky; top: 0; z-index: 200; background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--clr-border); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 24px; max-width: 1080px; margin-inline: auto; padding: 0 4.5%; }
+.brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.brand img { height: 40px; width: auto; }
+.brand-text { line-height: 1; }
+.brand-name { font-size: 0.95rem; font-weight: 700; color: var(--clr-primary); letter-spacing: -0.01em; }
+.brand-tagline { font-size: 0.66rem; font-weight: 500; color: var(--clr-muted); letter-spacing: 0.07em; text-transform: uppercase; margin-top: 3px; }
+.nav-toggle { display: none; }
+.nav-links { display: flex; align-items: center; gap: 2px; }
+.nav-links a { font-size: 0.85rem; font-weight: 500; color: var(--clr-text-secondary); padding: 7px 13px; border-radius: var(--radius-sm); transition: color var(--ease), background var(--ease); white-space: nowrap; }
+.nav-links a:hover, .nav-links a.active { color: var(--clr-primary); background: var(--clr-primary-tint); }
+.nav-cta { background: var(--clr-primary) !important; color: #fff !important; font-weight: 600 !important; padding: 7px 16px !important; margin-left: 6px; box-shadow: 0 2px 8px var(--clr-primary-glow); }
+.nav-cta:hover { background: var(--clr-primary-dark) !important; transform: translateY(-1px); }
+
+/* BACK LINK */
+.back-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.82rem; font-weight: 500; color: var(--clr-muted); padding: 22px 0 0; transition: color var(--ease); }
+.back-link:hover { color: var(--cat-gp); }
+
+/* PAGE HERO — GP-themed eyebrow + Playfair h1 */
+.page-hero { padding: 28px 0 40px; }
+.page-eyebrow { display: inline-flex; align-items: center; gap: 7px; background: var(--cat-gp-tint); color: var(--cat-gp); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 5px 14px; border-radius: 100px; margin-bottom: 18px; border: 1px solid var(--cat-gp-border); }
+.page-hero h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.8rem, 3.6vw, 2.4rem); font-weight: 700; color: var(--cat-gp); letter-spacing: -0.025em; line-height: 1.18; margin-bottom: 16px; }
+.page-hero > .container > p.lead { font-size: 1.02rem; color: var(--clr-text-secondary); line-height: 1.7; max-width: 680px; }
+
+/* FOOTER — site shared */
+footer.site-footer { background: var(--clr-surface); border-top: 1px solid var(--clr-border); padding: 36px 0; margin-top: 64px; }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; max-width: 1080px; margin-inline: auto; padding: 0 4.5%; }
+.footer-note { font-size: 0.775rem; color: var(--clr-muted); text-align: right; line-height: 1.6; }
+.footer-note strong { color: var(--clr-text-secondary); font-weight: 600; }
+
+@media (max-width: 640px) {
+  .nav-links a:not(.nav-cta) { display: none; }
+  .footer-inner { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .footer-note { text-align: left; }
+}
+
+/* === DANC content scoped under .gp-guide === */
+
+  .gp-guide {
+  /* DANC token overrides — mapped to site GP-section accent */
+  --navy: var(--cat-gp);
+  --navy-deep: var(--cat-gp);
+  --crimson: var(--clr-primary);
+  --crimson-soft: var(--clr-primary);
+  --cream: #FAF7F2;
+  --paper: #FFFFFF;
+  --ink: var(--clr-text);
+  --grey: var(--clr-text-secondary);
+  --grey-soft: var(--clr-muted);
+  --rule: var(--clr-border);
+  --tint-navy: rgba(45,107,45,0.07);
+  --tint-crimson: var(--clr-primary-tint);
+  --tint-cream: #F4EFE6;
+  --green: #1A7A4A;
+  --tint-green: #E8F5EE;
+}
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  /* html/body styled by site */
+
+  .gp-guide { background: var(--paper); margin: 24px 0 8px; border-radius: 8px; border: 1px solid var(--clr-border); overflow: hidden; position: relative; color: var(--ink); }
+
+  /* HEADER */
+  header.brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
+    color: white;
+    padding: 16px 24px;
+    border-bottom: 4px solid var(--crimson);
+    position: relative;
+    overflow: hidden;
+  }
+  header.brand::after {
+    content: '';
+    position: absolute;
+    right: -40px; top: -40px;
+    width: 160px; height: 160px;
+    background: var(--crimson);
+    opacity: 0.08;
+    border-radius: 50%;
+  }
+  .wordmark { display: flex; align-items: baseline; gap: 10px; }
+  .wordmark .mha { font-size: 26pt; font-weight: bold; letter-spacing: 5px; }
+  .wordmark .pipe { color: var(--crimson-soft); font-size: 20pt; }
+  .wordmark .full { font-size: 10pt; letter-spacing: 1.5px; opacity: 0.9; }
+  .doc-meta { text-align: right; font-size: 8pt; line-height: 1.6; font-style: italic; opacity: 0.85; }
+  .doc-meta strong { font-style: normal; letter-spacing: 1px; color: var(--crimson-soft); }
+
+  .content { padding: 20px 24px; }
+
+  /* TITLE */
+  .title-block { margin-bottom: 16px; }
+  .eyebrow { color: var(--crimson); font-size: 8pt; letter-spacing: 3px; text-transform: uppercase; font-weight: bold; margin-bottom: 6px; }
+  h1.headline { color: var(--navy); font-size: 18pt; font-weight: bold; line-height: 1.2; margin-bottom: 4px; }
+  .subhead { color: var(--grey); font-size: 10pt; font-style: italic; }
+
+  /* SECTIONS */
+  h2.section {
+    color: var(--navy); font-size: 10pt; text-transform: uppercase; letter-spacing: 2.5px;
+    border-bottom: 2px solid var(--crimson); padding-bottom: 5px;
+    margin: 18px 0 10px 0; display: flex; align-items: baseline; gap: 8px;
+  }
+  h2.section .num { color: var(--crimson); font-weight: bold; }
+
+  /* HERO */
+  .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
+
+  .stat-card {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
+    color: white; padding: 16px; border-radius: 6px; position: relative; overflow: hidden;
+  }
+  .stat-card::before {
+    content: ''; position: absolute; top: -20px; right: -20px;
+    width: 80px; height: 80px; background: var(--crimson); opacity: 0.15; border-radius: 50%;
+  }
+  .stat-label { font-size: 7.5pt; letter-spacing: 2px; text-transform: uppercase; color: var(--crimson-soft); font-weight: bold; margin-bottom: 6px; }
+  .stat-value { font-size: 28pt; font-weight: bold; line-height: 1; margin-bottom: 4px; }
+  .stat-unit { font-size: 13pt; opacity: 0.85; }
+  .stat-foot { font-size: 7.5pt; margin-top: 8px; font-style: italic; opacity: 0.85; line-height: 1.5; }
+
+  .cell-panel {
+    background: var(--tint-cream); border-radius: 6px; padding: 10px; border: 1px solid var(--rule);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+  }
+  .cell-panel-title {
+    font-size: 7.5pt; text-transform: uppercase; letter-spacing: 2px; color: var(--crimson);
+    font-weight: bold; margin-bottom: 6px; text-align: center;
+  }
+
+  /* TERMINOLOGY */
+  .term-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 4px; }
+  .term-card {
+    border: 1px solid var(--rule); border-top: 3px solid var(--crimson); padding: 10px;
+    background: var(--paper); border-radius: 3px; cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .term-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+  .term-card.preferred { border-top-color: var(--navy); background: var(--tint-navy); }
+  .term-card .badge {
+    display: inline-block; background: var(--rule); color: var(--grey); font-size: 6.5pt;
+    padding: 2px 6px; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 5px;
+    font-weight: bold; border-radius: 2px;
+  }
+  .term-card.preferred .badge { background: var(--navy); color: white; }
+  .term-card .name { font-weight: bold; color: var(--navy); font-size: 9.5pt; margin-bottom: 4px; }
+  .term-card .desc { font-size: 8pt; color: var(--grey); line-height: 1.5; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .col h3 { color: var(--crimson); font-size: 9pt; font-weight: bold; margin-bottom: 6px; letter-spacing: 0.5px; }
+  .col ul { list-style: none; padding: 0; }
+  .col li { font-size: 8.5pt; line-height: 1.5; color: var(--ink); padding-left: 12px; position: relative; margin-bottom: 4px; }
+  .col li::before { content: ''; position: absolute; left: 0; top: 6px; width: 5px; height: 5px; background: var(--crimson); border-radius: 50%; }
+  .col li strong { color: var(--navy); }
+
+  /* MAP */
+  .map-container { background: var(--tint-cream); border-radius: 6px; padding: 10px; border: 1px solid var(--rule); position: relative; }
+  .map-container svg ellipse[data-region] { cursor: pointer; transition: opacity 0.2s, transform 0.2s; transform-origin: center; transform-box: fill-box; }
+  .map-container svg ellipse[data-region]:hover { opacity: 1 !important; transform: scale(1.08); }
+  .map-legend { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; justify-content: center; }
+  .legend-item { display: flex; align-items: center; gap: 4px; font-size: 7pt; color: var(--grey); }
+  .legend-dot { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+
+  /* PREVALENCE BARS */
+  .prev-bars { margin-top: 4px; }
+  .prev-row { margin-bottom: 6px; }
+  .prev-label { display: flex; justify-content: space-between; font-size: 8pt; margin-bottom: 3px; }
+  .prev-label .pop { color: var(--ink); }
+  .prev-label .pct { color: var(--navy); font-weight: bold; }
+  .prev-track {
+    height: 8px; background: var(--tint-cream); border-radius: 4px;
+    overflow: hidden; border: 1px solid var(--rule);
+  }
+  .prev-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--navy) 0%, var(--crimson) 100%);
+    border-radius: 4px; width: 0;
+    transition: width 1.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .prev-fill.low { background: var(--grey-soft); }
+
+  /* FLOW */
+  .flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; position: relative; }
+  .flow::before {
+    content: ''; position: absolute; top: 18px; left: 12%; right: 12%;
+    height: 2px; background: linear-gradient(90deg, var(--navy), var(--crimson)); z-index: 0;
+  }
+  .step {
+    background: var(--paper); border: 1px solid var(--rule); border-left: 3px solid var(--crimson);
+    padding: 10px 8px 10px 10px; border-radius: 3px; position: relative; z-index: 1;
+    cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .step:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.14); }
+  .step .step-num {
+    display: inline-flex; align-items: center; justify-content: center;
+    background: var(--navy); color: white; width: 22px; height: 22px;
+    border-radius: 50%; font-size: 8.5pt; font-weight: bold; margin-bottom: 5px;
+  }
+  .step .step-title { font-weight: bold; color: var(--navy); font-size: 8.5pt; margin-bottom: 3px; }
+  .step .step-body { font-size: 7.5pt; color: var(--grey); line-height: 1.45; }
+  .step.no-mark { border-left-color: var(--green); background: var(--tint-green); }
+  .step.no-mark .step-num { background: var(--green); }
+
+  /* PATHWAYS */
+  .pathway-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .pathway {
+    border: 1px solid var(--rule); border-radius: 4px; padding: 10px; background: var(--paper);
+    transition: transform 0.2s, box-shadow 0.2s; cursor: pointer;
+  }
+  .pathway:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
+  .pathway .header-row {
+    display: flex; align-items: center; gap: 8px; margin-bottom: 8px; padding-bottom: 6px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .pathway .icon {
+    width: 28px; height: 28px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; font-size: 14px;
+  }
+  .pathway .pathway-title { color: var(--navy); font-weight: bold; font-size: 9pt; line-height: 1.2; }
+  .pathway ul { list-style: none; padding: 0; }
+  .pathway li {
+    font-size: 7.5pt; line-height: 1.5; color: var(--ink); padding-left: 10px;
+    margin-bottom: 4px; position: relative;
+  }
+  .pathway li::before { content: ''; position: absolute; left: 0; top: 5px; width: 4px; height: 4px; background: var(--navy); border-radius: 50%; }
+
+  /* PITFALLS */
+  .pitfalls {
+    background: var(--tint-crimson); border-left: 4px solid var(--crimson);
+    padding: 10px 14px; border-radius: 0 4px 4px 0; margin-top: 14px;
+  }
+  .pitfalls h2 {
+    border: none; margin: 0 0 8px 0; color: var(--crimson);
+    font-size: 9.5pt; letter-spacing: 2px; text-transform: uppercase;
+  }
+  .pitfall-list { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 16px; }
+  .pitfall-list .item { font-size: 7.5pt; line-height: 1.45; color: var(--ink); padding-left: 14px; position: relative; }
+  .pitfall-list .item::before { content: '✕'; position: absolute; left: 0; top: 0; color: var(--crimson); font-weight: bold; }
+  .pitfall-list .item strong { color: var(--navy); }
+
+  /* ANIMATIONS */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-4px); }
+  }
+  .floating { animation: float 3s ease-in-out infinite; }
+  .floating-slow { animation: float 4.5s ease-in-out infinite; }
+
+  /* INFO TRIGGER */
+  .info-trigger {
+    cursor: pointer; border-bottom: 1px dashed var(--crimson); color: var(--crimson);
+  }
+  .info-trigger:hover { background: var(--tint-crimson); }
+
+  /* MOLECULE */
+  .molecule-container { display: flex; align-items: center; justify-content: center; gap: 16px; padding: 4px 0; }
+  .molecule-label {
+    text-align: center; font-size: 7pt; color: var(--grey); margin-top: 4px;
+    font-weight: bold; text-transform: uppercase; letter-spacing: 1px;
+  }
+  .clickable-svg { cursor: pointer; transition: filter 0.2s; }
+  .clickable-svg:hover { filter: brightness(1.05) drop-shadow(0 4px 12px rgba(0,0,0,0.2)); }
+
+  /* FOOTER */
+  footer.refs { margin-top: 14px; padding-top: 10px; border-top: 2px solid var(--navy); }
+  footer.refs h4 { font-size: 7.5pt; text-transform: uppercase; letter-spacing: 2px; color: var(--navy); margin-bottom: 5px; }
+  footer.refs .ref-list { font-size: 6.5pt; color: var(--grey); line-height: 1.5; columns: 2; column-gap: 16px; }
+  footer.refs .ref-list span { display: block; margin-bottom: 2px; break-inside: avoid; }
+  footer.refs .ref-list span b { color: var(--navy); }
+  .brand-strip {
+    margin-top: 8px; padding-top: 6px; border-top: 1px solid var(--rule);
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 7pt; color: var(--grey);
+  }
+  .brand-strip .left b { color: var(--navy); letter-spacing: 1.5px; }
+  .brand-strip .left .url { color: var(--crimson); font-weight: bold; }
+  .brand-strip .right { font-style: italic; color: var(--grey-soft); font-size: 6.5pt; }
+
+  /* SIMULATOR */
+  .simulator {
+    background: var(--tint-navy); border-radius: 6px; padding: 12px;
+    margin-top: 10px; border: 1px solid var(--rule);
+  }
+  .simulator h3 { color: var(--navy); font-size: 9pt; margin-bottom: 8px; font-weight: bold; }
+  .sim-controls { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .sim-controls label { font-size: 8pt; color: var(--grey); font-weight: bold; }
+  .sim-controls input[type=range] { flex: 1; min-width: 140px; accent-color: var(--crimson); height: 6px; cursor: pointer; }
+  .sim-controls input[type=checkbox] { accent-color: var(--crimson); width: 16px; height: 16px; cursor: pointer; }
+  .sim-result {
+    margin-top: 10px; padding: 10px; border-radius: 4px; font-size: 8.5pt;
+    font-weight: bold; text-align: center; transition: background 0.3s, color 0.3s;
+  }
+  .sim-result.normal { background: var(--tint-green); color: var(--green); border: 1px solid #aaddbb; }
+  .sim-result.danc { background: var(--tint-navy); color: var(--navy); border: 1px solid #aabbdd; }
+  .sim-result.low { background: var(--tint-crimson); color: var(--crimson); border: 1px solid #ddaabb; }
+
+  /* ═══════════════════════════════════════════════════════════════
+     GP PANEL — top-section GP decision-support styles
+     ═══════════════════════════════════════════════════════════════ */
+  .gp-panel {
+    background: linear-gradient(135deg, #FAF7F2 0%, #F4EFE6 100%);
+    border: 1px solid var(--rule);
+    border-top: 4px solid var(--crimson);
+    border-radius: 6px;
+    padding: 18px 20px 20px 20px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .gp-banner {
+    background: var(--navy);
+    color: white;
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 3px;
+    font-size: 7.5pt;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .gp-banner .for { color: var(--crimson-soft); }
+  .gp-panel h2.gp-title {
+    color: var(--navy);
+    font-size: 14pt;
+    font-weight: bold;
+    margin-bottom: 4px;
+    line-height: 1.2;
+    border: none;
+    padding: 0;
+    text-transform: none;
+    letter-spacing: 0;
+    display: block;
+  }
+  .gp-panel .gp-sub {
+    color: var(--grey);
+    font-size: 9.5pt;
+    font-style: italic;
+    margin-bottom: 14px;
+  }
+
+  /* Triage cards — three big clickable scenarios */
+  .triage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .triage-card {
+    background: white;
+    border: 1.5px solid var(--rule);
+    border-radius: 5px;
+    padding: 12px 12px 14px 12px;
+    cursor: pointer;
+    transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+    position: relative;
+    text-align: left;
+  }
+  .triage-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(27,42,74,0.14);
+    border-color: var(--navy);
+  }
+  .triage-card.active {
+    border-color: var(--crimson);
+    background: #FFF8F5;
+    box-shadow: 0 6px 20px rgba(196,30,58,0.15);
+  }
+  .triage-card .triage-num {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    font-size: 18pt;
+    color: var(--rule);
+    font-weight: bold;
+    line-height: 1;
+    font-family: Georgia, serif;
+  }
+  .triage-card.active .triage-num { color: var(--crimson); }
+  .triage-card .triage-icon { font-size: 18pt; margin-bottom: 6px; line-height: 1; }
+  .triage-card .triage-title {
+    color: var(--navy);
+    font-weight: bold;
+    font-size: 9.5pt;
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+  .triage-card .triage-blurb { font-size: 8pt; color: var(--grey); line-height: 1.45; }
+
+  /* Triage panels — only one visible at a time */
+  .triage-panel {
+    display: none;
+    background: white;
+    border: 1px solid var(--rule);
+    border-radius: 5px;
+    padding: 16px 18px;
+    margin-top: 6px;
+  }
+  .triage-panel.open { display: block; animation: slideDown 0.3s ease; }
+  @keyframes slideDown { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+  .triage-panel h3 {
+    color: var(--crimson);
+    font-size: 10pt;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  /* "Should I refer?" decision tool */
+  .refer-tool { margin-top: 4px; }
+  .refer-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ECE8DD;
+    gap: 14px;
+  }
+  .refer-question:last-of-type { border-bottom: none; }
+  .refer-question-text {
+    font-size: 9pt;
+    color: var(--ink);
+    line-height: 1.4;
+    flex: 1;
+  }
+  .refer-question-text small { color: var(--grey); font-style: italic; display: block; font-size: 7.5pt; margin-top: 2px; }
+  .yn-toggle {
+    display: flex;
+    gap: 0;
+    border: 1.5px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .yn-btn {
+    background: white;
+    border: none;
+    padding: 6px 14px;
+    font-size: 8.5pt;
+    font-weight: bold;
+    color: var(--grey);
+    cursor: pointer;
+    font-family: Georgia, serif;
+    transition: background 0.15s, color 0.15s;
+    min-width: 50px;
+  }
+  .yn-btn:hover { background: #F4EFE6; }
+  .yn-btn.selected.yes { background: var(--green); color: white; }
+  .yn-btn.selected.no { background: var(--crimson); color: white; }
+
+  /* Refer output box */
+  .refer-output {
+    margin-top: 14px;
+    padding: 14px 16px;
+    border-radius: 5px;
+    border-left: 5px solid var(--rule);
+    background: var(--tint-cream);
+    font-size: 9pt;
+    line-height: 1.55;
+    min-height: 60px;
+    transition: background 0.3s, border-color 0.3s;
+  }
+  .refer-output.green { background: var(--tint-green); border-left-color: var(--green); }
+  .refer-output.amber { background: #FFF6E0; border-left-color: #C48A1A; }
+  .refer-output.red { background: var(--tint-crimson); border-left-color: var(--crimson); }
+  .refer-output.urgent { background: var(--navy); border-left-color: var(--crimson); color: white; }
+  .refer-output .ro-tag {
+    display: inline-block;
+    font-size: 7.5pt;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 3px;
+    margin-bottom: 6px;
+  }
+  .refer-output.green .ro-tag { background: var(--green); color: white; }
+  .refer-output.amber .ro-tag { background: #C48A1A; color: white; }
+  .refer-output.red .ro-tag { background: var(--crimson); color: white; }
+  .refer-output.urgent .ro-tag { background: var(--crimson-soft); color: white; }
+  .refer-output .ro-title { font-weight: bold; font-size: 10pt; margin-bottom: 4px; display: block; }
+  .refer-output.urgent .ro-title { color: white; }
+  .refer-output .ro-body { color: var(--ink); }
+  .refer-output.urgent .ro-body { color: #f0f0f0; }
+
+  /* Patient explainer panel */
+  .pt-explainer {
+    background: #F8FAFD;
+    border: 1px solid #C8D4E5;
+    border-radius: 5px;
+    padding: 16px 18px;
+    font-size: 10pt;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .pt-explainer p { margin-bottom: 10px; }
+  .pt-explainer p:last-of-type { margin-bottom: 0; }
+  .pt-explainer strong { color: var(--navy); }
+  .pt-explainer .pt-heading {
+    font-size: 11pt;
+    color: var(--navy);
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .pt-actions {
+    margin-top: 12px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .pt-btn {
+    background: var(--navy);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    font-size: 9pt;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Georgia, serif;
+    transition: background 0.15s;
+  }
+  .pt-btn:hover { background: var(--crimson); }
+  .pt-btn.secondary { background: white; color: var(--navy); border: 1.5px solid var(--navy); }
+  .pt-btn.secondary:hover { background: var(--tint-navy); }
+  .pt-copy-msg {
+    display: inline-block;
+    font-size: 8.5pt;
+    color: var(--green);
+    margin-left: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .pt-copy-msg.show { opacity: 1; }
+
+  /* Clozapine panel */
+  .clz-warning {
+    background: var(--tint-crimson);
+    border-left: 4px solid var(--crimson);
+    padding: 12px 14px;
+    border-radius: 0 4px 4px 0;
+    font-size: 9pt;
+    line-height: 1.55;
+    margin-bottom: 12px;
+  }
+  .clz-warning strong { color: var(--crimson); display: block; margin-bottom: 4px; font-size: 9.5pt; }
+  .clz-steps { padding-left: 0; list-style: none; counter-reset: clz-step; }
+  .clz-steps li {
+    counter-increment: clz-step;
+    padding: 8px 0 8px 32px;
+    position: relative;
+    font-size: 9pt;
+    line-height: 1.5;
+    border-bottom: 1px solid #ECE8DD;
+  }
+  .clz-steps li:last-child { border-bottom: none; }
+  .clz-steps li::before {
+    content: counter(clz-step);
+    position: absolute;
+    left: 0; top: 8px;
+    background: var(--navy);
+    color: white;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 22px;
+    font-weight: bold;
+    font-size: 9pt;
+  }
+  .clz-steps li strong { color: var(--navy); }
+
+  /* GP disclaimer */
+  .gp-disclaimer {
+    background: white;
+    border: 1px dashed var(--grey-soft);
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-size: 8pt;
+    color: var(--grey);
+    line-height: 1.55;
+    margin-top: 12px;
+    font-style: italic;
+  }
+  .gp-disclaimer strong { color: var(--navy); font-style: normal; }
+
+  /* Divider between GP and consultant sections */
+  .specialist-divider {
+    text-align: center;
+    margin: 30px 0 20px 0;
+    position: relative;
+  }
+  .specialist-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 0; right: 0;
+    height: 1px;
+    background: var(--rule);
+    z-index: 0;
+  }
+  .specialist-divider span {
+    display: inline-block;
+    background: var(--paper);
+    padding: 0 14px;
+    color: var(--grey);
+    font-style: italic;
+    font-size: 9pt;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 0.5px;
+  }
+  .specialist-divider span strong { color: var(--navy); font-style: normal; }
+
+  /* Tabs (multi-template referral letters) */
+  .tab-bar { display: flex; gap: 0; margin-top: 8px; border-bottom: 2px solid var(--rule); }
+  .tab-btn {
+    background: none;
+    border: none;
+    padding: 8px 14px;
+    font-size: 8.5pt;
+    font-family: Georgia, serif;
+    color: var(--grey);
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    font-weight: bold;
+    transition: all 0.15s;
+  }
+  .tab-btn:hover { color: var(--navy); }
+  .tab-btn.active { color: var(--crimson); border-bottom-color: var(--crimson); }
+  .tab-content { display: none; padding-top: 12px; }
+  .tab-content.active { display: block; }
+  .letter-box {
+    background: white;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 14px 16px;
+    font-family: Georgia, serif;
+    font-size: 9pt;
+    line-height: 1.65;
+    color: var(--ink);
+    white-space: pre-wrap;
+    position: relative;
+  }
+  .letter-copy {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--navy);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 8pt;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: Georgia, serif;
+  }
+  .letter-copy:hover { background: var(--crimson); }
+
+  /* CUSTOM TOGGLE SWITCH - large click target, robust event handling */
+  .toggle-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+    padding: 4px 0;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .toggle-switch input[type=checkbox] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+  }
+  .toggle-track {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    background: var(--rule);
+    border-radius: 12px;
+    transition: background 0.25s;
+    flex-shrink: 0;
+  }
+  .toggle-thumb {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: left 0.25s, background 0.25s;
+  }
+  .toggle-switch input[type=checkbox]:checked ~ .toggle-track {
+    background: var(--crimson);
+  }
+  .toggle-switch input[type=checkbox]:checked ~ .toggle-track .toggle-thumb {
+    left: 22px;
+  }
+  .toggle-text {
+    font-size: 9pt;
+    color: var(--navy);
+    font-weight: bold;
+  }
+  .toggle-switch:hover .toggle-track { box-shadow: 0 0 0 3px rgba(196,30,58,0.15); }
+
+  /* POPUP */
+  .popup-overlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,0.6); z-index: 1000;
+    align-items: center; justify-content: center;
+    animation: fadeIn 0.2s ease;
+  }
+  .popup-overlay.open { display: flex; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+  .popup-box {
+    background: white; border-radius: 8px; padding: 24px 28px;
+    max-width: 440px; width: 90%; position: relative;
+    border-top: 4px solid var(--crimson);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    animation: slideUp 0.25s ease;
+    font-family: Georgia, serif;
+  }
+  .popup-box h3 { color: var(--navy); font-size: 14pt; margin-bottom: 10px; line-height: 1.25; }
+  .popup-box p { font-size: 10pt; color: var(--ink); line-height: 1.6; margin-bottom: 8px; }
+  .popup-box p.italic { color: var(--grey); font-style: italic; font-size: 9pt; padding-top: 6px; border-top: 1px solid var(--rule); margin-top: 8px; }
+  .popup-close {
+    position: absolute; top: 8px; right: 14px;
+    font-size: 22pt; cursor: pointer; color: var(--grey);
+    line-height: 1; background: none; border: none; padding: 4px 8px;
+    transition: color 0.2s;
+  }
+  .popup-close:hover { color: var(--crimson); }
+
+  /* PROGRESS BAR */
+  .reading-progress {
+    position: fixed; top: 0; left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--navy), var(--crimson));
+    width: 0%; transition: width 0.1s; z-index: 999;
+  }
+
+  @media print {
+    body { background: white; }
+    .poster { box-shadow: none; margin: 0; }
+    .reading-progress, .popup-overlay { display: none !important; }
+  }
+
+/* Typography scope */
+.gp-guide, .gp-guide p, .gp-guide li, .gp-guide button, .gp-guide div, .gp-guide span, .gp-guide td, .gp-guide th { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+.gp-guide h1, .gp-guide h2, .gp-guide h3, .gp-guide h4 { font-family: 'Playfair Display', Georgia, serif; letter-spacing: -0.015em; }
+.gp-guide-wrap { margin: 0 0 48px; }
+
+</style>
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#7a1f2b" />
+<link rel="stylesheet" media="print" href="/print.css" />
+</head>
+<body>
+
+<div class="popup-overlay" id="popupOverlay" onclick="if(event.target===this) closePopup()">
+  <div class="popup-box">
+    <button class="popup-close" onclick="closePopup()" aria-label="Close">×</button>
+    <h3 id="popupTitle"></h3>
+    <p id="popupBody"></p>
+    <p id="popupBody2" class="italic"></p>
+  </div>
+</div>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="/" class="brand">
+      <img src="/logo.png" alt="Mohsin Haematology Academy logo">
+      <div class="brand-text">
+        <div class="brand-name">Mohsin Haematology Academy</div>
+        <div class="brand-tagline">Clinical Education &amp; Digital Tools</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="/tools">Tools</a>
+      <a href="/guidelines">Guidelines</a>
+      <a href="/education" class="active">Education</a>
+      <a href="/journal-club">Journal Club</a>
+      <a href="/about">About</a>
+      <a href="/haemcalc.html" class="nav-cta">Open HaemCalc</a>
+    </div>
+  </nav>
+</header>
+
+<div class="container">
+  <a href="/education" class="back-link">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    Back to Education
+  </a>
+</div>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="page-eyebrow">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/><circle cx="19" cy="6" r="3"/></svg>
+      Clinical Partners &nbsp;·&nbsp; GPs &amp; Primary Care
+    </div>
+    <h1>Low Neutrophil Count in Patients of African, Caribbean, Middle Eastern &amp; Yemenite Jewish Heritage</h1>
+    <p class="lead">A primary care guide to Duffy-null Associated Neutrophil Count (DANC / ADAN): when to reassure, when to refer, and how to explain it to patients.</p>
+  </div>
+</div>
+
+<main>
+  <div class="container">
+<div class="gp-guide-wrap"><div class="gp-guide">
+
+  <!-- HEADER -->
+  <!-- MHA brand header removed — site header replaces it -->
+
+  <div class="content">
+
+    <!-- TITLE — site .page-hero above handles the page title; DANC title-block removed -->
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         GP PANEL — top-section, GP-facing decision support
+         ═══════════════════════════════════════════════════════════════ -->
+    <div class="gp-panel">
+      <span class="gp-banner"><span class="for">For</span> &nbsp;General Practice</span>
+      <h2 class="gp-title">What brings you here today?</h2>
+      <div class="gp-sub">Choose the scenario that matches your patient. The panel below will update with the guidance you need.</div>
+
+      <!-- TRIAGE CARDS -->
+      <div class="triage-grid">
+        <div class="triage-card" data-triage="routine" onclick="openTriage('routine', this)">
+          <div class="triage-num">1</div>
+          <div class="triage-icon">🩸</div>
+          <div class="triage-title">Low neutrophil count on a routine FBC</div>
+          <div class="triage-blurb">Patient asymptomatic. FBC shows low neutrophils. Should you refer, repeat, or reassure?</div>
+        </div>
+        <div class="triage-card" data-triage="clozapine" onclick="openTriage('clozapine', this)">
+          <div class="triage-num">2</div>
+          <div class="triage-icon">💊</div>
+          <div class="triage-title">Clozapine patient with amber or red blood result</div>
+          <div class="triage-blurb">Mental health patient on clozapine. CPMS flagged a low ANC. What do you do?</div>
+        </div>
+        <div class="triage-card" data-triage="patient" onclick="openTriage('patient', this)">
+          <div class="triage-num">3</div>
+          <div class="triage-icon">💬</div>
+          <div class="triage-title">Explaining the result to the patient</div>
+          <div class="triage-blurb">Plain-language explainer you can read out, print, or paste into clinic notes.</div>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════════════════════════
+           PANEL 1 — ROUTINE LOW NEUTROPHIL / "SHOULD I REFER?" TOOL
+           ═══════════════════════════════════════════════════════════ -->
+      <div class="triage-panel" id="panel-routine">
+        <h3>Decision Tool — Routine Low Neutrophil Count</h3>
+        <div style="font-size:9pt; color:var(--grey); margin-bottom:10px; line-height:1.5;">
+          Answer the three questions below. The recommendation will appear at the bottom and update in real time.
+        </div>
+
+        <div class="refer-tool">
+          <div class="refer-question">
+            <div class="refer-question-text">
+              <strong>1.</strong> Patient of African, Caribbean, Middle Eastern, Yemenite Jewish, or Ethiopian heritage?
+              <small>DANC/ADAN is found in ~66% of US Black adults, ~90–100% of sub-Saharan African heritage, &lt;1% European.</small>
+            </div>
+            <div class="yn-toggle">
+              <button class="yn-btn" data-q="ancestry" data-val="yes" onclick="setYN(this)">YES</button>
+              <button class="yn-btn" data-q="ancestry" data-val="no" onclick="setYN(this)">NO</button>
+            </div>
+          </div>
+
+          <div class="refer-question">
+            <div class="refer-question-text">
+              <strong>2.</strong> Is the ANC stable on historical FBCs? (no sustained downward trend)
+              <small>Look back 6–24 months. Wide fluctuation around a stable mean is normal in DANC. A steady fall is not.</small>
+            </div>
+            <div class="yn-toggle">
+              <button class="yn-btn" data-q="stable" data-val="yes" onclick="setYN(this)">YES</button>
+              <button class="yn-btn" data-q="stable" data-val="no" onclick="setYN(this)">NO</button>
+            </div>
+          </div>
+
+          <div class="refer-question">
+            <div class="refer-question-text">
+              <strong>3.</strong> Any of: new symptoms (fevers, mouth ulcers, weight loss, night sweats), recurrent infections, or other low blood counts (anaemia, low platelets)?
+              <small>Any of these red-flag features push the picture away from simple DANC.</small>
+            </div>
+            <div class="yn-toggle">
+              <button class="yn-btn" data-q="redflags" data-val="yes" onclick="setYN(this)">YES</button>
+              <button class="yn-btn" data-q="redflags" data-val="no" onclick="setYN(this)">NO</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="refer-output" id="referOutput">
+          <span class="ro-tag">Awaiting answers</span>
+          <span class="ro-title">Answer the three questions above</span>
+          <div class="ro-body">A recommendation will appear here once all three are selected.</div>
+        </div>
+
+        <!-- Referral letter templates -->
+        <div style="margin-top:18px;">
+          <h3 style="font-size:9pt; color:var(--navy); border:none; padding:0; margin-bottom:6px;">📄 Ready-to-use templates</h3>
+          <div class="tab-bar">
+            <button class="tab-btn active" onclick="switchTab('tab-fbc', this)">FBC request</button>
+            <button class="tab-btn" onclick="switchTab('tab-haem', this)">Haematology referral letter</button>
+            <button class="tab-btn" onclick="switchTab('tab-notes', this)">Clinic note (no referral)</button>
+          </div>
+          <div class="tab-content active" id="tab-fbc">
+            <div class="letter-box">
+<button class="letter-copy" onclick="copyLetter('tab-fbc')">Copy</button>FBC including white cell differential.
+Clinical details: [Patient ancestry, e.g. African heritage]. Stable mild-moderate neutropenia on previous FBCs. Asymptomatic. Investigating for Duffy-null associated neutrophil count (DANC). Please also process a Duffy phenotype (Fy a/b) if available through the transfusion lab — query DANC/ADAN.</div>
+          </div>
+          <div class="tab-content" id="tab-haem">
+            <div class="letter-box">
+<button class="letter-copy" onclick="copyLetter('tab-haem')">Copy</button>Dear Haematology Team,
+
+Re: [Patient name, DOB, NHS number]
+
+I would be grateful for your review of this asymptomatic patient with persistent isolated neutropenia.
+
+Background:
+- Ethnicity: [African / Caribbean / Middle Eastern / Yemenite Jewish heritage]
+- Current ANC: [x.xx × 10⁹/L]
+- ANC trend on historical FBCs (last 6–24 months): [stable / falling / variable]
+- Other lineages: [haemoglobin and platelet count]
+- No constitutional symptoms, no recurrent infections
+- Medications: [list]
+- Spleen: [not palpable / palpable]
+
+I have considered Duffy-null Associated Neutrophil Count (DANC / ACKR1-DARC-Associated Neutropenia, ADAN) as a likely cause given the patient's heritage.
+
+Investigations requested:
+- Duffy phenotype via local transfusion lab [if available]
+- Haemoglobinopathy screen if clinically indicated and not previously done
+
+I would value your specialist input on whether further investigation (including ACKR1 genotype, viral screen, B12/folate/copper, autoimmune screen, or bone marrow assessment) is indicated.
+
+Yours sincerely,</div>
+          </div>
+          <div class="tab-content" id="tab-notes">
+            <div class="letter-box">
+<button class="letter-copy" onclick="copyLetter('tab-notes')">Copy</button>Routine FBC showed ANC [x.xx × 10⁹/L]. This is below the standard reference range but consistent with Duffy-null Associated Neutrophil Count (DANC), a benign inherited variant common in people of African, Caribbean, Middle Eastern and Yemenite Jewish heritage. Trend stable on prior FBCs. Patient asymptomatic with no recurrent infections, no other cytopenias, no constitutional symptoms.
+
+Plan:
+- Explained DANC/ADAN to patient — benign, not immunodeficiency, no increased infection risk
+- Duffy phenotype requested via transfusion lab
+- Repeat FBC in [3-6 months] to confirm stability
+- No haematology referral indicated at this stage
+- Documented Duffy-null status on patient record to prevent unnecessary repeat workup or chemotherapy/clozapine dose-holds in future</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════════════════════════
+           PANEL 2 — CLOZAPINE PATHWAY
+           ═══════════════════════════════════════════════════════════ -->
+      <div class="triage-panel" id="panel-clozapine">
+        <h3>Clozapine Patient with Amber / Red Blood Result</h3>
+
+        <div class="clz-warning">
+          <strong>⚠ Do not stop clozapine alone in primary care</strong>
+          Clozapine withdrawal in a mental health crisis carries serious clinical risk. The decision to suspend, continue, or rechallenge sits with the patient's mental health team and haematology jointly. Your role in primary care is to coordinate, not decide.
+        </div>
+
+        <ol class="clz-steps">
+          <li>
+            <strong>Confirm the result is real.</strong> Repeat FBC same day if practical, or arrange urgent pathology recheck. CPMS / ZTAS will already have flagged it.
+          </li>
+          <li>
+            <strong>Check patient ancestry.</strong> If African, Caribbean, Middle Eastern or Yemenite Jewish heritage, consider DANC/ADAN as the likely cause of an apparent low ANC. UK pharmacogenomics guidance (CERSI-PGx 2026) now recommends ACKR1 genotype testing for clozapine patients with the Duffy-null phenotype.
+          </li>
+          <li>
+            <strong>Contact the mental health team and haematology together.</strong> Do not wait. The team responsible for clozapine monitoring needs to know within the same working day. Phone, do not email.
+          </li>
+          <li>
+            <strong>Send the patient to ED if:</strong> any sign of sepsis or the patient is unwell; ANC &lt; 0.5 × 10⁹/L; or fever ≥ 38°C with ANC &lt; 1.0 × 10⁹/L. If in doubt, treat as febrile neutropenia and refer.
+          </li>
+          <li>
+            <strong>Document everything.</strong> Date, time, who you spoke to, decisions made, advice given to patient. Clozapine cases attract close governance review.
+          </li>
+        </ol>
+
+        <div style="margin-top:12px; font-size:9pt; line-height:1.5; color:var(--ink); padding:10px 12px; background:var(--tint-navy); border-radius:4px;">
+          <strong style="color:var(--navy);">Background for context.</strong> Standard CPMS thresholds were derived from European populations with normal ACKR1 expression. Patients of African heritage with DANC may have a baseline ANC of 1.21–1.5 × 10⁹/L which sits within the Duffy-null reference interval but reads as "amber" on standard thresholds. The CERSI-PGx 2026 guideline recommends lowered thresholds for confirmed Duffy-null patients to prevent unnecessary clozapine suspension. This is a specialist decision — your job in primary care is to flag, not to override. <strong style="color:var(--navy);">Note:</strong> NICE and the British Society for Haematology have not yet issued DANC-specific clozapine monitoring thresholds. The CERSI-PGx guideline is a pharmacogenomics consortium consensus, not regulatory guidance.
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════════════════════════
+           PANEL 3 — PATIENT EXPLAINER
+           ═══════════════════════════════════════════════════════════ -->
+      <div class="triage-panel" id="panel-patient">
+        <h3>Plain-English Patient Explainer</h3>
+        <div style="font-size:8.5pt; color:var(--grey); margin-bottom:10px; line-height:1.5;">
+          Read this out during the consultation, print it for the patient, or copy it into your notes. Written at approximately reading age 12.
+        </div>
+
+        <div class="pt-explainer" id="patientText">
+          <div class="pt-heading">Why is my white blood cell count lower than the normal range?</div>
+          <p>Your blood test shows that one type of white blood cell — called neutrophils — looks lower than the standard range printed on the report.</p>
+          <p><strong>This is normal for many people of African, Caribbean, Middle Eastern, or Yemenite Jewish heritage.</strong> It is not a sign that your immune system is weak or that anything is wrong.</p>
+          <p>The reason is a small inherited difference in how your body stores its neutrophils. You make exactly the same total number as anyone else. The difference is that more of yours sit in your tissues, ready to act, while fewer sit in your bloodstream where the blood test measures them. The standard "normal range" on the report was worked out mostly from people of European heritage, where most of the neutrophils are in the blood. Your body keeps them somewhere else — but the same amount, doing the same job.</p>
+          <p>This has a name. Doctors used to call it "benign ethnic neutropenia". The more accurate name is <strong>Duffy-null associated neutrophil count</strong> (DANC), or <strong>ACKR1-DARC associated neutropenia</strong> (ADAN). The "Duffy" part refers to a blood group system, the same way A, B and O are blood groups.</p>
+          <p><strong>What this means for you:</strong></p>
+          <p style="padding-left:14px;">✓ You are not more likely to catch infections than anyone else.<br>
+          ✓ You do not need any treatment.<br>
+          ✓ You do not need a bone marrow test.<br>
+          ✓ Your immune system is working normally.</p>
+          <p>One thing worth doing: if you ever have chemotherapy, are started on a medication called clozapine, or need any treatment that affects the blood, please tell the doctor in charge that you have DANC/ADAN. Some treatments are paused if the blood count looks low — but if the doctor knows that a lower count is normal for you, they can keep the treatment going safely. It is worth asking your GP to record this clearly in your notes.</p>
+          <p>If you ever feel persistently unwell, develop a high fever, or notice you are getting infections more often than you used to, please come back to see your GP. That would not be DANC — it would be a reason for a fresh look.</p>
+        </div>
+
+        <div class="pt-actions">
+          <button class="pt-btn" onclick="copyPatientText()">📋 Copy text</button>
+          <button class="pt-btn secondary" onclick="printPatientText()">🖨 Print for patient</button>
+          <span class="pt-copy-msg" id="ptCopyMsg">✓ Copied to clipboard</span>
+        </div>
+      </div>
+
+      <div class="gp-disclaimer">
+        <strong>Decision-support, not decision-substitution.</strong> This page is a learning resource and clinical aid, calibrated against current UK guidance (CERSI-PGx 2026, BSH, Merz JAMA 2023). It does not replace clinical judgement, local referral pathways, or specialist input. For any patient where the picture is unclear or progressive, refer.
+      </div>
+    </div>
+
+    <!-- DIVIDER -->
+    <div class="specialist-divider">
+      <span>For colleagues who want the <strong>full clinical picture</strong> ↓</span>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="stat-card">
+        <div class="stat-label">Duffy-null Lower Limit of Normal ANC</div>
+        <div class="stat-value">1.21<span class="stat-unit"> × 10⁹/L</span></div>
+        <div style="margin-top:10px;">
+          <div style="font-size:7pt; color:#aab; margin-bottom:4px; letter-spacing:1px; text-transform:uppercase;">vs Conventional Threshold</div>
+          <div style="display:flex; align-items:center; gap:6px; margin-bottom:4px;">
+            <div style="font-size:7pt; color:#ccd; width:80px;">Duffy-null</div>
+            <div style="flex:1; height:6px; background:rgba(255,255,255,0.15); border-radius:3px; overflow:hidden;">
+              <div style="width:81%; height:100%; background:linear-gradient(90deg,#E04A60,#ff8099); border-radius:3px;"></div>
+            </div>
+            <div style="font-size:7pt; color:white; font-weight:bold;">1.21</div>
+          </div>
+          <div style="display:flex; align-items:center; gap:6px;">
+            <div style="font-size:7pt; color:#ccd; width:80px;">Standard</div>
+            <div style="flex:1; height:6px; background:rgba(255,255,255,0.15); border-radius:3px; overflow:hidden;">
+              <div style="width:100%; height:100%; background:rgba(255,255,255,0.4); border-radius:3px;"></div>
+            </div>
+            <div style="font-size:7pt; color:white; font-weight:bold;">1.50</div>
+          </div>
+        </div>
+        <div class="stat-foot">Merz, JAMA 2023. ANC 1.21–1.5 × 10⁹/L in Duffy-null adults sits within the Duffy-null reference interval, not in the neutropenic range.</div>
+      </div>
+
+      <div class="cell-panel">
+        <div class="cell-panel-title">🔬 Click each cell to see the biology</div>
+        <div class="molecule-container">
+
+          <!-- DUFFY-POSITIVE CELL -->
+          <div style="text-align:center;">
+            <svg class="clickable-svg" width="160" height="130" viewBox="0 0 160 130" xmlns="http://www.w3.org/2000/svg"
+                 onclick="showPopup('Duffy-Positive Red Blood Cell','ACKR1/DARC receptors (shown in navy) are expressed on the red cell surface. Chemokines from both CC and CXC families (CCL2, CCL5, CXCL1, CXCL8 and others) bind to these receptors, helping regulate neutrophil trafficking. The circulating ANC is within the conventional reference range of 1.5–7.5 × 10⁹/L.','Found in the majority of European, Asian and some African-descent populations.')">
+              <defs>
+                <radialGradient id="cellGrad1" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#E04A60" stop-opacity="0.3"/>
+                  <stop offset="100%" stop-color="#E04A60" stop-opacity="0"/>
+                </radialGradient>
+                <radialGradient id="rbcGrad1" cx="50%" cy="40%" r="60%">
+                  <stop offset="0%" stop-color="#ff9999"/>
+                  <stop offset="60%" stop-color="#cc3355"/>
+                  <stop offset="100%" stop-color="#991133"/>
+                </radialGradient>
+              </defs>
+              <ellipse cx="80" cy="65" rx="55" ry="55" fill="url(#cellGrad1)"/>
+              <ellipse cx="80" cy="65" rx="42" ry="38" fill="url(#rbcGrad1)" class="floating"/>
+              <ellipse cx="80" cy="65" rx="18" ry="12" fill="#cc3355" opacity="0.5" class="floating"/>
+              <g class="floating">
+                <line x1="48" y1="40" x2="48" y2="30" stroke="#1B2A4A" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="48" y1="30" x2="42" y2="23" stroke="#1B2A4A" stroke-width="2" stroke-linecap="round"/>
+                <line x1="48" y1="30" x2="54" y2="23" stroke="#1B2A4A" stroke-width="2" stroke-linecap="round"/>
+                <line x1="80" y1="28" x2="80" y2="18" stroke="#1B2A4A" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="80" y1="18" x2="74" y2="11" stroke="#1B2A4A" stroke-width="2" stroke-linecap="round"/>
+                <line x1="80" y1="18" x2="86" y2="11" stroke="#1B2A4A" stroke-width="2" stroke-linecap="round"/>
+                <line x1="112" y1="40" x2="112" y2="30" stroke="#1B2A4A" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="112" y1="30" x2="106" y2="23" stroke="#1B2A4A" stroke-width="2" stroke-linecap="round"/>
+                <line x1="112" y1="30" x2="118" y2="23" stroke="#1B2A4A" stroke-width="2" stroke-linecap="round"/>
+              </g>
+              <g class="floating">
+                <circle cx="42" cy="21" r="5" fill="#C41E3A" opacity="0.9"/>
+                <circle cx="54" cy="21" r="5" fill="#C41E3A" opacity="0.9"/>
+                <circle cx="74" cy="9" r="5" fill="#C41E3A" opacity="0.9"/>
+                <circle cx="86" cy="9" r="5" fill="#C41E3A" opacity="0.9"/>
+                <circle cx="106" cy="21" r="5" fill="#C41E3A" opacity="0.9"/>
+                <circle cx="118" cy="21" r="5" fill="#C41E3A" opacity="0.9"/>
+              </g>
+              <g>
+                <circle cx="20" cy="90" r="9" fill="#1B2A4A" opacity="0.85" class="floating-slow"/>
+                <circle cx="20" cy="90" r="5" fill="#3A5A8A" opacity="0.7" class="floating-slow"/>
+                <circle cx="140" cy="85" r="9" fill="#1B2A4A" opacity="0.85" class="floating-slow"/>
+                <circle cx="140" cy="85" r="5" fill="#3A5A8A" opacity="0.7" class="floating-slow"/>
+                <circle cx="80" cy="110" r="9" fill="#1B2A4A" opacity="0.85" class="floating-slow"/>
+                <circle cx="80" cy="110" r="5" fill="#3A5A8A" opacity="0.7" class="floating-slow"/>
+              </g>
+              <text x="80" y="126" text-anchor="middle" font-size="7" fill="#5A5C63" font-family="Georgia" font-weight="bold">ACKR1+ (Duffy-positive)</text>
+            </svg>
+            <div class="molecule-label" style="color:var(--crimson);">Normal ANC ≥ 1.5</div>
+          </div>
+
+          <div style="font-size:20pt; color:var(--grey); margin-top:-20px;">⟷</div>
+
+          <!-- DUFFY-NULL CELL -->
+          <div style="text-align:center;">
+            <svg class="clickable-svg" width="160" height="130" viewBox="0 0 160 130" xmlns="http://www.w3.org/2000/svg"
+                 onclick="showPopup('Duffy-Null Red Blood Cell','ACKR1/DARC receptors are absent from the red cell surface due to homozygous rs2814778 T>C mutation in the ACKR1 promoter (disrupts GATA-1 binding). Chemokines remain unbound in plasma. Neutrophil trafficking is altered — the circulating pool is smaller, but total body neutrophil mass and marrow reserve remain normal.','Prevalence: ~66% of US Black adults, ~90–100% in sub-Saharan Africa. ANC 1.21–1.5 × 10⁹/L is within the Duffy-null reference interval for this genotype.')">
+              <defs>
+                <radialGradient id="cellGrad2" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#1B2A4A" stop-opacity="0.2"/>
+                  <stop offset="100%" stop-color="#1B2A4A" stop-opacity="0"/>
+                </radialGradient>
+                <radialGradient id="rbcGrad2" cx="50%" cy="40%" r="60%">
+                  <stop offset="0%" stop-color="#7799cc"/>
+                  <stop offset="60%" stop-color="#3355aa"/>
+                  <stop offset="100%" stop-color="#1B2A4A"/>
+                </radialGradient>
+              </defs>
+              <ellipse cx="80" cy="65" rx="55" ry="55" fill="url(#cellGrad2)"/>
+              <ellipse cx="80" cy="65" rx="42" ry="38" fill="url(#rbcGrad2)" class="floating"/>
+              <ellipse cx="80" cy="65" rx="18" ry="12" fill="#3355aa" opacity="0.5" class="floating"/>
+              <g class="floating" opacity="0.25">
+                <line x1="48" y1="40" x2="48" y2="30" stroke="#999" stroke-width="2" stroke-dasharray="3,2" stroke-linecap="round"/>
+                <line x1="48" y1="30" x2="42" y2="23" stroke="#999" stroke-width="1.5" stroke-dasharray="3,2"/>
+                <line x1="48" y1="30" x2="54" y2="23" stroke="#999" stroke-width="1.5" stroke-dasharray="3,2"/>
+                <line x1="80" y1="28" x2="80" y2="18" stroke="#999" stroke-width="2" stroke-dasharray="3,2"/>
+                <line x1="80" y1="18" x2="74" y2="11" stroke="#999" stroke-width="1.5" stroke-dasharray="3,2"/>
+                <line x1="80" y1="18" x2="86" y2="11" stroke="#999" stroke-width="1.5" stroke-dasharray="3,2"/>
+                <line x1="112" y1="40" x2="112" y2="30" stroke="#999" stroke-width="2" stroke-dasharray="3,2"/>
+                <line x1="112" y1="30" x2="106" y2="23" stroke="#999" stroke-width="1.5" stroke-dasharray="3,2"/>
+                <line x1="112" y1="30" x2="118" y2="23" stroke="#999" stroke-width="1.5" stroke-dasharray="3,2"/>
+              </g>
+              <g>
+                <circle cx="30" cy="15" r="5" fill="#C41E3A" opacity="0.7" class="floating-slow"/>
+                <circle cx="80" cy="8" r="5" fill="#C41E3A" opacity="0.7" class="floating"/>
+                <circle cx="130" cy="15" r="5" fill="#C41E3A" opacity="0.7" class="floating-slow"/>
+                <circle cx="20" cy="50" r="4" fill="#C41E3A" opacity="0.5" class="floating"/>
+                <circle cx="140" cy="50" r="4" fill="#C41E3A" opacity="0.5" class="floating-slow"/>
+              </g>
+              <g>
+                <circle cx="80" cy="110" r="9" fill="#1B2A4A" opacity="0.85" class="floating-slow"/>
+                <circle cx="80" cy="110" r="5" fill="#3A5A8A" opacity="0.7" class="floating-slow"/>
+              </g>
+              <text x="80" y="126" text-anchor="middle" font-size="7" fill="#5A5C63" font-family="Georgia" font-weight="bold">ACKR1-null (Duffy-null)</text>
+            </svg>
+            <div class="molecule-label" style="color:var(--navy);">DANC ANC 1.21–1.5 ✓</div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:12px; justify-content:center; margin-top:6px; flex-wrap:wrap;">
+          <div style="display:flex;align-items:center;gap:4px;font-size:7pt;color:var(--grey);">
+            <svg width="14" height="14"><line x1="2" y1="12" x2="2" y2="6" stroke="#1B2A4A" stroke-width="2"/><line x1="2" y1="6" x2="0" y2="3" stroke="#1B2A4A" stroke-width="1.5"/><line x1="2" y1="6" x2="4" y2="3" stroke="#1B2A4A" stroke-width="1.5"/></svg>
+            ACKR1 receptor
+          </div>
+          <div style="display:flex;align-items:center;gap:4px;font-size:7pt;color:var(--grey);">
+            <svg width="14" height="14"><circle cx="7" cy="7" r="5" fill="#C41E3A"/></svg>
+            Chemokine (CC/CXC)
+          </div>
+          <div style="display:flex;align-items:center;gap:4px;font-size:7pt;color:var(--grey);">
+            <svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="#1B2A4A"/><circle cx="7" cy="7" r="3" fill="#3A5A8A"/></svg>
+            Neutrophil
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 01 -->
+    <h2 class="section"><span class="num">01</span> Terminology — What to Call It Now</h2>
+    <div class="term-grid">
+      <div class="term-card" onclick="showPopup('Benign Ethnic Neutropenia (BEN)','The historical label used for decades. Problematic because it defines a non-White phenotype as a disease state measured against a White reference standard.','Now discouraged in clinical literature. See: Hibbs and Achebe, HemaSphere 2023.')">
+        <span class="badge">Outdated</span>
+        <div class="name">Benign Ethnic Neutropenia (BEN)</div>
+        <div class="desc">Historical label. Defines a non-White phenotype as disease against a White reference standard. Discouraged in current literature (Hibbs &amp; Achebe 2023).</div>
+      </div>
+      <div class="term-card" onclick="showPopup('Duffy-null Associated Neutrophil Count (DANC)','Phenotype-anchored terminology that links the neutrophil count to the Duffy blood group antigen status rather than ethnicity.','Dominant in haematology since 2021–2023. Used by ASH and most current trial protocols.')">
+        <span class="badge">Descriptive</span>
+        <div class="name">Duffy-null Associated Neutrophil Count (DANC)</div>
+        <div class="desc">Phenotype-anchored label. Dominant in haematology since 2021–2023. Used by ASH and most current trial protocols.</div>
+      </div>
+      <div class="term-card preferred" onclick="showPopup('ACKR1/DARC-Associated Neutropenia (ADAN)','Molecularly precise terminology that names the specific gene (ACKR1, formerly known as DARC) responsible for the phenotype.','Adopted by OMIM (611862) and the UK CERSI-PGx 2026 clozapine guideline. This is the recommended term for clinical documentation.')">
+        <span class="badge">Preferred</span>
+        <div class="name">ACKR1/DARC-Associated Neutropenia (ADAN)</div>
+        <div class="desc">Molecularly precise. Adopted by OMIM (611862) and UK CERSI-PGx 2026 clozapine guideline. <em>Click to learn more.</em></div>
+      </div>
+    </div>
+
+    <!-- SECTION 02 -->
+    <h2 class="section"><span class="num">02</span> Biology &amp; Prevalence</h2>
+    <div class="two-col">
+      <div class="col">
+        <h3>Verified Molecular Biology</h3>
+        <div style="margin-bottom:8px; background:var(--tint-cream); border-radius:4px; padding:8px; border:1px solid var(--rule);">
+          <svg width="100%" height="60" viewBox="0 0 340 60" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10,15 Q55,5 100,15 Q145,25 190,15 Q235,5 280,15 Q315,20 330,15" fill="none" stroke="#1B2A4A" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M10,45 Q55,55 100,45 Q145,35 190,45 Q235,55 280,45 Q315,40 330,45" fill="none" stroke="#C41E3A" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="32" y1="12" x2="32" y2="48" stroke="#8A8C92" stroke-width="1.5" opacity="0.7"/>
+            <line x1="65" y1="8" x2="65" y2="52" stroke="#8A8C92" stroke-width="1.5" opacity="0.7"/>
+            <line x1="100" y1="15" x2="100" y2="45" stroke="#8A8C92" stroke-width="1.5" opacity="0.7"/>
+            <line x1="135" y1="22" x2="135" y2="38" stroke="#8A8C92" stroke-width="1.5" opacity="0.7"/>
+            <line x1="170" y1="28" x2="170" y2="32" stroke="#8A8C92" stroke-width="1.5" opacity="0.7"/>
+            <line x1="205" y1="22" x2="205" y2="38" stroke="#8A8C92" stroke-width="1.5" opacity="0.7"/>
+            <line x1="240" y1="15" x2="240" y2="45" stroke="#8A8C92" stroke-width="1.5" opacity="0.7"/>
+            <line x1="275" y1="10" x2="275" y2="50" stroke="#8A8C92" stroke-width="1.5" opacity="0.7"/>
+            <line x1="310" y1="15" x2="310" y2="45" stroke="#8A8C92" stroke-width="1.5" opacity="0.7"/>
+            <rect x="155" y="4" width="30" height="52" rx="3" fill="#C41E3A" opacity="0.12" style="cursor:pointer;" onclick="showPopup('rs2814778 — The Causative Variant','A single nucleotide polymorphism (T>C) in the promoter region of the ACKR1 gene. The variant disrupts a GATA-1 transcription factor binding site, abolishing ACKR1 expression on red cells while preserving expression on endothelium and other tissue cells.','Homozygous C/C genotype = Duffy-null phenotype. This is the single test that confirms ADAN at the molecular level.')"/>
+            <text x="170" y="57" text-anchor="middle" font-size="7" fill="#C41E3A" font-family="Georgia" font-weight="bold">rs2814778</text>
+          </svg>
+        </div>
+        <ul>
+          <li><strong>Variant.</strong> Homozygous rs2814778 T&gt;C in the ACKR1 promoter. Disrupts GATA-1 binding. Silences ACKR1/DARC on red cells; preserved on endothelium.</li>
+          <li><strong>Selection pressure.</strong> <span class="info-trigger" onclick="showPopup('Plasmodium vivax Resistance','The ACKR1/DARC receptor on red blood cells is the obligate entry point for Plasmodium vivax merozoites. Duffy-null individuals lack this receptor on their red cells, providing near-complete resistance to P. vivax malaria.','This explains the high prevalence of ACKR1-null genotype in historically malaria-endemic regions of sub-Saharan Africa.')">P. vivax resistance</span> — the parasite uses ACKR1 to invade red cells.</li>
+          <li><strong>Mechanism.</strong> Altered neutrophil trafficking and chemokine handling. Total body neutrophil mass and marrow production are normal. (Proposed model — precise compartment biology under investigation; Liu &amp; Luo 2024.)</li>
+          <li><strong>Host defence.</strong> Intact. Marrow reserve and stress release response preserved.</li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <h3>Population Prevalence (Homozygous ACKR1-null)</h3>
+        <div class="map-container" style="margin-bottom:8px;">
+          <svg width="100%" height="80" viewBox="0 0 320 80" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+            <ellipse data-region="europe" cx="155" cy="14" rx="22" ry="9" fill="#D9D5CC" opacity="0.9"
+                     onclick="showPopup('European Populations','Prevalence of ACKR1-null genotype: less than 1%.','European populations were not historically exposed to P. vivax selection pressure at the same intensity.')"/>
+            <ellipse data-region="africa" cx="168" cy="48" rx="28" ry="30" fill="#1B2A4A" opacity="0.85"
+                     onclick="showPopup('Sub-Saharan Africa','Prevalence of homozygous ACKR1-null genotype: ~90–100% in continental sub-Saharan Africa.','This extremely high prevalence reflects strong positive selection pressure from Plasmodium vivax malaria over thousands of years.')"/>
+            <ellipse data-region="me" cx="210" cy="35" rx="18" ry="14" fill="#C41E3A" opacity="0.75"
+                     onclick="showPopup('Middle East &amp; Yemen','Prevalence varies: Yemenite Jewish and Ethiopian populations have high rates. Arab populations approximately 10–11%.','Yemen sits at the historical crossroads of African and Middle Eastern gene flow.')"/>
+            <ellipse data-region="na" cx="75" cy="30" rx="30" ry="20" fill="#8A8C92" opacity="0.6"
+                     onclick="showPopup('North America (US Black Adults)','Prevalence of ACKR1-null genotype in US Black adults: approximately 66%.','Lower than sub-Saharan Africa due to admixture. This is the verified figure — not the commonly quoted 80–100%.')"/>
+            <ellipse cx="95" cy="58" rx="18" ry="18" fill="#D9D5CC" opacity="0.7"/>
+            <ellipse cx="255" cy="32" rx="35" ry="20" fill="#D9D5CC" opacity="0.7"/>
+            <ellipse cx="278" cy="60" rx="18" ry="12" fill="#D9D5CC" opacity="0.7"/>
+            <text x="168" y="50" text-anchor="middle" font-size="6" fill="white" font-family="Georgia" font-weight="bold" pointer-events="none">90–100%</text>
+            <text x="210" y="37" text-anchor="middle" font-size="6" fill="white" font-family="Georgia" font-weight="bold" pointer-events="none">Varies</text>
+            <text x="75" y="32" text-anchor="middle" font-size="6" fill="white" font-family="Georgia" font-weight="bold" pointer-events="none">~66%</text>
+            <text x="155" y="16" text-anchor="middle" font-size="6" fill="#5A5C63" font-family="Georgia" pointer-events="none">&lt;1%</text>
+          </svg>
+          <div style="font-size:6.5pt; color:var(--grey); text-align:center; margin-top:2px;">↑ Click any continent for detail</div>
+          <div class="map-legend">
+            <div class="legend-item"><div class="legend-dot" style="background:var(--navy);"></div>Very High (≥90%)</div>
+            <div class="legend-item"><div class="legend-dot" style="background:var(--crimson);"></div>High (50–80%)</div>
+            <div class="legend-item"><div class="legend-dot" style="background:var(--grey-soft);"></div>Moderate (~66%)</div>
+            <div class="legend-item"><div class="legend-dot" style="background:var(--rule);"></div>Low (&lt;1%)</div>
+          </div>
+        </div>
+        <div class="prev-bars" id="prevBars">
+          <div class="prev-row">
+            <div class="prev-label"><span class="pop">Sub-Saharan Africa</span><span class="pct">~90–100%</span></div>
+            <div class="prev-track"><div class="prev-fill" data-width="95"></div></div>
+          </div>
+          <div class="prev-row">
+            <div class="prev-label"><span class="pop">US Black adults</span><span class="pct">~66%</span></div>
+            <div class="prev-track"><div class="prev-fill" data-width="66"></div></div>
+          </div>
+          <div class="prev-row">
+            <div class="prev-label"><span class="pop">Yemenite Jewish &amp; Ethiopian</span><span class="pct">High</span></div>
+            <div class="prev-track"><div class="prev-fill" data-width="70"></div></div>
+          </div>
+          <div class="prev-row">
+            <div class="prev-label"><span class="pop">Arab populations</span><span class="pct">~10–11%</span></div>
+            <div class="prev-track"><div class="prev-fill" data-width="11"></div></div>
+          </div>
+          <div class="prev-row">
+            <div class="prev-label"><span class="pop">European descent</span><span class="pct">&lt;1%</span></div>
+            <div class="prev-track"><div class="prev-fill low" data-width="2"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ANC SIMULATOR -->
+    <div class="simulator">
+      <h3>🧮 Interactive ANC Interpreter — Move the slider, then toggle Duffy-null to see the difference</h3>
+      <div class="sim-controls">
+        <label for="ancSlider" style="min-width:90px;">ANC (× 10⁹/L):</label>
+        <input type="range" id="ancSlider" min="0.1" max="3.0" step="0.01" value="1.35" oninput="updateSim()" onchange="updateSim()">
+        <span id="ancVal" style="font-weight:bold; color:var(--navy); min-width:48px; font-size:12pt;">1.35</span>
+      </div>
+      <div class="sim-controls" style="margin-top:10px;">
+        <label class="toggle-switch" for="duffyNull">
+          <input type="checkbox" id="duffyNull" checked oninput="updateSim()" onchange="updateSim()" onclick="setTimeout(updateSim, 0)">
+          <span class="toggle-track"><span class="toggle-thumb"></span></span>
+          <span class="toggle-text">Duffy-null patient (ACKR1-null genotype confirmed)</span>
+        </label>
+      </div>
+      <div class="sim-result normal" id="simResult">✓ ANC 1.35 × 10⁹/L — WITHIN THE DUFFY-NULL REFERENCE INTERVAL (≥ 1.21). No action required. Document DANC on EPR.</div>
+    </div>
+
+    <!-- SECTION 03 -->
+    <h2 class="section"><span class="num">03</span> Diagnostic Algorithm — Adult</h2>
+    <div style="background:var(--tint-cream); border-radius:6px; padding:10px; margin-bottom:10px; border:1px solid var(--rule);">
+      <svg width="100%" height="70" viewBox="0 0 740 70" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="#1B2A4A"/>
+          </marker>
+        </defs>
+        <rect x="10" y="10" width="155" height="50" rx="4" fill="white" stroke="#D9D5CC" stroke-width="1.5"/>
+        <rect x="10" y="10" width="4" height="50" rx="2" fill="#C41E3A"/>
+        <text x="24" y="28" font-size="8" font-family="Georgia" font-weight="bold" fill="#1B2A4A">STEP 1</text>
+        <text x="24" y="40" font-size="7.5" font-family="Georgia" fill="#5A5C63">Stable, isolated</text>
+        <text x="24" y="52" font-size="7.5" font-family="Georgia" fill="#5A5C63">neutropenia confirmed</text>
+        <line x1="165" y1="35" x2="190" y2="35" stroke="#1B2A4A" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="190" y="10" width="155" height="50" rx="4" fill="white" stroke="#D9D5CC" stroke-width="1.5"/>
+        <rect x="190" y="10" width="4" height="50" rx="2" fill="#C41E3A"/>
+        <text x="204" y="28" font-size="8" font-family="Georgia" font-weight="bold" fill="#1B2A4A">STEP 2</text>
+        <text x="204" y="40" font-size="7.5" font-family="Georgia" fill="#5A5C63">Exclude acquired</text>
+        <text x="204" y="52" font-size="7.5" font-family="Georgia" fill="#5A5C63">causes (HIV, B12, drugs)</text>
+        <line x1="345" y1="35" x2="370" y2="35" stroke="#1B2A4A" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="370" y="10" width="155" height="50" rx="4" fill="white" stroke="#D9D5CC" stroke-width="1.5"/>
+        <rect x="370" y="10" width="4" height="50" rx="2" fill="#C41E3A"/>
+        <text x="384" y="28" font-size="8" font-family="Georgia" font-weight="bold" fill="#1B2A4A">STEP 3</text>
+        <text x="384" y="40" font-size="7.5" font-family="Georgia" fill="#5A5C63">Test Duffy status</text>
+        <text x="384" y="52" font-size="7.5" font-family="Georgia" fill="#5A5C63">Fy(a–b–) or ACKR1 C/C</text>
+        <line x1="525" y1="35" x2="550" y2="35" stroke="#1B2A4A" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <rect x="550" y="10" width="180" height="50" rx="4" fill="#E8F5EE" stroke="#1A7A4A" stroke-width="1.5"/>
+        <rect x="550" y="10" width="4" height="50" rx="2" fill="#1A7A4A"/>
+        <text x="566" y="28" font-size="8" font-family="Georgia" font-weight="bold" fill="#1A7A4A">✓ CONFIRMED DANC</text>
+        <text x="566" y="40" font-size="7.5" font-family="Georgia" fill="#1A7A4A">No BMB required</text>
+        <text x="566" y="52" font-size="7.5" font-family="Georgia" fill="#1A7A4A">Document on EPR</text>
+      </svg>
+    </div>
+    <div class="flow">
+      <div class="step" onclick="showPopup('Step 1: Confirm Stable, Isolated Neutropenia','Review historical FBC results to establish stability. Confirm there is no other cytopenia (anaemia, thrombocytopenia). Absence of constitutional symptoms (fever, weight loss, night sweats) and no history of recurrent or severe bacterial infections.','Key point: DANC is a stable, lifelong finding. A new downward trend in ANC warrants separate investigation.')">
+        <div class="step-num">1</div>
+        <div class="step-title">Confirm Stable, Isolated</div>
+        <div class="step-body">Historical FBCs. No other cytopenia. No constitutional symptoms. No severe infection history.</div>
+      </div>
+      <div class="step" onclick="showPopup('Step 2: Exclude Acquired Causes','Systematic exclusion of treatable causes: HIV, hepatitis B/C, EBV serology. Check B12, folate, copper levels. Autoimmune screen (ANA, anti-neutrophil antibodies). Full drug history including chemotherapy and clozapine. Assess spleen size.','Do not skip this step even in patients of relevant ancestry — acquired neutropenia can co-exist with DANC.')">
+        <div class="step-num">2</div>
+        <div class="step-title">Exclude Acquired Causes</div>
+        <div class="step-body">HIV, hepatitis B/C, EBV. B12, folate, copper. Autoimmune screen. Drug history. Spleen size.</div>
+      </div>
+      <div class="step" onclick="showPopup('Step 3: Test Duffy Status','Two methods available: (1) Duffy phenotyping — red cell serology showing Fy(a–b–) pattern. (2) ACKR1 genotyping — molecular testing for homozygous rs2814778 C/C allele. Genotyping is more definitive and increasingly available through NHS genomics pathways.','Duffy phenotype testing is available through most NHS blood bank / transfusion laboratories. Genotyping may require referral to a genomics centre.')">
+        <div class="step-num">3</div>
+        <div class="step-title">Test Duffy Status</div>
+        <div class="step-body">Fy(a–b–) phenotype on serology, OR homozygous ACKR1 rs2814778 C/C genotype.</div>
+      </div>
+      <div class="step no-mark" onclick="showPopup('No Bone Marrow Biopsy Required','In confirmed DANC (steps 1–3 positive), bone marrow biopsy is not clinically indicated. The marrow is normal. Performing a biopsy exposes the patient to unnecessary risk and cost.','Reserve BMB for: new downward ANC trend, additional cytopenia, abnormal blood film, systemic features, or failure to confirm Duffy-null status.')">
+        <div class="step-num">✓</div>
+        <div class="step-title">No Bone Marrow Biopsy</div>
+        <div class="step-body">Confirmed DANC → BMB not indicated. Document on EPR. Reserve for new fall, additional cytopenia, or abnormal film.</div>
+      </div>
+    </div>
+
+    <!-- SECTION 04 -->
+    <h2 class="section"><span class="num">04</span> Management Pathways</h2>
+    <div class="pathway-grid">
+      <div class="pathway" onclick="showPopup('Clozapine Management (UK — CERSI-PGx 2026)','Pre-emptive ACKR1 genotype testing at clozapine initiation is now recommended. Reactive testing should occur after any amber/red blood result or CNRD registration. Confirmed Duffy-null patients should have revised lower WBC/ANC thresholds applied.','Regardless of genotype: always seek haematology input if WBC < 2.0 × 10⁹/L or ANC < 1.0 × 10⁹/L with fever ≥ 38°C. The revised thresholds prevent unnecessary clozapine suspension in Duffy-null patients.')">
+        <div class="header-row">
+          <div class="icon" style="background:var(--tint-crimson);">💊</div>
+          <div class="pathway-title">Clozapine (UK)<br><span style="font-size:7.5pt;color:var(--grey);font-weight:normal;font-style:italic;">CERSI-PGx 2026</span></div>
+        </div>
+        <ul>
+          <li>Pre-emptive ACKR1 genotype at initiation</li>
+          <li>Reactive testing after amber/red result or CNRD</li>
+          <li>Confirmed Duffy-null → revised lower thresholds</li>
+          <li>Haematology if WBC &lt; 2.0 or ANC &lt; 1.0 + fever ≥ 38°C</li>
+        </ul>
+      </div>
+      <div class="pathway" onclick="showPopup('Oncology &amp; Chemotherapy','Do not pause or dose-reduce chemotherapy for ANC 1.21–1.5 × 10⁹/L in a confirmed Duffy-null adult. This range sits within the Duffy-null reference interval. Standard febrile neutropenia management still applies when there is superimposed treatment-related marrow suppression.','Critical statistic: 76.5% of phase 3 cancer trials currently exclude patients with DANC-range ANCs, causing systematic under-representation of Black patients in oncology research (Hibbs 2024).')">
+        <div class="header-row">
+          <div class="icon" style="background:var(--tint-navy);">🧬</div>
+          <div class="pathway-title">Oncology &amp; Chemotherapy</div>
+        </div>
+        <ul>
+          <li>No pause/dose-reduction for ANC 1.21–1.5 in Duffy-null</li>
+          <li>Standard febrile neutropenia protocol for marrow suppression</li>
+          <li>G-CSF not indicated for DANC alone</li>
+          <li>76.5% of phase 3 trials exclude DANC-range ANCs (Hibbs 2024)</li>
+        </ul>
+      </div>
+      <div class="pathway" onclick="showPopup('General Haematology','Confirmed DANC with nothing else: discharge to GP with a clear explanation letter stating the ANC threshold does not apply. Unconfirmed Duffy status in a patient with relevant ancestry: test Duffy first; proceed to biopsy only for new fall, additional cytopenia, or systemic features.','Documentation on the EPR is the single most impactful intervention — it prevents repeat unnecessary workups, inappropriate chemotherapy holds, and clozapine suspensions in the future.')">
+        <div class="header-row">
+          <div class="icon" style="background:var(--tint-cream);">🩸</div>
+          <div class="pathway-title">General Haematology</div>
+        </div>
+        <ul>
+          <li>Confirmed DANC only → discharge to GP with explanation</li>
+          <li>Unconfirmed Duffy + relevant ancestry → test first</li>
+          <li>Biopsy only for new fall, additional cytopenia, features</li>
+          <li>Document Duffy-null on EPR — prevents repeat workups</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SECTION 05 - FLUCTUATION PATTERN (verified addition) -->
+    <h2 class="section"><span class="num">05</span> Fluctuating Counts — A Verified Pattern, Not a Red Flag</h2>
+    <div style="background:var(--tint-cream); border-radius:6px; padding:14px; border:1px solid var(--rule); margin-bottom:10px;">
+      <p style="font-size:9pt; line-height:1.55; color:var(--ink); margin-bottom:10px;">
+        Many Duffy-null patients show a <strong style="color:var(--navy);">wide ANC range across serial counts</strong>, sometimes dipping into the severe range (0–0.5 × 10⁹/L) and rising into the normal range during infection, pregnancy or physical stress. <strong style="color:var(--crimson);">This is the documented behaviour of DANC/ADAN itself</strong> — not evidence of a separate pathology. The total body neutrophil mass and marrow reserve are normal; the circulating compartment is small but fully responsive to stress demargination.
+      </p>
+
+      <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:10px; margin-bottom:10px;">
+        <div style="background:white; border:1px solid var(--rule); border-top:3px solid var(--crimson); border-radius:4px; padding:10px; cursor:pointer;"
+             onclick="showPopup('Oz-Alcalay 2024 — Paediatric ADAN, Israel','Of 49 children with confirmed homozygous rs2814778 ADAN, 29 (59%) had absolute neutrophil counts in the SEVERE range (0–0.5 × 10⁹/L) at diagnosis. Median ANC at diagnosis was 0.5 × 10⁹/L (IQR 0.3). Despite this, no increase in infection susceptibility was found before or during a median 2.5-year follow-up. In 34 of 47 patients (72.3%), neutrophil counts were within the NORMAL range during febrile illnesses — confirming preserved stress-response demargination.','Pediatr Blood Cancer 2024;72(1):e31430. DOI 10.1002/pbc.31430')">
+          <div style="font-size:7pt; color:var(--crimson); letter-spacing:2px; text-transform:uppercase; font-weight:bold; margin-bottom:4px;">Paediatric ADAN</div>
+          <div style="font-size:18pt; color:var(--navy); font-weight:bold; line-height:1;">59%</div>
+          <div style="font-size:8pt; color:var(--grey); margin-top:4px; line-height:1.4;">had ANC in <strong>severe range</strong> (0–0.5 × 10⁹/L) at diagnosis</div>
+          <div style="font-size:7pt; color:var(--grey-soft); margin-top:5px; font-style:italic;">Oz-Alcalay 2024, n=49</div>
+        </div>
+        <div style="background:white; border:1px solid var(--rule); border-top:3px solid var(--green); border-radius:4px; padding:10px; cursor:pointer;"
+             onclick="showPopup('Stress Response is Preserved','In the same paediatric ADAN cohort, 34 of 47 patients (72.3%) had ANC values within the normal range during febrile illnesses. This confirms that stress demargination — the rapid release of neutrophils from the marginated tissue pool into circulation — operates normally in ADAN. A steady-state count of 0.3 × 10⁹/L can rise to 2.5 × 10⁹/L within hours of an acute infectious challenge.','Pediatr Blood Cancer 2024. The fluctuation is the system working correctly, not failing.')">
+          <div style="font-size:7pt; color:var(--green); letter-spacing:2px; text-transform:uppercase; font-weight:bold; margin-bottom:4px;">During fever</div>
+          <div style="font-size:18pt; color:var(--green); font-weight:bold; line-height:1;">72%</div>
+          <div style="font-size:8pt; color:var(--grey); margin-top:4px; line-height:1.4;">had ANC rise into <strong>normal range</strong> during febrile illness</div>
+          <div style="font-size:7pt; color:var(--grey-soft); margin-top:5px; font-style:italic;">Oz-Alcalay 2024, n=47</div>
+        </div>
+        <div style="background:white; border:1px solid var(--rule); border-top:3px solid var(--navy); border-radius:4px; padding:10px; cursor:pointer;"
+             onclick="showPopup('Zammar 2025 — Adult Duffy-null cohort','Australian single-centre retrospective review of adults referred for isolated neutropenia. In confirmed Duffy-null adults (n=10), the median ANC was 1.42 × 10⁹/L with an IQR of 0.74–1.80 × 10⁹/L. This wide interquartile range spans from below 1.0 (moderate neutropenia by conventional thresholds) to above 1.5 (normal) — confirming substantial natural variability in adult DANC patients.','Pathology 2025;57(4):484–488. DOI 10.1016/j.pathol.2024.11.010. No recurrent infections, constitutional symptoms, or other causative diagnoses were found in any of the confirmed Duffy-null patients.')">
+          <div style="font-size:7pt; color:var(--navy); letter-spacing:2px; text-transform:uppercase; font-weight:bold; margin-bottom:4px;">Adult range</div>
+          <div style="font-size:14pt; color:var(--navy); font-weight:bold; line-height:1;">0.74–1.80</div>
+          <div style="font-size:8pt; color:var(--grey); margin-top:4px; line-height:1.4;">IQR of ANC in confirmed Duffy-null adults (× 10⁹/L)</div>
+          <div style="font-size:7pt; color:var(--grey-soft); margin-top:5px; font-style:italic;">Zammar 2025, n=10</div>
+        </div>
+      </div>
+
+      <!-- FLUCTUATION VS PROGRESSIVE FALL — distinguishing diagram -->
+      <div style="background:white; border:1px solid var(--rule); border-radius:4px; padding:10px;">
+        <div style="font-size:8.5pt; font-weight:bold; color:var(--navy); margin-bottom:6px; text-align:center; letter-spacing:1px;">↕ FLUCTUATION (reassuring) vs ↓ PROGRESSIVE FALL (investigate)</div>
+        <svg width="100%" height="120" viewBox="0 0 700 120" xmlns="http://www.w3.org/2000/svg">
+          <!-- Left chart: fluctuation -->
+          <text x="160" y="14" text-anchor="middle" font-size="8" font-family="Georgia" font-weight="bold" fill="var(--green)">DANC fluctuation pattern</text>
+          <!-- Y axis labels -->
+          <text x="6" y="32" font-size="6" font-family="Georgia" fill="#5A5C63">2.0</text>
+          <text x="6" y="62" font-size="6" font-family="Georgia" fill="#5A5C63">1.0</text>
+          <text x="6" y="92" font-size="6" font-family="Georgia" fill="#5A5C63">0.0</text>
+          <!-- Reference lines -->
+          <line x1="20" y1="48" x2="320" y2="48" stroke="#D9D5CC" stroke-width="0.5" stroke-dasharray="2,2"/>
+          <line x1="20" y1="55" x2="320" y2="55" stroke="#C41E3A" stroke-width="0.5" stroke-dasharray="2,2"/>
+          <text x="322" y="50" font-size="5" font-family="Georgia" fill="#5A5C63">1.5</text>
+          <text x="322" y="57" font-size="5" font-family="Georgia" fill="#C41E3A">1.21</text>
+          <!-- Fluctuating line -->
+          <polyline points="22,82 50,40 80,72 110,30 140,68 170,85 200,42 230,75 260,38 290,65 320,50"
+                    fill="none" stroke="#1A7A4A" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+          <!-- Data points -->
+          <circle cx="22" cy="82" r="2.5" fill="#1A7A4A"/>
+          <circle cx="50" cy="40" r="2.5" fill="#1A7A4A"/>
+          <circle cx="80" cy="72" r="2.5" fill="#1A7A4A"/>
+          <circle cx="110" cy="30" r="2.5" fill="#1A7A4A"/>
+          <circle cx="140" cy="68" r="2.5" fill="#1A7A4A"/>
+          <circle cx="170" cy="85" r="2.5" fill="#1A7A4A"/>
+          <circle cx="200" cy="42" r="2.5" fill="#1A7A4A"/>
+          <circle cx="230" cy="75" r="2.5" fill="#1A7A4A"/>
+          <circle cx="260" cy="38" r="2.5" fill="#1A7A4A"/>
+          <circle cx="290" cy="65" r="2.5" fill="#1A7A4A"/>
+          <circle cx="320" cy="50" r="2.5" fill="#1A7A4A"/>
+          <!-- Time axis -->
+          <line x1="20" y1="98" x2="320" y2="98" stroke="#1B2A4A" stroke-width="0.8"/>
+          <text x="170" y="112" text-anchor="middle" font-size="7" font-family="Georgia" fill="#5A5C63" font-style="italic">Time (serial FBCs over months/years)</text>
+
+          <!-- Divider -->
+          <line x1="345" y1="14" x2="345" y2="105" stroke="#D9D5CC" stroke-width="1" stroke-dasharray="3,3"/>
+
+          <!-- Right chart: progressive fall -->
+          <text x="520" y="14" text-anchor="middle" font-size="8" font-family="Georgia" font-weight="bold" fill="var(--crimson)">Progressive fall — INVESTIGATE</text>
+          <text x="365" y="32" font-size="6" font-family="Georgia" fill="#5A5C63">2.0</text>
+          <text x="365" y="62" font-size="6" font-family="Georgia" fill="#5A5C63">1.0</text>
+          <text x="365" y="92" font-size="6" font-family="Georgia" fill="#5A5C63">0.0</text>
+          <line x1="380" y1="48" x2="680" y2="48" stroke="#D9D5CC" stroke-width="0.5" stroke-dasharray="2,2"/>
+          <line x1="380" y1="55" x2="680" y2="55" stroke="#C41E3A" stroke-width="0.5" stroke-dasharray="2,2"/>
+          <text x="682" y="50" font-size="5" font-family="Georgia" fill="#5A5C63">1.5</text>
+          <text x="682" y="57" font-size="5" font-family="Georgia" fill="#C41E3A">1.21</text>
+          <!-- Progressive decline -->
+          <polyline points="382,38 412,42 442,48 472,55 502,62 532,68 562,75 592,80 622,84 652,88 680,92"
+                    fill="none" stroke="#C41E3A" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+          <circle cx="382" cy="38" r="2.5" fill="#C41E3A"/>
+          <circle cx="412" cy="42" r="2.5" fill="#C41E3A"/>
+          <circle cx="442" cy="48" r="2.5" fill="#C41E3A"/>
+          <circle cx="472" cy="55" r="2.5" fill="#C41E3A"/>
+          <circle cx="502" cy="62" r="2.5" fill="#C41E3A"/>
+          <circle cx="532" cy="68" r="2.5" fill="#C41E3A"/>
+          <circle cx="562" cy="75" r="2.5" fill="#C41E3A"/>
+          <circle cx="592" cy="80" r="2.5" fill="#C41E3A"/>
+          <circle cx="622" cy="84" r="2.5" fill="#C41E3A"/>
+          <circle cx="652" cy="88" r="2.5" fill="#C41E3A"/>
+          <circle cx="680" cy="92" r="2.5" fill="#C41E3A"/>
+          <line x1="380" y1="98" x2="680" y2="98" stroke="#1B2A4A" stroke-width="0.8"/>
+          <text x="530" y="112" text-anchor="middle" font-size="7" font-family="Georgia" fill="#5A5C63" font-style="italic">Time (serial FBCs over months/years)</text>
+        </svg>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:8px; font-size:8pt; line-height:1.5; color:var(--ink);">
+          <div style="padding-left:8px; border-left:3px solid var(--green);">
+            <strong style="color:var(--green);">Wide irregular variability</strong> around a stable mean, with nadirs sometimes in the severe range and peaks reaching normal — particularly during infection or stress. This is DANC behaving normally. No additional workup is needed once Duffy-null status is confirmed.
+          </div>
+          <div style="padding-left:8px; border-left:3px solid var(--crimson);">
+            <strong style="color:var(--crimson);">Steady downward trend</strong> over months, new cytopenia in another lineage, constitutional symptoms, or recurrent infections at the nadirs. This warrants investigation regardless of Duffy status — DANC and acquired neutropenia can coexist.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PITFALLS -->
+    <div class="pitfalls">
+      <h2>⚠ Common Pitfalls — What to Avoid</h2>
+      <div class="pitfall-list">
+        <div class="item"><strong>Confusing fluctuation with progression</strong> — DANC can vary widely between counts. Look for a sustained downward trend or new lineage cytopenia, not single low values.</div>
+        <div class="item"><strong>Applying 1.5 × 10⁹/L cut-off</strong> to confirmed Duffy-null — pauses chemo or clozapine unnecessarily.</div>
+        <div class="item"><strong>Quoting "80–100% of African ancestry"</strong> as prevalence. Verified figure: ~66% in US Black adults.</div>
+        <div class="item"><strong>Using "benign ethnic neutropenia"</strong> in clinical letters. Replace with DANC or ADAN.</div>
+        <div class="item"><strong>Repeating bone marrow biopsy</strong> because Duffy status was never documented on the EPR.</div>
+        <div class="item"><strong>"Neutrophils rest in tissues"</strong> is an oversimplification. Mechanism is altered trafficking, not dormancy.</div>
+      </div>
+    </div>
+
+    <!-- REFERENCES -->
+    <footer class="refs">
+      <h4>Verified Primary Sources</h4>
+      <div class="ref-list">
+        <span><b>1.</b> Murtough et al. CERSI-PGx clozapine guideline. <i>Br J Clin Pharmacol</i> 2026. DOI 10.1002/bcp.70576</span>
+        <span><b>2.</b> Merz et al. Duffy-null ANC reference ranges. <i>JAMA</i> 2023;329:2088. DOI 10.1001/jama.2023.7467</span>
+        <span><b>3.</b> Hibbs et al. Cancer trial DANC exclusions. <i>JAMA Netw Open</i> 2024;7:e2432475.</span>
+        <span><b>4.</b> Zammar et al. Duffy null clinical parameters. <i>Pathology</i> 2025;57:484.</span>
+        <span><b>5.</b> Merz &amp; Achebe. When non-Whiteness becomes a condition. <i>Blood</i> 2021;137:13.</span>
+        <span><b>6.</b> Liu &amp; Luo. ACKR1/DARC neutrophil biology. <i>Curr Opin Hematol</i> 2024;31:302.</span>
+        <span><b>7.</b> Kelly et al. Clozapine in African-descent cohort. <i>Schizophr Res</i> 2023;268:312.</span>
+        <span><b>8.</b> Oz-Alcalay et al. Paediatric ADAN. <i>Pediatr Blood Cancer</i> 2024;72:e31430.</span>
+        <span><b>9.</b> Ferri et al. Duffy null + CDK 4/6 inhibitors. <i>Breast Cancer Res Treat</i> 2025;215:36.</span>
+        <span><b>10.</b> Hibbs &amp; Achebe. Invisible infrastructure. <i>HemaSphere</i> 2023;7:e972.</span>
+      </div>
+      <div class="brand-strip" style="display:none">
+        <div class="left"><b>MHA</b> · Mohsin Haematology Academy · <span class="url">mohsinhaemacademy.com</span> · <span class="url">haemcalc.com</span></div>
+        <div class="right">For peer clinical reference. Not for sole basis of prescribing. AI role: drafting &amp; source-finding.</div>
+      </div>
+    </footer>
+
+  </div>
+</div>
+  </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="brand-name">Mohsin Haematology Academy</div>
+      <div class="brand-tagline" style="font-size:0.64rem; color:var(--clr-muted); letter-spacing:0.07em; text-transform:uppercase; margin-top:3px; font-weight:500;">Clinical Education &amp; Digital Tools</div>
+    </div>
+    <div class="footer-note">
+      <strong>Educational use only.</strong><br>
+      Content does not replace clinical judgement or professional guidelines.<br>
+      <span style="font-size:0.72rem; color:var(--clr-muted); opacity:0.8;">&copy; 2025–2026 Dr Muhammad Mohsin &middot; <a href="/contact" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Contact</a> &middot; <a href="/governance" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Clinical Governance</a> &middot; <a href="/legal/disclaimer/" style="color:var(--clr-muted);text-decoration:underline;opacity:0.7;">Disclaimer</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+
+  /* ============================================================
+     GP PANEL — triage, decision tool, patient explainer
+     ============================================================ */
+
+  // Track which questions have been answered for the refer tool
+  var referAnswers = { ancestry: null, stable: null, redflags: null };
+
+  function openTriage(which, cardEl) {
+    // Toggle: if already open, close it
+    var alreadyOpen = cardEl.classList.contains('active');
+    document.querySelectorAll('.triage-card').forEach(function(c){ c.classList.remove('active'); });
+    document.querySelectorAll('.triage-panel').forEach(function(p){ p.classList.remove('open'); });
+    if (!alreadyOpen) {
+      cardEl.classList.add('active');
+      var panel = document.getElementById('panel-' + which);
+      if (panel) {
+        panel.classList.add('open');
+        // Scroll into view smoothly
+        setTimeout(function(){
+          panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 100);
+      }
+    }
+  }
+
+  function setYN(btn) {
+    var q = btn.dataset.q;
+    var val = btn.dataset.val;
+    // Clear siblings
+    document.querySelectorAll('.yn-btn[data-q="'+q+'"]').forEach(function(b){
+      b.classList.remove('selected', 'yes', 'no');
+    });
+    btn.classList.add('selected', val);
+    referAnswers[q] = val;
+    updateReferOutput();
+  }
+
+  function updateReferOutput() {
+    var out = document.getElementById('referOutput');
+    if (!out) return;
+
+    var a = referAnswers.ancestry;
+    var s = referAnswers.stable;
+    var r = referAnswers.redflags;
+
+    // Not all answered yet
+    if (!a || !s || !r) {
+      var answered = [a,s,r].filter(function(x){return x;}).length;
+      out.className = 'refer-output';
+      out.innerHTML =
+        '<span class="ro-tag">' + answered + '/3 answered</span>' +
+        '<span class="ro-title">Keep going — answer all three questions</span>' +
+        '<div class="ro-body">The recommendation appears once you have selected Yes or No for each question above.</div>';
+      return;
+    }
+
+    // All three answered — classify
+    var tag, title, body, cls;
+
+    if (r === 'yes') {
+      // Red flags present — always refer
+      cls = 'red';
+      tag = 'REFER';
+      title = 'Refer to haematology';
+      body = 'New symptoms, recurrent infections, or another low blood line move the picture away from simple DANC. Refer to haematology and request a Duffy phenotype as part of the workup. Use the haematology referral letter template below.';
+    } else if (a === 'yes' && s === 'yes') {
+      // Best case — likely DANC
+      cls = 'green';
+      tag = 'REASSURE';
+      title = 'Likely DANC / ADAN — no urgent referral needed';
+      body = 'Stable isolated neutropenia in a patient of relevant heritage, with no red flags, is the textbook DANC picture. Request a Duffy phenotype through your local transfusion lab to confirm. Once confirmed, document Duffy-null status on the patient record to prevent unnecessary repeat workup, chemotherapy dose-holds, or clozapine suspension in the future. Repeat FBC in 3–6 months to confirm stability. Use the "Clinic note" template below.';
+    } else if (a === 'yes' && s === 'no') {
+      // Right ancestry but unstable
+      cls = 'amber';
+      tag = 'INVESTIGATE FIRST';
+      title = 'Picture is not stable — investigate before deciding';
+      body = 'DANC is characteristically stable over months and years. A falling trend suggests something else is going on (drug-induced, viral, autoimmune, marrow disorder) — even in a patient where DANC could exist as a background. Check viral screen (HIV, hep B/C, EBV), B12/folate, drug history, and refer to haematology if the trend continues. DANC and acquired neutropenia can coexist.';
+    } else if (a === 'no') {
+      // Not relevant ancestry — DANC is unlikely; repeat and investigate first
+      cls = 'amber';
+      tag = 'REPEAT & INVESTIGATE';
+      title = 'DANC is an unlikely explanation — repeat the FBC first';
+      body = 'DANC/ADAN prevalence in European-descent populations is less than 1%, so DANC is an unlikely explanation. Repeat the FBC first to confirm the count is genuinely low and persistent. If it persists or is unexplained, investigate the standard causes (drugs, viral, B12/folate, autoimmune, marrow disorder) and refer to haematology. A single isolated low ANC does not require immediate referral.';
+    } else {
+      cls = 'amber';
+      tag = 'CONSIDER';
+      title = 'Clinical judgement needed';
+      body = 'The combination of answers does not fit a clean pathway. Use clinical judgement and contact your local haematology team if uncertain.';
+    }
+
+    out.className = 'refer-output ' + cls;
+    out.innerHTML =
+      '<span class="ro-tag">' + tag + '</span>' +
+      '<span class="ro-title">' + title + '</span>' +
+      '<div class="ro-body">' + body + '</div>';
+  }
+
+  function switchTab(tabId, btnEl) {
+    // All tabs within the same tab-bar
+    var bar = btnEl.parentElement;
+    bar.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
+    btnEl.classList.add('active');
+    // Hide all sibling tab-content
+    var parent = bar.parentElement;
+    parent.querySelectorAll('.tab-content').forEach(function(c){ c.classList.remove('active'); });
+    var target = document.getElementById(tabId);
+    if (target) target.classList.add('active');
+  }
+
+  function copyLetter(tabId) {
+    var tab = document.getElementById(tabId);
+    if (!tab) return;
+    var letterBox = tab.querySelector('.letter-box');
+    if (!letterBox) return;
+    // Get text excluding the copy button
+    var copyBtn = letterBox.querySelector('.letter-copy');
+    var btnText = copyBtn ? copyBtn.textContent : '';
+    var fullText = letterBox.textContent.replace(btnText, '').trim();
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(fullText).then(function(){
+        if (copyBtn) {
+          var orig = copyBtn.textContent;
+          copyBtn.textContent = '✓ Copied';
+          copyBtn.style.background = 'var(--green)';
+          setTimeout(function(){
+            copyBtn.textContent = orig;
+            copyBtn.style.background = '';
+          }, 2000);
+        }
+      }).catch(function(){
+        fallbackCopy(fullText, copyBtn);
+      });
+    } else {
+      fallbackCopy(fullText, copyBtn);
+    }
+  }
+
+  function fallbackCopy(text, btn) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.left = '-9999px';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(ta);
+    if (btn) {
+      var orig = btn.textContent;
+      btn.textContent = '✓ Copied';
+      setTimeout(function(){ btn.textContent = orig; }, 2000);
+    }
+  }
+
+  function copyPatientText() {
+    var pt = document.getElementById('patientText');
+    if (!pt) return;
+    // Build a clean plain-text version preserving paragraph breaks
+    var text = '';
+    pt.querySelectorAll('.pt-heading, p').forEach(function(el){
+      text += el.textContent.trim() + '\n\n';
+    });
+    text = text.trim();
+
+    var msg = document.getElementById('ptCopyMsg');
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function(){
+        if (msg) { msg.classList.add('show'); setTimeout(function(){msg.classList.remove('show');}, 2500); }
+      }).catch(function(){ fallbackCopy(text, null); if (msg) { msg.classList.add('show'); setTimeout(function(){msg.classList.remove('show');}, 2500); } });
+    } else {
+      fallbackCopy(text, null);
+      if (msg) { msg.classList.add('show'); setTimeout(function(){msg.classList.remove('show');}, 2500); }
+    }
+  }
+
+  function printPatientText() {
+    var pt = document.getElementById('patientText');
+    if (!pt) return;
+    var w = window.open('', '_blank', 'width=800,height=900');
+    if (!w) { alert('Please allow pop-ups to print this explainer.'); return; }
+    var html = '<!DOCTYPE html><html><head><title>Information for the patient — DANC / ADAN</title>' +
+      '<style>body{font-family:Georgia,serif;max-width:680px;margin:30px auto;padding:0 24px;color:#1F2024;line-height:1.6;font-size:11.5pt;}' +
+      'h1{color:#1B2A4A;font-size:16pt;margin-bottom:6px;border-bottom:2px solid #C41E3A;padding-bottom:6px;}' +
+      '.subtitle{color:#5A5C63;font-style:italic;font-size:9.5pt;margin-bottom:24px;}' +
+      '.pt-heading{font-size:12pt;color:#1B2A4A;font-weight:bold;margin-bottom:12px;}' +
+      'p{margin-bottom:12px;}strong{color:#1B2A4A;}' +
+      '.foot{margin-top:30px;padding-top:14px;border-top:1px solid #D9D5CC;font-size:9pt;color:#5A5C63;font-style:italic;}' +
+      '</style></head><body>' +
+      '<h1>Your blood test result — information sheet</h1>' +
+      '<div class="subtitle">Mohsin Haematology Academy · Patient information sheet · Reading age ~12</div>' +
+      pt.innerHTML +
+      '<div class="foot">If you have questions about this sheet, please discuss with your GP. This information is general and not a substitute for an individual medical opinion.</div>' +
+      '</body></html>';
+    w.document.write(html);
+    w.document.close();
+    setTimeout(function(){ w.print(); }, 300);
+  }
+
+  /* ============================================================
+     READING PROGRESS BAR
+     ============================================================ */
+  window.addEventListener('scroll', function() {
+    var docEl = document.documentElement;
+    var scrolled = docEl.scrollTop / (docEl.scrollHeight - docEl.clientHeight) * 100;
+    var bar = document.getElementById('readingProgress');
+    if (bar) bar.style.width = Math.min(100, Math.max(0, scrolled)) + '%';
+  });
+
+  /* ============================================================
+     POPUP MODAL
+     ============================================================ */
+  function showPopup(title, body, body2) {
+    document.getElementById('popupTitle').textContent = title;
+    document.getElementById('popupBody').textContent = body;
+    document.getElementById('popupBody2').textContent = body2 || '';
+    document.getElementById('popupOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closePopup() {
+    document.getElementById('popupOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closePopup();
+  });
+
+  /* ============================================================
+     ANIMATED PREVALENCE BARS (triggered when scrolled into view)
+     ============================================================ */
+  function animateBars() {
+    var bars = document.querySelectorAll('.prev-fill[data-width]');
+    bars.forEach(function(bar, i) {
+      setTimeout(function() {
+        bar.style.width = bar.dataset.width + '%';
+      }, 150 + i * 120);
+    });
+  }
+  if ('IntersectionObserver' in window) {
+    var barObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          animateBars();
+          barObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.25 });
+    var barsEl = document.getElementById('prevBars');
+    if (barsEl) barObserver.observe(barsEl);
+  } else {
+    // Fallback for older browsers
+    animateBars();
+  }
+
+  /* ============================================================
+     ANC SIMULATOR
+     ============================================================ */
+  function updateSim() {
+    var slider = document.getElementById('ancSlider');
+    var checkbox = document.getElementById('duffyNull');
+    var resultEl = document.getElementById('simResult');
+    var valEl = document.getElementById('ancVal');
+    if (!slider || !checkbox || !resultEl || !valEl) return;
+
+    var anc = parseFloat(slider.value);
+    var isDuffyNull = checkbox.checked;
+    valEl.textContent = anc.toFixed(2);
+
+    var msg = '', cls = '';
+    var ancStr = anc.toFixed(2);
+
+    if (isDuffyNull) {
+      if (anc >= 1.21) {
+        msg = '✓ ANC ' + ancStr + ' × 10⁹/L — WITHIN THE DUFFY-NULL REFERENCE INTERVAL (≥ 1.21). No action required. Document DANC on EPR.';
+        cls = 'normal';
+      } else if (anc >= 0.5) {
+        msg = '↕ ANC ' + ancStr + ' × 10⁹/L — Below 1.21 but consistent with the known fluctuation pattern in DANC/ADAN (Zammar 2025 IQR 0.74–1.80; Oz-Alcalay 2024). Check serial counts and clinical context: stable variability vs new fall + lineage cytopenia or systemic features.';
+        cls = 'danc';
+      } else if (anc >= 0.1) {
+        msg = '⚠ ANC ' + ancStr + ' × 10⁹/L — Severe range. Documented in 59% of paediatric ADAN at diagnosis (Oz-Alcalay 2024) — host defence remained intact. In an adult, review serial trend, look for additional cytopenia, drugs, and acquired causes. Apply febrile neutropenia protocol if fever ≥ 38°C.';
+        cls = 'low';
+      }
+    } else {
+      if (anc >= 1.5) {
+        msg = '✓ ANC ' + ancStr + ' × 10⁹/L — Within conventional normal range (≥ 1.5 × 10⁹/L).';
+        cls = 'normal';
+      } else if (anc >= 1.0) {
+        msg = '⚠ ANC ' + ancStr + ' × 10⁹/L — Mild neutropenia by conventional threshold. Consider Duffy status testing if relevant ancestry. Investigate acquired causes.';
+        cls = 'danc';
+      } else if (anc >= 0.5) {
+        msg = '⚠ ANC ' + ancStr + ' × 10⁹/L — Moderate neutropenia. Full workup required regardless of Duffy status.';
+        cls = 'low';
+      } else {
+        msg = '✕ ANC ' + ancStr + ' × 10⁹/L — Severe neutropenia. Urgent investigation. Apply febrile neutropenia protocol if fever ≥ 38°C.';
+        cls = 'low';
+      }
+    }
+
+    resultEl.textContent = msg;
+    resultEl.className = 'sim-result ' + cls;
+  }
+
+  /* Initialise simulator on load */
+  document.addEventListener('DOMContentLoaded', function() {
+    updateSim();
+  });
+  // Also call immediately in case DOMContentLoaded already fired
+  if (document.readyState !== 'loading') {
+    updateSim();
+  }
+
+</script>
+<script src="/legal/cookie-banner.js" defer></script>
+</body>
+</html>

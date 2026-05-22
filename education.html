@@ -122,6 +122,10 @@ header { position: sticky; top: 0; z-index: 200; background: rgba(255,255,255,0.
 .aud-link { display: inline-flex; align-items: center; gap: 5px; font-size: 0.78rem; font-weight: 600; margin-top: 10px; padding: 4px 0; transition: gap var(--ease); }
 .aud-link:hover { gap: 9px; }
 .aud-link.pha { color: var(--cat-pha); } .aud-link.bms { color: var(--cat-bms); } .aud-link.tp { color: var(--cat-tp); }
+.aud-link.gp  { color: var(--cat-gp); }
+/* Clickable edu-card (the entire card becomes an <a>) */
+.edu-card-link { cursor: pointer; }
+.edu-card-link:hover { border-color: var(--cat-gp-border); }
 
 /* ── CONTENT CARDS ── */
 .card-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; padding-bottom: 40px; border-bottom: 1px solid var(--clr-border); }
@@ -384,10 +388,13 @@ footer { background: var(--clr-surface); border-top: 1px solid var(--clr-border)
           <div class="aud-level gp">Clinical Partners</div>
           <h3 class="gp">GPs &amp; Primary Care</h3>
           <p class="aud-desc">Haematology from the primary care lens: red flag recognition, appropriate referral, managing patients on shared care protocols, and interpreting haematology discharge letters.</p>
+          <a href="/education/general-practitioners/" class="aud-link gp">View section
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
         </div>
       </div>
       <div class="card-grid">
-        <div class="edu-card"><div class="card-top gp"></div><div class="card-inner"><div class="card-format gp">Red Flags</div><h4>Haematology Red Flags in Primary Care</h4><p>Which blood results and clinical features demand urgent haematology attention, and which incidental findings can be safely monitored without immediate referral.</p><span class="card-badge gp">Coming Soon</span></div></div>
+        <a href="/education/general-practitioners/" class="edu-card edu-card-link"><div class="card-top gp"></div><div class="card-inner"><div class="card-format gp">Red Flags</div><h4>Haematology Red Flags in Primary Care</h4><p>Which blood results and clinical features demand urgent haematology attention, and which incidental findings can be safely monitored without immediate referral.</p><span class="card-badge gp">Available</span></div></a>
         <div class="edu-card"><div class="card-top gp"></div><div class="card-inner"><div class="card-format gp">Referral</div><h4>When &amp; How to Refer to Haematology</h4><p>Urgent, 2-week-wait, and routine referral criteria: what information haematology needs in the referral, and how to communicate clinical urgency effectively.</p><span class="card-badge gp">Coming Soon</span></div></div>
         <div class="edu-card"><div class="card-top gp"></div><div class="card-inner"><div class="card-format gp">Shared Care</div><h4>Managing Haematology Patients in Practice</h4><p>Shared care protocols for myeloma, CLL, MDS, and anticoagulated patients: monitoring responsibilities, when to contact the haematology team, and safe prescribing boundaries.</p><span class="card-badge gp">Coming Soon</span></div></div>
         <div class="edu-card"><div class="card-top gp"></div><div class="card-inner"><div class="card-format gp">Anticoagulation</div><h4>Anticoagulation in Primary Care</h4><p>DOAC prescribing and monitoring in GP settings, warfarin management, reversal in bleeding emergencies, and managing patients on long-term anticoagulation.</p><span class="card-badge gp">Coming Soon</span></div></div>
