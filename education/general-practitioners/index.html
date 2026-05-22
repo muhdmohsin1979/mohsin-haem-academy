@@ -1411,7 +1411,7 @@ Plan:
         <div class="step-title">Test Duffy Status</div>
         <div class="step-body">Fy(a–b–) phenotype on serology, OR homozygous ACKR1 rs2814778 C/C genotype.</div>
       </div>
-      <div class="step no-mark" onclick="showPopup('No Bone Marrow Biopsy Required','In confirmed DANC (steps 1–3 positive), bone marrow biopsy is not clinically indicated. The marrow is normal. Performing a biopsy exposes the patient to unnecessary risk and cost.','Reserve BMB for: new downward ANC trend, additional cytopenia, abnormal blood film, systemic features, or failure to confirm Duffy-null status.')">
+      <div class="step no-mark" onclick="showPopup('No Bone Marrow Biopsy Required','In confirmed DANC (steps 1–3 positive), bone marrow biopsy is not clinically indicated. The marrow is normal. Performing a biopsy exposes the patient to unnecessary risk and cost.','Reserve BMB for: new downward ANC trend, additional cytopenia, abnormal blood film, constitutional symptoms, or failure to confirm Duffy-null status.')">
         <div class="step-num">✓</div>
         <div class="step-title">No Bone Marrow Biopsy</div>
         <div class="step-body">Confirmed DANC → BMB not indicated. Document on EPR. Reserve for new fall, additional cytopenia, or abnormal film.</div>
@@ -1445,7 +1445,7 @@ Plan:
           <li>76.5% of phase 3 trials exclude DANC-range ANCs (Hibbs 2024)</li>
         </ul>
       </div>
-      <div class="pathway" onclick="showPopup('General Haematology','Confirmed DANC with nothing else: discharge to GP with a clear explanation letter stating the ANC threshold does not apply. Unconfirmed Duffy status in a patient with relevant ancestry: test Duffy first; proceed to biopsy only for new fall, additional cytopenia, or systemic features.','Documentation on the EPR is the single most impactful intervention — it prevents repeat unnecessary workups, inappropriate chemotherapy holds, and clozapine suspensions in the future.')">
+      <div class="pathway" onclick="showPopup('General Haematology','Confirmed DANC with nothing else: discharge to GP with a clear explanation letter stating the ANC threshold does not apply. Unconfirmed Duffy status in a patient with relevant ancestry: test Duffy first; proceed to biopsy only for new fall, additional cytopenia, or constitutional symptoms.','Documentation on the EPR is the single most impactful intervention — it prevents repeat unnecessary workups, inappropriate chemotherapy holds, and clozapine suspensions in the future.')">
         <div class="header-row">
           <div class="icon" style="background:var(--tint-cream);">🩸</div>
           <div class="pathway-title">General Haematology</div>
@@ -1895,7 +1895,7 @@ Plan:
         msg = '✓ ANC ' + ancStr + ' × 10⁹/L — WITHIN THE DUFFY-NULL REFERENCE INTERVAL (≥ 1.21). No action required. Document DANC on EPR.';
         cls = 'normal';
       } else if (anc >= 0.5) {
-        msg = '↕ ANC ' + ancStr + ' × 10⁹/L — Below 1.21 but consistent with the known fluctuation pattern in DANC/ADAN (Zammar 2025 IQR 0.74–1.80; Oz-Alcalay 2024). Check serial counts and clinical context: stable variability vs new fall + lineage cytopenia or systemic features.';
+        msg = '↕ ANC ' + ancStr + ' × 10⁹/L — Below 1.21 but consistent with the known fluctuation pattern in DANC/ADAN (Zammar 2025 IQR 0.74–1.80; Oz-Alcalay 2024). Check serial counts and clinical context: stable variability vs new fall + lineage cytopenia or constitutional symptoms.';
         cls = 'danc';
       } else if (anc >= 0.1) {
         msg = '⚠ ANC ' + ancStr + ' × 10⁹/L — Severe range. Documented in 59% of paediatric ADAN at diagnosis (Oz-Alcalay 2024) — host defence remained intact. In an adult, review serial trend, look for additional cytopenia, drugs, and acquired causes. Apply febrile neutropenia protocol if fever ≥ 38°C.';
