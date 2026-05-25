@@ -669,7 +669,99 @@
 
     }
 
-  </style>
+  
+/* ── Weekly batch additions: effect strips, collapsible appraisal, snapshot ── */
+.jc-effect-strip {
+  background: var(--clr-bg);
+  border: 1px solid var(--clr-border-light);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+}
+.jc-effect-strip-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--clr-muted);
+  margin-bottom: 6px;
+}
+.jc-effect-strip svg { display: block; width: 100%; height: auto; max-width: 100%; }
+
+details.jc-appraisal-collapsible {
+  background: var(--clr-surface-alt);
+  border: 1px solid var(--clr-border-light);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+}
+details.jc-appraisal-collapsible > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+details.jc-appraisal-collapsible > summary::-webkit-details-marker { display: none; }
+details.jc-appraisal-collapsible > summary::marker { content: ''; }
+details.jc-appraisal-collapsible > summary .jc-appraisal-label { margin-bottom: 0; }
+details.jc-appraisal-collapsible > summary .jc-chevron {
+  margin-left: auto;
+  font-size: 0.78rem;
+  color: var(--clr-muted);
+  transition: transform 0.18s ease;
+}
+details.jc-appraisal-collapsible[open] > summary .jc-chevron { transform: rotate(180deg); }
+details.jc-appraisal-collapsible p {
+  margin-top: 8px;
+  font-size: 0.82rem;
+  color: var(--clr-muted);
+  line-height: 1.5;
+}
+
+.jc-week-snapshot {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  margin: 28px 0 8px;
+  box-shadow: var(--shadow-xs);
+}
+.jc-week-snapshot-eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--clr-primary);
+  background: var(--clr-primary-tint);
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+.jc-week-snapshot-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--clr-text);
+  margin-bottom: 4px;
+}
+.jc-week-snapshot-sub {
+  font-size: 0.82rem;
+  color: var(--clr-muted);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+.jc-week-snapshot svg { display: block; width: 100%; height: auto; max-width: 100%; }
+.jc-week-snapshot-note {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-left: 3px solid var(--cat-hae);
+  background: rgba(26,107,74,0.05);
+  font-size: 0.82rem;
+  color: var(--clr-text-secondary);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+</style>
   <!-- ── Favicons / Web Manifest — added by favicon polish v1 ── -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
@@ -741,7 +833,52 @@
   </section>
 
 
-  <!-- ═══ FILTER BAR ════════════════════════════════ -->
+  
+<!-- ═══ THIS WEEK SNAPSHOT (added 25 May 2026) ═══════════════════ -->
+<section class="jc-section" style="padding: 32px 0 0;">
+  <div class="container">
+    <div class="jc-week-snapshot">
+      <div class="jc-week-snapshot-eyebrow">This week · 25 May 2026</div>
+      <div class="jc-week-snapshot-title">Effect snapshot — 4 new entries at a glance</div>
+      <div class="jc-week-snapshot-sub">Point estimates with 95% CI on a common ratio scale. Lower ratios favour the intervention; the dashed line is the null at 1.0.</div>
+      <svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Forest plot of three ratio-based effect estimates: tucidinostat HR 0.72, benzene RR 1.26, Cochrane ESAs transfusion exposure RR 0.79">
+        <line x1="180" y1="190" x2="680" y2="190" stroke="#cfd2d6" stroke-width="1.2"/>
+        <line x1="386" y1="20" x2="386" y2="190" stroke="#6b7280" stroke-width="1" stroke-dasharray="4 3"/>
+        <text x="386" y="14" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" fill="#6b7280">null = 1.0</text>
+        <g font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" fill="#6b7280">
+          <text x="180" y="206" text-anchor="middle">0.3</text>
+          <text x="239" y="206" text-anchor="middle">0.5</text>
+          <text x="386" y="206" text-anchor="middle">1.0</text>
+          <text x="533" y="206" text-anchor="middle">1.5</text>
+          <text x="680" y="206" text-anchor="middle">2.0</text>
+        </g>
+        <!-- Row 1: Tucidinostat HR 0.72 (0.54-0.96) -->
+        <text x="170" y="48" text-anchor="end" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#1f2933">Tucidinostat + R-CHOP</text>
+        <text x="170" y="62" text-anchor="end" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" fill="#6b7280">HR · DEL DLBCL</text>
+        <line x1="251" y1="55" x2="374" y2="55" stroke="#7a1f2b" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="304" cy="55" r="6.5" fill="#7a1f2b" stroke="#fff" stroke-width="2"/>
+        <text x="384" y="52" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#7a1f2b">HR 0.72 (0.54–0.96)</text>
+        <!-- Row 2: Benzene RR 1.26 (1.18-1.35) -->
+        <text x="170" y="98" text-anchor="end" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#1f2933">Benzene exposure</text>
+        <text x="170" y="112" text-anchor="end" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" fill="#6b7280">RR · lymphoid neoplasms</text>
+        <line x1="439" y1="105" x2="489" y2="105" stroke="#7a1f2b" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="462" cy="105" r="6.5" fill="#7a1f2b" stroke="#fff" stroke-width="2"/>
+        <text x="499" y="102" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#7a1f2b">RR 1.26 (1.18–1.35)</text>
+        <!-- Row 3: Cochrane ESAs transfusion RR 0.79 (0.76-0.83) -->
+        <text x="170" y="148" text-anchor="end" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#1f2933">Early ESAs · preterm</text>
+        <text x="170" y="162" text-anchor="end" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" fill="#6b7280">RR · transfusion exposure</text>
+        <line x1="315" y1="155" x2="336" y2="155" stroke="#7a4f1f" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="324" cy="155" r="6.5" fill="#7a4f1f" stroke="#fff" stroke-width="2"/>
+        <text x="346" y="152" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#7a4f1f">RR 0.79 (0.76–0.83)</text>
+      </svg>
+      <div class="jc-week-snapshot-note">
+        <strong>ISTH SSC UFH guidance</strong> — consensus document, not a ratio measure. Recommended anti-Xa target band <strong>0.30–0.70 U/mL</strong> (different scale; see card below).
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FILTER BAR ════════════════════════════════ -->
   <div class="filter-bar">
     <div class="container">
       <div class="filter-bar-inner">
@@ -821,10 +958,29 @@
                 <p>The first positive Phase III trial of an epigenetic modifier added to R-CHOP in MYC/BCL2 double-expressor DLBCL — a high-risk subgroup with historically poor outcomes on R-CHOP alone. Tucidinostat is not licensed by the MHRA and not recommended by NICE for first-line DLBCL; UK adoption would need NICE technology appraisal. Pending BSH review, this remains the strongest positive epigenetic signal in DEL DLBCL to date and is worth raising at MDT for high-risk subgroups.</p>
               </div>
 
-              <div class="jc-appraisal">
-                <div class="jc-appraisal-label">Critical Appraisal Note</div>
-                <p>Multicentre double-blind RCT with 41.3-month median follow-up. Three caveats: enrolment was exclusively at 40 Chinese centres (limits external validity to UK populations); DEL was defined by IHC co-expression, not FISH-confirmed double-hit rearrangement — these are overlapping but distinct populations; overall survival not yet mature.</p>
+              <div class="jc-effect-strip">
+                <div class="jc-effect-strip-label">Effect — Event-free survival (lower HR favours tucidinostat)</div>
+                <svg viewBox="0 0 600 70" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hazard ratio 0.72 with 95% CI 0.54 to 0.96 on a forest strip from 0.3 to 2.0">
+                  <line x1="40" y1="42" x2="560" y2="42" stroke="#cfd2d6" stroke-width="1.5"/>
+                  <line x1="254" y1="22" x2="254" y2="60" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="4 3"/>
+                  <text x="254" y="18" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" fill="#6b7280">HR 1.0 (null)</text>
+                  <g font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" fill="#6b7280">
+                    <text x="40" y="62" text-anchor="middle">0.3</text>
+                    <text x="101" y="62" text-anchor="middle">0.5</text>
+                    <text x="254" y="62" text-anchor="middle">1.0</text>
+                    <text x="407" y="62" text-anchor="middle">1.5</text>
+                    <text x="560" y="62" text-anchor="middle">2.0</text>
+                  </g>
+                  <line x1="113" y1="42" x2="242" y2="42" stroke="#7a1f2b" stroke-width="5" stroke-linecap="round"/>
+                  <circle cx="168" cy="42" r="7" fill="#7a1f2b" stroke="#fff" stroke-width="2"/>
+                  <text x="168" y="14" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#7a1f2b">HR 0.72 (0.54–0.96)</text>
+                </svg>
               </div>
+
+              <details class="jc-appraisal-collapsible">
+                <summary><span class="jc-appraisal-label">Critical Appraisal Note</span><span class="jc-chevron">▾</span></summary>
+                <p>Multicentre double-blind RCT with 41.3-month median follow-up. Three caveats: enrolment was exclusively at 40 Chinese centres (limits external validity to UK populations); DEL was defined by IHC co-expression, not FISH-confirmed double-hit rearrangement — these are overlapping but distinct populations; overall survival not yet mature.</p>
+              </details>
 
               <div class="jc-card-footer">
                 <div class="jc-evidence-level">
@@ -867,10 +1023,28 @@
                 <p>Take an occupational history at every new lymphoma diagnosis. Where benzene-rich industries (petrochemical, printing, paint, rubber, fuel tanker) are involved, document carefully — for clinical risk profiling and for any medicolegal or industrial-injury pathway. Confirms that the 2022 WHO-HAEM5 framework adds useful resolution to historical occupational-cancer epidemiology.</p>
               </div>
 
-              <div class="jc-appraisal">
-                <div class="jc-appraisal-label">Critical Appraisal Note</div>
-                <p>Heterogeneous exposure measurement across the 95 primary studies; residual confounding from co-exposures (other solvents, smoking). Modest effect sizes susceptible to publication bias. Reclassification under WHO-HAEM5 was retrospective and depended on the granularity of the original diagnoses.</p>
+              <div class="jc-effect-strip">
+                <div class="jc-effect-strip-label">Effect — Lymphoid neoplasm risk (RR &gt; 1 indicates higher risk)</div>
+                <svg viewBox="0 0 600 70" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Risk ratio 1.26 with 95% CI 1.18 to 1.35 on a forest strip from 0.5 to 2.0">
+                  <line x1="40" y1="42" x2="560" y2="42" stroke="#cfd2d6" stroke-width="1.5"/>
+                  <line x1="213" y1="22" x2="213" y2="60" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="4 3"/>
+                  <text x="213" y="18" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" fill="#6b7280">RR 1.0 (null)</text>
+                  <g font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" fill="#6b7280">
+                    <text x="40" y="62" text-anchor="middle">0.5</text>
+                    <text x="213" y="62" text-anchor="middle">1.0</text>
+                    <text x="387" y="62" text-anchor="middle">1.5</text>
+                    <text x="560" y="62" text-anchor="middle">2.0</text>
+                  </g>
+                  <line x1="276" y1="42" x2="335" y2="42" stroke="#7a1f2b" stroke-width="5" stroke-linecap="round"/>
+                  <circle cx="304" cy="42" r="7" fill="#7a1f2b" stroke="#fff" stroke-width="2"/>
+                  <text x="304" y="14" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#7a1f2b">RR 1.26 (1.18–1.35)</text>
+                </svg>
               </div>
+
+              <details class="jc-appraisal-collapsible">
+                <summary><span class="jc-appraisal-label">Critical Appraisal Note</span><span class="jc-chevron">▾</span></summary>
+                <p>Heterogeneous exposure measurement across the 95 primary studies; residual confounding from co-exposures (other solvents, smoking). Modest effect sizes susceptible to publication bias. Reclassification under WHO-HAEM5 was retrospective and depended on the granularity of the original diagnoses.</p>
+              </details>
 
               <div class="jc-card-footer">
                 <div class="jc-evidence-level">
@@ -913,10 +1087,27 @@
                 <p>The first multinational consensus framework for standardising UFH monitoring. Many UK trusts still rely on aPTT — this guidance gives labs a clear direction of travel toward anti-Xa-based monitoring with a defined international target range. UK haematology and ICU leads should benchmark local protocols against this consensus and document any deviation. Pending BSH endorsement.</p>
               </div>
 
-              <div class="jc-appraisal">
-                <div class="jc-appraisal-label">Critical Appraisal Note</div>
-                <p>Consensus-driven rather than trial-driven; outcome data for several recommendations remain sparse. Weight-based dosing nomograms are recommended but no single nomogram is preferred. Special populations and periprocedural use are covered in a forthcoming Part 2.</p>
+              <div class="jc-effect-strip">
+                <div class="jc-effect-strip-label">Recommended anti-Xa target band (U/mL)</div>
+                <svg viewBox="0 0 600 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Anti-Xa target band 0.30 to 0.70 units per millilitre on a scale from 0 to 1.0">
+                  <rect x="40" y="40" width="520" height="14" fill="#eceae5" rx="7"/>
+                  <rect x="196" y="40" width="208" height="14" fill="#1a6b4a" rx="7" opacity="0.88"/>
+                  <g font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" fill="#6b7280">
+                    <text x="40" y="70" text-anchor="middle">0.0</text>
+                    <text x="144" y="70" text-anchor="middle">0.20</text>
+                    <text x="248" y="70" text-anchor="middle">0.40</text>
+                    <text x="352" y="70" text-anchor="middle">0.60</text>
+                    <text x="456" y="70" text-anchor="middle">0.80</text>
+                    <text x="560" y="70" text-anchor="middle">1.00 U/mL</text>
+                  </g>
+                  <text x="300" y="30" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1a6b4a">0.30 – 0.70 U/mL (target band)</text>
+                </svg>
               </div>
+
+              <details class="jc-appraisal-collapsible">
+                <summary><span class="jc-appraisal-label">Critical Appraisal Note</span><span class="jc-chevron">▾</span></summary>
+                <p>Consensus-driven rather than trial-driven; outcome data for several recommendations remain sparse. Weight-based dosing nomograms are recommended but no single nomogram is preferred. Special populations and periprocedural use are covered in a forthcoming Part 2.</p>
+              </details>
 
               <div class="jc-card-footer">
                 <div class="jc-evidence-level">
@@ -960,10 +1151,46 @@
                 <p>Consistent with existing UK neonatal practice — supports continued use of early ESAs for transfusion reduction and NEC / severe IVH prevention in preterm and low-birthweight infants. Mortality is not changed. From a transfusion-medicine perspective, a 21% relative reduction in red-cell transfusion exposure across a 6,724-infant evidence base is a meaningful blood-conservation signal worth quoting in transfusion governance and neonatal committee discussions.</p>
               </div>
 
-              <div class="jc-appraisal">
-                <div class="jc-appraisal-label">Critical Appraisal Note</div>
-                <p>Variable heterogeneity across outcomes; certainty graded down for inconsistency and risk of bias on several endpoints. Subgroup data for darbepoetin is sparser than for erythropoietin. The neurodevelopmental signal is low-certainty and should be quoted with that caveat. The transfusion-exposure outcome is low-certainty despite the precise effect estimate.</p>
+              <div class="jc-effect-strip">
+                <div class="jc-effect-strip-label">Effect — four key outcomes (lower RR favours early ESAs)</div>
+                <svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Forest plot of four outcomes: transfusion exposure RR 0.79, NEC RR 0.74, severe IVH RR 0.70, mortality RR 0.93">
+                  <line x1="180" y1="170" x2="560" y2="170" stroke="#cfd2d6" stroke-width="1.2"/>
+                  <line x1="370" y1="20" x2="370" y2="170" stroke="#6b7280" stroke-width="1" stroke-dasharray="4 3"/>
+                  <text x="370" y="14" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" fill="#6b7280">RR 1.0 (null)</text>
+                  <g font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" fill="#6b7280">
+                    <text x="180" y="186" text-anchor="middle">0.5</text>
+                    <text x="275" y="186" text-anchor="middle">0.75</text>
+                    <text x="370" y="186" text-anchor="middle">1.0</text>
+                    <text x="465" y="186" text-anchor="middle">1.25</text>
+                    <text x="560" y="186" text-anchor="middle">1.5</text>
+                  </g>
+                  <!-- Transfusion exposure RR 0.79 (0.76-0.83) -->
+                  <text x="170" y="40" text-anchor="end" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#1f2933">Transfusion exposure</text>
+                  <line x1="279" y1="36" x2="305" y2="36" stroke="#7a4f1f" stroke-width="5" stroke-linecap="round"/>
+                  <circle cx="290" cy="36" r="6" fill="#7a4f1f" stroke="#fff" stroke-width="1.5"/>
+                  <text x="312" y="33" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#7a4f1f">RR 0.79 (0.76–0.83)</text>
+                  <!-- NEC RR 0.74 (0.62-0.87) -->
+                  <text x="170" y="74" text-anchor="end" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#1f2933">NEC</text>
+                  <line x1="226" y1="70" x2="321" y2="70" stroke="#1a6b4a" stroke-width="5" stroke-linecap="round"/>
+                  <circle cx="271" cy="70" r="6" fill="#1a6b4a" stroke="#fff" stroke-width="1.5"/>
+                  <text x="327" y="67" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#1a6b4a">RR 0.74 (0.62–0.87)</text>
+                  <!-- Severe IVH RR 0.70 (0.56-0.89) -->
+                  <text x="170" y="108" text-anchor="end" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#1f2933">Severe IVH</text>
+                  <line x1="203" y1="104" x2="328" y2="104" stroke="#1a6b4a" stroke-width="5" stroke-linecap="round"/>
+                  <circle cx="256" cy="104" r="6" fill="#1a6b4a" stroke="#fff" stroke-width="1.5"/>
+                  <text x="335" y="101" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#1a6b4a">RR 0.70 (0.56–0.89)</text>
+                  <!-- Mortality RR 0.93 (0.80-1.09) -->
+                  <text x="170" y="142" text-anchor="end" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#1f2933">Mortality</text>
+                  <line x1="294" y1="138" x2="404" y2="138" stroke="#6b7280" stroke-width="5" stroke-linecap="round"/>
+                  <circle cx="343" cy="138" r="6" fill="#6b7280" stroke="#fff" stroke-width="1.5"/>
+                  <text x="412" y="135" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#6b7280">RR 0.93 (0.80–1.09)</text>
+                </svg>
               </div>
+
+              <details class="jc-appraisal-collapsible">
+                <summary><span class="jc-appraisal-label">Critical Appraisal Note</span><span class="jc-chevron">▾</span></summary>
+                <p>Variable heterogeneity across outcomes; certainty graded down for inconsistency and risk of bias on several endpoints. Subgroup data for darbepoetin is sparser than for erythropoietin. The neurodevelopmental signal is low-certainty and should be quoted with that caveat. The transfusion-exposure outcome is low-certainty despite the precise effect estimate.</p>
+              </details>
 
               <div class="jc-card-footer">
                 <div class="jc-evidence-level">
