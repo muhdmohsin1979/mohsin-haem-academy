@@ -551,6 +551,37 @@
     }
 
     /* ═══════════════════════════════════════════════
+       LINKED CARD VARIANT — whole-card click-through
+       Applied only to cards that link to a detail page (currently the
+       VTE evidence review). Uses the "stretched link" pattern: the
+       title anchor's ::after pseudo-element covers the entire card
+       surface so the whole card is a single click target, while any
+       inner anchors keep working via z-index. Cards without the
+       jc-card--linked modifier are untouched.
+    ═══════════════════════════════════════════════ */
+    .jc-card--linked {
+      position: relative;
+      cursor: pointer;
+    }
+    .jc-card--linked:focus-within {
+      outline: 2px solid var(--clr-primary);
+      outline-offset: 2px;
+    }
+    .jc-card-stretched-link { position: static; }
+    .jc-card-stretched-link::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+    /* Inner anchors (e.g. inline PMID links) sit above the stretched
+       link so they remain individually clickable. */
+    .jc-card--linked a:not(.jc-card-stretched-link) {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ═══════════════════════════════════════════════
        COMING SOON CARD VARIANT
     ═══════════════════════════════════════════════ */
     .jc-card--soon {
@@ -1379,8 +1410,9 @@ details.jc-appraisal-collapsible p {
 
           <!-- ══════════════════════════════════════
                CARD 6 — Extended Anticoagulation in Unprovoked VTE (Haemostasis)
+               Linked card — clicking anywhere opens the detail page.
           ═══════════════════════════════════════ -->
-          <article class="jc-card" data-division="haemostasis">
+          <article class="jc-card jc-card--linked" data-division="haemostasis">
             <div class="jc-card-accent" style="--accent-colour: var(--cat-hae);"></div>
             <div class="jc-card-body">
 
@@ -1391,7 +1423,7 @@ details.jc-appraisal-collapsible p {
               </div>
 
               <div>
-                <h3 class="jc-title"><a href="/journal-club/extended-anticoagulation-unprovoked-vte/">Extended Anticoagulation in Unprovoked VTE — Balancing Recurrence vs Bleeding Risk</a></h3>
+                <h3 class="jc-title"><a class="jc-card-stretched-link" href="/journal-club/extended-anticoagulation-unprovoked-vte/">Extended Anticoagulation in Unprovoked VTE — Balancing Recurrence vs Bleeding Risk</a></h3>
                 <p class="jc-citation">A structured review of AMPLIFY-EXT (apixaban) and EINSTEIN CHOICE (rivaroxaban), with the three risk-stratification tools (HERDOO2, DASH, Vienna) and interactive calculators.</p>
               </div>
 
