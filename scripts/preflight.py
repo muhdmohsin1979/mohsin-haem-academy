@@ -127,6 +127,48 @@ SKIP_DOMAINS = {
 
 ALLOW_STATUS = {200, 201, 202, 203, 204, 301, 302, 303, 307, 308}
 
+# A page's own declared production URL — used to skip self-references during
+# external-link verification. See `_self_referential_urls`.
+LINK_TAG_RE = re.compile(r"<link\b([^>]*?)/?>", re.IGNORECASE | re.DOTALL)
+META_TAG_RE = re.compile(r"<meta\b([^>]*?)/?>", re.IGNORECASE | re.DOTALL)
+ATTR_RE = re.compile(r"""([\w:-]+)\s*=\s*["']([^"']*)["']""", re.IGNORECASE)
+
+
+def _normalize_url(url: str) -> str:
+    """Strip trailing slash so 'https://x/a' and 'https://x/a/' compare equal."""
+    return url.rstrip("/")
+
+
+def _self_referential_urls(file_path: Path) -> set[str]:
+    """Return the set of URLs the page declares as its own production address.
+
+    A brand-new HTML page declares its production URL via
+        <link rel="canonical" href="..."/>
+        <meta property="og:url" content="..."/>
+    Those URLs point at where the post will live once the PR merges — they
+    are NOT live yet at the time CI runs, so a naive external-link check
+    would fail with a 404 on the page's own future home and block every
+    new page from passing CI. We skip URLs matching a page's own declared
+    canonical / og:url; real broken external links elsewhere on the page
+    must still fail.
+    """
+    if not file_path.is_file() or file_path.suffix.lower() not in {".html", ".htm"}:
+        return set()
+    try:
+        raw = file_path.read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return set()
+    urls: set[str] = set()
+    for m in LINK_TAG_RE.finditer(raw):
+        attrs = {k.lower(): v for k, v in ATTR_RE.findall(m.group(1))}
+        if attrs.get("rel", "").lower() == "canonical" and "href" in attrs:
+            urls.add(_normalize_url(attrs["href"]))
+    for m in META_TAG_RE.finditer(raw):
+        attrs = {k.lower(): v for k, v in ATTR_RE.findall(m.group(1))}
+        if attrs.get("property", "").lower() == "og:url" and "content" in attrs:
+            urls.add(_normalize_url(attrs["content"]))
+    return urls
+
 
 def tag_strip(raw: str) -> str:
     if HAVE_BS4:
@@ -395,12 +437,31 @@ def main() -> int:
 
     # External link check.
     if not args.skip_links:
+        # Cache each file's declared canonical / og:url so a page's own
+        # not-yet-live production URL is not treated as a broken link.
+        self_url_cache: dict[str, set[str]] = {}
+
+        def _self_urls_for(file_str: str) -> set[str]:
+            if file_str in self_url_cache:
+                return self_url_cache[file_str]
+            # Diff entries carry repo-relative paths; full-file entries
+            # carry absolute paths. Try both.
+            p = Path(file_str)
+            if not p.is_absolute():
+                p = (repo_root / file_str).resolve()
+            urls = _self_referential_urls(p)
+            self_url_cache[file_str] = urls
+            return urls
+
         if args.diff_from and args.diff_from.exists():
             # Diff mode — only URLs on ADDED lines are checked.
             added_urls = extract_added_urls(args.diff_from)
             print(f"preflight: external link check — {len(added_urls)} "
                   f"URL(s) on added lines in diff.")
             for src_file, url in added_urls:
+                if _normalize_url(url) in _self_urls_for(src_file):
+                    # Page's own canonical/og:url — not live yet by design.
+                    continue
                 ok, detail = check_link(url)
                 if not ok:
                     link_failures.append(f"{src_file}: {url} -> {detail}")
@@ -409,7 +470,10 @@ def main() -> int:
             for f in files:
                 raw = f.read_text(encoding="utf-8", errors="replace")
                 suffix = f.suffix.lower()
+                file_key = str(f)
                 for url in extract_links(raw, suffix):
+                    if _normalize_url(url) in _self_urls_for(file_key):
+                        continue
                     ok, detail = check_link(url)
                     if not ok:
                         link_failures.append(f"{f}: {url} -> {detail}")
