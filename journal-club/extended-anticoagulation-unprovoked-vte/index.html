@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Extended Anticoagulation in Unprovoked VTE — Journal Club — Mohsin Haematology Academy</title>
+  <meta name="description" content="Critical appraisal of extended anticoagulation in first unprovoked VTE: AMPLIFY-EXT, EINSTEIN CHOICE, and the HERDOO2, DASH, and Vienna risk-stratification tools, with interactive calculators." />
+
+  <!-- ── SEO / Social ── -->
+  <link rel="canonical" href="https://mohsinhaemacademy.com/journal-club/extended-anticoagulation-unprovoked-vte/" />
+  <meta property="og:site_name" content="Mohsin Haematology Academy" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://mohsinhaemacademy.com/journal-club/extended-anticoagulation-unprovoked-vte/" />
+  <meta property="og:title" content="Extended Anticoagulation in Unprovoked VTE" />
+  <meta property="og:description" content="Critical appraisal of extended anticoagulation in first unprovoked VTE: AMPLIFY-EXT, EINSTEIN CHOICE, and the HERDOO2, DASH, and Vienna risk-stratification tools, with interactive calculators." />
+  <meta property="og:image" content="https://mohsinhaemacademy.com/logo.png" />
+  <meta property="og:image:width" content="1536" />
+  <meta property="og:image:height" content="1024" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Extended Anticoagulation in Unprovoked VTE" />
+  <meta name="twitter:description" content="Critical appraisal of extended anticoagulation in first unprovoked VTE: AMPLIFY-EXT, EINSTEIN CHOICE, and the HERDOO2, DASH, and Vienna risk-stratification tools, with interactive calculators." />
+  <meta name="twitter:image" content="https://mohsinhaemacademy.com/logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ═══════════════════════════════════════════════
+       RESET & TOKENS — matches journal-club.html
+    ═══════════════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --clr-primary:       #7a1f2b;
+      --clr-primary-dark:  #5c1720;
+      --clr-primary-tint:  rgba(122, 31, 43, 0.07);
+
+      --clr-bg:            #f7f5f3;
+      --clr-surface:       #ffffff;
+      --clr-surface-alt:   #faf8f7;
+
+      --clr-text:          #1a1a1e;
+      --clr-text-secondary:#3d3d42;
+      --clr-muted:         #6b717a;
+      --clr-subtle:        #9ca3af;
+
+      --clr-border:        #e6e1dd;
+      --clr-border-light:  #f0ebe7;
+
+      --shadow-xs: 0 1px 2px rgba(0,0,0,.04);
+      --shadow-sm: 0 1px 4px rgba(0,0,0,.06), 0 2px 6px rgba(0,0,0,.04);
+      --shadow-md: 0 4px 16px rgba(0,0,0,.08), 0 2px 6px rgba(0,0,0,.04);
+
+      --radius-sm:  6px;
+      --radius-md:  12px;
+      --radius-lg:  18px;
+
+      --ease: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+
+      /* Division colours — Haemostasis & Thrombosis page accent */
+      --cat-mal: #7a1f2b;
+      --cat-gen: #1e4d8c;
+      --cat-hae: #1a6b4a;
+      --cat-hae-dark: #145438;
+      --cat-hae-tint: rgba(26, 107, 74, 0.08);
+      --cat-tra: #7a4f1f;
+
+      /* Warning tone for "harm signal" callouts */
+      --clr-warn:       #b45309;
+      --clr-warn-tint:  rgba(180, 83, 9, 0.07);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--clr-bg);
+      color: var(--clr-text);
+      line-height: 1.65;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--cat-hae); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { display: block; max-width: 100%; }
+    p { margin: 0 0 14px; }
+
+    .container { width: min(960px, 92%); margin-inline: auto; }
+
+    /* ═══════════════════════════════════════════════
+       HEADER (matches journal-club.html nav exactly)
+    ═══════════════════════════════════════════════ */
+    header {
+      position: sticky; top: 0; z-index: 200;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--clr-border);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .brand img { height: 40px; width: auto; }
+    .brand-text { line-height: 1; }
+    .brand-name {
+      font-size: 0.95rem; font-weight: 700; color: var(--clr-primary); letter-spacing: -0.01em;
+    }
+    .brand-tagline {
+      font-size: 0.66rem; font-weight: 500; color: var(--clr-muted);
+      letter-spacing: 0.07em; text-transform: uppercase; margin-top: 3px;
+    }
+    .nav-toggle { display: none; }
+    .nav-links { display: flex; align-items: center; gap: 2px; }
+    .nav-links a {
+      font-size: 0.85rem; font-weight: 500; color: var(--clr-text-secondary);
+      padding: 7px 11px; border-radius: var(--radius-sm);
+      transition: color var(--ease), background var(--ease);
+      white-space: nowrap;
+    }
+    .nav-links a:hover { color: var(--clr-primary); background: var(--clr-primary-tint); text-decoration: none; }
+    .nav-links a.active { color: var(--clr-primary); background: var(--clr-primary-tint); font-weight: 600; }
+    .nav-cta {
+      background: var(--clr-primary) !important; color: #fff !important;
+      padding: 8px 16px !important; border-radius: var(--radius-sm) !important; font-weight: 600 !important;
+    }
+    .nav-cta:hover { background: var(--clr-primary-dark) !important; }
+
+    /* ═══════════════════════════════════════════════
+       POST HERO — green gradient for Haemostasis
+    ═══════════════════════════════════════════════ */
+    .post-hero {
+      background: linear-gradient(135deg, var(--cat-hae) 0%, var(--cat-hae-dark) 100%);
+      color: #fff;
+      padding: 56px 0 44px;
+    }
+    .post-hero__category {
+      display: inline-block; padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: rgba(255,255,255,0.95);
+      margin-bottom: 18px;
+    }
+    .post-hero h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+    .post-hero__subtitle {
+      font-size: 1.02rem; color: rgba(255,255,255,0.85);
+      line-height: 1.6; max-width: 760px;
+    }
+
+    /* ═══════════════════════════════════════════════
+       Article body
+    ═══════════════════════════════════════════════ */
+    main { padding: 40px 0 64px; }
+
+    h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.55rem; font-weight: 700;
+      color: var(--clr-text);
+      margin: 36px 0 14px;
+      line-height: 1.25;
+    }
+    h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.05rem; font-weight: 700;
+      color: var(--clr-text);
+      margin: 22px 0 10px;
+    }
+    h4 {
+      font-size: 0.95rem; font-weight: 700;
+      color: var(--clr-text);
+      margin: 12px 0 8px;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid var(--clr-border);
+      margin: 36px 0;
+    }
+    ul, ol { margin: 0 0 14px 22px; padding: 0; }
+    ul li, ol li { margin-bottom: 6px; line-height: 1.6; }
+    strong { color: var(--clr-text); font-weight: 600; }
+    em { font-style: italic; }
+    .muted { color: var(--clr-muted); font-size: 0.88rem; }
+
+    /* ── Callouts ── */
+    .callout {
+      background: var(--clr-surface);
+      border: 1px solid var(--clr-border);
+      border-left: 4px solid var(--cat-hae);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      margin: 18px 0;
+      box-shadow: var(--shadow-xs);
+    }
+    .callout h3 { margin-top: 0; color: var(--cat-hae); }
+    .callout--bottom-line {
+      background: var(--cat-hae-tint);
+      border-left-color: var(--cat-hae);
+    }
+    .callout--bottom-line h3 {
+      font-size: 0.78rem;
+      font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--cat-hae);
+      margin-bottom: 10px;
+    }
+    .callout--appraisal {
+      background: var(--clr-surface-alt);
+      border: 1px solid var(--clr-border-light);
+      border-left: 4px solid var(--clr-muted);
+      font-size: 0.92rem;
+      color: var(--clr-text-secondary);
+      line-height: 1.6;
+    }
+    .callout--appraisal.callout--warn {
+      background: var(--clr-warn-tint);
+      border-left-color: var(--clr-warn);
+    }
+    .callout--practice {
+      background: var(--cat-hae-tint);
+      border: 1.5px solid var(--cat-hae);
+      border-left-width: 4px;
+    }
+    .callout--practice h3, .callout--practice strong { color: var(--cat-hae-dark); }
+    .callout--tool {
+      background: #f3f9f6;
+      border: 1px solid #cfe5da;
+      border-left: 4px solid var(--cat-hae);
+    }
+
+    /* ── TOC ── */
+    .post-toc {
+      background: var(--clr-surface);
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius-md);
+      padding: 14px 18px;
+      font-size: 0.86rem;
+      color: var(--clr-muted);
+      line-height: 1.9;
+      margin: 18px 0;
+    }
+    .post-toc a {
+      color: var(--cat-hae);
+      font-weight: 500;
+    }
+
+    /* ── PICO grid ── */
+    .pico-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 12px 0 18px;
+    }
+    .pico-grid > div {
+      background: var(--clr-surface-alt);
+      border: 1px solid var(--clr-border-light);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      font-size: 0.88rem;
+      line-height: 1.5;
+      color: var(--clr-text-secondary);
+    }
+    .pico-grid > div strong {
+      display: inline-block;
+      min-width: 18px;
+      color: var(--cat-hae);
+      font-weight: 700;
+      margin-right: 4px;
+    }
+
+    /* ── Trial accordion ── */
+    .trial-block {
+      background: var(--clr-surface);
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius-md);
+      padding: 0;
+      margin: 16px 0;
+      box-shadow: var(--shadow-xs);
+      overflow: hidden;
+    }
+    .trial-block summary {
+      cursor: pointer;
+      padding: 14px 20px;
+      background: var(--clr-surface-alt);
+      font-size: 0.94rem;
+      font-weight: 600;
+      color: var(--clr-text);
+      border-bottom: 1px solid var(--clr-border);
+      list-style: none;
+      position: relative;
+      padding-right: 40px;
+    }
+    .trial-block summary::-webkit-details-marker { display: none; }
+    .trial-block summary::after {
+      content: '▸';
+      position: absolute;
+      right: 18px; top: 50%;
+      transform: translateY(-50%);
+      color: var(--cat-hae);
+      font-size: 0.9rem;
+      transition: transform var(--ease);
+    }
+    .trial-block[open] summary::after { transform: translateY(-50%) rotate(90deg); }
+    .trial-block summary em { font-style: italic; color: var(--clr-text-secondary); font-weight: 500; }
+    .trial-block > *:not(summary) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .trial-block > *:first-of-type:not(summary) { padding-top: 16px; }
+    .trial-block > *:last-child { padding-bottom: 18px; }
+    .trial-block h3 { margin-top: 14px; }
+
+    /* ── Tables ── */
+    .table-wrap { overflow-x: auto; margin: 14px 0 18px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      background: var(--clr-surface);
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+    }
+    thead th {
+      background: var(--cat-hae);
+      color: #fff;
+      padding: 10px 12px;
+      text-align: left;
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+    tbody td {
+      padding: 9px 12px;
+      border-bottom: 1px solid var(--clr-border-light);
+      vertical-align: top;
+      line-height: 1.5;
+      color: var(--clr-text-secondary);
+    }
+    tbody tr:nth-child(even) { background: var(--clr-surface-alt); }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody td strong { color: var(--clr-text); }
+
+    /* ── Evidence badge ── */
+    .evidence-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: #fff;
+      background: var(--cat-hae);
+      margin-top: 12px;
+    }
+    .evidence-1A { background: var(--cat-hae); }
+    .evidence-1B { background: var(--cat-hae); opacity: 0.85; }
+    .evidence-2B { background: var(--clr-muted); }
+
+    /* ── Calculator ── */
+    .calculator {
+      background: var(--clr-surface);
+      border: 1.5px solid var(--cat-hae);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      margin: 18px 0;
+      box-shadow: var(--shadow-sm);
+    }
+    .calculator h4 {
+      color: var(--cat-hae);
+      margin-top: 0; margin-bottom: 6px;
+      font-size: 1rem;
+    }
+    .calculator form {
+      display: flex; flex-direction: column; gap: 8px;
+      margin: 12px 0;
+    }
+    .calculator label {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 0.92rem;
+      color: var(--clr-text-secondary);
+      cursor: pointer;
+      padding: 6px 0;
+    }
+    .calculator label input[type="checkbox"] {
+      flex-shrink: 0;
+      width: 18px; height: 18px;
+      margin-top: 2px;
+      accent-color: var(--cat-hae);
+      cursor: pointer;
+    }
+    .calculator button {
+      align-self: flex-start;
+      background: var(--cat-hae);
+      color: #fff;
+      border: none;
+      padding: 9px 18px;
+      border-radius: var(--radius-sm);
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background var(--ease);
+      font-family: inherit;
+    }
+    .calculator button:hover { background: var(--cat-hae-dark); }
+    .calculator__result {
+      margin-top: 12px;
+      padding: 12px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.92rem;
+      line-height: 1.55;
+      background: var(--clr-surface-alt);
+      color: var(--clr-text-secondary);
+      border-left: 4px solid var(--clr-muted);
+    }
+    .calculator__result--low {
+      background: #e8f5ee;
+      border-left-color: #166534;
+      color: #14532d;
+    }
+    .calculator__result--mid {
+      background: #fff4e1;
+      border-left-color: var(--clr-warn);
+      color: #78350f;
+    }
+    .calculator__result--high {
+      background: #fde8ea;
+      border-left-color: #991b1b;
+      color: #7f1d1d;
+    }
+
+    /* ── Post footer ── */
+    .post-footer {
+      margin-top: 36px;
+      padding: 18px 20px;
+      background: var(--clr-surface-alt);
+      border: 1px solid var(--clr-border-light);
+      border-radius: var(--radius-md);
+      font-size: 0.86rem;
+      color: var(--clr-muted);
+    }
+    .post-footer p { margin-bottom: 8px; }
+    .post-footer p:last-child { margin-bottom: 0; }
+
+    /* ── Site footer ── */
+    footer.site-footer {
+      background: var(--clr-text);
+      color: rgba(255,255,255,0.55);
+      padding: 32px 0;
+    }
+    .footer-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 24px; flex-wrap: wrap;
+    }
+    .footer-brand .brand-name { color: rgba(255,255,255,0.85); }
+    .footer-brand .brand-tagline { color: rgba(255,255,255,0.4); }
+    .footer-note { font-size: 0.78rem; line-height: 1.6; text-align: right; }
+
+    @media (max-width: 860px) {
+      .pico-grid { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+      .footer-note { text-align: left; }
+    }
+    @media (max-width: 640px) {
+      .nav-links a:not(.nav-cta):not(.active) { display: none; }
+      .nav-toggle {
+        display: inline-flex; align-items: center; justify-content: center;
+        background: none; border: 1px solid var(--clr-border); border-radius: 6px;
+        padding: 6px 8px; cursor: pointer; color: var(--clr-primary);
+      }
+      .nav { position: relative; }
+      .nav-links {
+        position: absolute; top: 58px; right: 0; left: 0;
+        display: none; flex-direction: column; align-items: stretch;
+        background: #fff; border: 1px solid var(--clr-border);
+        border-radius: 10px; padding: 10px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04);
+        gap: 2px; z-index: 201;
+      }
+      .nav.nav-open .nav-links { display: flex; }
+      .nav-links a:not(.nav-cta) { display: block; padding: 10px 12px; border-radius: 6px; }
+      .nav-links .nav-cta { margin-top: 6px; text-align: center; }
+    }
+  </style>
+
+  <!-- ── Favicons / Web Manifest ── -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#7a1f2b" />
+  <link rel="stylesheet" media="print" href="/print.css" />
+</head>
+
+<body>
+
+  <!-- ═══ HEADER ═══════════════════════════════════ -->
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <a href="/" class="brand">
+          <img src="/logo.png" alt="Mohsin Haematology Academy logo">
+          <div class="brand-text">
+            <div class="brand-name">Mohsin Haematology Academy</div>
+            <div class="brand-tagline">Clinical Education &amp; Digital Tools</div>
+          </div>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" onclick="var n=this.closest('.nav');var o=n.classList.toggle('nav-open');this.setAttribute('aria-expanded',o);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <div class="nav-links">
+          <a href="/tools">Tools</a>
+          <a href="/guidelines">Guidelines</a>
+          <a href="/education">Education</a>
+          <a href="/journal-club" class="active">Journal Club</a>
+          <a href="/about">About</a>
+          <a href="/haemcalc" class="nav-cta">Open HaemCalc</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ═══ POST HERO ═════════════════════════════════ -->
+  <section class="post-hero">
+    <div class="container">
+      <span class="post-hero__category">Haemostasis &amp; Thrombosis · Evidence Review</span>
+      <h1>Extended Anticoagulation in Unprovoked VTE</h1>
+      <p class="post-hero__subtitle">Balancing recurrence risk against bleeding risk after the first months of treatment. AMPLIFY-EXT, EINSTEIN CHOICE, and the risk stratification tools (HERDOO2, DASH, Vienna) that can support, but not replace, shared clinical decision-making.</p>
+    </div>
+  </section>
+
+  <!-- ═══ MAIN ARTICLE ══════════════════════════════ -->
+  <main>
+    <article class="container">
+
+      <div class="callout callout--bottom-line">
+        <h3>Bottom line first</h3>
+        <p>After 3 to 6 months of standard anticoagulation for a first unprovoked VTE, the question is no longer <em>"DOAC or warfarin?"</em>. It is <em>"continue or stop?"</em>. Two large RCTs answered the first half of the question:</p>
+        <ul>
+          <li><strong>Apixaban 2.5 mg BD</strong> (AMPLIFY-EXT) reduced recurrence by about 7 percentage points versus placebo over 12 months with no increase in major bleeding.</li>
+          <li><strong>Rivaroxaban 10 mg OD</strong> (EINSTEIN CHOICE) reduced recurrence by about 3 percentage points versus aspirin 100 mg with no increase in major bleeding.</li>
+        </ul>
+        <p>For the second half, <em>who might reasonably stop</em>, clinical prediction tools can support the discussion, but they should not replace clinical judgement, bleeding-risk assessment, patient preference, or local thrombosis policy. HERDOO2 has the strongest prospective management validation for identifying low-risk women; DASH and Vienna provide additional recurrence-risk estimates but should be used cautiously. Each is shown below with an interactive calculator.</p>
+      </div>
+
+      <hr>
+
+      <h2>How to read this page</h2>
+      <p>The two RCTs are presented first, each in the same structure: <em>PICO, headline numbers, critical appraisal, bottom line</em>. The risk stratification section follows, with a working calculator for HERDOO2 and DASH. The UK practice synthesis, teaching points, and references sit at the bottom.</p>
+
+      <nav class="post-toc">
+        <a href="#trial-amplify">AMPLIFY-EXT</a> ·
+        <a href="#trial-einstein">EINSTEIN CHOICE</a> ·
+        <a href="#risk-tools">Risk stratification tools</a> ·
+        <a href="#herdoo2">HERDOO2 calculator</a> ·
+        <a href="#dash">DASH calculator</a> ·
+        <a href="#vienna">Vienna model</a> ·
+        <a href="#uk-practice">UK practice</a> ·
+        <a href="#teaching">Teaching points</a> ·
+        <a href="#references">References</a>
+      </nav>
+
+      <hr>
+
+      <h2 id="trial-amplify">1. AMPLIFY-EXT (2013) — apixaban vs placebo</h2>
+
+      <details class="trial-block" open>
+        <summary>Agnelli G et al. <em>N Engl J Med</em> 2013;368(8):699–708 · After 6–12 months of standard anticoagulation</summary>
+
+        <h3>PICO</h3>
+        <div class="pico-grid">
+          <div><strong>P</strong> · 2,486 adults with confirmed VTE who had completed 6–12 months of anticoagulation and for whom the decision to continue was in equipoise</div>
+          <div><strong>I</strong> · Apixaban 2.5 mg twice daily, or 5 mg twice daily, for 12 months</div>
+          <div><strong>C</strong> · Placebo for 12 months</div>
+          <div><strong>O</strong> · Symptomatic recurrent VTE or VTE-related death</div>
+        </div>
+
+        <h3>Headline results</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Outcome</th><th>Placebo (n=829)</th><th>Apixaban 2.5 mg BD (n=840)</th><th>Apixaban 5 mg BD (n=813)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Recurrent VTE or VTE death</td><td>73 (8.8%)</td><td>14 (1.7%)</td><td>14 (1.7%)</td></tr>
+              <tr><td>Absolute risk reduction vs placebo</td><td>—</td><td>7.2% (95% CI 5.0–9.3)</td><td>7.0% (95% CI 4.9–9.1)</td></tr>
+              <tr><td>P value vs placebo</td><td>—</td><td>&lt; 0.001</td><td>&lt; 0.001</td></tr>
+              <tr><td>Major bleeding</td><td>0.5%</td><td>0.2%</td><td>0.1%</td></tr>
+              <tr><td>Clinically relevant non-major bleeding</td><td>2.3%</td><td>3.0%</td><td>4.2%</td></tr>
+              <tr><td>All-cause death</td><td>1.7%</td><td>0.8%</td><td>0.5%</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Critical appraisal</h3>
+        <div class="callout callout--appraisal">
+          <strong>Strengths.</strong> Randomised, double-blind, phase III, 12-month treatment, hard outcome. Two apixaban doses were tested against placebo. Recurrence rates were very similar with the lower dose (2.5 mg BD, the thromboprophylactic dose) and the treatment dose (5 mg BD), with numerically less bleeding at the lower dose. Number needed to treat to prevent one recurrent VTE is about 14 over 12 months.<br><br>
+          <strong>Limitations.</strong> The trial was not designed to compare the two apixaban doses against each other, so it does not establish that 2.5 mg BD and 5 mg BD are equivalent. "Clinical equipoise" was an investigator judgement, so the trial enrolled patients who, by definition, were not the highest-risk recurrence cases. The enrolled population included both provoked and unprovoked VTE; when applying the data to a first unprovoked VTE, baseline recurrence risk must still be judged individually. Generalisability to patients with very high recurrence risk (for example active cancer or severe thrombophilia) is limited.
+        </div>
+
+        <h3>Bottom line</h3>
+        <p>For VTE patients in clinical equipoise after 6–12 months of anticoagulation, apixaban 2.5 mg BD for a further 12 months reduces recurrence substantially (from 8.8% to 1.7% in the trial) without increasing major bleeding. Both apixaban doses produced very similar recurrence rates. The 2.5 mg BD dose is the licensed extended-phase dose after completion of initial treatment and is generally preferred for extended secondary prevention when reduced-intensity therapy is appropriate.</p>
+
+        <p><span class="evidence-badge evidence-1A">1A · Phase III RCT</span></p>
+      </details>
+
+      <hr>
+
+      <h2 id="trial-einstein">2. EINSTEIN CHOICE (2017) — rivaroxaban vs aspirin</h2>
+
+      <details class="trial-block">
+        <summary>Weitz JI et al. <em>N Engl J Med</em> 2017;376(13):1211–1222 · After 6–12 months of standard anticoagulation</summary>
+
+        <h3>PICO</h3>
+        <div class="pico-grid">
+          <div><strong>P</strong> · 3,396 adults with VTE who had completed 6–12 months of anticoagulation, in equipoise for continued treatment</div>
+          <div><strong>I</strong> · Rivaroxaban 20 mg once daily, or 10 mg once daily, for 12 months</div>
+          <div><strong>C</strong> · Aspirin 100 mg once daily</div>
+          <div><strong>O</strong> · Symptomatic recurrent fatal or non-fatal VTE</div>
+        </div>
+
+        <h3>Headline results</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Outcome</th><th>Aspirin (n=1131)</th><th>Rivaroxaban 20 mg (n=1107)</th><th>Rivaroxaban 10 mg (n=1127)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Recurrent VTE</td><td>50 (4.4%)</td><td>17 (1.5%)</td><td>13 (1.2%)</td></tr>
+              <tr><td>HR vs aspirin</td><td>—</td><td>0.34 (95% CI 0.20–0.59)</td><td>0.26 (95% CI 0.14–0.47)</td></tr>
+              <tr><td>P value vs aspirin</td><td>—</td><td>&lt; 0.001</td><td>&lt; 0.001</td></tr>
+              <tr><td>Major bleeding</td><td>0.3%</td><td>0.5%</td><td>0.4%</td></tr>
+              <tr><td>Clinically relevant non-major bleeding</td><td>1.8%</td><td>2.7%</td><td>2.0%</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Critical appraisal</h3>
+        <div class="callout callout--appraisal">
+          <strong>Strengths.</strong> Modern three-arm phase III design, tested head-to-head against aspirin (the historical default in some health systems). Both rivaroxaban 10 mg OD and 20 mg OD were superior to aspirin. The trial was not designed to establish superiority of 10 mg over 20 mg; the similar efficacy and low bleeding rate support 10 mg OD as an extended-phase option in suitable patients. Number needed to treat is about 33 over 12 months versus aspirin.<br><br>
+          <strong>Limitations.</strong> No placebo arm. Aspirin is an active comparator with its own modest antithrombotic effect. The "equipoise" entry criterion again excludes the highest-risk patients. The trial population included patients with provoked and unprovoked VTE, so when applying the data to a first unprovoked VTE, baseline recurrence risk must still be judged individually. Follow-up was 12 months only; longer-term data come from registries and post-hoc analyses.
+        </div>
+
+        <h3>Bottom line</h3>
+        <p>Rivaroxaban 10 mg OD reduces recurrent VTE around 3-fold compared with aspirin 100 mg, with bleeding rates only marginally higher. Aspirin is no longer the default for extended VTE prophylaxis in patients who can tolerate a DOAC.</p>
+
+        <p><span class="evidence-badge evidence-1A">1A · Phase III RCT</span></p>
+      </details>
+
+      <hr>
+
+      <h2 id="risk-tools">3. Risk stratification — three tools that support the decision</h2>
+
+      <p>The trials above show that <em>treatment works</em>. They do not identify <em>who needs it</em>. Clinical prediction tools can support that judgement, alongside bleeding-risk assessment and patient preference. Three are in routine use:</p>
+      <ul>
+        <li><strong>HERDOO2:</strong> applies to women only. Identifies low-recurrence-risk women who can be considered for stopping.</li>
+        <li><strong>DASH:</strong> applies to both sexes. Pools four predictors (D-dimer, Age, Sex, Hormones) into a score.</li>
+        <li><strong>Vienna prediction model:</strong> uses sex, location of index VTE, and D-dimer to estimate a continuous recurrence probability.</li>
+      </ul>
+      <p>A practical approach: complete at least 3 months of anticoagulation, then reassess recurrence risk, bleeding risk, treatment tolerance and patient preference. If using a prediction tool, follow the D-dimer timing used by that tool. HERDOO2 uses on-treatment D-dimer; DASH and Vienna use post-treatment D-dimer measurements.</p>
+
+      <hr>
+
+      <h3 id="herdoo2">HERDOO2 — women only</h3>
+
+      <div class="callout callout--tool">
+        <p><strong>HERDOO2</strong> (Rodger 2008, CMAJ) identifies women at low risk of VTE recurrence after a first unprovoked VTE. <strong>The rule does not apply to men</strong>, as no low-risk male subgroup could be defined.</p>
+        <p>Score 1 point for each of the following:</p>
+        <ul>
+          <li><strong>H</strong>yperpigmentation, oedema, or redness of either leg</li>
+          <li><strong>D-dimer</strong> ≥ 250 µg/L while still on anticoagulation</li>
+          <li><strong>O</strong>besity (BMI ≥ 30 kg/m²)</li>
+          <li><strong>O</strong>lder age (≥ 65 years)</li>
+        </ul>
+        <p>The original derivation study measured D-dimer while patients were taking a vitamin K antagonist. The threshold has not been separately derived in patients treated with a DOAC.</p>
+        <ul>
+          <li><strong>Score 0 or 1:</strong> low risk. Annual recurrence was about 1.6% in the derivation study (95% CI 0.3 to 4.6).</li>
+          <li><strong>Score 2 or more:</strong> high risk. Annual recurrence was about 14.1% (95% CI 10.9 to 17.3).</li>
+        </ul>
+        <p>HERDOO2 was prospectively validated in a multinational cohort management study (Rodger 2017, BMJ). In that study, low-risk women who discontinued anticoagulation had recurrent VTE at about 3.0% per patient-year (95% CI 1.8 to 4.8). This is still generally considered low enough to support stopping anticoagulation in appropriately selected women after shared decision-making. Derivation figures such as the 1.6% tend to be more optimistic than prospective validation figures.</p>
+      </div>
+
+      <div class="calculator" id="herdoo2-calc">
+        <h4>HERDOO2 — interactive score</h4>
+        <p class="muted">For female patients with a first unprovoked VTE who have completed initial anticoagulation.</p>
+        <form>
+          <label><input type="checkbox" data-herdoo> Hyperpigmentation, oedema, or redness of either leg</label>
+          <label><input type="checkbox" data-herdoo> D-dimer ≥ 250 µg/L while on anticoagulation</label>
+          <label><input type="checkbox" data-herdoo> BMI ≥ 30 kg/m²</label>
+          <label><input type="checkbox" data-herdoo> Age ≥ 65 years</label>
+          <button type="button" data-herdoo-calc>Calculate score</button>
+        </form>
+        <div class="calculator__result" data-herdoo-result>Select the criteria that apply, then calculate. A score of 0 is a valid result.</div>
+      </div>
+
+      <script>
+      (function(){
+        var calc = document.getElementById('herdoo2-calc');
+        var boxes = calc.querySelectorAll('[data-herdoo]');
+        var btn = calc.querySelector('[data-herdoo-calc]');
+        var out = calc.querySelector('[data-herdoo-result]');
+        btn.addEventListener('click', function(){
+          var score = Array.prototype.filter.call(boxes, function(b){ return b.checked; }).length;
+          if (score <= 1) {
+            out.innerHTML = '<strong>Score ' + score + ' / 4 → LOW RISK.</strong> Annual recurrence was about 1.6% in the derivation study (95% CI 0.3 to 4.6) and about 3.0% per patient-year in the prospective validation study (95% CI 1.8 to 4.8). Discontinuation can be considered after shared decision-making, provided bleeding and recurrence context have been reviewed and there are no additional high-risk features.';
+            out.className = 'calculator__result calculator__result--low';
+          } else {
+            out.innerHTML = '<strong>Score ' + score + ' / 4 → HIGH RISK.</strong> Annual recurrence was about 14.1% (95% CI 10.9 to 17.3). Continuing anticoagulation is generally advised; reduced-intensity DOAC options include apixaban 2.5 mg BD or rivaroxaban 10 mg OD after completion of initial treatment.';
+            out.className = 'calculator__result calculator__result--high';
+          }
+        });
+      })();
+      </script>
+
+      <hr>
+
+      <h3 id="dash">DASH — both sexes</h3>
+
+      <div class="callout callout--tool">
+        <p><strong>DASH</strong> (Tosetto 2012, JTH) pools four predictors into a single score, derived from 1,818 patients with unprovoked VTE.</p>
+        <ul>
+          <li><strong>D</strong>-dimer abnormal after stopping anticoagulation → <strong>+2</strong></li>
+          <li><strong>A</strong>ge &lt; 50 years → <strong>+1</strong></li>
+          <li><strong>S</strong>ex (male) → <strong>+1</strong></li>
+          <li><strong>H</strong>ormone-associated VTE (in women) → <strong>−2</strong></li>
+        </ul>
+        <ul>
+          <li><strong>Score ≤ 1</strong> → annual recurrence about <strong>3.1%</strong> (95% CI 2.3–3.9)</li>
+          <li><strong>Score 2</strong> → annual recurrence about <strong>6.4%</strong> (95% CI 4.8–7.9)</li>
+          <li><strong>Score ≥ 3</strong> → annual recurrence about <strong>12.3%</strong> (95% CI 9.9–14.7)</li>
+        </ul>
+        <p>ROC AUC 0.71. Applies to both sexes. About half of patients with a first unprovoked VTE fall into the score ≤ 1 group.</p>
+      </div>
+
+      <div class="calculator" id="dash-calc">
+        <h4>DASH — interactive score</h4>
+        <form>
+          <label><input type="checkbox" data-dash data-value="2"> D-dimer abnormal after stopping anticoagulation (+2)</label>
+          <label><input type="checkbox" data-dash data-value="1"> Age &lt; 50 years (+1)</label>
+          <label><input type="checkbox" data-dash data-value="1"> Male sex (+1)</label>
+          <label><input type="checkbox" data-dash data-value="-2"> Hormone-associated VTE (women only) (−2)</label>
+          <button type="button" data-dash-calc>Calculate score</button>
+        </form>
+        <div class="calculator__result" data-dash-result>Select the criteria that apply, then calculate. A score of 0 is a valid result.</div>
+      </div>
+
+      <script>
+      (function(){
+        var calc = document.getElementById('dash-calc');
+        var boxes = calc.querySelectorAll('[data-dash]');
+        var btn = calc.querySelector('[data-dash-calc]');
+        var out = calc.querySelector('[data-dash-result]');
+        btn.addEventListener('click', function(){
+          var score = 0;
+          Array.prototype.forEach.call(boxes, function(b){
+            if (b.checked) { score += parseInt(b.dataset.value, 10); }
+          });
+          var label, cls;
+          if (score <= 1) { label = 'LOW (about 3.1% annual recurrence)'; cls = 'low'; }
+          else if (score === 2) { label = 'INTERMEDIATE (about 6.4% annual recurrence)'; cls = 'mid'; }
+          else { label = 'HIGH (about 12.3% annual recurrence)'; cls = 'high'; }
+          out.innerHTML = '<strong>Score ' + score + ' → ' + label + '.</strong> Use alongside bleeding-risk assessment and shared decision-making. Prediction tools should not be the sole basis for stopping or continuing anticoagulation.';
+          out.className = 'calculator__result calculator__result--' + cls;
+        });
+      })();
+      </script>
+
+      <hr>
+
+      <h3 id="vienna">Vienna prediction model — continuous risk estimate</h3>
+
+      <div class="callout callout--tool">
+        <p><strong>Vienna prediction model</strong> (Eichinger 2010, Circulation) was derived from 929 patients followed for a median of 43 months after stopping anticoagulation. The model excludes patients with a strong thrombophilic defect (inhibitor deficiency, lupus anticoagulant, homozygous or combined defects).</p>
+        <p>Independent predictors of recurrence:</p>
+        <ul>
+          <li><strong>Male sex:</strong> HR 1.90 (95% CI 1.31–2.75) vs female</li>
+          <li><strong>Proximal DVT:</strong> HR 2.08 (95% CI 1.16–3.74) vs distal</li>
+          <li><strong>Pulmonary embolism:</strong> HR 2.60 (95% CI 1.49–4.53) vs distal DVT</li>
+          <li><strong>D-dimer (per doubling):</strong> HR 1.27 (95% CI 1.08–1.51)</li>
+        </ul>
+        <p>The original publication provides a nomogram. A web-based calculator implementing a later recalibration of the model is available at <a href="https://clinicalbiometrics.shinyapps.io/VPM_lowrisk/" target="_blank" rel="noopener">clinicalbiometrics.shinyapps.io/VPM_lowrisk</a>. Because the online tool reflects an updated model, results may differ slightly from the 2010 nomogram. Unlike HERDOO2 (binary) and DASH (categorical), the Vienna model returns a continuous probability, which can help shared-decision conversations where the patient wants a specific number.</p>
+      </div>
+
+      <hr>
+
+      <h2>Comparison of the three risk tools</h2>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Tool</th><th>Population</th><th>Inputs</th><th>Output</th><th>Best used for</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>HERDOO2</strong></td><td>Women only</td><td>4 binary items, includes D-dimer on AC</td><td>Low vs high risk (binary)</td><td>Quickest decision rule; strongest prospective management validation</td></tr>
+            <tr><td><strong>DASH</strong></td><td>Both sexes</td><td>4 items, includes D-dimer off AC</td><td>3 risk strata</td><td>Mixed-sex outpatient clinic</td></tr>
+            <tr><td><strong>Vienna</strong></td><td>Both sexes (no strong thrombophilia)</td><td>Sex, location, D-dimer</td><td>Continuous probability</td><td>Patients wanting a specific number, shared decision-making</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr>
+
+      <h2 id="uk-practice">What this means for UK practice</h2>
+
+      <div class="callout callout--practice">
+        <p>NICE NG158 recommends anticoagulation for at least 3 months for confirmed proximal DVT or PE. After 3 months, reassess the benefits and risks of continuing, stopping, or changing anticoagulation. For unprovoked proximal DVT or PE, continuing anticoagulation beyond 3 months should be considered, balancing recurrence risk, bleeding risk, treatment tolerance, renal function, comorbidity, patient preference, and local thrombosis policy.</p>
+
+        <p><strong>A practical approach:</strong></p>
+        <ol>
+          <li>Confirm whether the event was provoked or unprovoked, and whether there are persistent risk factors.</li>
+          <li>Review bleeding risk, renal function, weight, drug interactions, adherence, and patient preference.</li>
+          <li><strong>Bleeding risk:</strong> assess clinically and consider HAS-BLED, as recommended by NICE NG158, for people having anticoagulation for unprovoked proximal DVT or PE. NICE advises discussing stopping anticoagulation if the HAS-BLED score is 4 or more and cannot be modified. RIETE may be mentioned as an alternative specialist bleeding-risk model, but it should not be presented as the NICE-recommended tool.</li>
+          <li>If considering stopping after unprovoked VTE, do not rely solely on prediction tools. Use HERDOO2, DASH, or Vienna only as adjuncts, and follow the D-dimer timing used in the original model.</li>
+          <li>If extended anticoagulation is chosen and reduced-intensity DOAC is appropriate, options include apixaban 2.5 mg BD after 6 months of treatment, or rivaroxaban 10 mg OD after at least 6 months of treatment.</li>
+          <li>Review patients on long-term anticoagulation or aspirin at least annually.</li>
+        </ol>
+
+        <p><strong>A few practical notes:</strong></p>
+        <ul>
+          <li><strong>Aspirin is not the default fallback.</strong> EINSTEIN CHOICE showed rivaroxaban 10 mg OD is roughly three times more effective than aspirin 100 mg with only marginally more bleeding.</li>
+          <li><strong>Cancer-associated VTE</strong> is a different track. These patients usually continue full-dose anticoagulation while cancer is active (Caravaggio, Hokusai-VTE Cancer, SELECT-D). NICE NG158 gives specific guidance.</li>
+          <li><strong>Provoked VTE</strong> (surgery, immobilisation, oestrogen) has a much lower recurrence risk and usually stops at 3 months. The tools above are for <em>unprovoked</em> events.</li>
+          <li><strong>Annual review.</strong> Patients on indefinite anticoagulation should have an annual review of bleeding risk, renal function, weight, and adherence.</li>
+          <li><strong>Document the conversation.</strong> Indefinite anticoagulation is a long-term commitment; the rationale, alternatives, and the patient's preference should be in the notes.</li>
+        </ul>
+      </div>
+
+      <hr>
+
+      <h2 id="teaching">Teaching points</h2>
+
+      <ol>
+        <li><strong>"Extended" anticoagulation does not mean "lifelong". It means "indefinite, reviewed annually."</strong> Patients who can stop one year often cannot another year if bleeding risk rises.</li>
+        <li><strong>Lower-intensity DOAC dosing was a deliberate trial design, and it works.</strong> In the extended-phase trials, apixaban 2.5 mg BD and rivaroxaban 10 mg OD produced recurrence rates similar to the full-treatment doses, with numerically less bleeding. Neither trial was designed to compare the two doses head-to-head, so equivalence is not formally established. The reduced-intensity dose is the licensed extended-phase option after completion of initial treatment and is generally preferred when extended therapy is appropriate.</li>
+        <li><strong>D-dimer is central to risk stratification.</strong> Both HERDOO2 (on treatment) and DASH/Vienna (off treatment) depend on it. A negative D-dimer 3–4 weeks after stopping is reassuring; a positive D-dimer should prompt reassessment.</li>
+        <li><strong>Men with a first unprovoked VTE have a notably higher recurrence risk than women.</strong> This is a robust finding across HERDOO2, DASH, and Vienna. The decision to stop in a man with a first unprovoked PE should be made carefully; many will stay on indefinite anticoagulation.</li>
+        <li><strong>Aspirin still has a role, but it is a small one.</strong> Some patients refuse or cannot tolerate a DOAC; aspirin reduces recurrence by about a third (WARFASA, ASPIRE) and is reasonable in that situation. It is no longer the first-line extended therapy.</li>
+      </ol>
+
+      <hr>
+
+      <h2>Discussion questions</h2>
+      <ol>
+        <li>A 42-year-old man presents 6 months after a first unprovoked PE. He is on rivaroxaban 20 mg OD and asks whether he can stop. How would you frame the conversation? Which tool would you use?</li>
+        <li>A 67-year-old woman with a BMI of 32 and a recent left-leg unprovoked DVT has completed 6 months of apixaban. Her D-dimer on treatment is 180 µg/L and her legs are clinically normal. Walk through HERDOO2 step by step: which criteria does she meet, what is her score, and what would you recommend? (Hint: it is not as low-risk as the low D-dimer might suggest.)</li>
+        <li>Why does EINSTEIN CHOICE compare rivaroxaban with aspirin rather than placebo? What ethical and practical reasoning sits behind that design choice?</li>
+      </ol>
+
+      <hr>
+
+      <h2 id="references">References</h2>
+
+      <p class="muted"><em>Bibliographic details verified against PubMed, May 2026.</em></p>
+
+      <ol>
+        <li>Agnelli G, Buller HR, Cohen A, et al. Apixaban for extended treatment of venous thromboembolism. <em>N Engl J Med.</em> 2013;368(8):699–708. PMID: 23216615 · <a href="https://doi.org/10.1056/NEJMoa1207541" target="_blank" rel="noopener">DOI: 10.1056/NEJMoa1207541</a></li>
+        <li>Weitz JI, Lensing AWA, Prins MH, et al. Rivaroxaban or aspirin for extended treatment of venous thromboembolism. <em>N Engl J Med.</em> 2017;376(13):1211–1222. PMID: 28316279 · <a href="https://doi.org/10.1056/NEJMoa1700518" target="_blank" rel="noopener">DOI: 10.1056/NEJMoa1700518</a></li>
+        <li>Rodger MA, Kahn SR, Wells PS, et al. Identifying unprovoked thromboembolism patients at low risk for recurrence who can discontinue anticoagulant therapy. <em>CMAJ.</em> 2008;179(5):417–426. PMID: 18725614 · <a href="https://doi.org/10.1503/cmaj.080493" target="_blank" rel="noopener">DOI: 10.1503/cmaj.080493</a></li>
+        <li>Rodger MA, Le Gal G, Anderson DR, et al. Validating the HERDOO2 rule to guide treatment duration for women with unprovoked venous thrombosis: multinational prospective cohort management study. <em>BMJ.</em> 2017;356:j1065. PMID: 28314711 · <a href="https://doi.org/10.1136/bmj.j1065" target="_blank" rel="noopener">DOI: 10.1136/bmj.j1065</a></li>
+        <li>Tosetto A, Iorio A, Marcucci M, et al. Predicting disease recurrence in patients with previous unprovoked venous thromboembolism: a proposed prediction score (DASH). <em>J Thromb Haemost.</em> 2012;10(6):1019–1025. PMID: 22489957 · <a href="https://doi.org/10.1111/j.1538-7836.2012.04735.x" target="_blank" rel="noopener">DOI: 10.1111/j.1538-7836.2012.04735.x</a></li>
+        <li>Eichinger S, Heinze G, Jandeck LM, Kyrle PA. Risk assessment of recurrence in patients with unprovoked deep vein thrombosis or pulmonary embolism: the Vienna prediction model. <em>Circulation.</em> 2010;121(14):1630–1636. PMID: 20351233 · <a href="https://doi.org/10.1161/CIRCULATIONAHA.109.925214" target="_blank" rel="noopener">DOI: 10.1161/CIRCULATIONAHA.109.925214</a></li>
+      </ol>
+
+      <div class="post-footer">
+        <p><strong>Educational use only.</strong> Content does not replace clinical judgement or local thrombosis policy.</p>
+        <p>These calculators support structured discussion only. They should not be used as the sole basis for stopping or continuing anticoagulation.</p>
+        <p>© 2025–2026 Dr Muhammad Mohsin · Mohsin Haematology Academy</p>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- ═══ SITE FOOTER ═══════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand brand">
+          <div class="brand-text">
+            <div class="brand-name">Mohsin Haematology Academy</div>
+            <div class="brand-tagline">Clinical Education &amp; Digital Tools</div>
+          </div>
+        </div>
+        <div class="footer-note">
+          <strong>Educational use only.</strong><br>
+          Content does not replace clinical judgement or professional guidelines.<br>
+          <span style="font-size:0.72rem; color:rgba(255,255,255,0.4); opacity:0.8;">&copy; 2025–2026 Dr Muhammad Mohsin &middot; Contributor: Muhammad Moaaz &middot; <a href="/contact" style="color:rgba(255,255,255,0.55);text-decoration:underline;opacity:0.7;">Contact</a> &middot; <a href="/governance" style="color:rgba(255,255,255,0.55);text-decoration:underline;opacity:0.7;">Clinical Governance</a> &middot; <a href="/legal/ip-notice/" style="color:rgba(255,255,255,0.55);text-decoration:underline;opacity:0.7;">IP &amp; Copyright</a> &middot; <a href="/legal/terms/" style="color:rgba(255,255,255,0.55);text-decoration:underline;opacity:0.7;">Terms</a> &middot; <a href="/legal/disclaimer/" style="color:rgba(255,255,255,0.55);text-decoration:underline;opacity:0.7;">Disclaimer</a> &middot; <a href="/legal/privacy/" style="color:rgba(255,255,255,0.55);text-decoration:underline;opacity:0.7;">Privacy</a></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/legal/cookie-banner.js" defer></script>
+</body>
+</html>
