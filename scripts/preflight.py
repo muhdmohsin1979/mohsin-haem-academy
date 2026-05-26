@@ -165,6 +165,12 @@ def extract_internal_links(raw: str, suffix: str) -> list[str]:
 def check_internal_link(src_file: Path, url: str, repo_root: Path) -> tuple[bool, str]:
     """Resolve `url` relative to `src_file` (or repo_root if absolute) and
     check whether a file (or a folder's index.html) exists on disk.
+
+    Cloudflare Pages strips the .html extension when serving, so a URL like
+    `/journal-club` resolves to `journal-club.html` at the repo root even
+    when a sibling `journal-club/` folder also exists. We mirror that
+    behaviour: when a folder exists but contains no index.html, we fall
+    through to the `<name>.html` sibling check before reporting a miss.
     """
     if url.startswith("/"):
         target = (repo_root / url.lstrip("/")).resolve()
@@ -177,6 +183,12 @@ def check_internal_link(src_file: Path, url: str, repo_root: Path) -> tuple[bool
         index = target / "index.html"
         if index.is_file():
             return True, "dir+index.html"
+        # An empty folder with a sibling <name>.html still resolves on
+        # Cloudflare Pages — extension-stripping routing serves the .html
+        # file. Only fall through when the URL did NOT end with an
+        # explicit trailing slash (which would mean "I want the folder").
+        if not url.endswith("/") and target.with_suffix(".html").is_file():
+            return True, "file (.html implied at folder sibling)"
         return False, f"missing {index}"
 
     if target.is_file():

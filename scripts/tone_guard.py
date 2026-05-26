@@ -48,10 +48,38 @@ BANNED_WORDS = [
     "unravel", "paramount", "characterized", "significant",
 ]
 
+# Whitelist of trial-name proper nouns (case-insensitive) that contain a
+# banned word as a stem. These are study identifiers, not filler words, and
+# must pass the tone guard. Add new trial names here as needed — keep the
+# list small and review additions in PR. Matching is exact on the full
+# hyphenated/uppercase token, not on substrings.
+ALLOWED_PROPER_NOUNS = {
+    "AMPLIFY-EXT",   # apixaban extended-treatment trial — Agnelli, NEJM 2013
+}
+
 # Strip HTML tags and script/style blocks before scanning, so a word
 # that appears only as a CSS class name or tag attribute does not trigger.
 TAG_RE = re.compile(r"<[^>]+>", re.DOTALL)
 SCRIPT_RE = re.compile(r"<(script|style)\b[^>]*>.*?</\1>", re.DOTALL | re.IGNORECASE)
+
+
+def _is_allowed_proper_noun(text: str, match_start: int, match_end: int) -> bool:
+    """Return True if the matched banned-word is part of a whitelisted
+    proper-noun token (e.g. AMPLIFY-EXT).
+
+    Expands the match span outward through `[A-Za-z]` and `-` characters,
+    then checks the resulting upper-case token against ALLOWED_PROPER_NOUNS.
+    A token like "AMPLIFY-EXT" is not a banned word; the filler verb
+    "amplify" still is.
+    """
+    s = match_start
+    while s > 0 and (text[s - 1] == "-" or text[s - 1].isalpha()):
+        s -= 1
+    e = match_end
+    while e < len(text) and (text[e] == "-" or text[e].isalpha()):
+        e += 1
+    token = text[s:e].upper()
+    return token in ALLOWED_PROPER_NOUNS
 
 
 def extract_visible_text(raw: str, suffix: str) -> str:
@@ -82,6 +110,8 @@ def scan_file(path: Path) -> list[tuple[int, str, str]]:
 
     for lineno, line in enumerate(lines, 1):
         for match in pattern.finditer(line):
+            if _is_allowed_proper_noun(line, match.start(), match.end()):
+                continue
             hits.append((lineno, match.group(0), line.strip()))
     return hits
 
@@ -157,6 +187,8 @@ def scan_diff(diff_path: Path) -> tuple[int, int]:
             else:
                 scan_text = added
             for m in pattern.finditer(scan_text):
+                if _is_allowed_proper_noun(scan_text, m.start(), m.end()):
+                    continue
                 print(f"{current_file}:{new_lineno}: banned word "
                       f"'{m.group(0)}' — {added.strip()}")
                 hits += 1
