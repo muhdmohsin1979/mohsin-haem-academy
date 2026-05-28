@@ -6,18 +6,21 @@ The locked plan lives in `MHA_HaemCalc_12-Month_Plan.docx`. That document is not
 
 ## Current Month
 
-Month [N]: [Track A focus]
-
-(Update at the start of each month. Months run from the 17th. Month 1 began 17 May 2026.)
+Month 1: Audit and tidy (observation only, fix nothing). 17 May to 16 Jun 2026.
 
 ## Last Session
 
-Date: [YYYY-MM-DD]
-Month: [N]
-Track A focus: [focus]
+Date: 2026-05-28
+Month: 1
+Track A focus: Audit and tidy (observation only)
 What was done:
-- [item]
+- Created the six companion files under /.plan/ via PR #56 (scaffold/plan-files).
+- Logged seven Year 2 candidate entries in Year2-Ideas.md.
+- Added two pending decisions to Decisions.md (testing framework, analytics platform).
+- Rejected the _routes.json approach after checking Cloudflare docs; used a dot-prefixed /.plan/ folder, which Cloudflare Pages does not serve.
+- Cleared two tone-guard banned words (significant, valuable) in Year2-Ideas.md before all checks passed.
 Outstanding items:
-- [item or "None"]
+- PR #56 awaiting human review and merge. No approve/merge by automated agents.
+- Note: tone guard scans all added lines, including /.plan/ companion files, so the avoid-list applies there too.
 Next step:
-- [item]
+- Merge PR #56 after review, then begin Week 2 of Month 1 (HaemCalc Pro calculator inventory plus reversal page list).
