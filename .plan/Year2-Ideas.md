@@ -24,7 +24,7 @@ If an existing entry predates this format and has no recorded date, the value is
 
 0. **Date spotted:** 28 May 2026
 1. **Issue identified:** HaemCalc is a React single-page application. Individual calculator pages do not have unique, indexable URLs. Search engines cannot index individual calculators as distinct pages.
-2. **Why it matters:** This is a significant organic search gap. Users searching for specific haematology calculators by name cannot find them directly via Google. As the site grows, this limits discoverability and undermines any SEO investment made elsewhere.
+2. **Why it matters:** This is a substantial organic search gap. Users searching for specific haematology calculators by name cannot find them directly via Google. As the site grows, this limits discoverability and undermines any SEO investment made elsewhere.
 3. **Urgency:** Low (does not affect current users; affects growth ceiling)
 4. **Proposed action:** Evaluate React Router hash-based vs history-based routing. Consider server-side rendering (SSR) or static site generation (SSG) for calculator pages. Assess Cloudflare Pages compatibility with SSR options. Full architectural decision required.
 5. **Year 2 candidate:** Yes
@@ -98,6 +98,6 @@ If an existing entry predates this format and has no recorded date, the value is
 1. **Issue identified:** Neither site has a guided first-visit journey. Visitors land on both sites without a clear indication of where to begin. Multiple options compete for attention on the same page with no single dominant call to action.
 2. **Why it matters:** This reflects direct UX feedback from a trusted peer which Dr Mohsin has agreed with. Both sites currently leave first-time visitors to figure it out themselves, affecting conversion, session depth, and professional impression.
 3. **Urgency:** Medium (affects first impressions on both sites; agreed priority)
-4. **Proposed action:** For each site, define the single most valuable action a first-time visitor should take. Add a "New here? Start with this" section or banner to each homepage. Reduce competing CTAs to one primary and one secondary per page. Apply the patient-journey design principle: guide, do not present options.
+4. **Proposed action:** For each site, define the single most useful action a first-time visitor should take. Add a "New here? Start with this" section or banner to each homepage. Reduce competing CTAs to one primary and one secondary per page. Apply the patient-journey design principle: guide, do not present options.
 5. **Year 2 candidate:** Yes
 6. **Two confirmations needed:** No (does not touch locked items; design and content change)
