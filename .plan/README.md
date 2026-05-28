@@ -18,7 +18,7 @@ What was done:
 - Logged seven Year 2 candidate entries in Year2-Ideas.md.
 - Added two pending decisions to Decisions.md (testing framework, analytics platform).
 - Rejected the _routes.json approach after checking Cloudflare docs; used a dot-prefixed /.plan/ folder, which Cloudflare Pages does not serve.
-- Cleared two tone-guard banned words (significant, valuable) in Year2-Ideas.md before all checks passed.
+- Cleared two tone-guard banned-word hits in Year2-Ideas.md before all checks passed (reworded, meaning unchanged).
 Outstanding items:
 - PR #56 awaiting human review and merge. No approve/merge by automated agents.
 - Note: tone guard scans all added lines, including /.plan/ companion files, so the avoid-list applies there too.
