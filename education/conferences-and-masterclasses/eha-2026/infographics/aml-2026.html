@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AML at EHA 2026 · EHA 2026 · MHA</title>
+<style>
+:root{
+  --navy:#1B2A4A; --navy-soft:#28406b; --crimson:#C41E3A; --burgundy:#9E1B32; --burgundy-deep:#7d1426;
+  --ink:#1d2433; --soft:#5a6478; --line:#e3e7ee; --bg:#f6f8fb; --card:#ffffff;
+  --serif:Georgia,'Times New Roman',serif; --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased;}
+.sheet{max-width:920px;margin:0 auto;padding:0 0 40px;}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 22px;background:var(--bg);position:sticky;top:0;z-index:5;border-bottom:1px solid var(--line);}
+.topbar a,.topbar button{font-family:var(--sans);font-size:13px;font-weight:600;text-decoration:none;color:var(--navy);background:#fff;border:1px solid var(--line);border-radius:8px;padding:7px 13px;cursor:pointer;}
+.topbar button:hover,.topbar a:hover{background:#eef2fa;}
+header.band{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-soft) 65%,var(--burgundy-deep) 135%);color:#fff;padding:30px 26px 26px;border-radius:0;}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#F0C4CC;font-weight:700;}
+.wordmark{font-family:var(--serif);font-weight:700;font-size:15px;color:#fff;opacity:.9;margin-bottom:10px;}
+header.band h1{font-family:var(--serif);font-weight:700;font-size:2rem;margin:6px 0 6px;line-height:1.15;}
+header.band p.sub{margin:0;color:#cdd5e6;font-size:14.5px;}
+.stamp{display:inline-block;margin-top:12px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:5px 11px;border-radius:999px;color:#eef;}
+main{padding:24px 26px 0;}
+.flow{display:flex;flex-wrap:nowrap;align-items:stretch;gap:0;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 8px;margin:0 0 24px;overflow-x:auto;box-shadow:0 1px 2px rgba(20,30,55,.05);}
+.fn{flex:1;min-width:135px;display:flex;flex-direction:column;justify-content:center;gap:3px;padding:6px 18px 6px 12px;position:relative;}
+.fn:not(:last-child)::after{content:"\2192";position:absolute;right:1px;top:50%;transform:translateY(-50%);color:var(--burgundy);font-weight:700;font-size:15px;}
+.fn .l{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--burgundy);}
+.fn .v{font-size:13px;color:var(--navy);font-weight:600;line-height:1.35;}
+.cards{display:grid;grid-template-columns:1fr;gap:16px;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;box-shadow:0 1px 3px rgba(20,30,55,.06);}
+.brow{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px;align-items:center;}
+.badge{font-size:10.5px;font-weight:800;letter-spacing:.03em;text-transform:uppercase;padding:4px 9px;border-radius:6px;}
+.b-pos{background:#E7F4EC;color:#1F7A45;} .b-neg{background:#FBEAEC;color:#A8182F;}
+.b-split{background:#FDF1E3;color:#B26B12;} .b-early{background:#ECEEF5;color:#3A4A6B;}
+.b-watch{background:#F0EBF6;color:#6B3FA0;}
+.verdict{font-size:10.5px;font-weight:800;letter-spacing:.03em;text-transform:uppercase;padding:4px 9px;border-radius:6px;}
+.v-yes{background:#E7F4EC;color:#1F7A45;} .v-probably{background:#E8F0FB;color:#2255A4;}
+.v-notyet{background:#FDF1E3;color:#B26B12;} .v-watch{background:#F0EBF6;color:#6B3FA0;}
+.v-no{background:#FBEAEC;color:#A8182F;} .v-already{background:#ECEEF5;color:#3A4A6B;}
+.card h3{font-family:var(--serif);font-size:1.25rem;color:var(--navy);margin:2px 0 3px;}
+.card .meta{font-size:12px;color:#6b7689;margin:0 0 10px;font-weight:600;}
+.card ul{margin:0 0 10px;padding-left:18px;}
+.card li{font-size:13.6px;margin-bottom:4px;}
+.card .why{font-size:13.4px;color:#34425f;background:#f7f9fc;border-left:3px solid var(--crimson);padding:9px 12px;border-radius:0 8px 8px 0;margin:0;}
+.pearl{margin:26px 0 4px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--crimson);border-radius:10px;padding:16px 18px;box-shadow:0 1px 3px rgba(20,30,55,.06);}
+.pearl q{font-family:var(--serif);font-size:1.18rem;color:var(--navy);line-height:1.5;quotes:"\201C" "\201D";}
+.pearl .src{display:block;margin-top:8px;font-size:11.5px;color:#6b7689;font-weight:600;}
+.theme{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;box-shadow:0 1px 3px rgba(20,30,55,.06);}
+.theme h3{font-family:var(--serif);color:var(--navy);font-size:1.12rem;margin:0 0 6px;}
+.theme p{font-size:13.4px;color:#34425f;margin:0 0 11px;}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;}
+.chip{font-size:10.5px;font-weight:700;background:#eef1f6;color:var(--navy);padding:3px 9px;border-radius:6px;}
+.arr{color:var(--burgundy);font-weight:700;}
+.out{font-size:10.5px;font-weight:800;color:var(--burgundy);text-transform:uppercase;letter-spacing:.03em;}
+footer{margin:30px 26px 0;padding-top:16px;border-top:1px solid var(--line);font-size:11.5px;color:#6b7689;}
+footer b{color:var(--navy);}
+@media(max-width:680px){ header.band h1{font-size:1.6rem;} .fn{min-width:150px;} }
+@media print{
+  .topbar{display:none;}
+  body{background:#fff;}
+  header.band{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .card,.flow,.theme,.pearl{break-inside:avoid;box-shadow:none;}
+  @page{margin:12mm;}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a href="../index.html">&larr; Back to EHA 2026 overview</a>
+  <button onclick="window.print()">Print / Save as PDF</button>
+</div>
+<div class="sheet">
+  <header class="band">
+    <div class="wordmark">Mohsin Haematology Academy</div>
+    <span class="eyebrow">EHA 2026 Congress · Stockholm</span>
+    <h1>AML at EHA 2026</h1>
+    <p class="sub">A negative frontline FLT3 readout that confirms current practice, with menin inhibitors and early cellular therapy alongside.</p>
+    <span class="stamp">Fact-checked 16 June 2026</span>
+  </header>
+  <main>
+<div class="flow" role="img" aria-label="summary flow"><div class="fn"><span class="l">Trial</span><span class="v">PASHA: gilteritinib vs midostaurin</span></div><div class="fn"><span class="l">Primary</span><span class="v">OS not met (HR 1.02)</span></div><div class="fn"><span class="l">Secondary</span><span class="v">EFS / RFS trend favours gilteritinib</span></div><div class="fn"><span class="l">Bottom line</span><span class="v">Midostaurin stays standard</span></div></div><div class="cards"><article class="card">
+  <div class="brow"><span class="badge b-neg">Negative</span><span class="verdict v-already">Confirms practice</span></div>
+  <h3>PASHA</h3>
+  <p class="meta">HOVON156/AMLSG28-18 · NCT04027309 · 768 patients</p>
+  <ul><li>Gilteritinib vs midostaurin with intensive chemotherapy, frontline FLT3-mutated AML</li><li>Overall survival not met: HR 1.02 (0.81 to 1.28), P=0.864</li><li>48-month OS 59% vs 60%</li><li>Event-free and relapse-free survival trended in favour of gilteritinib</li></ul>
+  <p class="why"><b>Why it matters:</b> A second-generation FLT3 inhibitor did not improve survival over the first-generation standard, so midostaurin plus chemotherapy remains the frontline option.</p>
+</article><article class="card">
+  <div class="brow"><span class="badge b-early">In practice</span><span class="verdict v-already">Selected use</span></div>
+  <h3>Menin inhibitors</h3>
+  <p class="meta">Revumenib, ziftomenib</p>
+  <ul><li>Revumenib and ziftomenib are already approved in relapsed/refractory AML (KMT2A-rearranged or NPM1-mutant)</li><li>Ziftomenib CR/CRh 21.4% in KOMET-001</li><li>Frontline and combination use remains investigational</li></ul>
+  <p class="why"><b>Why it matters:</b> Menin inhibition is established in selected relapsed disease; the open question is how early in the pathway to use it.</p>
+</article><article class="card">
+  <div class="brow"><span class="badge b-early">Early phase</span><span class="verdict v-no">Phase 1a</span></div>
+  <h3>REVSTAR-123</h3>
+  <p class="meta">RevSTAR-123 / AVC-201 · NCT05949125 · LBA5007 · Wermke</p>
+  <ul><li>Switchable allogeneic CD123 CAR-T, delivered off the shelf</li><li>Complete remissions in CD123-positive relapsed/refractory AML</li><li>No graft-versus-host disease and no ICANS reported</li><li>A continuous targeting module acts as an on/off safety switch</li></ul>
+  <p class="why"><b>Why it matters:</b> An off-the-shelf, controllable CAR-T platform for a disease where conventional CAR-T has struggled with on-target toxicity.</p>
+</article></div><div class="pearl"><q>Not every biologically superior drug improves overall survival.</q><span class="src">PASHA: gilteritinib matched but did not beat midostaurin for OS.</span></div>
+  </main>
+  <footer>
+    <p><b>Mohsin Haematology Academy</b> · EHA 2026 educational infographic. This material is for education and continuing professional development. It is not clinical guidance. Treatment decisions should follow local policy, national guidance, MDT discussion, and current licensing and reimbursement status. Several agents shown are not yet approved; some data are preliminary or based on small numbers. Verify against the primary congress source before clinical use.</p>
+  </footer>
+</div>
+</body>
+</html>

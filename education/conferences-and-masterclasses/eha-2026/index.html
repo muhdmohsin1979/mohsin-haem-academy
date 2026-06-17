@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EHA 2026 Highlights | Mohsin Haematology Academy</title>
+<meta name="description" content="CPD working notes from the EHA Congress, Stockholm, June 11 to 14, 2026. Fact-checked haematology education distilled into practical take-home messages.">
+<style>
+  :root{
+    --navy:#1B2A4A;
+    --navy-soft:#2C3E60;
+    --burgundy:#7A1F2B;
+    --burgundy-deep:#5E1721;
+    --crimson:#C41E3A;
+    --grey-bg:#F4F5F7;
+    --grey-card:#FFFFFF;
+    --grey-line:#E2E4EA;
+    --grey-soft:#EDEFF3;
+    --text:#23262E;
+    --text-soft:#525866;
+    --shadow:0 2px 8px rgba(27,42,74,0.06),0 8px 24px rgba(27,42,74,0.05);
+    --shadow-hover:0 4px 14px rgba(27,42,74,0.10),0 14px 36px rgba(27,42,74,0.09);
+    --radius:14px;
+    --radius-sm:9px;
+    --serif:Georgia,'Times New Roman',serif;
+    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    --maxw:1120px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;scroll-padding-top:84px;}
+  body{
+    margin:0;
+    font-family:var(--sans);
+    color:var(--text);
+    background:var(--grey-bg);
+    line-height:1.62;
+    font-size:16.5px;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:var(--serif);color:var(--navy);line-height:1.25;font-weight:700;letter-spacing:-0.01em;}
+  a{color:var(--burgundy);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;}
+
+  /* ---------- Top bar / breadcrumb ---------- */
+  .topbar{background:var(--navy);color:#fff;font-size:13.5px;}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;min-height:46px;flex-wrap:wrap;gap:6px;padding-top:8px;padding-bottom:8px;}
+  .brand{font-family:var(--serif);font-weight:700;color:#fff;font-size:16px;letter-spacing:.2px;}
+  .brand span{color:#E6B8C0;}
+  .breadcrumb{color:#C7CEDC;font-size:12.5px;}
+  .breadcrumb a{color:#C7CEDC;}
+  .breadcrumb a:hover{color:#fff;}
+  .breadcrumb .sep{margin:0 7px;opacity:.5;}
+  .breadcrumb .here{color:#fff;}
+
+  /* ---------- Sticky in-page nav ---------- */
+  .stickynav{position:sticky;top:0;z-index:40;background:rgba(255,255,255,0.97);backdrop-filter:saturate(160%) blur(6px);border-bottom:1px solid var(--grey-line);box-shadow:0 1px 0 rgba(27,42,74,0.04);}
+  .stickynav .wrap{display:flex;align-items:center;gap:6px;overflow-x:auto;min-height:54px;-webkit-overflow-scrolling:touch;scrollbar-width:thin;}
+  .stickynav a{
+    white-space:nowrap;color:var(--text-soft);font-weight:600;font-size:13.5px;
+    padding:7px 12px;border-radius:999px;transition:.15s;
+  }
+  .stickynav a:hover{background:var(--grey-soft);color:var(--navy);text-decoration:none;}
+  .stickynav a.lead{color:var(--burgundy);}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:
+      radial-gradient(1200px 500px at 80% -10%,rgba(196,30,58,0.18),transparent 60%),
+      linear-gradient(135deg,var(--navy) 0%,var(--navy-soft) 55%,var(--burgundy-deep) 130%);
+    color:#fff;padding:54px 0 60px;
+  }
+  .hero .eyebrow{
+    display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    color:#F0C4CC;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);
+    padding:6px 13px;border-radius:999px;margin-bottom:18px;
+  }
+  .hero h1{color:#fff;font-size:clamp(2.1rem,5vw,3.2rem);margin:0 0 12px;}
+  .hero .sub{font-size:clamp(1.05rem,2.4vw,1.3rem);color:#E7EAF2;font-weight:600;margin:0 0 14px;font-family:var(--serif);font-style:italic;}
+  .hero p.lede{max-width:680px;color:#D6DBE7;font-size:1.02rem;margin:0 0 26px;}
+  .hero-btns{display:flex;flex-wrap:wrap;gap:12px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;
+    padding:12px 20px;border-radius:999px;border:1.5px solid transparent;cursor:pointer;transition:.16s;
+  }
+  .btn-primary{background:var(--crimson);color:#fff;border-color:var(--crimson);}
+  .btn-primary:hover{background:#a8182f;text-decoration:none;}
+  .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,0.4);}
+  .btn-ghost:hover{background:rgba(255,255,255,0.12);text-decoration:none;}
+  .hero-meta{margin-top:26px;display:flex;flex-wrap:wrap;gap:22px;color:#BFC7D8;font-size:13.5px;}
+  .hero-meta b{color:#fff;font-weight:600;}
+
+  /* ---------- Section scaffold ---------- */
+  section{padding:46px 0;}
+  .section-head{margin-bottom:26px;}
+  .section-head .kicker{font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--burgundy);margin-bottom:8px;}
+  .section-head h2{font-size:clamp(1.5rem,3.3vw,2.05rem);margin:0 0 6px;}
+  .section-head p{color:var(--text-soft);max-width:760px;margin:0;}
+
+  /* ---------- Disclaimer ---------- */
+  .disclaimer{
+    background:#FBF6EC;border:1px solid #ECD9B0;border-left:5px solid #C9912B;
+    border-radius:var(--radius);padding:22px 24px;box-shadow:var(--shadow);
+  }
+  .disclaimer h3{color:#8a6310;font-size:1.05rem;margin:0 0 10px;display:flex;align-items:center;gap:9px;}
+  .disclaimer ul{margin:0;padding-left:20px;color:#6b5526;}
+  .disclaimer li{margin:6px 0;}
+  .disclaimer .ico{display:inline-flex;width:24px;height:24px;align-items:center;justify-content:center;background:#C9912B;color:#fff;border-radius:50%;font-size:14px;font-weight:700;}
+
+  /* ---------- Badges ---------- */
+  .badge{
+    display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;letter-spacing:.03em;
+    padding:4px 11px;border-radius:999px;text-transform:uppercase;line-height:1.4;border:1px solid transparent;
+  }
+  .badge::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;opacity:.85;}
+  .b-positive{background:#E7F4EC;color:#1F7A45;border-color:#BFE3CC;}
+  .b-negative{background:#FBEAEC;color:#A8182F;border-color:#F0C3CA;}
+  .b-split{background:#FDF1E3;color:#B26B12;border-color:#F4D9B5;}
+  .b-early{background:#E8F0FB;color:#2255A4;border-color:#C3D6F2;}
+  .b-confirm{background:#ECEEF5;color:#3A4A6B;border-color:#CFD6E6;}
+  .b-watch{background:#F0EBF6;color:#6B3FA0;border-color:#DAccEC;}
+
+  /* ---------- Trial cards grid ---------- */
+  .grid{display:grid;gap:20px;}
+  .grid-3{grid-template-columns:repeat(3,1fr);}
+  .grid-2{grid-template-columns:repeat(2,1fr);}
+
+  .card{
+    background:var(--grey-card);border:1px solid var(--grey-line);border-radius:var(--radius);
+    padding:22px;box-shadow:var(--shadow);transition:.18s;position:relative;display:flex;flex-direction:column;
+  }
+  .card:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px);}
+  .card .badge-row{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:13px;}
+  .card h3{font-size:1.14rem;margin:0 0 4px;}
+  .card .trial-meta{font-size:12.5px;color:var(--text-soft);margin:0 0 12px;font-weight:600;}
+  .card .trial-meta .abs{color:var(--burgundy);}
+  .card p{margin:0 0 12px;color:var(--text);font-size:14.5px;}
+  .card p:last-child{margin-bottom:0;}
+
+  .glance .card h3{font-size:1.05rem;}
+  .glance .card .one-liner{font-size:14px;color:var(--text-soft);}
+
+  /* key numbers */
+  .knums{list-style:none;margin:0 0 12px;padding:0;border-top:1px solid var(--grey-line);}
+  .knums li{display:flex;justify-content:space-between;gap:14px;padding:8px 0;border-bottom:1px solid var(--grey-line);font-size:13.5px;}
+  .knums .lab{color:var(--text-soft);font-weight:600;flex:1;}
+  .knums .val{font-weight:700;color:var(--navy);text-align:right;white-space:nowrap;}
+  .knums .val.pos{color:#1F7A45;}
+  .knums .val.neg{color:#A8182F;}
+
+  /* caution + reflection blocks */
+  .note{border-radius:var(--radius-sm);padding:12px 14px;font-size:13.5px;margin-top:4px;}
+  .note .lab{font-weight:700;display:block;margin-bottom:3px;font-size:12px;letter-spacing:.04em;text-transform:uppercase;}
+  .note-caution{background:#FBEEF0;border:1px solid #F2D1D7;color:#7d2330;}
+  .note-caution .lab{color:#A8182F;}
+  .note-cpd{background:#EEF2FA;border:1px solid #D3DDEF;color:#34425f;margin-top:10px;}
+  .note-cpd .lab{color:var(--navy);}
+
+  /* interpretation */
+  .interp{font-size:14.5px;color:var(--text);}
+  .interp strong{color:var(--navy);}
+
+  /* ---------- Disease section header chip ---------- */
+  .disease-anchor{scroll-margin-top:84px;}
+  .disease-band{
+    display:flex;align-items:center;gap:14px;margin-bottom:8px;
+  }
+  .disease-band .tag{
+    font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+    background:var(--navy);color:#fff;padding:6px 13px;border-radius:8px;
+  }
+  .alt-bg{background:#fff;}
+
+  /* ---------- Infographics ---------- */
+  .info-block{
+    background:var(--grey-card);border:1px solid var(--grey-line);border-radius:var(--radius);
+    box-shadow:var(--shadow);padding:26px;margin-bottom:26px;page-break-inside:avoid;
+  }
+  .info-block > h3{font-size:1.3rem;margin:0 0 4px;display:flex;align-items:center;gap:10px;}
+  .info-block .info-tag{font-size:12px;font-weight:700;color:#fff;background:var(--burgundy);border-radius:7px;padding:4px 10px;font-family:var(--sans);letter-spacing:.05em;}
+  .info-block .info-sub{color:var(--text-soft);font-size:13.5px;margin:0 0 20px;}
+
+  /* A: trials by disease area columns */
+  .ia-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  .ia-col{background:var(--grey-bg);border:1px solid var(--grey-line);border-radius:var(--radius-sm);padding:14px;}
+  .ia-col h4{font-size:13.5px;margin:0 0 10px;color:var(--burgundy);text-transform:uppercase;letter-spacing:.04em;font-family:var(--sans);font-weight:800;}
+  .ia-col ul{margin:0;padding-left:0;list-style:none;}
+  .ia-col li{font-size:12.8px;padding:7px 0;border-bottom:1px dashed var(--grey-line);color:var(--text);line-height:1.4;}
+  .ia-col li:last-child{border-bottom:none;}
+  .ia-col li b{color:var(--navy);display:block;}
+
+  /* B: positive/negative/split columns */
+  .pns{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .pns-col{border-radius:var(--radius-sm);padding:16px;border:1px solid;}
+  .pns-pos{background:#F1F9F4;border-color:#C8E6D3;}
+  .pns-neg{background:#FCF0F2;border-color:#F1CCD3;}
+  .pns-split{background:#FDF6EC;border-color:#F2DDBC;}
+  .pns-col h4{margin:0 0 12px;font-size:14px;font-family:var(--sans);font-weight:800;letter-spacing:.03em;}
+  .pns-pos h4{color:#1F7A45;}
+  .pns-neg h4{color:#A8182F;}
+  .pns-split h4{color:#B26B12;}
+  .pns-col ul{margin:0;padding-left:18px;}
+  .pns-col li{font-size:13px;margin:7px 0;color:var(--text);}
+
+  /* C: MRD flow */
+  .mrd-flow{display:flex;flex-wrap:wrap;gap:12px;align-items:stretch;}
+  .mrd-node{flex:1;min-width:150px;background:linear-gradient(160deg,var(--navy),var(--navy-soft));color:#fff;border-radius:var(--radius-sm);padding:15px;}
+  .mrd-node h4{color:#fff;font-size:14px;margin:0 0 6px;}
+  .mrd-node p{margin:0;font-size:12.5px;color:#D6DBE7;}
+  .mrd-node .mlevel{display:inline-block;margin-top:8px;font-size:11px;font-weight:700;background:rgba(255,255,255,0.14);padding:3px 9px;border-radius:999px;}
+
+  /* D: target expansion */
+  .targets{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;}
+  .target{background:var(--grey-bg);border:1px solid var(--grey-line);border-radius:var(--radius-sm);padding:14px;text-align:center;}
+  .target .t-name{font-family:var(--serif);font-weight:700;color:var(--burgundy);font-size:1.05rem;}
+  .target .t-cls{font-size:11.5px;color:var(--text-soft);margin:4px 0 8px;text-transform:uppercase;letter-spacing:.04em;font-weight:700;}
+  .target .t-ex{font-size:12.5px;color:var(--text);}
+
+  /* E: now vs watch */
+  .nvw{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .nvw-col{border-radius:var(--radius-sm);padding:18px;border:1px solid;}
+  .nvw-now{background:#F1F6FB;border-color:#CDDDF0;}
+  .nvw-watch{background:#F4F0F8;border-color:#DCCFEC;}
+  .nvw-col h4{margin:0 0 12px;font-family:var(--sans);font-weight:800;font-size:14px;letter-spacing:.03em;display:flex;align-items:center;gap:8px;}
+  .nvw-now h4{color:#2255A4;}
+  .nvw-watch h4{color:#6B3FA0;}
+  .nvw-col ul{margin:0;padding-left:18px;}
+  .nvw-col li{font-size:13px;margin:8px 0;color:var(--text);}
+  .nvw-col li b{color:var(--navy);}
+
+  /* ---------- Themes list ---------- */
+  .themes{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+  .theme{background:var(--grey-card);border:1px solid var(--grey-line);border-left:4px solid var(--burgundy);border-radius:var(--radius-sm);padding:18px 20px;box-shadow:var(--shadow);}
+  .theme h4{margin:0 0 7px;font-size:1.05rem;}
+  .theme p{margin:0;font-size:14px;color:var(--text-soft);}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--navy);color:#C7CEDC;padding:40px 0 30px;font-size:13.5px;}
+  footer .brand{display:block;margin-bottom:8px;font-size:18px;}
+  footer p{margin:6px 0;max-width:760px;}
+  footer .small{color:#8C97AE;font-size:12px;margin-top:18px;}
+  footer a{color:#E6B8C0;}
+
+  /* ---------- Back to top ---------- */
+  .totop{
+    position:fixed;right:20px;bottom:20px;z-index:50;background:var(--burgundy);color:#fff;
+    width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    box-shadow:var(--shadow-hover);font-size:20px;opacity:0;pointer-events:none;transition:.2s;border:none;cursor:pointer;
+  }
+  .totop.show{opacity:1;pointer-events:auto;}
+  .totop:hover{background:var(--burgundy-deep);}
+
+  /* ---------- Responsive ---------- */
+  @media(max-width:980px){
+    .grid-3{grid-template-columns:repeat(2,1fr);}
+    .ia-grid{grid-template-columns:repeat(2,1fr);}
+    .targets{grid-template-columns:repeat(3,1fr);}
+  }
+  @media(max-width:720px){
+    body{font-size:16px;}
+    .grid-3,.grid-2{grid-template-columns:1fr;}
+    .pns,.nvw,.themes{grid-template-columns:1fr;}
+    .ia-grid{grid-template-columns:1fr;}
+    .targets{grid-template-columns:repeat(2,1fr);}
+    .hero{padding:40px 0 44px;}
+    section{padding:36px 0;}
+    .mrd-node{min-width:100%;}
+  }
+
+  /* ---------- Executive summary ---------- */
+  .exec{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-soft) 60%,var(--burgundy-deep) 130%);color:#fff;}
+  .exec .section-head h2{color:#fff;}
+  .exec .section-head .kicker{color:#F0C4CC;}
+  .exec .section-head p{color:#D6DBE7;}
+  .msg{display:grid;grid-template-columns:42px 1fr auto;gap:16px;align-items:center;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.13);border-radius:var(--radius-sm);padding:15px 18px;margin-bottom:12px;}
+  .msg .rank{font-family:var(--serif);font-size:2rem;font-weight:700;color:#F0C4CC;line-height:1;text-align:center;}
+  .msg .msg-body h4{color:#fff;margin:0 0 3px;font-size:1.04rem;}
+  .msg .msg-body p{color:#C7CEDC;margin:0;font-size:13.5px;}
+  .msg .msg-tag{font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:6px 12px;border-radius:999px;white-space:nowrap;align-self:center;}
+  .tag-high{background:var(--crimson);color:#fff;}
+  .tag-emerging{background:#E8B23A;color:#3a2a05;}
+  .tag-future{background:#5B7FB9;color:#fff;}
+
+  /* ---------- Innovation timeline ---------- */
+  .timeline{margin-top:8px;}
+  .tl-item{position:relative;padding:0 0 22px 44px;}
+  .tl-item::before{content:"";position:absolute;left:14px;top:7px;bottom:-7px;width:2px;background:var(--grey-line);}
+  .tl-item:last-child::before{display:none;}
+  .tl-dot{position:absolute;left:7px;top:4px;width:16px;height:16px;border-radius:50%;background:var(--burgundy);border:3px solid #fff;box-shadow:0 0 0 1px var(--grey-line);}
+  .tl-item.now .tl-dot{background:var(--navy);}
+  .tl-item.future .tl-dot{background:#fff;border-color:var(--burgundy);}
+  .tl-when{font-size:11.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--burgundy);}
+  .tl-item h4{margin:2px 0 4px;font-size:1.02rem;}
+  .tl-item p{margin:0;font-size:13.5px;color:var(--text-soft);}
+
+  /* ---------- Tables (practice impact + comparison) ---------- */
+  .mtable-wrap{overflow-x:auto;border:1px solid var(--grey-line);border-radius:var(--radius);box-shadow:var(--shadow);background:#fff;-webkit-overflow-scrolling:touch;}
+  .mtable{width:100%;border-collapse:collapse;min-width:600px;font-size:13.8px;}
+  .mtable caption{text-align:left;font-family:var(--serif);font-weight:700;color:var(--navy);font-size:1.05rem;padding:14px 16px 6px;}
+  .mtable th{text-align:left;background:var(--navy);color:#fff;font-family:var(--sans);font-weight:600;font-size:12px;letter-spacing:.03em;padding:11px 14px;}
+  .mtable td{padding:11px 14px;border-bottom:1px solid var(--grey-line);vertical-align:middle;}
+  .mtable tr:last-child td{border-bottom:none;}
+  .mtable tbody tr:nth-child(even){background:#FAFBFD;}
+  .mtable .t-name{font-weight:700;color:var(--navy);}
+  .mtable .t-dis{font-size:11.5px;color:var(--text-soft);}
+  .impact{display:flex;align-items:center;gap:9px;}
+  .impact-bar{width:74px;height:8px;border-radius:999px;background:var(--grey-line);overflow:hidden;flex:0 0 auto;}
+  .impact-bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--burgundy),var(--crimson));}
+  .impact-num{font-weight:700;font-size:12px;color:var(--navy);white-space:nowrap;}
+  .verdict{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.03em;padding:4px 9px;border-radius:6px;white-space:nowrap;text-transform:uppercase;}
+  .v-yes{background:#E7F4EC;color:#1F7A45;}
+  .v-probably{background:#E8F0FB;color:#2255A4;}
+  .v-notyet{background:#FDF1E3;color:#B26B12;}
+  .v-watch{background:#F0EBF6;color:#6B3FA0;}
+  .v-no{background:#FBEAEC;color:#A8182F;}
+  .v-already{background:#ECEEF5;color:#3A4A6B;}
+
+  /* ---------- Disease flow ---------- */
+  .flow{display:flex;flex-wrap:nowrap;align-items:stretch;gap:0;background:var(--grey-bg);border:1px solid var(--grey-line);border-radius:var(--radius-sm);padding:14px 10px;margin-bottom:24px;overflow-x:auto;}
+  .flow-node{flex:1;min-width:128px;display:flex;flex-direction:column;justify-content:center;gap:3px;padding:6px 16px 6px 12px;position:relative;}
+  .flow-node:not(:last-child)::after{content:"\2192";position:absolute;right:1px;top:50%;transform:translateY(-50%);color:var(--burgundy);font-weight:700;font-size:15px;}
+  .flow-node .fn-lab{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--burgundy);}
+  .flow-node .fn-val{font-size:13px;color:var(--navy);font-weight:600;line-height:1.35;}
+
+  /* ---------- Theme chain ---------- */
+  .theme .chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:11px;}
+  .theme .chip{font-size:10.5px;font-weight:700;background:var(--grey-soft);color:var(--navy);padding:3px 9px;border-radius:6px;}
+  .theme .arr{color:var(--burgundy);font-weight:700;}
+  .theme .out{font-size:10.5px;font-weight:800;color:var(--burgundy);text-transform:uppercase;letter-spacing:.03em;}
+
+  /* ---------- Pearls ---------- */
+  .pearls{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+  .pearl{background:#fff;border:1px solid var(--grey-line);border-left:4px solid var(--crimson);border-radius:var(--radius-sm);padding:16px 18px 16px 16px;box-shadow:var(--shadow);position:relative;}
+  .pearl q{font-family:var(--serif);font-size:1.08rem;color:var(--navy);line-height:1.5;display:block;quotes:"\201C" "\201D";}
+  .pearl .src{display:block;margin-top:9px;font-size:11.5px;color:var(--text-soft);font-weight:600;}
+
+  /* ---------- Responsive: new components ---------- */
+  @media(max-width:720px){
+    .msg{grid-template-columns:36px 1fr;}
+    .msg .msg-tag{grid-column:2;justify-self:start;margin-top:4px;}
+    .pearls{grid-template-columns:1fr;}
+    .flow-node{min-width:140px;}
+  }
+
+  /* ---------- Print: new components ---------- */
+  @media print{
+    .exec{background:#fff!important;color:#000!important;border-bottom:2px solid var(--navy);}
+    .exec .section-head h2,.exec .section-head p,.exec .section-head .kicker{color:#000!important;}
+    .msg{background:#fff!important;border:1px solid #ccc!important;break-inside:avoid;}
+    .msg .rank,.msg .msg-body h4,.msg .msg-body p{color:#000!important;}
+    .mtable-wrap,.flow{break-inside:avoid;box-shadow:none;}
+    .mtable th{background:#1B2A4A!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  }
+
+  /* ---------- Print ---------- */
+  @media print{
+    .stickynav,.totop,.hero-btns,.topbar{display:none!important;}
+    body{background:#fff;font-size:11pt;color:#000;}
+    .hero{background:#fff;color:#000;padding:0 0 12pt;border-bottom:2px solid var(--navy);}
+    .hero h1,.hero .sub,.hero p.lede,.hero .eyebrow,.hero-meta{color:#000;}
+    .hero .eyebrow{border-color:#000;background:none;}
+    .card,.info-block,.theme,.disclaimer{box-shadow:none;break-inside:avoid;}
+    .card:hover{transform:none;}
+    a{color:#000;text-decoration:none;}
+    section{padding:14pt 0;}
+    .wrap{max-width:100%;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ TOP BAR + BREADCRUMB ============ -->
+<div class="topbar">
+  <div class="wrap">
+    <span class="brand">Mohsin Haematology <span>Academy</span></span>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a><span class="sep">›</span>
+      <a href="/education">Education</a><span class="sep">›</span>
+      <a href="/education/conferences-and-masterclasses/">Conferences &amp; Masterclasses</a><span class="sep">›</span>
+      <span class="here">EHA 2026</span>
+    </nav>
+  </div>
+</div>
+
+<!-- ============ STICKY IN-PAGE NAV ============ -->
+<nav class="stickynav" aria-label="On this page">
+  <div class="wrap">
+    <a href="#summary" class="lead">Summary</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#practice-impact">Practice impact</a>
+    <a href="#key-trials">Key trials</a>
+    <a href="#aml">AML</a>
+    <a href="#mds-mpn">MDS / MPN</a>
+    <a href="#cll">CLL</a>
+    <a href="#myeloma">Myeloma</a>
+    <a href="#lymphoma">Lymphoma</a>
+    <a href="#autoimmune">Autoimmune</a>
+    <a href="#sickle">Sickle / red cell</a>
+    <a href="#transplant">Transplant</a>
+    <a href="#compare">Compare</a>
+    <a href="#infographics">Infographics</a>
+    <a href="#themes">Themes</a>
+    <a href="#pearls">Pearls</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <span class="eyebrow">EHA Congress 2026 · Stockholm</span>
+    <h1>EHA 2026 Highlights</h1>
+    <p class="sub">CPD working notes from the EHA Congress, Stockholm, June 11 to 14, 2026</p>
+    <p class="lede">Fact-checked clinical education notes distilled into practical haematology take-home messages. Every figure below is drawn from the EHA 2026 Congress working notes; where evidence is preliminary, early phase, or not yet practice-changing, this is stated plainly.</p>
+    <div class="hero-btns">
+      <a class="btn btn-primary" href="#summary">Five key messages</a>
+      <a class="btn btn-ghost" href="#practice-impact">Will it change my practice?</a>
+      <a class="btn btn-ghost" href="#key-trials">Key trials</a>
+    </div>
+    <div class="hero-meta">
+      <span><b>17</b> trials &amp; programmes summarised</span>
+      <span><b>8</b> disease areas</span>
+      <span><b>Notes prepared</b> 16 June 2026</span>
+      <span><b>Fact-checked</b> 16 June 2026</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ EXECUTIVE SUMMARY ============ -->
+<section id="summary" class="exec disease-anchor" aria-labelledby="sum-h">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Start here</div>
+      <h2 id="sum-h">Five practice-changing messages from EHA 2026</h2>
+      <p>The fastest read for a busy consultant. Impact tags are an MHA teaching judgement, not a guideline statement.</p>
+    </div>
+
+    <div class="msg">
+      <div class="rank">1</div>
+      <div class="msg-body">
+        <h4>BRUIN CLL-322 puts pirtobrutinib combinations at the centre of relapsed CLL</h4>
+        <p>Fixed-duration pirtobrutinib plus venetoclax-rituximab cut progression or death by 45% (PFS HR 0.547) with deeper MRD; pirtobrutinib is already licensed after a covalent BTK inhibitor.</p>
+      </div>
+      <span class="msg-tag tag-high">High</span>
+    </div>
+
+    <div class="msg">
+      <div class="rank">2</div>
+      <div class="msg-body">
+        <h4>frontMIND is the first frontline DLBCL trial to beat R-CHOP since rituximab</h4>
+        <p>Tafasitamab-lenalidomide-R-CHOP improved PFS (HR 0.75) in high-risk disease. Overall survival is not yet mature, so adoption should wait for OS and health-economic data.</p>
+      </div>
+      <span class="msg-tag tag-high">High</span>
+    </div>
+
+    <div class="msg">
+      <div class="rank">3</div>
+      <div class="msg-body">
+        <h4>CALR-targeted therapy may become the first mutation-specific MPN treatment</h4>
+        <p>INCA033989 produced clinical and molecular responses across MF and ET (87% haematologic response, 70% complete in ET). Still phase 1, but with Breakthrough Therapy Designation.</p>
+      </div>
+      <span class="msg-tag tag-emerging">Emerging</span>
+    </div>
+
+    <div class="msg">
+      <div class="rank">4</div>
+      <div class="msg-body">
+        <h4>Anti-FcRn therapy moves warm AIHA into the targeted-treatment era</h4>
+        <p>Nipocalimab gave a durable haemoglobin response roughly three times placebo in the first randomised wAIHA trial. The filing already holds FDA Priority Review.</p>
+      </div>
+      <span class="msg-tag tag-emerging">Emerging</span>
+    </div>
+
+    <div class="msg">
+      <div class="rank">5</div>
+      <div class="msg-body">
+        <h4>In vivo and off-the-shelf CAR-T may solve the manufacturing bottleneck</h4>
+        <p>LB2501 (in vivo CD19/CD20) reached infusion in a median of 17.5 days with no ICANS; REVSTAR-123 brings a switchable allogeneic CD123 product to AML. Both are early phase 1.</p>
+      </div>
+      <span class="msg-tag tag-future">Future</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INNOVATION TIMELINE ============ -->
+<section id="timeline" class="disease-anchor" aria-labelledby="tl-h">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">The arc of the congress</div>
+      <h2 id="tl-h">EHA 2026 innovation timeline</h2>
+      <p>Where each signal sits on the path from current practice to the future, based only on what was reported.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-item now">
+        <div class="tl-dot"></div>
+        <div class="tl-when">Today · confirmed practice</div>
+        <h4>Midostaurin remains the FLT3-mutated AML standard</h4>
+        <p>PASHA was negative for overall survival, and ATG stays standard for unrelated-donor transplant. EPO remains first-line for lower-risk MDS anaemia.</p>
+      </div>
+      <div class="tl-item now">
+        <div class="tl-dot"></div>
+        <div class="tl-when">Now · entering practice</div>
+        <h4>Pirtobrutinib moving into earlier relapsed CLL</h4>
+        <p>BRUIN CLL-322 supports pirtobrutinib combinations; the drug is already licensed after a covalent BTK inhibitor. Awaiting overall survival.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-when">2026 · regulatory decisions</div>
+        <h4>Several filings approaching</h4>
+        <p>frontMIND supports a frontline DLBCL submission; nipocalimab for wAIHA holds FDA Priority Review; the ropeginterferon ET decision is due 30 August 2026; mezigdomide submissions are expected.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-when">Emerging · phase expansion</div>
+        <h4>CALR antibody and CELMoD programmes scaling up</h4>
+        <p>INCA033989 has a planned phase 3 in CALR-mutant ET; mezigdomide builds on the SUCCESSOR programme in relapsed myeloma.</p>
+      </div>
+      <div class="tl-item future">
+        <div class="tl-dot"></div>
+        <div class="tl-when">Future · watch this space</div>
+        <h4>Scalable cellular therapy</h4>
+        <p>In vivo CAR-T (LB2501) and off-the-shelf allogeneic CD123 CAR-T (REVSTAR-123) are phase 1 today, plausibly 5 to 10 years from routine use if validated.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DISCLAIMER ============ -->
+<section aria-labelledby="disclaimer-h" style="padding-top:34px;">
+  <div class="wrap">
+    <div class="disclaimer">
+      <h3 id="disclaimer-h"><span class="ico">!</span> Educational notes, not clinical guidance</h3>
+      <ul>
+        <li>These are CPD educational notes, not clinical guidelines.</li>
+        <li>Treatment decisions should follow local policy, national guidance, MDT discussion, and licensing and reimbursement status.</li>
+        <li>Some data presented here are preliminary, early phase, or based on small numbers, and are not yet practice-changing.</li>
+        <li>Several agents named below are not yet approved by the FDA or EMA. Regulatory status is noted where the source material specifies it.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FACT-CHECK & CORRECTIONS ============ -->
+<section aria-labelledby="factcheck-h" style="padding-top:8px;">
+  <div class="wrap">
+    <div class="disclaimer" style="background:#EEF2FA;border-color:#CFD9EC;border-left-color:#1B2A4A;">
+      <h3 id="factcheck-h" style="color:#1B2A4A;"><span class="ico" style="background:#1B2A4A;">✓</span> Fact-check and corrections (16 June 2026)</h3>
+      <p style="margin:0 0 12px;color:#34425f;">This page was checked against EHA 2026 congress press releases and haematology news coverage (company releases, OncLive, AJMC and similar). Trial names, abstract numbers, presenters and most headline statistics verified accurately. The following corrections were applied; the original EHA Library abstracts remain the definitive source.</p>
+      <ul style="color:#34425f;">
+        <li><b>BRUIN CLL-322 MRD corrected.</b> The deep-MRD figure is undetectable MRD at 10⁻⁶ of 52.1% vs 35.0% at end of treatment, not the &ldquo;uMRD4 86% vs 61%&rdquo; previously shown. PFS (HR 0.547) is confirmed.</li>
+        <li><b>MAJESTEC-9 entry corrected.</b> Talquetamab plus daratumumab is the MonumenTAL-3 programme. MajesTEC-9 is a different trial (teclistamab monotherapy vs PVd or Kd) presented at ASCO 2026, not the EHA plenary.</li>
+        <li><b>ITP BCMA CAR-T numbers corrected.</b> 8 patients dosed, 4 evaluable, all 4 achieved complete response, 1 relapsed at 9 months (not &ldquo;4 patients, 3/4&rdquo;).</li>
+        <li><b>Regulatory status updated.</b> Nipocalimab is already marketed as Imaavy (myasthenia gravis) with the wAIHA filing under FDA Priority Review; ropeginterferon is approved as Besremi for PV with an ET decision due 30 August 2026.</li>
+        <li><b>Added verified detail.</b> SENTRY early OS benefit signal, INCA033989 ET response rates, RISE UP hepatocellular-injury signal, LB2501 17.5-day time to infusion.</li>
+        <li><b>Not independently re-verified in this pass (treat as provisional):</b> the exact PASHA EFS medians, INDEPENDENCE (luspatercept), ATG MUD-HCT specifics, EPO-PRETAR, Ofirnoflast, and the CD5 inhibition concept.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KEY TRIAL HIGHLIGHTS AT A GLANCE ============ -->
+<section id="key-trials" class="disease-anchor alt-bg" aria-labelledby="kt-h">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">At a glance</div>
+      <h2 id="kt-h">Key trial highlights</h2>
+      <p>Six headline readouts from the congress, kept concise and evidence-balanced. Badges indicate the nature of each result rather than a recommendation.</p>
+    </div>
+
+    <div class="grid grid-3 glance">
+
+      <article class="card">
+        <div class="badge-row"><span class="badge b-negative">Negative</span><span class="badge b-confirm">Practice-confirming</span></div>
+        <h3>PASHA · AML</h3>
+        <p class="one-liner">Gilteritinib vs midostaurin in newly diagnosed FLT3-mutated AML. OS was not improved (HR 1.02, P=0.864). Midostaurin plus intensive chemotherapy remains standard of care.</p>
+      </article>
+
+      <article class="card">
+        <div class="badge-row"><span class="badge b-split">Split endpoint</span></div>
+        <h3>SENTRY · Myelofibrosis</h3>
+        <p class="one-liner">Selinexor plus ruxolitinib. Spleen response was improved (SVR35 49.8% vs 28.0%, P&lt;0.0001) but symptom score was not (TSS P=0.825).</p>
+      </article>
+
+      <article class="card">
+        <div class="badge-row"><span class="badge b-positive">Positive</span></div>
+        <h3>BRUIN CLL-322 · CLL</h3>
+        <p class="one-liner">Pirtobrutinib plus venetoclax-rituximab cut progression or death risk by 45% (PFS HR 0.547, P=0.0001) and improved deep undetectable MRD at 10⁻⁶ (52.1% vs 35.0%) at end of treatment.</p>
+      </article>
+
+      <article class="card">
+        <div class="badge-row"><span class="badge b-positive">Positive</span></div>
+        <h3>SUCCESSOR-2 · Myeloma</h3>
+        <p class="one-liner">Mezigdomide plus carfilzomib-dexamethasone (MeziKd) improved PFS in RRMM (18.0 vs 8.3 months, HR 0.48, P&lt;0.0001). Mezigdomide is not yet approved.</p>
+      </article>
+
+      <article class="card">
+        <div class="badge-row"><span class="badge b-positive">Positive</span><span class="badge b-watch">OS immature</span></div>
+        <h3>frontMIND · DLBCL</h3>
+        <p class="one-liner">Tafasitamab-lenalidomide-R-CHOP improved PFS over R-CHOP (HR 0.75, P=0.019) in high-risk frontline DLBCL. OS data are not yet mature.</p>
+      </article>
+
+      <article class="card">
+        <div class="badge-row"><span class="badge b-positive">Positive</span></div>
+        <h3>ENERGY · wAIHA</h3>
+        <p class="one-liner">Nipocalimab (anti-FcRn) produced a durable haemoglobin response signal in warm AIHA (24% vs 8% placebo, P=0.015). First targeted randomised data in this condition.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRACTICE IMPACT MATRIX ============ -->
+<section id="practice-impact" class="disease-anchor alt-bg" aria-labelledby="pi-h">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">The question clinicians actually ask</div>
+      <h2 id="pi-h">Will this change my practice on Monday morning?</h2>
+      <p>An at-a-glance verdict for every trial. The impact score and verdict are an MHA teaching judgement to aid revision, not a guideline or a recommendation. Local policy, licensing, reimbursement and MDT discussion always govern practice.</p>
+    </div>
+    <div class="mtable-wrap">
+      <table class="mtable">
+        <thead>
+          <tr><th scope="col">Trial</th><th scope="col">Practice impact</th><th scope="col">Monday morning?</th><th scope="col">Why</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="t-name">BRUIN CLL-322</span><br><span class="t-dis">CLL</span></td>
+            <td><div class="impact"><span class="impact-bar"><i style="width:80%"></i></span><span class="impact-num">8/10</span></div></td>
+            <td><span class="verdict v-probably">Probably yes</span></td>
+            <td>Strong PFS (HR 0.547) and deeper MRD; pirtobrutinib already licensed post-cBTKi.</td>
+          </tr>
+          <tr>
+            <td><span class="t-name">frontMIND</span><br><span class="t-dis">DLBCL</span></td>
+            <td><div class="impact"><span class="impact-bar"><i style="width:70%"></i></span><span class="impact-num">7/10</span></div></td>
+            <td><span class="verdict v-notyet">Not yet</span></td>
+            <td>First frontline win over R-CHOP since rituximab, but OS immature and toxicity higher.</td>
+          </tr>
+          <tr>
+            <td><span class="t-name">SUCCESSOR-2</span><br><span class="t-dis">Myeloma</span></td>
+            <td><div class="impact"><span class="impact-bar"><i style="width:70%"></i></span><span class="impact-num">7/10</span></div></td>
+            <td><span class="verdict v-notyet">Not yet</span></td>
+            <td>PFS doubled (18 vs 8.3 mo), but mezigdomide is not yet approved.</td>
+          </tr>
+          <tr>
+            <td><span class="t-name">Menin inhibitors</span><br><span class="t-dis">AML</span></td>
+            <td><div class="impact"><span class="impact-bar"><i style="width:60%"></i></span><span class="impact-num">6/10</span></div></td>
+            <td><span class="verdict v-already">Selected use</span></td>
+            <td>Revumenib and ziftomenib already approved in R/R disease; combinations remain investigational.</td>
+          </tr>
+          <tr>
+            <td><span class="t-name">ImmunoPRISM</span><br><span class="t-dis">Smouldering myeloma</span></td>
+            <td><div class="impact"><span class="impact-bar"><i style="width:60%"></i></span><span class="impact-num">6/10</span></div></td>
+            <td><span class="verdict v-no">Investigational</span></td>
+            <td>Striking depth of response, but phase 2 in pre-malignant disease with real toxicity.</td>
+          </tr>
+          <tr>
+            <td><span class="t-name">ENERGY</span><br><span class="t-dis">Warm AIHA</span></td>
+            <td><div class="impact"><span class="impact-bar"><i style="width:60%"></i></span><span class="impact-num">6/10</span></div></td>
+            <td><span class="verdict v-notyet">Not yet (filing)</span></td>
+            <td>First targeted randomised data; nipocalimab wAIHA application holds FDA Priority Review.</td>
+          </tr>
+          <tr>
+            <td><span class="t-name">SENTRY</span><br><span class="t-dis">Myelofibrosis</span></td>
+            <td><div class="impact"><span class="impact-bar"><i style="width:50%"></i></span><span class="impact-num">5/10</span></div></td>
+            <td><span class="verdict v-notyet">Not yet</span></td>
+            <td>Spleen benefit and an early OS signal, but symptom endpoint not met.</td>
+          </tr>
+          <tr>
+            <td><span class="t-name">RISE UP</span><br><span class="t-dis">Sickle cell</span></td>
+            <td><div class="impact"><span class="impact-bar"><i style="width:50%"></i></span><span class="impact-num">5/10</span></div></td>
+            <td><span class="verdict v-notyet">Not yet</span></td>
+            <td>Clear haemoglobin benefit, but the pain-crisis endpoint was not met.</td>
+          </tr>
+          <tr>
+            <td><span class="t-name">INCA033989</span><br><span class="t-dis">MF / ET</span></td>
+            <td><div class="impact"><span class="impact-bar"><i style="width:50%"></i></span><span class="impact-num">5/10</span></div></td>
+            <td><span class="verdict v-watch">Watch</span></td>
+            <td>Promising clinical and molecular responses, but still phase 1.</td>
+          </tr>
+          <tr>
+            <td><span class="t-name">SURPASS-ET</span><br><span class="t-dis">Essential thrombocythaemia</span></td>
+            <td><div class="impact"><span class="impact-bar"><i style="width:50%"></i></span><span class="impact-num">5/10</span></div></td>
+            <td><span class="verdict v-watch">Watch</span></td>
+            <td>Ropeg approved for PV; ET under FDA review, decision due 30 August 2026.</td>
+          </tr>
+          <tr>
+            <td><span class="t-name">MonumenTAL-3</span><br><span class="t-dis">Myeloma</span></td>
+            <td><div class="impact"><span class="impact-bar"><i style="width:50%"></i></span><span class="impact-num">5/10</span></div></td>
+            <td><span class="verdict v-watch">Watch</span></td>
+            <td>Talquetamab versus DPd; EHA 2026 efficacy figures not independently verified here.</td>
+          </tr>
+          <tr>
+            <td><span class="t-name">ATG in MUD-HCT</span><br><span class="t-dis">Transplant</span></td>
+            <td><div class="impact"><span class="impact-bar"><i style="width:40%"></i></span><span class="impact-num">4/10</span></div></td>
+            <td><span class="verdict v-already">Confirms practice</span></td>
+            <td>Settles the question: ATG stays standard in unrelated-donor transplant.</td>
+          </tr>
+          <tr>
+            <td><span class="t-name">INDEPENDENCE</span><br><span class="t-dis">Myelofibrosis</span></td>
+            <td><div class="impact"><span class="impact-bar"><i style="width:40%"></i></span><span class="impact-num">4/10</span></div></td>
+            <td><span class="verdict v-watch">Watch</span></td>
+            <td>Luspatercept for MF anaemia on JAKi; specifics not independently verified here.</td>
+          </tr>
+          <tr>
+            <td><span class="t-name">PASHA</span><br><span class="t-dis">AML</span></td>
+            <td><div class="impact"><span class="impact-bar"><i style="width:30%"></i></span><span class="impact-num">3/10</span></div></td>
+            <td><span class="verdict v-already">Confirms practice</span></td>
+            <td>Negative for OS; midostaurin plus chemotherapy remains standard.</td>
+          </tr>
+          <tr>
+            <td><span class="t-name">EPO-PRETAR</span><br><span class="t-dis">MDS</span></td>
+            <td><div class="impact"><span class="impact-bar"><i style="width:30%"></i></span><span class="impact-num">3/10</span></div></td>
+            <td><span class="verdict v-already">Confirms practice</span></td>
+            <td>Reinforces EPO first-line for lower-risk MDS anaemia (item not independently verified).</td>
+          </tr>
+          <tr>
+            <td><span class="t-name">REVSTAR-123</span><br><span class="t-dis">AML</span></td>
+            <td><div class="impact"><span class="impact-bar"><i style="width:20%"></i></span><span class="impact-num">2/10</span></div></td>
+            <td><span class="verdict v-no">Early phase</span></td>
+            <td>Phase 1a off-the-shelf CD123 CAR-T; remissions reported, no GVHD or ICANS.</td>
+          </tr>
+          <tr>
+            <td><span class="t-name">LB2501</span><br><span class="t-dis">B-cell NHL</span></td>
+            <td><div class="impact"><span class="impact-bar"><i style="width:20%"></i></span><span class="impact-num">2/10</span></div></td>
+            <td><span class="verdict v-no">Early phase</span></td>
+            <td>First-in-human in vivo CAR-T; striking early responses but n=6 at the higher dose.</td>
+          </tr>
+          <tr>
+            <td><span class="t-name">BCMA CAR-T (ITP)</span><br><span class="t-dis">Autoimmune</span></td>
+            <td><div class="impact"><span class="impact-bar"><i style="width:20%"></i></span><span class="impact-num">2/10</span></div></td>
+            <td><span class="verdict v-no">Proof of concept</span></td>
+            <td>8 dosed, 4 evaluable, all in CR; landmark concept, not practice.</td>
+          </tr>
+          <tr>
+            <td><span class="t-name">CD5 inhibition</span><br><span class="t-dis">Cellular therapy concept</span></td>
+            <td><div class="impact"><span class="impact-bar"><i style="width:10%"></i></span><span class="impact-num">1/10</span></div></td>
+            <td><span class="verdict v-no">Concept</span></td>
+            <td>Biological idea to boost bispecifics; awaiting trials (not independently verified).</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AML ============ -->
+<section id="aml" class="disease-anchor" aria-labelledby="aml-h">
+  <div class="wrap">
+    <div class="disease-band"><span class="tag">Section 1</span></div>
+    <div class="section-head">
+      <h2 id="aml-h">Acute myeloid leukaemia</h2>
+      <p>A negative frontline FLT3 readout that confirms current practice, alongside early-stage cellular therapy and ongoing menin inhibitor combinations.</p>
+    </div>
+
+    <div class="flow" role="img" aria-label="PASHA flow: gilteritinib versus midostaurin, OS not met, EFS trend, midostaurin remains standard">
+      <div class="flow-node"><span class="fn-lab">Trial</span><span class="fn-val">PASHA: gilteritinib vs midostaurin</span></div>
+      <div class="flow-node"><span class="fn-lab">Primary</span><span class="fn-val">OS not met (HR 1.02)</span></div>
+      <div class="flow-node"><span class="fn-lab">Secondary</span><span class="fn-val">EFS / RFS trend favours gilteritinib</span></div>
+      <div class="flow-node"><span class="fn-lab">Bottom line</span><span class="fn-val">Midostaurin stays standard</span></div>
+    </div>
+
+    <div class="grid grid-3">
+
+      <!-- PASHA -->
+      <article class="card">
+        <div class="badge-row"><span class="badge b-negative">Negative</span><span class="badge b-confirm">Practice-confirming</span></div>
+        <h3>PASHA</h3>
+        <p class="trial-meta"><span class="abs">LB5005</span> · Raaijmakers M · Late-breaking, 14 June · Phase 3, open-label</p>
+        <p class="interp">First head-to-head phase 3 of a 2nd-generation FLT3 inhibitor (gilteritinib) vs a 1st-generation inhibitor (midostaurin), each with intensive chemotherapy, in newly diagnosed FLT3-mutated AML (ITD and TKD).</p>
+        <ul class="knums">
+          <li><span class="lab">Patients</span><span class="val">768 (384 / 384)</span></li>
+          <li><span class="lab">OS (primary)</span><span class="val neg">HR 1.02 · P=0.864 · not met</span></li>
+          <li><span class="lab">48-month OS</span><span class="val">59% vs 60%</span></li>
+          <li><span class="lab">EFS / RFS (secondary)</span><span class="val">Favoured gilteritinib (trend)</span></li>
+        </ul>
+        <p class="interp"><strong>Interpretation:</strong> A clear negative primary result. Gilteritinib did not improve OS over midostaurin in the frontline intensive setting. The investigators attribute OS equivalence partly to frequent gilteritinib salvage after midostaurin progression and a higher rate of allogeneic transplant in the midostaurin arm. Secondary coverage confirmed longer event-free and relapse-free survival with gilteritinib but did not publish the exact medians, so the working-notes EFS figures of 51.1 vs 19.9 months (HR 0.83, P=0.052) should be treated as provisional pending the full abstract.</p>
+        <div class="note note-caution"><span class="lab">Practice caution</span>Do not extrapolate gilteritinib relapsed/refractory data to the frontline. Midostaurin plus intensive chemotherapy remains standard of care for eligible patients.</div>
+        <div class="note note-cpd"><span class="lab">CPD reflection</span>Which biomarkers (VAF kinetics, co-mutations such as NPM1 or DNMT3A, post-induction MRD trajectory) might identify FLT3-mutated patients who specifically benefit from an upfront 2nd-generation inhibitor?</div>
+      </article>
+
+      <!-- REVSTAR-123 -->
+      <article class="card">
+        <div class="badge-row"><span class="badge b-early">Early phase</span><span class="badge b-watch">Watch</span></div>
+        <h3>REVSTAR-123</h3>
+        <p class="trial-meta"><span class="abs">LB5007</span> · Wermke M · Late-breaking, 14 June · Phase 1a</p>
+        <p class="interp">First-in-class switchable allogeneic (off-the-shelf) CAR-T targeting CD123 in relapsed/refractory AML. The switchable design allows external on/off control of CAR activity to limit on-target myelosuppression and cytokine release.</p>
+        <p class="interp"><strong>Why it matters:</strong> CD123 is broadly expressed on AML blasts and leukaemic stem cells. An allogeneic product avoids the 4 to 6 week manufacturing time that often makes autologous CAR-T impractical given AML kinetics.</p>
+        <div class="note note-caution"><span class="lab">Practice caution</span>Technology-validation stage, early dose-escalation data only. Watch for dose-response curves, MRD responses, and bridging-to-transplant data in later updates.</div>
+      </article>
+
+      <!-- Menin inhibitors -->
+      <article class="card">
+        <div class="badge-row"><span class="badge b-watch">Watch</span><span class="badge b-confirm">Established class</span></div>
+        <h3>Menin inhibitors</h3>
+        <p class="trial-meta">Multiple abstracts · Oral &amp; poster · Revumenib, ziftomenib</p>
+        <p class="interp">Menin inhibitors target the menin-KMT2A interaction in NPM1-mutated and KMT2A-rearranged AML. Revumenib holds FDA accelerated approval (2023) for relapsed/refractory KMT2A-rearranged AML.</p>
+        <ul class="knums">
+          <li><span class="lab">Combo CRc (NPM1mut)</span><span class="val">60 to 70%+</span></li>
+        </ul>
+        <p class="interp">EHA 2026 combination data (menin inhibitor plus venetoclax plus azacitidine) showed deep responses in NPM1-mutated AML, including venetoclax-pre-exposed patients, suggesting menin inhibition may partly restore differentiation competency.</p>
+        <div class="note note-caution"><span class="lab">Practice caution</span>Differentiation syndrome is the class-effect toxicity, occurring in roughly 15 to 25% and potentially fatal if missed. It is easily confused with infection or fluid overload post-induction; dexamethasone prophylaxis and early treatment are needed.</div>
+        <div class="note note-cpd"><span class="lab">CPD reflection</span>In NPM1-mutated AML relapsing after venetoclax-based therapy, where in your pathway would you consider a menin inhibitor?</div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ MDS / MPN / BMF ============ -->
+<section id="mds-mpn" class="disease-anchor alt-bg" aria-labelledby="mds-h">
+  <div class="wrap">
+    <div class="disease-band"><span class="tag">Section 2</span></div>
+    <div class="section-head">
+      <h2 id="mds-h">MDS, MPN &amp; bone marrow failure</h2>
+      <p>A split-endpoint myelofibrosis combination, an anaemia trap-ligand, and the arrival of mutation-specific CALR targeting.</p>
+    </div>
+
+    <div class="flow" role="img" aria-label="INCA033989 flow: mutant CALR target, clinical activity, molecular response, potential disease modification">
+      <div class="flow-node"><span class="fn-lab">Target</span><span class="fn-val">INCA033989: mutant CALR neoantigen</span></div>
+      <div class="flow-node"><span class="fn-lab">Activity</span><span class="fn-val">Spleen, anaemia, symptoms</span></div>
+      <div class="flow-node"><span class="fn-lab">Molecular</span><span class="fn-val">VAF reduction; 87% / 70% CR in ET</span></div>
+      <div class="flow-node"><span class="fn-lab">Direction</span><span class="fn-val">Possible disease modification (phase 1)</span></div>
+    </div>
+
+    <div class="grid grid-3">
+
+      <!-- SENTRY -->
+      <article class="card">
+        <div class="badge-row"><span class="badge b-split">Split endpoint</span></div>
+        <h3>SENTRY</h3>
+        <p class="trial-meta"><span class="abs">LB5002</span> · Harrison C · Late-breaking, 14 June · Phase 3</p>
+        <p class="interp">Selinexor (oral XPO1 inhibitor) plus ruxolitinib vs ruxolitinib plus placebo in JAKi-naive myelofibrosis. Co-primary endpoints: SVR35 and absolute change in total symptom score (TSS, excluding fatigue) at week 24.</p>
+        <ul class="knums">
+          <li><span class="lab">SVR35 wk 24</span><span class="val pos">49.8% vs 28.0% · P&lt;0.0001 · met</span></li>
+          <li><span class="lab">TSS change</span><span class="val neg">-9.9 vs -10.9 · P=0.825 · not met</span></li>
+        </ul>
+        <p class="interp"><strong>Interpretation:</strong> Spleen benefit is unambiguous and clinically meaningful (21.8% absolute SVR35 gain). Symptom control was not improved over ruxolitinib alone. The investigators reported an overall survival benefit appreciated as early as week 24 versus ruxolitinib, which has not been shown before for a ruxolitinib combination, and transformation to AML was rare (1.7% in both arms). Because regulators typically require both co-primary endpoints, the spleen-only symptom result still complicates the regulatory picture. Full results are published in the Journal of Clinical Oncology.</p>
+        <div class="note note-caution"><span class="lab">Practice caution</span>A smaller spleen without better symptoms may not translate to meaningful quality of life, especially as fatigue was excluded from the TSS. Selinexor adds GI toxicity (nausea, weight loss, fatigue), so tolerability and the durability of the early survival signal are the figures to watch as longer follow-up matures.</div>
+        <div class="note note-cpd"><span class="lab">CPD reflection</span>What threshold of spleen response without symptom improvement would you consider sufficient to change practice in higher-risk MF?</div>
+      </article>
+
+      <!-- INDEPENDENCE -->
+      <article class="card">
+        <div class="badge-row"><span class="badge b-watch">Watch</span></div>
+        <h3>INDEPENDENCE</h3>
+        <p class="trial-meta"><span class="abs">S215</span> · Passamonti F · Oral · Phase 3 primary analysis</p>
+        <p class="interp">Luspatercept (activin receptor ligand trap) added to background JAKi therapy in MF patients with red cell transfusion dependence. It works downstream of EPO signalling and is already approved in MDS and beta-thalassaemia.</p>
+        <p class="interp"><strong>Why it matters:</strong> Anaemia in MF is debilitating and often undertreated once a patient is stabilised on a JAKi, with limited current options. Adding luspatercept without changing the JAKi is the practical advantage.</p>
+        <div class="note note-caution"><span class="lab">Practice caution</span>Watch transfusion independence at 12 weeks, duration of response, and any progression or platelet signal. Luspatercept has occasionally been linked with splenic enlargement in MDS, which needs monitoring where splenomegaly is already a problem. Specific EHA 2026 figures were not independently verified in this fact-check.</div>
+      </article>
+
+      <!-- INCA033989 -->
+      <article class="card">
+        <div class="badge-row"><span class="badge b-watch">Watch</span><span class="badge b-early">Emerging</span></div>
+        <h3>INCA033989 · CALR mAb</h3>
+        <p class="trial-meta"><span class="abs">S216</span> (MF) · <span class="abs">PS1983</span> (ET) · Harrison C / Mascarenhas J · Phase 1</p>
+        <p class="interp">A monoclonal antibody targeting the neoantigenic mutant-CALR C-terminus, present in roughly 25% of MF and 30% of ET. EHA 2026 data showed spleen responses, anaemia improvement, and molecular responses (VAF reduction) in MF, both as monotherapy and with ruxolitinib. In ET, 87% of patients achieved a haematologic response (70% complete), reached rapidly (about 2 weeks) and durable (median response duration around 23 weeks).</p>
+        <p class="interp"><strong>Interpretation:</strong> Unlike JAK inhibitors, which suppress signalling without targeting the clone, this is the first therapy to exploit the CALR mutation as a direct tumour antigen. Molecular responses suggest genuine cytoreductive activity. If durable, this could shift CALR-mutant MPN from symptom control toward disease modification.</p>
+        <div class="note note-caution"><span class="lab">Practice caution</span>Promising but still phase 1, not yet approved or routine. Durability of molecular remission is the key unknown. The agent has FDA Breakthrough Therapy Designation, and a phase 3 programme in CALR-mutant ET is planned.</div>
+        <div class="note note-cpd"><span class="lab">CPD reflection</span>If this reaches approval, how would it change diagnostic workup priorities and treatment discussions for the CALR-mutant cohort?</div>
+      </article>
+
+      <!-- SURPASS-ET -->
+      <article class="card">
+        <div class="badge-row"><span class="badge b-watch">Watch</span></div>
+        <h3>SURPASS-ET</h3>
+        <p class="trial-meta"><span class="abs">S219</span> · Gill H · Oral · Phase 3, 2-year results</p>
+        <p class="interp">Ropeginterferon alfa-2b vs anagrelide in high-risk essential thrombocythaemia. Interferon preferentially suppresses the JAK2 or CALR-mutant clone and can achieve molecular remission, whereas anagrelide lowers platelets only without targeting the clone.</p>
+        <p class="interp"><strong>Interpretation:</strong> If the 2-year data confirm durable haematological and molecular benefit alongside favourable thrombosis and bleeding outcomes, the case strengthens for ropeg as a preferred cytoreductive agent in younger high-risk ET where disease modification and pregnancy compatibility matter.</p>
+        <div class="note note-caution"><span class="lab">Practice caution</span>Interferon toxicity (flu-like symptoms, depression, autoimmune flares) can be treatment-limiting. Monitor thyroid and liver function and mood. Ropeginterferon is approved as Besremi for polycythaemia vera; for ET it remains investigational and under FDA review, with a decision expected on 30 August 2026. The EHA 2026 oral focused on early versus delayed initiation.</div>
+      </article>
+
+      <!-- MDS updates -->
+      <article class="card">
+        <div class="badge-row"><span class="badge b-confirm">Practice-confirming</span><span class="badge b-early">Early phase</span></div>
+        <h3>MDS updates</h3>
+        <p class="trial-meta">EPO-PRETAR · Ofirnoflast · Multiple oral sessions</p>
+        <p class="interp"><strong>EPO-PRETAR (phase 3):</strong> confirms erythropoietin as the first-line backbone for anaemia in lower-risk MDS with serum EPO below 500 IU/L. Useful validation for guideline adherence.</p>
+        <p class="interp"><strong>Ofirnoflast (PDE4 inhibitor):</strong> early-phase data showing erythroid responses in difficult-to-treat lower-risk MDS, including RARS / SF3B1-mutated subtypes.</p>
+        <div class="note note-caution"><span class="lab">Practice caution</span>Stratification is sharpening: SF3B1 predicts EPO or luspatercept response, while TP53-mutant MDS remains the hardest subset with limited options. IDH1/IDH2 inhibitor plus azacitidine combinations are at an early stage in higher-risk MDS or AML overlap. The EPO-PRETAR and Ofirnoflast items could not be independently verified in this fact-check and are provisional.</div>
+      </article>
+
+      <!-- spacer card for balance: CALR theme callout -->
+      <article class="card" style="background:linear-gradient(160deg,var(--navy),var(--navy-soft));color:#fff;border:none;">
+        <h3 style="color:#fff;">From prognostic to targetable</h3>
+        <p class="interp" style="color:#D6DBE7;">CALR mutation status in MPN is moving from a purely prognostic marker toward identifying a therapeutically distinct population, echoing the trajectory of BCR-ABL testing in CML.</p>
+        <p class="interp" style="color:#D6DBE7;margin-bottom:0;">This argues for systematic CALR testing in MPN, though the antibody approach is not yet approved.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLL ============ -->
+<section id="cll" class="disease-anchor" aria-labelledby="cll-h">
+  <div class="wrap">
+    <div class="disease-band"><span class="tag">Section 3</span></div>
+    <div class="section-head">
+      <h2 id="cll-h">Chronic lymphocytic leukaemia</h2>
+      <p>The first phase 3 superiority readout for a non-covalent BTK inhibitor.</p>
+    </div>
+
+    <div class="flow" role="img" aria-label="Pirtobrutinib flow: non-covalent BTKi, overcomes C481S, PFS benefit, deeper MRD">
+      <div class="flow-node"><span class="fn-lab">Agent</span><span class="fn-val">Pirtobrutinib (non-covalent BTKi)</span></div>
+      <div class="flow-node"><span class="fn-lab">Resistance</span><span class="fn-val">Overcomes C481S mutation</span></div>
+      <div class="flow-node"><span class="fn-lab">Efficacy</span><span class="fn-val">PFS HR 0.547</span></div>
+      <div class="flow-node"><span class="fn-lab">Depth</span><span class="fn-val">MRD 10⁻⁶ 52.1% vs 35.0%</span></div>
+    </div>
+
+    <div class="grid grid-2">
+
+      <article class="card">
+        <div class="badge-row"><span class="badge b-positive">Positive</span></div>
+        <h3>BRUIN CLL-322</h3>
+        <p class="trial-meta"><span class="abs">LB5001</span> · Davids M et al · Late-breaking, 14 June · Phase 3</p>
+        <p class="interp">Fixed-duration pirtobrutinib (non-covalent BTKi) plus venetoclax-rituximab (PVR) vs venetoclax-rituximab (VR) in previously treated CLL or SLL. Primary endpoint: IRC-assessed PFS.</p>
+        <ul class="knums">
+          <li><span class="lab">Patients (PVR / VR)</span><span class="val">639 (321 / 318)</span></li>
+          <li><span class="lab">PFS</span><span class="val pos">HR 0.547 · P=0.0001</span></li>
+          <li><span class="lab">Undetectable MRD 10⁻⁶ (blood, end of treatment)</span><span class="val pos">52.1% vs 35.0%</span></li>
+        </ul>
+        <p class="interp"><strong>Interpretation:</strong> The first non-covalent BTK inhibitor to show phase 3 superiority head-to-head. Around 80% of patients had already received a covalent BTK inhibitor, and the control-arm PFS (about 72%) was lower than in earlier venetoclax-rituximab studies, pointing to a high-risk population. The non-covalent mechanism overcomes the common C481S resistance mutation, and this trial suggests benefit even without prior BTKi failure. Results are to be published in the Lancet.</p>
+      </article>
+
+      <article class="card">
+        <h3>Clinical positioning</h3>
+        <p class="interp"><strong>For previously BTKi-treated patients</strong> (ibrutinib, acalabrutinib, zanubrutinib), pirtobrutinib-based combinations are now strongly supported by phase 3 data.</p>
+        <p class="interp"><strong>For BTKi-naive relapsed patients,</strong> the PVR triplet may offer greater depth of response than the VR doublet. Pirtobrutinib tolerability is generally favourable, with lower rates of atrial fibrillation and hypertension than ibrutinib.</p>
+        <div class="note note-caution"><span class="lab">Practice caution</span>OS data are awaited. The toxicity of a fixed-duration triplet versus continuous BTKi monotherapy, and feasibility in older or frailer patients, still need careful weighing.</div>
+        <div class="note note-cpd"><span class="lab">CPD reflection</span>For patients who have progressed on ibrutinib, would this data change your preferred subsequent therapy, and how does MRD depth factor into your stopping rules?</div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ MYELOMA ============ -->
+<section id="myeloma" class="disease-anchor alt-bg" aria-labelledby="mm-h">
+  <div class="wrap">
+    <div class="disease-band"><span class="tag">Section 4</span></div>
+    <div class="section-head">
+      <h2 id="mm-h">Multiple myeloma</h2>
+      <p>A next-generation CELMoD doubling PFS, a bispecific tested in pre-malignant disease, and a GPRC5D-directed phase 3.</p>
+    </div>
+
+    <div class="flow" role="img" aria-label="Mezigdomide flow: CELMoD, carfilzomib-dex backbone, PFS doubled, not yet approved">
+      <div class="flow-node"><span class="fn-lab">Agent</span><span class="fn-val">Mezigdomide (CELMoD)</span></div>
+      <div class="flow-node"><span class="fn-lab">Backbone</span><span class="fn-val">+ carfilzomib-dexamethasone</span></div>
+      <div class="flow-node"><span class="fn-lab">Efficacy</span><span class="fn-val">PFS 18 vs 8.3 mo (HR 0.48)</span></div>
+      <div class="flow-node"><span class="fn-lab">Status</span><span class="fn-val">Not yet approved</span></div>
+    </div>
+
+    <div class="grid grid-3">
+
+      <!-- SUCCESSOR-2 -->
+      <article class="card">
+        <div class="badge-row"><span class="badge b-positive">Positive</span><span class="badge b-watch">Not yet approved</span></div>
+        <h3>SUCCESSOR-2</h3>
+        <p class="trial-meta"><span class="abs">LB5004</span> · Dimopoulos M · Late-breaking, 14 June · Phase 3</p>
+        <p class="interp">Mezigdomide (CELMoD) plus carfilzomib-dexamethasone (MeziKd) vs carfilzomib-dexamethasone (Kd) in relapsed/refractory myeloma. Primary endpoint: PFS.</p>
+        <ul class="knums">
+          <li><span class="lab">Patients randomised</span><span class="val">479</span></li>
+          <li><span class="lab">Median PFS</span><span class="val pos">18.0 vs 8.3 mo</span></li>
+          <li><span class="lab">Hazard ratio</span><span class="val pos">HR 0.48 · P&lt;0.0001</span></li>
+        </ul>
+        <p class="interp"><strong>Interpretation:</strong> Mezigdomide binds cereblon more selectively than lenalidomide or pomalidomide and retains activity in IMiD-refractory settings. Doubling median PFS is a compelling result, building on SUCCESSOR-1. Results were published in the Lancet on 14 June 2026; the working-notes 95% CI of 0.36 to 0.63 should be confirmed against the published paper, as one congress report listed an upper bound of 0.83.</p>
+        <div class="note note-caution"><span class="lab">Practice caution</span>Not yet approved; FDA and EMA submissions are expected from the SUCCESSOR programme. Watch neutropenia and infection rates with this more potent agent, and whether anti-CD38 combinations improve outcomes further.</div>
+      </article>
+
+      <!-- ImmunoPRISM -->
+      <article class="card">
+        <div class="badge-row"><span class="badge b-positive">Positive</span><span class="badge b-early">Phase 2</span></div>
+        <h3>ImmunoPRISM</h3>
+        <p class="trial-meta"><span class="abs">LB5008</span> · Nadeem O · Late-breaking, 14 June · Phase 2, randomised</p>
+        <p class="interp">Teclistamab (BCMA x CD3 bispecific) vs lenalidomide-dexamethasone (Rd) in high-risk smouldering myeloma. The first randomised trial of a bispecific in smouldering disease.</p>
+        <ul class="knums">
+          <li><span class="lab">2-year PFS</span><span class="val pos">92% vs 51% · P=0.007</span></li>
+          <li><span class="lab">MRD-negativity (10⁻⁵)</span><span class="val pos">81% vs 0%</span></li>
+        </ul>
+        <p class="interp"><strong>Interpretation:</strong> A striking depth-of-response difference in a setting where early intervention has been debated. Potentially paradigm-shifting, but this is phase 2 with a relatively small sample.</p>
+        <div class="note note-caution"><span class="lab">Practice caution</span>Teclistamab carries real immunosuppression risk (infection, hypogammaglobulinaemia, CRS). Some high-risk smouldering patients never progress and could be exposed to toxicity unnecessarily. This is not active myeloma.</div>
+        <div class="note note-cpd"><span class="lab">CPD reflection</span>How do you define high-risk smouldering myeloma, and would you discuss a bispecific for a patient without CRAB criteria given the toxicity profile?</div>
+      </article>
+
+      <!-- MonumenTAL-3 (corrected from MAJESTEC-9) -->
+      <article class="card">
+        <div class="badge-row"><span class="badge b-watch">Watch</span><span class="badge b-negative">Corrected entry</span></div>
+        <h3>Talquetamab combinations (MonumenTAL-3)</h3>
+        <p class="trial-meta">GPRC5D x CD3 bispecific · talquetamab-based regimens vs daratumumab-pomalidomide-dexamethasone (DPd)</p>
+        <p class="interp">GPRC5D is highly and homogeneously expressed on myeloma cells with limited critical-tissue expression. Talquetamab is already approved in later-line RRMM. The phase 3 talquetamab-versus-DPd programme is MonumenTAL-3.</p>
+        <div class="note note-caution"><span class="lab">Correction</span>Earlier working notes labelled this trial &ldquo;MAJESTEC-9&rdquo; and tied talquetamab to it. That is a mix-up. MajesTEC-9 is a separate phase 3 of teclistamab monotherapy versus PVd or Kd, presented at ASCO 2026 (not the EHA plenary), where teclistamab cut progression or death risk by 71%. The talquetamab-versus-DPd trial is MonumenTAL-3. Specific EHA 2026 efficacy figures for MonumenTAL-3 are omitted here because they could not be independently verified.</div>
+        <div class="note note-caution"><span class="lab">Practice caution</span>Talquetamab has distinctive GPRC5D on-target effects: dysgeusia, skin and nail changes, and weight loss from taste disturbance. Counsel proactively and involve a dietitian. CRS is typically grade 1 to 2.</div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ LYMPHOMA ============ -->
+<section id="lymphoma" class="disease-anchor" aria-labelledby="lym-h">
+  <div class="wrap">
+    <div class="disease-band"><span class="tag">Section 5</span></div>
+    <div class="section-head">
+      <h2 id="lym-h">Lymphoma (DLBCL &amp; B-cell NHL)</h2>
+      <p>The first positive frontline DLBCL readout since rituximab, and a first-in-human in vivo CAR-T signal.</p>
+    </div>
+
+    <div class="flow" role="img" aria-label="frontMIND flow: tafasitamab plus lenalidomide added to R-CHOP, PFS benefit, OS immature">
+      <div class="flow-node"><span class="fn-lab">Agents</span><span class="fn-val">Tafasitamab (anti-CD19) + lenalidomide</span></div>
+      <div class="flow-node"><span class="fn-lab">Backbone</span><span class="fn-val">Added to frontline R-CHOP</span></div>
+      <div class="flow-node"><span class="fn-lab">Efficacy</span><span class="fn-val">PFS HR 0.75 (8.2% at 2y)</span></div>
+      <div class="flow-node"><span class="fn-lab">Caveat</span><span class="fn-val">OS not yet mature</span></div>
+    </div>
+
+    <div class="grid grid-2">
+
+      <!-- frontMIND -->
+      <article class="card">
+        <div class="badge-row"><span class="badge b-positive">Positive</span><span class="badge b-watch">OS immature</span></div>
+        <h3>frontMIND</h3>
+        <p class="trial-meta"><span class="abs">S101</span> · Lenz G · Plenary, 13 June · Phase 3, double-blind, 899 patients</p>
+        <p class="interp">Tafasitamab (anti-CD19) plus lenalidomide plus R-CHOP vs R-CHOP plus placebo in previously untreated IPI high-intermediate or high-risk DLBCL or high-grade B-cell lymphoma. Primary endpoint: investigator-assessed PFS.</p>
+        <ul class="knums">
+          <li><span class="lab">Overall PFS</span><span class="val pos">HR 0.75 · P=0.019</span></li>
+          <li><span class="lab">24-month PFS</span><span class="val pos">71.1% vs 62.9%</span></li>
+          <li><span class="lab">Confirmed-subtype PFS</span><span class="val pos">HR 0.68 · 72.7% vs 62.2%</span></li>
+          <li><span class="lab">OS</span><span class="val">HR 0.85 · significance not yet reached</span></li>
+          <li><span class="lab">Grade ≥3 TEAEs</span><span class="val neg">86.7% vs 76.1%</span></li>
+        </ul>
+        <p class="interp"><strong>Interpretation:</strong> The first positive phase 3 to improve on R-CHOP in newly diagnosed high-risk DLBCL since rituximab, with an 8.2% absolute 24-month PFS gain, and a tighter hazard ratio in centrally confirmed subtypes.</p>
+        <div class="note note-caution"><span class="lab">Practice caution</span>OS is not yet mature, toxicity is greater with the triplet, and administration is more complex. The field has seen impressive DLBCL PFS gains before that did not translate to OS (the POLARIX or pola-R-CHP experience). Await OS and health-economic data before adopting.</div>
+        <div class="note note-cpd"><span class="lab">CPD reflection</span>How would you select patients for this regimen versus standard R-CHOP, and what role might early PET-CT adaptation play?</div>
+      </article>
+
+      <!-- LB2501 -->
+      <article class="card">
+        <div class="badge-row"><span class="badge b-early">Early phase</span><span class="badge b-watch">Watch</span></div>
+        <h3>LB2501 · in vivo CAR-T</h3>
+        <p class="trial-meta"><span class="abs">LB5006</span> · Fan L · Late-breaking, 14 June · First-in-human</p>
+        <p class="interp">Dose-escalation of an in vivo (non-ex-vivo manufactured) CD19/CD20 dual-targeting CAR-T in relapsed/refractory B-cell NHL. The construct is delivered directly to the patient, reprogramming T-cells in situ and avoiding apheresis and weeks of manufacturing. Median time from consent to infusion was 17.5 days.</p>
+        <ul class="knums">
+          <li><span class="lab">ORR at DL2 (n=6)</span><span class="val pos">100% · CR 83.3%</span></li>
+          <li><span class="lab">ORR all doses (n=12)</span><span class="val">50% · CR 41.7%</span></li>
+          <li><span class="lab">Safety</span><span class="val">No DLT · CRS 66.7% (mostly G1) · no ICANS</span></li>
+        </ul>
+        <p class="interp"><strong>Interpretation:</strong> A potentially transformative delivery approach, with no neurotoxicity observed and dual targeting designed to reduce antigen escape.</p>
+        <div class="note note-caution"><span class="lab">Practice caution</span>Very small numbers (n=6 at DL2), first-in-human stage, and no durability data. In vivo gene delivery carries theoretical insertional mutagenesis risk requiring long-term monitoring.</div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ AUTOIMMUNE ============ -->
+<section id="autoimmune" class="disease-anchor alt-bg" aria-labelledby="ai-h">
+  <div class="wrap">
+    <div class="disease-band"><span class="tag">Section 6</span></div>
+    <div class="section-head">
+      <h2 id="ai-h">Autoimmune haematology</h2>
+      <p>Targeted therapy reaching conditions previously managed with broad immunosuppression.</p>
+    </div>
+
+    <div class="flow" role="img" aria-label="Nipocalimab flow: anti-FcRn, lowers pathogenic IgG, durable haemoglobin response, FDA Priority Review">
+      <div class="flow-node"><span class="fn-lab">Agent</span><span class="fn-val">Nipocalimab (anti-FcRn)</span></div>
+      <div class="flow-node"><span class="fn-lab">Mechanism</span><span class="fn-val">Lowers pathogenic IgG</span></div>
+      <div class="flow-node"><span class="fn-lab">Efficacy</span><span class="fn-val">Durable Hgb response ~3x placebo</span></div>
+      <div class="flow-node"><span class="fn-lab">Status</span><span class="fn-val">FDA Priority Review (wAIHA)</span></div>
+    </div>
+
+    <div class="grid grid-2">
+
+      <!-- ENERGY -->
+      <article class="card">
+        <div class="badge-row"><span class="badge b-positive">Positive</span></div>
+        <h3>ENERGY · wAIHA</h3>
+        <p class="trial-meta"><span class="abs">S300</span> · Fattizzo B · Oral, 11 June · Phase 2/3, 115 adults</p>
+        <p class="interp">Nipocalimab (anti-FcRn) blocks FcRn-mediated IgG recycling, accelerating clearance of pathogenic anti-red-cell IgG in warm AIHA. The primary endpoint was a stringent durable haemoglobin response sustained from week 16 to 24 without rescue.</p>
+        <ul class="knums">
+          <li><span class="lab">Durable Hgb response (30 mg/kg)</span><span class="val pos">24% vs 8% · P=0.015</span></li>
+          <li><span class="lab">Durable Hgb response (15 mg/kg)</span><span class="val pos">21% · P=0.044</span></li>
+          <li><span class="lab">Hgb ≥10 &amp; +2 g/dL at ≥1 visit</span><span class="val">61% vs 15%</span></li>
+          <li><span class="lab">Steroid reduction (wk 24)</span><span class="val">15% vs 4% · P=0.039</span></li>
+        </ul>
+        <p class="interp"><strong>Interpretation:</strong> An important positive trial in a condition with no approved targeted therapy in Europe. The stringent endpoint understates clinical benefit, and the steroid-sparing effect matters for long-term morbidity. Pharmacodynamic data showed roughly 60 to 70% total IgG reduction correlating with haemoglobin improvement.</p>
+        <div class="note note-caution"><span class="lab">Practice caution</span>FcRn blockade lowers all IgG, including protective and vaccine-derived antibody. Monitor total IgG, consider replacement in recurrent infection, and avoid initiation during active serious infection. Nipocalimab is already marketed as Imaavy for generalised myasthenia gravis; the warm AIHA application has been accepted by the FDA with Priority Review, so a first targeted licensed option for wAIHA would follow approval.</div>
+        <div class="note note-cpd"><span class="lab">CPD reflection</span>For steroid-dependent wAIHA, where would an anti-FcRn agent sit relative to rituximab: before, alongside, or in refractory cases?</div>
+      </article>
+
+      <!-- BCMA CAR-T ITP -->
+      <article class="card">
+        <div class="badge-row"><span class="badge b-early">Proof of concept</span><span class="badge b-watch">Watch</span></div>
+        <h3>BCMA CAR-T in refractory ITP</h3>
+        <p class="trial-meta"><span class="abs">LB5003</span> · Shu J · Late-breaking, 14 June · 8 patients dosed</p>
+        <p class="interp">BCMA-directed CAR-T targeting the plasma cells that produce pathogenic anti-platelet IgG in refractory primary ITP.</p>
+        <ul class="knums">
+          <li><span class="lab">Dosed / evaluable</span><span class="val">8 / 4</span></li>
+          <li><span class="lab">Complete response</span><span class="val pos">4 of 4 evaluable</span></li>
+          <li><span class="lab">Relapse</span><span class="val">1 patient at 9 months</span></li>
+        </ul>
+        <p class="interp"><strong>Interpretation:</strong> A landmark proof-of-concept for CAR-T in autoantibody-mediated disease. BCMA targeting depletes long-lived plasma cells more completely than CD19, which can achieve deep drug-free remission that current treatments cannot.</p>
+        <div class="note note-caution"><span class="lab">Practice caution</span>Only 8 patients dosed with 4 evaluable, not practice-changing. Standard CAR-T risks apply, and pre-existing thrombocytopenia makes lymphodepletion higher risk. Cost and logistics of autologous CAR-T are substantial.</div>
+        <div class="note note-cpd"><span class="lab">CPD reflection</span>In multiply relapsed refractory ITP, how would you frame the risk-benefit of experimental CAR-T against continued TPO-receptor agonist management?</div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ SICKLE / RED CELL ============ -->
+<section id="sickle" class="disease-anchor" aria-labelledby="scd-h">
+  <div class="wrap">
+    <div class="disease-band"><span class="tag">Section 7</span></div>
+    <div class="section-head">
+      <h2 id="scd-h">Sickle cell &amp; red cell disorders</h2>
+      <p>A PK activator with a clear haemoglobin signal but an unmet crisis-rate endpoint.</p>
+    </div>
+
+    <div class="grid grid-2">
+
+      <article class="card">
+        <div class="badge-row"><span class="badge b-split">Split endpoint</span></div>
+        <h3>RISE UP · Mitapivat</h3>
+        <p class="trial-meta"><span class="abs">S102</span> · Andemariam B · Plenary, 13 June · Phase 3, 207 patients</p>
+        <p class="interp">Oral pyruvate kinase activator in sickle cell disease. PK activation reduces 2,3-DPG and sickling precursors, raises ATP, and improves red cell survival. Already approved for PK deficiency.</p>
+        <ul class="knums">
+          <li><span class="lab">Hgb response (primary 1)</span><span class="val pos">40.6% vs 2.9% · P&lt;0.0001</span></li>
+          <li><span class="lab">Annualised pain crises (primary 2)</span><span class="val neg">2.62 vs 3.05 · P=0.12 · not met</span></li>
+          <li><span class="lab">Mean Hgb change</span><span class="val">+0.74 g/dL</span></li>
+          <li><span class="lab">Indirect bilirubin</span><span class="val">-16.91 µmol/L</span></li>
+        </ul>
+        <p class="interp"><strong>Interpretation:</strong> Another split primary result. The haemoglobin and haemolysis signals are clear, but the overall crisis-rate reduction did not reach significance. Haemoglobin responders did show lower crisis and hospitalisation rates, suggesting that not all patients are PK-pathway dependent and that responder selection matters, though responders cannot yet be predicted upfront.</p>
+        <div class="note note-caution"><span class="lab">Practice caution</span>The crisis-rate miss is relevant for regulatory purposes. For context, voxelotor was withdrawn globally in 2024 after data including HOPE-KIDS 2; mitapivat's haemoglobin signal is more convincing, but the crisis endpoint was not met. Serious adverse events were less frequent with mitapivat than placebo (20.3% vs 29.0%), although a risk of hepatocellular injury has been flagged and warrants liver monitoring. Mitapivat may act regardless of HbS genotype.</div>
+        <div class="note note-cpd"><span class="lab">CPD reflection</span>In patients on hydroxyurea with persistent haemolytic anaemia, would you position mitapivat as add-on or alternative, and how do you counsel on gene therapy eligibility?</div>
+      </article>
+
+      <article class="card">
+        <h3>Where it sits</h3>
+        <p class="interp">Sickle cell management has broadened quickly. Hydroxyurea, voxelotor, crizanlizumab, and L-glutamine are established, and gene therapy (lovotibeglogene autotemcel and exagamglogene autotemcel) is now available for eligible patients.</p>
+        <p class="interp">Mitapivat would add an oral, well-tolerated, mechanistically distinct option. Its potential advantage is a mechanism that is not HbS-specific, so it may work across HbSS, HbSC, and HbS-beta-thalassaemia, though the unmet crisis endpoint tempers expectations.</p>
+        <div class="note note-caution"><span class="lab">Practice caution</span>Not yet a routine standard for sickle cell disease on the basis of this readout alone. Regulatory positioning will hinge on how the split endpoint is interpreted.</div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRANSPLANT / CELLULAR ============ -->
+<section id="transplant" class="disease-anchor alt-bg" aria-labelledby="tx-h">
+  <div class="wrap">
+    <div class="disease-band"><span class="tag">Section 8</span></div>
+    <div class="section-head">
+      <h2 id="tx-h">Transplant &amp; cellular therapy</h2>
+      <p>Practice-confirming GVHD prophylaxis data and an early concept to boost bispecific killing.</p>
+    </div>
+
+    <div class="grid grid-2">
+
+      <article class="card">
+        <div class="badge-row"><span class="badge b-confirm">Practice-confirming</span></div>
+        <h3>ATG in MUD-HCT</h3>
+        <p class="trial-meta"><span class="abs">LB5009</span> · Schetelig J · Late-breaking, 14 June · Phase 3</p>
+        <p class="interp">Definitive phase 3 validation that ATG-based GVHD prophylaxis should not be omitted in HLA-compatible unrelated donor transplantation, even with modern calcineurin-inhibitor prophylaxis.</p>
+        <p class="interp"><strong>Interpretation:</strong> Settles the debate about whether ATG still adds value in well-matched unrelated donor HCT. It remains standard. The next comparative question is ATG versus post-transplant cyclophosphamide in 10/10 MUD transplant.</p>
+        <div class="note note-caution"><span class="lab">Verification</span>This late-breaker (LB5009) was not independently re-verified in this fact-check; treat the specifics as provisional.</div>
+      </article>
+
+      <article class="card">
+        <div class="badge-row"><span class="badge b-early">Early concept</span><span class="badge b-watch">Watch</span></div>
+        <h3>CD5 inhibition + bispecifics</h3>
+        <p class="trial-meta"><span class="abs">S104</span> · Wang W · Plenary · Concept</p>
+        <p class="interp">CD5 is an inhibitory receptor on T-cells. Blocking it amplifies T-cell killing when combined with bispecific T-cell engagers, a potentially generalisable strategy across myeloma, NHL, and ALL.</p>
+        <p class="interp"><strong>Interpretation:</strong> A biological approach to T-cell exhaustion and limited killing efficiency in the immunosuppressive tumour microenvironment.</p>
+        <div class="note note-caution"><span class="lab">Practice caution</span>Conceptual stage. Watch for clinical trial development before drawing practice conclusions. This abstract could not be independently verified in this fact-check and is provisional.</div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPARISON TABLES ============ -->
+<section id="compare" class="disease-anchor alt-bg" aria-labelledby="cmp-h">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Side by side</div>
+      <h2 id="cmp-h">Trial comparison tables</h2>
+      <p>Rapid comparison within the busiest disease areas, plus a scorecard for the split-endpoint trials that defined the congress.</p>
+    </div>
+
+    <div class="mtable-wrap" style="margin-bottom:24px;">
+      <table class="mtable">
+        <caption>Myelofibrosis 2026 overview</caption>
+        <thead>
+          <tr><th scope="col">Trial</th><th scope="col">Target</th><th scope="col">Result</th><th scope="col">Practice-changing now?</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="t-name">SENTRY</td><td>XPO1 (selinexor) + ruxolitinib</td><td>Spleen met (SVR35), symptoms not met; early OS signal</td><td><span class="verdict v-notyet">Not yet</span></td></tr>
+          <tr><td class="t-name">INDEPENDENCE</td><td>Activin receptor ligand trap (luspatercept)</td><td>Anaemia / transfusion focus; specifics not verified here</td><td><span class="verdict v-watch">Watch</span></td></tr>
+          <tr><td class="t-name">INCA033989</td><td>Mutant CALR antibody</td><td>Clinical and molecular responses; phase 1</td><td><span class="verdict v-watch">Potentially</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mtable-wrap" style="margin-bottom:24px;">
+      <table class="mtable">
+        <caption>Myeloma bispecific overview</caption>
+        <thead>
+          <tr><th scope="col">Trial</th><th scope="col">Bispecific / target</th><th scope="col">Setting</th><th scope="col">Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="t-name">ImmunoPRISM</td><td>Teclistamab (BCMA)</td><td>High-risk smouldering myeloma</td><td><span class="verdict v-no">Phase 2, investigational</span></td></tr>
+          <tr><td class="t-name">MonumenTAL-3</td><td>Talquetamab (GPRC5D)</td><td>Relapsed/refractory, vs DPd</td><td><span class="verdict v-watch">Watch</span></td></tr>
+          <tr><td class="t-name">MajesTEC-9</td><td>Teclistamab (BCMA), monotherapy</td><td>Earlier relapse, vs PVd or Kd</td><td><span class="verdict v-already">ASCO 2026, not EHA</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mtable-wrap">
+      <table class="mtable">
+        <caption>Split-endpoint scorecard</caption>
+        <thead>
+          <tr><th scope="col">Trial</th><th scope="col">Primary / co-primary</th><th scope="col">The other endpoint</th><th scope="col">Take-home</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="t-name">PASHA</td><td>OS not met (HR 1.02)</td><td>EFS / RFS trend favours gilteritinib</td><td>Midostaurin remains standard</td></tr>
+          <tr><td class="t-name">SENTRY</td><td>SVR35 met (P&lt;0.0001)</td><td>Symptom score not met (P=0.825)</td><td>Smaller spleen, symptoms unchanged</td></tr>
+          <tr><td class="t-name">RISE UP</td><td>Haemoglobin response met</td><td>Pain-crisis rate not met (P=0.12)</td><td>Anti-haemolytic, crisis benefit unproven</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INFOGRAPHICS ============ -->
+<section id="infographics" class="disease-anchor" aria-labelledby="info-h">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Reusable visual summaries</div>
+      <h2 id="info-h">Infographics</h2>
+      <p>Built in plain HTML and CSS so they stay editable, accessible, and print-friendly. Each block can be lifted out and reused in teaching.</p>
+    </div>
+
+    <!-- A: trials by disease area -->
+    <div class="info-block">
+      <h3><span class="info-tag">A</span> Key trials by disease area</h3>
+      <p class="info-sub">Seventeen trials and programmes across eight areas, as summarised in the working notes.</p>
+      <div class="ia-grid">
+        <div class="ia-col">
+          <h4>AML</h4>
+          <ul>
+            <li><b>PASHA</b> Gilteritinib vs midostaurin</li>
+            <li><b>REVSTAR-123</b> Switchable allo CD123 CAR-T</li>
+            <li><b>Menin inhibitors</b> NPM1mut / KMT2A-r</li>
+          </ul>
+        </div>
+        <div class="ia-col">
+          <h4>MDS / MPN</h4>
+          <ul>
+            <li><b>SENTRY</b> Selinexor + ruxolitinib</li>
+            <li><b>INDEPENDENCE</b> Luspatercept in MF</li>
+            <li><b>INCA033989</b> CALR mAb (MF / ET)</li>
+            <li><b>SURPASS-ET</b> Ropeg vs anagrelide</li>
+            <li><b>MDS</b> EPO-PRETAR · Ofirnoflast</li>
+          </ul>
+        </div>
+        <div class="ia-col">
+          <h4>CLL · Myeloma</h4>
+          <ul>
+            <li><b>BRUIN CLL-322</b> Pirtobrutinib + Ven-R</li>
+            <li><b>SUCCESSOR-2</b> MeziKd in RRMM</li>
+            <li><b>ImmunoPRISM</b> Teclistamab in HR-SMM</li>
+            <li><b>MonumenTAL-3</b> Talquetamab vs DPd</li>
+          </ul>
+        </div>
+        <div class="ia-col">
+          <h4>Lymphoma · Other</h4>
+          <ul>
+            <li><b>frontMIND</b> Tafa-Len-R-CHOP</li>
+            <li><b>LB2501</b> In vivo CD19/CD20 CAR-T</li>
+            <li><b>ENERGY</b> Nipocalimab (wAIHA)</li>
+            <li><b>BCMA CAR-T</b> Refractory ITP</li>
+            <li><b>RISE UP</b> Mitapivat (SCD)</li>
+            <li><b>ATG</b> MUD-HCT · <b>CD5</b> concept</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- B: positive / negative / split -->
+    <div class="info-block">
+      <h3><span class="info-tag">B</span> Positive, negative &amp; split-endpoint trials</h3>
+      <p class="info-sub">Sorted by the nature of the reported result, not by clinical recommendation.</p>
+      <div class="pns">
+        <div class="pns-col pns-pos">
+          <h4>Positive (primary met)</h4>
+          <ul>
+            <li><b>BRUIN CLL-322</b> PFS HR 0.547; MRD 10⁻⁶ 52.1% vs 35.0%</li>
+            <li><b>SUCCESSOR-2</b> PFS 18 vs 8.3 mo, HR 0.48</li>
+            <li><b>frontMIND</b> PFS HR 0.75 (OS immature)</li>
+            <li><b>ImmunoPRISM</b> 2yr PFS 92% vs 51% (phase 2)</li>
+            <li><b>ENERGY</b> Durable Hgb response 24% vs 8%</li>
+          </ul>
+        </div>
+        <div class="pns-col pns-neg">
+          <h4>Negative (primary not met)</h4>
+          <ul>
+            <li><b>PASHA</b> OS HR 1.02, P=0.864; EFS trend only (P=0.052)</li>
+          </ul>
+        </div>
+        <div class="pns-col pns-split">
+          <h4>Split / dual endpoint</h4>
+          <ul>
+            <li><b>SENTRY</b> SVR35 met; TSS not met (P=0.825)</li>
+            <li><b>RISE UP</b> Hgb response met; crisis rate not met (P=0.12)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- C: MRD cross-haematology -->
+    <div class="info-block">
+      <h3><span class="info-tag">C</span> MRD as a cross-haematology endpoint</h3>
+      <p class="info-sub">Deep MRD-negativity is recurring as the therapeutic target across disease areas in these notes.</p>
+      <div class="mrd-flow">
+        <div class="mrd-node">
+          <h4>CLL</h4>
+          <p>BRUIN CLL-322: undetectable MRD at 10⁻⁶ of 52.1% vs 35.0% at end of treatment.</p>
+          <span class="mlevel">10⁻⁶</span>
+        </div>
+        <div class="mrd-node">
+          <h4>Myeloma</h4>
+          <p>ImmunoPRISM: MRD-negativity 81% vs 0% in high-risk smouldering disease.</p>
+          <span class="mlevel">10⁻⁵</span>
+        </div>
+        <div class="mrd-node">
+          <h4>Myeloma</h4>
+          <p>MonumenTAL-3: talquetamab-based regimens tested against the DPd backbone for depth of response.</p>
+          <span class="mlevel">Depth endpoint</span>
+        </div>
+        <div class="mrd-node">
+          <h4>AML</h4>
+          <p>Menin inhibitor combinations pursuing deep responses in NPM1-mutated disease.</p>
+          <span class="mlevel">MRD-driven</span>
+        </div>
+      </div>
+      <div class="note note-cpd" style="margin-top:16px;"><span class="lab">Implication</span>MRD testing by NGS at 10⁻⁴ to 10⁻⁶ is increasingly the surrogate of choice, which means MRD infrastructure needs to sit within routine clinical pathways.</div>
+    </div>
+
+    <!-- D: target expansion -->
+    <div class="info-block">
+      <h3><span class="info-tag">D</span> Targeted therapy expansion</h3>
+      <p class="info-sub">New or expanding molecular and antigen targets featured across the congress notes.</p>
+      <div class="targets">
+        <div class="target">
+          <div class="t-name">CALR</div>
+          <div class="t-cls">Mutant neoantigen</div>
+          <div class="t-ex">INCA033989 mAb in MF and ET</div>
+        </div>
+        <div class="target">
+          <div class="t-name">FcRn</div>
+          <div class="t-cls">IgG recycling</div>
+          <div class="t-ex">Nipocalimab in wAIHA</div>
+        </div>
+        <div class="target">
+          <div class="t-name">BCMA</div>
+          <div class="t-cls">Plasma cell</div>
+          <div class="t-ex">Teclistamab; CAR-T in ITP</div>
+        </div>
+        <div class="target">
+          <div class="t-name">CD123</div>
+          <div class="t-cls">Blast / LSC</div>
+          <div class="t-ex">Switchable allo CAR-T in AML</div>
+        </div>
+        <div class="target">
+          <div class="t-name">CD19/CD20</div>
+          <div class="t-cls">B-cell antigens</div>
+          <div class="t-ex">In vivo dual CAR-T in NHL</div>
+        </div>
+      </div>
+      <div class="note note-cpd" style="margin-top:16px;"><span class="lab">Also featured</span>CD19 (tafasitamab in DLBCL), GPRC5D (talquetamab in myeloma), XPO1 (selinexor in MF), and the PK pathway (mitapivat in sickle cell disease).</div>
+    </div>
+
+    <!-- E: now vs watch -->
+    <div class="info-block">
+      <h3><span class="info-tag">E</span> Practice-changing now vs watch-this-space</h3>
+      <p class="info-sub">A pragmatic split based only on what the working notes state. Local policy, licensing, and MDT discussion still govern any change in practice.</p>
+      <div class="nvw">
+        <div class="nvw-col nvw-now">
+          <h4>Confirms or may change practice now</h4>
+          <ul>
+            <li><b>PASHA</b> confirms midostaurin plus chemotherapy as frontline FLT3-mutated AML standard.</li>
+            <li><b>ATG in MUD-HCT</b> confirmed as standard GVHD prophylaxis.</li>
+            <li><b>EPO-PRETAR</b> confirms erythropoietin first-line for lower-risk MDS anaemia.</li>
+            <li><b>BRUIN CLL-322</b> strongly supports pirtobrutinib combinations in previously treated CLL (OS awaited).</li>
+          </ul>
+        </div>
+        <div class="nvw-col nvw-watch">
+          <h4>Watch this space</h4>
+          <ul>
+            <li><b>SUCCESSOR-2, frontMIND, MonumenTAL-3</b> positive or pending data, not yet approved or OS-mature.</li>
+            <li><b>INCA033989, SURPASS-ET</b> potential disease modification in MPN, durability unknown.</li>
+            <li><b>ImmunoPRISM, ENERGY</b> early or stringent-endpoint signals in pre-malignant and autoimmune disease.</li>
+            <li><b>REVSTAR-123, LB2501, BCMA CAR-T in ITP, CD5 concept</b> early-phase or proof-of-concept technology validation.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ THEMES ============ -->
+<section id="themes" class="disease-anchor alt-bg" aria-labelledby="th-h">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Overarching lessons</div>
+      <h2 id="th-h">Cross-cutting themes</h2>
+      <p>Six recurring threads drawn directly from the closing notes of the congress summary.</p>
+    </div>
+    <div class="themes">
+      <div class="theme">
+        <h4>1 · Split primary endpoints as a regulatory challenge</h4>
+        <p>SENTRY, RISE UP, and PASHA all used co-primary or dual-endpoint designs where one was met and one was not, creating regulatory ambiguity and a risk of improving biology without symptoms, or the reverse.</p>
+        <div class="chain"><span class="chip">PASHA</span><span class="chip">SENTRY</span><span class="chip">RISE UP</span><span class="arr">&rarr;</span><span class="out">Regulatory uncertainty</span><span class="arr">&rarr;</span><span class="out">Better endpoint design</span></div>
+      </div>
+      <div class="theme">
+        <h4>2 · MRD-negativity as the target endpoint</h4>
+        <p>Across CLL, myeloma, and AML, deep MRD-negativity is becoming the therapeutic goal rather than response or PFS alone, which calls for MRD testing embedded in routine pathways.</p>
+        <div class="chain"><span class="chip">CLL</span><span class="chip">Myeloma</span><span class="chip">AML</span><span class="arr">&rarr;</span><span class="out">MRD as surrogate</span><span class="arr">&rarr;</span><span class="out">Needs MRD infrastructure</span></div>
+      </div>
+      <div class="theme">
+        <h4>3 · Bispecifics moving earlier and wider</h4>
+        <p>Teclistamab in high-risk smouldering myeloma and BCMA CAR-T in ITP show bispecifics reaching pre-malignant and autoimmune disease, while MonumenTAL-3 pushes talquetamab into earlier myeloma lines, raising ethical and safety questions about treating patients who may never progress.</p>
+        <div class="chain"><span class="chip">Smouldering MM</span><span class="chip">ITP</span><span class="chip">Earlier RRMM</span><span class="arr">&rarr;</span><span class="out">Earlier and wider use</span><span class="arr">&rarr;</span><span class="out">Risk-benefit scrutiny</span></div>
+      </div>
+      <div class="theme">
+        <h4>4 · In vivo and allogeneic CAR-T and the access problem</h4>
+        <p>LB2501 and REVSTAR-123 point toward cellular therapy that sidesteps the manufacturing bottleneck. The signals are early but compelling, likely 5 to 10 years from routine use.</p>
+        <div class="chain"><span class="chip">LB2501</span><span class="chip">REVSTAR-123</span><span class="arr">&rarr;</span><span class="out">No bespoke manufacturing</span><span class="arr">&rarr;</span><span class="out">Scalable access</span></div>
+      </div>
+      <div class="theme">
+        <h4>5 · CALR-mutant MPN as a targetable disease</h4>
+        <p>INCA033989 is the first mutation-specific therapy in MPN, making CALR testing potentially predictive rather than only prognostic, echoing the BCR-ABL story in CML.</p>
+        <div class="chain"><span class="chip">JAK2</span><span class="chip">CALR</span><span class="arr">&rarr;</span><span class="out">Mutation-specific therapy</span><span class="arr">&rarr;</span><span class="out">CALR testing predictive</span></div>
+      </div>
+      <div class="theme">
+        <h4>6 · Targeted therapy reaching autoimmune haematology</h4>
+        <p>wAIHA (nipocalimab) and ITP (BCMA CAR-T) now have targeted trial data, with the FcRn mechanism validated across several antibody-mediated conditions.</p>
+        <div class="chain"><span class="chip">wAIHA</span><span class="chip">ITP</span><span class="arr">&rarr;</span><span class="out">FcRn / plasma-cell targeting</span><span class="arr">&rarr;</span><span class="out">Licensed targeted era</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONFERENCE PEARLS ============ -->
+<section id="pearls" class="disease-anchor" aria-labelledby="pearls-h">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Memorable take-home lines</div>
+      <h2 id="pearls-h">Conference pearls</h2>
+      <p>Short teaching points distilled from the data above. Each is grounded in a specific trial.</p>
+    </div>
+    <div class="pearls">
+      <div class="pearl"><q>Not every biologically superior drug improves overall survival.</q><span class="src">PASHA: gilteritinib matched but did not beat midostaurin for OS.</span></div>
+      <div class="pearl"><q>MRD is becoming the common language across haematology.</q><span class="src">BRUIN CLL-322 and the myeloma trials measured depth in the same terms.</span></div>
+      <div class="pearl"><q>Targeting the clone matters more than controlling the count.</q><span class="src">INCA033989 in CALR-mutant MPN, and ropeginterferon over anagrelide.</span></div>
+      <div class="pearl"><q>Cellular therapy is moving from bespoke manufacturing towards scalable delivery.</q><span class="src">LB2501 in vivo CAR-T and REVSTAR-123 off-the-shelf allogeneic CAR-T.</span></div>
+      <div class="pearl"><q>A smaller spleen is not the same as a patient who feels better.</q><span class="src">SENTRY met spleen response but not the symptom endpoint.</span></div>
+      <div class="pearl"><q>Treating disease earlier raises the bar for proving benefit outweighs harm.</q><span class="src">ImmunoPRISM moved bispecific therapy into pre-malignant smouldering myeloma.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <span class="brand" style="font-family:var(--serif);">Mohsin Haematology Academy</span>
+    <p>EHA 2026 Highlights · CPD working notes from the EHA Congress, Stockholm, June 11 to 14, 2026.</p>
+    <p>Compiled from the EHA 2026 Congress working notes. These notes are educational and do not constitute clinical guidance. Treatment decisions should follow local policy, national guidance, MDT discussion, and current licensing and reimbursement status.</p>
+    <p class="small">Notes prepared 16 June 2026. Several agents described are not yet approved by the FDA or EMA, and some data are preliminary or based on small numbers. Always verify trial data against the primary congress source before clinical use.</p>
+    <p class="small" style="margin-top:14px;"><b style="color:#fff;">Standalone infographics (printable, one per topic):</b><br>
+      <a href="infographics/aml-2026.html" style="color:#cfd9ec;">AML</a> ·
+      <a href="infographics/cll-2026.html" style="color:#cfd9ec;">CLL</a> ·
+      <a href="infographics/myeloma-2026.html" style="color:#cfd9ec;">Myeloma</a> ·
+      <a href="infographics/mpn-2026.html" style="color:#cfd9ec;">MPN</a> ·
+      <a href="infographics/lymphoma-2026.html" style="color:#cfd9ec;">Lymphoma</a> ·
+      <a href="infographics/autoimmune-2026.html" style="color:#cfd9ec;">Autoimmune</a> ·
+      <a href="infographics/cellular-therapy-2026.html" style="color:#cfd9ec;">Cellular therapy</a> ·
+      <a href="infographics/key-themes-2026.html" style="color:#cfd9ec;">Key themes</a>
+    </p>
+  </div>
+</footer>
+
+<button class="totop" id="totop" aria-label="Back to top">↑</button>
+
+<script>
+  // Back to top visibility + action
+  var totop = document.getElementById('totop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 600){ totop.classList.add('show'); }
+    else{ totop.classList.remove('show'); }
+  }, {passive:true});
+  totop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  // Highlight active section in sticky nav
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.stickynav a'));
+  var idMap = {};
+  navLinks.forEach(function(a){
+    var id = a.getAttribute('href').slice(1);
+    var sec = document.getElementById(id);
+    if(sec){ idMap[id] = a; }
+  });
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        navLinks.forEach(function(a){ a.style.background=''; a.style.color=''; });
+        var active = idMap[e.target.id];
+        if(active){ active.style.background='#EDEFF3'; active.style.color='#1B2A4A'; }
+      }
+    });
+  }, {rootMargin:'-50% 0px -45% 0px'});
+  Object.keys(idMap).forEach(function(id){ obs.observe(document.getElementById(id)); });
+</script>
+
+</body>
+</html>
