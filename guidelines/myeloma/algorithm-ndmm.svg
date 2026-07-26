@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1520" font-family="Georgia, serif">
-<title>Myeloma NDMM treatment pathway — MHA-MYELOMA-2026-v1.0</title>
+<title>Myeloma NDMM treatment pathway — MHA-MYELOMA-2026-v1.1</title>
 <desc>Decision algorithm for newly diagnosed multiple myeloma covering diagnosis, staging, risk stratification, transplant-eligible and transplant-ineligible treatment pathways, ASCT, maintenance, and high-risk approaches. Aligned to BSH/UKMS 2024 and current NICE TAs.</desc>
 
 <defs>
@@ -29,7 +29,7 @@
 
 <!-- Title -->
 <text x="640" y="40" class="title" text-anchor="middle">Newly Diagnosed Multiple Myeloma — Treatment Pathway</text>
-<text x="640" y="62" class="subtitle" text-anchor="middle">MHA-MYELOMA-2026-v1.0 · Published 26 July 2026 · BSH/UKMS 2024–2025 and NICE aligned</text>
+<text x="640" y="62" class="subtitle" text-anchor="middle">MHA-MYELOMA-2026-v1.1 · Published 26 July 2026 · BSH/UKMS 2024–2025 and NICE aligned</text>
 
 <!-- Step 1: Confirm diagnosis -->
 <rect x="440" y="90" width="400" height="80" rx="6" fill="#7a1f2b" stroke="#7a1f2b"/>
@@ -83,9 +83,9 @@
 <text x="125" y="665" class="box-text" text-anchor="middle">D-VTd × 4 cycles</text>
 <text x="125" y="682" class="ta-chip" text-anchor="middle">NICE TA763</text>
 <line x1="50" y1="695" x2="200" y2="695" stroke="#d8c9cb"/>
-<text x="125" y="713" class="box-text-small" text-anchor="middle">D-VRd: horizon/evidence only</text>
-<text x="125" y="731" class="box-text-small" text-anchor="middle">GID-TA10726 / ID3843</text>
-<text x="125" y="749" class="box-text-small" text-anchor="middle">(transplant-unsuitable)</text>
+<text x="125" y="713" class="box-text-small" text-anchor="middle">D-VRd (TE)</text>
+<text x="125" y="731" class="box-text-small" text-anchor="middle">GID-TA11254 / ID6249</text>
+<text x="125" y="749" class="box-text-small" text-anchor="middle">In development · TBC</text>
 <text x="125" y="770" class="box-text-small" text-anchor="middle">Older: VTd (TA228/TA311)</text>
 <text x="125" y="788" class="box-text-small" text-anchor="middle">VCd if renal impairment</text>
 
@@ -150,11 +150,11 @@
 
 <rect x="760" y="590" width="480" height="120" rx="6" fill="#fff" stroke="#7a1f2b" stroke-width="2"/>
 <text x="1000" y="613" class="box-text-bold" text-anchor="middle">4c. First-line treatment</text>
-<text x="1000" y="638" class="box-text" text-anchor="middle">Lenalidomide + dexamethasone (Rd, continuous)</text>
-<text x="1000" y="657" class="ta-chip" text-anchor="middle">NICE TA587</text>
+<text x="1000" y="638" class="box-text-bold" text-anchor="middle">D-VRd for untreated MM when ASCT unsuitable</text>
+<text x="1000" y="657" class="ta-chip" text-anchor="middle">NICE TA1170 · recommended 24 June 2026</text>
 <line x1="775" y1="670" x2="1225" y2="670" stroke="#d8c9cb"/>
-<text x="780" y="688" class="box-text-small">Daratumumab-containing quadruplets (Dara-Rd/MAIA; Dara-VMP/ALCYONE):</text>
-<text x="780" y="702" class="box-text-small">verify current NICE TA before prescribing.</text>
+<text x="780" y="688" class="box-text-small">Other NICE options include Isa-VRd (TA1098) and Rd (TA587).</text>
+<text x="780" y="702" class="box-text-small">Verify Blueteq, local formulary implementation, SmPC and pharmacy protocol.</text>
 
 <line x1="1000" y1="710" x2="1000" y2="740" stroke="#7a1f2b" stroke-width="2" marker-end="url(#arrow)"/>
 
@@ -190,7 +190,7 @@
 <text x="60" y="1462" class="box-text-small">• Bisphosphonates (zoledronic acid or pamidronate) in all treated patients; dental assessment before initiation</text>
 <text x="60" y="1476" class="box-text-small">• VTE prophylaxis with IMiD regimens (aspirin low-risk; LMWH/apixaban higher-risk) · Aciclovir with PI-based therapy · Vaccinations · Renal protection · Holistic needs assessment</text>
 
-<!-- Educational footer (v1.0) -->
+<!-- Educational footer (v1.1) -->
 <rect x="40" y="1488" width="1200" height="20" rx="3" fill="#fff4e0" stroke="#c87a00"/>
 <text x="640" y="1502" font-family="Georgia, serif" font-size="11" font-style="italic" fill="#c87a00" text-anchor="middle" font-weight="bold">Educational pathway summary only. NICE/Blueteq/local formulary and SmPC verification required before treatment.</text>
 
