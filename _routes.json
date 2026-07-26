@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "include": [
+    "/.plan",
+    "/.plan/*",
+    "/.github",
+    "/.github/*",
+    "/docs",
+    "/docs/*",
+    "/scripts",
+    "/scripts/*",
+    "/sources",
+    "/sources/*",
+    "/guidelines/myeloma",
+    "/guidelines/myeloma/*",
+    "/README.md",
+    "/WEBSITE_COMMANDS.md",
+    "/_config.yml"
+  ],
+  "exclude": []
+}

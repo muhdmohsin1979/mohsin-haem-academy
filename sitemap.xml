@@ -1,112 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://mohsinhaemacademy.com/</loc><lastmod>2026-05-13</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://mohsinhaemacademy.com/about</loc><lastmod>2026-05-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mohsinhaemacademy.com/tools</loc><lastmod>2026-07-26</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mohsinhaemacademy.com/guidelines</loc><lastmod>2026-07-26</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mohsinhaemacademy.com/education</loc><lastmod>2026-07-26</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mohsinhaemacademy.com/journal-club</loc><lastmod>2026-07-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mohsinhaemacademy.com/contact</loc><lastmod>2026-05-13</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://mohsinhaemacademy.com/governance</loc><lastmod>2026-05-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mohsinhaemacademy.com/ai-use</loc><lastmod>2026-05-13</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://mohsinhaemacademy.com/disclaimer</loc><lastmod>2026-05-13</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://mohsinhaemacademy.com/haemcalc</loc><lastmod>2026-05-13</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 
-<!-- Top-level pages -->
-<url>
-<loc>https://mohsinhaemacademy.com/</loc>
-<lastmod>2026-05-13</lastmod>
-<changefreq>weekly</changefreq>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://mohsinhaemacademy.com/about</loc>
-<lastmod>2026-05-13</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-<url>
-<loc>https://mohsinhaemacademy.com/tools</loc>
-<lastmod>2026-05-13</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-</url>
-<url>
-<loc>https://mohsinhaemacademy.com/guidelines</loc>
-<lastmod>2026-05-13</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-</url>
-<url>
-<loc>https://mohsinhaemacademy.com/education</loc>
-<lastmod>2026-05-13</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://mohsinhaemacademy.com/journal-club</loc>
-<lastmod>2026-05-13</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://mohsinhaemacademy.com/contact</loc>
-<lastmod>2026-05-13</lastmod>
-<changefreq>yearly</changefreq>
-<priority>0.5</priority>
-</url>
-<url>
-<loc>https://mohsinhaemacademy.com/governance</loc>
-<lastmod>2026-05-13</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://mohsinhaemacademy.com/haemcalc</loc>
-<lastmod>2026-05-13</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-</url>
+  <url><loc>https://mohsinhaemacademy.com/guidelines/anaemia-in-pregnancy/</loc><lastmod>2026-05-13</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mohsinhaemacademy.com/guidelines/cll/</loc><lastmod>2026-05-13</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mohsinhaemacademy.com/guidelines/itp/</loc><lastmod>2026-05-13</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mohsinhaemacademy.com/guidelines/mcl/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
 
-<!-- Clinical guidelines (highest-value content) -->
-<url>
-<loc>https://mohsinhaemacademy.com/guidelines/cll/</loc>
-<lastmod>2026-05-13</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.9</priority>
-</url>
-<url>
-<loc>https://mohsinhaemacademy.com/guidelines/itp/</loc>
-<lastmod>2026-05-13</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.9</priority>
-</url>
-<url>
-<loc>https://mohsinhaemacademy.com/guidelines/vte-cancer/</loc>
-<lastmod>2026-05-13</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.9</priority>
-</url>
-<url>
-<loc>https://mohsinhaemacademy.com/guidelines/anaemia-in-pregnancy/</loc>
-<lastmod>2026-05-13</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.9</priority>
-</url>
+  <url><loc>https://mohsinhaemacademy.com/guidelines/vte-cancer/</loc><lastmod>2026-05-13</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
 
-<!-- Legal pages -->
-<url>
-<loc>https://mohsinhaemacademy.com/legal/privacy/</loc>
-<lastmod>2026-05-13</lastmod>
-<changefreq>yearly</changefreq>
-<priority>0.3</priority>
-</url>
-<url>
-<loc>https://mohsinhaemacademy.com/legal/terms/</loc>
-<lastmod>2026-05-13</lastmod>
-<changefreq>yearly</changefreq>
-<priority>0.3</priority>
-</url>
-<url>
-<loc>https://mohsinhaemacademy.com/legal/disclaimer/</loc>
-<lastmod>2026-05-13</lastmod>
-<changefreq>yearly</changefreq>
-<priority>0.3</priority>
-</url>
-<url>
-<loc>https://mohsinhaemacademy.com/legal/ip-notice/</loc>
-<lastmod>2026-05-13</lastmod>
-<changefreq>yearly</changefreq>
-<priority>0.3</priority>
-</url>
+  <url><loc>https://mohsinhaemacademy.com/education/general-practitioners/</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mohsinhaemacademy.com/education/conferences-and-masterclasses/</loc><lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mohsinhaemacademy.com/education/conferences-and-masterclasses/dots-masterclass-2026-rrmm-bcma/</loc><lastmod>2026-05-13</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mohsinhaemacademy.com/education/conferences-and-masterclasses/eha-2026/</loc><lastmod>2026-06-17</lastmod><changefreq>yearly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mohsinhaemacademy.com/education/conferences-and-masterclasses/eha-2026/infographics/key-themes-2026.html</loc><lastmod>2026-06-17</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mohsinhaemacademy.com/education/conferences-and-masterclasses/eha-2026/infographics/aml-2026.html</loc><lastmod>2026-06-17</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mohsinhaemacademy.com/education/conferences-and-masterclasses/eha-2026/infographics/autoimmune-2026.html</loc><lastmod>2026-06-17</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mohsinhaemacademy.com/education/conferences-and-masterclasses/eha-2026/infographics/cellular-therapy-2026.html</loc><lastmod>2026-06-17</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mohsinhaemacademy.com/education/conferences-and-masterclasses/eha-2026/infographics/cll-2026.html</loc><lastmod>2026-06-17</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mohsinhaemacademy.com/education/conferences-and-masterclasses/eha-2026/infographics/lymphoma-2026.html</loc><lastmod>2026-06-17</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mohsinhaemacademy.com/education/conferences-and-masterclasses/eha-2026/infographics/mpn-2026.html</loc><lastmod>2026-06-17</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mohsinhaemacademy.com/education/conferences-and-masterclasses/eha-2026/infographics/myeloma-2026.html</loc><lastmod>2026-06-17</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mohsinhaemacademy.com/journal-club/extended-anticoagulation-unprovoked-vte/</loc><lastmod>2026-05-26</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
 
+  <url><loc>https://mohsinhaemacademy.com/legal/privacy/</loc><lastmod>2026-05-13</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://mohsinhaemacademy.com/legal/terms/</loc><lastmod>2026-05-13</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://mohsinhaemacademy.com/legal/disclaimer/</loc><lastmod>2026-05-13</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://mohsinhaemacademy.com/legal/ip-notice/</loc><lastmod>2026-05-13</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>

@@ -1,0 +1,18 @@
+title: Mohsin Haematology Academy
+url: https://mohsinhaemacademy.com
+
+# GitHub Pages builds a parallel mirror. Keep planning, source notes, scripts,
+# unsigned drafts and internal review material out of its generated site.
+exclude:
+  - .plan
+  - .github
+  - scripts
+  - sources
+  - docs
+  - guidelines/myeloma
+  - _headers
+  - _redirects
+  - _routes.json
+  - _worker.js
+  - WEBSITE_COMMANDS.md
+  - README.md
