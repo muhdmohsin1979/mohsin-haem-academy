@@ -3,23 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Multiple Myeloma Guideline v1.0 — Mohsin Haematology Academy</title>
-<meta name="description" content="Published UK multiple myeloma guideline synthesising BSH, UKMS/UKMF 2025, EHA-EMN 2025 and NICE, covering MGUS, smouldering myeloma, MGRS, newly diagnosed and relapsed disease, supportive care, audit and NICE horizon scanning. MHA-MYELOMA-2026-v1.0.">
+<title>Multiple Myeloma Guideline v1.1 — Mohsin Haematology Academy</title>
+<meta name="description" content="Published v1.1 UK multiple myeloma guideline synthesising BSH, UKMS/UKMF 2025, EHA-EMN 2025 and NICE. MHA-MYELOMA-2026-v1.1.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://mohsinhaemacademy.com/guidelines/myeloma/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Mohsin Haematology Academy">
-<meta property="og:title" content="Multiple Myeloma Guideline v1.0">
-<meta property="og:description" content="Published UK multiple myeloma educational guideline covering diagnosis, monitoring, treatment pathways, supportive care and governance.">
+<meta property="og:title" content="Multiple Myeloma Guideline v1.1">
+<meta property="og:description" content="Published v1.1 UK multiple myeloma educational guideline covering diagnosis, monitoring, treatment pathways, supportive care and governance.">
 <meta property="og:url" content="https://mohsinhaemacademy.com/guidelines/myeloma/">
 <meta property="og:image" content="https://mohsinhaemacademy.com/logo.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Multiple Myeloma Guideline v1.0">
-<meta name="twitter:description" content="Published UK multiple myeloma educational guideline from Mohsin Haematology Academy.">
+<meta name="twitter:title" content="Multiple Myeloma Guideline v1.1">
+<meta name="twitter:description" content="Published v1.1 UK multiple myeloma educational guideline from Mohsin Haematology Academy.">
 <meta name="twitter:image" content="https://mohsinhaemacademy.com/logo.png">
 <meta name="theme-color" content="#7a1f2b">
 <style>
 :root {
+  --mha-header-offset: 79px;
+  --mha-anchor-offset: 42px;
   --mha-burgundy: #7a1f2b;
   --mha-burgundy-soft: #f5e9eb;
   --mha-burgundy-mid: #b04050;
@@ -46,17 +48,19 @@ html, body { background: var(--mha-bg); color: var(--mha-ink); font-family: Geor
 .page { display: grid; grid-template-columns: 1fr 280px; gap: 2.5rem; max-width: 1280px; margin: 0 auto; padding: 1.5rem 1.5rem 4rem; }
 .page > * { min-width: 0; }
 @media (max-width: 980px) { .page { grid-template-columns: 1fr; } .sidebar { order: 2; } main { overflow-x: hidden; } main table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; } }
-header.mha { border-bottom: 1px solid var(--mha-rule); padding: 1rem 1.5rem; background: #fff; }
+header.mha { border-bottom: 1px solid var(--mha-rule); padding: 1rem 1.5rem; background: #fff; position: sticky; top: 0; z-index: 200; box-shadow: 0 1px 4px rgba(29, 29, 29, .06); }
 header.mha .inner { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
 header.mha a { color: var(--mha-burgundy); text-decoration: none; font-weight: 600; }
 header.mha nav a { margin-left: 1rem; font-weight: 500; color: var(--mha-ink-soft); }
 header.mha nav a:hover { color: var(--mha-burgundy); }
 .brand { font-weight: 700; color: var(--mha-burgundy); font-size: 1.05rem; }
 .brand-sub { display: block; font-weight: 400; color: var(--mha-ink-soft); font-size: .8rem; }
-nav.section-anchors { background: #fff; border-bottom: 1px solid var(--mha-rule); padding: .6rem 1.5rem; font-size: .85rem; }
-nav.section-anchors .inner { max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 1rem 1.25rem; }
-nav.section-anchors a { color: var(--mha-burgundy); text-decoration: none; }
+nav.section-anchors { background: #fff; border-bottom: 1px solid var(--mha-rule); padding: .6rem 1.5rem; font-size: .85rem; position: sticky; top: var(--mha-header-offset); z-index: 190; box-shadow: 0 2px 5px rgba(29, 29, 29, .05); }
+nav.section-anchors .inner { max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: nowrap; gap: 1rem 1.25rem; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+nav.section-anchors .inner::-webkit-scrollbar { display: none; }
+nav.section-anchors a { color: var(--mha-burgundy); text-decoration: none; white-space: nowrap; flex-shrink: 0; }
 nav.section-anchors a:hover { text-decoration: underline; }
+h2[id], figure[id] { scroll-margin-top: calc(var(--mha-header-offset) + var(--mha-anchor-offset) + 1rem); }
 .chip-row { display: flex; flex-wrap: wrap; gap: .4rem; margin: .6rem 0 .8rem; }
 .chip { display: inline-block; padding: .2rem .55rem; border-radius: 999px; font-size: .72rem; font-weight: 600; background: var(--mha-burgundy-soft); color: var(--mha-burgundy); border: 1px solid var(--mha-rule); letter-spacing: .02em; }
 .chip.tag-cat { background: var(--mha-burgundy); color: #fff; border-color: var(--mha-burgundy); }
@@ -110,10 +114,15 @@ table caption { caption-side: bottom; text-align: left; font-size: .82rem; color
 .attribution { font-size: .8rem; color: var(--mha-ink-soft); font-style: italic; margin: .1rem 0 .8rem; }
 .vignette { border: 1px solid var(--mha-info); background: var(--mha-info-soft); border-radius: 6px; padding: .9rem 1.1rem; margin: 1rem 0; }
 .vignette h4 { color: var(--mha-info); margin: 0 0 .35rem; }
-.algorithm { background: #fff; border: 1px solid var(--mha-rule); border-radius: 6px; padding: 1rem; margin: 1rem 0; text-align: center; }
-.algorithm img, .algorithm svg { max-width: 100%; height: auto; }
-.algorithm-caption { font-size: .85rem; color: var(--mha-ink-soft); margin-top: .45rem; }
-.sidebar { font-size: .88rem; }
+.algorithm { background: #fff; border: 1px solid var(--mha-rule); border-radius: 10px; padding: 1rem 1.1rem; margin: 1rem 0 1.4rem; text-align: center; overflow: hidden; }
+.algorithm object, .algorithm img, .algorithm svg { display: block; width: 100%; max-width: 860px; height: auto; margin: 0 auto; }
+.algorithm object { aspect-ratio: 1280 / 1520; }
+.algorithm-title { display: block; font-size: .82rem; color: var(--mha-ink-soft); letter-spacing: .04em; text-transform: uppercase; font-weight: 700; margin-bottom: .7rem; }
+.algorithm-caption { font-size: .8rem; color: var(--mha-ink-soft); margin: .7rem auto 0; line-height: 1.5; max-width: 760px; }
+.algorithm-caption a { font-weight: 600; }
+.sidebar { font-size: .88rem; position: sticky; top: calc(var(--mha-header-offset) + var(--mha-anchor-offset) + 1rem); align-self: start; max-height: calc(100vh - var(--mha-header-offset) - var(--mha-anchor-offset) - 2rem); overflow-y: auto; padding-right: .35rem; scrollbar-width: thin; scrollbar-color: var(--mha-rule) transparent; }
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--mha-rule); border-radius: 999px; }
 .side-card { background: #fff; border: 1px solid var(--mha-rule); border-radius: 6px; padding: .9rem 1rem; margin-bottom: 1rem; }
 .side-card h4 { margin: 0 0 .5rem; color: var(--mha-burgundy); font-size: .92rem; }
 .side-card ul { margin: 0; padding-left: 1.1rem; }
@@ -144,6 +153,12 @@ footer.mha strong { color: var(--mha-burgundy); }
 .chip-row-top { margin-top: .5rem; }
 .side-note { font-size: .8rem; color: var(--mha-ink-soft); margin-top: .5rem; }
 .flush-top { margin-top: 0; }
+@media (max-width: 980px) {
+  header.mha { position: static; box-shadow: none; }
+  nav.section-anchors { top: 0; }
+  h2[id], figure[id] { scroll-margin-top: calc(var(--mha-anchor-offset) + .75rem); }
+  .sidebar { position: static; max-height: none; overflow-y: visible; padding-right: 0; }
+}
 </style>
 </head>
 <body>
@@ -197,15 +212,15 @@ footer.mha strong { color: var(--mha-burgundy); }
 </div>
 
 <h1>Multiple Myeloma</h1>
-<p class="lede">Unified UK clinical guideline synthesising BSH 2017–2025 (UK Myeloma Society / UK Myeloma Forum) and EHA-EMN 2025, anchored in NICE NG35 and current NICE technology appraisals. International diagnostic and response frameworks (IMWG 2014, IMWG 2021 PCL, EMN, EHA-EMN 2025) are used for criteria, staging, response assessment and wider context. <strong>Version 1.0 — published 26 July 2026.</strong></p>
+<p class="lede">Unified UK clinical guideline synthesising BSH 2017–2025 (UK Myeloma Society / UK Myeloma Forum) and EHA-EMN 2025, anchored in NICE NG35 and current NICE technology appraisals. International diagnostic and response frameworks (IMWG 2014, IMWG 2021 PCL, EMN, EHA-EMN 2025) are used for criteria, staging, response assessment and wider context. <strong>Version 1.1 — published 26 July 2026.</strong></p>
 
 <div class="publication-banner">
-<strong>PUBLISHED EDUCATIONAL GUIDELINE — v1.0.</strong> Consultant approval and pharmacy verification were confirmed by the clinical owner on 26 July 2026; the pharmacist's identity is not recorded in this public document. NICE, Blueteq, formulary, dose, supportive-care, approved-centre and ophthalmology pathway checks were confirmed complete for publication. This remains educational clinical decision support, not a prescribing protocol. Current NICE guidance, local policy, SmPC and patient-specific factors must be checked before treatment.
+<strong>PUBLISHED EDUCATIONAL GUIDELINE — v1.1.</strong> Clinical owner approval and pharmacy verification were confirmed on 26 July 2026; the pharmacist's name remains private. This remains educational clinical decision support, not a prescribing protocol. Current NICE guidance, local policy, SmPC and patient-specific review take precedence.
 </div>
 
-<p><strong>Document code:</strong> MHA-MYELOMA-2026-v1.0
+<p><strong>Document code:</strong> MHA-MYELOMA-2026-v1.1
 &nbsp;&nbsp; <strong>Division:</strong> Haematological Malignancy
-&nbsp;&nbsp; <strong>Current version:</strong> v1.0, 26 July 2026 (published)
+&nbsp;&nbsp; <strong>Current version:</strong> v1.1, 26 July 2026 (published)
 &nbsp;&nbsp; <strong>Review due:</strong> May 2027 or sooner on NICE / BSH / UKMS / EHA-EMN update.</p>
 
 <div class="metadata-block">
@@ -219,7 +234,7 @@ footer.mha strong { color: var(--mha-burgundy); }
 <dt>Tags</dt>
 <dd>Interpretation · MDT · BSH · NICE · UKMS · IMWG</dd>
 <dt>Version / last reviewed</dt>
-<dd>v1.0 · published after consultant approval and pharmacy verification confirmed on 26 July 2026 · clinical recommendations unchanged from v0.4.1 governance polish · Dr Muhammad Mohsin, Consultant Haematologist.</dd>
+<dd>v1.1 · published after clinical owner approval and pharmacy verification confirmed on 26 July 2026 · D-VRd NICE status updated to TA1170 for transplant-ineligible NDMM; separate transplant-eligible appraisal GID-TA11254 / ID6249 recorded as in development · Dr Muhammad Mohsin, Consultant Haematologist.</dd>
 </dl>
 </div>
 
@@ -233,7 +248,7 @@ footer.mha strong { color: var(--mha-burgundy); }
 <li><strong>MGUS:</strong> risk-stratify all new cases with the Mayo 2005 model. Low and low-intermediate risk need no bone marrow and no imaging at diagnosis; discharge low-risk to primary care after the 6-month confirmation visit. High-intermediate and high-risk need bone marrow plus whole-body imaging.</li>
 <li><strong>Smouldering myeloma:</strong> stratify with Mayo 20-2-20 (or IMWG 2020). Treatment is not NHS standard of care outside trials. High-risk SMM is for clinical-trial consideration.</li>
 <li><strong>MGRS:</strong> renal biopsy plus full haematological workup, joint nephrology-haematology MDT. Treat the clone where renal function is at risk; depth of haematological response drives renal outcome.</li>
-<li><strong>NDMM transplant-eligible (standard risk):</strong> daratumumab-containing quadruplet induction per current NICE technology appraisal (currently D-VTd per TA763, within NICE criteria), plus single ASCT, plus lenalidomide maintenance until progression (TA680). D-VRd (PERSEUS-based, GID-TA10726 / ID3843) is in development for <em>transplant-unsuitable</em> NDMM and is not a commissioned TE-NDMM option.</li>
+<li><strong>NDMM transplant-eligible (standard risk):</strong> daratumumab-containing quadruplet induction per current NICE technology appraisal (currently D-VTd per TA763, within NICE criteria), plus single ASCT, plus lenalidomide maintenance until progression (TA680). D-VRd (PERSEUS-based) is under separate NICE appraisal for <em>transplant-eligible</em> NDMM (GID-TA11254 / ID6249, in development; expected publication TBC) and is not yet a commissioned TE-NDMM option.</li>
 <li><strong>NDMM transplant-eligible (high-risk by 2+ HRCA, SKY92 or primary PCL):</strong> consider stratified induction-consolidation-maintenance evidence (OPTIMUM/MUKnine, GMMG-CONCEPT, IFM 2018-04, EMN12) within the limits of current NHS commissioning.</li>
 <li><strong>Relapse:</strong> class-switch principle, triplet preferred over doublet, repeat FISH and TP53. Bispecifics (teclistamab TA1015) and CAR-T are reserved for triple-class exposed disease in approved centres. Always consider clinical trial.</li>
 <li><strong>Always MDT.</strong> Escalate to consultant haematology for any treatment decision. Local trust policies and current NICE commissioning status take precedence.</li>
@@ -250,7 +265,7 @@ footer.mha strong { color: var(--mha-burgundy); }
 
 <div class="callout callout-info">
 <h4>UK Clinical Practice — Applicable NICE Technology Appraisals</h4>
-<p>The following NICE-commissioned technology appraisals govern UK clinical practice for myeloma at the time of writing. <strong>Named entries were re-verified for publication on 26 July 2026; live NICE verification remains required before prescribing.</strong> TA numbers and commissioning criteria are subject to revision. Several relevant appraisals are in development, in managed-access, or have been terminated — see Section 1A (NICE Horizon Scanning) for their current status.</p>
+<p>The following NICE-commissioned technology appraisals govern UK clinical practice for myeloma at the time of writing. <strong>Named entries were re-verified for v1.1 publication on 26 July 2026; live NICE verification remains required before prescribing.</strong> TA numbers and commissioning criteria are subject to revision. Several relevant appraisals are in development, in managed-access, or have been terminated — see Section 1A (NICE Horizon Scanning) for their current status.</p>
 <p><strong>Newly diagnosed, transplant-eligible:</strong></p>
 <ul>
 <li><strong>TA763</strong> — D-VTd induction/consolidation for newly diagnosed transplant-eligible myeloma, within NICE criteria (Feb 2022).</li>
@@ -261,7 +276,7 @@ footer.mha strong { color: var(--mha-burgundy); }
 <ul>
 <li><strong>TA587</strong> — Lenalidomide + dexamethasone for previously untreated myeloma (2019).</li>
 <li><strong>TA1098</strong> — Isatuximab + bortezomib + lenalidomide + dexamethasone (Isa-VRd, IMROZ-based) for untreated myeloma when stem cell transplant is unsuitable (Sept 2025). Recently appraised — verify final recommendation wording, restrictions and commercial arrangement before prescribing.</li>
-<li><strong>GID-TA10726 / ID3843</strong> — Daratumumab + bortezomib + lenalidomide + dexamethasone (D-VRd, PERSEUS-based) for <em>untreated myeloma when stem cell transplant is unsuitable</em>. <strong>Horizon / evidence only; NICE appraisal in development.</strong> Cited NICE GID-TA10726 / ID3843 currently relates to transplant-unsuitable NDMM; verify live NICE indication before pathway placement. See Section 1A.</li>
+<li><strong>TA1170</strong> — Daratumumab + bortezomib + lenalidomide + dexamethasone (D-VRd) for <em>untreated multiple myeloma in adults when autologous stem cell transplant is unsuitable</em>. Recommended by NICE on 24 June 2026, subject to the commercial arrangement. Confirm Blueteq, local formulary and implementation status before prescribing.</li>
 </ul>
 <p><strong>Maintenance after ASCT:</strong></p>
 <ul>
@@ -293,7 +308,7 @@ footer.mha strong { color: var(--mha-burgundy); }
 
 <div class="callout callout-warn">
 <h4>Important — horizon scanning only</h4>
-<p>This section is horizon scanning only. <strong>It must not be used as a prescribing or commissioning statement.</strong> NICE appraisal status, Blueteq eligibility, NHS England commissioning, local formulary position and approved-centre access must be verified immediately before treatment decisions. Identifiers and dates were re-verified for publication on 26 July 2026; status of any in-development or managed-access entry may change at short notice.</p>
+<p>This section is horizon scanning only. <strong>It must not be used as a prescribing or commissioning statement.</strong> NICE appraisal status, Blueteq eligibility, NHS England commissioning, local formulary position and approved-centre access must be verified immediately before treatment decisions. Identifiers and dates were re-verified for v1.1 publication on 26 July 2026; status of any in-development or managed-access entry may change at short notice.</p>
 </div>
 
 <p>This section separates therapies by their current NICE classification: routinely recommended; managed-access / Cancer Drugs Fund; in development; awaiting development; discontinued or terminated; and off-label, specialist-centre or trial-only. Entries are listed in order of pathway position (frontline → maintenance → relapse → cellular therapy → biomarker-restricted).</p>
@@ -305,9 +320,15 @@ footer.mha strong { color: var(--mha-burgundy); }
 <tbody>
 <tr>
 <td><strong>D-VRd</strong><br>Daratumumab + bortezomib + lenalidomide + dexamethasone</td>
-<td>Untreated myeloma when stem cell transplant is unsuitable</td>
-<td><strong>In development</strong>: GID-TA10726 / ID3843. Status in progress; the previously listed NICE expected publication date of 13 May 2026 has passed. <em>Requires live NICE verification.</em></td>
-<td>Evolving frontline quadruplet strategy. Treat as NICE horizon scanning only. <strong>Do not describe as routinely commissioned unless final NICE guidance is published and local Blueteq/formulary access confirms it.</strong></td>
+<td>Untreated myeloma when autologous stem cell transplant is unsuitable</td>
+<td><strong>Recommended</strong>: TA1170, published 24 June 2026. Subject to the commercial arrangement.</td>
+<td>NICE states that D-VRd can be used routinely across the NHS in this population and must be funded in England within 90 days of final publication. Confirm Blueteq, local formulary and implementation status before prescribing.</td>
+</tr>
+<tr>
+<td><strong>D-VRd</strong><br>Daratumumab + bortezomib + lenalidomide + dexamethasone</td>
+<td>Untreated myeloma when high-dose chemotherapy and autologous stem cell transplant are suitable</td>
+<td><strong>In development</strong>: GID-TA11254 / ID6249. Status in progress; expected publication date TBC.</td>
+<td>Separate transplant-eligible appraisal. <strong>Do not present as NICE-commissioned for transplant-eligible NDMM unless final NICE guidance is published and local access is confirmed.</strong></td>
 </tr>
 <tr>
 <td><strong>Isa-VRd</strong><br>Isatuximab + bortezomib + lenalidomide + dexamethasone</td>
@@ -377,7 +398,7 @@ footer.mha strong { color: var(--mha-burgundy); }
 <ul>
 <li>NICE horizon-scanning section checked against live NICE pages immediately before deployment.</li>
 <li>Distinction confirmed between currently recommended, managed-access, in-development, awaiting-development, discontinued and terminated appraisals.</li>
-<li>D-VRd identifier verified as GID-TA10726 / ID3843 unless NICE has since issued final TA guidance with a new TA number.</li>
+<li>D-VRd settings kept separate: TA1170 for untreated myeloma when ASCT is unsuitable; GID-TA11254 / ID6249 remains in development for untreated myeloma when high-dose chemotherapy and ASCT are suitable.</li>
 <li>Cilta-cel TA889 (terminated) and GID-TA10905 / ID4012 (in development) kept separate at every point in this document.</li>
 <li>Ixazomib maintenance GID-TA10843 labelled discontinued, not in development, at every point in this document.</li>
 </ul>
@@ -638,7 +659,7 @@ footer.mha strong { color: var(--mha-burgundy); }
 <li><strong>Intermediate-risk SMM:</strong> 3-monthly review for 1–2 years, extending to 4–6 monthly if stable.</li>
 <li><strong>High-risk SMM:</strong> 3-monthly review for at least 5 years; consider entry into a clinical trial. Outside trials, BSH 2024 states there is insufficient evidence to treat SMM routinely.</li>
 <li>Repeat imaging annually in high-risk SMM and at a low threshold in those with evolving disease markers. Equivocal or solitary focal lesions at baseline warrant interval imaging at 3–6 months.</li>
-<li>QuiRedex and SWOG E3A06 showed benefit from early lenalidomide-based therapy in high-risk SMM. Treatment of SMM is not NHS standard of care outside trials as at the v1.0 publication review.</li>
+<li>QuiRedex and SWOG E3A06 showed benefit from early lenalidomide-based therapy in high-risk SMM. Treatment of SMM is not NHS standard of care outside trials as at the v1.1 publication review.</li>
 </ul>
 
 <h3>Supportive care in SMM</h3>
@@ -762,7 +783,15 @@ footer.mha strong { color: var(--mha-burgundy); }
 
 <h3>Standard-risk transplant-eligible NDMM — UK NHS framework</h3>
 
-<p>Standard UK NHS induction has been a bortezomib-based triplet (most commonly VTd or VCd) followed by ASCT with melphalan 200 mg/m² conditioning and lenalidomide maintenance until progression (TA680). Daratumumab-containing quadruplet induction is increasingly used in line with the CASSIOPEIA evidence base and current NICE technology appraisals. <strong>The current NICE-commissioned quadruplet for the transplant-eligible setting is D-VTd (TA763, within NICE criteria).</strong> D-VRd (PERSEUS-based) is the subject of an in-development NICE appraisal under identifier GID-TA10726 / ID3843 (the v0.3 draft incorrectly cited TA11254 — corrected in v0.4); the cited NICE in-development reference relates to <em>transplant-unsuitable</em> NDMM, not transplant-eligible disease. D-VRd should be treated as horizon/evidence content only for the TE-NDMM pathway pending final NICE guidance and verified pathway placement.</p>
+<figure class="algorithm" id="ndmm-algorithm">
+<p class="algorithm-title">Newly diagnosed multiple myeloma decision algorithm · v1.1 aligned with BSH/UKMS and NICE</p>
+<object data="algorithm-ndmm.svg" type="image/svg+xml" title="Newly diagnosed multiple myeloma treatment decision algorithm flowchart">
+  <a href="algorithm-ndmm.svg"><img src="algorithm-ndmm.jpeg" alt="Newly diagnosed multiple myeloma treatment decision algorithm flowchart"></a>
+</object>
+<figcaption class="algorithm-caption">Static SVG rendering of the current v1.1 NDMM pathway. <a href="algorithm-ndmm.svg" target="_blank" rel="noopener">Open the SVG directly</a> for a full-screen view or <a href="algorithm-ndmm.jpeg" download>download the JPEG</a>. Treat the diagram as a visual summary; the prose, cited sources, live NICE guidance and local pathways remain authoritative.</figcaption>
+</figure>
+
+<p>Standard UK NHS induction has been a bortezomib-based triplet (most commonly VTd or VCd) followed by ASCT with melphalan 200 mg/m² conditioning and lenalidomide maintenance until progression (TA680). Daratumumab-containing quadruplet induction is increasingly used in line with the CASSIOPEIA evidence base and current NICE technology appraisals. <strong>The current NICE-commissioned quadruplet for the transplant-eligible setting is D-VTd (TA763, within NICE criteria).</strong> D-VRd (PERSEUS-based) is under a separate NICE appraisal for untreated myeloma when high-dose chemotherapy and autologous stem cell transplant are suitable (GID-TA11254 / ID6249, in development; expected publication TBC). D-VRd should be treated as horizon/evidence content only for the TE-NDMM pathway pending final NICE guidance and verified pathway placement.</p>
 
 <div class="callout callout-warn">
 <h4>Dose-block caveat (applies throughout this document)</h4>
@@ -799,6 +828,18 @@ footer.mha strong { color: var(--mha-burgundy); }
 <dl>
 <dt>Dose</dt><dd>Bortezomib 1.3 mg/m² SC days 1, 4, 8, 11; cyclophosphamide 500 mg PO weekly; dexamethasone 40 mg weekly. Three to four induction cycles before ASCT.</dd>
 <dt>Notes</dt><dd>Used where thalidomide or lenalidomide are not suitable. Pragmatic UK option particularly in renal impairment at presentation, with rapid response and a manageable toxicity profile. Not the primary NICE-recommended TE-NDMM induction where alternatives are available.</dd>
+</dl>
+</div>
+
+<div class="regimen-block">
+<div class="name">Daratumumab + bortezomib + lenalidomide + dexamethasone (D-VRd, PERSEUS) — transplant-eligible appraisal in development
+<span class="ta-chips"><span class="chip tag-ta-pending">NICE GID-TA11254 / ID6249 in development</span> <span class="chip tag-grade-high">High / Strong (trial evidence)</span></span>
+</div>
+<dl>
+<dt>Pathway placement</dt><dd><strong>Horizon/evidence only for transplant-eligible NDMM.</strong> NICE GID-TA11254 / ID6249 addresses untreated myeloma when high-dose chemotherapy and autologous stem cell transplant are suitable. Expected publication is TBC. This is separate from TA1170 for patients when ASCT is unsuitable.</dd>
+<dt>Dose</dt><dd>Daratumumab subcutaneous schedule + bortezomib 1.3 mg/m² SC + lenalidomide 25 mg PO days 1–21 + dexamethasone, in 28-day cycles, induction (four cycles), ASCT (in the PERSEUS trial), consolidation (two cycles), D-R maintenance. <strong>Dose example only — verify against current SmPC, local e-prescribing protocol, renal/hepatic and frailty modifications, and pharmacy verification before any prescribing.</strong></dd>
+<dt>Trial basis</dt><dd>PERSEUS (Sonneveld et al., NEJM 2024) — D-VRd induction/consolidation with D-R maintenance improved PFS over VRd with R maintenance, with deeper MRD response, in transplant-eligible NDMM.</dd>
+<dt>Notes</dt><dd><strong>Not presented as routinely commissioned for transplant-eligible NDMM in this guideline.</strong> Verify current NICE status before use. See Section 1A NICE Horizon Scanning.</dd>
 </dl>
 </div>
 
@@ -841,20 +882,15 @@ footer.mha strong { color: var(--mha-burgundy); }
 </dl>
 </div>
 
-<div class="callout callout-warn">
-<h4>Reviewer note — daratumumab-containing quadruplets for transplant-ineligible NDMM</h4>
-<p>Daratumumab-containing regimens for transplant-ineligible NDMM that are not explicitly linked to a verified NICE appraisal in this guideline must not be inferred to be commissioned. <strong>Verify current NICE TA, Blueteq and local formulary status before use.</strong> Isa-VRd is listed under TA1098 for untreated myeloma when stem cell transplant is unsuitable.</p>
-</div>
-
 <div class="regimen-block">
-<div class="name">Daratumumab + bortezomib + lenalidomide + dexamethasone (D-VRd, PERSEUS) — horizon/evidence only
-<span class="ta-chips"><span class="chip tag-ta-pending">NICE GID-TA10726 / ID3843 in development</span> <span class="chip tag-grade-high">High / Strong (trial evidence)</span></span>
+<div class="name">Daratumumab + bortezomib + lenalidomide + dexamethasone (D-VRd) — transplant-ineligible NDMM
+<span class="ta-chips"><span class="chip tag-ta">NICE TA1170</span> <span class="chip tag-grade-high">Recommended</span></span>
 </div>
 <dl>
-<dt>Pathway placement</dt><dd><strong>Horizon/evidence only.</strong> Cited NICE GID-TA10726 / ID3843 currently relates to untreated myeloma when stem cell transplant is <em>unsuitable</em>. Verify live NICE indication before pathway placement. Not commissioned for the transplant-eligible setting.</dd>
-<dt>Dose</dt><dd>Daratumumab subcutaneous schedule + bortezomib 1.3 mg/m² SC + lenalidomide 25 mg PO days 1–21 + dexamethasone, in 28-day cycles, induction (four cycles), ASCT (in the PERSEUS trial), consolidation (two cycles), D-R maintenance. <strong>Dose example only — verify against current SmPC, local e-prescribing protocol, renal/hepatic and frailty modifications, and pharmacy verification before any prescribing.</strong></dd>
-<dt>Trial basis</dt><dd>PERSEUS (Sonneveld et al., NEJM 2024) — D-VRd induction/consolidation with D-R maintenance improved PFS over VRd with R maintenance, with deeper MRD response. PERSEUS was conducted in transplant-eligible NDMM; the NICE in-development appraisal under GID-TA10726 / ID3843 addresses the transplant-unsuitable population specifically.</dd>
-<dt>Notes</dt><dd><strong>Not presented as routinely commissioned in this guideline.</strong> The v0.3 draft incorrectly cited TA11254; corrected to GID-TA10726 / ID3843 in v0.4 and the indication clarified as transplant-unsuitable in v0.4.1. Verify current NICE status before use. See Section 1A NICE Horizon Scanning.</dd>
+<dt>Pathway placement</dt><dd><strong>NICE-recommended under TA1170</strong> for untreated multiple myeloma in adults when autologous stem cell transplant is unsuitable, subject to the commercial arrangement.</dd>
+<dt>Dose</dt><dd>Use the current SmPC and a pharmacy-controlled local protocol. No dose example is provided here for the TA1170 pathway. Verify renal/hepatic and frailty modifications, drug interactions, Blueteq, local formulary implementation and pharmacy approval before prescribing.</dd>
+<dt>NICE TA</dt><dd>TA1170, published 24 June 2026. NICE states that D-VRd can be used routinely across the NHS in this population and must be funded in England within 90 days of final publication.</dd>
+<dt>Notes</dt><dd>Keep this transplant-ineligible recommendation separate from the transplant-eligible appraisal GID-TA11254 / ID6249, which remains in development.</dd>
 </dl>
 </div>
 
@@ -931,6 +967,14 @@ footer.mha strong { color: var(--mha-burgundy); }
 
 <!-- ==================== SECTION 11 — RELAPSED / REFRACTORY ==================== -->
 <h2 id="rr"><span class="num">11</span>Relapsed and Refractory Myeloma</h2>
+
+<figure class="algorithm" id="rr-algorithm">
+<p class="algorithm-title">Relapsed and refractory myeloma decision algorithm · v1.1 aligned with BSH/UKMS and NICE</p>
+<object data="algorithm-rr.svg" type="image/svg+xml" title="Relapsed and refractory multiple myeloma treatment decision algorithm flowchart">
+  <a href="algorithm-rr.svg"><img src="algorithm-rr.jpeg" alt="Relapsed and refractory multiple myeloma treatment decision algorithm flowchart"></a>
+</object>
+<figcaption class="algorithm-caption">Static SVG rendering of the current v1.1 R/R pathway. <a href="algorithm-rr.svg" target="_blank" rel="noopener">Open the SVG directly</a> for a full-screen view or <a href="algorithm-rr.jpeg" download>download the JPEG</a>. Treat the diagram as a visual summary; the prose, cited sources, live NICE guidance and local pathways remain authoritative.</figcaption>
+</figure>
 
 <div class="vignette">
 <h4>Clinical Vignette</h4>
@@ -1327,8 +1371,8 @@ footer.mha strong { color: var(--mha-burgundy); }
 <h3>Limitations and update plan</h3>
 <ul>
 <li>This is an educational summary and does not replace specialist MDT decision making, current NICE technology appraisals, NHS England commissioning criteria or local trust protocols.</li>
-<li>NICE TA and appraisal statuses were re-verified for publication on 26 July 2026; verification against the live NICE register remains required before each review cycle and before any prescribing decision.</li>
-<li>Several relevant appraisals remain in development: GID-TA10726 / ID3843 (D-VRd), TA11465 (isatuximab combinations induction), GID-TA10905 / ID4012 (cilta-cel earlier-line), GID-TA11846 / ID6639 (isatuximab maintenance). Ixazomib maintenance (GID-TA10843 / ID1517) was discontinued at NICE in February 2026. This page will be updated when relevant guidance is published.</li>
+<li>NICE TA and appraisal statuses were re-verified for v1.1 publication on 26 July 2026; verification against the live NICE register remains required before each review cycle and before any prescribing decision.</li>
+<li>D-VRd is recommended for transplant-ineligible NDMM under TA1170; the separate transplant-eligible appraisal GID-TA11254 / ID6249 remains in development. Other relevant appraisals remain in development, including TA11465 (isatuximab combinations induction), GID-TA10905 / ID4012 (cilta-cel earlier line) and GID-TA11846 / ID6639 (isatuximab maintenance). Ixazomib maintenance (GID-TA10843 / ID1517) was discontinued at NICE in February 2026.</li>
 <li>Belantamab mafodotin with pomalidomide and dexamethasone is recommended under TA1133, subject to current eligibility, commercial arrangement, Blueteq, local formulary and ophthalmology pathway requirements.</li>
 <li>Cilta-cel has no routine NICE recommendation under terminated TA889. The separate earlier-line appraisal GID-TA10905 / ID4012 remained in development at publication review and may change this position.</li>
 <li>Venetoclax for t(11;14) is not NICE-commissioned for myeloma and is presented as off-label / specialist-centre use only.</li>
@@ -1345,8 +1389,8 @@ footer.mha strong { color: var(--mha-burgundy); }
 <li>Quick-ref card and full guideline cross-checked for consistency on TA numbers, line of therapy, and regimen access.</li>
 <li>References checked for DOI, PMID and year accuracy.</li>
 <li>NICE horizon-scanning section (Section 1A) re-checked against live NICE pages immediately before deployment.</li>
-<li>Distinction confirmed between currently recommended (TA763, TA587, TA1098, TA680, TA695, TA1015, TA1114, TA1133 and others), managed-access (TA1023 elranatamab), in-development (GID-TA10726 / ID3843 D-VRd; GID-TA10905 / ID4012 cilta-cel earlier line; GID-TA11846 / ID6639 isatuximab maintenance), discontinued (GID-TA10843 / ID1517 ixazomib maintenance) and terminated (TA889 cilta-cel) appraisals.</li>
-<li>D-VRd identifier confirmed as GID-TA10726 / ID3843 unless NICE has since issued final TA guidance with a new TA number — replace throughout if updated.</li>
+<li>Distinction confirmed between currently recommended (TA1170 D-VRd for transplant-ineligible NDMM; TA763, TA587, TA1098, TA680, TA695, TA1015, TA1114, TA1133 and others), managed-access (TA1023 elranatamab), in-development (GID-TA11254 / ID6249 D-VRd for transplant-eligible NDMM; GID-TA10905 / ID4012 cilta-cel earlier line; GID-TA11846 / ID6639 isatuximab maintenance), discontinued (GID-TA10843 / ID1517 ixazomib maintenance) and terminated (TA889 cilta-cel) appraisals.</li>
+<li>D-VRd settings kept separate throughout: TA1170 when ASCT is unsuitable; GID-TA11254 / ID6249 in development when high-dose chemotherapy and ASCT are suitable.</li>
 <li>Cilta-cel TA889 (terminated) and GID-TA10905 / ID4012 (in development, earlier line) kept separate in every reference throughout the document.</li>
 <li>Ixazomib maintenance GID-TA10843 / ID1517 labelled discontinued (Feb 2026), not in development, in every reference throughout the document.</li>
 <li>Page layout, sidebar, evidence badges and download links match the live MHA malignant guideline framework (CLL page v1.9 as reference).</li>
@@ -1406,7 +1450,7 @@ footer.mha strong { color: var(--mha-burgundy); }
 <li>Grosicki S, Simonova M, Spicka I, et al. Once-per-week selinexor, bortezomib, and dexamethasone versus twice-per-week bortezomib and dexamethasone in patients with multiple myeloma (BOSTON). <em>Lancet</em> 2020;396:1563–1573. <span class="grade A2">A2</span></li>
 <li>San Miguel J, Weisel K, Moreau P, et al. Pomalidomide plus low-dose dexamethasone versus high-dose dexamethasone alone for patients with relapsed and refractory multiple myeloma (MM-003). <em>Lancet Oncol</em> 2013;14:1055–1066. <span class="grade A2">A2</span></li>
 </ol>
-<p><strong>NICE technology appraisals — statuses re-verified for publication on 26 July 2026; live NICE verification remains required before prescribing:</strong></p>
+<p><strong>NICE technology appraisals — statuses re-verified for v1.1 publication on 26 July 2026; live NICE verification remains required before prescribing:</strong></p>
 <ul>
 <li>TA129 — Bortezomib monotherapy for relapsed MM (2007). <span class="grade A1">A1</span></li>
 <li>TA228 — Bortezomib + thalidomide for first-line MM (2011). <span class="grade A1">A1</span></li>
@@ -1428,7 +1472,8 @@ footer.mha strong { color: var(--mha-burgundy); }
 <li>TA1098 — Isatuximab + bortezomib + lenalidomide + dexamethasone (Isa-VRd) for untreated MM when ASCT unsuitable (Sept 2025). <span class="grade A1">A1</span></li>
 <li>TA1114 — Talquetamab for R/R MM after ≥3 prior treatments (Dec 2025; routine NHS option). <span class="grade A1">A1</span></li>
 <li>TA1133 — Belantamab mafodotin + Pd for previously treated MM after ≥1 prior therapy including lenalidomide (Feb 2026). <span class="grade A1">A1</span></li>
-<li>In development: GID-TA10726 / ID3843 (D-VRd, PERSEUS); GID-TA10905 / ID4012 (cilta-cel after 1–3 therapies); GID-TA11846 / ID6639 (isatuximab maintenance after ASCT).</li>
+<li>TA1170 — D-VRd for untreated multiple myeloma when ASCT is unsuitable (June 2026). <span class="grade A1">A1</span></li>
+<li>In development: GID-TA11254 / ID6249 (D-VRd when high-dose chemotherapy and ASCT are suitable); GID-TA10905 / ID4012 (cilta-cel after 1–3 therapies); GID-TA11846 / ID6639 (isatuximab maintenance after ASCT).</li>
 <li>Discontinued: GID-TA10843 / ID1517 (ixazomib maintenance after ASCT; discontinued Feb 2026).</li>
 </ul>
 </div>
@@ -1458,7 +1503,7 @@ footer.mha strong { color: var(--mha-burgundy); }
 </div>
 
 <div class="versioning-block">
-<h3>Versioning and Governance — MHA-MYELOMA-2026-v1.0</h3>
+<h3>Versioning and Governance — MHA-MYELOMA-2026-v1.1</h3>
 <table>
 <thead>
 <tr><th>Version</th><th>Date</th><th>Author</th><th>Change</th></tr>
@@ -1470,6 +1515,7 @@ footer.mha strong { color: var(--mha-burgundy); }
 <tr><td>v0.4 GOVERNANCE REVIEW</td><td>May 2026</td><td>Dr M Mohsin (Claude-assisted)</td><td>Governance review: status renamed to v0.4-GOVERNANCE-REVIEW; draft banner expanded; D-VRd identifier corrected from incorrect TA11254 to NICE in-development identifier GID-TA10726 / ID3843; new Section 1A NICE Horizon Scanning inserted between Section 1 and Section 2, distinguishing currently recommended / managed-access / in-development / awaiting-development / discontinued / terminated / off-label categories; NICE TA wording softened to "selected entries checked May 2026; live NICE verification required before prescribing"; NCCN removed from disclaimer (only EHA-EMN and IMWG used substantively); ixazomib maintenance reclassified from "in development" to "discontinued February 2026" (GID-TA10843 / ID1517); new entries added — TA1098 Isa-VRd (Sept 2025), TA1023 elranatamab managed access (Dec 2024), TA1114 talquetamab routine NHS (Dec 2025), TA1133 belantamab + Pd (Feb 2026); cilta-cel TA889 (terminated) and GID-TA10905 / ID4012 (in development earlier line) kept explicitly separate; TI-NDMM dara-quadruplet language tightened — D-Rd / D-VMP not presented as available without verified TA; global dose-block caveat added; expanded publication governance checklist with 16 items; algorithm assets linked to JPEG with SVG retained as source; v0.4 PDF/DOCX filenames in sidebar; safety footer added to quick-ref card.</td></tr>
 <tr><td>v0.4.1 GOVERNANCE POLISH</td><td>May 2026</td><td>Dr M Mohsin (Claude-assisted; ChatGPT-reviewed)</td><td>Minimal safety polish: (1) Belantamab + Pd (TA1133) repositioned as a post-Len option after 1 prior lenalidomide-containing line if Len-intolerant or Len-refractory; ocular monitoring warning retained; no longer described as a generic penta-refractory option. (2) D-VRd (GID-TA10726 / ID3843) clarified as "horizon/evidence only" — cited NICE in-development entry currently relates to transplant-unsuitable NDMM; removed from the TE-NDMM commissioned-options list in Section 1 and the TE-NDMM regimen-block area in Section 8; added to the TI-NDMM / horizon area with explicit pathway-placement warning; sidebar NICE Commissioning panel moved D-VRd from "transplant-eligible" to "in development / awaiting"; NDMM algorithm SVG updated to show D-VRd as horizon for transplant-unsuitable. (3) Star symbol wording replaced throughout from "currently preferred where eligible" to "recently appraised / commonly pathway-relevant where NICE criteria and local access are met". (4) TA763 wording reworded as "D-VTd induction/consolidation for newly diagnosed transplant-eligible myeloma, within NICE criteria". (5) Algorithm safety footer added to both NDMM and R/R SVGs: "Educational pathway summary only. NICE/Blueteq/local formulary and SmPC verification required before treatment." JPEGs regenerated from updated SVGs. (6) Filenames updated to v0.4.1; banner retained as PROPOSAL ONLY — DRAFT — GOVERNANCE REVIEW with consultant/pharmacy sign-off requirement preserved. No new clinical recommendations introduced.</td></tr>
 <tr><td>v1.0 PUBLISHED</td><td>26 July 2026</td><td>Dr M Mohsin</td><td>First published release. Consultant approval and pharmacy verification confirmed by the clinical owner; named NICE and appraisal statuses, Blueteq/formulary, dose and adjustment language, supportive-care controls, approved-centre pathways and belantamab ophthalmology pathway confirmed checked. Publication status and version metadata updated; clinical recommendations unchanged from v0.4.1.</td></tr>
+<tr><td>v1.1 PUBLISHED</td><td>26 July 2026</td><td>Dr M Mohsin</td><td>D-VRd updated as NICE-recommended under TA1170 for untreated multiple myeloma when ASCT is unsuitable; the separate transplant-eligible appraisal GID-TA11254 / ID6249 remains in development. CLL-style sticky navigation, independently scrolling desktop sidebar and inline algorithm presentation added. Clinical owner approval and pharmacy verification confirmed; pharmacist's name retained privately.</td></tr>
 </tbody>
 </table>
 </div>
@@ -1507,18 +1553,18 @@ footer.mha strong { color: var(--mha-burgundy); }
 
 <div class="side-card">
 <h4>Visual Diagrams</h4>
-<p>Myeloma decision algorithms — v1.0 aligned with BSH/UKMS 2024–2025 and current NICE TAs.</p>
+<p>Myeloma decision algorithms — v1.1 aligned with BSH/UKMS 2024–2025 and current NICE TAs.</p>
 <ul>
-<li><a href="algorithm-ndmm.jpeg">NDMM pathway (JPEG)</a></li>
-<li><a href="algorithm-rr.jpeg">R/R pathway (JPEG)</a></li>
-<li><a href="algorithm-ndmm.svg">NDMM pathway — editable SVG source</a></li>
-<li><a href="algorithm-rr.svg">R/R pathway — editable SVG source</a></li>
+<li><a href="#ndmm-algorithm">View NDMM pathway inline</a></li>
+<li><a href="#rr-algorithm">View R/R pathway inline</a></li>
+<li><a href="algorithm-ndmm.svg" target="_blank" rel="noopener">Open NDMM pathway as SVG</a></li>
+<li><a href="algorithm-rr.svg" target="_blank" rel="noopener">Open R/R pathway as SVG</a></li>
 </ul>
 </div>
 
 <div class="side-card">
 <h4>Download PDFs</h4>
-<p>Full multi-page guideline or compact summary card (v1.0 published release).</p>
+<p>Full multi-page guideline or compact summary card (v1.1 published release).</p>
 <ul>
 <li><a href="guideline.pdf">Full Guideline (PDF)</a></li>
 <li><a href="quickref.pdf">Quick-Ref Card (PDF)</a></li>
@@ -1537,6 +1583,7 @@ footer.mha strong { color: var(--mha-burgundy); }
 <ul class="ta-list">
 <li>TA587 — Rd</li>
 <li><span class="pref">★</span> TA1098 — Isa-VRd (Sep 2025)</li>
+<li><span class="pref">★</span> TA1170 — D-VRd (Jun 2026)</li>
 </ul>
 <p><strong>Relapsed/Refractory:</strong></p>
 <ul class="ta-list">
@@ -1552,7 +1599,7 @@ footer.mha strong { color: var(--mha-burgundy); }
 </ul>
 <p><strong>In development / awaiting:</strong></p>
 <ul class="ta-list">
-<li><em>GID-TA10726 / ID3843 — D-VRd (transplant-unsuitable, in dev)</em></li>
+<li><em>GID-TA11254 / ID6249 — D-VRd (transplant-eligible, in development)</em></li>
 <li><em>GID-TA10905 / ID4012 — Cilta-cel (earlier line)</em></li>
 <li><em>GID-TA11846 / ID6639 — Isatuximab maintenance</em></li>
 </ul>
@@ -1582,7 +1629,7 @@ footer.mha strong { color: var(--mha-burgundy); }
 <footer class="mha">
 <div class="inner">
 <div><strong>Mohsin Haematology Academy</strong> · Evidence — Education — Practice</div>
-<div>MHA-MYELOMA-2026-v1.0 (published 26 July 2026) | Educational use only · BSH/UKMS and NICE regimens apply for UK clinical practice</div>
+<div>MHA-MYELOMA-2026-v1.1 (published 26 July 2026) | Educational use only · BSH/UKMS and NICE regimens apply for UK clinical practice</div>
 <div>© 2025–2026 Dr Muhammad Mohsin, Consultant Haematologist</div>
 </div>
 </footer>
