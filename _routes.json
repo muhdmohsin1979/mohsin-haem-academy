@@ -11,8 +11,8 @@
     "/scripts/*",
     "/sources",
     "/sources/*",
-    "/guidelines/myeloma/_dev",
-    "/guidelines/myeloma/_dev/*",
+    "/guidelines/myeloma",
+    "/guidelines/myeloma/*",
     "/README.md",
     "/WEBSITE_COMMANDS.md",
     "/_config.yml"

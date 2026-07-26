@@ -4,7 +4,7 @@ const BLOCKED_PREFIXES = [
   "/docs",
   "/scripts",
   "/sources",
-  "/guidelines/myeloma/_dev",
+  "/guidelines/myeloma",
 ];
 
 const BLOCKED_FILES = new Set([
