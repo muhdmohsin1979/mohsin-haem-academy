@@ -20,6 +20,8 @@
 <meta name="theme-color" content="#7a1f2b">
 <style>
 :root {
+  --mha-header-offset: 79px;
+  --mha-anchor-offset: 42px;
   --mha-burgundy: #7a1f2b;
   --mha-burgundy-soft: #f5e9eb;
   --mha-burgundy-mid: #b04050;
@@ -46,17 +48,19 @@ html, body { background: var(--mha-bg); color: var(--mha-ink); font-family: Geor
 .page { display: grid; grid-template-columns: 1fr 280px; gap: 2.5rem; max-width: 1280px; margin: 0 auto; padding: 1.5rem 1.5rem 4rem; }
 .page > * { min-width: 0; }
 @media (max-width: 980px) { .page { grid-template-columns: 1fr; } .sidebar { order: 2; } main { overflow-x: hidden; } main table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; } }
-header.mha { border-bottom: 1px solid var(--mha-rule); padding: 1rem 1.5rem; background: #fff; }
+header.mha { border-bottom: 1px solid var(--mha-rule); padding: 1rem 1.5rem; background: #fff; position: sticky; top: 0; z-index: 200; box-shadow: 0 1px 4px rgba(29, 29, 29, .06); }
 header.mha .inner { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
 header.mha a { color: var(--mha-burgundy); text-decoration: none; font-weight: 600; }
 header.mha nav a { margin-left: 1rem; font-weight: 500; color: var(--mha-ink-soft); }
 header.mha nav a:hover { color: var(--mha-burgundy); }
 .brand { font-weight: 700; color: var(--mha-burgundy); font-size: 1.05rem; }
 .brand-sub { display: block; font-weight: 400; color: var(--mha-ink-soft); font-size: .8rem; }
-nav.section-anchors { background: #fff; border-bottom: 1px solid var(--mha-rule); padding: .6rem 1.5rem; font-size: .85rem; }
-nav.section-anchors .inner { max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 1rem 1.25rem; }
-nav.section-anchors a { color: var(--mha-burgundy); text-decoration: none; }
+nav.section-anchors { background: #fff; border-bottom: 1px solid var(--mha-rule); padding: .6rem 1.5rem; font-size: .85rem; position: sticky; top: var(--mha-header-offset); z-index: 190; box-shadow: 0 2px 5px rgba(29, 29, 29, .05); }
+nav.section-anchors .inner { max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: nowrap; gap: 1rem 1.25rem; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+nav.section-anchors .inner::-webkit-scrollbar { display: none; }
+nav.section-anchors a { color: var(--mha-burgundy); text-decoration: none; white-space: nowrap; flex-shrink: 0; }
 nav.section-anchors a:hover { text-decoration: underline; }
+h2[id], figure[id] { scroll-margin-top: calc(var(--mha-header-offset) + var(--mha-anchor-offset) + 1rem); }
 .chip-row { display: flex; flex-wrap: wrap; gap: .4rem; margin: .6rem 0 .8rem; }
 .chip { display: inline-block; padding: .2rem .55rem; border-radius: 999px; font-size: .72rem; font-weight: 600; background: var(--mha-burgundy-soft); color: var(--mha-burgundy); border: 1px solid var(--mha-rule); letter-spacing: .02em; }
 .chip.tag-cat { background: var(--mha-burgundy); color: #fff; border-color: var(--mha-burgundy); }
@@ -110,10 +114,15 @@ table caption { caption-side: bottom; text-align: left; font-size: .82rem; color
 .attribution { font-size: .8rem; color: var(--mha-ink-soft); font-style: italic; margin: .1rem 0 .8rem; }
 .vignette { border: 1px solid var(--mha-info); background: var(--mha-info-soft); border-radius: 6px; padding: .9rem 1.1rem; margin: 1rem 0; }
 .vignette h4 { color: var(--mha-info); margin: 0 0 .35rem; }
-.algorithm { background: #fff; border: 1px solid var(--mha-rule); border-radius: 6px; padding: 1rem; margin: 1rem 0; text-align: center; }
-.algorithm img, .algorithm svg { max-width: 100%; height: auto; }
-.algorithm-caption { font-size: .85rem; color: var(--mha-ink-soft); margin-top: .45rem; }
-.sidebar { font-size: .88rem; }
+.algorithm { background: #fff; border: 1px solid var(--mha-rule); border-radius: 10px; padding: 1rem 1.1rem; margin: 1rem 0 1.4rem; text-align: center; overflow: hidden; }
+.algorithm object, .algorithm img, .algorithm svg { display: block; width: 100%; max-width: 860px; height: auto; margin: 0 auto; }
+.algorithm object { aspect-ratio: 1280 / 1520; }
+.algorithm-title { display: block; font-size: .82rem; color: var(--mha-ink-soft); letter-spacing: .04em; text-transform: uppercase; font-weight: 700; margin-bottom: .7rem; }
+.algorithm-caption { font-size: .8rem; color: var(--mha-ink-soft); margin: .7rem auto 0; line-height: 1.5; max-width: 760px; }
+.algorithm-caption a { font-weight: 600; }
+.sidebar { font-size: .88rem; position: sticky; top: calc(var(--mha-header-offset) + var(--mha-anchor-offset) + 1rem); align-self: start; max-height: calc(100vh - var(--mha-header-offset) - var(--mha-anchor-offset) - 2rem); overflow-y: auto; padding-right: .35rem; scrollbar-width: thin; scrollbar-color: var(--mha-rule) transparent; }
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--mha-rule); border-radius: 999px; }
 .side-card { background: #fff; border: 1px solid var(--mha-rule); border-radius: 6px; padding: .9rem 1rem; margin-bottom: 1rem; }
 .side-card h4 { margin: 0 0 .5rem; color: var(--mha-burgundy); font-size: .92rem; }
 .side-card ul { margin: 0; padding-left: 1.1rem; }
@@ -144,6 +153,12 @@ footer.mha strong { color: var(--mha-burgundy); }
 .chip-row-top { margin-top: .5rem; }
 .side-note { font-size: .8rem; color: var(--mha-ink-soft); margin-top: .5rem; }
 .flush-top { margin-top: 0; }
+@media (max-width: 980px) {
+  header.mha { position: static; box-shadow: none; }
+  nav.section-anchors { top: 0; }
+  h2[id], figure[id] { scroll-margin-top: calc(var(--mha-anchor-offset) + .75rem); }
+  .sidebar { position: static; max-height: none; overflow-y: visible; padding-right: 0; }
+}
 </style>
 </head>
 <body>
@@ -762,6 +777,14 @@ footer.mha strong { color: var(--mha-burgundy); }
 
 <h3>Standard-risk transplant-eligible NDMM — UK NHS framework</h3>
 
+<figure class="algorithm" id="ndmm-algorithm">
+<p class="algorithm-title">Newly diagnosed multiple myeloma decision algorithm · v1.0 aligned with BSH/UKMS and NICE</p>
+<object data="algorithm-ndmm.svg" type="image/svg+xml" title="Newly diagnosed multiple myeloma treatment decision algorithm flowchart">
+  <a href="algorithm-ndmm.svg"><img src="algorithm-ndmm.jpeg" alt="Newly diagnosed multiple myeloma treatment decision algorithm flowchart"></a>
+</object>
+<figcaption class="algorithm-caption">Static SVG rendering of the current v1.0 NDMM pathway. <a href="algorithm-ndmm.svg" target="_blank" rel="noopener">Open the SVG directly</a> for a full-screen view or <a href="algorithm-ndmm.jpeg" download>download the JPEG</a>. Treat the diagram as a visual summary; the prose, cited sources, live NICE guidance and local pathways remain authoritative.</figcaption>
+</figure>
+
 <p>Standard UK NHS induction has been a bortezomib-based triplet (most commonly VTd or VCd) followed by ASCT with melphalan 200 mg/m² conditioning and lenalidomide maintenance until progression (TA680). Daratumumab-containing quadruplet induction is increasingly used in line with the CASSIOPEIA evidence base and current NICE technology appraisals. <strong>The current NICE-commissioned quadruplet for the transplant-eligible setting is D-VTd (TA763, within NICE criteria).</strong> D-VRd (PERSEUS-based) is the subject of an in-development NICE appraisal under identifier GID-TA10726 / ID3843 (the v0.3 draft incorrectly cited TA11254 — corrected in v0.4); the cited NICE in-development reference relates to <em>transplant-unsuitable</em> NDMM, not transplant-eligible disease. D-VRd should be treated as horizon/evidence content only for the TE-NDMM pathway pending final NICE guidance and verified pathway placement.</p>
 
 <div class="callout callout-warn">
@@ -931,6 +954,14 @@ footer.mha strong { color: var(--mha-burgundy); }
 
 <!-- ==================== SECTION 11 — RELAPSED / REFRACTORY ==================== -->
 <h2 id="rr"><span class="num">11</span>Relapsed and Refractory Myeloma</h2>
+
+<figure class="algorithm" id="rr-algorithm">
+<p class="algorithm-title">Relapsed and refractory myeloma decision algorithm · v1.0 aligned with BSH/UKMS and NICE</p>
+<object data="algorithm-rr.svg" type="image/svg+xml" title="Relapsed and refractory multiple myeloma treatment decision algorithm flowchart">
+  <a href="algorithm-rr.svg"><img src="algorithm-rr.jpeg" alt="Relapsed and refractory multiple myeloma treatment decision algorithm flowchart"></a>
+</object>
+<figcaption class="algorithm-caption">Static SVG rendering of the current v1.0 R/R pathway. <a href="algorithm-rr.svg" target="_blank" rel="noopener">Open the SVG directly</a> for a full-screen view or <a href="algorithm-rr.jpeg" download>download the JPEG</a>. Treat the diagram as a visual summary; the prose, cited sources, live NICE guidance and local pathways remain authoritative.</figcaption>
+</figure>
 
 <div class="vignette">
 <h4>Clinical Vignette</h4>
@@ -1509,10 +1540,10 @@ footer.mha strong { color: var(--mha-burgundy); }
 <h4>Visual Diagrams</h4>
 <p>Myeloma decision algorithms — v1.0 aligned with BSH/UKMS 2024–2025 and current NICE TAs.</p>
 <ul>
-<li><a href="algorithm-ndmm.jpeg">NDMM pathway (JPEG)</a></li>
-<li><a href="algorithm-rr.jpeg">R/R pathway (JPEG)</a></li>
-<li><a href="algorithm-ndmm.svg">NDMM pathway — editable SVG source</a></li>
-<li><a href="algorithm-rr.svg">R/R pathway — editable SVG source</a></li>
+<li><a href="#ndmm-algorithm">View NDMM pathway inline</a></li>
+<li><a href="#rr-algorithm">View R/R pathway inline</a></li>
+<li><a href="algorithm-ndmm.svg" target="_blank" rel="noopener">Open NDMM pathway as SVG</a></li>
+<li><a href="algorithm-rr.svg" target="_blank" rel="noopener">Open R/R pathway as SVG</a></li>
 </ul>
 </div>
 
