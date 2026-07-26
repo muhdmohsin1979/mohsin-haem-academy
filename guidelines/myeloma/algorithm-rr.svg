@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1520" font-family="Georgia, serif">
-<title>Myeloma R/R treatment pathway — MHA-MYELOMA-2026-v0.4.1-GOVERNANCE-POLISH</title>
+<title>Myeloma R/R treatment pathway — MHA-MYELOMA-2026-v1.0</title>
 <desc>Decision algorithm for relapsed and refractory multiple myeloma covering progression evaluation, class-switch principles, line-by-line treatment selection, bispecifics, CAR-T and trial considerations. Aligned to BSH/UKMS 2025 (Jenner) and current NICE TAs.</desc>
 
 <defs>
@@ -26,7 +26,7 @@
 
 <!-- Title -->
 <text x="640" y="40" class="title" text-anchor="middle">Relapsed / Refractory Multiple Myeloma — Treatment Pathway</text>
-<text x="640" y="62" class="subtitle" text-anchor="middle">MHA-MYELOMA-2026-v0.4.1-GOVERNANCE-POLISH · Aligned to BSH/UKMS 2025 (Jenner) and current NICE technology appraisals</text>
+<text x="640" y="62" class="subtitle" text-anchor="middle">MHA-MYELOMA-2026-v1.0 · Published 26 July 2026 · BSH/UKMS 2025 and NICE aligned</text>
 
 <!-- Step 1: Trigger -->
 <rect x="440" y="90" width="400" height="60" rx="6" fill="#7a1f2b" stroke="#7a1f2b"/>
@@ -88,7 +88,7 @@
 <text x="60" y="809" class="ta-chip">NICE TA695</text>
 <text x="60" y="827" class="box-text">• Daratumumab + Rd (Dara-Rd, POLLUX)</text>
 <text x="60" y="843" class="box-text">• Isatuximab + Pd (ICARIA)</text>
-<text x="60" y="861" class="ta-chip-warn">TA status — verify</text>
+<text x="60" y="861" class="ta-chip-warn">Evidence only · commissioning not asserted</text>
 
 <text x="60" y="887" class="box-text-bold">Post-Len exposed:</text>
 <text x="60" y="905" class="box-text">• Daratumumab + Vd (Dara-Vd, CASTOR)</text>
@@ -128,15 +128,15 @@
 <text x="880" y="809" class="ta-chip">NICE TA1015 (Nov 2024)</text>
 
 <text x="880" y="833" class="box-text-bold">Elranatamab (BCMA × CD3)</text>
-<text x="880" y="851" class="ta-chip-warn">CDF / draft NICE — verify</text>
+<text x="880" y="851" class="ta-chip-warn">NICE TA1023 · managed access</text>
 
 <text x="880" y="877" class="box-text-bold">Talquetamab (GPRC5D × CD3)</text>
-<text x="880" y="895" class="ta-chip-warn">TA status — verify</text>
+<text x="880" y="895" class="ta-chip">NICE TA1114</text>
 
 <text x="880" y="921" class="box-text-bold">CAR-T (ide-cel; cilta-cel)</text>
 <text x="880" y="939" class="box-text-small">Specialist-centre referral</text>
 <text x="880" y="955" class="ta-chip-off">TA889 cilta-cel terminated</text>
-<text x="880" y="973" class="ta-chip-warn">ide-cel TA — verify</text>
+<text x="880" y="973" class="ta-chip-warn">ide-cel: evidence only · commissioning not asserted</text>
 
 <!-- Connection from 5a/5b/5c to 6 -->
 <line x1="230" y1="980" x2="230" y2="1005" stroke="#7a1f2b" stroke-width="2"/>
@@ -170,9 +170,9 @@
 <text x="60" y="1382" class="box-text-small">• Always re-test FISH and TP53 at progression — clonal evolution alters treatment selection in ≥20% of patients.</text>
 <text x="60" y="1398" class="box-text-small">• Bispecific and CAR-T pre-treatment workup: baseline immunoglobulins (and IVIg plan), HBV/HCV/HIV screening, cardiac assessment, bridging therapy plan, approved-centre referral.</text>
 <text x="60" y="1414" class="box-text-small">• Local NICE TA status, Blueteq eligibility, NHS England commissioning policy and local formulary access take precedence over this summary.</text>
-<text x="60" y="1430" class="box-text-small">• MHA-MYELOMA-2026-v0.4.1-GOVERNANCE-POLISH (draft) · Educational use only · For UK clinical practice only BSH-aligned NICE-commissioned regimens apply.</text>
+<text x="60" y="1430" class="box-text-small">• MHA-MYELOMA-2026-v1.0 · Published educational resource · For UK clinical practice only BSH-aligned NICE-commissioned regimens apply.</text>
 
-<!-- Educational footer (v0.4.1) -->
+<!-- Educational footer (v1.0) -->
 <rect x="40" y="1450" width="1200" height="20" rx="3" fill="#fff4e0" stroke="#c87a00"/>
 <text x="640" y="1464" font-family="Georgia, serif" font-size="11" font-style="italic" fill="#c87a00" text-anchor="middle" font-weight="bold">Educational pathway summary only. NICE/Blueteq/local formulary and SmPC verification required before treatment.</text>
 

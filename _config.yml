@@ -9,7 +9,7 @@ exclude:
   - scripts
   - sources
   - docs
-  - guidelines/myeloma
+  - guidelines/myeloma/_dev
   - _headers
   - _redirects
   - _routes.json
