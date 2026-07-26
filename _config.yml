@@ -1,0 +1,18 @@
+title: Mohsin Haematology Academy
+url: https://mohsinhaemacademy.com
+
+# GitHub Pages is the build host. Keep planning, source notes, scripts and
+# internal review material out of the generated public site.
+exclude:
+  - .plan
+  - .github
+  - scripts
+  - sources
+  - docs
+  - guidelines/myeloma/_dev
+  - _headers
+  - _redirects
+  - _routes.json
+  - _worker.js
+  - WEBSITE_COMMANDS.md
+  - README.md

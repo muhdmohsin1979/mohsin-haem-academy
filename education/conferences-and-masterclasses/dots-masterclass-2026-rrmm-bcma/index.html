@@ -120,7 +120,7 @@ footer { background: var(--clr-surface); border-top: 1px solid var(--clr-border)
 .footer-note strong { color: var(--clr-text-secondary); font-weight: 600; }
 
 @media (max-width: 640px) {
-  .nav-links a:not(.nav-cta) { display: none; }
+  .nav { height: auto; min-height: 68px; flex-wrap: wrap; padding: 10px 0; } .nav-links { width: 100%; overflow-x: auto; padding-bottom: 4px; } .nav-links a:not(.nav-cta) { display: inline-flex; }
   .footer-inner { flex-direction: column; align-items: flex-start; gap: 14px; }
   .footer-note { text-align: left; }
   .cta-box { flex-direction: column; align-items: flex-start; }

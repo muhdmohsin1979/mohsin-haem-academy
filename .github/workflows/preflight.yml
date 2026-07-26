@@ -8,7 +8,6 @@ on:
 
 permissions:
   contents: read
-  pull-requests: write
 
 jobs:
   tone-guard:
@@ -77,6 +76,18 @@ jobs:
       - name: Run preflight self-test (PII regex regressions)
         run: |
           python scripts/preflight.py --self-test
+
+      - name: Run repository-wide PII and internal-link checks
+        run: |
+          git ls-files '*.html' \
+            | grep -vE '^docs/templates/' > all-html.txt
+          python scripts/preflight.py --files-from all-html.txt --skip-links
+
+      - name: Validate deployment routing files
+        run: |
+          python -m json.tool _routes.json > /dev/null
+          cp _worker.js /tmp/mha-worker.mjs
+          node --check /tmp/mha-worker.mjs
 
       - name: Determine changed files
         id: changed

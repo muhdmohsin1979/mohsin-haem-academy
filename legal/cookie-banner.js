@@ -31,7 +31,7 @@
       "margin:0 auto;background:#ffffff;color:#1a1a1e;border:1px solid #e6e1dd;" +
       "border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.08);" +
       "padding:1rem 1.25rem;z-index:9999;" +
-      "font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;font-size:0.9rem;";
+      "font-family:'Source Sans 3','Segoe UI',sans-serif;font-size:0.9rem;";
     banner.innerHTML =
       '<div style="display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center;justify-content:space-between;">' +
       '<p style="margin:0;flex:1 1 320px;">' +
