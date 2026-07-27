@@ -1,0 +1,40 @@
+{
+  "document_code": "MHA-CLL-2026-v2.0",
+  "evidence_cut_off": "2026-07-26",
+  "publication_date": "2026-07-27",
+  "reviewed_preview": {
+    "commit": "8dfeebd33fb52349fc01aded134972a4201448da",
+    "tree": "cd2511e18e1a44707852610d9ee0d0accdaa25d8",
+    "manifest_sha256": "c9be5bde61a06de1f88ce2cef477afeb157a0fb572b259884fa33c902baec14c",
+    "independent_review": "PASS",
+    "pharmacy_verification": "COMPLETE",
+    "pharmacy_verifier_identity": "RETAINED PRIVATELY"
+  },
+  "owner_authorisation": {
+    "owner": "Dr Muhammad Mohsin, Consultant Haematologist",
+    "preview_hashes_approved": true,
+    "production_publication_authorised": true,
+    "authorised_at": "2026-07-27T12:13:00+01:00",
+    "production_artefact_hash_ratification": "COMPLETE",
+    "ratified_manifest_sha256": "6a78f5217792a42a075a63af4922f66527160e12094a4d987caf66ac2c901a8e",
+    "ratified_at": "2026-07-27T20:38:03Z"
+  },
+  "production_candidate": {
+    "manifest_sha256": "6a78f5217792a42a075a63af4922f66527160e12094a4d987caf66ac2c901a8e",
+    "clinical_change_from_reviewed_preview": "NONE; release-control presentation only",
+    "artefacts": {
+      "index.html": "3ed7751bcfad5cfc0a5694c93dc84e50b80d88e4f5b88b203016faf9d73ae2c8",
+      "guideline.docx": "61d2e483f89bc1f137a06e6129a19d1afc4f945df86302eb9484fbd7115f89eb",
+      "guideline.pdf": "abb68634dd97ab3651724b7da5bfef8bcf8341aae87a27661258e095f16dc77a",
+      "quickref.docx": "0bb803993f450403dcea1e52fe216810ccfadb708e94e4a9f98d2648e341aa7e",
+      "quickref.pdf": "282a78ab01e6b8cdf0ad3b475504e3ca52ccc03f498ddc93a8b699cf5756bf3d",
+      "algorithm.svg": "493443ec66a307d4ea257c4e72bf77f60cc9bcf823213eedbd0b05943e49472b",
+      "algorithm.excalidraw": "9ab5b274d7ee74a8e44cd578ec498d41d0ea8744f7605efd44e1141b418a50b5"
+    }
+  },
+  "production_verification": {
+    "status": "PENDING",
+    "verified_commit": null,
+    "verified_at": null
+  }
+}
