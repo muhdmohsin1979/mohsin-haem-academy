@@ -85,12 +85,17 @@ async function main() {
 
       const fullText = svg.textContent || "";
       const required = [
-        "PROTECTED", "PREVIEW", "BTKi NAIVE", "COVALENT-BTKi INTOLERANCE",
+        "PUBLISHED", "v2.0", "BTKi NAIVE", "COVALENT-BTKi INTOLERANCE",
         "COVALENT-BTKi PROGRESSION", "RELAPSE OFF FIXED-DURATION",
         "DOUBLE EXPOSED", "DOUBLE REFRACTORY", "TA1173", "29 September 2026",
       ];
       for (const phrase of required) {
         if (!fullText.includes(phrase)) failures.push(`Rendered SVG missing: ${phrase}`);
+      }
+      for (const stale of ["PROTECTED PREVIEW", "not yet published", "approval pending"]) {
+        if (fullText.toLowerCase().includes(stale.toLowerCase())) {
+          failures.push(`Rendered SVG retains stale release status: ${stale}`);
+        }
       }
 
       const stateTitles = new Set([
