@@ -376,7 +376,7 @@ def build_guideline(soup: BeautifulSoup) -> None:
     add_title(doc, "Chronic Lymphocytic Leukaemia", "Unified clinical guideline — v2.0 relapsed/refractory update")
 
     doc.add_heading("Release status", level=1)
-    add_text_paragraph(doc, "Published 27 July 2026 after independent review, pharmacy verification and clinical-owner approval of the manifest-bound release candidate. This is educational clinical decision support, not a prescribing protocol.")
+    add_text_paragraph(doc, "Publication authorised 27 July 2026 after independent review, pharmacy verification and clinical-owner approval of the reviewed clinical content. Production artefact hashes are controlled separately in the release record. This is educational clinical decision support, not a prescribing protocol.")
 
     doc.add_heading("Quick decision summary", level=1)
     quick = soup.select_one(".gl-main > div[style*='border-left:4px']")
@@ -428,8 +428,8 @@ def build_guideline(soup: BeautifulSoup) -> None:
         ("Scope approval", "Approved by clinical owner, 26 July 2026"),
         ("Pharmacy verification", "COMPLETE — verifier identity retained privately"),
         ("Independent clinical/content review", "PASS"),
-        ("Exact-artefact owner approval", "COMPLETE"),
-        ("Publication", "AUTHORISED 27 JULY 2026"),
+        ("Clinical-owner publication authorisation", "COMPLETE — 27 JULY 2026"),
+        ("Production artefact hashes", "CONTROLLED IN RELEASE RECORD"),
     ]
     for key, value in records:
         row = table.add_row()

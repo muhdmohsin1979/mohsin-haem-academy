@@ -229,6 +229,9 @@ def main() -> int:
         "not yet published",
         "exact-artefact approval pending",
         "not authorised for publication",
+        "publication pending",
+        "publication authorisation pending",
+        "owner approval pending",
     ]
     for name, text in texts.items():
         folded = normalise(text).casefold()
@@ -253,8 +256,27 @@ def main() -> int:
     exact_ta1173 = "only if retreatment with a covalent BTK inhibitor, including retreatment after a fixed-duration regimen, is not clinically appropriate"
     if exact_ta1173.casefold() not in html.casefold():
         raise AssertionError("HTML: exact TA1173 restriction is absent")
-    if 'name="robots" content="index, follow"' not in html.casefold():
-        raise AssertionError("Published HTML must carry an explicit index/follow directive")
+    robots_tags = re.findall(
+        r'<meta\b[^>]*\bname=["\']robots["\'][^>]*>',
+        html,
+        flags=re.IGNORECASE,
+    )
+    if len(robots_tags) != 1:
+        raise AssertionError(f"Published HTML must contain exactly one robots meta tag; found {len(robots_tags)}")
+    robots_content = re.search(
+        r'\bcontent=["\']([^"\']+)["\']',
+        robots_tags[0],
+        flags=re.IGNORECASE,
+    )
+    directives = {
+        value.strip().casefold()
+        for value in (robots_content.group(1).split(",") if robots_content else [])
+        if value.strip()
+    }
+    if directives != {"index", "follow"}:
+        raise AssertionError(f"Published HTML robots directives must be exactly index, follow; found {sorted(directives)}")
+    if re.search(r'\b(?:noindex|nofollow|noarchive)\b', html, flags=re.IGNORECASE):
+        raise AssertionError("Published HTML contains a prohibited robots directive")
 
     full_surfaces = ["index.html", "guideline.docx", "guideline.pdf"]
     for name in full_surfaces:

@@ -18,14 +18,14 @@
     "production_artefact_hash_ratification": "PENDING"
   },
   "production_candidate": {
-    "manifest_sha256": "fb16bdd2653d6d04eee4a15d29cbed9bb19265dbd5893e240b750d3d942e3aea",
+    "manifest_sha256": "6a78f5217792a42a075a63af4922f66527160e12094a4d987caf66ac2c901a8e",
     "clinical_change_from_reviewed_preview": "NONE; release-control presentation only",
     "artefacts": {
       "index.html": "3ed7751bcfad5cfc0a5694c93dc84e50b80d88e4f5b88b203016faf9d73ae2c8",
-      "guideline.docx": "e0e72c3b112e0c939aff5377947fb5b9de8092113da3e032aaa64e3e96a16883",
-      "guideline.pdf": "aa709530a3dddc5ef045065f756c80d116ed36630620e8a3b2a6cf1149c16b9f",
-      "quickref.docx": "62d271ce4059ff70bcdfc7e158dd92e8695fc72636bc16aa153b168e5f5f8f69",
-      "quickref.pdf": "d2a7cc018663a2a2bd27e1d5c5d221b506b368ac1839266585d1a4c62acd07b8",
+      "guideline.docx": "61d2e483f89bc1f137a06e6129a19d1afc4f945df86302eb9484fbd7115f89eb",
+      "guideline.pdf": "abb68634dd97ab3651724b7da5bfef8bcf8341aae87a27661258e095f16dc77a",
+      "quickref.docx": "0bb803993f450403dcea1e52fe216810ccfadb708e94e4a9f98d2648e341aa7e",
+      "quickref.pdf": "282a78ab01e6b8cdf0ad3b475504e3ca52ccc03f498ddc93a8b699cf5756bf3d",
       "algorithm.svg": "493443ec66a307d4ea257c4e72bf77f60cc9bcf823213eedbd0b05943e49472b",
       "algorithm.excalidraw": "9ab5b274d7ee74a8e44cd578ec498d41d0ea8744f7605efd44e1141b418a50b5"
     }
