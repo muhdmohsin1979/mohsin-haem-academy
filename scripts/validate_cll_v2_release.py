@@ -31,8 +31,27 @@ ARTEFACTS = [
 
 def docx_text(path: Path) -> str:
     with zipfile.ZipFile(path) as archive:
-        root = ET.fromstring(archive.read("word/document.xml"))
-    return " ".join((node.text or "") for node in root.iter() if node.tag.endswith("}t"))
+        members = [
+            name
+            for name in archive.namelist()
+            if (
+                name == "word/document.xml"
+                or re.fullmatch(r"word/(?:header|footer)\d+\.xml", name)
+                or name in {
+                    "word/comments.xml",
+                    "word/footnotes.xml",
+                    "word/endnotes.xml",
+                    "docProps/core.xml",
+                    "docProps/custom.xml",
+                    "docProps/app.xml",
+                }
+            )
+        ]
+        texts: list[str] = []
+        for name in members:
+            root = ET.fromstring(archive.read(name))
+            texts.extend(node.text or "" for node in root.iter() if node.text)
+    return " ".join(texts)
 
 
 def pdf_text(path: Path) -> tuple[str, int]:
