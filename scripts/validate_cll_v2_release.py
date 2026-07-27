@@ -12,7 +12,7 @@ import subprocess
 import sys
 import tempfile
 import zipfile
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
 from typing import Any
 from xml.etree import ElementTree as ET
@@ -116,13 +116,67 @@ def require_aware_iso_timestamp(value: object, field: str) -> datetime:
     return parsed
 
 
+def require_iso_date(value: object, field: str) -> date:
+    if not isinstance(value, str):
+        raise AssertionError(f"{field} must be an ISO 8601 date string")
+    try:
+        return date.fromisoformat(value)
+    except ValueError as exc:
+        raise AssertionError(f"{field} is not a valid ISO 8601 date") from exc
+
+
+def assert_exact_keys(
+    value: dict[str, object],
+    required: set[str],
+    section: str,
+    optional: set[str] | None = None,
+) -> None:
+    optional = optional or set()
+    actual = set(value)
+    missing = required - actual
+    unexpected = actual - required - optional
+    if missing or unexpected:
+        raise AssertionError(
+            f"Release record {section} schema mismatch; missing={sorted(missing)}, unexpected={sorted(unexpected)}"
+        )
+
+
 def assert_release_record(record: dict[str, object], manifest: dict[str, object], results: dict[str, dict[str, object]]) -> None:
+    if not isinstance(record, dict):
+        raise AssertionError("Controlled release record must be a JSON object")
+    assert_exact_keys(
+        record,
+        {
+            "document_code",
+            "evidence_cut_off",
+            "publication_date",
+            "reviewed_preview",
+            "owner_authorisation",
+            "production_candidate",
+            "production_verification",
+        },
+        "root",
+    )
     if record.get("document_code") != manifest.get("document_code"):
         raise AssertionError("Release record document code does not match the manifest")
+    require_iso_date(record.get("evidence_cut_off"), "evidence_cut_off")
+    require_iso_date(record.get("publication_date"), "publication_date")
 
     reviewed = record.get("reviewed_preview")
     if not isinstance(reviewed, dict):
         raise AssertionError("Release record reviewed-preview section is missing")
+    assert_exact_keys(
+        reviewed,
+        {
+            "commit",
+            "tree",
+            "manifest_sha256",
+            "independent_review",
+            "pharmacy_verification",
+            "pharmacy_verifier_identity",
+        },
+        "reviewed_preview",
+    )
     if reviewed.get("independent_review") != "PASS":
         raise AssertionError("Release record does not preserve the independent-review PASS")
     if reviewed.get("commit") != REVIEWED_PREVIEW_COMMIT:
@@ -139,6 +193,18 @@ def assert_release_record(record: dict[str, object], manifest: dict[str, object]
     owner = record.get("owner_authorisation")
     if not isinstance(owner, dict):
         raise AssertionError("Release record owner-authorisation section is missing")
+    assert_exact_keys(
+        owner,
+        {
+            "owner",
+            "preview_hashes_approved",
+            "production_publication_authorised",
+            "authorised_at",
+            "production_artefact_hash_ratification",
+        },
+        "owner_authorisation",
+        {"ratified_manifest_sha256", "ratified_at"},
+    )
     if owner.get("owner") != "Dr Muhammad Mohsin, Consultant Haematologist":
         raise AssertionError("Release record clinical owner is inconsistent")
     if owner.get("preview_hashes_approved") is not True or owner.get("production_publication_authorised") is not True:
@@ -151,6 +217,11 @@ def assert_release_record(record: dict[str, object], manifest: dict[str, object]
     candidate = record.get("production_candidate")
     if not isinstance(candidate, dict):
         raise AssertionError("Release record production-candidate section is missing")
+    assert_exact_keys(
+        candidate,
+        {"manifest_sha256", "clinical_change_from_reviewed_preview", "artefacts"},
+        "production_candidate",
+    )
     manifest_sha256 = hashlib.sha256(RELEASE_MANIFEST.read_bytes()).hexdigest()
     if candidate.get("manifest_sha256") != manifest_sha256:
         raise AssertionError("Release record manifest hash does not match the exact release manifest")
@@ -170,6 +241,11 @@ def assert_release_record(record: dict[str, object], manifest: dict[str, object]
     verification = record.get("production_verification")
     if not isinstance(verification, dict):
         raise AssertionError("Release record production-verification section is missing")
+    assert_exact_keys(
+        verification,
+        {"status", "verified_commit", "verified_at"},
+        "production_verification",
+    )
     verification_status = verification.get("status")
     if verification_status == "PENDING":
         if verification.get("verified_commit") is not None or verification.get("verified_at") is not None:
