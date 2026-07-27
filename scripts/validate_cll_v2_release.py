@@ -14,6 +14,7 @@ import tempfile
 import zipfile
 from datetime import datetime
 from pathlib import Path
+from typing import Any
 from xml.etree import ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -83,13 +84,24 @@ def readable_text(path: Path) -> tuple[str, int | None]:
         root = ET.parse(path).getroot()
         return " ".join(root.itertext()), None
     if path.suffix == ".excalidraw":
-        data = json.loads(path.read_text(encoding="utf-8"))
+        data = strict_json_loads(path.read_text(encoding="utf-8"), path)
         return " ".join(str(element.get("text", "")) for element in data.get("elements", [])), None
     return path.read_text(encoding="utf-8"), None
 
 
 def normalise(value: str) -> str:
     return re.sub(r"\s+", " ", value).strip()
+
+
+def strict_json_loads(text: str, source: object) -> Any:
+    def unique_object(pairs: list[tuple[str, object]]) -> dict[str, object]:
+        value: dict[str, object] = {}
+        for key, child in pairs:
+            if key in value:
+                raise AssertionError(f"Duplicate JSON key {key!r} in {source}")
+            value[key] = child
+        return value
+    return json.loads(text, object_pairs_hook=unique_object)
 
 
 def require_aware_iso_timestamp(value: object, field: str) -> datetime:
@@ -178,7 +190,15 @@ def assert_release_record(record: dict[str, object], manifest: dict[str, object]
                 folded = str(key).casefold()
                 identity_like = "name" in folded or "identity" in folded
                 reviewer_like = "pharmac" in folded or "reviewer" in folded or "verifier" in folded
-                if identity_like and reviewer_like and key != "pharmacy_verifier_identity":
+                explicit_pharmacy_alias = (
+                    "pharmacist" in folded
+                    or "pharmacy_verifier" in folded
+                    or "pharmacy_reviewer" in folded
+                )
+                allowed_pharmacy_key = key in {"pharmacy_verification", "pharmacy_verifier_identity"}
+                if (explicit_pharmacy_alias and not allowed_pharmacy_key) or (
+                    identity_like and reviewer_like and key != "pharmacy_verifier_identity"
+                ):
                     forbidden_identity_keys.append(child_path)
                 walk(child, child_path)
         elif isinstance(value, list):
@@ -210,7 +230,7 @@ def assert_pdf_card_integrity(path: Path) -> None:
 
 
 def assert_algorithm_structure(scene_path: Path) -> None:
-    scene = json.loads(scene_path.read_text(encoding="utf-8"))
+    scene = strict_json_loads(scene_path.read_text(encoding="utf-8"), scene_path)
     elements = [element for element in scene.get("elements", []) if not element.get("isDeleted")]
     texts = [element for element in elements if element.get("type") == "text"]
     rectangles = {element.get("id"): element for element in elements if element.get("type") == "rectangle"}
@@ -474,12 +494,12 @@ def main() -> int:
     elif not args.manifest.exists():
         raise AssertionError(f"Approval-bound release manifest is missing: {args.manifest}")
     else:
-        expected = json.loads(args.manifest.read_text(encoding="utf-8"))
+        expected = strict_json_loads(args.manifest.read_text(encoding="utf-8"), args.manifest)
         if expected != manifest:
             raise AssertionError("Current artefacts do not match the approval-bound release manifest")
     if not RELEASE_RECORD.exists():
         raise AssertionError(f"Controlled release record is missing: {RELEASE_RECORD}")
-    release_record = json.loads(RELEASE_RECORD.read_text(encoding="utf-8"))
+    release_record = strict_json_loads(RELEASE_RECORD.read_text(encoding="utf-8"), RELEASE_RECORD)
     assert_release_record(release_record, manifest, results)
     print(json.dumps(manifest, indent=2))
     return 0
