@@ -13,7 +13,7 @@ import sys
 import tempfile
 import urllib.request
 import zipfile
-from datetime import date, datetime
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 from xml.etree import ElementTree as ET
@@ -253,6 +253,8 @@ def assert_release_record(record: dict[str, object], manifest: dict[str, object]
         ratified_at = require_aware_iso_timestamp(owner.get("ratified_at"), "owner_authorisation.ratified_at")
         if ratified_at < authorised_at:
             raise AssertionError("Production-hash ratification predates owner publication authorisation")
+        if ratified_at > datetime.now(timezone.utc) + timedelta(minutes=5):
+            raise AssertionError("Production-hash ratification is future-dated")
     elif owner.get("ratified_manifest_sha256") is not None or owner.get("ratified_at") is not None:
         raise AssertionError("Pending production-hash ratification contains contradictory completion evidence")
 
@@ -284,8 +286,10 @@ def assert_release_record(record: dict[str, object], manifest: dict[str, object]
         ):
             raise AssertionError("Completed production verification is not bound to a full commit SHA")
         verified_at = require_aware_iso_timestamp(verification.get("verified_at"), "production_verification.verified_at")
-        if verified_at < ratified_at:
-            raise AssertionError("Production verification predates exact production-hash ratification")
+        if verified_at <= ratified_at:
+            raise AssertionError("Production verification must occur after exact production-hash ratification")
+        if verified_at > datetime.now(timezone.utc) + timedelta(minutes=5):
+            raise AssertionError("Production verification is future-dated")
         if verification.get("production_url") != PRODUCTION_BASE_URL:
             raise AssertionError("Production verification is not bound to the canonical CLL URL")
         if verification.get("manifest_sha256") != manifest_sha256:
