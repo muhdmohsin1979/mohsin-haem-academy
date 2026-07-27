@@ -12,6 +12,7 @@ import subprocess
 import sys
 import tempfile
 import zipfile
+from datetime import datetime
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
@@ -19,6 +20,9 @@ ROOT = Path(__file__).resolve().parents[1]
 CLL = ROOT / "guidelines" / "cll"
 RELEASE_MANIFEST = CLL / "release-manifest.json"
 RELEASE_RECORD = CLL / "release-record-v2.0.json"
+REVIEWED_PREVIEW_COMMIT = "8dfeebd33fb52349fc01aded134972a4201448da"
+REVIEWED_PREVIEW_TREE = "cd2511e18e1a44707852610d9ee0d0accdaa25d8"
+REVIEWED_PREVIEW_MANIFEST_SHA256 = "c9be5bde61a06de1f88ce2cef477afeb157a0fb572b259884fa33c902baec14c"
 ARTEFACTS = [
     CLL / "index.html",
     CLL / "guideline.docx",
@@ -88,6 +92,18 @@ def normalise(value: str) -> str:
     return re.sub(r"\s+", " ", value).strip()
 
 
+def require_aware_iso_timestamp(value: object, field: str) -> datetime:
+    if not isinstance(value, str) or not value.strip():
+        raise AssertionError(f"{field} must be a non-empty ISO 8601 timestamp string")
+    try:
+        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError as exc:
+        raise AssertionError(f"{field} is not a valid ISO 8601 timestamp") from exc
+    if parsed.tzinfo is None or parsed.utcoffset() is None:
+        raise AssertionError(f"{field} must include a timezone offset")
+    return parsed
+
+
 def assert_release_record(record: dict[str, object], manifest: dict[str, object], results: dict[str, dict[str, object]]) -> None:
     if record.get("document_code") != manifest.get("document_code"):
         raise AssertionError("Release record document code does not match the manifest")
@@ -97,6 +113,12 @@ def assert_release_record(record: dict[str, object], manifest: dict[str, object]
         raise AssertionError("Release record reviewed-preview section is missing")
     if reviewed.get("independent_review") != "PASS":
         raise AssertionError("Release record does not preserve the independent-review PASS")
+    if reviewed.get("commit") != REVIEWED_PREVIEW_COMMIT:
+        raise AssertionError("Release record reviewed-preview commit is not the independently reviewed commit")
+    if reviewed.get("tree") != REVIEWED_PREVIEW_TREE:
+        raise AssertionError("Release record reviewed-preview tree is not the independently reviewed tree")
+    if reviewed.get("manifest_sha256") != REVIEWED_PREVIEW_MANIFEST_SHA256:
+        raise AssertionError("Release record reviewed-preview manifest is not the independently reviewed manifest")
     if reviewed.get("pharmacy_verification") != "COMPLETE":
         raise AssertionError("Release record does not preserve completed pharmacy verification")
     if reviewed.get("pharmacy_verifier_identity") != "RETAINED PRIVATELY":
@@ -109,6 +131,7 @@ def assert_release_record(record: dict[str, object], manifest: dict[str, object]
         raise AssertionError("Release record clinical owner is inconsistent")
     if owner.get("preview_hashes_approved") is not True or owner.get("production_publication_authorised") is not True:
         raise AssertionError("Release record does not preserve owner approval and publication authorisation")
+    require_aware_iso_timestamp(owner.get("authorised_at"), "owner_authorisation.authorised_at")
     ratification = owner.get("production_artefact_hash_ratification")
     if ratification not in {"PENDING", "COMPLETE"}:
         raise AssertionError("Release record production-hash ratification state is invalid")
@@ -126,8 +149,26 @@ def assert_release_record(record: dict[str, object], manifest: dict[str, object]
         raise AssertionError("Release record clinical-change boundary is inconsistent")
 
     if ratification == "COMPLETE":
-        if owner.get("ratified_manifest_sha256") != manifest_sha256 or not owner.get("ratified_at"):
+        if owner.get("ratified_manifest_sha256") != manifest_sha256:
             raise AssertionError("Completed production-hash ratification is not bound to this exact manifest")
+        require_aware_iso_timestamp(owner.get("ratified_at"), "owner_authorisation.ratified_at")
+    elif owner.get("ratified_manifest_sha256") is not None or owner.get("ratified_at") is not None:
+        raise AssertionError("Pending production-hash ratification contains contradictory completion evidence")
+
+    verification = record.get("production_verification")
+    if not isinstance(verification, dict):
+        raise AssertionError("Release record production-verification section is missing")
+    verification_status = verification.get("status")
+    if verification_status == "PENDING":
+        if verification.get("verified_commit") is not None or verification.get("verified_at") is not None:
+            raise AssertionError("Pending production verification contains contradictory completion evidence")
+    elif verification_status == "VERIFIED":
+        verified_commit = verification.get("verified_commit")
+        if not isinstance(verified_commit, str) or not re.fullmatch(r"[0-9a-f]{40}", verified_commit):
+            raise AssertionError("Completed production verification is not bound to a full commit SHA")
+        require_aware_iso_timestamp(verification.get("verified_at"), "production_verification.verified_at")
+    else:
+        raise AssertionError("Release record production-verification status must be PENDING or VERIFIED")
 
     forbidden_identity_keys: list[str] = []
     def walk(value: object, path: str = "") -> None:
@@ -135,7 +176,9 @@ def assert_release_record(record: dict[str, object], manifest: dict[str, object]
             for key, child in value.items():
                 child_path = f"{path}.{key}" if path else str(key)
                 folded = str(key).casefold()
-                if ("pharmacist" in folded or "pharmacy_verifier" in folded) and key != "pharmacy_verifier_identity":
+                identity_like = "name" in folded or "identity" in folded
+                reviewer_like = "pharmac" in folded or "reviewer" in folded or "verifier" in folded
+                if identity_like and reviewer_like and key != "pharmacy_verifier_identity":
                     forbidden_identity_keys.append(child_path)
                 walk(child, child_path)
         elif isinstance(value, list):
