@@ -18,6 +18,7 @@ from xml.etree import ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 CLL = ROOT / "guidelines" / "cll"
 RELEASE_MANIFEST = CLL / "release-manifest.json"
+RELEASE_RECORD = CLL / "release-record-v2.0.json"
 ARTEFACTS = [
     CLL / "index.html",
     CLL / "guideline.docx",
@@ -54,7 +55,7 @@ def docx_text(path: Path) -> str:
     return " ".join(texts)
 
 
-def pdf_text(path: Path) -> tuple[str, int]:
+def pdf_text(path: Path, *, include_metadata: bool = True) -> tuple[str, int]:
     try:
         import fitz
     except ImportError as exc:
@@ -63,6 +64,9 @@ def pdf_text(path: Path) -> tuple[str, int]:
     pages = [page.get_text() for page in document]
     if any(len(text.strip()) < 80 for text in pages):
         raise AssertionError(f"Blank or near-blank PDF page detected: {path}")
+    if include_metadata:
+        metadata = " ".join(str(value) for value in document.metadata.values() if value)
+        return "\n".join([metadata, *pages]), len(pages)
     return "\n".join(pages), len(pages)
 
 
@@ -82,6 +86,64 @@ def readable_text(path: Path) -> tuple[str, int | None]:
 
 def normalise(value: str) -> str:
     return re.sub(r"\s+", " ", value).strip()
+
+
+def assert_release_record(record: dict[str, object], manifest: dict[str, object], results: dict[str, dict[str, object]]) -> None:
+    if record.get("document_code") != manifest.get("document_code"):
+        raise AssertionError("Release record document code does not match the manifest")
+
+    reviewed = record.get("reviewed_preview")
+    if not isinstance(reviewed, dict):
+        raise AssertionError("Release record reviewed-preview section is missing")
+    if reviewed.get("independent_review") != "PASS":
+        raise AssertionError("Release record does not preserve the independent-review PASS")
+    if reviewed.get("pharmacy_verification") != "COMPLETE":
+        raise AssertionError("Release record does not preserve completed pharmacy verification")
+    if reviewed.get("pharmacy_verifier_identity") != "RETAINED PRIVATELY":
+        raise AssertionError("Release record exposes or alters the private pharmacy-verifier identity state")
+
+    owner = record.get("owner_authorisation")
+    if not isinstance(owner, dict):
+        raise AssertionError("Release record owner-authorisation section is missing")
+    if owner.get("owner") != "Dr Muhammad Mohsin, Consultant Haematologist":
+        raise AssertionError("Release record clinical owner is inconsistent")
+    if owner.get("preview_hashes_approved") is not True or owner.get("production_publication_authorised") is not True:
+        raise AssertionError("Release record does not preserve owner approval and publication authorisation")
+    ratification = owner.get("production_artefact_hash_ratification")
+    if ratification not in {"PENDING", "COMPLETE"}:
+        raise AssertionError("Release record production-hash ratification state is invalid")
+
+    candidate = record.get("production_candidate")
+    if not isinstance(candidate, dict):
+        raise AssertionError("Release record production-candidate section is missing")
+    manifest_sha256 = hashlib.sha256(RELEASE_MANIFEST.read_bytes()).hexdigest()
+    if candidate.get("manifest_sha256") != manifest_sha256:
+        raise AssertionError("Release record manifest hash does not match the exact release manifest")
+    expected_hashes = {name: values["sha256"] for name, values in results.items()}
+    if candidate.get("artefacts") != expected_hashes:
+        raise AssertionError("Release record artefact hashes do not match the exact controlled artefacts")
+    if candidate.get("clinical_change_from_reviewed_preview") != "NONE; release-control presentation only":
+        raise AssertionError("Release record clinical-change boundary is inconsistent")
+
+    if ratification == "COMPLETE":
+        if owner.get("ratified_manifest_sha256") != manifest_sha256 or not owner.get("ratified_at"):
+            raise AssertionError("Completed production-hash ratification is not bound to this exact manifest")
+
+    forbidden_identity_keys: list[str] = []
+    def walk(value: object, path: str = "") -> None:
+        if isinstance(value, dict):
+            for key, child in value.items():
+                child_path = f"{path}.{key}" if path else str(key)
+                folded = str(key).casefold()
+                if ("pharmacist" in folded or "pharmacy_verifier" in folded) and key != "pharmacy_verifier_identity":
+                    forbidden_identity_keys.append(child_path)
+                walk(child, child_path)
+        elif isinstance(value, list):
+            for index, child in enumerate(value):
+                walk(child, f"{path}[{index}]")
+    walk(record)
+    if forbidden_identity_keys:
+        raise AssertionError(f"Release record contains an unapproved pharmacy-identity field: {forbidden_identity_keys}")
 
 
 def assert_pdf_card_integrity(path: Path) -> None:
@@ -192,8 +254,8 @@ def assert_reproducible() -> None:
             text=True,
         )
         for name in ["guideline.pdf", "quickref.pdf"]:
-            generated_text, generated_pages = pdf_text(pdf_out / name)
-            committed_text, committed_pages = pdf_text(CLL / name)
+            generated_text, generated_pages = pdf_text(pdf_out / name, include_metadata=False)
+            committed_text, committed_pages = pdf_text(CLL / name, include_metadata=False)
             if generated_pages != committed_pages or normalise(generated_text) != normalise(committed_text):
                 raise AssertionError(f"Generator did not reproduce {name} text and pagination")
 
@@ -372,6 +434,10 @@ def main() -> int:
         expected = json.loads(args.manifest.read_text(encoding="utf-8"))
         if expected != manifest:
             raise AssertionError("Current artefacts do not match the approval-bound release manifest")
+    if not RELEASE_RECORD.exists():
+        raise AssertionError(f"Controlled release record is missing: {RELEASE_RECORD}")
+    release_record = json.loads(RELEASE_RECORD.read_text(encoding="utf-8"))
+    assert_release_record(release_record, manifest, results)
     print(json.dumps(manifest, indent=2))
     return 0
 
