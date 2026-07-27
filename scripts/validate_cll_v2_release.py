@@ -315,7 +315,14 @@ def assert_release_record(record: dict[str, object], manifest: dict[str, object]
         for path in [RELEASE_MANIFEST, *ARTEFACTS]:
             url = PRODUCTION_BASE_URL + path.name
             try:
-                with urllib.request.urlopen(url, timeout=30) as response:
+                request = urllib.request.Request(
+                    url,
+                    headers={
+                        "User-Agent": "Mohsin-Haematology-Academy-Release-Verifier/1.0",
+                        "Accept": "*/*",
+                    },
+                )
+                with urllib.request.urlopen(request, timeout=30) as response:
                     deployed = response.read()
             except Exception as exc:
                 raise AssertionError(f"Unable to retrieve deployed production artefact: {url}") from exc
