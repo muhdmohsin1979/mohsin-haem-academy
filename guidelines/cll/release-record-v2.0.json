@@ -15,7 +15,9 @@
     "preview_hashes_approved": true,
     "production_publication_authorised": true,
     "authorised_at": "2026-07-27T12:13:00+01:00",
-    "production_artefact_hash_ratification": "PENDING"
+    "production_artefact_hash_ratification": "COMPLETE",
+    "ratified_manifest_sha256": "6a78f5217792a42a075a63af4922f66527160e12094a4d987caf66ac2c901a8e",
+    "ratified_at": "2026-07-27T20:38:03Z"
   },
   "production_candidate": {
     "manifest_sha256": "6a78f5217792a42a075a63af4922f66527160e12094a4d987caf66ac2c901a8e",
