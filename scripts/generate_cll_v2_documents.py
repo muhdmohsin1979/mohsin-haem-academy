@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Generate controlled CLL v2.0 preview DOCX artefacts from the canonical HTML.
+"""Generate controlled CLL v2.0 DOCX artefacts from the canonical HTML.
 
 Dependencies: python-docx, beautifulsoup4. Convert DOCX to PDF with LibreOffice.
-This script does not publish or mark an artefact as approved.
+Release status is controlled by the manifest, owner authorisation and release record.
 """
 
 from __future__ import annotations
@@ -35,7 +35,7 @@ LIGHT_RED = "FBECEF"
 LIGHT_GREY = "F3F4F6"
 MID_GREY = "6B7280"
 BORDER = "D7DCE2"
-DOC_CODE = "MHA-CLL-2026-v2.0-preview"
+DOC_CODE = "MHA-CLL-2026-v2.0"
 CUT_OFF = "26 July 2026"
 
 SUPER = str.maketrans("0123456789-+", "⁰¹²³⁴⁵⁶⁷⁸⁹⁻⁺")
@@ -159,7 +159,7 @@ def configure_document(doc: Document, subtitle: str) -> None:
     table.columns[0].width = Cm(11.5)
     table.columns[1].width = Cm(5.9)
     table.cell(0, 0).text = "MOHSIN HAEMATOLOGY ACADEMY"
-    table.cell(0, 1).text = "PROTECTED PREVIEW"
+    table.cell(0, 1).text = "PUBLISHED v2.0"
     for idx, cell in enumerate(table.rows[0].cells):
         set_cell_shading(cell, NAVY if idx == 0 else RED)
         for run in cell.paragraphs[0].runs:
@@ -171,24 +171,24 @@ def configure_document(doc: Document, subtitle: str) -> None:
 
     footer = section.footer
     p = footer.paragraphs[0]
-    p.text = f"{DOC_CODE}  |  {subtitle}  |  Evidence cut-off {CUT_OFF}  |  Not yet published"
+    p.text = f"{DOC_CODE}  |  {subtitle}  |  Evidence cut-off {CUT_OFF}  |  Published 27 July 2026"
     p.style = doc.styles["Normal"]
     p.runs[0].font.size = Pt(7.5)
     p.runs[0].font.color.rgb = RGBColor.from_string(MID_GREY)
     add_page_number(footer.add_paragraph())
 
     props = doc.core_properties
-    props.title = f"CLL v2.0 preview — {subtitle}"
-    props.subject = "Controlled clinical decision-support preview"
+    props.title = f"CLL v2.0 — {subtitle}"
+    props.subject = "Published educational clinical decision support"
     props.author = "Dr Muhammad Mohsin, Consultant Haematologist"
     props.keywords = "CLL, relapsed refractory, pirtobrutinib, NICE TA1173"
-    props.comments = "Protected preview. Independent review and pharmacy verification complete. Exact-artefact owner approval pending."
+    props.comments = "Published 27 July 2026 after independent review, pharmacy verification and clinical-owner authorisation."
     controlled_time = datetime(2026, 7, 26, 12, 0, tzinfo=timezone.utc)
     props.created = controlled_time
     props.modified = controlled_time
 
 
-def add_preview_banner(doc: Document) -> None:
+def add_release_banner(doc: Document) -> None:
     table = doc.add_table(rows=1, cols=1)
     table.alignment = WD_TABLE_ALIGNMENT.CENTER
     cell = table.cell(0, 0)
@@ -196,7 +196,7 @@ def add_preview_banner(doc: Document) -> None:
     set_cell_border(cell, RED, 8)
     p = cell.paragraphs[0]
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    r = p.add_run("PROTECTED PREVIEW — PHARMACY VERIFICATION COMPLETE — EXACT-ARTEFACT OWNER APPROVAL PENDING")
+    r = p.add_run("PUBLISHED EDUCATIONAL GUIDELINE — v2.0 — 27 JULY 2026")
     r.bold = True
     r.font.name = "Arial"
     r.font.size = Pt(8.5)
@@ -218,7 +218,7 @@ def add_title(doc: Document, title: str, subtitle: str) -> None:
     r = p3.add_run(f"{DOC_CODE}\nEvidence and access cut-off: {CUT_OFF}\nClinical owner: Dr Muhammad Mohsin, Consultant Haematologist")
     r.font.size = Pt(9)
     r.font.color.rgb = RGBColor.from_string(MID_GREY)
-    add_preview_banner(doc)
+    add_release_banner(doc)
     p = doc.add_paragraph(style="MHA Callout")
     p.add_run("Clinical decision-support only. ").bold = True
     p.add_run("Not for direct patient use. Use current SmPCs, NICE guidance, NHS commissioning rules, local policy and patient-specific clinical judgement. England-specific NICE/NHS access must not be described as a single UK-wide entitlement.")
@@ -373,10 +373,10 @@ def render_container(doc: Document, container: Tag) -> None:
 def build_guideline(soup: BeautifulSoup) -> None:
     doc = Document()
     configure_document(doc, "Full guideline")
-    add_title(doc, "Chronic Lymphocytic Leukaemia", "Unified clinical guideline — v2.0 relapsed/refractory update preview")
+    add_title(doc, "Chronic Lymphocytic Leukaemia", "Unified clinical guideline — v2.0 relapsed/refractory update")
 
     doc.add_heading("Release status", level=1)
-    add_text_paragraph(doc, "The clinical owner approved the v2.0 update scope on 26 July 2026. Independent review and pharmacy verification are complete. This protected preview remains subject to clinical-owner approval of the exact manifest-bound artefact hashes and separate publication authorisation.")
+    add_text_paragraph(doc, "Published 27 July 2026 after independent review, pharmacy verification and clinical-owner approval of the manifest-bound release candidate. This is educational clinical decision support, not a prescribing protocol.")
 
     doc.add_heading("Quick decision summary", level=1)
     quick = soup.select_one(".gl-main > div[style*='border-left:4px']")
@@ -412,7 +412,7 @@ def build_guideline(soup: BeautifulSoup) -> None:
     for values in [
         ["v1.0", "Apr 2025", "Dr M Mohsin", "Initial controlled publication."],
         ["v1.9", "Apr 2026", "Dr M Mohsin", "Published baseline before the substantive R/R revision."],
-        ["v2.0 preview", "26 Jul 2026", "Dr M Mohsin", "TA1173 and evidence-led R/R sequencing update; exact-artefact approval pending."],
+        ["v2.0", "27 Jul 2026", "Dr M Mohsin", "Published TA1173 and evidence-led R/R sequencing update."],
     ]:
         row = history.add_row()
         keep_row_together(row)
@@ -428,8 +428,8 @@ def build_guideline(soup: BeautifulSoup) -> None:
         ("Scope approval", "Approved by clinical owner, 26 July 2026"),
         ("Pharmacy verification", "COMPLETE — verifier identity retained privately"),
         ("Independent clinical/content review", "PASS"),
-        ("Exact-artefact owner approval", "PENDING"),
-        ("Publication", "NOT AUTHORISED"),
+        ("Exact-artefact owner approval", "COMPLETE"),
+        ("Publication", "AUTHORISED 27 JULY 2026"),
     ]
     for key, value in records:
         row = table.add_row()
@@ -473,7 +473,7 @@ def add_quickref_table(doc: Document, heading: str, headers: list[str], rows: li
 def build_quickref() -> None:
     doc = Document()
     configure_document(doc, "Quick reference")
-    add_title(doc, "CLL quick reference", "v2.0 relapsed/refractory update preview")
+    add_title(doc, "CLL quick reference", "v2.0 relapsed/refractory update")
 
     doc.add_heading("Before any treatment line", level=1)
     for item in [
@@ -531,7 +531,7 @@ def build_quickref() -> None:
         doc.add_paragraph(item, style="List Bullet")
 
     doc.add_heading("Release control", level=2)
-    add_text_paragraph(doc, "Protected preview. Scope approved 26 July 2026. Independent review and pharmacy verification are complete. Exact-artefact owner approval and separate publication authorisation remain pending. Do not publish or use as the controlled current release.")
+    add_text_paragraph(doc, "Published 27 July 2026. Independent review, pharmacy verification and clinical-owner authorisation are complete. Educational clinical decision support only; verify current NICE, NHS, SmPC and local policy before prescribing.")
     doc.save(QUICKREF_DOCX)
 
 

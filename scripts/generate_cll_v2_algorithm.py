@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate the editable and rendered CLL v2.0 preview treatment algorithm."""
+"""Generate the editable and rendered CLL v2.0 treatment algorithm."""
 
 from __future__ import annotations
 
@@ -61,15 +61,15 @@ def arrow(x1: int, y1: int, x2: int, y2: int) -> str:
 def build_svg() -> str:
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="title desc">',
-        '<title id="title">CLL v2.0 preview treatment decision algorithm</title>',
+        '<title id="title">CLL v2.0 treatment decision algorithm</title>',
         '<desc id="desc">First-line orientation and relapsed refractory sequencing, with NICE TA1173 pirtobrutinib and separate intolerance, progression, double-exposed and double-refractory pathways.</desc>',
         '<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1B2A4A"/></marker></defs>',
         f'<rect width="{W}" height="{H}" fill="#F8FAFC"/>',
         f'<rect x="0" y="0" width="{W}" height="96" fill="{NAVY}"/>',
         f'<rect x="720" y="0" width="280" height="96" fill="{RED}"/>',
         svg_text(40, 43, ["CHRONIC LYMPHOCYTIC LEUKAEMIA"], size=24, bold_first=True, colour=WHITE),
-        svg_text(40, 75, ["Treatment decision algorithm · MHA-CLL-2026-v2.0-preview"], size=15, colour=WHITE),
-        svg_text(860, 55, ["PROTECTED", "PREVIEW"], size=18, bold_first=True, colour=WHITE, line_height=23, anchor="middle"),
+        svg_text(40, 75, ["Treatment decision algorithm · MHA-CLL-2026-v2.0"], size=15, colour=WHITE),
+        svg_text(860, 55, ["PUBLISHED", "v2.0"], size=18, bold_first=True, colour=WHITE, line_height=23, anchor="middle"),
         svg_box(40, 125, 920, 108, "1 · CONFIRM TREATMENT IS REQUIRED", [
             "Treat only when iwCLL active-disease criteria are met.",
             "If criteria are not met: active monitoring; do not treat by stage or lymphocyte count alone.",
@@ -169,7 +169,7 @@ def build_svg() -> str:
             "  identified through 26 July 2026; do not extrapolate Richter/other-lymphoma evidence.",
         ], AMBER, stroke=RED, dashed=True),
         svg_text(40, 1862, ["Clinical decision-support only · verify current NICE, NHS, MHRA, SmPC and local policy before prescribing."], size=14, colour=MUTED),
-        svg_text(40, 1890, ["Evidence cut-off 26 July 2026 · review and pharmacy verification complete · exact-artefact approval pending · not yet published."], size=14, colour=RED),
+        svg_text(40, 1890, ["Published 27 July 2026 · evidence cut-off 26 July 2026 · review, pharmacy verification and owner authorisation complete."], size=14, colour=RED),
         '</svg>',
     ]
     return "\n".join(parts) + "\n"
@@ -262,10 +262,10 @@ def build_excalidraw() -> dict:
     e: list[dict] = []
     e.append(excalidraw_rect("page", 0, 0, W, H, "#F8FAFC", "#F8FAFC"))
     e.append(excalidraw_rect("header", 0, 0, W, 96, NAVY, NAVY))
-    e.append(excalidraw_rect("preview", 720, 0, 280, 96, RED, RED))
+    e.append(excalidraw_rect("status", 720, 0, 280, 96, RED, RED))
     e.append(excalidraw_text("header-title", 40, 24, 650, "CHRONIC LYMPHOCYTIC LEUKAEMIA", 24, WHITE, True))
-    e.append(excalidraw_text("header-code", 40, 58, 650, "Treatment decision algorithm · MHA-CLL-2026-v2.0-preview", 15, WHITE))
-    e.append(excalidraw_text("preview-text", 770, 26, 180, "PROTECTED\nPREVIEW", 18, WHITE, True, "center"))
+    e.append(excalidraw_text("header-code", 40, 58, 650, "Treatment decision algorithm · MHA-CLL-2026-v2.0", 15, WHITE))
+    e.append(excalidraw_text("status-text", 770, 26, 180, "PUBLISHED\nv2.0", 18, WHITE, True, "center"))
     e.append(excalidraw_rect("rr-states-panel", 25, 645, 950, 570, WHITE, NAVY))
     e.append(excalidraw_text("rr-states-title", 45, 658, 910, "SIX INDEPENDENT R/R STATES · CLASSIFY BY EXPOSURE AND REASON FOR STOPPING", 16, NAVY, True))
 
@@ -290,7 +290,7 @@ def build_excalidraw() -> dict:
     ]):
         e.append(excalidraw_arrow(str(idx), *coords))
     e.append(excalidraw_text("footer1", 40, 1852, 920, "Clinical decision-support only · verify current NICE, NHS, MHRA, SmPC and local policy before prescribing.", 14, MUTED))
-    e.append(excalidraw_text("footer2", 40, 1880, 920, "Evidence cut-off 26 July 2026 · review and pharmacy verification complete · exact-artefact approval pending · not yet published.", 14, RED))
+    e.append(excalidraw_text("footer2", 40, 1880, 920, "Published 27 July 2026 · evidence cut-off 26 July 2026 · review, pharmacy verification and owner authorisation complete.", 14, RED))
     return {
         "type": "excalidraw",
         "version": 2,

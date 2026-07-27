@@ -1,36 +1,36 @@
 {
-  "document_code": "MHA-CLL-2026-v2.0-preview",
-  "status": "NOT AUTHORISED FOR PUBLICATION",
+  "document_code": "MHA-CLL-2026-v2.0",
+  "status": "AUTHORISED FOR PUBLICATION 27 JULY 2026",
   "artefacts": {
     "index.html": {
-      "bytes": 122774,
-      "sha256": "52bd8dbf78acad3cb59b8f4a32b72e76ff971a5bd84ccb621d1971d90cb3ee35"
+      "bytes": 122392,
+      "sha256": "3ed7751bcfad5cfc0a5694c93dc84e50b80d88e4f5b88b203016faf9d73ae2c8"
     },
     "guideline.docx": {
-      "bytes": 61824,
-      "sha256": "0de8ab63949f48171d8fa0ee90ae3c645ffbec8215bf9258a57350f7cad5311d"
+      "bytes": 61728,
+      "sha256": "e0e72c3b112e0c939aff5377947fb5b9de8092113da3e032aaa64e3e96a16883"
     },
     "guideline.pdf": {
-      "bytes": 385942,
-      "sha256": "ef0e728a575ad98cd71fe48f89d83693d597d0844539d4a16733c61c0a741518",
+      "bytes": 385751,
+      "sha256": "aa709530a3dddc5ef045065f756c80d116ed36630620e8a3b2a6cf1149c16b9f",
       "pages": 13
     },
     "quickref.docx": {
-      "bytes": 42341,
-      "sha256": "8784da4f62d70e987056e94f0109668c59be9838274df4cd8fffd6e9e9bfdd08"
+      "bytes": 42254,
+      "sha256": "62d271ce4059ff70bcdfc7e158dd92e8695fc72636bc16aa153b168e5f5f8f69"
     },
     "quickref.pdf": {
-      "bytes": 114768,
-      "sha256": "ff69f65d9a7ac30d44ae13a98f457e44c4e29584603c99ac653b995f1f0aa393",
+      "bytes": 114817,
+      "sha256": "d2a7cc018663a2a2bd27e1d5c5d221b506b368ac1839266585d1a4c62acd07b8",
       "pages": 3
     },
     "algorithm.svg": {
-      "bytes": 16347,
-      "sha256": "b6f1c83022d8cdb603e3ab6280ec2d369f59c14b85bd761e1a95cdc4953134c2"
+      "bytes": 16319,
+      "sha256": "493443ec66a307d4ea257c4e72bf77f60cc9bcf823213eedbd0b05943e49472b"
     },
     "algorithm.excalidraw": {
-      "bytes": 65364,
-      "sha256": "ffabe362a3ed8a6c4488bf17244efda5fb26bb91e630b4c3bd19b8cf42654e4f"
+      "bytes": 65314,
+      "sha256": "9ab5b274d7ee74a8e44cd578ec498d41d0ea8744f7605efd44e1141b418a50b5"
     }
   }
 }

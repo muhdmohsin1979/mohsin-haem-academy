@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1930" viewBox="0 0 1000 1930" role="img" aria-labelledby="title desc">
-<title id="title">CLL v2.0 preview treatment decision algorithm</title>
+<title id="title">CLL v2.0 treatment decision algorithm</title>
 <desc id="desc">First-line orientation and relapsed refractory sequencing, with NICE TA1173 pirtobrutinib and separate intolerance, progression, double-exposed and double-refractory pathways.</desc>
 <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1B2A4A"/></marker></defs>
 <rect width="1000" height="1930" fill="#F8FAFC"/>
 <rect x="0" y="0" width="1000" height="96" fill="#1B2A4A"/>
 <rect x="720" y="0" width="280" height="96" fill="#C41E3A"/>
 <text x="40" y="43" text-anchor="start" font-family="Georgia, Times New Roman, serif" font-size="24" fill="#FFFFFF"><tspan x="40" dy="0" font-weight="700">CHRONIC LYMPHOCYTIC LEUKAEMIA</tspan></text>
-<text x="40" y="75" text-anchor="start" font-family="Georgia, Times New Roman, serif" font-size="15" fill="#FFFFFF"><tspan x="40" dy="0" font-weight="400">Treatment decision algorithm · MHA-CLL-2026-v2.0-preview</tspan></text>
-<text x="860" y="55" text-anchor="middle" font-family="Georgia, Times New Roman, serif" font-size="18" fill="#FFFFFF"><tspan x="860" dy="0" font-weight="700">PROTECTED</tspan><tspan x="860" dy="23" font-weight="400">PREVIEW</tspan></text>
+<text x="40" y="75" text-anchor="start" font-family="Georgia, Times New Roman, serif" font-size="15" fill="#FFFFFF"><tspan x="40" dy="0" font-weight="400">Treatment decision algorithm · MHA-CLL-2026-v2.0</tspan></text>
+<text x="860" y="55" text-anchor="middle" font-family="Georgia, Times New Roman, serif" font-size="18" fill="#FFFFFF"><tspan x="860" dy="0" font-weight="700">PUBLISHED</tspan><tspan x="860" dy="23" font-weight="400">v2.0</tspan></text>
 <rect x="40" y="125" width="920" height="108" rx="14" fill="#EAF0F7" stroke="#1B2A4A" stroke-width="2"/>
 <rect x="40" y="125" width="920" height="42" rx="14" fill="#1B2A4A"/>
 <rect x="40" y="153" width="920" height="14" fill="#1B2A4A"/>
@@ -75,5 +75,5 @@
 <text x="56" y="1665" text-anchor="start" font-family="Georgia, Times New Roman, serif" font-size="17" fill="#FFFFFF"><tspan x="56" dy="0" font-weight="700">EMERGING / SPECIALIST · NOT ROUTINE NHS CLL TREATMENT</tspan></text>
 <text x="56" y="1699" text-anchor="start" font-family="Georgia, Times New Roman, serif" font-size="15" fill="#1F2937"><tspan x="56" dy="0" font-weight="400">• Pirtobrutinib–venetoclax–rituximab: phase III evidence; NICE ID6566 awaiting development.</tspan><tspan x="56" dy="22" font-weight="400">• Lisocabtagene maraleucel: efficacy evidence, but no demonstrated CLL marketing authorisation,</tspan><tspan x="56" dy="22" font-weight="400">  NICE recommendation or routine NHS England commissioning; devolved-nation access not established.</tspan><tspan x="56" dy="22" font-weight="400">• CD20×CD3 bispecifics: no qualifying prospective therapeutic trial in untransformed CLL</tspan><tspan x="56" dy="22" font-weight="400">  identified through 26 July 2026; do not extrapolate Richter/other-lymphoma evidence.</tspan></text>
 <text x="40" y="1862" text-anchor="start" font-family="Georgia, Times New Roman, serif" font-size="14" fill="#5B6472"><tspan x="40" dy="0" font-weight="400">Clinical decision-support only · verify current NICE, NHS, MHRA, SmPC and local policy before prescribing.</tspan></text>
-<text x="40" y="1890" text-anchor="start" font-family="Georgia, Times New Roman, serif" font-size="14" fill="#C41E3A"><tspan x="40" dy="0" font-weight="400">Evidence cut-off 26 July 2026 · review and pharmacy verification complete · exact-artefact approval pending · not yet published.</tspan></text>
+<text x="40" y="1890" text-anchor="start" font-family="Georgia, Times New Roman, serif" font-size="14" fill="#C41E3A"><tspan x="40" dy="0" font-weight="400">Published 27 July 2026 · evidence cut-off 26 July 2026 · review, pharmacy verification and owner authorisation complete.</tspan></text>
 </svg>

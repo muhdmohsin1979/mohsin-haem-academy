@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the CLL v2.0 preview artefact family without approving publication."""
+"""Validate the published CLL v2.0 artefact family."""
 
 from __future__ import annotations
 
@@ -211,18 +211,30 @@ def main() -> int:
     clinical_surfaces = ["index.html", "guideline.docx", "guideline.pdf", "quickref.docx", "quickref.pdf", "algorithm.svg", "algorithm.excalidraw"]
     for name in clinical_surfaces:
         folded = re.sub(r"\s+", " ", texts[name].casefold())
-        for phrase in ["double exposed", "double refractory", "protected preview"]:
+        for phrase in ["double exposed", "double refractory"]:
             if phrase not in folded:
                 raise AssertionError(f"{name}: missing controlled phrase {phrase!r}")
 
     for name in ["index.html", "guideline.pdf", "quickref.pdf", "algorithm.svg", "algorithm.excalidraw"]:
-        if "not yet published" not in re.sub(r"\s+", " ", texts[name].casefold()):
-            raise AssertionError(f"{name}: missing publication-status phrase 'not yet published'")
+        if "published" not in re.sub(r"\s+", " ", texts[name].casefold()):
+            raise AssertionError(f"{name}: missing publication-status phrase 'published'")
 
     stale_pharmacy_status = "pharmacy verification and exact-artefact approval pending"
     for name, text in texts.items():
         if stale_pharmacy_status in normalise(text).casefold():
             raise AssertionError(f"{name}: stale pharmacy-pending release banner detected")
+
+    prohibited_release_statuses = [
+        "protected preview",
+        "not yet published",
+        "exact-artefact approval pending",
+        "not authorised for publication",
+    ]
+    for name, text in texts.items():
+        folded = normalise(text).casefold()
+        for phrase in prohibited_release_statuses:
+            if phrase in folded:
+                raise AssertionError(f"{name}: prohibited pre-publication status remains: {phrase!r}")
 
     combined = "\n".join(texts.values())
     html = texts["index.html"]
@@ -241,8 +253,8 @@ def main() -> int:
     exact_ta1173 = "only if retreatment with a covalent BTK inhibitor, including retreatment after a fixed-duration regimen, is not clinically appropriate"
     if exact_ta1173.casefold() not in html.casefold():
         raise AssertionError("HTML: exact TA1173 restriction is absent")
-    if 'name="robots" content="noindex, nofollow, noarchive"' not in html.casefold():
-        raise AssertionError("HTML preview must carry an explicit noindex/nofollow/noarchive directive")
+    if 'name="robots" content="index, follow"' not in html.casefold():
+        raise AssertionError("Published HTML must carry an explicit index/follow directive")
 
     full_surfaces = ["index.html", "guideline.docx", "guideline.pdf"]
     for name in full_surfaces:
@@ -297,8 +309,8 @@ def main() -> int:
         if re.search(pattern, combined, flags=re.IGNORECASE):
             raise AssertionError(f"Stale wording detected: {pattern}")
 
-    if "PROTECTED PREVIEW" not in texts["algorithm.svg"]:
-        raise AssertionError("Algorithm SVG is not visibly marked as a protected preview")
+    if "PUBLISHED" not in texts["algorithm.svg"]:
+        raise AssertionError("Algorithm SVG is not visibly marked as published")
     if "pharmacist" in combined.casefold() or "pharmacist name" in combined.casefold():
         raise AssertionError("Potential pharmacist identity surface detected")
 
@@ -307,8 +319,8 @@ def main() -> int:
     assert_reproducible()
 
     manifest = {
-        "document_code": "MHA-CLL-2026-v2.0-preview",
-        "status": "NOT AUTHORISED FOR PUBLICATION",
+        "document_code": "MHA-CLL-2026-v2.0",
+        "status": "AUTHORISED FOR PUBLICATION 27 JULY 2026",
         "artefacts": results,
     }
     if args.write_manifest:
