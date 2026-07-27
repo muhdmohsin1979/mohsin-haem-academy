@@ -34,7 +34,7 @@
       "font-family:'Source Sans 3','Segoe UI',sans-serif;font-size:0.9rem;";
     banner.innerHTML =
       '<div style="display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center;justify-content:space-between;">' +
-      '<p style="margin:0;flex:1 1 320px;">' +
+      '<p style="margin:0;flex:1 1 280px;min-width:0;overflow-wrap:anywhere;">' +
       'We use a small number of cookies to keep the site working. The Academy newsletter is sent via Mailchimp, ' +
       'which may set cookies when you submit the signup form. See our ' +
       '<a href="/legal/privacy/" style="color:#7a1f2b;">Privacy Notice</a>.' +

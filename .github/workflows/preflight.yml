@@ -142,3 +142,49 @@ jobs:
           python scripts/preflight.py \
             --files-from changed.txt \
             --diff-from pr.diff
+
+  cll-v2-release-gate:
+    name: CLL v2 controlled release gate
+    # The controlled PDFs were generated with the current macOS LibreOffice
+    # build and system fonts. Use the same rendering family in CI so the
+    # pagination gate tests the release process rather than Linux font fallbacks.
+    runs-on: macos-15
+    steps:
+      - name: Checkout exact candidate
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install controlled-document dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install beautifulsoup4 pymupdf python-docx
+          brew install --cask libreoffice
+
+      - name: Install isolated official Excalidraw renderer
+        run: |
+          mkdir -p /tmp/cll-excal-renderer
+          npm install --prefix /tmp/cll-excal-renderer --ignore-scripts --no-save \
+            @excalidraw/excalidraw@0.18.1 esbuild@0.25.0 playwright@1.54.1
+          /tmp/cll-excal-renderer/node_modules/.bin/playwright install chromium
+
+      - name: Validate approval-bound CLL artefacts and reproducibility
+        run: |
+          python scripts/validate_cll_v2_release.py
+
+      - name: Render and inspect exact editable algorithm through official Excalidraw
+        env:
+          NODE_PATH: /tmp/cll-excal-renderer/node_modules
+          CLL_EXCAL_NODE_ROOT: /tmp/cll-excal-renderer
+        run: |
+          node scripts/validate_cll_excalidraw.cjs
