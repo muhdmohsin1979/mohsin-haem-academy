@@ -11,6 +11,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import urllib.request
 import zipfile
 from datetime import date, datetime
 from pathlib import Path
@@ -24,6 +25,10 @@ RELEASE_RECORD = CLL / "release-record-v2.0.json"
 REVIEWED_PREVIEW_COMMIT = "8dfeebd33fb52349fc01aded134972a4201448da"
 REVIEWED_PREVIEW_TREE = "cd2511e18e1a44707852610d9ee0d0accdaa25d8"
 REVIEWED_PREVIEW_MANIFEST_SHA256 = "c9be5bde61a06de1f88ce2cef477afeb157a0fb572b259884fa33c902baec14c"
+EXPECTED_EVIDENCE_CUT_OFF = date(2026, 7, 26)
+EXPECTED_PUBLICATION_DATE = date(2026, 7, 27)
+EXPECTED_AUTHORISATION = datetime.fromisoformat("2026-07-27T12:13:00+01:00")
+PRODUCTION_BASE_URL = "https://mohsinhaemacademy.com/guidelines/cll/"
 ARTEFACTS = [
     CLL / "index.html",
     CLL / "guideline.docx",
@@ -159,8 +164,14 @@ def assert_release_record(record: dict[str, object], manifest: dict[str, object]
     )
     if record.get("document_code") != manifest.get("document_code"):
         raise AssertionError("Release record document code does not match the manifest")
-    require_iso_date(record.get("evidence_cut_off"), "evidence_cut_off")
-    require_iso_date(record.get("publication_date"), "publication_date")
+    evidence_cut_off = require_iso_date(record.get("evidence_cut_off"), "evidence_cut_off")
+    publication_date = require_iso_date(record.get("publication_date"), "publication_date")
+    if evidence_cut_off != EXPECTED_EVIDENCE_CUT_OFF:
+        raise AssertionError("Release record evidence cut-off does not match the reviewed candidate")
+    if publication_date != EXPECTED_PUBLICATION_DATE:
+        raise AssertionError("Release record publication date does not match the authorised release date")
+    if evidence_cut_off >= publication_date:
+        raise AssertionError("Release record publication date must follow the evidence cut-off")
 
     reviewed = record.get("reviewed_preview")
     if not isinstance(reviewed, dict):
@@ -209,7 +220,11 @@ def assert_release_record(record: dict[str, object], manifest: dict[str, object]
         raise AssertionError("Release record clinical owner is inconsistent")
     if owner.get("preview_hashes_approved") is not True or owner.get("production_publication_authorised") is not True:
         raise AssertionError("Release record does not preserve owner approval and publication authorisation")
-    require_aware_iso_timestamp(owner.get("authorised_at"), "owner_authorisation.authorised_at")
+    authorised_at = require_aware_iso_timestamp(owner.get("authorised_at"), "owner_authorisation.authorised_at")
+    if authorised_at != EXPECTED_AUTHORISATION:
+        raise AssertionError("Release record owner-authorisation timestamp does not match the recorded approval")
+    if authorised_at.date() != publication_date:
+        raise AssertionError("Owner authorisation must fall on the controlled publication date")
     ratification = owner.get("production_artefact_hash_ratification")
     if ratification not in {"PENDING", "COMPLETE"}:
         raise AssertionError("Release record production-hash ratification state is invalid")
@@ -231,30 +246,77 @@ def assert_release_record(record: dict[str, object], manifest: dict[str, object]
     if candidate.get("clinical_change_from_reviewed_preview") != "NONE; release-control presentation only":
         raise AssertionError("Release record clinical-change boundary is inconsistent")
 
+    ratified_at: datetime | None = None
     if ratification == "COMPLETE":
         if owner.get("ratified_manifest_sha256") != manifest_sha256:
             raise AssertionError("Completed production-hash ratification is not bound to this exact manifest")
-        require_aware_iso_timestamp(owner.get("ratified_at"), "owner_authorisation.ratified_at")
+        ratified_at = require_aware_iso_timestamp(owner.get("ratified_at"), "owner_authorisation.ratified_at")
+        if ratified_at < authorised_at:
+            raise AssertionError("Production-hash ratification predates owner publication authorisation")
     elif owner.get("ratified_manifest_sha256") is not None or owner.get("ratified_at") is not None:
         raise AssertionError("Pending production-hash ratification contains contradictory completion evidence")
 
     verification = record.get("production_verification")
     if not isinstance(verification, dict):
         raise AssertionError("Release record production-verification section is missing")
-    assert_exact_keys(
-        verification,
-        {"status", "verified_commit", "verified_at"},
-        "production_verification",
-    )
     verification_status = verification.get("status")
     if verification_status == "PENDING":
+        assert_exact_keys(
+            verification,
+            {"status", "verified_commit", "verified_at"},
+            "production_verification",
+        )
         if verification.get("verified_commit") is not None or verification.get("verified_at") is not None:
             raise AssertionError("Pending production verification contains contradictory completion evidence")
     elif verification_status == "VERIFIED":
+        assert_exact_keys(
+            verification,
+            {"status", "verified_commit", "verified_at", "production_url", "manifest_sha256", "artefacts"},
+            "production_verification",
+        )
+        if ratification != "COMPLETE" or ratified_at is None:
+            raise AssertionError("Production verification cannot complete before exact production-hash ratification")
         verified_commit = verification.get("verified_commit")
-        if not isinstance(verified_commit, str) or not re.fullmatch(r"[0-9a-f]{40}", verified_commit):
+        if (
+            not isinstance(verified_commit, str)
+            or not re.fullmatch(r"[0-9a-f]{40}", verified_commit)
+            or verified_commit == "0" * 40
+        ):
             raise AssertionError("Completed production verification is not bound to a full commit SHA")
-        require_aware_iso_timestamp(verification.get("verified_at"), "production_verification.verified_at")
+        verified_at = require_aware_iso_timestamp(verification.get("verified_at"), "production_verification.verified_at")
+        if verified_at < ratified_at:
+            raise AssertionError("Production verification predates exact production-hash ratification")
+        if verification.get("production_url") != PRODUCTION_BASE_URL:
+            raise AssertionError("Production verification is not bound to the canonical CLL URL")
+        if verification.get("manifest_sha256") != manifest_sha256:
+            raise AssertionError("Production verification is not bound to the exact ratified manifest")
+        if verification.get("artefacts") != expected_hashes:
+            raise AssertionError("Production verification artefact evidence does not match the controlled hashes")
+
+        try:
+            subprocess.run(
+                ["git", "cat-file", "-e", f"{verified_commit}^{{commit}}"],
+                cwd=ROOT,
+                check=True,
+                capture_output=True,
+            )
+        except subprocess.CalledProcessError as exc:
+            raise AssertionError("Production verification commit is not present in the controlled repository history") from exc
+        for path in [RELEASE_MANIFEST, *ARTEFACTS]:
+            relative = path.relative_to(ROOT).as_posix()
+            committed = subprocess.check_output(["git", "show", f"{verified_commit}:{relative}"], cwd=ROOT)
+            if committed != path.read_bytes():
+                raise AssertionError(f"Production verification commit does not contain the controlled bytes: {relative}")
+
+        for path in [RELEASE_MANIFEST, *ARTEFACTS]:
+            url = PRODUCTION_BASE_URL + path.name
+            try:
+                with urllib.request.urlopen(url, timeout=30) as response:
+                    deployed = response.read()
+            except Exception as exc:
+                raise AssertionError(f"Unable to retrieve deployed production artefact: {url}") from exc
+            if deployed != path.read_bytes():
+                raise AssertionError(f"Deployed production bytes do not match the controlled artefact: {path.name}")
     else:
         raise AssertionError("Release record production-verification status must be PENDING or VERIFIED")
 
