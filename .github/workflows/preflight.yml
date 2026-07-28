@@ -143,6 +143,21 @@ jobs:
             --files-from changed.txt \
             --diff-from pr.diff
 
+  mcl-containment-gate:
+    name: MCL withdrawal containment gate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate fail-closed MCL withdrawal state
+        run: python scripts/validate_mcl_containment.py
+
   cll-v2-release-gate:
     name: CLL v2 controlled release gate
     # The controlled PDFs were generated with the current macOS LibreOffice
