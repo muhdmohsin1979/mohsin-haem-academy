@@ -20,6 +20,7 @@ TOOLS = ROOT / "tools.html"
 SITEMAP = ROOT / "sitemap.xml"
 WORKFLOW = ROOT / ".github" / "workflows" / "preflight.yml"
 WORKER = ROOT / "_worker.js"
+ROUTES = ROOT / "_routes.json"
 SITE_SHELL_CSS = ROOT / "assets" / "site-shell.css"
 PRINT_CSS = ROOT / "print.css"
 COOKIE_BANNER_JS = ROOT / "legal" / "cookie-banner.js"
@@ -190,7 +191,7 @@ def require(condition: bool, message: str) -> None:
         raise AssertionError(message)
 
 
-def validate(mcl: str, guidelines: str, tools: str, sitemap: str, workflow: str, worker: str, site_css: str, print_css: str, cookie_js: str) -> None:
+def validate(mcl: str, guidelines: str, tools: str, sitemap: str, workflow: str, worker: str, routes: str, site_css: str, print_css: str, cookie_js: str) -> None:
     mcl_doc = parse_html(mcl)
     guidelines_doc = parse_html(guidelines)
     tools_doc = parse_html(tools)
@@ -339,6 +340,14 @@ def validate(mcl: str, guidelines: str, tools: str, sitemap: str, workflow: str,
     blocked_files = set(re.findall(r'["\']([^"\']+)["\']', blocked_files_match.group(1)))
     require(set(WITHDRAWN_PUBLIC_PATHS).issubset(blocked_files), "Worker does not fail closed for every withdrawn MCL file")
 
+    routes_config = json.loads(routes)
+    require(isinstance(routes_config, dict), "Cloudflare routes configuration must be an object")
+    require(set(routes_config) == {"version", "include", "exclude"}, "Cloudflare routes configuration has an unexpected schema")
+    require(routes_config["version"] == 1, "Cloudflare routes configuration version must be 1")
+    require(isinstance(routes_config["include"], list) and all(isinstance(path, str) for path in routes_config["include"]), "Cloudflare include routes must be strings")
+    require(routes_config["exclude"] == [], "Cloudflare routes must not bypass the containment worker")
+    require(set(WITHDRAWN_PUBLIC_PATHS).issubset(set(routes_config["include"])), "Cloudflare routes bypass the worker for withdrawn MCL files")
+
 
 def self_test(payload: dict[str, str]) -> None:
     mutations = [
@@ -363,6 +372,7 @@ def self_test(payload: dict[str, str]) -> None:
         ("commented CI decoy", "workflow", "run: python scripts/validate_mcl_containment.py", "run: echo ok # python scripts/validate_mcl_containment.py"),
         ("missing worker block", "worker", '  "/guidelines/mcl/guideline.pdf",\n', ""),
         ("commented worker decoy", "worker", '  "/guidelines/mcl/guideline.docx",', '  /* "/guidelines/mcl/guideline.docx", */'),
+        ("missing Cloudflare worker route", "routes", '    "/guidelines/mcl/guideline.pdf",\n', ""),
         ("linked site stylesheet badge hide", "site_css", ":focus-visible {", ".badge-live { opacity: 0 !important; }\n\n:focus-visible {"),
         ("linked print stylesheet badge hide", "print_css", "@media print {", "@media print {\n  .badge-live { display: none !important; }"),
         ("duplicate Google font stylesheet", "guidelines", '  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&display=swap">', '  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&display=swap">\n  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&display=swap">'),
@@ -395,6 +405,7 @@ def main() -> None:
         "sitemap": SITEMAP.read_text(encoding="utf-8"),
         "workflow": WORKFLOW.read_text(encoding="utf-8"),
         "worker": WORKER.read_text(encoding="utf-8"),
+        "routes": ROUTES.read_text(encoding="utf-8"),
         "site_css": SITE_SHELL_CSS.read_text(encoding="utf-8"),
         "print_css": PRINT_CSS.read_text(encoding="utf-8"),
         "cookie_js": COOKIE_BANNER_JS.read_text(encoding="utf-8"),
