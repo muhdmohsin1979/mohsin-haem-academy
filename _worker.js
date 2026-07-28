@@ -11,6 +11,21 @@ const BLOCKED_FILES = new Set([
   "/README.md",
   "/WEBSITE_COMMANDS.md",
   "/_config.yml",
+  "/guidelines/mcl/guideline.docx",
+  "/guidelines/mcl/guideline.pdf",
+  "/assets/figures/mcl-access-status-chart.excalidraw",
+  "/assets/figures/mcl-access-status-chart.png",
+  "/assets/figures/mcl-access-status-chart.svg",
+  "/assets/figures/mcl-first-line-algorithm.excalidraw",
+  "/assets/figures/mcl-first-line-algorithm.png",
+  "/assets/figures/mcl-first-line-algorithm.svg",
+  "/assets/figures/mcl-pathway-at-a-glance.excalidraw",
+  "/assets/figures/mcl-pathway-at-a-glance.png",
+  "/assets/figures/mcl-pathway-at-a-glance.svg",
+  "/assets/figures/mcl-visuals.mmd",
+  "/assets/pdfs/mcl-access-status-chart.pdf",
+  "/assets/pdfs/mcl-first-line-algorithm.pdf",
+  "/assets/pdfs/mcl-pathway-at-a-glance.pdf",
 ]);
 
 function isBlocked(pathname) {
