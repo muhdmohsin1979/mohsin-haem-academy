@@ -73,6 +73,8 @@ def main() -> int:
             "presentation_change_tree": "442fb44f3dd9b70c026732c9883e6a6c66c2c6aa",
             "presentation_change_index_sha256": "0f92a28d1e1822bc4cc7dba19923e2e1ddd90a6de8b57e01a32847a67461c6cd",
             "presentation_change_owner_approval": "RATIFIED",
+            "presentation_change_merge_commit": "2df2cc2417e6e9c4f8e53cf81c2351d1a4078faa",
+            "presentation_change_production_verification": "EXACT_BYTES_AND_BEHAVIOUR_VERIFIED",
         }
         for key, expected in required.items():
             if value.get(key) != expected:
