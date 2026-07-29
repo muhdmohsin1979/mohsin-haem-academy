@@ -197,6 +197,15 @@ jobs:
         run: |
           python scripts/validate_cll_v2_release.py
 
+      - name: Validate controlled MCL publication state
+        run: python scripts/validate_mcl_release_state.py
+
+      - name: Render and inspect exact MCL editable algorithm through official Excalidraw
+        env:
+          NODE_PATH: /tmp/cll-excal-renderer/node_modules
+          MCL_EXCAL_NODE_ROOT: /tmp/cll-excal-renderer
+        run: node scripts/validate_mcl_excalidraw.cjs
+
       - name: Render and inspect exact editable algorithm through official Excalidraw
         env:
           NODE_PATH: /tmp/cll-excal-renderer/node_modules

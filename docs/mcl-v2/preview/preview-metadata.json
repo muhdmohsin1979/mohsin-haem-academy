@@ -1,0 +1,14 @@
+{
+  "document_code": "MHA-MCL-2026-v2.0",
+  "state": "PREVIEW",
+  "publication_authority": false,
+  "clinical_unit_count": 12,
+  "treatment_count": 15,
+  "source_sha256": "c9d1c63b9bb92eaff843983a2cc48dcef293d0b2c6826833fc9679ff62456bf3",
+  "status_matrix_sha256": "5336b42d596e44ffa8496102b51256b91a801a897142c781361c948f6ce92e51",
+  "release_state_sha256": "84a1d863bf3de547ebe5cef8d247465449941ea369f8a30b58abad69e93ea6bb",
+  "evidence_ledger_sha256": "80788da595c51ee0dffe655b8b6644f19eb85a7369eb66b641e2d606be9fed68",
+  "claims_matrix_sha256": "899da6519e0745b5a0952a08239cbac93fe6b029f39b41daa064f15658b39e27",
+  "access_evidence_ledger_sha256": "6c26863e46d5b76fc6be704b188664da4a1fc194dbb0f3b33372bc9895ea1e79",
+  "preview_sha256": "d349f9ac349229a1f8accea34c2d5146a290434eed808145fa07a6cae59fb3ec"
+}

@@ -57,6 +57,18 @@ ALLOWED_PROPER_NOUNS = {
     "AMPLIFY-EXT",   # apixaban extended-treatment trial — Agnelli, NEJM 2013
 }
 
+# Exact clinical terms whose meaning is literal rather than stylistic filler.
+# Keep this list narrow: the generic banned word must still fail outside these
+# phrases.
+ALLOWED_CLINICAL_PHRASES = {
+    "significant bleeding",
+    "statistically significant",
+    "systemic corticosteroids",
+    "systemic lines",
+    "systemic therapy",
+    "systemic treatment",
+}
+
 # Strip HTML tags and script/style blocks before scanning, so a word
 # that appears only as a CSS class name or tag attribute does not trigger.
 TAG_RE = re.compile(r"<[^>]+>", re.DOTALL)
@@ -80,6 +92,16 @@ def _is_allowed_proper_noun(text: str, match_start: int, match_end: int) -> bool
         e += 1
     token = text[s:e].upper()
     return token in ALLOWED_PROPER_NOUNS
+
+
+def _is_allowed_clinical_phrase(text: str, match_start: int, match_end: int) -> bool:
+    """Return True when a banned-word match belongs to an exact clinical term."""
+    lowered = text.casefold()
+    for phrase in ALLOWED_CLINICAL_PHRASES:
+        for occurrence in re.finditer(r"(?<![A-Za-z])" + re.escape(phrase) + r"(?![A-Za-z])", lowered):
+            if occurrence.start() <= match_start and match_end <= occurrence.end():
+                return True
+    return False
 
 
 def extract_visible_text(raw: str, suffix: str) -> str:
@@ -110,7 +132,8 @@ def scan_file(path: Path) -> list[tuple[int, str, str]]:
 
     for lineno, line in enumerate(lines, 1):
         for match in pattern.finditer(line):
-            if _is_allowed_proper_noun(line, match.start(), match.end()):
+            if (_is_allowed_proper_noun(line, match.start(), match.end()) or
+                    _is_allowed_clinical_phrase(line, match.start(), match.end())):
                 continue
             hits.append((lineno, match.group(0), line.strip()))
     return hits
@@ -187,7 +210,8 @@ def scan_diff(diff_path: Path) -> tuple[int, int]:
             else:
                 scan_text = added
             for m in pattern.finditer(scan_text):
-                if _is_allowed_proper_noun(scan_text, m.start(), m.end()):
+                if (_is_allowed_proper_noun(scan_text, m.start(), m.end()) or
+                        _is_allowed_clinical_phrase(scan_text, m.start(), m.end())):
                     continue
                 print(f"{current_file}:{new_lineno}: banned word "
                       f"'{m.group(0)}' — {added.strip()}")

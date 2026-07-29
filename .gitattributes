@@ -1,0 +1,3 @@
+# Preserve downloaded regulatory evidence and verbatim PDF text extraction bytes.
+sources/mcl/pharmacy-evidence-v2.0/pdfs/*.pdf binary
+sources/mcl/pharmacy-evidence-v2.0/extracted-text/*.txt -diff
