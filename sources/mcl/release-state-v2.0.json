@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "document_code": "MHA-MCL-2026-v2.0",
-  "state": "PRODUCTION_CHANGE_CANDIDATE",
+  "state": "PRODUCTION",
   "publication_authority": true,
   "owner_scope_approval": true,
   "independent_clinical_review": "PASS",
@@ -13,12 +13,14 @@
   "reviewed_preview_manifest_sha256": "be160f955203e33b3a72e4b9829328358568bb8ba5337eb9922fb2f8bdff95fb",
   "production_candidate_commit": "3f6f7103f27805ab3ac8abed7ba9c67bd5e91b1e",
   "production_candidate_tree": "a53f0be496dfcc3ccf2e406adc1629511a82be3c",
-  "live_production_merge_commit": "60e9e2b26f2d2d7f9cb3c1fbfee86d1fcc5dc124",
-  "live_production_manifest_sha256": "70da66ac5d25644df7360ad6a7d64af6060bd105769e0105e5a28a9d00f62af1",
-  "change_candidate_manifest_sha256": "7491d8dd1258b3319e2ed5b4c5ff664f119982e4824d71a26a6b38a3d06fc1b8",
-  "change_candidate_index_sha256": "0f92a28d1e1822bc4cc7dba19923e2e1ddd90a6de8b57e01a32847a67461c6cd",
+  "previous_production_merge_commit": "60e9e2b26f2d2d7f9cb3c1fbfee86d1fcc5dc124",
+  "previous_production_manifest_sha256": "70da66ac5d25644df7360ad6a7d64af6060bd105769e0105e5a28a9d00f62af1",
+  "production_manifest_sha256": "7491d8dd1258b3319e2ed5b4c5ff664f119982e4824d71a26a6b38a3d06fc1b8",
   "production_hash_ratification": "RATIFIED",
-  "change_candidate_owner_approval": "PENDING",
+  "presentation_change_commit": "da70eeeda6a0cfbae5637c72a2f406c941f2031f",
+  "presentation_change_tree": "442fb44f3dd9b70c026732c9883e6a6c66c2c6aa",
+  "presentation_change_index_sha256": "0f92a28d1e1822bc4cc7dba19923e2e1ddd90a6de8b57e01a32847a67461c6cd",
+  "presentation_change_owner_approval": "RATIFIED",
   "pharmacy_verifier_identity": "RETAINED_PRIVATELY",
-  "change_scope": "Presentation only: CLL-pattern sticky section navigation and independently scrolling desktop sidebar. Clinical units and downloadable artefacts unchanged."
+  "release_policy": "Presentation-only CLL prototype alignment ratified by the owner. Clinical units and downloadable artefacts remain unchanged."
 }

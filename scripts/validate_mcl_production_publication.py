@@ -67,6 +67,15 @@ def validate_production_publication() -> None:
         raise AssertionError("Release record candidate commit changed")
     if candidate.get("tree") != "a53f0be496dfcc3ccf2e406adc1629511a82be3c":
         raise AssertionError("Release record candidate tree changed")
+    presentation = record.get("presentation_change", {})
+    if presentation.get("commit") != "da70eeeda6a0cfbae5637c72a2f406c941f2031f":
+        raise AssertionError("Presentation-change commit is not the ratified candidate")
+    if presentation.get("tree") != "442fb44f3dd9b70c026732c9883e6a6c66c2c6aa":
+        raise AssertionError("Presentation-change tree is not the ratified candidate")
+    if presentation.get("owner_approval") != "RATIFIED":
+        raise AssertionError("Presentation change lacks owner ratification")
+    if presentation.get("deployment") != "AUTHORISED_PENDING_MERGE":
+        raise AssertionError("Presentation change is not authorised for merge")
     print("MCL production publication gate: PASS hubs=2 sitemap=1 v2_routes=EXPOSED")
 
 

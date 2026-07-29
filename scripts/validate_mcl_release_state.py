@@ -69,6 +69,10 @@ def main() -> int:
             "pharmacy_verifier_identity": "RETAINED_PRIVATELY",
             "production_candidate_commit": "3f6f7103f27805ab3ac8abed7ba9c67bd5e91b1e",
             "production_candidate_tree": "a53f0be496dfcc3ccf2e406adc1629511a82be3c",
+            "presentation_change_commit": "da70eeeda6a0cfbae5637c72a2f406c941f2031f",
+            "presentation_change_tree": "442fb44f3dd9b70c026732c9883e6a6c66c2c6aa",
+            "presentation_change_index_sha256": "0f92a28d1e1822bc4cc7dba19923e2e1ddd90a6de8b57e01a32847a67461c6cd",
+            "presentation_change_owner_approval": "RATIFIED",
         }
         for key, expected in required.items():
             if value.get(key) != expected:

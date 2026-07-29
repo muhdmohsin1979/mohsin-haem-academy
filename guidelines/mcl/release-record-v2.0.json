@@ -36,14 +36,16 @@
     "merge_commit": "60e9e2b26f2d2d7f9cb3c1fbfee86d1fcc5dc124",
     "production_verification": "EXACT_BYTES_VERIFIED"
   },
-  "presentation_change_candidate": {
-    "scope": "CLL-pattern sticky section navigation and independently scrolling desktop sidebar",
+  "presentation_change": {
+    "scope": "Exact CLL prototype page shell, sticky Academy navigation, sticky section strip and independently scrolling gl-sidebar",
     "clinical_change": "NONE",
     "downloadable_artefact_change": "NONE",
     "base_manifest_sha256": "70da66ac5d25644df7360ad6a7d64af6060bd105769e0105e5a28a9d00f62af1",
-    "candidate_manifest_sha256": "7491d8dd1258b3319e2ed5b4c5ff664f119982e4824d71a26a6b38a3d06fc1b8",
-    "candidate_index_sha256": "0f92a28d1e1822bc4cc7dba19923e2e1ddd90a6de8b57e01a32847a67461c6cd",
-    "owner_approval": "PENDING",
-    "deployment": "BLOCKED_PENDING_APPROVAL"
+    "manifest_sha256": "7491d8dd1258b3319e2ed5b4c5ff664f119982e4824d71a26a6b38a3d06fc1b8",
+    "index_sha256": "0f92a28d1e1822bc4cc7dba19923e2e1ddd90a6de8b57e01a32847a67461c6cd",
+    "commit": "da70eeeda6a0cfbae5637c72a2f406c941f2031f",
+    "tree": "442fb44f3dd9b70c026732c9883e6a6c66c2c6aa",
+    "owner_approval": "RATIFIED",
+    "deployment": "AUTHORISED_PENDING_MERGE"
   }
 }
