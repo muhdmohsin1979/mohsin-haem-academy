@@ -1,0 +1,330 @@
+{
+  "schema_version": 1,
+  "document_code": "MHA-MCL-2026-v2.0",
+  "access_cut_off": "2026-07-28",
+  "jurisdiction_model": "England access framework with separate devolved-nation notes",
+  "status": "WORKING_DRAFT",
+  "treatments": [
+    {
+      "id": "conventional-cytarabine-asct",
+      "title": "Conventional cytarabine-containing induction, ASCT and rituximab maintenance",
+      "population": "Fit adult suitable for dose-intensive treatment and ASCT when a first-line covalent BTK-inhibitor pathway is not routinely commissioned",
+      "evidence_position": "EHA–EU guideline-supported conventional pathway; MCL Younger supports a bundled cytarabine-containing induction/conditioning/ASCT strategy and LYMA supports 3 years of post-ASCT rituximab maintenance",
+      "marketing_authorisation": "No single combination marketing-authorisation statement was verified; each component, formulation and use must follow its current SmPC and the treating network protocol.",
+      "nice_status": "No single regimen-specific NICE technology appraisal was identified; absence of a TA is not proof of non-funding for generic chemotherapy or transplant services.",
+      "england_access": "Confirm the current haemato-oncology network SACT and transplant pathway; do not infer access from the CDF list.",
+      "devolved_notes": "No single devolved-nation national route was audited for this complete conventional pathway; follow nation and network policy.",
+      "public_wording": "Guideline-supported conventional first-line pathway for a fit adult when first-line covalent BTK inhibition is not routinely commissioned, subject to current network SACT/transplant governance.",
+      "regimen": "Rituximab plus high-dose cytarabine-containing induction followed by ASCT consolidation and 3 years of rituximab maintenance.",
+      "dose_schedule_duration": "Evidence schedule, not a prescribing protocol: TRIANGLE primary report described six alternating 21-day R-CHOP/R-DHAP or R-DHAOx cycles. R-CHOP used rituximab 375 mg/m² day 0/1, cyclophosphamide 750 mg/m² day 1, doxorubicin 50 mg/m² day 1, vincristine 1.4 mg/m² day 1 and prednisone 100 mg days 1–5. R-DHAP/R-DHAOx used rituximab 375 mg/m² day 0/1, dexamethasone 40 mg days 1–4, cytarabine 2 × 2 g/m² over 3 hours 12-hourly on day 2 and cisplatin 100 mg/m² over 24 hours day 1 or oxaliplatin 130 mg/m² day 1. LYMA maintenance was rituximab 375 mg/m² every 2 months for 3 years. Use the current network protocol for prescribing.",
+      "administration_monitoring_boundary": "Component SmPC, stem-cell mobilisation, conditioning, organ-function thresholds, infection prophylaxis, fertility, supportive care and dose modification were not fully extracted into the pharmacy package. The current transplant/SACT protocol and human pharmacy verification are mandatory.",
+      "pharmacy_evidence_status": "REPORT_ONLY_TRIAL_AND_GUIDELINE_SCHEDULE_NOT_PHARMACY_VERIFIED",
+      "pharmacy_source_ids": [],
+      "official_source_urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12541557/",
+        "https://pubmed.ncbi.nlm.nih.gov/36469833/",
+        "https://pubmed.ncbi.nlm.nih.gov/28953447/"
+      ]
+    },
+    {
+      "id": "br-first-line",
+      "title": "Bendamustine–rituximab first line",
+      "population": "Adult unsuitable for dose-intensive treatment when BR is clinically appropriate",
+      "evidence_position": "EHA–EU guideline-supported standard option; StiL provides pooled indolent/MCL randomised evidence and maintenance-after-BR evidence includes observational cohorts",
+      "marketing_authorisation": "No single BR combination marketing-authorisation statement was verified in this work package; current component SmPCs and local protocol must be checked.",
+      "nice_status": "No regimen-specific first-line MCL NICE technology appraisal was identified; this does not establish absence of local or baseline access.",
+      "england_access": "Use only through the current local/network SACT protocol.",
+      "devolved_notes": "Nation-specific and local implementation were not audited for this generic combination pathway.",
+      "public_wording": "Guideline-supported standard first-line immunochemotherapy option for an adult unsuitable for dose-intensive treatment, with maintenance in responders, subject to current local SACT governance.",
+      "regimen": "Bendamustine plus rituximab, followed in responders by rituximab maintenance for at least 2 years.",
+      "dose_schedule_duration": "Trial schedule, not a prescribing protocol: StiL used bendamustine 90 mg/m² on days 1 and 2 of a 4-week cycle for up to six cycles plus rituximab 375 mg/m² on day 1. The exact maintenance dose and interval were not extracted from the available verified recommendation; use the current local protocol.",
+      "administration_monitoring_boundary": "The StiL result was pooled across indolent lymphomas and MCL and has a published erratum whose substantive correction was not retrieved. Component SmPCs, organ-function adjustments, infection prophylaxis and local SACT monitoring remain controlling; human pharmacy verification is pending.",
+      "pharmacy_evidence_status": "REPORT_ONLY_TRIAL_SCHEDULE_NOT_PHARMACY_VERIFIED",
+      "pharmacy_source_ids": [],
+      "official_source_urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12541557/",
+        "https://pubmed.ncbi.nlm.nih.gov/23433739/",
+        "https://pubmed.ncbi.nlm.nih.gov/35763708/"
+      ]
+    },
+    {
+      "id": "vr-cap-first-line",
+      "title": "VR-CAP / bortezomib combination",
+      "population": "Previously untreated adults for whom haematopoietic stem-cell transplantation is unsuitable",
+      "evidence_position": "Clinical efficacy was not separately extracted in this targeted update; licence and NICE access are established for the defined population",
+      "marketing_authorisation": "GB-authorised with rituximab, cyclophosphamide, doxorubicin and prednisone for untreated MCL when HSCT is unsuitable.",
+      "nice_status": "TA370 recommends use within the marketing authorisation.",
+      "england_access": "Routine NICE-mandated access within TA370 scope; do not generalise to transplant-suitable patients.",
+      "devolved_notes": "SMC1075/15 accepted use in Scotland; Welsh implementation follows TA370; an HSCNI TA370 record was located.",
+      "public_wording": "Licensed and NICE-recommended in England for previously untreated adults for whom HSCT is unsuitable.",
+      "official_source_urls": [
+        "https://mhraproducts4853.blob.core.windows.net/docs/3eba06edb83ab9304ba520d874a7861e875a8237",
+        "https://www.nice.org.uk/guidance/ta370"
+      ],
+      "regimen": "Bortezomib with rituximab, cyclophosphamide, doxorubicin and prednisone (VcR-CAP / VR-CAP)",
+      "dose_schedule_duration": "VELCADE 3.5 mg powder for solution for injection is administered via intravenous or subcutaneous injection at the recommended dose of 1.3 mg/m2 body surface area twice weekly for two weeks on days 1, 4, 8, and 11, followed by a 10-day rest period on days 12-21. This 3-week period is considered a treatment cycle. Six VELCADE cycles are recommended, although for patients with a response first documented at cycle 6, two additional VELCADE cycles may be given. At least 72 hours should elapse between consecutive doses of VELCADE. The following medicinal products are administered on day 1 of each VELCADE 3 week treatment cycle as intravenous infusions: rituximab at 375 mg/m2, cyclophosphamide at 750 mg/m2 and doxorubicin at 50 mg/m2. Prednisone is administered orally at 100 mg/m2 on days 1, 2, 3, 4 and 5 of each VELCADE treatment cycle.",
+      "administration_monitoring_boundary": "VELCADE 3.5 mg powder for solution for injection is available for intravenous or subcutaneous administration. VELCADE should not be given by other routes. Intrathecal administration has resulted in death. VELCADE 3.5 mg reconstituted solution is administered as a 3-5 second bolus intravenous injection through a peripheral or central intravenous catheter followed by a flush with sodium chloride 9 mg/ml (0.9%) solution for injection. At least 72 hours should elapse between consecutive doses of VELCADE. Platelet counts should be ≥ 100,000 cells/μL and the absolute neutrophils count (ANC) should be ≥ 1,500 cells/μL Platelet counts should be ≥ 75,000 cells/μL in patients with bone marrow infiltration or splenic sequestration Haemoglobin ≥ 8 g/dL Full section 4.2/4.4 constraints remain controlling; use the live SmPC and local protocol.",
+      "pharmacy_evidence_status": "REPORT_ONLY_NOT_PHARMACY_VERIFIED — exact MHRA SmPC quotations validated; human pharmacy verification pending.",
+      "pharmacy_source_ids": [
+        "bortezomib-velcade"
+      ]
+    },
+    {
+      "id": "ibrutinib-rr-one-line",
+      "title": "Ibrutinib monotherapy",
+      "population": "Relapsed or refractory MCL after exactly one previous line for the NICE-funded population",
+      "evidence_position": "Covalent-BTKi treatment option; distinguish licence scope from NICE restriction",
+      "marketing_authorisation": "GB licence covers adult relapsed or refractory MCL without the NICE one-line restriction.",
+      "nice_status": "TA502 recommends treatment only after one previous line, subject to the commercial arrangement.",
+      "england_access": "Baseline funding recorded from 1 May 2018 under Blueteq IBR9 v1.1.",
+      "devolved_notes": "Scotland has SMC full-submission and resubmission records; Welsh advice is superseded by TA502; direct HSCNI implementation was not demonstrated in the audit.",
+      "public_wording": "Routinely funded in England after exactly one previous line when TA502 and live Blueteq criteria are met.",
+      "official_source_urls": [
+        "https://mhraproducts4853.blob.core.windows.net/docs/9af68f2ddbce960e0e1f33927adff48693412b18",
+        "https://www.nice.org.uk/guidance/ta502"
+      ],
+      "regimen": "Ibrutinib monotherapy for relapsed or refractory MCL",
+      "dose_schedule_duration": "The recommended dose for the treatment of previously treated MCL is ibrutinib 560 mg once daily as a single agent. Treatment with IMBRUVICA as a single agent should continue until disease progression or no longer tolerated by the patient.",
+      "administration_monitoring_boundary": "IMBRUVICA should be administered orally once daily with a glass of water approximately at the same time each day. The tablets should be swallowed whole with water and should not be broken or chewed. IMBRUVICA must not be taken with grapefruit juice or Seville oranges (see section 4.5). The dose of ibrutinib should be reduced to 280 mg once daily when used concomitantly with moderate CYP3A4 inhibitors. The dose of ibrutinib should be reduced to 140 mg once daily or withheld for up to 7 days when it is used concomitantly with strong CYP3A4 inhibitors. IMBRUVICA therapy should be withheld for any new onset or worsening grade 2 cardiac failure, grade 3 cardiac arrhythmias, grade ≥3 non-haematological toxicity, grade 3 or greater neutropenia with infection or fever, or grade 4 haematological toxicities. Monitor complete blood counts monthly. Full section 4.2/4.4 constraints remain controlling; use the live SmPC and local protocol.",
+      "pharmacy_evidence_status": "REPORT_ONLY_NOT_PHARMACY_VERIFIED — exact MHRA SmPC quotations validated; human pharmacy verification pending.",
+      "pharmacy_source_ids": [
+        "ibrutinib-imbruvica"
+      ]
+    },
+    {
+      "id": "zanubrutinib-rr-one-line",
+      "title": "Zanubrutinib monotherapy",
+      "population": "Relapsed or refractory MCL after exactly one previous line for the NICE-funded population",
+      "evidence_position": "Covalent-BTKi option after prior therapy",
+      "marketing_authorisation": "GB-authorised for adult MCL after at least one prior therapy.",
+      "nice_status": "TA1081 recommends an option after one line only, subject to the commercial arrangement and least-expensive-suitable-option wording.",
+      "england_access": "Baseline funding recorded from 9 August 2025 under Blueteq ZAN6. Intolerance transfer from ibrutinib requires absence of progression.",
+      "devolved_notes": "SMC2819 applies in Scotland; NHS Wales has a TA1081 Blueteq route; direct HSCNI implementation was not demonstrated in the audit.",
+      "public_wording": "Routinely funded in England after exactly one previous line when TA1081 and live Blueteq criteria are met.",
+      "official_source_urls": [
+        "https://mhraproducts4853.blob.core.windows.net/docs/0660d09b59bb52f7204c3e4df1ff51083a38b21d",
+        "https://www.nice.org.uk/guidance/ta1081"
+      ],
+      "regimen": "Zanubrutinib monotherapy",
+      "dose_schedule_duration": "The recommended total daily dose of zanubrutinib is 320 mg. The daily dose may be taken either once daily (two 160 mg tablets) or divided into two doses of 160 mg twice daily (one 160 mg tablet). Treatment with BRUKINSA should be continued until disease progression or unacceptable toxicity.",
+      "administration_monitoring_boundary": "BRUKINSA is for oral use. The film-coated tablets can be taken with or without food. Patients should be instructed to swallow the tablets whole with water, not to chew or crush the tablets. The tablet can be divided into two equal halves when advised by the healthcare provider. Patients with severe renal impairment (CrCl <30 mL/min) or on dialysis should be monitored for adverse reactions (see section 5.2). Monitor complete blood counts monthly during treatment (see section 4.2). Full section 4.2/4.4 constraints remain controlling; use the live SmPC and local protocol.",
+      "pharmacy_evidence_status": "REPORT_ONLY_NOT_PHARMACY_VERIFIED — exact MHRA SmPC quotations validated; human pharmacy verification pending.",
+      "pharmacy_source_ids": [
+        "zanubrutinib-brukinsa"
+      ]
+    },
+    {
+      "id": "brexu-cel-managed-access",
+      "title": "Brexucabtagene autoleucel",
+      "population": "Adult relapsed or refractory MCL after at least two systemic lines including a BTK inhibitor",
+      "evidence_position": "Durable single-arm and real-world activity with material attrition, cytopenia, neurological and infection risks",
+      "marketing_authorisation": "GB-authorised after at least two systemic lines including a BTK inhibitor.",
+      "nice_status": "TA677 remains a Cancer Drugs Fund managed-access recommendation while review continues.",
+      "england_access": "NHS England list v1.405 retains KTE01a/KTE01b managed-access forms and national eligibility criteria. Do not describe this as unrestricted baseline commissioning.",
+      "devolved_notes": "SMC2351 is interim in Scotland; Welsh handling follows TA677 managed access; an HSCNI TA677 record was located.",
+      "public_wording": "Available in England through TA677 Cancer Drugs Fund managed access when all live national eligibility and panel criteria are met.",
+      "official_source_urls": [
+        "https://mhraproducts4853.blob.core.windows.net/docs/cd6be42f02be6ec2bd92569340aedaf6f1179f16",
+        "https://www.nice.org.uk/guidance/ta677"
+      ],
+      "regimen": "Brexucabtagene autoleucel",
+      "dose_schedule_duration": "Treatment consists of a single dose for infusion containing a dispersion for infusion of CAR-positive viable T cells in one infusion bag. The target dose is 2 × 106 CAR-positive viable T cells per kg of body weight (range: 1 x 106–2 x 106 cells/kg), with a maximum of 2 × 108 CAR-positive viable T cells for patients 100 kg and above. Tecartus is recommended to be infused 3 to 14 days after completion of the lymphodepleting chemotherapy for MCL patients. A lymphodepleting chemotherapy regimen consisting of cyclophosphamide 500 mg/m² intravenously and fludarabine 30 mg/m² intravenously must be administered prior to infusing Tecartus. The recommended days are on the 5th, 4th, and 3rd day before infusion of Tecartus.",
+      "administration_monitoring_boundary": "Tecartus must be administered in a qualified treatment centre by a physician with experience in the treatment of haematological malignancies and trained for administration and management of patients treated with Tecartus. At least 1 dose of tocilizumab for use in the event of cytokine release syndrome (CRS) and emergency equipment must be available prior to infusion. Tecartus is intended for autologous use only (see section 4.4). Patients must be monitored daily for the first 7 days following infusion for signs and symptoms of potential CRS, neurologic events and other toxicities. Patients must remain within proximity of a qualified treatment centre for at least 4 weeks following infusion. Unresolved serious adverse reactions (especially pulmonary reactions, cardiac reactions, or hypotension) including from preceding chemotherapies. Full section 4.2/4.4 constraints remain controlling; use the live SmPC and local protocol.",
+      "pharmacy_evidence_status": "REPORT_ONLY_NOT_PHARMACY_VERIFIED — exact MHRA SmPC quotations validated; human pharmacy verification pending.",
+      "pharmacy_source_ids": [
+        "brexucabtagene-autoleucel-tecartus"
+      ]
+    },
+    {
+      "id": "triangle-ibrutinib-first-line",
+      "title": "TRIANGLE ibrutinib regimen",
+      "population": "Previously untreated adults eligible for ASCT",
+      "evidence_position": "Mature randomised phase III evidence supports the studied ibrutinib-containing non-ASCT strategy; applicability is protocol-specific.",
+      "marketing_authorisation": "GB-authorised as ibrutinib with R-CHOP alternating with R-DHAP or R-DHAOx without ibrutinib, followed by ibrutinib monotherapy.",
+      "nice_status": "GID-TA11802/ID6596 remains in progress. June 2026 draft guidance recommends not using the regimen; this is not final guidance.",
+      "england_access": "No final NICE entitlement or demonstrated national commissioning route at the cut-off.",
+      "devolved_notes": "No positive national route was demonstrated in Scotland, Wales or Northern Ireland.",
+      "public_wording": "Licensed but not routinely commissioned nationally in England at the cut-off; the current negative NICE recommendation is draft, not final.",
+      "official_source_urls": [
+        "https://mhraproducts4853.blob.core.windows.net/docs/9af68f2ddbce960e0e1f33927adff48693412b18",
+        "https://www.nice.org.uk/guidance/indevelopment/gid-ta11802"
+      ],
+      "regimen": "Ibrutinib with R-CHOP alternating with R-DHAP/R-DHAOx, followed by ibrutinib monotherapy",
+      "dose_schedule_duration": "The recommended dose for the treatment of previously untreated MCL is ibrutinib 560 mg once daily (see Table 1). Table transcription: cycles_1_3_5: IMBRUVICA in combination with R-CHOP; On days 1-19; cycles_2_4_6: R-DHAP; Without IMBRUVICA; part_i_footnote: 6 cycles; each cycle is 21 days.; part_ii: IMBRUVICA; Daily for 24 Months; r_dhap_footnote: Interchangeable with R-DHAOx (rituximab, dexamethasone, cytarabine, oxaliplatin). Boundary: See the Summary of Product Characteristics (SmPC) for dosing information for each medicinal product. No R-CHOP, R-DHAP or R-DHAOx component doses are supplied here because this ibrutinib SmPC explicitly redirects to each component SmPC.",
+      "administration_monitoring_boundary": "Treatment should start after recovery of peripheral blood counts. Rituximab may be added as per national treatment guidelines. IMBRUVICA should be administered orally once daily with a glass of water approximately at the same time each day. The tablets should be swallowed whole with water and should not be broken or chewed. The SmPC MCL dose-modification and monitoring constraints apply to ibrutinib; combination-agent modifications require the respective live SmPCs and protocol verification. Uses the same checked SmPC modification/monitoring boundaries as ibrutinib monotherapy for relapsed or refractory MCL. Full section 4.2/4.4 constraints remain controlling; use the live SmPC and local protocol.",
+      "pharmacy_evidence_status": "REPORT_ONLY_NOT_PHARMACY_VERIFIED — exact MHRA SmPC quotations validated; human pharmacy verification pending.",
+      "pharmacy_source_ids": [
+        "ibrutinib-imbruvica"
+      ]
+    },
+    {
+      "id": "acalabrutinib-br-first-line",
+      "title": "Acalabrutinib plus bendamustine–rituximab",
+      "population": "Previously untreated adults not eligible for ASCT",
+      "evidence_position": "Randomised phase III progression-free survival benefit without demonstrated overall-survival advantage at reported follow-up",
+      "marketing_authorisation": "GB-authorised in the defined first-line transplant-ineligible population.",
+      "nice_status": "GID-TA11091/ID6155 remains in progress; February 2026 draft guidance recommends not using it. The displayed expected-publication date is overdue.",
+      "england_access": "No final recommendation or demonstrated national MCL Blueteq route.",
+      "devolved_notes": "SMC2929 is under consideration; no final positive Welsh or Northern Irish route was demonstrated.",
+      "public_wording": "Licensed but without a demonstrated routine national route in England; current draft NICE advice is not final guidance.",
+      "official_source_urls": [
+        "https://mhraproducts4853.blob.core.windows.net/docs/24b093c3ac16e4ad56f01258dbfa998647538a16",
+        "https://www.nice.org.uk/guidance/indevelopment/gid-ta11091"
+      ],
+      "regimen": "Acalabrutinib plus bendamustine and rituximab",
+      "dose_schedule_duration": "The recommended dose of Calquence in monotherapy or in combination with other medicinal products is 100 mg acalabrutinib twice daily (equivalent to a total daily dose of 200 mg). Calquence dose interval is approximately 12 hours. Calquence should be administered from Day 1 on Cycle 1 (each cycle is 28 days) continuously until disease progression or unacceptable toxicity. Bendamustine should be administered at 90 mg/m2 on Days 1 and 2 of each cycle for a total of 6 cycles. Rituximab should be administered at 375 mg/m2 on Day 1 each cycle for a total of 6 cycles. Patients achieving a response (partial response [PR] or complete response [CR]) after the first 6 cycles, may receive maintenance rituximab at 375 mg/m2 on Day 1 of every other cycle for a maximum of 12 additional doses, starting on Cycle 8 up to Cycle 30.",
+      "administration_monitoring_boundary": "For the combination regimens, refer to the prescribing information of each of the medicinal products for their dosing information (for details of the combination regimens, see section 5.1). Calquence is for oral use. The tablets should be swallowed whole with water at approximately the same time each day, with or without food (see section 4.5). The tablets should not be chewed, crushed, dissolved or divided. Recommended dose modifications for Grade ≥ 3 adverse reactions in patients receiving Calquence in combination with bendamustine and rituximab are provided in Table 2. Refer to the prescribing information of each of the medicinal products used in combination with Calquence for additional information for management of toxicities. If these inhibitors will be used short-term (such as anti-infectives for up to seven days), interrupt Calquence. Full section 4.2/4.4 constraints remain controlling; use the live SmPC and local protocol.",
+      "pharmacy_evidence_status": "REPORT_ONLY_NOT_PHARMACY_VERIFIED — exact MHRA SmPC quotations validated; human pharmacy verification pending.",
+      "pharmacy_source_ids": [
+        "acalabrutinib-calquence"
+      ]
+    },
+    {
+      "id": "acalabrutinib-rr-monotherapy",
+      "title": "Acalabrutinib monotherapy",
+      "population": "Adult relapsed or refractory MCL not previously treated with a BTK inhibitor",
+      "evidence_position": "Licensed covalent-BTKi option requiring separate clinical appraisal",
+      "marketing_authorisation": "GB-authorised for BTKi-naive relapsed or refractory MCL.",
+      "nice_status": "GID-TA11470/ID6389 is awaiting development; publication TBC.",
+      "england_access": "No demonstrated national MCL commissioning route.",
+      "devolved_notes": "No final positive national route was demonstrated in Scotland, Wales or Northern Ireland.",
+      "public_wording": "Licensed for BTKi-naive relapsed or refractory MCL but not demonstrated as routinely commissioned nationally in England at the cut-off.",
+      "official_source_urls": [
+        "https://mhraproducts4853.blob.core.windows.net/docs/24b093c3ac16e4ad56f01258dbfa998647538a16",
+        "https://www.nice.org.uk/guidance/awaiting-development/gid-ta11470"
+      ],
+      "regimen": "Acalabrutinib monotherapy for relapsed or refractory MCL",
+      "dose_schedule_duration": "The recommended dose of Calquence in monotherapy or in combination with other medicinal products is 100 mg acalabrutinib twice daily (equivalent to a total daily dose of 200 mg). Calquence dose interval is approximately 12 hours. Treatment with Calquence in monotherapy or in combination with obinutuzumab should be continued until disease progression or unacceptable toxicity.",
+      "administration_monitoring_boundary": "Calquence is for oral use. The tablets should be swallowed whole with water at approximately the same time each day, with or without food (see section 4.5). The tablets should not be chewed, crushed, dissolved or divided. Use the acalabrutinib-specific dose modification and monitoring constraints; no combination-agent rules apply to this monotherapy record. Uses the same checked SmPC modification/monitoring boundaries as acalabrutinib plus bendamustine and rituximab. Full section 4.2/4.4 constraints remain controlling; use the live SmPC and local protocol.",
+      "pharmacy_evidence_status": "REPORT_ONLY_NOT_PHARMACY_VERIFIED — exact MHRA SmPC quotations validated; human pharmacy verification pending.",
+      "pharmacy_source_ids": [
+        "acalabrutinib-calquence"
+      ]
+    },
+    {
+      "id": "pirtobrutinib-post-btki",
+      "title": "Pirtobrutinib monotherapy",
+      "population": "Adult relapsed or refractory MCL previously treated with a BTK inhibitor",
+      "evidence_position": "Single-arm post-covalent-BTKi activity; no comparative sequencing hierarchy established",
+      "marketing_authorisation": "GB-authorised after previous BTK-inhibitor treatment.",
+      "nice_status": "GID-TA10858/ID3975 returned to the NICE work programme on 14 July 2026 and remains in progress.",
+      "england_access": "No demonstrated national MCL commissioning route; CLL access must not be transposed to MCL.",
+      "devolved_notes": "SMC2897 is a non-submission route; no positive national Welsh or Northern Irish MCL route was demonstrated.",
+      "public_wording": "Licensed after prior BTKi exposure but not demonstrated as routinely commissioned nationally for MCL in England at the cut-off.",
+      "official_source_urls": [
+        "https://mhraproducts4853.blob.core.windows.net/docs/1d71deb47f55d9284beab5786752e8368d37d284",
+        "https://www.nice.org.uk/guidance/indevelopment/gid-ta10858"
+      ],
+      "regimen": "Pirtobrutinib monotherapy",
+      "dose_schedule_duration": "The recommended dose is 200 mg pirtobrutinib once daily (QD). Treatment should be continued until disease progression or unacceptable toxicity.",
+      "administration_monitoring_boundary": "The tablet should be swallowed whole with a glass of water to ensure consistent performance (patients should not chew, crush, or split tablets before swallowing) and can be taken with or without food. Patients should take the dose at approximately the same time every day. Jaypirca dosing should be interrupted until recovery to Grade 1 or baseline when the patient experiences the following event: Grade 3 neutropenia with fever and/or infection Grade 4 neutropenia lasting ≥ 7 days Full section 4.2/4.4 constraints remain controlling; use the live SmPC and local protocol.",
+      "pharmacy_evidence_status": "REPORT_ONLY_NOT_PHARMACY_VERIFIED — exact MHRA SmPC quotations validated; human pharmacy verification pending.",
+      "pharmacy_source_ids": [
+        "pirtobrutinib-jaypirca"
+      ]
+    },
+    {
+      "id": "liso-cel-post-btki",
+      "title": "Lisocabtagene maraleucel",
+      "population": "Adult relapsed or refractory MCL after at least two systemic lines including a BTK inhibitor",
+      "evidence_position": "Phase I activity; no head-to-head comparison with brexu-cel or pirtobrutinib",
+      "marketing_authorisation": "GB-authorised after at least two systemic lines including a BTK inhibitor.",
+      "nice_status": "GID-TA11930 is awaiting development; the live page displays conflicting identifiers ID6695 and 12299.",
+      "england_access": "No demonstrated national MCL commissioning route.",
+      "devolved_notes": "SMC2909 is awaiting a decision; no national Welsh or Northern Irish MCL route was demonstrated.",
+      "public_wording": "Licensed for the defined post-BTKi population but not demonstrated as routinely commissioned nationally for MCL in England at the cut-off.",
+      "official_source_urls": [
+        "https://mhraproducts4853.blob.core.windows.net/docs/ad49533cc5d81176e83f3082da1669b3a9e543ce",
+        "https://www.nice.org.uk/guidance/awaiting-development/gid-ta11930"
+      ],
+      "regimen": "Lisocabtagene maraleucel",
+      "dose_schedule_duration": "Breyanzi is intended for autologous use (see section 4.4). Treatment consists of a single dose for infusion containing a dispersion for infusion of CAR-positive viable T-cells in one or more vials. The target dose is 100 × 106 CAR-positive viable Tcells (consisting of a target 1:1 ratio of CD4+ and CD8+ cell components) within a range of 44-120 × 106 CAR-positive viable T-cells. See the accompanying release for infusion certificate (RfIC) for additional information pertaining to dose. Lymphodepleting chemotherapy consisting of cyclophosphamide 300 mg/m2/day and fludarabine 30 mg/m2/day, administered intravenously for three days. See the prescribing information for fludarabine and cyclophosphamide for information on dose adjustment in renal impairment. Breyanzi is to be administered 2 to 7 days after completion of lymphodepleting chemotherapy.",
+      "administration_monitoring_boundary": "Breyanzi must be administered in a qualified treatment centre. At least 1 dose of tocilizumab for use in the event of cytokine release syndrome (CRS) and emergency equipment must be available per patient prior to infusion of Breyanzi. It is recommended that premedication with paracetamol and diphenhydramine (25-50 mg, intravenously or orally) or another H1-antihistamine, be administered 30 to 60 minutes before the infusion of Breyanzi to reduce the possibility of an infusion reaction. Patients should be monitored 2-3 times during the first week following infusion, for signs and symptoms of potential CRS, neurologic events and other toxicities. Frequency of monitoring after the first week should be carried out at the physician’s discretion and should be continued for at least 2 weeks after infusion. Patients should be instructed to remain within proximity of a qualified treatment centre for at least 2 weeks following infusion. Full section 4.2/4.4 constraints remain controlling; use the live SmPC and local protocol.",
+      "pharmacy_evidence_status": "REPORT_ONLY_NOT_PHARMACY_VERIFIED — exact MHRA SmPC quotations validated; human pharmacy verification pending.",
+      "pharmacy_source_ids": [
+        "lisocabtagene-maraleucel-breyanzi"
+      ]
+    },
+    {
+      "id": "lenalidomide-rr",
+      "title": "Lenalidomide monotherapy",
+      "population": "Adult relapsed or refractory MCL",
+      "evidence_position": "Licensed non-routine option; combination with rituximab must not be conflated with monotherapy",
+      "marketing_authorisation": "GB-authorised as monotherapy for adult relapsed or refractory MCL.",
+      "nice_status": "TA774 was terminated because no evidence submission was provided; this is no recommendation, not a negative clinical recommendation.",
+      "england_access": "No national MCL Blueteq route demonstrated; NICE directs rational local decision-making.",
+      "devolved_notes": "SMC1211/16 was not recommended following non-submission; Wales did not endorse following non-submission; no Northern Irish national route was demonstrated.",
+      "public_wording": "Licensed monotherapy without a positive national recommendation; any use requires an explicit locally governed access route.",
+      "official_source_urls": [
+        "https://mhraproducts4853.blob.core.windows.net/docs/4eee1eaeac146ee6d44f54c544a0a61d13407294",
+        "https://www.nice.org.uk/guidance/ta774"
+      ],
+      "regimen": "Lenalidomide monotherapy",
+      "dose_schedule_duration": "The recommended starting dose of lenalidomide is 25 mg orally once daily on days 1 to 21 of repeated 28-day cycles.",
+      "administration_monitoring_boundary": "Revlimid capsules should be taken orally at about the same time on the scheduled days. The capsules should not be opened, broken or chewed. The capsules should be swallowed whole, preferably with water, either with or without food. Dose is modified based upon clinical and laboratory findings (see section 4.4). Dose adjustments, during treatment and restart of treatment, are recommended to manage Grade 3 or 4 thrombocytopenia, neutropenia, or other Grade 3 or 4 toxicity judged to be related to lenalidomide. All patients should receive TLS prophylaxis (allopurinol, rasburicase or equivalent as per institutional guidelines) and be well hydrated (orally) during the first week of the first cycle or for a longer period if clinically indicated. Full section 4.2/4.4 constraints remain controlling; use the live SmPC and local protocol.",
+      "pharmacy_evidence_status": "REPORT_ONLY_NOT_PHARMACY_VERIFIED — exact MHRA SmPC quotations validated; human pharmacy verification pending.",
+      "pharmacy_source_ids": [
+        "lenalidomide-revlimid"
+      ]
+    },
+    {
+      "id": "ibrutinib-venetoclax-rr",
+      "title": "Ibrutinib plus venetoclax",
+      "population": "Relapsed or refractory MCL",
+      "evidence_position": "Randomised progression-free survival evidence does not itself establish a licensed or commissioned route",
+      "marketing_authorisation": "No current MCL marketing authorisation for the combination.",
+      "nice_status": "GID-TA10774/ID3879 was suspended on 20 January 2026 because an MHRA application was no longer being pursued.",
+      "england_access": "No demonstrated national commissioning route.",
+      "devolved_notes": "No positive national MCL route was demonstrated in Scotland, Wales or Northern Ireland.",
+      "public_wording": "Not licensed or routinely commissioned nationally for MCL; normally limited to a trial or specifically approved exceptional route.",
+      "official_source_urls": [
+        "https://mhraproducts4853.blob.core.windows.net/docs/6ff063d046996d11ab3bd16657a86a4f5430e485",
+        "https://www.nice.org.uk/guidance/indevelopment/gid-ta10774"
+      ],
+      "regimen": "No licensed MCL regimen established in the checked status matrix.",
+      "dose_schedule_duration": "Not applicable for MCL: no current GB MCL indication was recorded; do not transpose dosing from another disease.",
+      "administration_monitoring_boundary": "Do not use another-indication SmPC or commissioning pathway as an MCL protocol.",
+      "pharmacy_evidence_status": "NOT_APPLICABLE_NO_CURRENT_GB_MCL_INDICATION",
+      "pharmacy_source_ids": []
+    },
+    {
+      "id": "glofitamab-rr",
+      "title": "Glofitamab",
+      "population": "Relapsed or refractory MCL, including after BTKi in the phase I/II evidence",
+      "evidence_position": "Fixed-duration phase I/II activity; non-randomised and not comparative sequencing evidence",
+      "marketing_authorisation": "No current GB MCL indication.",
+      "nice_status": "GID-TA12447 is awaiting development for MCL.",
+      "england_access": "No demonstrated national MCL commissioning route; DLBCL routes must not be extrapolated.",
+      "devolved_notes": "No positive national MCL route was demonstrated in Scotland, Wales or Northern Ireland.",
+      "public_wording": "Emerging evidence-based option without a current MCL licence or demonstrated routine national commissioning route.",
+      "official_source_urls": [
+        "https://mhraproducts4853.blob.core.windows.net/docs/be3b230112f38c96d3dd8218c623e4acbc188a32",
+        "https://www.nice.org.uk/guidance/awaiting-development/gid-ta12447"
+      ],
+      "regimen": "No licensed MCL regimen established in the checked status matrix.",
+      "dose_schedule_duration": "Not applicable for MCL: no current GB MCL indication was recorded; do not transpose dosing from another disease.",
+      "administration_monitoring_boundary": "Do not use another-indication SmPC or commissioning pathway as an MCL protocol.",
+      "pharmacy_evidence_status": "NOT_APPLICABLE_NO_CURRENT_GB_MCL_INDICATION",
+      "pharmacy_source_ids": []
+    },
+    {
+      "id": "epcoritamab-rr",
+      "title": "Epcoritamab",
+      "population": "Relapsed or refractory MCL",
+      "evidence_position": "No qualifying PubMed-indexed primary MCL trial was established in the targeted evidence audit",
+      "marketing_authorisation": "No current GB MCL indication.",
+      "nice_status": "No matching MCL NICE appraisal was found in the documented live search.",
+      "england_access": "No demonstrated national MCL commissioning route; other-lymphoma routes must not be extrapolated.",
+      "devolved_notes": "No positive national MCL route was demonstrated in Scotland, Wales or Northern Ireland.",
+      "public_wording": "Not established as a routine MCL option; no current MCL licence, NICE appraisal or national commissioning route was demonstrated.",
+      "official_source_urls": [
+        "https://mhraproducts4853.blob.core.windows.net/docs/396fbcf79471ec18c6096563395a6213231113b4"
+      ],
+      "regimen": "No licensed MCL regimen established in the checked status matrix.",
+      "dose_schedule_duration": "Not applicable for MCL: no current GB MCL indication was recorded; do not transpose dosing from another disease.",
+      "administration_monitoring_boundary": "Do not use another-indication SmPC or commissioning pathway as an MCL protocol.",
+      "pharmacy_evidence_status": "NOT_APPLICABLE_NO_CURRENT_GB_MCL_INDICATION",
+      "pharmacy_source_ids": []
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "work_package": "MHA-MCL-V2-2026-01",
+  "branch": "feat/mcl-v2-20260728",
+  "production_base": "d4a306846c53a4b790162e1e4127bb87b16250e3",
+  "cut_off": "2026-07-28",
+  "status": "WORKING_EVIDENCE_BASELINE",
+  "publication_authority": false,
+  "sources": [
+    {
+      "id": "WP-001",
+      "path": "work-package.md",
+      "sha256": "26984c48c557206cd08d29f83de42a8f247e324a98637ec02c533228d911cda5",
+      "role": "scope and controlled-release requirements",
+      "amendment": "Accountable-owner direction for an actionable evidence-based pathway was recorded without conferring candidate approval."
+    },
+    {
+      "id": "AUD-ACCESS-001",
+      "path": "audits/2026-07-28-regulatory-access-audit.md",
+      "sha256": "bcd65d4604cf3fe359f471b61b2c22f63f2885307639390354b64607a70a199e",
+      "role": "independent live official-source regulatory and access audit",
+      "delegation": "deleg_74e3562e/task-0"
+    },
+    {
+      "id": "AUD-EVIDENCE-001",
+      "path": "audits/2026-07-28-clinical-evidence-audit.md",
+      "sha256": "0a74e3436ba3ac15a92151ac823399323c07435ad83733e51a209089541da5d6",
+      "role": "independent PubMed and Crossref clinical evidence audit with controlled post-review full-text amendment",
+      "delegation": "deleg_74e3562e/task-1",
+      "amendment": "C14 and C24 were reconciled to the machine-readable atomic claims; terminology-only tone-guard repairs were recorded."
+    },
+    {
+      "id": "AUD-ARCH-001",
+      "path": "audits/2026-07-28-release-architecture.md",
+      "sha256": "7d9f617311f883df037e999e0a033c52a0391d8d23534ec152806e229baaf126",
+      "role": "independent reproducibility and release architecture review",
+      "delegation": "deleg_74e3562e/task-2",
+      "amendment": "Terminology-only tone-guard repair; release meaning unchanged."
+    },
+    {
+      "id": "LEDGER-ACCESS-001",
+      "path": "access-evidence-ledger.json",
+      "sha256": "6c26863e46d5b76fc6be704b188664da4a1fc194dbb0f3b33372bc9895ea1e79",
+      "role": "machine-readable working extraction of official regulatory and access findings"
+    },
+    {
+      "id": "LEDGER-EVIDENCE-001",
+      "path": "evidence-ledger.json",
+      "sha256": "80788da595c51ee0dffe655b8b6644f19eb85a7369eb66b641e2d606be9fed68",
+      "role": "machine-readable verified clinical evidence records"
+    },
+    {
+      "id": "LEDGER-CLAIMS-001",
+      "path": "claims-matrix.json",
+      "sha256": "899da6519e0745b5a0952a08239cbac93fe6b029f39b41daa064f15658b39e27",
+      "role": "machine-readable atomic claim-to-source mapping"
+    }
+  ],
+  "known_open_items": [
+    "The substantive content of the sonrotoclax erratum PMID 42447415 remains unresolved.",
+    "The live SMC web application returned 403 during audit; indexed official SMC pages and documents were used, and individual NHS board implementation was not audited.",
+    "TA677 commissioning transition wording in NHS England list v1.405 requires confirmation from an unambiguous replacement or removal record before any baseline-funding claim.",
+    "NICE GID-TA11930 displays conflicting lisocabtagene identifiers ID6695 and 12299.",
+    "Acalabrutinib plus BR retains an overdue expected-publication field while the appraisal remains in progress.",
+    "All time-sensitive licence, HTA and commissioning statements require a fresh check before preview freeze and again before production publication.",
+    "Clinical extraction is predominantly abstract-only; S01 full text was checked after independent-review challenge, and no evidence extraction replaces human clinical or pharmacy review."
+  ]
+}

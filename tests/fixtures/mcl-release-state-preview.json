@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "document_code": "MHA-MCL-2026-v2.0",
+  "version": "2.0",
+  "state": "PREVIEW",
+  "evidence_cut_off": "2026-07-28",
+  "access_cut_off": "2026-07-28",
+  "publication_date": null,
+  "publication_authority": false,
+  "owner_scope_approval": false,
+  "independent_clinical_review": "PENDING",
+  "pharmacy_verification": "PENDING",
+  "territorial_model": "England access framework with separate devolved-nation notes",
+  "algorithm_model": "Evidence-first pathway with explicit access labels",
+  "audience": "Specialist healthcare professionals",
+  "quick_reference_target_pages": 3
+}

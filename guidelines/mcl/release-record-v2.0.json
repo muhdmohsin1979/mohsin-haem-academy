@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "document_code": "MHA-MCL-2026-v2.0",
+  "release_state": "PRODUCTION",
+  "publication_date": "2026-07-29",
+  "evidence_access_cut_off": "2026-07-28",
+  "reviewed_preview": {
+    "commit": "763863cf3b89d207fce3bd29c4df076e0386ab92",
+    "tree": "e4987ea5d1ee89bf0d9b307062299eb106d26af0",
+    "manifest_sha256": "be160f955203e33b3a72e4b9829328358568bb8ba5337eb9922fb2f8bdff95fb"
+  },
+  "independent_clinical_review": {
+    "decision": "PASS",
+    "accepted_by_owner": true
+  },
+  "pharmacy_verification": {
+    "decision": "COMPLETE",
+    "verifier_identity": "RETAINED_PRIVATELY",
+    "accepted_by_owner": true
+  },
+  "owner_decisions": {
+    "protected_preview_verification": "ACCEPTED",
+    "content_approval": "ACCEPTED",
+    "publication_authority": "GRANTED",
+    "production_hash_ratification": "RATIFIED"
+  },
+  "production_candidate": {
+    "manifest": "release-manifest-v2.0.json",
+    "manifest_sha256": "70da66ac5d25644df7360ad6a7d64af6060bd105769e0105e5a28a9d00f62af1",
+    "clinical_change_from_reviewed_preview": "NONE; release-control presentation only",
+    "commit": "3f6f7103f27805ab3ac8abed7ba9c67bd5e91b1e",
+    "tree": "a53f0be496dfcc3ccf2e406adc1629511a82be3c"
+  },
+  "deployment": {
+    "status": "AUTHORISED_PENDING_MERGE",
+    "merge_commit": null,
+    "production_verification": "PENDING"
+  }
+}

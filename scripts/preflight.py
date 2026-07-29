@@ -24,6 +24,7 @@ from __future__ import annotations
 
 import argparse
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -257,12 +258,37 @@ def scan_pii(path: Path, raw: str, suffix: str) -> list[str]:
     return hits
 
 
+def _curl_status_for_transport_block(url: str, timeout: float, user_agent: str) -> int | None:
+    """Retry a requests-level 403 without weakening the accepted status set."""
+    try:
+        result = subprocess.run(
+            [
+                "curl", "--silent", "--show-error", "--location", "--head",
+                "--output", "/dev/null", "--write-out", "%{http_code}",
+                "--max-time", str(timeout), "--user-agent", user_agent, "--", url,
+            ],
+            capture_output=True,
+            text=True,
+            timeout=timeout + 5,
+            check=False,
+        )
+    except (OSError, subprocess.SubprocessError):
+        return None
+    if result.returncode != 0 or not result.stdout.strip().isdigit():
+        return None
+    return int(result.stdout.strip())
+
+
 def check_link(url: str, timeout: float = 10.0) -> tuple[bool, str]:
     # Skip rate-limited or reliable-301 domains
     for dom in SKIP_DOMAINS:
         if dom in url:
             return True, "skipped"
-    headers = {"User-Agent": "mohsin-haem-academy-preflight/1.0"}
+    user_agent = (
+        "Mozilla/5.0 (compatible; mohsin-haem-academy-preflight/1.0; "
+        "+https://mohsinhaemacademy.com)"
+    )
+    headers = {"User-Agent": user_agent}
     try:
         r = requests.head(url, allow_redirects=True, timeout=timeout, headers=headers)
         if r.status_code in ALLOW_STATUS:
@@ -272,6 +298,10 @@ def check_link(url: str, timeout: float = 10.0) -> tuple[bool, str]:
         r.close()
         if r.status_code in ALLOW_STATUS:
             return True, str(r.status_code)
+        if r.status_code == 403:
+            curl_status = _curl_status_for_transport_block(url, timeout, user_agent)
+            if curl_status in ALLOW_STATUS:
+                return True, f"{curl_status} (curl transport retry)"
         return False, str(r.status_code)
     except requests.RequestException as exc:
         return False, f"error: {exc.__class__.__name__}"

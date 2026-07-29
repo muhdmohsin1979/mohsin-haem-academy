@@ -1,0 +1,363 @@
+{
+  "schema_version": 1,
+  "work_package": "MHA-MCL-V2-2026-01",
+  "cut_off": "2026-07-28T01:18:00+01:00",
+  "source_audit": "audits/2026-07-28-clinical-evidence-audit.md",
+  "claim_count": 33,
+  "claims": [
+    {
+      "id": "C01",
+      "atomic_statement": "TP53 mutation is a major adverse prognostic factor under intensive chemoimmunotherapy.",
+      "source_ids": [
+        "S04"
+      ],
+      "source_expression": "S04",
+      "evidence_location_type": "PubMed abstract; cohort molecular analysis",
+      "status": "Supported"
+    },
+    {
+      "id": "C02",
+      "atomic_statement": "MIPI53 separates newly diagnosed patients into markedly different survival groups.",
+      "source_ids": [
+        "S03"
+      ],
+      "source_expression": "S03",
+      "evidence_location_type": "PubMed abstract; development/external validation",
+      "status": "Supported; not treatment-predictive"
+    },
+    {
+      "id": "C03",
+      "atomic_statement": "Other molecular lesions may refine risk beyond TP53/Ki-67/blastoid status.",
+      "source_ids": [
+        "S05"
+      ],
+      "source_expression": "S05",
+      "evidence_location_type": "PubMed abstract; internally validated model",
+      "status": "Qualified"
+    },
+    {
+      "id": "C04",
+      "atomic_statement": "At 4.5 years, adding ASCT to the TRIANGLE ibrutinib regimen did not improve failure-free survival.",
+      "source_ids": [
+        "S06"
+      ],
+      "source_expression": "S06",
+      "evidence_location_type": "PubMed abstract; randomised phase III",
+      "status": "Supported"
+    },
+    {
+      "id": "C05",
+      "atomic_statement": "TRIANGLE’s ibrutinib-containing arms improved OS versus control but increased infections.",
+      "source_ids": [
+        "S06"
+      ],
+      "source_expression": "S06",
+      "evidence_location_type": "PubMed abstract",
+      "status": "Supported"
+    },
+    {
+      "id": "C06",
+      "atomic_statement": "Ibrutinib–rituximab improved PFS over the pooled ENRICH immunochemotherapy control.",
+      "source_ids": [
+        "S07"
+      ],
+      "source_expression": "S07",
+      "evidence_location_type": "PubMed abstract; randomised phase II/III",
+      "status": "Supported"
+    },
+    {
+      "id": "C07",
+      "atomic_statement": "ENRICH proves superiority over bendamustine–rituximab specifically.",
+      "source_ids": [
+        "S07"
+      ],
+      "source_expression": "S07",
+      "evidence_location_type": "Subgroup HR 0.91; no interaction reported",
+      "status": "Unsupported"
+    },
+    {
+      "id": "C08",
+      "atomic_statement": "ECHO improved PFS but had not demonstrated an OS advantage.",
+      "source_ids": [
+        "S08"
+      ],
+      "source_expression": "S08",
+      "evidence_location_type": "PubMed abstract; randomised phase III",
+      "status": "Supported"
+    },
+    {
+      "id": "C09",
+      "atomic_statement": "BOVen is active in untreated TP53-mutated MCL and permits MRD-based cessation.",
+      "source_ids": [
+        "S09"
+      ],
+      "source_expression": "S09",
+      "evidence_location_type": "PubMed abstract; single-arm phase II",
+      "status": "Supported as feasibility/activity; comparative superiority unproven"
+    },
+    {
+      "id": "C10",
+      "atomic_statement": "FIL_V-RBAC proves venetoclax overcomes high-risk biology.",
+      "source_ids": [
+        "S10"
+      ],
+      "source_expression": "S10",
+      "evidence_location_type": "Single-arm phase II",
+      "status": "Unsupported as causal claim"
+    },
+    {
+      "id": "C11",
+      "atomic_statement": "MRD-guided treatment cessation is feasible in selected frontline and R/R cohorts.",
+      "source_ids": [
+        "S09",
+        "S11",
+        "S12"
+      ],
+      "source_expression": "S09, S11, S12",
+      "evidence_location_type": "PubMed abstracts; single-arm studies",
+      "status": "Qualified"
+    },
+    {
+      "id": "C12",
+      "atomic_statement": "MRD negativity justifies omission of rituximab maintenance.",
+      "source_ids": [
+        "S13"
+      ],
+      "source_expression": "S13",
+      "evidence_location_type": "PubMed abstract",
+      "status": "Contradicted by available evidence"
+    },
+    {
+      "id": "C13",
+      "atomic_statement": "Pirtobrutinib has meaningful activity after cBTKi exposure.",
+      "source_ids": [
+        "S14"
+      ],
+      "source_expression": "S14",
+      "evidence_location_type": "PubMed abstract; phase I/II",
+      "status": "Supported"
+    },
+    {
+      "id": "C14",
+      "atomic_statement": "At median follow-up of 67.8 months in ZUMA-2 cohort 1, median duration of response was 36.5 months.",
+      "source_ids": [
+        "S15"
+      ],
+      "source_expression": "S15",
+      "evidence_location_type": "PubMed abstract; mature single-arm follow-up",
+      "status": "Supported"
+    },
+    {
+      "id": "C15",
+      "atomic_statement": "Liso-cel is active after BTKi exposure with low grade ≥3 CRS but material neurological toxicity/cytopenia.",
+      "source_ids": [
+        "S16"
+      ],
+      "source_expression": "S16",
+      "evidence_location_type": "PubMed abstract; phase I",
+      "status": "Supported"
+    },
+    {
+      "id": "C16",
+      "atomic_statement": "Real-world CAR-T effectiveness resembles trials, but intention-to-treat attrition and infection-related mortality are important.",
+      "source_ids": [
+        "S17",
+        "S18"
+      ],
+      "source_expression": "S17, S18",
+      "evidence_location_type": "Registry and UK ITT abstracts",
+      "status": "Supported"
+    },
+    {
+      "id": "C17",
+      "atomic_statement": "Fixed-duration glofitamab is active after prior BTKi.",
+      "source_ids": [
+        "S19"
+      ],
+      "source_expression": "S19",
+      "evidence_location_type": "PubMed abstract; phase I/II",
+      "status": "Supported"
+    },
+    {
+      "id": "C18",
+      "atomic_statement": "Sonrotoclax’s published numerical outcomes are final and unaffected by correction.",
+      "source_ids": [
+        "S20",
+        "S20C"
+      ],
+      "source_expression": "S20, S20C",
+      "evidence_location_type": "Parent record plus erratum",
+      "status": "Unresolved/qualified"
+    },
+    {
+      "id": "C19",
+      "atomic_statement": "Rituximab maintenance benefits older responders after R-CHOP.",
+      "source_ids": [
+        "S21",
+        "S13"
+      ],
+      "source_expression": "S21, S13",
+      "evidence_location_type": "Randomised trial follow-up/MRD analysis",
+      "status": "Supported"
+    },
+    {
+      "id": "C20",
+      "atomic_statement": "Rituximab maintenance added to TRIANGLE’s ibrutinib arms improves PFS without additional risk.",
+      "source_ids": [
+        "S23"
+      ],
+      "source_expression": "S23",
+      "evidence_location_type": "Non-randomised secondary analysis",
+      "status": "Partly supported; infection risk increased"
+    },
+    {
+      "id": "C21",
+      "atomic_statement": "Unadjusted cross-trial response rates establish a preferred sequence among pirtobrutinib, cellular therapy, bispecific antibodies and investigational BCL2 inhibition.",
+      "source_ids": [
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S20"
+      ],
+      "source_expression": "S14–S20",
+      "evidence_location_type": "Heterogeneous single-arm studies",
+      "status": "Unsupported"
+    },
+    {
+      "id": "C22",
+      "atomic_statement": "MCL-specific prophylaxis schedules can be derived from these efficacy abstracts.",
+      "source_ids": [
+        "S06",
+        "S16",
+        "S18",
+        "S19",
+        "S21",
+        "S22",
+        "S23"
+      ],
+      "source_expression": "S06, S16, S18, S19, S21–S23",
+      "evidence_location_type": "Toxicity reporting only",
+      "status": "Unsupported"
+    },
+    {
+      "id": "C23",
+      "atomic_statement": "MCL diagnosis requires a mature B-cell phenotype with cyclin D1 expression and/or CCND1 rearrangement; additional parameters are required for uncommon cyclin D1-negative disease.",
+      "source_ids": [
+        "S01"
+      ],
+      "source_expression": "S01",
+      "evidence_location_type": "Verified guideline full text; diagnosis section",
+      "status": "Supported"
+    },
+    {
+      "id": "C24",
+      "atomic_statement": "Morphology, Ki-67 and TP53 mutational status should be assessed for risk definition, with TP53 analysis at diagnosis and repeat assessment at relapse where feasible.",
+      "source_ids": [
+        "S01"
+      ],
+      "source_expression": "S01",
+      "evidence_location_type": "Verified guideline full text; diagnosis and risk sections",
+      "status": "Supported"
+    },
+    {
+      "id": "C25",
+      "atomic_statement": "Selected asymptomatic patients with low-risk or indolent MCL may be observed, with clinical and laboratory review every 3–6 months and imaging as clinically required.",
+      "source_ids": [
+        "S01"
+      ],
+      "source_expression": "S01",
+      "evidence_location_type": "Verified guideline full text; indolent presentation section",
+      "status": "Supported"
+    },
+    {
+      "id": "C26",
+      "atomic_statement": "After first-line systemic treatment, long-term follow-up should continue, including history, examination and laboratory assessment every 3–6 months initially.",
+      "source_ids": [
+        "S01"
+      ],
+      "source_expression": "S01",
+      "evidence_location_type": "Verified guideline full text; follow-up section",
+      "status": "Supported"
+    },
+    {
+      "id": "C27",
+      "atomic_statement": "Routine surveillance imaging should be clinically directed, and re-biopsy at relapse is recommended when feasible.",
+      "source_ids": [
+        "S01"
+      ],
+      "source_expression": "S01",
+      "evidence_location_type": "Verified guideline full text; diagnosis and follow-up sections",
+      "status": "Supported"
+    },
+    {
+      "id": "C28",
+      "atomic_statement": "For a fit adult suitable for dose-intensive treatment, when a first-line covalent BTK-inhibitor pathway is not routinely commissioned, rituximab plus high-dose cytarabine-containing induction followed by ASCT consolidation and 3 years of rituximab maintenance is a guideline-supported conventional pathway.",
+      "source_ids": [
+        "S01",
+        "S26",
+        "S27",
+        "S28"
+      ],
+      "source_expression": "S01, S26–S28",
+      "evidence_location_type": "Verified guideline full text plus randomised trial and long-term follow-up abstracts",
+      "status": "Supported; bundled strategy and local/network protocol confirmation required"
+    },
+    {
+      "id": "C29",
+      "atomic_statement": "The absence of an NHS England CDF entry does not prove that generic chemotherapy, transplant services or locally commissioned SACT are unfunded.",
+      "source_ids": [
+        "S01"
+      ],
+      "source_expression": "S01 plus official access audit",
+      "evidence_location_type": "Verified guideline full text and separately controlled NHS England access audit",
+      "status": "Supported as an access-boundary statement"
+    },
+    {
+      "id": "C30",
+      "atomic_statement": "For an adult unsuitable for dose-intensive treatment, bendamustine–rituximab is a guideline-supported first-line option, with rituximab maintenance for at least 2 years in responders.",
+      "source_ids": [
+        "S01",
+        "S25",
+        "S29"
+      ],
+      "source_expression": "S01, S25, S29",
+      "evidence_location_type": "Verified guideline full text, mixed-population randomised trial and observational cohorts",
+      "status": "Supported with qualification; StiL effect is pooled and maintenance-after-BR evidence includes observational data"
+    },
+    {
+      "id": "C31",
+      "atomic_statement": "For previously untreated MCL unsuitable for transplantation, VR-CAP improves progression-free survival compared with R-CHOP but increases haematological toxicity.",
+      "source_ids": [
+        "S31"
+      ],
+      "source_expression": "S31",
+      "evidence_location_type": "PubMed abstract; randomised phase III",
+      "status": "Supported"
+    },
+    {
+      "id": "C32",
+      "atomic_statement": "R-BAC may be considered for a carefully selected older patient fit for cytarabine-containing treatment, but it is not established as the default transplant-ineligible regimen and maintenance benefit after R-BAC has not been established.",
+      "source_ids": [
+        "S01",
+        "S30"
+      ],
+      "source_expression": "S01, S30",
+      "evidence_location_type": "Verified guideline full text and single-arm phase II follow-up abstract",
+      "status": "Qualified"
+    },
+    {
+      "id": "C33",
+      "atomic_statement": "After first-line ASCT, rituximab 375 mg/m² every 2 months for 3 years improved 4-year EFS, PFS and OS versus observation; prolonged follow-up retained the PFS benefit without a statistically significant OS difference.",
+      "source_ids": [
+        "S27",
+        "S28"
+      ],
+      "source_expression": "S27, S28",
+      "evidence_location_type": "Randomised phase III and long-term follow-up abstracts",
+      "status": "Supported"
+    }
+  ]
+}

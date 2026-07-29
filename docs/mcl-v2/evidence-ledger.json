@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "work_package": "MHA-MCL-V2-2026-01",
+  "cut_off": "2026-07-28T01:18:00+01:00",
+  "review_type": "targeted independently verified clinical evidence update; not a formal systematic review",
+  "evidence_boundary": "Scientific extraction is abstract-only except for the verified full text of S01 (PMCID PMC12541557) and the PubMed-linked VALERIA correction notice.",
+  "source_audit": "audits/2026-07-28-clinical-evidence-audit.md",
+  "record_count": 33,
+  "records": [
+    {
+      "id": "S01",
+      "bibliographic_identity_markdown": "Jerkeman M et al. *EHA–EU MCL network guidelines for diagnosis and treatment of mantle cell lymphoma.* **HemaSphere. 2025.** PMID **41132246**; DOI **10.1002/hem3.70233**",
+      "design_population": "Clinical guideline",
+      "abstract_supported_result": "Verified full text supports integrated diagnosis, morphology/Ki-67/TP53 assessment, observation of selected asymptomatic low-risk disease, re-biopsy at relapse and long-term follow-up",
+      "verification_integrity": "V2-CONFIRMED; full text checked at PMCID PMC12541557; no correction/retraction found"
+    },
+    {
+      "id": "S02",
+      "bibliographic_identity_markdown": "Jain P et al. *High-risk MCL: recognition and treatment.* **Blood. 2025.** PMID **39786418**; DOI **10.1182/blood.2023022354**",
+      "design_population": "Review",
+      "abstract_supported_result": "High-risk clinical, pathological and molecular features",
+      "verification_integrity": "V2; secondary evidence",
+      "relationship_disposition": {
+        "type": "CONTEXTUAL_NON_ATOMIC",
+        "note": "Secondary high-risk review retained for contextual recognition; no public atomic claim relies on it alone."
+      }
+    },
+    {
+      "id": "S03",
+      "bibliographic_identity_markdown": "Bastos-Boente M et al. *Development and validation of a novel prognostic index for mantle cell lymphoma integrating TP53 mutations (MIPI53).* **Br J Haematol. 2026.** PMID **42134850**; DOI **10.1111/bjh.70535**",
+      "design_population": "Development/validation; N=143 plus external cohort",
+      "abstract_supported_result": "5-year PFS 83.1%/35.4%/12.0%; external c-index 0.732",
+      "verification_integrity": "V2; no issue found"
+    },
+    {
+      "id": "S04",
+      "bibliographic_identity_markdown": "Eskelund CW et al. *TP53 mutations identify younger mantle cell lymphoma patients who do not benefit from intensive chemoimmunotherapy.* **Blood. 2017.** PMID **28819011**; DOI **10.1182/blood-2017-04-779736**",
+      "design_population": "Molecular cohort; N=183",
+      "abstract_supported_result": "TP53 OS HR 6.2; median OS 1.8 vs 12.7 years",
+      "verification_integrity": "V2; comment linked, no correction/retraction"
+    },
+    {
+      "id": "S05",
+      "bibliographic_identity_markdown": "Moia R et al. *Molecular biomarkers as key determinants of outcome in mantle cell lymphoma: results from the FIL V-RBAC trial.* **Blood Adv. 2026.** PMID **42498280**; DOI **10.1182/bloodadvances.2026020780**",
+      "design_population": "Biomarker analysis; N=132",
+      "abstract_supported_result": "Four independently associated molecular variables/model",
+      "verification_integrity": "V2; newly indexed 24 July 2026"
+    },
+    {
+      "id": "S06",
+      "bibliographic_identity_markdown": "Dreyling M et al. *Addition of autologous stem-cell transplantation to an ibrutinib-containing first-line treatment… (TRIANGLE): 4·5-year follow-up…* **Lancet. 2026.** PMID **42134356**; DOI **10.1016/S0140-6736(26)00362-4**",
+      "design_population": "Randomised phase III; N=870",
+      "abstract_supported_result": "4-year FFS 82%/81%/70%; no added ASCT benefit; both ibrutinib arms improved 4-year OS versus control; grade 3-5 infections 34%/26%/15%",
+      "verification_integrity": "V2; no issue found"
+    },
+    {
+      "id": "S07",
+      "bibliographic_identity_markdown": "Lewis DJ et al. *Ibrutinib and rituximab versus immunochemotherapy… (ENRICH).* **Lancet. 2025.** PMID **41052510**; DOI **10.1016/S0140-6736(25)01432-1**",
+      "design_population": "Randomised phase II/III; N=397",
+      "abstract_supported_result": "PFS HR 0.69",
+      "verification_integrity": "V2; no issue found"
+    },
+    {
+      "id": "S08",
+      "bibliographic_identity_markdown": "Wang M et al. *Acalabrutinib Plus Bendamustine-Rituximab in Untreated Mantle Cell Lymphoma.* **J Clin Oncol. 2025.** PMID **40311141**; DOI **10.1200/JCO-25-00690**",
+      "design_population": "ECHO, randomised phase III; N=598",
+      "abstract_supported_result": "PFS 66.4 vs 49.6 months; OS NS",
+      "verification_integrity": "V2; no issue found"
+    },
+    {
+      "id": "S09",
+      "bibliographic_identity_markdown": "Kumar A et al. *Zanubrutinib, obinutuzumab, and venetoclax for first-line treatment of mantle cell lymphoma with a TP53 mutation.* **Blood. 2025.** PMID **39437708**; DOI **10.1182/blood.2024025563**",
+      "design_population": "BOVen phase II; N=25",
+      "abstract_supported_result": "ORR 96%; CR 88%; 2-year PFS 72%",
+      "verification_integrity": "V2; no issue found"
+    },
+    {
+      "id": "S10",
+      "bibliographic_identity_markdown": "Visco C et al. *Rituximab, bendamustine, and cytarabine followed by venetoclax… (FIL_V-RBAC).* **Lancet Haematol. 2025.** PMID **40975105**; DOI **10.1016/S2352-3026(25)00252-2**",
+      "design_population": "Single-arm phase II; N=140, high-risk n=54",
+      "abstract_supported_result": "High-risk 2-year PFS 60%",
+      "verification_integrity": "V2; no issue found"
+    },
+    {
+      "id": "S11",
+      "bibliographic_identity_markdown": "Ruan J et al. *MRD-driven initial therapy of acalabrutinib and lenalidomide plus rituximab or obinutuzumab for mantle cell lymphoma.* **Blood Adv. 2026.** PMID **41289154**; DOI **10.1182/bloodadvances.2025017760**",
+      "design_population": "Phase II",
+      "abstract_supported_result": "ALR ORR 100%; molecular CR 67% after 12 cycles",
+      "verification_integrity": "V2; cohort denominators incomplete in abstract"
+    },
+    {
+      "id": "S12",
+      "bibliographic_identity_markdown": "Jerkeman M et al. *MRD-driven treatment with venetoclax-R2… MCL7 VALERIA trial.* **Blood Adv. 2024.** PMID **38113470**; DOI **10.1182/bloodadvances.2023011920**",
+      "design_population": "Phase Ib/II; N=59",
+      "abstract_supported_result": "ORR 63%; PFS 21 months; 28 stopped in molecular remission",
+      "verification_integrity": "V2-CORRECTED"
+    },
+    {
+      "id": "S12C",
+      "bibliographic_identity_markdown": "*Erratum: Jerkeman M… VALERIA trial.* **Blood Adv. 2024.** PMID **39392649**; DOI **10.1182/bloodadvances.2024013955**",
+      "design_population": "Published erratum",
+      "abstract_supported_result": "Correct lenalidomide phase II dose: 15 mg, not 20 mg",
+      "verification_integrity": "V2-CONFIRMED CORRECTION",
+      "relationship_disposition": {
+        "type": "CORRECTION_OF",
+        "source_id": "S12",
+        "note": "Corrects the VALERIA phase II lenalidomide dose to 15 mg."
+      }
+    },
+    {
+      "id": "S13",
+      "bibliographic_identity_markdown": "Hoster E et al. *Predictive Value of Minimal Residual Disease for Efficacy of Rituximab Maintenance…* **J Clin Oncol. 2024.** PMID **37992261**; DOI **10.1200/JCO.23.00899**",
+      "design_population": "Prospective planned trial analysis",
+      "abstract_supported_result": "MRD-negative PFS HR 0.38 with maintenance",
+      "verification_integrity": "V2; no issue found"
+    },
+    {
+      "id": "S14",
+      "bibliographic_identity_markdown": "Wang ML et al. *Pirtobrutinib in Covalent Bruton Tyrosine Kinase Inhibitor Pretreated Mantle-Cell Lymphoma.* **J Clin Oncol. 2023.** PMID **37192437**; DOI **10.1200/JCO.23.00562**",
+      "design_population": "BRUIN phase I/II; efficacy n=90",
+      "abstract_supported_result": "ORR 57.8%; CR 20%; DOR 21.6 months",
+      "verification_integrity": "V2; no issue found"
+    },
+    {
+      "id": "S15",
+      "bibliographic_identity_markdown": "Muñoz J et al. *Five-year follow-up… ZUMA-2, Cohorts 1 and 2.* **J Hematol Oncol. 2026.** PMID **42036693**; DOI **10.1186/s13045-026-01797-4**",
+      "design_population": "Five-year single-arm follow-up; ZUMA-2 cohort 1 N=68",
+      "abstract_supported_result": "At median follow-up 67.8 months, median DOR was 36.5 months and median OS was 46.5 months",
+      "verification_integrity": "V2; no issue found"
+    },
+    {
+      "id": "S16",
+      "bibliographic_identity_markdown": "Wang M et al. *Lisocabtagene Maraleucel in Relapsed/Refractory Mantle Cell Lymphoma… TRANSCEND NHL 001.* **J Clin Oncol. 2024.** PMID **38072625**; DOI **10.1200/JCO.23.02214**",
+      "design_population": "Phase I; 104 leukapheresed, 88 infused",
+      "abstract_supported_result": "ORR 83.1%; CR 72.3%; PFS 15.3 months",
+      "verification_integrity": "V2; no issue found"
+    },
+    {
+      "id": "S17",
+      "bibliographic_identity_markdown": "Ahmed N et al. *Real-world outcomes of brexucabtagene autoleucel… a CIBMTR analysis.* **Blood Adv. 2025.** PMID **40706035**; DOI **10.1182/bloodadvances.2024015014**",
+      "design_population": "Prospective registry; N=476",
+      "abstract_supported_result": "ORR 91%; CR 82%; 1-year PFS 63%",
+      "verification_integrity": "V2; observational"
+    },
+    {
+      "id": "S18",
+      "bibliographic_identity_markdown": "O’Reilly MA et al. *Brexucabtagene autoleucel… in the United Kingdom: A real-world intention-to-treat analysis.* **HemaSphere. 2024.** PMID **38873532**; DOI **10.1002/hem3.87**",
+      "design_population": "UK ITT; 119 approved, 83 infused",
+      "abstract_supported_result": "Infused ORR 87%; 24-month NRM 25%, mainly infection",
+      "verification_integrity": "V2; observational"
+    },
+    {
+      "id": "S19",
+      "bibliographic_identity_markdown": "Phillips TJ et al. *Glofitamab in Relapsed/Refractory Mantle Cell Lymphoma: Results From a Phase I/II Study.* **J Clin Oncol. 2025.** PMID **39365960**; DOI **10.1200/JCO.23.02470**",
+      "design_population": "Phase I/II; evaluable n=60",
+      "abstract_supported_result": "ORR 85%; CR 78.3%; prior-BTKi ORR 74.2%",
+      "verification_integrity": "V2; no issue found"
+    },
+    {
+      "id": "S20",
+      "bibliographic_identity_markdown": "Eyre TA et al. *Phase I/II Study of Sonrotoclax (BGB-11417) Monotherapy…* **J Clin Oncol. 2026.** PMID **42385124**; DOI **10.1200/JCO-26-00550**",
+      "design_population": "Phase I/II; efficacy n=103",
+      "abstract_supported_result": "Abstract reports ORR 52.4%; PFS 6.5 months",
+      "verification_integrity": "V2-CORRECTED; correction content unresolved"
+    },
+    {
+      "id": "S20C",
+      "bibliographic_identity_markdown": "Eyre TA et al. *Erratum: Phase I/II Study of Sonrotoclax…* **J Clin Oncol. 2026.** PMID **42447415**; DOI **10.1200/JCO-26-01699**",
+      "design_population": "Published erratum",
+      "abstract_supported_result": "Correction relationship established; corrected field not available in checked metadata",
+      "verification_integrity": "V2-CONFIRMED CORRECTION"
+    },
+    {
+      "id": "S21",
+      "bibliographic_identity_markdown": "Kluin-Nelemans HC et al. *Treatment of Older Patients With Mantle Cell Lymphoma: Long-Term Follow-Up of the Randomized European MCL Elderly Trial.* **J Clin Oncol. 2020.** PMID **31804876**; DOI **10.1200/JCO.19.01294**",
+      "design_population": "Randomised phase III",
+      "abstract_supported_result": "After R-CHOP, maintenance PFS 5.4 vs 1.9 years",
+      "verification_integrity": "V2; no issue found"
+    },
+    {
+      "id": "S22",
+      "bibliographic_identity_markdown": "Wang ML et al. *Ibrutinib plus Bendamustine and Rituximab in Untreated Mantle-Cell Lymphoma.* **N Engl J Med. 2022.** PMID **35657079**; DOI **10.1056/NEJMoa2201817**",
+      "design_population": "SHINE randomised; N=523",
+      "abstract_supported_result": "PFS 80.6 vs 52.9 months; OS similar",
+      "verification_integrity": "V2; comments linked, no correction/retraction"
+    },
+    {
+      "id": "S23",
+      "bibliographic_identity_markdown": "Ladetto M et al. *Rituximab Maintenance Added to Ibrutinib-Containing Therapy in Younger, Untreated Patients With Mantle Cell Lymphoma: Results From the TRIANGLE Trial.* **J Clin Oncol. 2026.** PMID **42447409**; DOI **10.1200/JCO-26-00705**",
+      "design_population": "Non-randomised secondary TRIANGLE analysis",
+      "abstract_supported_result": "Higher 4-year PFS and grade 3–5 infections with maintenance",
+      "verification_integrity": "V2; residual confounding"
+    },
+    {
+      "id": "S24",
+      "bibliographic_identity_markdown": "Dreyling M et al. *Ibrutinib combined with immunochemotherapy with or without autologous stem-cell transplantation… (TRIANGLE).* **Lancet. 2024.** PMID **38705160**; DOI **10.1016/S0140-6736(24)00184-3**",
+      "design_population": "Randomised open-label phase III; N=870; untreated stage II–IV MCL, age 18–65 years, suitable for ASCT",
+      "abstract_supported_result": "At 31 months, 3-year FFS was 88% with ibrutinib plus ASCT, 86% with ibrutinib without ASCT and 72% with conventional ASCT; conventional ASCT superiority over ibrutinib without ASCT was not shown",
+      "verification_integrity": "V2-CONFIRMED PubMed/Crossref; comment linked; no correction/retraction found",
+      "relationship_disposition": {
+        "type": "CONTEXTUAL_PRECURSOR",
+        "source_id": "S06",
+        "note": "Primary TRIANGLE report retained as trial-design and early-results context; the public 4.5-year atomic claims use S06."
+      }
+    },
+    {
+      "id": "S25",
+      "bibliographic_identity_markdown": "Rummel MJ et al. *Bendamustine plus rituximab versus CHOP plus rituximab as first-line treatment for patients with indolent and mantle-cell lymphomas.* **Lancet. 2013.** PMID **23433739**; DOI **10.1016/S0140-6736(12)61763-2**",
+      "design_population": "Randomised open-label phase III; mixed indolent lymphoma and MCL population",
+      "abstract_supported_result": "Pooled trial results favoured BR over R-CHOP for PFS and several toxicities; the abstract does not provide an MCL-specific treatment effect",
+      "verification_integrity": "V2-CORRECTED PubMed/Crossref; published erratum DOI 10.1016/S0140-6736(13)60801-6 identified but substantive correction not retrieved; keep pooled findings qualified"
+    },
+    {
+      "id": "S26",
+      "bibliographic_identity_markdown": "Hermine O et al. *High-Dose Cytarabine and Autologous Stem-Cell Transplantation in Mantle Cell Lymphoma: Long-Term Follow-Up of the Randomized MCL Younger Trial.* **J Clin Oncol. 2023.** PMID **36469833**; DOI **10.1200/JCO.22.01780**",
+      "design_population": "Randomised phase III long-term update; advanced MCL, age under 66 years",
+      "abstract_supported_result": "The bundled R-CHOP/R-DHAP, cytarabine-containing conditioning and ASCT strategy improved median time to treatment failure to 8.4 versus 3.9 years compared with R-CHOP/ASCT",
+      "verification_integrity": "V2-CONFIRMED PubMed/Crossref; no correction/retraction found"
+    },
+    {
+      "id": "S27",
+      "bibliographic_identity_markdown": "Le Gouill S et al. *Rituximab after Autologous Stem-Cell Transplantation in Mantle-Cell Lymphoma.* **N Engl J Med. 2017.** PMID **28953447**; DOI **10.1056/NEJMoa1701769**",
+      "design_population": "Randomised phase III; 240 patients randomised after ASCT",
+      "abstract_supported_result": "Rituximab 375 mg/m² every 2 months for 3 years improved 4-year EFS, PFS and OS versus observation",
+      "verification_integrity": "V2-CONFIRMED PubMed/Crossref; no correction/retraction found"
+    },
+    {
+      "id": "S28",
+      "bibliographic_identity_markdown": "Sarkozy C et al. *Long-Term Follow-Up of Rituximab Maintenance in Young Patients With Mantle-Cell Lymphoma Included in the LYMA Trial.* **J Clin Oncol. 2024.** PMID **38109684**; DOI **10.1200/JCO.23.01586**",
+      "design_population": "Long-term LYMA trial follow-up; median follow-up 7.5 years",
+      "abstract_supported_result": "Seven-year PFS was 78.5% with rituximab maintenance versus 47.4% with observation; the prolonged-follow-up OS difference was not statistically significant",
+      "verification_integrity": "V2-CONFIRMED PubMed/Crossref; no correction/retraction found"
+    },
+    {
+      "id": "S29",
+      "bibliographic_identity_markdown": "Martin P et al. *Treatment Outcomes and Roles of Transplantation and Maintenance Rituximab in Patients With Previously Untreated Mantle Cell Lymphoma: Results From Large Real-World Cohorts.* **J Clin Oncol. 2023.** PMID **35763708**; DOI **10.1200/JCO.21.02698**",
+      "design_population": "Retrospective real-world cohorts; Flatiron N=4,216 plus independent validation N=1,168",
+      "abstract_supported_result": "Maintenance rituximab after BR was associated with longer real-world time to next treatment and OS than BR alone; observational design does not prove causality",
+      "verification_integrity": "V2-CONFIRMED PubMed/Crossref; comment linked; no correction/retraction found"
+    },
+    {
+      "id": "S30",
+      "bibliographic_identity_markdown": "Tisi MC et al. *Long-term follow-up of rituximab plus bendamustine and cytarabine in older patients with newly diagnosed MCL.* **Blood Adv. 2023.** PMID **37171620**; DOI **10.1182/bloodadvances.2023009744**",
+      "design_population": "Single-arm phase II follow-up; N=57 previously untreated older patients",
+      "abstract_supported_result": "R-BAC produced CR 91%, 7-year PFS 55% and OS 63%; no maintenance was given",
+      "verification_integrity": "V2-CONFIRMED PubMed/Crossref; no correction/retraction found"
+    },
+    {
+      "id": "S31",
+      "bibliographic_identity_markdown": "Robak T et al. *Bortezomib-based therapy for newly diagnosed mantle-cell lymphoma.* **N Engl J Med. 2015.** PMID **25738670**; DOI **10.1056/NEJMoa1412096**",
+      "design_population": "Randomised phase III; N=487 transplant-ineligible or not considered for transplantation",
+      "abstract_supported_result": "VR-CAP improved independently assessed median PFS to 24.7 versus 14.4 months compared with R-CHOP, with more neutropenia and thrombocytopenia",
+      "verification_integrity": "V2-CONFIRMED PubMed/Crossref; comments linked; no correction/retraction found"
+    }
+  ],
+  "unresolved_integrity_items": [
+    "The substantive content of the sonrotoclax erratum PMID 42447415 remains unresolved and must be checked before its parent abstract numbers are used in definitive publication wording."
+  ],
+  "supplementary_source_audit": "audits/2026-07-28-first-line-pathway-evidence.md"
+}

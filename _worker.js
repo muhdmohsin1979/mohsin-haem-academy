@@ -13,6 +13,7 @@ const BLOCKED_FILES = new Set([
   "/_config.yml",
   "/guidelines/mcl/guideline.docx",
   "/guidelines/mcl/guideline.pdf",
+
   "/assets/figures/mcl-access-status-chart.excalidraw",
   "/assets/figures/mcl-access-status-chart.png",
   "/assets/figures/mcl-access-status-chart.svg",
