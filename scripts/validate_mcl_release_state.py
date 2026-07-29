@@ -90,7 +90,7 @@ def main() -> int:
             "pharmacy_verifier_identity": "RETAINED_PRIVATELY",
             "live_production_merge_commit": "60e9e2b26f2d2d7f9cb3c1fbfee86d1fcc5dc124",
             "live_production_manifest_sha256": "70da66ac5d25644df7360ad6a7d64af6060bd105769e0105e5a28a9d00f62af1",
-            "change_candidate_index_sha256": "05e5926573356b9cb3d3f9ec23da63a5ae50bc1943a43c55a7aaf52b1baa5061",
+            "change_candidate_index_sha256": "0f92a28d1e1822bc4cc7dba19923e2e1ddd90a6de8b57e01a32847a67461c6cd",
         }
         for key, expected in required.items():
             if value.get(key) != expected:

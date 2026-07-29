@@ -41,8 +41,8 @@
     "clinical_change": "NONE",
     "downloadable_artefact_change": "NONE",
     "base_manifest_sha256": "70da66ac5d25644df7360ad6a7d64af6060bd105769e0105e5a28a9d00f62af1",
-    "candidate_manifest_sha256": "1143d438f0c352ba995491823266370816ce94dabf619975a1afdf161471ac62",
-    "candidate_index_sha256": "05e5926573356b9cb3d3f9ec23da63a5ae50bc1943a43c55a7aaf52b1baa5061",
+    "candidate_manifest_sha256": "7491d8dd1258b3319e2ed5b4c5ff664f119982e4824d71a26a6b38a3d06fc1b8",
+    "candidate_index_sha256": "0f92a28d1e1822bc4cc7dba19923e2e1ddd90a6de8b57e01a32847a67461c6cd",
     "owner_approval": "PENDING",
     "deployment": "BLOCKED_PENDING_APPROVAL"
   }

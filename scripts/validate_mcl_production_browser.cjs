@@ -16,15 +16,18 @@ const target = process.argv[2]
     await desktop.goto(`file://${target}`, { waitUntil: "load" });
     const desktopResult = await desktop.evaluate(() => {
       const anchor = document.querySelector(".anchor-nav");
-      const sidebar = document.querySelector(".mcl-sidebar");
-      const layout = document.querySelector(".mcl-layout");
-      if (!anchor || !sidebar || !layout) return { missing: true };
+      const sidebar = document.querySelector(".gl-sidebar");
+      const layout = document.querySelector(".gl-layout");
+      const siteNav = document.querySelector(".site-nav-shell");
+      if (!anchor || !sidebar || !layout || !siteNav) return { missing: true };
       const pageScrollBefore = window.scrollY;
       sidebar.scrollTop = 120;
       return {
         missing: false,
         anchorPosition: getComputedStyle(anchor).position,
         anchorTopStyle: getComputedStyle(anchor).top,
+        siteNavPosition: getComputedStyle(siteNav).position,
+        siteNavTopStyle: getComputedStyle(siteNav).top,
         sidebarPosition: getComputedStyle(sidebar).position,
         sidebarOverflowY: getComputedStyle(sidebar).overflowY,
         sidebarClientHeight: sidebar.clientHeight,
@@ -48,7 +51,7 @@ const target = process.argv[2]
       const object = document.querySelector(".algorithm-preview");
       const mobileLink = document.querySelector(".mobile-algorithm-link");
       const warning = document.querySelector("aside.warning");
-      const sidebar = document.querySelector(".mcl-sidebar");
+      const sidebar = document.querySelector(".gl-sidebar");
       return {
         viewportWidth: window.innerWidth,
         clientWidth: document.documentElement.clientWidth,
@@ -57,6 +60,8 @@ const target = process.argv[2]
         mobileLinkDisplay: mobileLink ? getComputedStyle(mobileLink).display : null,
         warningRole: warning && warning.getAttribute("role"),
         sidebarDisplay: sidebar ? getComputedStyle(sidebar).display : null,
+        sidebarPosition: sidebar ? getComputedStyle(sidebar).position : null,
+        sidebarOverflowY: sidebar ? getComputedStyle(sidebar).overflowY : null,
         robots: document.querySelector('meta[name="robots"]')?.content,
         visibleText: document.body.innerText,
         overflowElements: [...document.querySelectorAll("body *")].filter((element) => {
@@ -77,8 +82,10 @@ const target = process.argv[2]
     const failures = [];
     if (desktopResult.missing) failures.push("desktop CLL-pattern navigation structure is missing");
     if (!desktopResult.missing && desktopResult.anchorPosition !== "sticky") failures.push(`anchor navigation is not sticky: ${desktopResult.anchorPosition}`);
-    if (!desktopResult.missing && desktopResult.anchorTopStyle !== "0px") failures.push(`anchor navigation top is not locked: ${desktopResult.anchorTopStyle}`);
-    if (!desktopResult.missing && Math.abs(stickyTop) > 1) failures.push(`anchor navigation did not remain at viewport top after scroll: ${stickyTop}`);
+    if (!desktopResult.missing && desktopResult.siteNavPosition !== "sticky") failures.push(`Academy navigation is not sticky: ${desktopResult.siteNavPosition}`);
+    if (!desktopResult.missing && desktopResult.siteNavTopStyle !== "0px") failures.push(`Academy navigation top is not locked: ${desktopResult.siteNavTopStyle}`);
+    if (!desktopResult.missing && desktopResult.anchorTopStyle !== "56px") failures.push(`anchor navigation does not follow CLL top offset: ${desktopResult.anchorTopStyle}`);
+    if (!desktopResult.missing && Math.abs(stickyTop - 56) > 1) failures.push(`anchor navigation did not remain below the Academy nav after scroll: ${stickyTop}`);
     if (!desktopResult.missing && desktopResult.sidebarPosition !== "sticky") failures.push(`sidebar is not sticky: ${desktopResult.sidebarPosition}`);
     if (!desktopResult.missing && desktopResult.sidebarOverflowY !== "auto") failures.push(`sidebar does not scroll independently: ${desktopResult.sidebarOverflowY}`);
     if (!desktopResult.missing && desktopResult.sidebarScrollHeight <= desktopResult.sidebarClientHeight) failures.push("sidebar content does not create an independent scroll region");
@@ -91,7 +98,9 @@ const target = process.argv[2]
     if (result.objectDisplay !== "none") failures.push("embedded long algorithm remains visible at 390px");
     if (result.mobileLinkDisplay === "none" || result.mobileLinkDisplay === null) failures.push("full-size mobile algorithm link is hidden");
     if (result.warningRole !== "note") failures.push("publication notice role changed");
-    if (result.sidebarDisplay !== "none") failures.push(`desktop sidebar did not collapse on mobile: ${result.sidebarDisplay}`);
+    if (result.sidebarDisplay === "none") failures.push("CLL-pattern sidebar disappeared on mobile instead of becoming an in-flow card");
+    if (result.sidebarPosition !== "static") failures.push(`mobile sidebar does not follow CLL static pattern: ${result.sidebarPosition}`);
+    if (result.sidebarOverflowY !== "visible") failures.push(`mobile sidebar retains an independent scroll region: ${result.sidebarOverflowY}`);
     if (result.robots !== "index, follow") failures.push(`production robots directive is incorrect: ${result.robots}`);
     for (const phrase of ["PUBLISHED 29 JULY 2026", "Published specialist guideline", "Publication authority", "TRUE — 29 JULY 2026"]) {
       if (!result.visibleText.includes(phrase)) failures.push(`missing visible phrase: ${phrase}`);
