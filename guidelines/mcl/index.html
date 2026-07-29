@@ -50,6 +50,29 @@
       nav ul { columns:1; }
     }
     @media print { .preview { color:black; border:2px solid black; background:white; } body { background:white; } }
+
+    html { scroll-behavior:smooth; }
+    .anchor-nav { position:sticky; top:0; z-index:100; margin:1rem 0; padding:.55rem .7rem; box-shadow:0 4px 14px rgba(23,32,51,.12); }
+    .anchor-nav h2 { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    .anchor-nav ul { display:flex; gap:.25rem; columns:auto; margin:0; padding:0; overflow-x:auto; list-style:none; scrollbar-width:thin; }
+    .anchor-nav li { flex:0 0 auto; }
+    .anchor-nav a { display:block; padding:.42rem .65rem; border-radius:6px; white-space:nowrap; font:700 .78rem/1.3 Arial,sans-serif; text-decoration:none; }
+    .anchor-nav a:hover { color:white; background:var(--navy); }
+    .mcl-layout { display:grid; grid-template-columns:minmax(0,1fr) 280px; gap:2rem; align-items:start; }
+    .mcl-content { min-width:0; }
+    .mcl-content > section { scroll-margin-top:4.8rem; }
+    .mcl-sidebar { position:sticky; top:4.35rem; align-self:start; max-height:calc(100vh - 5.35rem); overflow-y:auto; padding-right:.25rem; scrollbar-width:thin; }
+    .mcl-sidebar::-webkit-scrollbar { width:6px; }
+    .mcl-sidebar::-webkit-scrollbar-thumb { background:var(--line); border-radius:3px; }
+    .sidebar-nav { padding:.85rem; }
+    .sidebar-nav h2 { margin:.1rem 0 .65rem; padding-bottom:.45rem; font:700 .84rem/1.3 Arial,sans-serif; text-transform:uppercase; letter-spacing:.06em; }
+    .sidebar-nav ul { columns:auto; margin:0; padding:0; list-style:none; }
+    .sidebar-nav a { display:block; padding:.38rem .45rem; border-radius:5px; font:400 .79rem/1.35 Arial,sans-serif; text-decoration:none; }
+    .sidebar-nav a:hover { color:white; background:var(--navy); }
+    @media (max-width:900px) {
+      .mcl-layout { grid-template-columns:1fr; }
+      .mcl-sidebar { display:none; }
+    }
   </style>
 </head>
 <body>
@@ -65,7 +88,7 @@
     Independent clinical review and pharmacy verification are complete. Use current SmPCs, local SACT protocols and jurisdiction-specific commissioning criteria.
   </aside>
   <p><strong>Publication model:</strong> England access framework with separate devolved-nation notes. Clinical evidence and access status are deliberately presented as separate determinations.</p>
-  <nav aria-label="MCL guideline sections">
+  <nav class="anchor-nav" aria-label="MCL guideline sections">
     <h2>Contents</h2>
     <ul>
       <li><a href="#scope">1. Scope and use</a></li>
@@ -85,6 +108,8 @@
 <li><a href="#release-control">Release control</a></li>
     </ul>
   </nav>
+  <div class="mcl-layout">
+    <div class="mcl-content">
   <section id="review-artefacts">
     <h2>Guideline downloads</h2>
     <p>Controlled publication files for specialist healthcare professionals.</p>
@@ -293,6 +318,30 @@
       </tbody>
     </table>
   </section>
+    </div>
+    <aside class="mcl-sidebar" aria-label="Independently scrolling section navigation">
+    <nav class="sidebar-nav" aria-label="MCL guideline sections sidebar">
+    <h2>Contents</h2>
+    <ul>
+      <li><a href="#scope">1. Scope and use</a></li>
+<li><a href="#diagnosis">2. Diagnosis and minimum dataset</a></li>
+<li><a href="#staging-risk">3. Staging and risk</a></li>
+<li><a href="#observation">4. Observation where treatment is not required</a></li>
+<li><a href="#first-line-fit">5. First-line pathway for younger or treatment-fit adults</a></li>
+<li><a href="#first-line-older">6. First-line pathway for older or transplant-ineligible adults</a></li>
+<li><a href="#high-risk">7. TP53-mutated and other high-risk MCL</a></li>
+<li><a href="#relapsed">8. Relapsed or refractory pathway</a></li>
+<li><a href="#response-mrd">9. Response assessment, MRD and maintenance</a></li>
+<li><a href="#supportive-care">10. Supportive care and treatment safety</a></li>
+<li><a href="#follow-up">11. Follow-up and MDT documentation</a></li>
+<li><a href="#jurisdictions">12. Regulatory and access boundary</a></li>
+<li><a href="#access-status">Regulatory and access matrix</a></li>
+<li><a href="#evidence-references">Evidence references</a></li>
+<li><a href="#release-control">Release control</a></li>
+    </ul>
+  </nav>
+    </aside>
+  </div>
 </main>
 <footer class="page-footer">
   <strong>Mohsin Haematology Academy</strong> · Accountable owner: Dr Muhammad Mohsin, Consultant Haematologist · MHA-MCL-2026-v2.0 · published guideline

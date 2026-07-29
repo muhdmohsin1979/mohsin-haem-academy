@@ -79,6 +79,28 @@ def main() -> int:
             raise ValueError("Ratified production manifest is not bound to the release state")
         validate_production_candidate()
         validate_production_publication()
+    elif state == "PRODUCTION_CHANGE_CANDIDATE":
+        required = {
+            "publication_authority": True,
+            "owner_scope_approval": True,
+            "independent_clinical_review": "PASS",
+            "pharmacy_verification": "COMPLETE",
+            "production_hash_ratification": "RATIFIED",
+            "change_candidate_owner_approval": "PENDING",
+            "pharmacy_verifier_identity": "RETAINED_PRIVATELY",
+            "live_production_merge_commit": "60e9e2b26f2d2d7f9cb3c1fbfee86d1fcc5dc124",
+            "live_production_manifest_sha256": "70da66ac5d25644df7360ad6a7d64af6060bd105769e0105e5a28a9d00f62af1",
+            "change_candidate_index_sha256": "05e5926573356b9cb3d3f9ec23da63a5ae50bc1943a43c55a7aaf52b1baa5061",
+        }
+        for key, expected in required.items():
+            if value.get(key) != expected:
+                raise ValueError(f"Invalid production-change control {key}: {value.get(key)!r}")
+        expected_manifest_hash = value.get("change_candidate_manifest_sha256")
+        actual_manifest_hash = hashlib.sha256(PRODUCTION_MANIFEST.read_bytes()).hexdigest()
+        if expected_manifest_hash != actual_manifest_hash:
+            raise ValueError("Presentation-change candidate manifest is not bound to the release state")
+        validate_production_candidate()
+        validate_production_publication()
     else:
         raise ValueError(f"Unsupported or unauthorised MCL release state: {state!r}")
 

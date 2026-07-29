@@ -12,8 +12,8 @@
   "clinical_change_from_reviewed_preview": "NONE; release-control presentation only",
   "artefacts": {
     "index.html": {
-      "bytes": 80895,
-      "sha256": "3740dd50bb9e7aa0993570f10b08957b21e7e9b59ae013cc1470e24dbee24096"
+      "bytes": 84143,
+      "sha256": "05e5926573356b9cb3d3f9ec23da63a5ae50bc1943a43c55a7aaf52b1baa5061"
     },
     "guideline-v2.0.docx": {
       "bytes": 57748,

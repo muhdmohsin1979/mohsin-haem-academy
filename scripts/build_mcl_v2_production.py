@@ -20,6 +20,7 @@ sys.path.insert(0, str(ROOT))
 
 from scripts.build_mcl_v2_preview import artefact_record
 from scripts.generate_mcl_v2_documents import canonicalise_docx
+from scripts.generate_mcl_v2_release import apply_cll_navigation_pattern
 
 PREVIEW = ROOT / "docs" / "mcl-v2" / "preview"
 OUTPUT = ROOT / "guidelines" / "mcl"
@@ -199,6 +200,7 @@ def transform_html(source: Path, target: Path) -> None:
         if old not in text:
             raise AssertionError(f"Expected reviewed HTML release label is missing: {old[:70]}")
         text = text.replace(old, new)
+    text = apply_cll_navigation_pattern(text, "MCL guideline sections")
     target.write_text(text, encoding="utf-8")
 
 

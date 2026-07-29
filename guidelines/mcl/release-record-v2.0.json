@@ -32,8 +32,18 @@
     "tree": "a53f0be496dfcc3ccf2e406adc1629511a82be3c"
   },
   "deployment": {
-    "status": "AUTHORISED_PENDING_MERGE",
-    "merge_commit": null,
-    "production_verification": "PENDING"
+    "status": "LIVE",
+    "merge_commit": "60e9e2b26f2d2d7f9cb3c1fbfee86d1fcc5dc124",
+    "production_verification": "EXACT_BYTES_VERIFIED"
+  },
+  "presentation_change_candidate": {
+    "scope": "CLL-pattern sticky section navigation and independently scrolling desktop sidebar",
+    "clinical_change": "NONE",
+    "downloadable_artefact_change": "NONE",
+    "base_manifest_sha256": "70da66ac5d25644df7360ad6a7d64af6060bd105769e0105e5a28a9d00f62af1",
+    "candidate_manifest_sha256": "1143d438f0c352ba995491823266370816ce94dabf619975a1afdf161471ac62",
+    "candidate_index_sha256": "05e5926573356b9cb3d3f9ec23da63a5ae50bc1943a43c55a7aaf52b1baa5061",
+    "owner_approval": "PENDING",
+    "deployment": "BLOCKED_PENDING_APPROVAL"
   }
 }

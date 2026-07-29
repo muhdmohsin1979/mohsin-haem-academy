@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "document_code": "MHA-MCL-2026-v2.0",
-  "state": "PRODUCTION",
+  "state": "PRODUCTION_CHANGE_CANDIDATE",
   "publication_authority": true,
   "owner_scope_approval": true,
   "independent_clinical_review": "PASS",
@@ -13,8 +13,12 @@
   "reviewed_preview_manifest_sha256": "be160f955203e33b3a72e4b9829328358568bb8ba5337eb9922fb2f8bdff95fb",
   "production_candidate_commit": "3f6f7103f27805ab3ac8abed7ba9c67bd5e91b1e",
   "production_candidate_tree": "a53f0be496dfcc3ccf2e406adc1629511a82be3c",
-  "production_manifest_sha256": "70da66ac5d25644df7360ad6a7d64af6060bd105769e0105e5a28a9d00f62af1",
+  "live_production_merge_commit": "60e9e2b26f2d2d7f9cb3c1fbfee86d1fcc5dc124",
+  "live_production_manifest_sha256": "70da66ac5d25644df7360ad6a7d64af6060bd105769e0105e5a28a9d00f62af1",
+  "change_candidate_manifest_sha256": "1143d438f0c352ba995491823266370816ce94dabf619975a1afdf161471ac62",
+  "change_candidate_index_sha256": "05e5926573356b9cb3d3f9ec23da63a5ae50bc1943a43c55a7aaf52b1baa5061",
   "production_hash_ratification": "RATIFIED",
+  "change_candidate_owner_approval": "PENDING",
   "pharmacy_verifier_identity": "RETAINED_PRIVATELY",
-  "release_policy": "Exact production candidate commit, tree, manifest and artefact hashes ratified by the owner on 29 July 2026. Publication authorised."
+  "change_scope": "Presentation only: CLL-pattern sticky section navigation and independently scrolling desktop sidebar. Clinical units and downloadable artefacts unchanged."
 }

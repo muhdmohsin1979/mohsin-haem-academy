@@ -305,6 +305,56 @@ def release_control_table(state: dict[str, object]) -> str:
     )
 
 
+def apply_cll_navigation_pattern(document: str, aria_label: str) -> str:
+    style = '''
+    html { scroll-behavior:smooth; }
+    .anchor-nav { position:sticky; top:0; z-index:100; margin:1rem 0; padding:.55rem .7rem; box-shadow:0 4px 14px rgba(23,32,51,.12); }
+    .anchor-nav h2 { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    .anchor-nav ul { display:flex; gap:.25rem; columns:auto; margin:0; padding:0; overflow-x:auto; list-style:none; scrollbar-width:thin; }
+    .anchor-nav li { flex:0 0 auto; }
+    .anchor-nav a { display:block; padding:.42rem .65rem; border-radius:6px; white-space:nowrap; font:700 .78rem/1.3 Arial,sans-serif; text-decoration:none; }
+    .anchor-nav a:hover { color:white; background:var(--navy); }
+    .mcl-layout { display:grid; grid-template-columns:minmax(0,1fr) 280px; gap:2rem; align-items:start; }
+    .mcl-content { min-width:0; }
+    .mcl-content > section { scroll-margin-top:4.8rem; }
+    .mcl-sidebar { position:sticky; top:4.35rem; align-self:start; max-height:calc(100vh - 5.35rem); overflow-y:auto; padding-right:.25rem; scrollbar-width:thin; }
+    .mcl-sidebar::-webkit-scrollbar { width:6px; }
+    .mcl-sidebar::-webkit-scrollbar-thumb { background:var(--line); border-radius:3px; }
+    .sidebar-nav { padding:.85rem; }
+    .sidebar-nav h2 { margin:.1rem 0 .65rem; padding-bottom:.45rem; font:700 .84rem/1.3 Arial,sans-serif; text-transform:uppercase; letter-spacing:.06em; }
+    .sidebar-nav ul { columns:auto; margin:0; padding:0; list-style:none; }
+    .sidebar-nav a { display:block; padding:.38rem .45rem; border-radius:5px; font:400 .79rem/1.35 Arial,sans-serif; text-decoration:none; }
+    .sidebar-nav a:hover { color:white; background:var(--navy); }
+    @media (max-width:900px) {
+      .mcl-layout { grid-template-columns:1fr; }
+      .mcl-sidebar { display:none; }
+    }
+'''
+    document = document.replace("  </style>", style + "  </style>", 1)
+    opening = f'  <nav aria-label="{aria_label}">'
+    start = document.find(opening)
+    if start < 0:
+        raise ValueError(f"MCL section navigation is missing: {aria_label}")
+    end = document.find("  </nav>", start)
+    if end < 0:
+        raise ValueError("MCL section navigation is not closed")
+    end += len("  </nav>")
+    navigation = document[start:end]
+    anchor_navigation = navigation.replace(opening, f'  <nav class="anchor-nav" aria-label="{aria_label}">', 1)
+    sidebar_navigation = navigation.replace(opening, f'    <nav class="sidebar-nav" aria-label="{aria_label} sidebar">', 1)
+    layout_open = anchor_navigation + '\n  <div class="mcl-layout">\n    <div class="mcl-content">'
+    document = document[:start] + layout_open + document[end:]
+    closing = f'''    </div>
+    <aside class="mcl-sidebar" aria-label="Independently scrolling section navigation">
+{sidebar_navigation}
+    </aside>
+  </div>
+</main>'''
+    if document.count("</main>") != 1:
+        raise ValueError("MCL document must contain exactly one main element")
+    return document.replace("</main>", closing, 1)
+
+
 def render_preview(
     source: str,
     treatments: list[dict[str, object]],
@@ -312,7 +362,7 @@ def render_preview(
     evidence_records: list[dict[str, object]],
     evidence_boundary: str,
 ) -> str:
-    return f'''<!doctype html>
+    rendered = f'''<!doctype html>
 <html lang="en-GB">
 <head>
   <meta charset="utf-8">
@@ -440,6 +490,7 @@ def render_preview(
 </body>
 </html>
 '''
+    return apply_cll_navigation_pattern(rendered, "MCL preview sections")
 
 
 def build_preview(
