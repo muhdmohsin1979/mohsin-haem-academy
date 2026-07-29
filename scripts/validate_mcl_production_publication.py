@@ -74,8 +74,14 @@ def validate_production_publication() -> None:
         raise AssertionError("Presentation-change tree is not the ratified candidate")
     if presentation.get("owner_approval") != "RATIFIED":
         raise AssertionError("Presentation change lacks owner ratification")
-    if presentation.get("deployment") != "AUTHORISED_PENDING_MERGE":
-        raise AssertionError("Presentation change is not authorised for merge")
+    if presentation.get("deployment") != "LIVE_EXACT_BYTES_AND_BEHAVIOUR_VERIFIED":
+        raise AssertionError("Presentation-change deployment is not verified live")
+    if presentation.get("merge_commit") != "2df2cc2417e6e9c4f8e53cf81c2351d1a4078faa":
+        raise AssertionError("Presentation-change merge commit is not recorded")
+    if presentation.get("verified_index_sha256") != "0f92a28d1e1822bc4cc7dba19923e2e1ddd90a6de8b57e01a32847a67461c6cd":
+        raise AssertionError("Live presentation HTML verification hash changed")
+    if presentation.get("verified_manifest_sha256") != "7491d8dd1258b3319e2ed5b4c5ff664f119982e4824d71a26a6b38a3d06fc1b8":
+        raise AssertionError("Live presentation manifest verification hash changed")
     print("MCL production publication gate: PASS hubs=2 sitemap=1 v2_routes=EXPOSED")
 
 
