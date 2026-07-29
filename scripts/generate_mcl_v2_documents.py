@@ -508,11 +508,11 @@ def build_quickref(output: Path, treatments: list[dict[str, object]]) -> None:
     canonicalise_docx(output)
 
 
-def build_documents(output_dir: Path = DEFAULT_OUTPUT) -> dict[str, Path]:
+def build_documents(output_dir: Path = DEFAULT_OUTPUT, state_path: Path = STATE) -> dict[str, Path]:
     source_html = SOURCE.read_text(encoding="utf-8")
     if "[VERIFY]" in source_html or re.search(r"<script\b|\son[a-z]+\s*=", source_html, re.IGNORECASE):
         raise ValueError("Canonical MCL source contains unresolved or active markup")
-    state = load_json(STATE)
+    state = load_json(state_path)
     require_preview_state(state)
     matrix = load_json(STATUS)
     ledger = load_json(EVIDENCE)

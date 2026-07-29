@@ -13,6 +13,7 @@ const scenePath = process.argv[2]
   ? path.resolve(process.argv[2])
   : path.join(root, "docs", "mcl-v2", "preview", "algorithm-working.excalidraw");
 const scene = JSON.parse(fs.readFileSync(scenePath, "utf8"));
+const productionCandidate = path.basename(scenePath) === "algorithm-v2.0.excalidraw";
 const temp = fs.mkdtempSync(path.join(os.tmpdir(), "mcl-excalidraw-audit-"));
 const bundle = path.join(temp, "excalidraw.js");
 
@@ -35,7 +36,7 @@ async function main() {
     const page = await browser.newPage({ viewport: { width: 1040, height: 2100 } });
     await page.setContent("<!doctype html><meta charset='utf-8'><style>html,body{margin:0}svg{display:block}</style>");
     await page.addScriptTag({ path: bundle });
-    const audit = await page.evaluate(async (rawScene) => {
+    const audit = await page.evaluate(async ({ rawScene, productionCandidate }) => {
       const restored = window.ExcalOfficial.restore(rawScene, null, null, {
         refreshDimensions: true,
         repairBindings: true,
@@ -80,16 +81,22 @@ async function main() {
 
       const fullText = svg.textContent || "";
       const required = [
-        "MANTLE CELL LYMPHOMA", "WORKING PREVIEW", "NOT FOR CLINICAL USE",
+        "MANTLE CELL LYMPHOMA",
         "YOUNGER / TREATMENT-FIT", "TP53-MUTATED / HIGH RISK",
         "EXACTLY ONE PREVIOUS LINE", "COVALENT-BTKi INTOLERANCE",
         "COVALENT-BTKi PROGRESSION", "TA677 CDF MANAGED ACCESS",
         "TRIAL / EARLY / EXCEPTIONAL ROUTES", "PHARMACY AND SUPPORTIVE-CARE HOLD POINT",
       ];
+      required.push(...(productionCandidate
+        ? ["PUBLISHED 29 JULY 2026"]
+        : ["WORKING PREVIEW", "NOT FOR CLINICAL USE"]));
       for (const phrase of required) {
         if (!fullText.includes(phrase)) failures.push(`Rendered SVG missing: ${phrase}`);
       }
-      for (const forbidden of ["AUTHORISED FOR PUBLICATION", "PUBLISHED v2.0"]) {
+      const forbiddenStatuses = productionCandidate
+        ? ["WORKING PREVIEW", "NOT FOR CLINICAL USE"]
+        : ["AUTHORISED FOR PUBLICATION", "PUBLISHED v2.0"];
+      for (const forbidden of forbiddenStatuses) {
         if (fullText.includes(forbidden)) failures.push(`Rendered SVG has forbidden status: ${forbidden}`);
       }
 
@@ -107,7 +114,7 @@ async function main() {
       if (stateJoiningArrows.length) failures.push("Arrow detected between independent R/R classification states");
 
       return { failures, textNodeCount: boxes.length, stateCount: states.length };
-    }, scene);
+    }, { rawScene: scene, productionCandidate });
 
     if (audit.failures.length) throw new Error(audit.failures.join("\n"));
     console.log(`official MCL Excalidraw render audit: PASS (${audit.textNodeCount} text lines; ${audit.stateCount} independent states)`);

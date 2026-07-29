@@ -10,6 +10,7 @@ from docx import Document
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
+PREVIEW_STATE = ROOT / "tests" / "fixtures" / "mcl-release-state-preview.json"
 
 from scripts.generate_mcl_v2_documents import build_documents
 
@@ -26,8 +27,8 @@ def document_text(path: Path) -> str:
 class MCLV2DocumentGenerationTests(unittest.TestCase):
     def test_docx_bytes_and_package_metadata_are_canonical(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
-            first = build_documents(Path(directory) / "first")
-            second = build_documents(Path(directory) / "second")
+            first = build_documents(Path(directory) / "first", PREVIEW_STATE)
+            second = build_documents(Path(directory) / "second", PREVIEW_STATE)
             for key in ("guideline", "quickref"):
                 self.assertEqual(first[key].read_bytes(), second[key].read_bytes(), key)
                 with zipfile.ZipFile(first[key]) as package:
@@ -45,7 +46,7 @@ class MCLV2DocumentGenerationTests(unittest.TestCase):
 
     def test_builds_non_public_guideline_and_three_part_quick_reference(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
-            outputs = build_documents(Path(directory))
+            outputs = build_documents(Path(directory), PREVIEW_STATE)
 
             guideline = outputs["guideline"]
             quickref = outputs["quickref"]

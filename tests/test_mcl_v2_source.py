@@ -8,6 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
+PREVIEW_STATE = ROOT / "tests" / "fixtures" / "mcl-release-state-preview.json"
 
 from scripts.generate_mcl_v2_release import build_preview
 
@@ -19,7 +20,7 @@ class MCLV2PreviewGenerationTests(unittest.TestCase):
             metadata = build_preview(
                 source_path=ROOT / "sources" / "mcl" / "source-v2.0.html",
                 status_path=ROOT / "sources" / "mcl" / "status-matrix-v2.0.json",
-                state_path=ROOT / "sources" / "mcl" / "release-state-v2.0.json",
+                state_path=PREVIEW_STATE,
                 evidence_path=ROOT / "docs" / "mcl-v2" / "evidence-ledger.json",
                 claims_path=ROOT / "docs" / "mcl-v2" / "claims-matrix.json",
                 output_path=output,
@@ -64,7 +65,7 @@ class MCLV2PreviewGenerationTests(unittest.TestCase):
     def test_preview_declares_mobile_safe_layout(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory) / "index.html"
-            build_preview(output_path=output)
+            build_preview(output_path=output, state_path=PREVIEW_STATE)
             html = output.read_text(encoding="utf-8")
 
             self.assertIn(".sources a { overflow-wrap:anywhere; }", html)

@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "document_code": "MHA-MCL-2026-v2.0",
+  "status": "AUTHORISED FOR PUBLICATION 29 JULY 2026",
+  "publication_authority": true,
+  "evidence_access_cut_off": "2026-07-28",
+  "reviewed_preview": {
+    "commit": "763863cf3b89d207fce3bd29c4df076e0386ab92",
+    "tree": "e4987ea5d1ee89bf0d9b307062299eb106d26af0",
+    "manifest_sha256": "be160f955203e33b3a72e4b9829328358568bb8ba5337eb9922fb2f8bdff95fb"
+  },
+  "clinical_change_from_reviewed_preview": "NONE; release-control presentation only",
+  "artefacts": {
+    "index.html": {
+      "bytes": 80895,
+      "sha256": "3740dd50bb9e7aa0993570f10b08957b21e7e9b59ae013cc1470e24dbee24096"
+    },
+    "guideline-v2.0.docx": {
+      "bytes": 57748,
+      "sha256": "3bb18357688a33546c2a06a0b1ce35fbf8bf018a0587aba5b5f1e37082a9f7f5"
+    },
+    "guideline-v2.0.pdf": {
+      "bytes": 356422,
+      "sha256": "6fdbceaa60933cde3e742891e5dfd77492db0d7b86c21be7e2c20ba8c20c60f4",
+      "pages": 19,
+      "source_docx_sha256": "3bb18357688a33546c2a06a0b1ce35fbf8bf018a0587aba5b5f1e37082a9f7f5"
+    },
+    "quickref-v2.0.docx": {
+      "bytes": 39257,
+      "sha256": "764a863c687e2ee16a76d425abd7f85726faac4f56e50700498ac8779843adad"
+    },
+    "quickref-v2.0.pdf": {
+      "bytes": 112830,
+      "sha256": "d7912bdbb77af8cbd40f4b59ffb17d54d4f5e4302e7deb7b41ccee6947cf1b9f",
+      "pages": 3,
+      "source_docx_sha256": "764a863c687e2ee16a76d425abd7f85726faac4f56e50700498ac8779843adad"
+    },
+    "algorithm-v2.0.svg": {
+      "bytes": 17223,
+      "sha256": "95f61943ccd9c5330230e62e1e2323a60bcd51947c83846c867c4ec3e774a22b"
+    },
+    "algorithm-v2.0.excalidraw": {
+      "bytes": 62586,
+      "sha256": "af23a60966beaa14903f8c9c3e98baa0bd32d14ecc48be6cb8d2548ce83b173e"
+    }
+  }
+}
