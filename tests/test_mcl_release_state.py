@@ -15,7 +15,7 @@ class MCLReleaseStateGateTests(unittest.TestCase):
         active_lines = [line.split("#", 1)[0].strip() for line in workflow.splitlines()]
         self.assertIn("run: python scripts/validate_mcl_release_state.py", active_lines)
 
-    def test_production_requires_ratified_release_and_publication_surfaces(self) -> None:
+    def test_ratified_presentation_change_is_bound_for_production(self) -> None:
         result = subprocess.run(
             [sys.executable, str(ROOT / "scripts" / "validate_mcl_release_state.py")],
             cwd=ROOT,

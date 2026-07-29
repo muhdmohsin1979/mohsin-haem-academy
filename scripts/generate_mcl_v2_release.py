@@ -305,6 +305,104 @@ def release_control_table(state: dict[str, object]) -> str:
     )
 
 
+def apply_cll_navigation_pattern(document: str, aria_label: str) -> str:
+    style = '''
+    html { scroll-behavior:smooth; }
+    .container { width:min(1160px,100%); margin:0 auto; padding:0 24px; }
+    .site-nav-shell { position:sticky; top:0; z-index:100; padding:0; border:0; border-bottom:1px solid var(--line); border-radius:0; background:white; box-shadow:0 1px 3px rgba(23,32,51,.1); }
+    .site-nav-inner { display:flex; align-items:center; gap:20px; height:56px; }
+    .site-brand { display:flex; align-items:center; gap:10px; min-width:0; color:var(--ink); text-decoration:none; }
+    .site-brand-mark { display:grid; width:32px; height:32px; flex:0 0 auto; place-items:center; border-radius:8px; color:white; background:var(--navy); font:700 .84rem/1 Arial,sans-serif; }
+    .site-brand-copy { line-height:1.1; }
+    .site-brand-copy strong { display:block; font:700 .95rem/1.15 Arial,sans-serif; }
+    .site-brand-copy small { display:block; margin-top:3px; color:#687083; font:400 .68rem/1 Arial,sans-serif; }
+    .site-links { display:flex; align-items:center; gap:4px; margin-left:auto; }
+    .site-links a { padding:7px 10px; border-radius:6px; color:#4f586a; font:600 .78rem/1 Arial,sans-serif; text-decoration:none; }
+    .site-links a:hover,.site-links .active { color:var(--navy); background:#eef2f7; }
+    .site-links .nav-cta { color:white; background:var(--red); }
+    .anchor-nav { position:sticky; top:56px; z-index:90; margin:0; padding:0; border:0; border-bottom:1px solid var(--line); border-radius:0; background:white; }
+    .anchor-nav-inner { display:flex; gap:4px; padding:10px 0; overflow-x:auto; scrollbar-width:none; }
+    .anchor-nav-inner::-webkit-scrollbar { display:none; }
+    .anchor-nav-inner a { flex:0 0 auto; padding:5px 10px; border-radius:6px; color:#687083; white-space:nowrap; font:500 .79rem/1.35 Arial,sans-serif; text-decoration:none; }
+    .anchor-nav-inner a:hover { color:var(--navy); background:#eef2f7; }
+    .page-hero { padding:2.3rem max(1rem,calc((100% - 1120px)/2)); }
+    .gl-layout { display:grid; grid-template-columns:minmax(0,1fr) 280px; gap:40px; align-items:start; padding:32px 0 64px; }
+    .gl-main { width:auto; min-width:0; margin:0; }
+    .gl-main > section { scroll-margin-top:8.4rem; }
+    .gl-sidebar { position:sticky; top:130px; align-self:start; display:flex; flex-direction:column; gap:16px; max-height:calc(100vh - 150px); overflow-y:auto; padding-right:4px; scrollbar-width:thin; }
+    .gl-sidebar::-webkit-scrollbar { width:6px; }
+    .gl-sidebar::-webkit-scrollbar-thumb { background:var(--line); border-radius:3px; }
+    .sidebar-card { flex-shrink:0; overflow:hidden; border:1px solid var(--line); border-radius:10px; background:white; }
+    .sidebar-card-header { padding:10px 14px; color:var(--navy); background:#eef2f7; font:700 .72rem/1.3 Arial,sans-serif; text-transform:uppercase; letter-spacing:.08em; }
+    .sidebar-card-body { padding:14px; }
+    .sidebar-toc { display:flex; flex-direction:column; gap:2px; columns:auto; margin:0; padding:0; list-style:none; }
+    .sidebar-toc a { display:block; padding:5px 8px; border-radius:6px; color:#687083; font:400 .8rem/1.4 Arial,sans-serif; text-decoration:none; }
+    .sidebar-toc a:hover { color:var(--navy); background:#eef2f7; }
+    @media (max-width:900px) {
+      .gl-layout { grid-template-columns:1fr; }
+      .gl-sidebar { position:static; max-height:none; overflow:visible; }
+    }
+    @media (max-width:600px) {
+      .container { padding-left:16px; padding-right:16px; }
+      .site-nav-inner { gap:10px; }
+      .site-brand-copy strong { font-size:.84rem; white-space:nowrap; }
+      .site-brand-copy small,.site-links a:not(.active) { display:none; }
+      .anchor-nav-inner { padding:8px 0; }
+    }
+'''
+    document = document.replace("  </style>", style + "  </style>", 1)
+    opening = f'  <nav aria-label="{aria_label}">'
+    start = document.find(opening)
+    if start < 0:
+        raise ValueError(f"MCL section navigation is missing: {aria_label}")
+    end = document.find("  </nav>", start)
+    if end < 0:
+        raise ValueError("MCL section navigation is not closed")
+    end += len("  </nav>")
+    navigation = document[start:end]
+    links = re.findall(r'<a\s+href="#[^"]+">.*?</a>', navigation, flags=re.DOTALL)
+    if not links:
+        raise ValueError("MCL section navigation contains no links")
+    anchor_navigation = '''<div class="anchor-nav">
+  <div class="container">
+    <div class="anchor-nav-inner" aria-label="''' + html.escape(aria_label, quote=True) + '''">
+      ''' + "\n      ".join(links) + '''
+    </div>
+  </div>
+</div>'''
+    site_navigation = '''<nav class="site-nav-shell" aria-label="Primary navigation">
+  <div class="container site-nav-inner">
+    <a class="site-brand" href="/">
+      <span class="site-brand-mark" aria-hidden="true">MHA</span>
+      <span class="site-brand-copy"><strong>Mohsin Haematology Academy</strong><small>Evidence — Education — Practice</small></span>
+    </a>
+    <div class="site-links">
+      <a href="/tools">Tools</a><a class="active" href="/guidelines">Guidelines</a><a href="/education">Education</a><a href="/journal-club">Journal Club</a><a href="/about">About</a><a class="nav-cta" href="/haemcalc">Open HaemCalc</a>
+    </div>
+  </div>
+</nav>'''
+    sidebar_navigation = '''<div class="sidebar-card">
+      <div class="sidebar-card-header">On This Page</div>
+      <div class="sidebar-card-body">
+        <ul class="sidebar-toc">
+          ''' + "\n          ".join(re.findall(r'<li>.*?</li>', navigation, flags=re.DOTALL)) + '''
+        </ul>
+      </div>
+    </div>'''
+    document = document[:start] + document[end:]
+    document = document.replace("<header>", site_navigation + "\n" + anchor_navigation + '\n<header class="page-hero">', 1)
+    document = document.replace('<main id="main-content">', '<div class="container">\n  <div class="gl-layout">\n    <main class="gl-main" id="main-content">', 1)
+    closing = f'''    </main>
+    <aside class="gl-sidebar" aria-label="Independently scrolling section navigation">
+    {sidebar_navigation}
+    </aside>
+  </div>
+</div>'''
+    if document.count("</main>") != 1:
+        raise ValueError("MCL document must contain exactly one main element")
+    return document.replace("</main>", closing, 1)
+
+
 def render_preview(
     source: str,
     treatments: list[dict[str, object]],
@@ -312,7 +410,7 @@ def render_preview(
     evidence_records: list[dict[str, object]],
     evidence_boundary: str,
 ) -> str:
-    return f'''<!doctype html>
+    rendered = f'''<!doctype html>
 <html lang="en-GB">
 <head>
   <meta charset="utf-8">
@@ -440,6 +538,7 @@ def render_preview(
 </body>
 </html>
 '''
+    return apply_cll_navigation_pattern(rendered, "MCL preview sections")
 
 
 def build_preview(

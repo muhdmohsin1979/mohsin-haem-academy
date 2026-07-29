@@ -43,7 +43,11 @@ class MCLV2PreviewGenerationTests(unittest.TestCase):
             self.assertGreaterEqual(metadata["treatment_count"], 10)
 
             self.assertIn('<aside class="warning" role="note"', html)
-            self.assertIn('<nav aria-label="MCL preview sections">', html)
+            self.assertIn('<div class="anchor-nav">', html)
+            self.assertIn('class="anchor-nav-inner" aria-label="MCL preview sections"', html)
+            self.assertIn('class="gl-layout"', html)
+            self.assertIn('class="gl-sidebar"', html)
+            self.assertIn('class="sidebar-toc"', html)
             self.assertIn('<ul class="artefact-links">', html)
             self.assertIn('id="evidence-boundary"', html)
             self.assertIn("Scientific extraction is abstract-only except where the controlled evidence ledger states otherwise.", html)
