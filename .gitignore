@@ -39,3 +39,4 @@ dist/
 build/
 .cache/
 .wrangler/
+tools/excalidraw-validator/node_modules/

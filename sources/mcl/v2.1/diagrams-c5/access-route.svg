@@ -1,0 +1,102 @@
+<svg class="pathway" viewBox="0 0 1020 1359" role="img" aria-labelledby="algo-access-t algo-access-d" xmlns="http://www.w3.org/2000/svg">
+<title id="algo-access-t">Access-route decision flow for a licensed treatment without routine commissioning</title>
+<desc id="algo-access-d">Six-step sequence from NICE technology appraisal through managed access, interim funding, trials and company schemes to funding requests, with the individual and cohort branches separated and the differing tests in England, Scotland, Wales and Northern Ireland.</desc>
+<defs><marker id="algo-access-ah" markerWidth="9" markerHeight="9" refX="7.5" refY="3.2" orient="auto"><path d="M0,0 L0,6.4 L7.5,3.2 z" fill="#1B2A4A"/></marker></defs>
+<rect width="1020" height="1359" fill="#F7F8FA"/>
+<rect x="230.0" y="14.0" width="560.0" height="88.5" rx="8" fill="#1B2A4A" stroke="#1B2A4A" stroke-width="1"/>
+<text x="241.0" y="31.0" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="white">A licensed treatment is clinically indicated. Is there a route?</text>
+<text x="241.0" y="47.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#dfe6f2">Marketing authorisation, HTA recommendation and commissioning are three separate</text>
+<text x="241.0" y="61.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#dfe6f2">determinations. Work through them in order — most access questions are answered before the</text>
+<text x="241.0" y="76.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#dfe6f2">fourth step.</text>
+<line x1="510.0" y1="102.5" x2="510.0" y2="124.5" stroke="#1B2A4A" stroke-width="2" marker-end="url(#algo-access-ah)"/>
+<rect x="160.0" y="128.5" width="700.0" height="106.0" rx="8" fill="#fdf8ee" stroke="#8a6410" stroke-width="2"/>
+<text x="171.0" y="145.5" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1B2A4A">1. Is there a positive NICE technology appraisal?</text>
+<text x="171.0" y="161.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">If yes, funding is mandatory within 90 days of publication, or 30 days for a product that held an early-access</text>
+<text x="171.0" y="176.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">designation or was appraised by the fast-track route. Complete the Blueteq form for the drug and indication. Stop</text>
+<text x="171.0" y="190.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">here.</text>
+<circle cx="175.6" cy="201.0" r="4.6" fill="#2e6b3e"/>
+<text x="186.0" y="205.0" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#2e6b3e">Routine NHS England commissioning</text>
+<line x1="510.0" y1="234.5" x2="510.0" y2="256.5" stroke="#1B2A4A" stroke-width="2" marker-end="url(#algo-access-ah)"/>
+<rect x="160.0" y="260.5" width="700.0" height="106.0" rx="8" fill="#fdf8ee" stroke="#8a6410" stroke-width="2"/>
+<text x="171.0" y="277.5" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1B2A4A">2. Is it recommended for managed access?</text>
+<text x="171.0" y="293.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">Cancer Drugs Fund or Innovative Medicines Fund entry, with a Blueteq prior-approval form and mandatory SACT data</text>
+<text x="171.0" y="308.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">collection. Time-limited, and the exit position matters — if NICE does not recommend at exit, the company must</text>
+<text x="171.0" y="322.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">continue supplying existing patients at its own expense, but no new patients are funded.</text>
+<circle cx="175.6" cy="333.0" r="4.6" fill="#8a6410"/>
+<text x="186.0" y="337.0" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#8a6410">Managed access</text>
+<line x1="510.0" y1="366.5" x2="510.0" y2="388.5" stroke="#1B2A4A" stroke-width="2" marker-end="url(#algo-access-ah)"/>
+<rect x="160.0" y="392.5" width="700.0" height="91.5" rx="8" fill="#fdf8ee" stroke="#8a6410" stroke-width="2"/>
+<text x="171.0" y="409.5" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1B2A4A">3. Is there positive NICE draft guidance, and is this a cancer drug?</text>
+<text x="171.0" y="425.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">Interim funding runs from publication of positive draft guidance until final guidance. Note the asymmetry: a NEGATIVE</text>
+<text x="171.0" y="440.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">draft creates no interim funding, which is exactly the window in which company schemes are used.</text>
+<circle cx="175.6" cy="450.5" r="4.6" fill="#8a6410"/>
+<text x="186.0" y="454.5" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#8a6410">Interim funding</text>
+<line x1="510.0" y1="484.0" x2="510.0" y2="506.0" stroke="#1B2A4A" stroke-width="2" marker-end="url(#algo-access-ah)"/>
+<rect x="160.0" y="510.0" width="700.0" height="91.5" rx="8" fill="#fdf8ee" stroke="#8a6410" stroke-width="2"/>
+<text x="171.0" y="527.0" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1B2A4A">4. Is there an open trial with a UK site?</text>
+<text x="171.0" y="543.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">For several agents in this guideline this is the only documented route. Confirm recruitment status and site activation</text>
+<text x="171.0" y="557.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">with the principal investigator — registry records lag reality.</text>
+<circle cx="175.6" cy="568.0" r="4.6" fill="#707070"/>
+<text x="186.0" y="572.0" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#707070">Clinical trial</text>
+<line x1="510.0" y1="601.5" x2="510.0" y2="623.5" stroke="#1B2A4A" stroke-width="2" marker-end="url(#algo-access-ah)"/>
+<rect x="160.0" y="627.5" width="700.0" height="120.5" rx="8" fill="#fdf8ee" stroke="#8a6410" stroke-width="2"/>
+<text x="171.0" y="644.5" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1B2A4A">5. Is there a company early access or free-of-charge scheme?</text>
+<text x="171.0" y="660.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">Ask the company and ask your chief pharmacist what agreements the trust already holds. These are not publicly listed</text>
+<text x="171.0" y="675.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">and there is no national register. Governance: chief pharmacist approval, medicines management committee support, a</text>
+<text x="171.0" y="689.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">written company-trust agreement with pre-specified exit arrangements, supply through pharmacy only, and consent that</text>
+<text x="171.0" y="704.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">records that treatment stops if the company withdraws supply.</text>
+<circle cx="175.6" cy="714.5" r="4.6" fill="#8b2e2e"/>
+<text x="186.0" y="718.5" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#8b2e2e">Company scheme</text>
+<line x1="510.0" y1="748.0" x2="510.0" y2="770.0" stroke="#1B2A4A" stroke-width="2" marker-end="url(#algo-access-ah)"/>
+<rect x="160.0" y="774.0" width="700.0" height="59.5" rx="8" fill="#fdf8ee" stroke="#8a6410" stroke-width="2"/>
+<text x="171.0" y="791.0" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1B2A4A">6. No scheme. Is this one atypical patient, or a group?</text>
+<text x="171.0" y="807.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">This is the fork that most often goes wrong.</text>
+<rect x="24.0" y="877.5" width="468.0" height="26" rx="6" fill="#1B2A4A"/><text x="258.0" y="895.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="white">One atypical patient</text>
+<rect x="528.0" y="877.5" width="468.0" height="26" rx="6" fill="#C41E3A"/><text x="762.0" y="895.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="white">A defined group of patients</text>
+<path d="M 370.0 833.5 V 853.5 H 258.0 V 873.5" fill="none" stroke="#1B2A4A" stroke-width="2" marker-end="url(#algo-access-ah)"/>
+<rect x="281.0" y="846.0" width="66.0" height="15" rx="7" fill="white" stroke="#D7DCE2"/>
+<text x="314.0" y="857.5" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="700" fill="#1B2A4A">individual</text>
+<path d="M 650.0 833.5 V 853.5 H 762.0 V 873.5" fill="none" stroke="#1B2A4A" stroke-width="2" marker-end="url(#algo-access-ah)"/>
+<rect x="684.2" y="846.0" width="43.6" height="15" rx="7" fill="white" stroke="#D7DCE2"/>
+<text x="706.0" y="857.5" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="700" fill="#1B2A4A">cohort</text>
+<rect x="24.0" y="917.5" width="468.0" height="219.0" rx="8" fill="white" stroke="#D7DCE2" stroke-width="1"/>
+<text x="35.0" y="934.5" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1B2A4A">Individual funding request — and the test differs by nation</text>
+<text x="35.0" y="950.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">ENGLAND: clinical exceptionality. The patient must be materially different</text>
+<text x="35.0" y="965.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">from the typical population and likely to gain benefit a typical patient</text>
+<text x="35.0" y="979.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">would not.</text>
+<text x="35.0" y="994.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">SCOTLAND, PACS Tier 2: no exceptionality test. Show that SMC-accepted options</text>
+<text x="35.0" y="1008.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">were tried or are unsuitable, and that this patient will do at least as well</text>
+<text x="35.0" y="1023.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">as the population SMC considered. Arguing exceptionality weakens the</text>
+<text x="35.0" y="1037.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">application. Tier 2 also covers medicines still awaiting SMC evaluation.</text>
+<text x="35.0" y="1052.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">WALES, IPFR: limb (b), for an intervention never appraised, needs significant</text>
+<text x="35.0" y="1066.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">clinical benefit and reasonable value for money only — atypicality is not</text>
+<text x="35.0" y="1081.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">required.</text>
+<text x="35.0" y="1095.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">NORTHERN IRELAND: consultant-only application to the IFR Regional Scrutiny</text>
+<text x="35.0" y="1110.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">Committee.</text>
+<rect x="24.0" y="1150.5" width="468.0" height="88.5" rx="8" fill="#fff1f3" stroke="#C41E3A" stroke-width="2"/>
+<text x="35.0" y="1167.5" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#8b2e2e">Write it for the right jurisdiction</text>
+<text x="35.0" y="1183.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">A letter drafted for an English panel argues the patient is not</text>
+<text x="35.0" y="1198.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">representative. A Scottish PACS panel is being asked the opposite. The same</text>
+<text x="35.0" y="1212.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">letter sent unaltered argues against itself.</text>
+<rect x="528.0" y="917.5" width="468.0" height="132.0" rx="8" fill="#fff1f3" stroke="#C41E3A" stroke-width="2"/>
+<text x="539.0" y="934.5" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#8b2e2e">An individual funding request is the wrong instrument</text>
+<text x="539.0" y="950.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">NHS England policy reclassifies any request where other patients could derive</text>
+<text x="539.0" y="965.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">similar benefit as a request for a new clinical policy. If you can name a</text>
+<text x="539.0" y="979.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">second similar patient, the request will fail — and should.</text>
+<text x="539.0" y="994.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">No guideline can name an individual funding request as the route for a</text>
+<text x="539.0" y="1008.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">defined population. The guideline cohort is itself proof of non-</text>
+<text x="539.0" y="1023.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">exceptionality.</text>
+<rect x="528.0" y="1063.5" width="468.0" height="132.0" rx="8" fill="white" stroke="#D7DCE2" stroke-width="1"/>
+<text x="539.0" y="1080.5" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1B2A4A">Use a cohort mechanism instead</text>
+<text x="539.0" y="1096.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">Clinical policy development through the ICB or NHS England specialised</text>
+<text x="539.0" y="1111.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">commissioning.</text>
+<text x="539.0" y="1125.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">A free-of-charge scheme for an identified cohort, under the governance above.</text>
+<text x="539.0" y="1140.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">In Wales, One Wales for a defined cohort where use is unlicensed or off-label</text>
+<text x="539.0" y="1154.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">— decision OW09 already covers bendamustine with rituximab in mantle cell</text>
+<text x="539.0" y="1169.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">lymphoma.</text>
+<rect x="24.0" y="1253.0" width="972.0" height="88.5" rx="8" fill="#fff1f3" stroke="#C41E3A" stroke-width="2"/>
+<text x="35.0" y="1270.0" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#8b2e2e">Absence of a commissioned route is not absence of access</text>
+<text x="35.0" y="1286.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">Company early access and free-of-charge schemes are not publicly listed, there is no national register, and most UK schemes are company-run rather than run through</text>
+<text x="35.0" y="1300.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">any regulatory pathway. A null result in a public search is not evidence that no scheme exists. Ask the company and ask pharmacy before telling a patient there is</text>
+<text x="35.0" y="1315.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">nothing available.</text>
+</svg>

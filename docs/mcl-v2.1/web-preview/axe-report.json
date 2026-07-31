@@ -1,0 +1,36 @@
+{
+  "target": "file:///Users/uhammadmohsin/Documents/Hermes%20/Projects/mohsin-haem-academy/docs/mcl-v2.1/web-preview/index.html",
+  "axeVersion": "4.10.2",
+  "viewports": {
+    "375": {
+      "version": "4.10.2",
+      "passes": 46,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 547
+        },
+        {
+          "id": "link-in-text-block",
+          "nodes": 16
+        }
+      ]
+    },
+    "1280": {
+      "version": "4.10.2",
+      "passes": 46,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 308
+        },
+        {
+          "id": "link-in-text-block",
+          "nodes": 16
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "document_code": "MHA-MCL-2026-v2.1-PREVIEW-RC1",
+  "status": "REVIEWED_WEB_PREVIEW_INCOMPLETE_RELEASE_FAMILY",
+  "publication_authority": false,
+  "reviewed_substantive_candidate": {
+    "file": "sources/mcl/v2.1/reviewed-candidate-c4.html",
+    "sha256": "f16545565f7cb0c3619aa2ccff87f1fecd2ecc5718d4dae4d0960a09e9f77957",
+    "bytes": 326777
+  },
+  "accessibility_corrected_candidate": {
+    "file": "sources/mcl/v2.1/accessibility-corrected-c5.html",
+    "sha256": "3b073bcaa8887018702cb2af53d4e655c59b82e7c7e2333548feb14d3bb4fba2",
+    "bytes": 326777,
+    "change_from_reviewed_candidate": "One generated diagram colour token; no clinical-content change"
+  },
+  "review_attestation": {
+    "file": "sources/mcl/v2.1/review-attestation.json",
+    "sha256": "50a0c32a92b13f75aba9d932d249af3315c05ec35efee35ac4f5d5448ccd23e8"
+  },
+  "accessibility_assurance": {
+    "status": "PASS",
+    "axe_version": "4.10.2",
+    "viewports": [
+      "1280",
+      "375"
+    ],
+    "report_sha256": "0a748aed7a4ac9bd6c9bd633358422cdf499b30140acd880f1f2215ad3a7f213"
+  },
+  "clinical_change_from_reviewed_candidate": "NONE; one generated diagram colour token plus release-control presentation",
+  "known_release_blocks": [
+    "OFFICIAL_EXCALIDRAW_RENDER_NOT_VERIFIED",
+    "EXACT_PRODUCTION_HASH_RATIFICATION_PENDING"
+  ],
+  "artefacts": {
+    "index.html": {
+      "bytes": 329013,
+      "sha256": "3dfa186d299c9489794be2728b02fac888efbcfe068b4755f11a2e19d50c0a27"
+    },
+    "first-line.svg": {
+      "bytes": 14633,
+      "sha256": "af6614f99263739ebf578f7d2c83d9d2db32489c1e51c05583d91c463d0233f8"
+    },
+    "high-risk.svg": {
+      "bytes": 13227,
+      "sha256": "a62d85d28f946bcc799f6da017f7d06df25f86b7150bfa61b311a39804b77f0c"
+    },
+    "relapsed.svg": {
+      "bytes": 17492,
+      "sha256": "fea22291fe74786a9bd9d3679e4a37b59e3d0b6877e49cd0967ba901554fc710"
+    },
+    "access-route.svg": {
+      "bytes": 15770,
+      "sha256": "0f290edcefb46dbf63adcf8baca13949e8fcff050ef746f6ae33f54e628476f1"
+    },
+    "first-line.excalidraw": {
+      "bytes": 93099,
+      "sha256": "ed569b806650cf66acd28003dea9b2f08bf9a4ea0bca39dbc632c6ed6cca4cf2"
+    },
+    "high-risk.excalidraw": {
+      "bytes": 86465,
+      "sha256": "c918dd6569b7b28068107c6840527f5eb0321add511b9edafe30a9d5c3dcb1d7"
+    },
+    "relapsed.excalidraw": {
+      "bytes": 111942,
+      "sha256": "100b13a2762b989c659ead8dbf19ea0dd2d9207156e6e43814733ee9714d4ef0"
+    },
+    "access-route.excalidraw": {
+      "bytes": 97468,
+      "sha256": "30017b168fbc15c46d17bb9e82c762ec05f8a002fb1c837a3aa1ea26c86bae01"
+    },
+    "guideline-v2.1-reviewed.docx": {
+      "bytes": 102335,
+      "sha256": "d574df6f47bdbd34a2c09ca84f3abb4b87be2fecbd287a87e1cacecd86fc7f24"
+    },
+    "guideline-v2.1-reviewed.pdf": {
+      "bytes": 820371,
+      "sha256": "77c8ca6dc0536b9391e75cd68cdb4599ce2e0d50b981f1bdf3a3596ed7b3cb65"
+    },
+    "quickref-v2.1-reviewed.docx": {
+      "bytes": 6901,
+      "sha256": "f79eec8ceef432d9d8f5d5ee1c4333c3378b0ca0ef2a71369bd696b6864e66c2"
+    },
+    "quickref-v2.1-reviewed.pdf": {
+      "bytes": 92746,
+      "sha256": "d510e0d1ebbcad545a5433aa6eda477155fae580929650d9ff0e09288a011a72"
+    },
+    "manifest-reviewed-documents.json": {
+      "bytes": 865,
+      "sha256": "820b34272b2061b1b30494fe923986d41ef75a36d8f2cae80be9d7af90ce0541"
+    },
+    "axe-report.json": {
+      "bytes": 738,
+      "sha256": "0a748aed7a4ac9bd6c9bd633358422cdf499b30140acd880f1f2215ad3a7f213"
+    }
+  }
+}

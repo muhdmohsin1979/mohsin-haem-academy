@@ -1,0 +1,14 @@
+{
+  "name": "mcl-excalidraw-validator",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Pinned toolchain for the official Excalidraw render gate (MCL v2.1).",
+  "type": "module",
+  "dependencies": {
+    "@excalidraw/excalidraw": "0.18.1",
+    "esbuild": "0.25.10",
+    "playwright-core": "1.55.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  }
+}

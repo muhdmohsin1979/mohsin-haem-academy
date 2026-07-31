@@ -1,0 +1,99 @@
+<svg class="pathway" viewBox="0 0 1020 1126" role="img" aria-labelledby="algo-1l-t algo-1l-d" xmlns="http://www.w3.org/2000/svg">
+<title id="algo-1l-t">First-line treatment algorithm for mantle cell lymphoma</title>
+<desc id="algo-1l-d">Decision flow from confirmed diagnosis through transplant-eligibility assessment to first-line options, split into transplant-suitable and older or transplant-ineligible branches, each option labelled with its England access class.</desc>
+<defs><marker id="algo-1l-ah" markerWidth="9" markerHeight="9" refX="7.5" refY="3.2" orient="auto"><path d="M0,0 L0,6.4 L7.5,3.2 z" fill="#1B2A4A"/></marker></defs>
+<rect width="1020" height="1126" fill="#F7F8FA"/>
+<rect x="310.0" y="14.0" width="400.0" height="88.5" rx="8" fill="#1B2A4A" stroke="#1B2A4A" stroke-width="1"/>
+<text x="321.0" y="31.0" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="white">Confirmed mantle cell lymphoma, treatment indicated</text>
+<text x="321.0" y="47.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#dfe6f2">Diagnosis integrated on morphology, immunophenotype and cyclin D1</text>
+<text x="321.0" y="61.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#dfe6f2">or a CCND-family rearrangement. Record Ki-67 and TP53 before</text>
+<text x="321.0" y="76.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#dfe6f2">planning.</text>
+<line x1="510.0" y1="102.5" x2="510.0" y2="132.5" stroke="#1B2A4A" stroke-width="2" marker-end="url(#algo-1l-ah)"/>
+<rect x="285.0" y="136.5" width="450.0" height="104.5" rx="8" fill="#fdf8ee" stroke="#8a6410" stroke-width="2"/>
+<text x="296.0" y="153.5" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1B2A4A">Is the patient suitable for dose-intensive treatment and</text>
+<text x="296.0" y="169.5" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1B2A4A">ASCT?</text>
+<text x="296.0" y="185.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">Decide on biological risk, treatment requirement, physiological fitness</text>
+<text x="296.0" y="200.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">and transplant suitability — not chronological age alone.</text>
+<text x="296.0" y="214.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">The two first-line licensed populations divide at this same point.</text>
+<rect x="24.0" y="287.0" width="468.0" height="26" rx="6" fill="#1B2A4A"/><text x="258.0" y="304.5" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="white">Transplant-suitable  ·  see section 6</text>
+<rect x="528.0" y="287.0" width="468.0" height="26" rx="6" fill="#1B2A4A"/><text x="762.0" y="304.5" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="white">Older or transplant-ineligible  ·  see section 7</text>
+<path d="M 420.0 241.0 V 262.0 H 258.0 V 283.0" fill="none" stroke="#1B2A4A" stroke-width="2" marker-end="url(#algo-1l-ah)"/>
+<rect x="311.6" y="254.5" width="54.8" height="15" rx="7" fill="white" stroke="#D7DCE2"/>
+<text x="339.0" y="266.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="700" fill="#1B2A4A">suitable</text>
+<path d="M 600.0 241.0 V 262.0 H 762.0 V 283.0" fill="none" stroke="#1B2A4A" stroke-width="2" marker-end="url(#algo-1l-ah)"/>
+<rect x="642.4" y="254.5" width="77.2" height="15" rx="7" fill="white" stroke="#D7DCE2"/>
+<text x="681.0" y="266.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="700" fill="#1B2A4A">not suitable</text>
+<rect x="24.0" y="327.0" width="468.0" height="122.0" rx="8" fill="white" stroke="#D7DCE2" stroke-width="1"/>
+<text x="35.0" y="344.0" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1B2A4A">Rituximab with high-dose cytarabine induction, ASCT, then</text>
+<text x="35.0" y="360.0" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1B2A4A">rituximab maintenance 3 years</text>
+<text x="35.0" y="376.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">Bundled strategy — MCL Younger does not isolate the effect of ASCT. LYMA</text>
+<text x="35.0" y="390.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">maintenance improved 4-year EFS, PFS and OS; the long-term OS difference was</text>
+<text x="35.0" y="405.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">not significant.</text>
+<circle cx="39.6" cy="415.5" r="4.6" fill="#8a6410"/>
+<text x="50.0" y="419.5" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#8a6410">Guideline-supported conventional practice</text>
+<rect x="24.0" y="465.0" width="468.0" height="194.5" rx="8" fill="white" stroke="#D7DCE2" stroke-width="1"/>
+<text x="35.0" y="482.0" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1B2A4A">TRIANGLE regimen — ibrutinib with R-CHOP alternating R-DHAP or</text>
+<text x="35.0" y="498.0" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1B2A4A">R-DHAOx, then ibrutinib</text>
+<text x="35.0" y="514.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">GB licence covers previously untreated patients who WOULD BE ELIGIBLE for</text>
+<text x="35.0" y="528.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">ASCT.</text>
+<text x="35.0" y="543.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">Adding ASCT gave no failure-free survival gain; ibrutinib arms improved OS</text>
+<text x="35.0" y="557.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">and increased grade 3-5 infection. Do not add ASCT merely because the patient</text>
+<text x="35.0" y="572.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">was eligible.</text>
+<text x="35.0" y="586.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">NICE appraisal in development. Draft guidance of 30 June 2026 says the</text>
+<text x="35.0" y="601.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">regimen should not be used. This is draft, not final guidance, and creates no</text>
+<text x="35.0" y="615.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">funding mandate. Owner-attested company scheme — see section 17.</text>
+<circle cx="39.6" cy="626.0" r="4.6" fill="#8b2e2e"/>
+<text x="50.0" y="630.0" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#8b2e2e">Licensed; no routine route; company scheme</text>
+<line x1="258.0" y1="449.0" x2="258.0" y2="465.0" stroke="#D7DCE2" stroke-width="1.5" stroke-dasharray="4 4"/>
+<rect x="528.0" y="327.0" width="468.0" height="136.5" rx="8" fill="white" stroke="#D7DCE2" stroke-width="1"/>
+<text x="539.0" y="344.0" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1B2A4A">Bendamustine with rituximab, then rituximab maintenance at least</text>
+<text x="539.0" y="360.0" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1B2A4A">2 years</text>
+<text x="539.0" y="376.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">Routinely commissioned under NHS England policy 17088P for patients unable to</text>
+<text x="539.0" y="390.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">tolerate more intensive treatment, performance status 0-1, up to six cycles.</text>
+<text x="539.0" y="405.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">That policy states plainly that BR is not a licensed medicine for this</text>
+<text x="539.0" y="419.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">indication — commissioned and off-label at the same time.</text>
+<circle cx="543.6" cy="430.0" r="4.6" fill="#2e6b3e"/>
+<text x="554.0" y="434.0" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#2e6b3e">Routine NHS England commissioning</text>
+<rect x="528.0" y="479.5" width="468.0" height="106.0" rx="8" fill="white" stroke="#D7DCE2" stroke-width="1"/>
+<text x="539.0" y="496.5" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1B2A4A">VR-CAP</text>
+<text x="539.0" y="512.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">Improved PFS versus R-CHOP with more neutropenia and thrombocytopenia. TA370</text>
+<text x="539.0" y="527.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">recommends within the marketing authorisation. Do not generalise to</text>
+<text x="539.0" y="541.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">transplant-suitable patients.</text>
+<circle cx="543.6" cy="552.0" r="4.6" fill="#2e6b3e"/>
+<text x="554.0" y="556.0" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#2e6b3e">Routine NHS England commissioning</text>
+<line x1="762.0" y1="463.5" x2="762.0" y2="479.5" stroke="#D7DCE2" stroke-width="1.5" stroke-dasharray="4 4"/>
+<rect x="528.0" y="601.5" width="468.0" height="106.0" rx="8" fill="white" stroke="#D7DCE2" stroke-width="1"/>
+<text x="539.0" y="618.5" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1B2A4A">R-BAC</text>
+<text x="539.0" y="634.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">Single-arm long-term data in untreated older patients: complete response 91%,</text>
+<text x="539.0" y="649.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">7-year PFS 55%. No randomised comparison against BR; greater haematological</text>
+<text x="539.0" y="663.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">toxicity; no maintenance given.</text>
+<circle cx="543.6" cy="674.0" r="4.6" fill="#8a6410"/>
+<text x="554.0" y="678.0" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#8a6410">Guideline-supported conventional practice</text>
+<line x1="762.0" y1="585.5" x2="762.0" y2="601.5" stroke="#D7DCE2" stroke-width="1.5" stroke-dasharray="4 4"/>
+<rect x="528.0" y="723.5" width="468.0" height="149.5" rx="8" fill="white" stroke="#D7DCE2" stroke-width="1"/>
+<text x="539.0" y="740.5" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1B2A4A">Acalabrutinib with bendamustine and rituximab</text>
+<text x="539.0" y="756.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">GB licence covers previously untreated patients NOT ELIGIBLE for ASCT.</text>
+<text x="539.0" y="771.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">ECHO showed a PFS benefit without a demonstrated OS advantage. NICE draft</text>
+<text x="539.0" y="785.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">guidance of 25 February 2026 did not recommend it; the appraisal was</text>
+<text x="539.0" y="800.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">rescheduled.</text>
+<text x="539.0" y="814.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">An NHS network pathway records this as available via an owner-attested early</text>
+<text x="539.0" y="829.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">access programme — see section 17.</text>
+<circle cx="543.6" cy="839.5" r="4.6" fill="#8b2e2e"/>
+<text x="554.0" y="843.5" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="700" fill="#8b2e2e">Licensed; no routine route; company scheme</text>
+<line x1="762.0" y1="707.5" x2="762.0" y2="723.5" stroke="#D7DCE2" stroke-width="1.5" stroke-dasharray="4 4"/>
+<rect x="24.0" y="901.0" width="468.0" height="103.0" rx="8" fill="#fff1f3" stroke="#C41E3A" stroke-width="2"/>
+<text x="35.0" y="918.0" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#8b2e2e">Do not add to a bendamustine–rituximab platform</text>
+<text x="35.0" y="934.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">E1411 randomised 373 previously untreated patients. Adding bortezomib to</text>
+<text x="35.0" y="948.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">induction did not improve PFS (HR 0.90). Adding lenalidomide to rituximab</text>
+<text x="35.0" y="963.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">maintenance did not improve PFS (HR 0.84). Both randomised questions were</text>
+<text x="35.0" y="977.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">negative at 7.5 years.</text>
+<rect x="528.0" y="901.0" width="468.0" height="74.0" rx="8" fill="#fff1f3" stroke="#C41E3A" stroke-width="2"/>
+<text x="539.0" y="918.0" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#8b2e2e">TP53 mutation changes the conversation, not just the prognosis</text>
+<text x="539.0" y="934.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">Assess TP53 before treatment planning wherever feasible. If mutated, move to</text>
+<text x="539.0" y="948.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">the high-risk pathway and discuss trial entry early — see section 8.</text>
+<rect x="24.0" y="1020.0" width="972.0" height="88.5" rx="8" fill="#eef2f7" stroke="#D7DCE2" stroke-width="1"/>
+<text x="35.0" y="1037.0" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1B2A4A">Access is a separate determination from evidence</text>
+<text x="35.0" y="1053.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#5B6472">A regimen with strong randomised evidence may still have no commissioned route, and a routinely commissioned regimen may be off-label. Confirm the marketing</text>
+<text x="35.0" y="1067.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#5B6472">authorisation, the NICE position and the commissioning route separately before treating. Section 17 sets out the non-routine routes, including company early access</text>
+<text x="35.0" y="1082.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#5B6472">schemes and the four-nation funding tests.</text>
+</svg>

@@ -1,0 +1,90 @@
+<svg class="pathway" viewBox="0 0 1020 795" role="img" aria-labelledby="algo-hr-t algo-hr-d" xmlns="http://www.w3.org/2000/svg">
+<title id="algo-hr-t">High-risk and TP53-mutated pathway for mantle cell lymphoma</title>
+<desc id="algo-hr-d">Three-branch flow from pre-treatment risk assessment covering TP53-mutated disease, other adverse features and standard risk, with the evidence limits and the claim to avoid.</desc>
+<defs><marker id="algo-hr-ah" markerWidth="9" markerHeight="9" refX="7.5" refY="3.2" orient="auto"><path d="M0,0 L0,6.4 L7.5,3.2 z" fill="#1B2A4A"/></marker></defs>
+<rect width="1020" height="795" fill="#F7F8FA"/>
+<rect x="260.0" y="14.0" width="500.0" height="74.0" rx="8" fill="#1B2A4A" stroke="#1B2A4A" stroke-width="1"/>
+<text x="271.0" y="31.0" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="white">Risk assessment before treatment planning</text>
+<text x="271.0" y="47.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#dfe6f2">Assess TP53 status wherever technically feasible, alongside morphology, Ki-67 by an</text>
+<text x="271.0" y="61.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#dfe6f2">agreed reproducible method, and a clinical risk score.</text>
+<rect x="24.0" y="122.0" width="308.0" height="26" rx="6" fill="#1B2A4A"/><text x="178.0" y="139.5" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="white">TP53 mutated</text>
+<rect x="356.0" y="122.0" width="308.0" height="26" rx="6" fill="#1B2A4A"/><text x="510.0" y="139.5" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="white">Other adverse features</text>
+<rect x="688.0" y="122.0" width="308.0" height="26" rx="6" fill="#1B2A4A"/><text x="842.0" y="139.5" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="white">Standard risk</text>
+<path d="M 510.0 88.0 V 103.0 H 178.0 V 118.0" fill="none" stroke="#1B2A4A" stroke-width="2" marker-end="url(#algo-hr-ah)"/>
+<path d="M 510.0 88.0 V 103.0 H 510.0 V 118.0" fill="none" stroke="#1B2A4A" stroke-width="2" marker-end="url(#algo-hr-ah)"/>
+<path d="M 510.0 88.0 V 103.0 H 842.0 V 118.0" fill="none" stroke="#1B2A4A" stroke-width="2" marker-end="url(#algo-hr-ah)"/>
+<rect x="24.0" y="162.0" width="308.0" height="103.0" rx="8" fill="white" stroke="#D7DCE2" stroke-width="1"/>
+<text x="35.0" y="179.0" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1B2A4A">Treat as a distinct clinical problem</text>
+<text x="35.0" y="195.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">Early specialist discussion, explicit</text>
+<text x="35.0" y="209.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">communication of uncertainty, and consideration of</text>
+<text x="35.0" y="224.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">a clinical trial as the primary option rather than</text>
+<text x="35.0" y="238.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">the fallback.</text>
+<rect x="24.0" y="279.0" width="308.0" height="248.0" rx="8" fill="white" stroke="#D7DCE2" stroke-width="1"/>
+<text x="35.0" y="296.0" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1B2A4A">What the evidence does and does not show</text>
+<text x="35.0" y="312.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">Descriptive subgroup outcomes in a small, non-</text>
+<text x="35.0" y="326.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">randomised cohort were poorer with TP53 mutation</text>
+<text x="35.0" y="341.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">despite high response rates, suggesting the</text>
+<text x="35.0" y="355.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">regimen may not eliminate TP53-associated risk. It</text>
+<text x="35.0" y="370.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">does not establish an independent prognostic</text>
+<text x="35.0" y="384.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">effect. In the first-line SYMPATICO cohort,</text>
+<text x="35.0" y="399.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">patients aged 65 or over with TP53 mutation</text>
+<text x="35.0" y="413.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">achieved complete response 44%, median PFS 22.0</text>
+<text x="35.0" y="428.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">months and 3-year OS 66%, against 76%, 40.2 months</text>
+<text x="35.0" y="442.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">and 85% without mutation. Younger patients with</text>
+<text x="35.0" y="457.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">TP53 mutation reached complete response 73% but</text>
+<text x="35.0" y="471.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">median PFS 15.4 months.</text>
+<text x="35.0" y="486.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">A high response rate with markedly shorter disease</text>
+<text x="35.0" y="500.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">control is the pattern to expect.</text>
+<rect x="24.0" y="541.0" width="308.0" height="148.0" rx="8" fill="#fff1f3" stroke="#C41E3A" stroke-width="2"/>
+<text x="35.0" y="558.0" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#8b2e2e">The guideline recommendation you cannot</text>
+<text x="35.0" y="574.0" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#8b2e2e">deliver</text>
+<text x="35.0" y="590.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">The 2025 EHA-EU guideline favours first-line anti-</text>
+<text x="35.0" y="604.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">CD20 with a BTK inhibitor and a BCL2 inhibitor. No</text>
+<text x="35.0" y="619.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">such combination holds a GB mantle cell licence,</text>
+<text x="35.0" y="633.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">and venetoclax is not authorised for mantle cell</text>
+<text x="35.0" y="648.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">lymphoma in the UK, EU or US. In England this is</text>
+<text x="35.0" y="662.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">deliverable only inside a trial.</text>
+<rect x="356.0" y="162.0" width="308.0" height="88.5" rx="8" fill="white" stroke="#D7DCE2" stroke-width="1"/>
+<text x="367.0" y="179.0" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1B2A4A">Features that should raise concern</text>
+<text x="367.0" y="195.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">Blastoid or pleomorphic morphology. High Ki-67.</text>
+<text x="367.0" y="209.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">High-risk clinical score. Rapid tempo or early</text>
+<text x="367.0" y="224.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">progression. Central nervous system involvement.</text>
+<rect x="356.0" y="264.5" width="308.0" height="161.0" rx="8" fill="white" stroke="#D7DCE2" stroke-width="1"/>
+<text x="367.0" y="281.5" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1B2A4A">Molecular risk beyond TP53</text>
+<text x="367.0" y="297.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">In the FIL V-RBAC biomarker analysis of 132</text>
+<text x="367.0" y="312.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">evaluable patients, ATM was the most frequently</text>
+<text x="367.0" y="326.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">mutated gene at 41.7%, ahead of TP53 and KMT2D at</text>
+<text x="367.0" y="341.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">23.5% each; ATM deletion 24%, CDKN2A loss 22%.</text>
+<text x="367.0" y="355.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">These are prognostic associations within one trial</text>
+<text x="367.0" y="370.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">population. They do not yet direct treatment</text>
+<text x="367.0" y="384.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">selection and should not be used to withhold an</text>
+<text x="367.0" y="399.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">otherwise indicated regimen.</text>
+<rect x="356.0" y="439.5" width="308.0" height="103.0" rx="8" fill="#eef2f7" stroke="#D7DCE2" stroke-width="1"/>
+<text x="367.0" y="456.5" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1B2A4A">Prognostic models</text>
+<text x="367.0" y="472.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#5B6472">Use molecular and pathological risk to support</text>
+<text x="367.0" y="487.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#5B6472">trial referral, treatment planning and consent.</text>
+<text x="367.0" y="501.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#5B6472">State the limitations of applying a newer model</text>
+<text x="367.0" y="516.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#5B6472">outside its validation setting.</text>
+<rect x="688.0" y="162.0" width="308.0" height="74.0" rx="8" fill="white" stroke="#D7DCE2" stroke-width="1"/>
+<text x="699.0" y="179.0" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1B2A4A">Proceed on the first-line pathway</text>
+<text x="699.0" y="195.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">Return to section 6 or section 7 according to</text>
+<text x="699.0" y="209.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">transplant suitability.</text>
+<rect x="688.0" y="250.0" width="308.0" height="132.0" rx="8" fill="white" stroke="#D7DCE2" stroke-width="1"/>
+<text x="699.0" y="267.0" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1B2A4A">Observation remains appropriate for some</text>
+<text x="699.0" y="283.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">Selected asymptomatic patients with low-volume,</text>
+<text x="699.0" y="297.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">indolent or non-nodal disease may be observed</text>
+<text x="699.0" y="312.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">after diagnostic confidence and MDT review. Review</text>
+<text x="699.0" y="326.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">every 3 to 6 months with objective triggers</text>
+<text x="699.0" y="341.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">recorded. A rising lymphocyte count alone is not a</text>
+<text x="699.0" y="355.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">trigger.</text>
+<rect x="688.0" y="396.0" width="308.0" height="103.0" rx="8" fill="#eef2f7" stroke="#D7DCE2" stroke-width="1"/>
+<text x="699.0" y="413.0" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1B2A4A">MRD</text>
+<text x="699.0" y="429.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#5B6472">May refine prognosis and has guided cessation in</text>
+<text x="699.0" y="443.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#5B6472">protocols. It is not a validated universal</text>
+<text x="699.0" y="458.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#5B6472">surrogate and does not justify omitting effective</text>
+<text x="699.0" y="472.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#5B6472">maintenance outside a trial.</text>
+<rect x="24.0" y="703.0" width="972.0" height="74.0" rx="8" fill="#fff1f3" stroke="#C41E3A" stroke-width="2"/>
+<text x="35.0" y="720.0" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#8b2e2e">The claim to avoid</text>
+<text x="35.0" y="736.0" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">Do not state or imply that a novel regimen has neutralised high-risk biology unless comparative evidence demonstrates it. No regimen in current use has done so for</text>
+<text x="35.0" y="750.5" font-family="Arial,Helvetica,sans-serif" font-size="11.0" fill="#172033">TP53-mutated mantle cell lymphoma. Say this plainly to patients rather than implying that a targeted agent removes the risk.</text>
+</svg>

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "document_code": "MHA-MCL-2026-v2.1-PREVIEW-RC1",
+  "status": "CONTROLLED_REVIEWED_PREVIEW",
+  "publication_authority": false,
+  "source_html_sha256": "3dfa186d299c9489794be2728b02fac888efbcfe068b4755f11a2e19d50c0a27",
+  "artefacts": {
+    "guideline-v2.1-reviewed.docx": {
+      "bytes": 102335,
+      "sha256": "d574df6f47bdbd34a2c09ca84f3abb4b87be2fecbd287a87e1cacecd86fc7f24"
+    },
+    "guideline-v2.1-reviewed.pdf": {
+      "bytes": 820371,
+      "sha256": "77c8ca6dc0536b9391e75cd68cdb4599ce2e0d50b981f1bdf3a3596ed7b3cb65"
+    },
+    "quickref-v2.1-reviewed.docx": {
+      "bytes": 6901,
+      "sha256": "f79eec8ceef432d9d8f5d5ee1c4333c3378b0ca0ef2a71369bd696b6864e66c2"
+    },
+    "quickref-v2.1-reviewed.pdf": {
+      "bytes": 92746,
+      "sha256": "d510e0d1ebbcad545a5433aa6eda477155fae580929650d9ff0e09288a011a72"
+    }
+  }
+}

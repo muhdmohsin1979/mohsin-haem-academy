@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "document_code": "MHA-MCL-2026-v2.1",
+  "state": "REVIEWED_SUBSTANTIVE_CANDIDATE",
+  "reviewed_candidate": {
+    "file": "reviewed-candidate-c4.html",
+    "sha256": "f16545565f7cb0c3619aa2ccff87f1fecd2ecc5718d4dae4d0960a09e9f77957",
+    "bytes": 326777,
+    "evidence_access_cut_off": "2026-07-30"
+  },
+  "independent_clinical_review": {
+    "decision": "PASS",
+    "accepted_by_owner": true,
+    "verifier_identity": "RETAINED_PRIVATELY"
+  },
+  "pharmacy_verification": {
+    "decision": "COMPLETE",
+    "accepted_by_owner": true,
+    "verifier_identity": "RETAINED_PRIVATELY"
+  },
+  "owner_attestation_recorded_at": "2026-07-31T00:14:37+01:00",
+  "owner_production_direction": "REPLACE_V2_ON_WEBSITE",
+  "publication_authority": "DIRECTED_SUBJECT_TO_EXACT_PRODUCTION_HASH_RATIFICATION",
+  "production_hash_ratification": "PENDING",
+  "deployment": "NOT_STARTED",
+  "release_policy": "Verifier names and review dates are not published. C4 is the reviewed substantive candidate. Any release-control, navigation, download or production-label conversion creates new bytes that require exact preview verification and owner hash ratification before production deployment."
+}
