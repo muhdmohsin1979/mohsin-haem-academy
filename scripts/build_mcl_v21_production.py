@@ -229,6 +229,28 @@ HTML_REPLACEMENTS = (
      '<p>Every recommendation-bearing source should carry one of: FULL_TEXT_VERIFIED,'),
     ('Manual retrieval of the publisher PDF is required before ratification.',
      'Manual retrieval of the publisher PDF remains outstanding.'),
+# --- retired MHRA SmPC addresses -------------------------------------------
+    # MHRA product-information URLs are content-addressed, so a revision retires the
+    # previous address. Both SmPCs below were revised on 24 July 2026 and their old
+    # links returned BlobNotFound. Replacements were taken from MHRA's own product
+    # search (products.mhra.gov.uk), pairing each document's SPC/PIL label to its
+    # link rather than trusting list order.
+    #
+    # The quoted clinical text was re-checked against the current documents before
+    # these substitutions were made:
+    #   Tecartus  PLGB 11972-0045 — dosing, lymphodepletion schedule, tocilizumab
+    #             availability, 7-day monitoring, 4-week proximity and the indication
+    #             wording are all present unchanged, so no guideline text changes.
+    #   Tepkinly  PLGB 41042-0092 / -0093 — section 4.1 covers DLBCL and follicular
+    #             lymphoma only, confirming this guideline's statement that there is
+    #             no current Great Britain mantle cell indication for epcoritamab.
+    #             Two SmPCs exist, one per strength, and both are linked because
+    #             step-up dosing uses both vials.
+    ('<a href="https://mhraproducts4853.blob.core.windows.net/docs/cd6be42f02be6ec2bd92569340aedaf6f1179f16" rel="noreferrer">MHRA SmPC &mdash; Brexucabtagene autoleucel</a>'.replace('&mdash;', '—'),
+     '<a href="https://mhraproducts4853.blob.core.windows.net/docs/c5ff00532d974218167694107f423f7e831adb06" rel="noreferrer">MHRA SmPC — Brexucabtagene autoleucel</a>'),
+    ('<a href="https://mhraproducts4853.blob.core.windows.net/docs/396fbcf79471ec18c6096563395a6213231113b4" rel="noreferrer">MHRA SmPC &mdash; Epcoritamab</a>'.replace('&mdash;', '—'),
+     '<a href="https://mhraproducts4853.blob.core.windows.net/docs/7a6c50e03c9839d4a9f6b8cbfd8da8e86da14b22" rel="noreferrer">MHRA SmPC — Epcoritamab 4 mg/0.8 ml</a> '
+     '<a href="https://mhraproducts4853.blob.core.windows.net/docs/20456579a747924534ad1d434a9b5758e7630e8d" rel="noreferrer">MHRA SmPC — Epcoritamab 48 mg</a>'),
 )
 
 

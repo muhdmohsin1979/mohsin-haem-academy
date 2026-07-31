@@ -60,27 +60,27 @@
       "sha256": "fea22291fe74786a9bd9d3679e4a37b59e3d0b6877e49cd0967ba901554fc710"
     },
     "guideline-v2.1.docx": {
-      "bytes": 102522,
-      "sha256": "085476c41ae0d462da8ad43fae970e9c6107f353e6837a85fd0c3602e8d0383a"
+      "bytes": 102547,
+      "sha256": "a9eece7299acaff0a8885a994167e0d4cd118b978b23f5cd22d6000decb85172"
     },
     "guideline-v2.1.pdf": {
-      "bytes": 827527,
-      "sha256": "b94180a8337bccb0aa0d8602558664e9f4ce33496d6047201c180bf308219581"
+      "bytes": 828289,
+      "sha256": "c222b4acda8ddbbe26b5f2e29cb14100620d51d56bf32323b49b055a1906040d"
     },
     "index.html": {
-      "bytes": 330078,
-      "sha256": "dc9122380125f8a27c5cd286810adaba46d10e37cf25c1ea6c1af6716927042d"
+      "bytes": 330246,
+      "sha256": "7441164b7a309c717bce709bea184fcc19e9cde74c2c6f59a47622c06370dd12"
     },
     "quickref-v2.1.docx": {
       "bytes": 6886,
-      "sha256": "fa364f04d850a6d7e323af1f08885441e615ef8f5610936043d1c995e0baf544"
+      "sha256": "94aeea0435312bdaa2f524f126feeeb017d7cfa0c9696493025b1ce6dd57b8f9"
     },
     "quickref-v2.1.pdf": {
       "bytes": 92494,
-      "sha256": "75347ddccea2293f37326e6cbec85497473c8a05a1f34d59d706c19ba0be3fe5"
+      "sha256": "e042b656feded178edaee44b97efc051e59b187a32312a0657130f393ff9055d"
     }
   },
   "published": "2026-07-31",
-  "ratified_candidate_manifest_sha256": "8e6d1c19da01042b03900151abb8648d63f2b0824d1af6b1516bb50ea5fa7416",
-  "ratification": "The accountable owner ratified the exact artefact hashes recorded below, identified by the candidate manifest SHA-256 8e6d1c19da01042b03900151abb8648d63f2b0824d1af6b1516bb50ea5fa7416. This file was then rewritten to record publication; the artefact hashes are unchanged by that rewrite."
+  "ratified_candidate_manifest_sha256": "fe1e0411076f9e24422be55fcee9ea58beff8a8ef2436b5ed1965230678c6603",
+  "ratification": "The accountable owner ratified the exact artefact hashes recorded below, identified by the candidate manifest SHA-256 fe1e0411076f9e24422be55fcee9ea58beff8a8ef2436b5ed1965230678c6603. This file was then rewritten to record publication; the artefact hashes are unchanged by that rewrite."
 }
