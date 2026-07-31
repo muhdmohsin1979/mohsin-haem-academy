@@ -316,6 +316,25 @@ def read_file_list(path: Path) -> list[Path]:
     return out
 
 
+# Frozen and archival records. A dead external link inside one of these is a
+# fact about the past, not a defect to repair: these files are hash-bound
+# reviewed candidates, frozen preview snapshots, or the archived copy of a
+# superseded release. Editing them to chase a moved URL would falsify the
+# record they exist to preserve. Live and about-to-be-live pages are NOT
+# listed here and remain fully link-checked.
+FROZEN_RECORD_PREFIXES = (
+    "sources/",
+    "docs/mcl-v2/preview/",
+    "docs/mcl-v2.1/web-preview/",
+)
+FROZEN_RECORD_SUBSTRINGS = ("/superseded/",)
+
+
+def is_frozen_record(path_str: str) -> bool:
+    return (any(path_str.startswith(pre) for pre in FROZEN_RECORD_PREFIXES)
+            or any(sub in path_str for sub in FROZEN_RECORD_SUBSTRINGS))
+
+
 def extract_added_urls(diff_path: Path) -> list[tuple[str, str]]:
     """Parse a unified diff and return [(file, url)] for every http/https URL
     that appears on an ADDED line (prefix '+', excluding '+++' headers).
@@ -343,7 +362,7 @@ def extract_added_urls(diff_path: Path) -> list[tuple[str, str]]:
                 current_file = p
                 current_is_text = p.lower().endswith(
                     (".md", ".markdown", ".html", ".htm")
-                )
+                ) and not is_frozen_record(p)
             continue
         if raw_line.startswith("--- ") or raw_line.startswith("@@"):
             continue
