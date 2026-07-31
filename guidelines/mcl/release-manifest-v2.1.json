@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "document_code": "MHA-MCL-2026-v2.1",
-  "status": "PRODUCTION_CANDIDATE_AWAITING_EXACT_HASH_RATIFICATION",
-  "publication_authority": false,
+  "status": "PUBLISHED",
+  "publication_authority": true,
   "publication_date_when_ratified": "31 July 2026",
   "target_path": "guidelines/mcl",
   "provenance": {
@@ -79,5 +79,8 @@
       "bytes": 92494,
       "sha256": "75347ddccea2293f37326e6cbec85497473c8a05a1f34d59d706c19ba0be3fe5"
     }
-  }
+  },
+  "published": "2026-07-31",
+  "ratified_candidate_manifest_sha256": "8e6d1c19da01042b03900151abb8648d63f2b0824d1af6b1516bb50ea5fa7416",
+  "ratification": "The accountable owner ratified the exact artefact hashes recorded below, identified by the candidate manifest SHA-256 8e6d1c19da01042b03900151abb8648d63f2b0824d1af6b1516bb50ea5fa7416. This file was then rewritten to record publication; the artefact hashes are unchanged by that rewrite."
 }

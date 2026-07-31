@@ -8,7 +8,7 @@
   "pharmacy_verification": "COMPLETE",
   "verifier_identities": "RETAINED_PRIVATELY",
   "owner_production_direction": "REPLACE_V2_ON_WEBSITE",
-  "exact_production_hash_ratification": "PENDING",
+  "exact_production_hash_ratification": "RATIFIED",
   "official_excalidraw_render_gate": "PASS",
   "offline_axe": "PASS \u2014 axe-core 4.10.2, WCAG 2.0/2.1 A and AA plus best-practice, 0 violations at 1280px and 375px",
   "outstanding_at_publication": [
@@ -18,5 +18,9 @@
     "Company early-access schemes are owner-attested and not independently documented.",
     "Access and regulatory positions are volatile and require scheduled re-checking."
   ],
-  "manifest_sha256": "8e6d1c19da01042b03900151abb8648d63f2b0824d1af6b1516bb50ea5fa7416"
+  "ratified_candidate_manifest_sha256": "8e6d1c19da01042b03900151abb8648d63f2b0824d1af6b1516bb50ea5fa7416",
+  "publication_authority": true,
+  "published": "2026-07-31",
+  "supersedes_retained_at": "guidelines/mcl/superseded/v2.0/",
+  "review_due": "The access and regulatory layer is volatile: NICE, SMC and commissioning positions in this guideline were checked on 2026-07-30 and require scheduled re-checking."
 }
