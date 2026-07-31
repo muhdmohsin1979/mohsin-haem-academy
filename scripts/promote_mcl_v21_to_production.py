@@ -93,21 +93,36 @@ def main() -> int:
         print("\n--dry-run: nothing written. guidelines/mcl is untouched.")
         return 0
 
-    SUPERSEDED.mkdir(parents=True, exist_ok=True)
-    kept = []
-    for name in V20_FILES:
-        source = OUTPUT / name
-        if source.is_file():
-            shutil.copy2(source, SUPERSEDED / name)
-            kept.append(name)
-    print(f"\nPrevious release retained: {len(kept)} files in {SUPERSEDED.relative_to(ROOT)}")
+    if SUPERSEDED.is_dir() and any(SUPERSEDED.iterdir()):
+        print(f"\nPrevious release already captured in {SUPERSEDED.relative_to(ROOT)}; "
+              "leaving it untouched. A second run must not overwrite the v2.0 snapshot "
+              "with v2.1 files that now sit at the same paths.")
+    else:
+        SUPERSEDED.mkdir(parents=True, exist_ok=True)
+        kept = []
+        for name in V20_FILES:
+            source = OUTPUT / name
+            if source.is_file():
+                shutil.copy2(source, SUPERSEDED / name)
+                kept.append(name)
+        print(f"\nPrevious release retained: {len(kept)} files in {SUPERSEDED.relative_to(ROOT)}")
 
     published = []
     for name in sorted(manifest["artefacts"]):
-        if name.endswith(".html.tmp"):
-            continue
         target = OUTPUT / name
         shutil.copyfile(CANDIDATE / name, target)
+        published.append((name, sha256(target)))
+
+    # The manifest records the other twelve artefacts, so it cannot record itself,
+    # and the release record is written after it. Both are linked from the published
+    # downloads list, so both must be copied or those links 404.
+    for name in ("release-manifest-v2.1.json", "release-record-v2.1.json"):
+        source = CANDIDATE / name
+        if not source.is_file():
+            print(f"REFUSING TO PUBLISH: {name} missing from the candidate", file=sys.stderr)
+            return 1
+        target = OUTPUT / name
+        shutil.copyfile(source, target)
         published.append((name, sha256(target)))
 
     print("\nPublished to guidelines/mcl:")
@@ -116,7 +131,7 @@ def main() -> int:
 
     mismatched = [
         name for name, digest in published
-        if digest != manifest["artefacts"][name]["sha256"]
+        if name in manifest["artefacts"] and digest != manifest["artefacts"][name]["sha256"]
     ]
     if mismatched:
         print(f"\nPOST-COPY HASH MISMATCH: {mismatched}", file=sys.stderr)
