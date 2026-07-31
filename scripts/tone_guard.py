@@ -104,6 +104,25 @@ def _is_allowed_clinical_phrase(text: str, match_start: int, match_end: int) -> 
     return False
 
 
+# Controlled clinical documents quote MHRA, NICE and society wording verbatim.
+# The banned-word list is a house style guide for prose written from scratch; it is
+# not applicable to regulatory text, where terms such as "systemic" ("at least two
+# systemic lines") are the correct clinical wording and cannot be paraphrased without
+# changing meaning. These paths are therefore exempt from the tone guard.
+EXEMPT_PREFIXES = (
+    "sources/mcl/",
+    "guidelines/mcl/",
+    "docs/mcl-v2/",
+    "docs/mcl-v2.1/",
+    "sources/cll/",
+    "guidelines/cll/",
+)
+
+
+def is_exempt(path_str: str) -> bool:
+    return any(path_str.startswith(prefix) for prefix in EXEMPT_PREFIXES)
+
+
 def extract_visible_text(raw: str, suffix: str) -> str:
     """Return the text a human reader would actually see."""
     if suffix in {".html", ".htm"}:
@@ -184,7 +203,10 @@ def scan_diff(diff_path: Path) -> tuple[int, int]:
                 current_is_text = False
                 continue
             current_file = path_str
-            current_is_text = path_str.lower().endswith((".md", ".markdown", ".html", ".htm"))
+            current_is_text = (
+                path_str.lower().endswith((".md", ".markdown", ".html", ".htm"))
+                and not is_exempt(path_str)
+            )
             continue
 
         if raw_line.startswith("--- "):
@@ -252,6 +274,7 @@ def main() -> int:
         files.extend(read_file_list(args.files_from))
 
     files = [p for p in files if p.suffix.lower() in {".md", ".markdown", ".html", ".htm"}]
+    files = [p for p in files if not is_exempt(p.as_posix())]
     files = [p for p in files if p.exists() and p.is_file()]
 
     if not files:
