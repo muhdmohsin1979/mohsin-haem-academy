@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "document_code": "MHA-MCL-2026-v2.1",
+  "status": "PRODUCTION_CANDIDATE_AWAITING_EXACT_HASH_RATIFICATION",
+  "publication_authority": false,
+  "publication_date_when_ratified": "31 July 2026",
+  "target_path": "guidelines/mcl",
+  "provenance": {
+    "reviewed_substantive_candidate": {
+      "file": "sources/mcl/v2.1/reviewed-candidate-c4.html",
+      "sha256": "f16545565f7cb0c3619aa2ccff87f1fecd2ecc5718d4dae4d0960a09e9f77957"
+    },
+    "accessibility_corrected_candidate": {
+      "file": "sources/mcl/v2.1/accessibility-corrected-c5.html",
+      "sha256": "3b073bcaa8887018702cb2af53d4e655c59b82e7c7e2333548feb14d3bb4fba2",
+      "change_from_reviewed_candidate": "One generated diagram colour token; no clinical-content change"
+    },
+    "reviewed_web_preview": {
+      "file": "docs/mcl-v2.1/web-preview/index.html",
+      "sha256": "3dfa186d299c9489794be2728b02fac888efbcfe068b4755f11a2e19d50c0a27"
+    }
+  },
+  "change_from_reviewed_web_preview": [
+    "Release-control presentation: robots directive, title, banner, document code, release-control table, attestation bullet and footer.",
+    "Guideline downloads section: the reviewed preview stated that no v2.1 artefacts existed and that the algorithm had not been regenerated. Both statements were true when the candidate was reviewed and are no longer true. The section now lists the generated artefacts and describes the parity test applied to the editable scenes. THIS IS A CONTENT CHANGE, not a label change, and should be read before ratification."
+  ],
+  "clinical_change_from_reviewed_candidate": "NONE",
+  "known_release_blocks": [],
+  "artefacts": {
+    "algorithm-access-route-v2.1.excalidraw": {
+      "bytes": 97468,
+      "sha256": "30017b168fbc15c46d17bb9e82c762ec05f8a002fb1c837a3aa1ea26c86bae01"
+    },
+    "algorithm-access-route-v2.1.svg": {
+      "bytes": 15770,
+      "sha256": "0f290edcefb46dbf63adcf8baca13949e8fcff050ef746f6ae33f54e628476f1"
+    },
+    "algorithm-first-line-v2.1.excalidraw": {
+      "bytes": 93099,
+      "sha256": "ed569b806650cf66acd28003dea9b2f08bf9a4ea0bca39dbc632c6ed6cca4cf2"
+    },
+    "algorithm-first-line-v2.1.svg": {
+      "bytes": 14633,
+      "sha256": "af6614f99263739ebf578f7d2c83d9d2db32489c1e51c05583d91c463d0233f8"
+    },
+    "algorithm-high-risk-v2.1.excalidraw": {
+      "bytes": 86465,
+      "sha256": "c918dd6569b7b28068107c6840527f5eb0321add511b9edafe30a9d5c3dcb1d7"
+    },
+    "algorithm-high-risk-v2.1.svg": {
+      "bytes": 13227,
+      "sha256": "a62d85d28f946bcc799f6da017f7d06df25f86b7150bfa61b311a39804b77f0c"
+    },
+    "algorithm-relapsed-v2.1.excalidraw": {
+      "bytes": 111942,
+      "sha256": "100b13a2762b989c659ead8dbf19ea0dd2d9207156e6e43814733ee9714d4ef0"
+    },
+    "algorithm-relapsed-v2.1.svg": {
+      "bytes": 17492,
+      "sha256": "fea22291fe74786a9bd9d3679e4a37b59e3d0b6877e49cd0967ba901554fc710"
+    },
+    "guideline-v2.1.docx": {
+      "bytes": 102522,
+      "sha256": "085476c41ae0d462da8ad43fae970e9c6107f353e6837a85fd0c3602e8d0383a"
+    },
+    "guideline-v2.1.pdf": {
+      "bytes": 827527,
+      "sha256": "b94180a8337bccb0aa0d8602558664e9f4ce33496d6047201c180bf308219581"
+    },
+    "index.html": {
+      "bytes": 330078,
+      "sha256": "dc9122380125f8a27c5cd286810adaba46d10e37cf25c1ea6c1af6716927042d"
+    },
+    "quickref-v2.1.docx": {
+      "bytes": 6886,
+      "sha256": "fa364f04d850a6d7e323af1f08885441e615ef8f5610936043d1c995e0baf544"
+    },
+    "quickref-v2.1.pdf": {
+      "bytes": 92494,
+      "sha256": "75347ddccea2293f37326e6cbec85497473c8a05a1f34d59d706c19ba0be3fe5"
+    }
+  }
+}
