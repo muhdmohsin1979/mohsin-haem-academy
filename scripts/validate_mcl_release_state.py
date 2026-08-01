@@ -18,7 +18,11 @@ from scripts.validate_mcl_v2_preview import validate_current_preview
 from scripts.validate_mcl_v2_release import MANIFEST as PRODUCTION_MANIFEST
 from scripts.validate_mcl_v2_release import validate as validate_production_candidate
 
-STATE = ROOT / "sources" / "mcl" / "release-state-v2.0.json"
+_STATE_V21 = ROOT / "sources" / "mcl" / "release-state-v2.1.json"
+_STATE_V20 = ROOT / "sources" / "mcl" / "release-state-v2.0.json"
+# The newest declared release state wins. v2.0 remains valid if v2.1 is absent,
+# so reverting the release is a matter of removing one file.
+STATE = _STATE_V21 if _STATE_V21.is_file() else _STATE_V20
 
 
 def strict_json_load(path: Path) -> object:
@@ -38,6 +42,34 @@ def main() -> int:
     if not isinstance(value, dict):
         raise ValueError("MCL release state must be a JSON object")
     state = value.get("state")
+
+    if value.get("document_code") == "MHA-MCL-2026-v2.1":
+        if state != "PRODUCTION":
+            raise ValueError(f"Unsupported MCL v2.1 release state: {state!r}")
+        required = {
+            "publication_authority": True,
+            "owner_scope_approval": True,
+            "independent_clinical_review": "PASS",
+            "pharmacy_verification": "COMPLETE",
+            "production_hash_ratification": "RATIFIED",
+            "pharmacy_verifier_identity": "RETAINED_PRIVATELY",
+            "reviewed_candidate_sha256":
+                "f16545565f7cb0c3619aa2ccff87f1fecd2ecc5718d4dae4d0960a09e9f77957",
+            "accessibility_corrected_sha256":
+                "3b073bcaa8887018702cb2af53d4e655c59b82e7c7e2333548feb14d3bb4fba2",
+            "reviewed_preview_sha256":
+                "3dfa186d299c9489794be2728b02fac888efbcfe068b4755f11a2e19d50c0a27",
+            "previous_production_index_sha256":
+                "0f92a28d1e1822bc4cc7dba19923e2e1ddd90a6de8b57e01a32847a67461c6cd",
+        }
+        for key, expected in required.items():
+            if value.get(key) != expected:
+                raise ValueError(f"Invalid v2.1 production control {key}: {value.get(key)!r}")
+        from scripts.validate_mcl_v21_release import validate as validate_v21_release
+        validate_v21_release()
+        print(f"MCL controlled publication state gate: PASS state={state} v2.1")
+        return 0
+
     if state == "PREVIEW":
         validate_containment()
         validate_current_preview()
