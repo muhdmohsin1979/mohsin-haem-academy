@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ATRA plus Eltrombopag in Refractory/Relapsed ITP — Journal Club — Mohsin Haematology Academy</title>
+<meta name="description" content="Critical appraisal of the randomised trial of all-retinoic acid plus eltrombopag in glucocorticoid-resistant or relapsed immune thrombocytopenia: 18-month sustained response, baseline bleeding imbalance, and ATRA safety considerations." />
+
+<!-- ── SEO / Social ── -->
+<link rel="canonical" href="https://mohsinhaemacademy.com/journal-club/atra-eltrombopag-refractory-relapsed-itp/" />
+<meta property="og:site_name" content="Mohsin Haematology Academy" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mohsinhaemacademy.com/journal-club/atra-eltrombopag-refractory-relapsed-itp/" />
+<meta property="og:title" content="ATRA plus Eltrombopag in Refractory/Relapsed ITP" />
+<meta property="og:description" content="Critical appraisal of the randomised trial of all-retinoic acid plus eltrombopag in glucocorticoid-resistant or relapsed immune thrombocytopenia." />
+<meta property="og:image" content="https://mohsinhaemacademy.com/logo.png" />
+<meta property="og:image:width" content="1536" />
+<meta property="og:image:height" content="1024" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="ATRA plus Eltrombopag in Refractory/Relapsed ITP" />
+<meta name="twitter:description" content="Critical appraisal of the randomised trial of all-retinoic acid plus eltrombopag in glucocorticoid-resistant or relapsed immune thrombocytopenia." />
+<meta name="twitter:image" content="https://mohsinhaemacademy.com/logo.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════════════
+RESET & TOKENS — matches journal-club.html
+═══════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+--clr-primary: #7a1f2b;
+--clr-primary-dark: #5c1720;
+--clr-primary-tint: rgba(122, 31, 43, 0.07);
+
+--clr-bg: #f7f5f3;
+--clr-surface: #ffffff;
+--clr-surface-alt: #faf8f7;
+
+--clr-text: #1a1a1e;
+--clr-text-secondary:#3d3d42;
+--clr-muted: #6b717a;
+--clr-subtle: #9ca3af;
+
+--clr-border: #e6e1dd;
+--clr-border-light: #f0ebe7;
+
+--shadow-xs: 0 1px 2px rgba(0,0,0,.04);
+--shadow-sm: 0 1px 4px rgba(0,0,0,.06), 0 2px 6px rgba(0,0,0,.04);
+--shadow-md: 0 4px 16px rgba(0,0,0,.08), 0 2px 6px rgba(0,0,0,.04);
+
+--radius-sm: 6px;
+--radius-md: 12px;
+--radius-lg: 18px;
+
+--ease: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+
+/* Division colours — Haemostasis & Thrombosis page accent */
+--cat-mal: #7a1f2b;
+--cat-gen: #1e4d8c;
+--cat-hae: #1a6b4a;
+--cat-hae-dark: #145438;
+--cat-hae-tint: rgba(26, 107, 74, 0.08);
+--cat-tra: #7a4f1f;
+
+/* Warning tone for "harm signal" callouts */
+--clr-warn: #b45309;
+--clr-warn-tint: rgba(180, 83, 9, 0.07);
+}
+
+html { scroll-behavior: smooth; }
+body {
+font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+background: var(--clr-bg);
+color: var(--clr-text);
+line-height: 1.65;
+font-size: 16px;
+-webkit-font-smoothing: antialiased;
+}
+a { color: var(--cat-hae); text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { display: block; max-width: 100%; }
+p { margin: 0 0 14px; }
+
+.container { width: min(960px, 92%); margin-inline: auto; }
+
+/* ═══════════════════════════════════════════════
+HEADER (matches journal-club.html nav exactly)
+═══════════════════════════════════════════════ */
+header {
+position: sticky; top: 0; z-index: 200;
+background: rgba(255,255,255,0.96);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border-bottom: 1px solid var(--clr-border);
+}
+.nav { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 24px; }
+.brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.brand img { height: 40px; width: auto; }
+.brand-text { line-height: 1; }
+.brand-name {
+font-size: 0.95rem; font-weight: 700; color: var(--clr-primary); letter-spacing: -0.01em;
+}
+.brand-tagline {
+font-size: 0.66rem; font-weight: 500; color: var(--clr-muted);
+letter-spacing: 0.07em; text-transform: uppercase; margin-top: 3px;
+}
+.nav-toggle { display: none; }
+.nav-links { display: flex; align-items: center; gap: 2px; }
+.nav-links a {
+font-size: 0.85rem; font-weight: 500; color: var(--clr-text-secondary);
+padding: 7px 11px; border-radius: var(--radius-sm);
+transition: color var(--ease), background var(--ease);
+white-space: nowrap;
+}
+.nav-links a:hover { color: var(--clr-primary); background: var(--clr-primary-tint); text-decoration: none; }
+.nav-links a.active { color: var(--clr-primary); background: var(--clr-primary-tint); font-weight: 600; }
+.nav-cta {
+background: var(--clr-primary) !important; color: #fff !important;
+padding: 8px 16px !important; border-radius: var(--radius-sm) !important; font-weight: 600 !important;
+}
+.nav-cta:hover { background: var(--clr-primary-dark) !important; }
+
+/* ═══════════════════════════════════════════════
+POST HERO — green gradient for Haemostasis
+═══════════════════════════════════════════════ */
+.post-hero {
+background: linear-gradient(135deg, var(--cat-hae) 0%, var(--cat-hae-dark) 100%);
+color: #fff;
+padding: 56px 0 44px;
+}
+.post-hero__category {
+display: inline-block; padding: 4px 12px;
+border-radius: 999px;
+background: rgba(255,255,255,0.15);
+border: 1px solid rgba(255,255,255,0.25);
+font-size: 0.72rem; font-weight: 600;
+letter-spacing: 0.08em; text-transform: uppercase;
+color: rgba(255,255,255,0.95);
+margin-bottom: 18px;
+}
+.post-hero h1 {
+font-family: 'Playfair Display', Georgia, serif;
+font-size: clamp(1.8rem, 4vw, 2.6rem);
+font-weight: 700;
+line-height: 1.15;
+margin-bottom: 14px;
+}
+.post-hero__subtitle {
+font-size: 1.02rem; color: rgba(255,255,255,0.85);
+line-height: 1.6; max-width: 760px;
+}
+
+/* ═══════════════════════════════════════════════
+Article body
+═══════════════════════════════════════════════ */
+main { padding: 40px 0 64px; }
+
+h2 {
+font-family: 'Playfair Display', Georgia, serif;
+font-size: 1.55rem; font-weight: 700;
+color: var(--clr-text);
+margin: 36px 0 14px;
+line-height: 1.25;
+}
+h3 {
+font-family: 'Inter', sans-serif;
+font-size: 1.05rem; font-weight: 700;
+color: var(--clr-text);
+margin: 22px 0 10px;
+}
+h4 {
+font-size: 0.95rem; font-weight: 700;
+color: var(--clr-text);
+margin: 12px 0 8px;
+}
+hr {
+border: none;
+border-top: 1px solid var(--clr-border);
+margin: 36px 0;
+}
+ul, ol { margin: 0 0 14px 22px; padding: 0; }
+ul li, ol li { margin-bottom: 6px; line-height: 1.6; }
+strong { color: var(--clr-text); font-weight: 600; }
+em { font-style: italic; }
+.muted { color: var(--clr-muted); font-size: 0.88rem; }
+
+/* ── Callouts ── */
+.callout {
+background: var(--clr-surface);
+border: 1px solid var(--clr-border);
+border-left: 4px solid var(--cat-hae);
+border-radius: var(--radius-md);
+padding: 18px 20px;
+margin: 18px 0;
+box-shadow: var(--shadow-xs);
+}
+.callout h3 { margin-top: 0; color: var(--cat-hae); }
+.callout--bottom-line {
+background: var(--cat-hae-tint);
+border-left-color: var(--cat-hae);
+}
+.callout--bottom-line h3 {
+font-size: 0.78rem;
+font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+color: var(--cat-hae);
+margin-bottom: 10px;
+}
+.callout--appraisal {
+background: var(--clr-surface-alt);
+border: 1px solid var(--clr-border-light);
+border-left: 4px solid var(--clr-muted);
+font-size: 0.92rem;
+color: var(--clr-text-secondary);
+line-height: 1.6;
+}
+.callout--appraisal.callout--warn {
+background: var(--clr-warn-tint);
+border-left-color: var(--clr-warn);
+}
+.callout--warn h3 { color: var(--clr-warn); }
+.callout--practice {
+background: var(--cat-hae-tint);
+border: 1.5px solid var(--cat-hae);
+border-left-width: 4px;
+}
+.callout--practice h3, .callout--practice strong { color: var(--cat-hae-dark); }
+.callout--tool {
+background: #f3f9f6;
+border: 1px solid #cfe5da;
+border-left: 4px solid var(--cat-hae);
+}
+
+/* ── TOC ── */
+.post-toc {
+background: var(--clr-surface);
+border: 1px solid var(--clr-border);
+border-radius: var(--radius-md);
+padding: 14px 18px;
+font-size: 0.86rem;
+color: var(--clr-muted);
+line-height: 1.9;
+margin: 18px 0;
+}
+.post-toc a {
+color: var(--cat-hae);
+font-weight: 500;
+}
+
+/* ── PICO grid ── */
+.pico-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10px;
+margin: 12px 0 18px;
+}
+.pico-grid > div {
+background: var(--clr-surface-alt);
+border: 1px solid var(--clr-border-light);
+border-radius: var(--radius-sm);
+padding: 10px 14px;
+font-size: 0.88rem;
+line-height: 1.5;
+color: var(--clr-text-secondary);
+}
+.pico-grid > div strong {
+display: inline-block;
+min-width: 18px;
+color: var(--cat-hae);
+font-weight: 700;
+margin-right: 4px;
+}
+
+/* ── Trial accordion ── */
+.trial-block {
+background: var(--clr-surface);
+border: 1px solid var(--clr-border);
+border-radius: var(--radius-md);
+padding: 0;
+margin: 16px 0;
+box-shadow: var(--shadow-xs);
+overflow: hidden;
+}
+.trial-block summary {
+cursor: pointer;
+padding: 14px 20px;
+background: var(--clr-surface-alt);
+font-size: 0.94rem;
+font-weight: 600;
+color: var(--clr-text);
+border-bottom: 1px solid var(--clr-border);
+list-style: none;
+position: relative;
+padding-right: 40px;
+}
+.trial-block summary::-webkit-details-marker { display: none; }
+.trial-block summary::after {
+content: '▸';
+position: absolute;
+right: 18px; top: 50%;
+transform: translateY(-50%);
+color: var(--cat-hae);
+font-size: 0.9rem;
+transition: transform var(--ease);
+}
+.trial-block[open] summary::after { transform: translateY(-50%) rotate(90deg); }
+.trial-block summary em { font-style: italic; color: var(--clr-text-secondary); font-weight: 500; }
+.trial-block > *:not(summary) {
+padding-left: 20px;
+padding-right: 20px;
+}
+.trial-block > *:first-of-type:not(summary) { padding-top: 16px; }
+.trial-block > *:last-child { padding-bottom: 18px; }
+.trial-block h3 { margin-top: 14px; }
+
+/* ── Tables ── */
+.table-wrap { overflow-x: auto; margin: 14px 0 18px; }
+table {
+width: 100%;
+border-collapse: collapse;
+font-size: 0.88rem;
+background: var(--clr-surface);
+border: 1px solid var(--clr-border);
+border-radius: var(--radius-sm);
+overflow: hidden;
+}
+thead th {
+background: var(--cat-hae);
+color: #fff;
+padding: 10px 12px;
+text-align: left;
+font-size: 0.82rem;
+font-weight: 600;
+}
+tbody td {
+padding: 9px 12px;
+border-bottom: 1px solid var(--clr-border-light);
+vertical-align: top;
+line-height: 1.5;
+color: var(--clr-text-secondary);
+}
+tbody tr:nth-child(even) { background: var(--clr-surface-alt); }
+tbody tr:last-child td { border-bottom: none; }
+tbody td strong { color: var(--clr-text); }
+
+/* ── Evidence badge ── */
+.evidence-badge {
+display: inline-flex;
+align-items: center;
+gap: 6px;
+padding: 4px 12px;
+border-radius: 999px;
+font-size: 0.76rem;
+font-weight: 700;
+letter-spacing: 0.04em;
+color: #fff;
+background: var(--cat-hae);
+margin-top: 12px;
+}
+.evidence-1A { background: var(--cat-hae); }
+.evidence-1B { background: var(--cat-hae); opacity: 0.85; }
+.evidence-2B { background: var(--clr-muted); }
+
+/* ── PDF download ── */
+.pdf-download {
+display: inline-flex;
+align-items: center;
+gap: 9px;
+background: var(--cat-hae);
+color: #fff;
+padding: 11px 20px;
+border-radius: var(--radius-sm);
+font-size: 0.9rem;
+font-weight: 600;
+margin: 6px 0 4px;
+transition: background var(--ease);
+}
+.pdf-download:hover { background: var(--cat-hae-dark); text-decoration: none; color: #fff; }
+.pdf-download svg { flex-shrink: 0; }
+
+/* ── Post footer ── */
+.post-footer {
+margin-top: 36px;
+padding: 18px 20px;
+background: var(--clr-surface-alt);
+border: 1px solid var(--clr-border-light);
+border-radius: var(--radius-md);
+font-size: 0.86rem;
+color: var(--clr-muted);
+}
+.post-footer p { margin-bottom: 8px; }
+.post-footer p:last-child { margin-bottom: 0; }
+
+/* ── Site footer ── */
+footer.site-footer {
+background: var(--clr-text);
+color: rgba(255,255,255,0.55);
+padding: 32px 0;
+}
+.footer-inner {
+display: flex; align-items: center; justify-content: space-between;
+gap: 24px; flex-wrap: wrap;
+}
+.footer-brand .brand-name { color: rgba(255,255,255,0.85); }
+.footer-brand .brand-tagline { color: rgba(255,255,255,0.4); }
+.footer-note { font-size: 0.78rem; line-height: 1.6; text-align: right; }
+
+@media (max-width: 860px) {
+.pico-grid { grid-template-columns: 1fr; }
+.footer-inner { flex-direction: column; align-items: flex-start; }
+.footer-note { text-align: left; }
+}
+@media (max-width: 640px) {
+.nav-links a:not(.nav-cta):not(.active) { display: none; }
+.nav-toggle {
+display: inline-flex; align-items: center; justify-content: center;
+background: none; border: 1px solid var(--clr-border); border-radius: 6px;
+padding: 6px 8px; cursor: pointer; color: var(--clr-primary);
+}
+.nav { position: relative; }
+.nav-links {
+position: absolute; top: 58px; right: 0; left: 0;
+display: none; flex-direction: column; align-items: stretch;
+background: #fff; border: 1px solid var(--clr-border);
+border-radius: 10px; padding: 10px;
+box-shadow: 0 8px 24px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04);
+gap: 2px; z-index: 201;
+}
+.nav.nav-open .nav-links { display: flex; }
+.nav-links a:not(.nav-cta) { display: block; padding: 10px 12px; border-radius: 6px; }
+.nav-links .nav-cta { margin-top: 6px; text-align: center; }
+}
+</style>
+
+<!-- ── Favicons / Web Manifest ── -->
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#7a1f2b" />
+<link rel="stylesheet" media="print" href="/print.css" />
+</head>
+
+<body>
+
+<!-- ═══ HEADER ═══════════════════════════════════ -->
+<header>
+<div class="container">
+<nav class="nav">
+<a href="/" class="brand">
+<img src="/logo.png" alt="Mohsin Haematology Academy logo">
+<div class="brand-text">
+<div class="brand-name">Mohsin Haematology Academy</div>
+<div class="brand-tagline">Clinical Education &amp; Digital Tools</div>
+</div>
+</a>
+<button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" onclick="var n=this.closest('.nav');var o=n.classList.toggle('nav-open');this.setAttribute('aria-expanded',o);">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+</button>
+<div class="nav-links">
+<a href="/tools">Tools</a>
+<a href="/guidelines">Guidelines</a>
+<a href="/education">Education</a>
+<a href="/journal-club" class="active">Journal Club</a>
+<a href="/about">About</a>
+<a href="/haemcalc" class="nav-cta">Open HaemCalc</a>
+</div>
+</nav>
+</div>
+</header>
+
+<!-- ═══ POST HERO ═════════════════════════════════ -->
+<section class="post-hero">
+<div class="container">
+<span class="post-hero__category">Haemostasis &amp; Thrombosis · Critical Appraisal</span>
+<h1>ATRA plus Eltrombopag in Refractory/Relapsed ITP</h1>
+<p class="post-hero__subtitle">A 12-week course of all-retinoic acid added to eltrombopag raised the 18-month sustained response rate from 35% to 60% in glucocorticoid-resistant or relapsed immune thrombocytopenia. A promising second-line signal — with a baseline imbalance and a teratogenicity caveat that both deserve attention.</p>
+</div>
+</section>
+
+<!-- ═══ MAIN ARTICLE ══════════════════════════════ -->
+<main>
+<article class="container">
+
+<div class="callout callout--bottom-line">
+<h3>Bottom line first</h3>
+<p>In 96 adults with glucocorticoid-resistant or relapsed ITP, adding a 12-week course of <strong>all-retinoic acid (ATRA)</strong> to eltrombopag raised the 18-month sustained response rate from <strong>35% to 60%</strong> (odds ratio 2.78; 95% CI 1.22–6.37; P=0.014). That is a 25 percentage point absolute gain, or roughly <strong>four patients treated for one extra sustained response</strong>.</p>
+<p>Median response duration more than doubled, from 37 to 75 weeks, and no grade 3–4 adverse events or treatment-related deaths were reported.</p>
+<p>Two things temper it. The trial was open-label with 96 patients at centres in a single country. And clinically important bleeding at baseline was present in 21% of the combination arm versus 10% of the monotherapy arm — an imbalance that, as discussed below, probably runs <em>against</em> the combination rather than in its favour. <strong>Not practice-changing on its own. Pending BSH review.</strong></p>
+<p style="margin-top:16px;">
+<a class="pdf-download" href="/assets/pdfs/atra-eltrombopag-refractory-relapsed-itp.pdf" target="_blank" rel="noopener">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+Download the full appraisal (PDF)
+</a>
+</p>
+</div>
+
+<hr>
+
+<h2>How to read this page</h2>
+<p>The trial is presented in the standard structure: <em>PICO, headline numbers, critical appraisal, bottom line</em>. A separate section covers ATRA safety, which matters more here than the efficacy signal for anyone considering off-protocol use. UK practice notes, teaching points and references follow.</p>
+
+<nav class="post-toc">
+<a href="#trial">The trial</a> ·
+<a href="#appraisal">Critical appraisal</a> ·
+<a href="#safety">ATRA safety</a> ·
+<a href="#uk-practice">UK practice</a> ·
+<a href="#teaching">Teaching points</a> ·
+<a href="#references">References</a>
+</nav>
+
+<hr>
+
+<h2 id="trial">The trial</h2>
+
+<details class="trial-block" open>
+<summary>Fu H et al. <em>NEJM Evid</em> 2026;5(8):EVIDoa2500333 · Multicentre randomised open-label trial (NCT05438875)</summary>
+
+<h3>PICO</h3>
+<div class="pico-grid">
+<div><strong>P</strong> · 96 adults with glucocorticoid-resistant or relapsed immune thrombocytopenia and platelets below 30×10<sup>9</sup>/L</div>
+<div><strong>I</strong> · All-retinoic acid (ATRA) for 12 weeks plus eltrombopag</div>
+<div><strong>C</strong> · Eltrombopag monotherapy</div>
+<div><strong>O</strong> · 18-month sustained response — platelets ≥30×10<sup>9</sup>/L without clinically important bleeding or rescue therapy</div>
+</div>
+
+<h3>Headline results</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>Outcome</th><th>Eltrombopag alone (n=48)</th><th>ATRA + eltrombopag (n=48)</th><th>Effect estimate</th></tr>
+</thead>
+<tbody>
+<tr><td>18-month sustained response</td><td>17 (35%)</td><td>29 (60%)</td><td>OR 2.78 (95% CI 1.22–6.37); P=0.014</td></tr>
+<tr><td>Complete response</td><td>58%</td><td>79%</td><td>Difference 2 to 39 percentage points (95% CI)</td></tr>
+<tr><td>Median response duration</td><td>37 weeks</td><td>75 weeks</td><td>HR for relapse 0.45 (95% CI 0.23–0.86)</td></tr>
+<tr><td>Grade 3–4 adverse events</td><td>None reported</td><td>None reported</td><td>Comparable between arms</td></tr>
+<tr><td>Treatment-related deaths</td><td>0</td><td>0</td><td>—</td></tr>
+<tr><td>WHO grade 2–3 bleeding <em>at baseline</em></td><td>10%</td><td>21%</td><td>Imbalance favouring control at entry</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3 id="appraisal">Critical appraisal</h3>
+<div class="callout callout--appraisal">
+<strong>Strengths.</strong> Randomised, multicentre, with a clinically meaningful primary endpoint assessed at 18 months rather than a short-term platelet count. The endpoint is composite but sensibly so — it requires a platelet response <em>and</em> the absence of clinically important bleeding <em>and</em> no rescue therapy, which is closer to what matters to patients than a platelet threshold alone. Response durability was reported, not just response rate, and the relapse hazard ratio of 0.45 (95% CI 0.23–0.86) supports the durability claim. ATRA is inexpensive and familiar to haematologists.<br><br>
+<strong>Limitations.</strong> Open-label, 96 patients, single country. With 48 per arm, the confidence interval around the odds ratio is wide (1.22–6.37) and a trial this size cannot exclude chance as a contributor.<br><br>
+<strong>On the baseline imbalance.</strong> WHO grade 2–3 bleeding was present in 21% of the combination arm versus 10% of the monotherapy arm at entry. This is worth thinking through rather than filing under "imbalance, therefore unreliable". Because the primary endpoint <em>requires</em> the absence of clinically important bleeding, an arm that starts with more bleeding faces a harder task, not an easier one. On that reading the observed advantage is likely conservative. The counter-argument is that baseline bleeding may mark a different disease phenotype altogether, in which case the two arms are not exchangeable and the direction of bias is not knowable. Either way it complicates clean attribution of the effect to ATRA, and it is the first thing a critical reader should raise.
+</div>
+
+<h3>Bottom line</h3>
+<p>A 12-week ATRA course added to eltrombopag produced a 25 percentage point absolute gain in 18-month sustained response in glucocorticoid-resistant or relapsed ITP, with no reported excess toxicity in this trial. The most interesting second-line ITP signal in some time, but a single open-label trial of 96 patients does not change second-line practice.</p>
+
+<p><span class="evidence-badge evidence-1B">1B · Randomised Controlled Trial</span></p>
+</details>
+
+<hr>
+
+<h2 id="safety">ATRA safety — read before considering off-protocol use</h2>
+
+<div class="callout callout--appraisal callout--warn">
+<h3>Teratogenicity and other ATRA-specific risks</h3>
+<p>The trial reported no grade 3–4 adverse events and no treatment-related deaths. That is reassuring for the trial population, but it should not be read as "ATRA is a benign drug", and the following apply wherever it is used:</p>
+<ul>
+<li><strong>Teratogenicity.</strong> ATRA is strongly teratogenic. Pregnancy must be excluded before starting and effective contraception maintained throughout treatment and for the period specified in the product information. This matters particularly in ITP, which is common in women of childbearing age.</li>
+<li><strong>Differentiation syndrome.</strong> Well recognised with ATRA in acute promyelocytic leukaemia. It was not a feature of this trial population, but clinicians using ATRA outside APL should remain alert to it.</li>
+<li><strong>Raised intracranial pressure.</strong> Reported with ATRA, particularly in younger patients. Headache and visual disturbance warrant prompt assessment.</li>
+<li><strong>Hyperlipidaemia and hepatic derangement</strong> are recognised with retinoid therapy and warrant monitoring.</li>
+</ul>
+<p class="muted" style="margin-top:10px;">Consult the current summary of product characteristics and local policy before use. This page is educational and does not constitute a prescribing recommendation.</p>
+</div>
+
+<hr>
+
+<h2 id="uk-practice">What this means for UK practice</h2>
+
+<div class="callout callout--practice">
+<p>Nothing here changes second-line ITP practice today. The BSH guideline on the investigation and management of adult ITP remains the reference point, and this trial has not yet been considered within it.</p>
+
+<p><strong>A reasonable position for now:</strong></p>
+<ol>
+<li><strong>Continue current second-line pathways.</strong> Thrombopoietin receptor agonists, rituximab and other established options remain as they were. This trial adds a possible adjunct, not a replacement.</li>
+<li><strong>Note it for discussion.</strong> It is a good MDT and journal club paper precisely because the design question — how to read a baseline imbalance that runs against the treatment arm — is more interesting than the headline number.</li>
+<li><strong>If asked about it by a patient or trainee,</strong> the honest summary is: promising, cheap, plausible mechanism, single open-label trial of 96 patients in one country, and a teratogenic drug. Not yet standard care.</li>
+<li><strong>Watch for replication.</strong> A confirmatory trial in a different population, ideally blinded, would move this considerably.</li>
+<li><strong>Pending BSH review.</strong> No local protocol should change on the basis of this trial alone.</li>
+</ol>
+</div>
+
+<hr>
+
+<h2 id="teaching">Teaching points</h2>
+
+<ol>
+<li><strong>A composite endpoint is not automatically a weak endpoint.</strong> Here the composite — platelets ≥30×10<sup>9</sup>/L, no clinically important bleeding, no rescue therapy — is arguably <em>more</em> clinically meaningful than any single component, because it captures the state a patient actually wants to be in.</li>
+<li><strong>Work out the direction of a baseline imbalance before dismissing it.</strong> More baseline bleeding in the treatment arm makes a bleeding-free endpoint harder to reach. An imbalance that disadvantages the treatment arm makes a positive result more credible, not less — though only if the two groups are otherwise exchangeable.</li>
+<li><strong>NNT comes from the absolute risk difference, not the sample size.</strong> A 25 percentage point absolute gain gives an NNT of about 4 whether the trial randomised 96 patients or 9,600. Sample size affects the <em>precision</em> of that estimate, not its value.</li>
+<li><strong>Response duration is worth as much as response rate in ITP.</strong> A therapy that produces the same peak response but sustains it for 75 rather than 37 weeks changes how often the patient returns to clinic, and how often they need rescue.</li>
+<li><strong>"No grade 3–4 events" describes the trial, not the drug.</strong> Known class effects of a drug — here teratogenicity — do not disappear because a particular trial did not record them.</li>
+</ol>
+
+<hr>
+
+<h2>Discussion questions</h2>
+<ol>
+<li>Baseline WHO grade 2–3 bleeding was 21% in the combination arm versus 10% in the monotherapy arm. Which direction do you think this pushes the result, and what additional information from the paper would help you decide?</li>
+<li>The primary endpoint required the absence of clinically important bleeding <em>and</em> no rescue therapy <em>and</em> a platelet count above threshold. What would change in your interpretation if the trial had used platelet count alone?</li>
+<li>ATRA is inexpensive, familiar, and has a plausible immunomodulatory mechanism in ITP. What would you want to see before offering it to a woman of childbearing age with refractory ITP, and how would you frame that conversation?</li>
+</ol>
+
+<hr>
+
+<h2 id="references">References</h2>
+
+<p class="muted"><em>Bibliographic details retrieved and verified against PubMed, July 2026.</em></p>
+
+<ol>
+<li>Fu H, An Z, Li M, Liu Y, Liu H, Feng R, et al. All-Retinoic Acid plus Eltrombopag for Refractory/Relapsed Immune Thrombocytopenia. <em>NEJM Evid.</em> 2026;5(8):EVIDoa2500333. PMID: 42517709 · <a href="https://doi.org/10.1056/EVIDoa2500333" target="_blank" rel="noopener">DOI: 10.1056/EVIDoa2500333</a></li>
+<li>ClinicalTrials.gov. All-trans retinoic acid combined with eltrombopag in patients with corticosteroid-resistant/relapsed immune thrombocytopenia. Identifier <a href="https://clinicaltrials.gov/study/NCT05438875" target="_blank" rel="noopener">NCT05438875</a>.</li>
+</ol>
+
+<div class="post-footer">
+<p><strong>Educational use only.</strong> Content does not replace clinical judgement or professional guidelines.</p>
+<p>Always verify against current BSH, NICE, and local trust guidelines before applying any of the above to patient care.</p>
+<p>© 2025–2026 Dr Muhammad Mohsin · Mohsin Haematology Academy</p>
+</div>
+
+</article>
+</main>
+
+<!-- ═══ SITE FOOTER ═══════════════════════════════ -->
+<footer class="site-footer">
+<div class="container">
+<div class="footer-inner">
+<div class="footer-brand brand">
+<div class="brand-text">
+<div class="brand-name">Mohsin Haematology Academy</div>
+<div class="brand-tagline">Clinical Education &amp; Digital Tools</div>
+</div>
+</div>
+<div class="footer-note">
+<strong>Educational use only.</strong><br>
+Content does not replace clinical judgement or professional guidelines.<br>
+<span style="font-size:0.72rem; color:rgba(255,255,255,0.4); opacity:0.8;">&copy; 2025–2026 Dr Muhammad Mohsin &middot; Contributor: Muhammad Moaaz &middot; <a href="/contact" style="color:rgba(255,255,255,0.55);text-decoration:underline;opacity:0.7;">Contact</a> &middot; <a href="/governance" style="color:rgba(255,255,255,0.55);text-decoration:underline;opacity:0.7;">Clinical Governance</a> &middot; <a href="/legal/ip-notice/" style="color:rgba(255,255,255,0.55);text-decoration:underline;opacity:0.7;">IP &amp; Copyright</a> &middot; <a href="/legal/terms/" style="color:rgba(255,255,255,0.55);text-decoration:underline;opacity:0.7;">Terms</a> &middot; <a href="/legal/disclaimer/" style="color:rgba(255,255,255,0.55);text-decoration:underline;opacity:0.7;">Disclaimer</a> &middot; <a href="/legal/privacy/" style="color:rgba(255,255,255,0.55);text-decoration:underline;opacity:0.7;">Privacy</a></span>
+</div>
+</div>
+</div>
+</footer>
+
+<script src="/legal/cookie-banner.js" defer></script>
+</body>
+</html>
