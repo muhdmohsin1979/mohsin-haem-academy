@@ -60,3 +60,7 @@
 /cat-algorithm.svg /guidelines/vte-cancer/algorithm.svg 301
 /cat-guideline.pdf /guidelines/vte-cancer/guideline.pdf 301
 /cat-quickref.pdf /guidelines/vte-cancer/quickref.pdf 301
+
+# --- Venous access proforma: keeps the printed BSH 2027 poster QR working after the page moved under /education ---
+# 302, not 301: browsers cache 301s permanently, so the target could not be repointed later.
+/venous-access  /education/venous-access  302
